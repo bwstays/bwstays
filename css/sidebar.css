@@ -1,0 +1,253 @@
+.menuBtn {
+  position: fixed;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 30px;
+  top: 5px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.5s ease;
+  background: var(--black);
+  cursor: pointer;
+}
+
+.menuBtn.changeBg {
+  background: #fbf9f6;
+  top: 10px;
+}
+
+.menuBtn:hover .bar,
+.sideBar .closeBtn:hover svg path {
+  animation: draw 0.9s cubic-bezier(0.57, 0.39, 0, 0.86) 1 forwards;
+}
+
+.menuBtn:hover .bar1,
+.sideBar .closeBtn:hover svg path:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.sideBar .closeBtn {
+  position: absolute;
+  top: 34px;
+  right: 57px;
+  z-index: 1000;
+  color: #000;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+  display: inline-flex;
+}
+
+.sideBar {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  width: 500px;
+  height: 100%;
+  min-height: 100%;
+  padding: 60px 60px 40px;
+  background-color: #fbf9f6;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
+  z-index: 9999;
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  background-repeat: no-repeat;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sideBar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sideBar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sideBar::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 40px;
+}
+
+.sideBar.show {
+  right: 0;
+  visibility: visible;
+}
+
+.sidebarInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.sideBar .closeBtn:hover svg path {
+  animation: draw 0.9s cubic-bezier(0.57, 0.39, 0, 0.86) 1 forwards;
+}
+
+.bars {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 7px;
+}
+.bars .bar {
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--white);
+  transition: top 0.15s ease, transform 0.3s ease;
+}
+.bars .bar1 {
+  top: 0;
+}
+.bars .bar2 {
+  top: 6px;
+}
+
+.closeIcon {
+  fill: none;
+  stroke: currentColor;
+  stroke-miterlimit: 10;
+}
+
+.sidebarInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.sideBar .logo .logoCircle {
+  max-width: 40px;
+}
+.sideBar .logo .logoTxt {
+  width: 110px;
+}
+
+.sideMenu ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  padding-left: 0;
+  list-style: none;
+}
+
+.sideMenu ul li a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.012em;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--textColorLight);
+  transition: all 0.5s ease;
+}
+.sideMenu ul li a:hover {
+  color: var(--secondary);
+}
+
+.emailBox,
+.phoneBox {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.emailBox a,
+.phoneBox a {
+  color: var(--black);
+  transition: color 0.5s ease;
+}
+
+.emailBox i,
+.phoneBox i {
+  color: #a9a9a9;
+  transition: color 0.5s ease;
+}
+
+.emailBox a:hover,
+.phoneBox a:hover {
+  color: var(--secondary);
+}
+
+.social {
+  display: block;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social a {
+  /* background: #54565a; */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #54565a;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+.social a:hover {
+  color: var(--secondary);
+}
+
+.twitter-icon img {
+  width: 13px;
+  display: block;
+}
+
+.logo-circle-cont {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+@keyframes draw {
+  0%,
+  100% {
+    clip-path: inset(-2px -2px);
+  }
+  42% {
+    clip-path: inset(-2px -2px -2px 100%);
+  }
+  43% {
+    clip-path: inset(-2px 100% -3px -2px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menuBtn {
+    width: 45px;
+    height: 45px;
+    right: 15px;
+  }
+
+  .menuBtn .bars {
+    width: 25px;
+  }
+
+  .sideBar {
+    width: 100%;
+  }
+}
