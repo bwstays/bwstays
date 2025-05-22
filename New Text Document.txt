@@ -2,6 +2,7 @@ bwstays.com
 blackandwhitestays.com
 
 https://pinetools.com/bulk-batch-grayscale-image
+https://jsoneditoronline.org/#right=local.qapiki
 
 
 1) added a Location heading in the middle of maps 
