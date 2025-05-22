@@ -2,3 +2,26 @@ bwstays.com
 blackandwhitestays.com
 
 https://pinetools.com/bulk-batch-grayscale-image
+
+
+1) added a Location heading in the middle of maps 
+2) At logo added index.html 
+3) In all pages we need contacts section . so added them in knowwmore and booking page 
+4) renamed page to knowmore 
+5) When we are in knowmore and booking page only home and contact menu is applicable , about us will not work ,hence removed and updated the menu in those two pages 
+6) some meta tag upsated 
+7) added sample files for  a robot.txt, .htaccess,sitemap.txt ,reciprocallinks  
+
+
+
+
+
+1) Book Now button should come in the End of About us section 
+2) Divide the About section in to three 
+3) In booking and know more we need  backgroudn image in css ,otherwise out log is not vibisle in these two pages 
+4) Discover widget design to add all the json items on top of image and text side ( left and right )  
+5) SEO improvement i will tell you in the next stage 
+6) Index page in github pages 
+7) ID for the elements 
+8) Direction back ground 
+

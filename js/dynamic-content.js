@@ -9,7 +9,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "mosque1",
@@ -20,7 +20,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "temple2",
@@ -31,7 +31,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "temple3",
@@ -42,7 +42,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     }
   ],
   romantic: [
@@ -55,7 +55,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "PookodeLake",
@@ -66,7 +66,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "banasurasagardam",
@@ -77,7 +77,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     }
   ],
   waterfalls: [
@@ -90,7 +90,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "soochipara",
@@ -101,7 +101,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "kanthanpara",
@@ -112,7 +112,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     }
   ],
   museums: [
@@ -125,7 +125,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "edakkal",
@@ -136,7 +136,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     },
     {
       id: "ambalavayal",
@@ -147,7 +147,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
-      knowmore: "https://www.www.com"
+      knowmore: "./knowmore.html"
     }
   ]
 
