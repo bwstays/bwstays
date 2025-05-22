@@ -162,7 +162,60 @@ const siteData = {
       locationid : "1",
       knowmore: "./knowmore.html"
     }
-  ]
+  ],
+plantation: [
+    {
+      id: "plantation",
+      name: "Harissons",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: "assets/img/tirunelli.png",
+      rating: "",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact : "+91-000 000 0000",
+      locationid : "1",
+      knowmore: "./knowmore.html"
+    }],
+wildlife: [
+    {
+      id: "Bandipur",
+      name: "Bndipur Museum",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: "assets/img/tirunelli.png",
+      rating: "",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact : "+91-000 000 0000",
+      locationid : "1",
+      knowmore: "./knowmore.html"
+    }],
+trucking: [
+    {
+      id: "Chundale",
+      name: "chundale",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: "assets/img/tirunelli.png",
+      rating: "",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact : "+91-000 000 0000",
+      locationid : "1",
+      knowmore: "./knowmore.html"
+    }],
+farms: [
+    {
+      id: "ambalavayal",
+      name: "Ambalavayal",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: "assets/img/tirunelli.png",
+      rating: "",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact : "+91-000 000 0000",
+      locationid : "1",
+      knowmore: "./knowmore.html"
+    }],
+
 
 };
 
