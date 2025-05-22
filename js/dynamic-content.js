@@ -179,7 +179,7 @@ plantation: [
 wildlife: [
     {
       id: "Bandipur",
-      name: "Bndipur Museum",
+      name: "Bandipur Museum",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/tirunelli.png",
       rating: "",
@@ -215,7 +215,19 @@ farms: [
       locationid : "1",
       knowmore: "./knowmore.html"
     }],
-
+food: [
+    {
+      id: "resturants",
+      name: "Resturants",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: "assets/img/tirunelli.png",
+      rating: "",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact : "+91-000 000 0000",
+      locationid : "1",
+      knowmore: "./knowmore.html"
+    }],
 
 };
 
