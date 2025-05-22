@@ -16,12 +16,19 @@ https://pinetools.com/bulk-batch-grayscale-image
 
 
 
-1) Book Now button should come in the End of About us section 
+1) Book Now button should come in the End of About us section ,it should not come in knowmore page 
 2) Divide the About section in to three 
-3) In booking and know more we need  backgroudn image in css ,otherwise out log is not vibisle in these two pages 
+3) In booking and knowmore pages,s we need  background image in css ,otherwise our log is not visible in these two pages 
 4) Discover widget design to add all the json items on top of image and text side ( left and right )  
+5) Direction added a back ground  in footer css ,,but image is not proper ,,it is two part now 
+6) Know more page design sample i will tell you .
+7) Add a whatsapp icon near phone to contact over whatsapp 
+
+
 5) SEO improvement i will tell you in the next stage 
 6) Index page in github pages 
 7) ID for the elements 
-8) Direction back ground 
+8) Change all image names and color 
+9) Add title to all images form fields etc 
+10) 
 
