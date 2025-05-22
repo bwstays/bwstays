@@ -194,7 +194,7 @@ trucking: [
       id: "Chundale",
       name: "chundale",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: "assets/img/tirunelli.png",
+      image: "assets/img/trucking/edakkal_caves.webp",
       rating: "",
       holidays: "Sun",
       timing: "10:00-18:00",
