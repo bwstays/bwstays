@@ -9,6 +9,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -20,6 +21,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -31,6 +33,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -42,6 +45,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     }
   ],
@@ -55,6 +59,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -66,6 +71,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -77,6 +83,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     }
   ],
@@ -90,6 +97,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -101,6 +109,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -112,6 +121,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     }
   ],
@@ -125,6 +135,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -136,6 +147,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     },
     {
@@ -147,6 +159,7 @@ const siteData = {
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact : "+91-000 000 0000",
+      locationid : "1",
       knowmore: "./knowmore.html"
     }
   ]
