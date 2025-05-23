@@ -10,6 +10,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -21,6 +22,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -32,6 +34,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -43,6 +46,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
@@ -56,6 +60,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -67,6 +72,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -78,6 +84,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
@@ -91,6 +98,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -102,6 +110,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -113,6 +122,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
@@ -126,6 +136,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -137,6 +148,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -148,6 +160,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
@@ -161,6 +174,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -172,6 +186,7 @@ const siteData = {
       timing: "09:00-17:00",
       Contact: "+91-111 111 1111",
       locationid: "2",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
@@ -185,6 +200,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -196,6 +212,7 @@ const siteData = {
       timing: "06:00-17:00",
       Contact: "+91-222 222 2222",
       locationid: "3",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
@@ -209,6 +226,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -220,6 +238,7 @@ const siteData = {
       timing: "07:00-17:00",
       Contact: "+91-333 333 3333",
       locationid: "4",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
@@ -233,6 +252,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -244,6 +264,7 @@ const siteData = {
       timing: "08:00-18:00",
       Contact: "+91-444 444 4444",
       locationid: "5",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
@@ -257,6 +278,7 @@ const siteData = {
           timing: "10:00-18:00",
           Contact: "+91-000 000 0000",
           locationid: "1",
+          rating:"4.5",
           knowmore: "./knowmore.html"
       }
     ],
@@ -270,6 +292,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     },
     {
@@ -281,6 +304,7 @@ const siteData = {
       timing: "11:00-23:00",
       Contact: "+91-555 555 5555",
       locationid: "6",
+      rating:"4.5",
       knowmore: "./knowmore.html"
     }
   ],
