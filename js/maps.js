@@ -100,7 +100,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
   streetViewControl: true,
   fullscreenControl: true,
   center: new google.maps.LatLng(11.6271608969693, 76.08851019534403),
-  //	mapTypeId: google.maps.MapTypeId.ROADMAP
+  //	mapTypeId: google.maps.MapTypeId.ROADMAP,
   mapId: 'f03033acde18bc0d'
 });
 var infowindow = new google.maps.InfoWindow();
