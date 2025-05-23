@@ -11,7 +11,7 @@ const siteData = {
       Contact: "+91-000 000 0000",
       locationid: "1",
       distance: "10",
-      rating:"4.5",
+      rating:"4.4",
       knowmore: "./knowmore.html"
     },
     {

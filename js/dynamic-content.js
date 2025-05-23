@@ -174,7 +174,7 @@ function initializeSection(sectionType, data, sectionIndex) {
     const tempContent = document.createElement('div');
     tempContent.className = 'tab-content-temp';
     tempContent.innerHTML = `
-      <h5 class="text-white">${currentItem.name}</h5>
+      <h5 class="text-white">${currentItem.name} (${currentItem.rating}★)</h5>
       <p class="mb-0 text-white-50">${currentItem.description}</p>
       <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
 
