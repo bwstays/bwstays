@@ -11,8 +11,20 @@ const siteData = {
       Contact: "+91-000 000 0000",
       locationid: "1",
       distance: "10",
-      rating:"4.4",
-      knowmore: "./knowmore.html"
+      rating: "4.4",
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Varampatta mosque", distance: 14 },
+        { name: "Jain Temple", distance: 12 },
+        { name: "Seetha Lava Kusha Temple", distance: 8 },
+        { name: "Meenmutty Falls", distance: 15 },
+        { name: "Soochipara Falls", distance: 18 },
+        { name: "Kanthanpara Falls", distance: 16 },
+        { name: "Folklore Museum", distance: 11 },
+        { name: "Edakkal Caves", distance: 13 },
+        { name: "Ambalavayal Heritage Museum", distance: 9 },
+        { name: "Pookode Lake", distance: 7 }
+      ]
     },
     {
       id: "mosque1",
@@ -25,7 +37,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Varampatta mosque", distance: 14 },
+        { name: "Jain Temple", distance: 12 },
+        { name: "Seetha Lava Kusha Temple", distance: 8 },
+        { name: "Meenmutty Falls", distance: 15 },
+        { name: "Soochipara Falls", distance: 18 },
+        { name: "Kanthanpara Falls", distance: 16 },
+        { name: "Folklore Museum", distance: 11 },
+        { name: "Edakkal Caves", distance: 13 },
+        { name: "Ambalavayal Heritage Museum", distance: 9 },
+        { name: "Pookode Lake", distance: 7 }
+      ]
     },
     {
       id: "temple2",
@@ -38,7 +62,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Varampatta mosque", distance: 11 },
+        { name: "Seetha Lava Kusha Temple", distance: 15 },
+        { name: "Soochipara Falls", distance: 9 },
+        { name: "Ambalavayal Heritage Museum", distance: 13 },
+        { name: "Pookode Lake", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 17 },
+        { name: "Karapuzha Dam", distance: 12 },
+        { name: "Banasura Sagar Dam", distance: 14 },
+        { name: "Chembra Peak", distance: 10 },
+        { name: "Wayanad Tea Estate", distance: 16 }
+      ]
     },
     {
       id: "temple3",
@@ -51,7 +87,18 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Jain Temple", distance: 12 },
+        { name: "Tirunelli Temple", distance: 8 },
+        { name: "Meenmutty Falls", distance: 15 },
+        { name: "Kanthanpara Falls", distance: 11 },
+        { name: "Edakkal Caves", distance: 9 },
+        { name: "Folklore Museum", distance: 14 },
+        { name: "Pookode Lake", distance: 13 },
+        { name: "Chembra Peak", distance: 10 },
+        { name: "Banasura Sagar Dam", distance: 16 }
+      ]
     }
   ],
   waterfalls: [
@@ -66,7 +113,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Soochipara Falls", distance: 8 },
+        { name: "Kanthanpara Falls", distance: 12 },
+        { name: "Edakkal Caves", distance: 15 },
+        { name: "Tirunelli Temple", distance: 11 },
+        { name: "Pookode Lake", distance: 9 },
+        { name: "Chembra Peak", distance: 14 },
+        { name: "Banasura Sagar Dam", distance: 13 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 16 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Ambalavayal Heritage Museum", distance: 7 }
+      ]
     },
     {
       id: "soochipara",
@@ -79,7 +138,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     },
     {
       id: "kanthanpara",
@@ -92,7 +163,18 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Meenmutty Falls", distance: 11 },
+        { name: "Soochipara Falls", distance: 9 },
+        { name: "Edakkal Caves", distance: 14 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 8 },
+        { name: "Banasura Sagar Dam", distance: 15 },
+        { name: "Tirunelli Temple", distance: 13 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 16 },
+        { name: "Wayanad Tea Estate", distance: 10 }
+      ]
     }
   ],
   museums: [
@@ -107,7 +189,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     },
     {
       id: "edakkal",
@@ -120,7 +214,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Folklore Museum", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 12 },
+        { name: "Meenmutty Falls", distance: 15 },
+        { name: "Soochipara Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 11 },
+        { name: "Chembra Peak", distance: 14 },
+        { name: "Tirunelli Temple", distance: 8 },
+        { name: "Banasura Sagar Dam", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 16 }
+      ]
     },
     {
       id: "ambalavayal",
@@ -133,7 +239,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     }
   ],
   romantic: [
@@ -148,7 +266,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     },
     {
       id: "PookodeLake",
@@ -161,7 +291,18 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Karapuzha Dam", distance: 8 },
+        { name: "Banasura Sagar Dam", distance: 11 },
+        { name: "Chembra Peak", distance: 13 },
+        { name: "Edakkal Caves", distance: 15 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Wayanad Tea Estate", distance: 12 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 10 },
+        { name: "Folklore Museum", distance: 7 }
+      ]
     },
     {
       id: "banasurasagardam",
@@ -174,7 +315,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Karapuzha Dam", distance: 12 },
+        { name: "Pookode Lake", distance: 11 },
+        { name: "Chembra Peak", distance: 8 },
+        { name: "Edakkal Caves", distance: 15 },
+        { name: "Meenmutty Falls", distance: 13 },
+        { name: "Tirunelli Temple", distance: 9 },
+        { name: "Wayanad Tea Estate", distance: 14 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 10 },
+        { name: "Folklore Museum", distance: 16 },
+        { name: "Soochipara Falls", distance: 7 }
+      ]
     }
   ],
   plantation: [
@@ -189,7 +342,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     },
     {
       id: "teaestate",
@@ -202,7 +367,19 @@ const siteData = {
       locationid: "2",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     }
   ],
   trucking: [
@@ -217,7 +394,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     },
     {
       id: "chembra",
@@ -230,7 +419,19 @@ const siteData = {
       locationid: "3",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     }
   ],
   wildlife: [
@@ -245,7 +446,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     },
     {
       id: "muthanga",
@@ -258,7 +471,19 @@ const siteData = {
       locationid: "4",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     }
   ],
   farms: [
@@ -286,7 +511,19 @@ const siteData = {
       locationid: "5",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     }
   ],
   sporting: [
@@ -301,7 +538,19 @@ const siteData = {
           locationid: "1",
           distance: "10",
           rating:"4.5",
-          knowmore: "./knowmore.html"
+          knowmore: "./knowmore.html",
+          nearby: [
+            { name: "Edakkal Caves", distance: 7 },
+            { name: "Ambalavayal Heritage Museum", distance: 11 },
+            { name: "Tirunelli Temple", distance: 14 },
+            { name: "Meenmutty Falls", distance: 9 },
+            { name: "Pookode Lake", distance: 12 },
+            { name: "Chembra Peak", distance: 15 },
+            { name: "Banasura Sagar Dam", distance: 8 },
+            { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+            { name: "Wayanad Tea Estate", distance: 10 },
+            { name: "Kanthanpara Falls", distance: 16 }
+          ]
       }
     ],
   food: [
@@ -316,7 +565,19 @@ const siteData = {
       locationid: "1",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     },
     {
       id: "localcuisine",
@@ -329,7 +590,19 @@ const siteData = {
       locationid: "6",
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html",
+      nearby: [
+        { name: "Edakkal Caves", distance: 7 },
+        { name: "Ambalavayal Heritage Museum", distance: 11 },
+        { name: "Tirunelli Temple", distance: 14 },
+        { name: "Meenmutty Falls", distance: 9 },
+        { name: "Pookode Lake", distance: 12 },
+        { name: "Chembra Peak", distance: 15 },
+        { name: "Banasura Sagar Dam", distance: 8 },
+        { name: "Muthanga Wildlife Sanctuary", distance: 13 },
+        { name: "Wayanad Tea Estate", distance: 10 },
+        { name: "Kanthanpara Falls", distance: 16 }
+      ]
     }
   ],
 

@@ -155,6 +155,58 @@
     </div>
 </section>
 
+    <!-- Main Content Section -->
+    <section class="details-section">
+        <div class="container">
+            <h1 class="text-center mb-4">Water fall is selected</h1>
+            
+            <div class="row mb-5">
+                <!-- Image Slider Section -->
+                <div class="col-md-6">
+                    <div class="image-slider">
+                        <!-- Add your image slider/auto-scrolling implementation here -->
+                        <img src="path/to/img1" alt="Waterfall Image 1" class="img-fluid">
+                    </div>
+                </div>
+                
+                <!-- About Text Section -->
+                <div class="col-md-6">
+                    <div class="about-content">
+                        <h2>About the selected place</h2>
+                        <p>Text content about the selected waterfall goes here...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Water Falls Section -->
+            <div class="other-waterfalls mb-5">
+                <h3>Other Water Falls</h3>
+                <div class="waterfall-cards">
+                    <div class="card mb-3">
+                        <!-- Add waterfall card content -->
+                    </div>
+                    <div class="card mb-3">
+                        <!-- Add waterfall card content -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nearby Places Section -->
+            <div class="nearby-places">
+                <h3>Near by places with in 25 KM distances from the selected location</h3>
+                <div class="row">
+                    <!-- 3x4 grid of nearby place cards -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <!-- Add nearby place card content -->
+                        </div>
+                    </div>
+                    <!-- Repeat for 11 more cards to create 3x4 grid -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Signup-->
     <section class="signup-section" id="signup">
         <div class="container py-2">
