@@ -11,6 +11,7 @@ https://jsoneditoronline.org/#right=local.qapiki
 4) For now remove the booking.html link from the book button .Since we dont want users to click for now. Let it be not sperate for now till everthing shapes up . 
 5) Added alt to all the images tag 
 6) Check availbility should we just below date selection . Moved it there 
+7) Updates a few texts in index page 
 
 
 1) In booking.html and knowmore.html pages, we need  background image in css ,otherwise our log is not visible in these two pages when we load the page 

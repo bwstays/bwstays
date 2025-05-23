@@ -247,6 +247,19 @@ const siteData = {
       knowmore: "./knowmore.html"
     }
   ],
+  sporting: [
+        {
+          id: "sporting",
+          name: "Sports",
+          description: "Ziplines.",
+          image: "assets/img/tirunelli.png",
+          holidays: "Sun",
+          timing: "10:00-18:00",
+          Contact: "+91-000 000 0000",
+          locationid: "1",
+          knowmore: "./knowmore.html"
+      }
+    ],
   food: [
     {
       id: "resturants",
@@ -261,7 +274,7 @@ const siteData = {
     },
     {
       id: "localcuisine",
-      name: "Local Cuisine",
+      name: "LocalCuisine",
       description: "Try authentic Kerala dishes at local eateries and food stalls.",
       image: "assets/img/heritage/chain_tree.avif",
       holidays: "None",
@@ -270,5 +283,6 @@ const siteData = {
       locationid: "6",
       knowmore: "./knowmore.html"
     }
-  ]
+  ],
+
 }
