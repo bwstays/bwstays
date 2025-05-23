@@ -1,5 +1,7 @@
-<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<!doctype html
+    public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <title>Black and White Wayanad</title>
     <meta charset="utf-8" />
@@ -104,19 +106,75 @@
     </header>
 
     <!-- DISCOVER -->
+
     <section class="about-section text-center" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h2 class="text-white mb-4">About</h2>
-                    <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-            style="width:22%;margin:0 auto; border-radius: 10%;"></div>
-                    <p class="text-white-50">
-                        Colive, Cowork & Coplay
-                    </p>
+                    <div class="border-bottom border-primary text-center mb-4" id="contact-divider" style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+                    <p class="text-white-50 mb-4">Colive, Cowork & Coplay</p>
                 </div>
             </div>
-            <img class="img-fluid" src="assets/img/tirunelli.png" alt="" />
+            
+            <div class="row justify-content-center">
+                <!-- Nature Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="about-card h-100" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                        <div class="card-image" style="height: 200px; overflow: hidden;">
+                            <img src="assets/img/tirunelli.png" alt="Nature View" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                            <div class="overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);"></div>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="icon-wrapper mb-4" style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-mountain fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="text-white mb-3">Nature's Paradise</h3>
+                            <p class="text-white-50">Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comfort Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="about-card h-100" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                        <div class="card-image" style="height: 200px; overflow: hidden;">
+                            <img src="assets/img/wayanad_mist.jpg" alt="Comfort View" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                            <div class="overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);"></div>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="icon-wrapper mb-4" style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-home fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="text-white mb-3">Modern Comfort</h3>
+                            <p class="text-white-50">Luxurious amenities and thoughtfully designed spaces for your perfect stay.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="about-card h-100" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                        <div class="card-image" style="height: 200px; overflow: hidden;">
+                            <img src="assets/img/tea_wayanad.webp" alt="Experience View" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                            <div class="overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);"></div>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="icon-wrapper mb-4" style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-star fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="text-white mb-3">Unique Experience</h3>
+                            <p class="text-white-50">Create unforgettable memories with our curated experiences and activities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-container mt-4">
+                <div class="mx-auto text-center">
+                    <a class="btn btn-primary btn-lg js-scroll-trigger custom-btn" id="getStarted" href="./booking.html">Book Now</a>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Projects-->
@@ -140,9 +198,9 @@
             <div class="col-lg-8 mx-auto">
                 <h2 class="text-black mb-4 text-center">DISCOVER</h2>
                 <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-            style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+                    style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                 <p class="text-black text-center">
-                 Whispers of Forest, a stay that provides rural tranquility and urban convenience
+                    Whispers of Forest, a stay that provides rural tranquility and urban convenience
                 </p>
             </div>
             <!-- Cultural & Historical -->
@@ -154,7 +212,7 @@
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white">Cultural & Historical</h4>
                                 <p class="mb-0 text-white-50">Learn about places to visit</p>
-                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                                <!-- <hr class="d-none d-lg-block mb-0 ml-0" /> -->
                             </div>
                         </div>
                     </div>
@@ -184,7 +242,7 @@
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white">Museums & Crafts</h4>
                                 <p class="mb-0 text-white-50">Learn about places to visit</p>
-                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                                <!-- <hr class="d-none d-lg-block mb-0 ml-0" /> -->
                             </div>
                         </div>
                     </div>
@@ -205,7 +263,7 @@
                     </div>
                 </div>
             </div>
-              <!-- Plantations -->
+            <!-- Plantations -->
             <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
                 <div class="col-lg-6"><img class="img-fluid" src="assets/img/plantation/tea_estate.webp" alt="" /></div>
                 <div class="col-lg-6">
@@ -214,7 +272,7 @@
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white">Plantations</h4>
                                 <p class="mb-0 text-white-50">Learn about places to visit</p>
-                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                                <!-- <hr class="d-none d-lg-block mb-0 ml-0" /> -->
                             </div>
                         </div>
                     </div>
@@ -244,7 +302,7 @@
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white">Wildlife</h4>
                                 <p class="mb-0 text-white-50">Learn about places to visit</p>
-                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                                <!-- <hr class="d-none d-lg-block mb-0 ml-0" /> -->
                             </div>
                         </div>
                     </div>
@@ -266,7 +324,7 @@
                 </div>
             </div>
             <!-- Food start -->
-		    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
                 <div class="col-lg-6"><img class="img-fluid" src="assets/img/tirunelli.png" alt="" /></div>
                 <div class="col-lg-6">
                     <div class="bg-black text-center h-100 project">
@@ -274,7 +332,7 @@
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white">Resturants</h4>
                                 <p class="mb-0 text-white-50">Village Food</p>
-                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                                <!-- <hr class="d-none d-lg-block mb-0 ml-0" /> -->
                             </div>
                         </div>
                     </div>
@@ -294,7 +352,7 @@
                 <div class="text-left mb-12 text-center">
                     <h2 class="text-white font-weight-bold text-center">Get in touch with us</h2>
                     <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-            style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                 </div>
             </div>
             <div class="row">
@@ -325,7 +383,7 @@
                         </div>
 
                         <div class="row">
-                        <!--
+                            <!--
                             <div class="col-md-5">
                                 <div class="form-group mb-3">
                                     <label for="inputCity" class="text-white-50 small text-uppercase">City</label>
@@ -381,10 +439,16 @@
                             </div>
 
                             <div class="mb-4">
-                                <h5 class="text-primary text-uppercase small font-weight-bold">Phone</h5>
-                                <p class="text-white mb-0">+91 999 999 9999</p>
-                            </div>
 
+                                <h5 class="text-primary text-uppercase small font-weight-bold">Phone
+                                    <i class="fab fa-whatsapp"></i>
+                                </h5>
+                                <p class="text-white mb-0">
+                                    +91 999 999 9999
+                                    <a href="https://wa.me/919999999999" target="_blank" class="text-white ml-2">
+                                    </a>
+                                </p>
+                            </div>
                         </div>
 
 
@@ -418,13 +482,9 @@
                     <div id="map" class="map"></div>
                 </div>
                 <div class="col-md-4 d-flex flex-column align-items-end">
-                    <!-- <div class="social-icons mt-4">
-                        <a class="social-icon mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-icon mx-2" href="#!"><i class="fab fa-instagram"></i></a>
-                    </div> -->
+
                     <div class="mid text-white-50">Discover the beauty of Wayanad</div>
-                    <!-- <div class="mb-2">Copyright © B&W 2023</div> -->
+
                 </div>
             </div>
             <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4">
@@ -433,6 +493,7 @@
                     <a class="social-icon mx-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="social-icon mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
                     <a class="social-icon mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="social-icon mx-2" href="#"> <i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -444,16 +505,20 @@
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Core theme JS-->
-     <script src="js/siteData.js"></script>
+    <script src="js/siteData.js"></script>
+    <script src="js/cardData.js"></script>
     <script src="js/scripts.js"></script>
     <script type="text/javascript" src="js/dynamic-content.js"></script>
-    <script  type="javascript" >
+    <script type="javascript">
     alert(process.env.GMAPSECRET);
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&sensor=false" type="text/javascript"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&sensor=false"
+        type="text/javascript"></script>
     <script src="js/maps.js"></script>
 
 
 
 </body>
+
 </html>

@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function () {
   // //console.log('DOM fully loaded');
 
@@ -114,7 +113,7 @@ function initializeSection(sectionType, data, sectionIndex) {
 
   const hr = document.createElement('hr');
   hr.className = 'd-none d-lg-block mb-0 ' + (isImageOnRight ? 'ml-0' : 'mr-0');
-  textContainer.appendChild(hr);
+  // textContainer.appendChild(hr);
 
   const imgWrapper = document.createElement('div');
   imgWrapper.className = 'img-wrapper';
@@ -177,7 +176,7 @@ function initializeSection(sectionType, data, sectionIndex) {
     tempContent.innerHTML = `
       <h5 class="text-white">${currentItem.name}</h5>
       <p class="mb-0 text-white-50">${currentItem.description}</p>
-      <a href="${currentItem.knowmore || '#'}"   class="nav-link js-scroll-trigger">Know More</a>`;
+      <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
 
     tempContent.style.position = 'absolute';
     tempContent.style.width = '100%';
@@ -241,101 +240,4 @@ function initializeSection(sectionType, data, sectionIndex) {
   updateContent('next', isOdd);
 }
 
-// Add CSS for vertical arrows
-const style = document.createElement('style');
-style.textContent = `
-  .tab-content {
-    padding: 15px 0;
-    min-height: 100px;
-    position: relative;
-    overflow: hidden;
-  }
 
-  .tab-content-temp {
-    padding: 0;
-    transition: all 0.5s ease;
-  }
-
-  .img-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
-
-  .arrows-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
-  }
-
-  .tab-arrow {
-    background-color: rgba(52, 58, 64, 0.7);
-    color: #f8f9fa;
-    border: none;
-    padding: 12px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    position: absolute;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    pointer-events: auto;
-  }
-
-  .tab-arrow:hover {
-    background-color: #64a19d;
-  }
-
-  .tab-arrow-left {
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .tab-arrow-right {
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .tab-arrow-up {
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-  }
-
-  .tab-arrow-down {
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-  }
-
-  .row.justify-content-center {
-    position: relative;
-  }
-
-  .project-text {
-    position: relative;
-    padding: 0 20px;
-  }
-`;
-
-document.head.appendChild(style);
-
-function debugDOMStructure() {
-  //console.log('Location section:', document.getElementById('projects'));
-  //console.log('Container in Location:', document.querySelector('#projects .container'));
-  //console.log('Rows in container:', document.querySelectorAll('#projects .container .row'));
-}
-
-window.addEventListener('load', debugDOMStructure);
