@@ -10,7 +10,7 @@ const siteData = {
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
-      rating:"4.5",
+      rating:"4.4",
       knowmore: "./knowmore.html"
     },
     {

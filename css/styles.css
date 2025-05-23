@@ -10660,6 +10660,10 @@ body {
   background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
   min-height: 100vh;
   padding-bottom: 5rem;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .about-content {
