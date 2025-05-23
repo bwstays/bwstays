@@ -238,7 +238,7 @@
                                              <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths</div>
                                          </div>
                                          <div class="form-check mb-3">
-                                             <input class="form-check-input" type="radio" name="villaSelect" id="villa1" checked>
+                                             <input class="form-check-input" type="checkbox" name="villa1" id="villa1" >
                                              <label class="form-check-label" for="villa1">
                                                  Select this Villa
                                              </label>
@@ -263,7 +263,7 @@
                                              <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths</div>
                                          </div>
                                          <div class="form-check mb-3">
-                                             <input class="form-check-input" type="radio" name="villaSelect" id="villa2">
+                                             <input class="form-check-input" type="checkbox" name="villa2" id="villa2" unchecked>
                                              <label class="form-check-label" for="villa2">
                                                  Select this Villa
                                              </label>
@@ -511,7 +511,7 @@
 				 "2025-8-6", "2025-8-6"
 			 ],
 			 [
-				 "2025-8-10", "2025-8-10"
+				 "2025-08-10", "2025-08-10"
 			 ]
 
 		];
@@ -522,7 +522,12 @@
 			 if(booking[i].length==2)
 			 {
 			   bookedDays.push(booking[i][0]);
+
+			      // $("#villa1").prop("checked", true);
+			      // $("#villa2").prop("checked", true);
+
 			 }
+
 		}
 
 		for (i = 0; i < closed.length; i++) {
@@ -530,6 +535,7 @@
 			 if(closed[i].length==2)
 			 {
 			   closedDays.push(closed[i][0]);
+
 			 }
 		}
 
@@ -537,8 +543,42 @@
 	      showOn: "button",
 	      buttonImageOnly: true,
 	      buttonText: "Select date",
-	      dateFormat: "yy-mm-dd",
+	      dateFormat: "yy-m-dd",
 	      minDate: "today",
+	      onSelect: function (selected)
+	      {
+
+
+		var sDate = selected;
+		var bDate ;
+
+
+
+	      for (i = 0; i < booking.length; i++) {
+
+			bDate=booking[i][0];
+	       if(booking[i].length==2 && (Date.parse(sDate) == Date.parse(bDate)))
+			 {
+	     		  $("#villa1").prop("checked", true).prop("disabled", true);
+	     		  $("#villa2").prop("checked", true).prop("disabled", true);
+	     		  break;
+	        }
+	        else if(booking[i].length==1  && (Date.parse(sDate) == Date.parse(bDate)) )
+	        {
+	      	  $("#villa1").prop("checked", true).prop("disabled", true);
+	      	  break;
+	        }
+	        else {
+
+	         $("#villa1").prop("checked", false).prop("disabled", false);
+	          $("#villa2").prop("checked", false).prop("disabled", false);
+	          break;
+	        }
+           }
+
+
+
+	      },
           onChange: function(selectedDates, dateStr, instance) {
 
           		   if (selectedDates.length === 2) {

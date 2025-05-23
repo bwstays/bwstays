@@ -12,6 +12,8 @@ https://jsoneditoronline.org/#right=local.qapiki
 5) Added alt to all the images tag 
 6) Check availbility should we just below date selection . Moved it there 
 7) Updates a few texts in index page 
+8) Converted ratio button in booking villa to check box. One may need to book both villas  . 
+9) Also added a jquery checking to disable one checkbox based on a date where atleast if one booking of villa is done  .All done to check the logic .Not a professional style , you can get logic and make the clean later 
 
 
 1) In booking.html and knowmore.html pages, we need  background image in css ,otherwise our log is not visible in these two pages when we load the page 
