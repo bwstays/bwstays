@@ -4,32 +4,24 @@ blackandwhitestays.com
 https://pinetools.com/bulk-batch-grayscale-image
 https://jsoneditoronline.org/#right=local.qapiki
 
-
-1) added a Location heading in the middle of maps 
-2) At logo added index.html 
-3) In all pages we need contacts section . so added them in knowwmore and booking page 
-4) renamed page to knowmore 
-5) When we are in knowmore and booking page only home and contact menu is applicable , about us will not work ,hence removed and updated the menu in those two pages 
-6) some meta tag upsated 
-7) added sample files for  a robot.txt, .htaccess,sitemap.txt ,reciprocallinks  
+ 
+1) Check the booking.html , i added a calnder with some dates blocked and some enabled .A sample code for you to start with is added 
+2) Converted a few color images to B/W 
+3) Updated the villa card details 
+4) For now remove the booking.html link from the book button .Since we dont want users to click for now. Let it be not sperate for now till everthing shapes up . 
 
 
-
-
-
-1) Book Now button should come in the End of About us section ,it should not come in knowmore page 
-2) Divide the About section in to three 
-3) In booking and knowmore pages,s we need  background image in css ,otherwise our log is not visible in these two pages 
-4) Discover widget design to add all the json items on top of image and text side ( left and right )  
-5) Direction added a back ground  in footer css ,,but image is not proper ,,it is two part now 
-6) Know more page design sample i will tell you .
-7) Add a whatsapp icon near phone to contact over whatsapp 
+1) In booking.html and knowmore.html pages, we need  background image in css ,otherwise our log is not visible in these two pages when we load the page 
+2) Discover widget design to add all the json items on top of image and text side ( left and right )  
+3) knowmore.html page design sample we are yet to start,shared a sample 
+4) Add a whatsapp icon near phone to contact over whatsapp by clicking 
+5) Firebase trail - low priority for now 
 
 
 5) SEO improvement i will tell you in the next stage 
 6) Index page in github pages 
 7) ID for the elements 
 8) Change all image names and color 
-9) Add title to all images form fields etc 
-10) 
+9) Add title to all images,form fields etc 
+
 

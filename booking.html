@@ -63,6 +63,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Added flatpickr for better date selection -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 </head>
 
@@ -213,56 +214,57 @@
                     <div class="villa-selection mb-4">
                         <h5 class="mb-3">Select Your Villa</h5>
                         <div class="row">
-                            <!-- Villa Card 1 -->
-                            <div class="col-md-6 mb-4">
-                                <div class="villa-card bg-white">
-                                    <img src="assets/img/plantation/tea_estate.webp" class="villa-img w-100" alt="Luxury Villa">
-                                    <div class="p-3">
-                                        <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <h5 class="mb-0">Luxury Tea Estate Villa</h5>
-                                            <span class="price-tag">₹12,000/night</span>
-                                        </div>
-                                        <p class="text-muted mb-2">Nestled among tea plantations with panoramic views</p>
-                                        <div class="villa-features">
-                                            <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds</div>
-                                            <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 4 Guests</div>
-                                            <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 2 Baths</div>
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input" type="radio" name="villaSelect" id="villa1" checked>
-                                            <label class="form-check-label" for="villa1">
-                                                Select this villa
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                             <!-- Villa Card 1 -->
+                             <div class="col-md-6 mb-4">
+                                 <div class="villa-card bg-white">
+                                     <img src="assets/img/plantation/tea_estate.webp" class="villa-img w-100" alt="Luxury Villa">
+                                     <div class="p-3">
+                                         <div class="d-flex justify-content-between align-items-center mb-2">
+                                             <h5 class="mb-0">Luxury Bamboo Side Villa</h5>
+                                             <span class="price-tag">₹5,000/night</span>
+                                         </div>
+                                         <p class="text-muted mb-2">Nestled  </p>
+                                         <div class="villa-features">
+                                             <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds</div>
+                                             <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 4 Guests</div>
+                                             <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths</div>
+                                         </div>
+                                         <div class="form-check mb-3">
+                                             <input class="form-check-input" type="radio" name="villaSelect" id="villa1" checked>
+                                             <label class="form-check-label" for="villa1">
+                                                 Select this Villa
+                                             </label>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
 
-                            <!-- Villa Card 2 -->
-                            <div class="col-md-6 mb-4">
-                                <div class="villa-card bg-white">
-                                    <img src="assets/img/falls/thus_falls.png" class="villa-img w-100" alt="Premium Villa">
-                                    <div class="p-3">
-                                        <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <h5 class="mb-0">Premium Waterfall Villa</h5>
-                                            <span class="price-tag">₹15,000/night</span>
-                                        </div>
-                                        <p class="text-muted mb-2">Luxurious villa with private waterfall view</p>
-                                        <div class="villa-features">
-                                            <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 3 Beds</div>
-                                            <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 6 Guests</div>
-                                            <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 3 Baths</div>
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input" type="radio" name="villaSelect" id="villa2">
-                                            <label class="form-check-label" for="villa2">
-                                                Select this villa
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                             <!-- Villa Card 2 -->
+                             <div class="col-md-6 mb-4">
+                                 <div class="villa-card bg-white">
+                                     <img src="assets/img/falls/thus_falls.png" class="villa-img w-100" alt="Premium Villa">
+                                     <div class="p-3">
+                                         <div class="d-flex justify-content-between align-items-center mb-2">
+                                             <h5 class="mb-0">Premium Waterfall Villa</h5>
+                                             <span class="price-tag">₹5,000/night</span>
+                                         </div>
+                                         <p class="text-muted mb-2">Luxurious Villa </p>
+                                         <div class="villa-features">
+                                             <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds</div>
+                                             <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 2 Guests</div>
+                                             <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths</div>
+                                         </div>
+                                         <div class="form-check mb-3">
+                                             <input class="form-check-input" type="radio" name="villaSelect" id="villa2">
+                                             <label class="form-check-label" for="villa2">
+                                                 Select this Villa
+                                             </label>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+
+ 						</div>
                     </div>
 
                     <!-- Check Availability Button -->
@@ -397,8 +399,8 @@
                             </div>
 
                             <div class="mb-4">
-                                
-                                <h5 class="text-primary text-uppercase small font-weight-bold">Phone 
+
+                                <h5 class="text-primary text-uppercase small font-weight-bold">Phone
                                     <i class="fab fa-whatsapp"></i>
                                 </h5>
                                 <p class="text-white mb-0">
@@ -469,7 +471,81 @@
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&sensor=false"
         type="text/javascript"></script>
     <script src="js/maps.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script>
+
+
+ $( function() {
+	    $( "#date-range-calendar" ).datepicker({
+	      showOn: "button",
+	      buttonImageOnly: true,
+	      buttonText: "Select date",
+	      dateFormat: "yy-mm-dd",
+	      minDate: "today",
+          onChange: function(selectedDates, dateStr, instance) {
+
+          		   if (selectedDates.length === 2) {
+
+                        const checkIn = selectedDates[0];
+                        const checkOut = selectedDates[1];
+
+						//(checkIn);
+						//alert(checkOut);
+
+                        // Format dates for display
+                        const options = { weekday: 'short', day: 'numeric', month: 'short', year: '2-digit' };
+                        document.getElementById('checkInDate').value = checkIn.toLocaleDateString('en-US', options);
+                        document.getElementById('checkOutDate').value = checkOut.toLocaleDateString('en-US', options);
+
+                        // Calculate nights
+                        const nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
+                        document.getElementById('nights-count').textContent = nights;
+                    }
+                    else
+                    {
+						const checkIn = selectedDates[0];
+						const checkOut = selectedDates[1];
+                    }
+
+
+          },
+	      beforeShowDay: function (date) {
+
+				var closedDays = [];
+				closedDays[0] = "2025-8-4";
+				closedDays[1] = "2025-8-5";
+				closedDays[2] = "2025-8-6";
+
+				var bookedDays = [];
+				bookedDays[0] = "2025-8-16";
+				bookedDays[1] = "2025-8-17";
+				bookedDays[2] = "2025-8-18";
+
+				var dateAsString = date.getFullYear().toString() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+
+				var startDate = new Date("2025-08-02");
+				endDate = new Date("2025-08-12");
+	 			return ($.inArray(dateAsString, closedDays) > -1 ? [false, 'blocked'] :
+				($.inArray(dateAsString, bookedDays) > -1 ? [false, 'reserved'] : [true, '']));
+	      }
+
+	    }).datepicker("setDate", new Date("2025-08-05"));
+	});
+
+	function isBlocked(date) {
+		var dateAsString = date.getFullYear().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getDate();
+		var result = $.inArray( dateAsString, closedDays ) ==-1 ? [true] : [false, 'blocked'];
+		return result
+	}
+
+	function isReserved(date){
+		var dateAsString = date.getFullYear().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getDate();
+		var result = $.inArray( dateAsString, bookedDays ) ==-1 ? [true] : [false, 'reserved'];
+		return result
+	}
+
+
         // Counter functionality
         document.addEventListener('DOMContentLoaded', function() {
             const counterContainers = document.querySelectorAll('.counter-container');
@@ -491,7 +567,7 @@
                     input.value = value + 1;
                 });
             });
-
+			/*
             // Initialize flatpickr date picker
             const dateRangePicker = flatpickr("#date-range-calendar", {
                 mode: "range",
@@ -513,6 +589,7 @@
                     }
                 }
             });
+            */
 
             // Step navigation
             const steps = document.querySelectorAll('.step');
