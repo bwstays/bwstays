@@ -9,13 +9,17 @@ https://jsoneditoronline.org/#right=local.qapiki
 2) Converted a few color images to B/W 
 3) Updated the villa card details 
 4) For now remove the booking.html link from the book button .Since we dont want users to click for now. Let it be not sperate for now till everthing shapes up . 
+5) Added alt to all the images tag 
+6) Check availbility should we just below date selection . Moved it there 
 
 
 1) In booking.html and knowmore.html pages, we need  background image in css ,otherwise our log is not visible in these two pages when we load the page 
 2) Discover widget design to add all the json items on top of image and text side ( left and right )  
 3) knowmore.html page design sample we are yet to start,shared a sample 
 4) Add a whatsapp icon near phone to contact over whatsapp by clicking 
-5) Firebase trail - low priority for now 
+5) We need to add a form in the booking.html read the guest information 
+6) Firebase trail - low priority for now 
+7) We need to change the style.css to cdn url, but a bit css rework needed in this case 
 
 
 5) SEO improvement i will tell you in the next stage 
