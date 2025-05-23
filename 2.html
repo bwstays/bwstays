@@ -1,81 +1,20 @@
-	<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script type = "text/javascript">
-   $( function() {
-    $( "#datepicker" ).datepicker({
-      showOn: "button",
-      buttonImage: "calendar.gif",
-      buttonImageOnly: true,
-      buttonText: "Select date",
-      dateFormat: "yy-mm-dd",
+   <script>
+var booking =
+[
+    [
+        "2025-8-4",
+    ],
+    [
+        "2025-8-5", "2025-8-4"
+    ],
+    [
+        "2025-8-5", "2025-8-4"
+    ]
+];
 
+       for (i = 0; i < booking.length; i++) {
+       alert(booking[i].length);
+       }
+    </script>
+</body>
 
-      beforeShowDay: function (date) {
-
-
-			var closedDays = [];
-			closedDays[0] = "2025-8-4";
-			closedDays[1] = "2025-8-5";
-			closedDays[2] = "2025-8-6";
-
-			var bookedDays = [];
-			bookedDays[0] = "2025-8-16";
-			bookedDays[1] = "2025-8-17";
-			bookedDays[2] = "2025-8-18";
-
-
-			var dateAsString = date.getFullYear().toString() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-
-			var startDate = new Date("2025-08-02");
-			endDate = new Date("2025-08-12");
- 			return ($.inArray(dateAsString, closedDays) > -1 ? [false, 'blocked'] :
-			($.inArray(dateAsString, bookedDays) > -1 ? [false, 'reserved'] : [true, '']));
-
-
-
-
-            }
-
-    }).datepicker("setDate", new Date("2025-08-05"));
-});
-
-function isBlocked(date) {
-var dateAsString = date.getFullYear().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getDate();
-var result = $.inArray( dateAsString, closedDays ) ==-1 ? [true] : [false, 'blocked'];
-return result
-}
-
-function isReserved(date){
-var dateAsString = date.getFullYear().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getDate();
-var result = $.inArray( dateAsString, bookedDays ) ==-1 ? [true] : [false, 'reserved'];
-return result
-}
-
-function assignCalendar(id) {
-                $('<div class="calendar" />')
-                .insertAfter( $(id) )
-                .datepicker({
-                dateFormat: 'YYYY-mm-dd',
-                minDate: new Date(),
-                maxDate: '+1y',
-                altField: id,
-                beforeShowDay: isBlocked})
-                .prev().hide();
-}
-
-
-      </script>
-   </head>
-   <body>
-   <p>Test Section</p>
-<div>
-<p>Date: <input type="text" id="datepicker" name="datepicker"></p
-</div>
-   </body>
-</html>

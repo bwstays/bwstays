@@ -228,13 +228,13 @@
                                      <img alt=""  src="assets/img/plantation/tea_estate.webp" class="villa-img w-100" alt="Luxury Villa">
                                      <div class="p-3">
                                          <div class="d-flex justify-content-between align-items-center mb-2">
-                                             <h5 class="mb-0">Luxury Bamboo Side Villa</h5>
+                                             <h5 class="mb-0">Luxury Villa 1 -  Ground Floor</h5>
                                              <span class="price-tag">₹5,000/night</span>
                                          </div>
                                          <p class="text-muted mb-2">Nestled  </p>
                                          <div class="villa-features">
                                              <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds</div>
-                                             <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 4 Guests</div>
+                                             <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 2 Guests</div>
                                              <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths</div>
                                          </div>
                                          <div class="form-check mb-3">
@@ -253,7 +253,7 @@
                                      <img alt=""  src="assets/img/falls/thus_falls.png" class="villa-img w-100" alt="Premium Villa">
                                      <div class="p-3">
                                          <div class="d-flex justify-content-between align-items-center mb-2">
-                                             <h5 class="mb-0">Premium Waterfall Villa</h5>
+                                             <h5 class="mb-0">Luxury Villa 2- First Floor</h5>
                                              <span class="price-tag">₹5,000/night</span>
                                          </div>
                                          <p class="text-muted mb-2">Luxurious Villa </p>
@@ -273,6 +273,11 @@
                              </div>
 
  						</div>
+ 						 <div class="button-container mt-4">
+						                <div class="mx-auto text-center">
+						                    <a class="btn btn-primary btn-lg js-scroll-trigger custom-btn" id="getStarted" href="#">Make Payment</a>
+						                </div>
+         			     </div>
                     </div>
 
 
@@ -479,7 +484,55 @@
     <script>
 
 
- $( function() {
+		 $( function() {
+
+		 var booking =
+		 [
+			 [
+				 "2025-8-16",
+			 ],
+			 [
+				 "2025-8-17", "2025-8-17"
+			 ],
+			 [
+				 "2025-8-18", "2025-8-18"
+			 ]
+		];
+
+		var closed =
+		 [
+			 [
+				 "2025-8-4",
+			 ],
+			 [
+				 "2025-8-5", "2025-8-5"
+			 ],
+			 [
+				 "2025-8-6", "2025-8-6"
+			 ],
+			 [
+				 "2025-8-10", "2025-8-10"
+			 ]
+
+		];
+		var closedDays = [];
+		var bookedDays = [];
+		for (i = 0; i < booking.length; i++) {
+
+			 if(booking[i].length==2)
+			 {
+			   bookedDays.push(booking[i][0]);
+			 }
+		}
+
+		for (i = 0; i < closed.length; i++) {
+
+			 if(closed[i].length==2)
+			 {
+			   closedDays.push(closed[i][0]);
+			 }
+		}
+
 	    $( "#date-range-calendar" ).datepicker({
 	      showOn: "button",
 	      buttonImageOnly: true,
@@ -514,39 +567,16 @@
 
           },
 	      beforeShowDay: function (date) {
-
-				var closedDays = [];
-				closedDays[0] = "2025-8-4";
-				closedDays[1] = "2025-8-5";
-				closedDays[2] = "2025-8-6";
-
-				var bookedDays = [];
-				bookedDays[0] = "2025-8-16";
-				bookedDays[1] = "2025-8-17";
-				bookedDays[2] = "2025-8-18";
-
 				var dateAsString = date.getFullYear().toString() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
 
-				var startDate = new Date("2025-08-02");
+				var startDate = new Date("2025-8-01");
 				endDate = new Date("2025-08-12");
 	 			return ($.inArray(dateAsString, closedDays) > -1 ? [false, 'blocked'] :
 				($.inArray(dateAsString, bookedDays) > -1 ? [false, 'reserved'] : [true, '']));
 	      }
 
-	    }).datepicker("setDate", new Date("2025-08-05"));
+	    }).datepicker("setDate", new Date("2025-08-01"));
 	});
-
-	function isBlocked(date) {
-		var dateAsString = date.getFullYear().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getDate();
-		var result = $.inArray( dateAsString, closedDays ) ==-1 ? [true] : [false, 'blocked'];
-		return result
-	}
-
-	function isReserved(date){
-		var dateAsString = date.getFullYear().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getDate();
-		var result = $.inArray( dateAsString, bookedDays ) ==-1 ? [true] : [false, 'reserved'];
-		return result
-	}
 
 
         // Counter functionality
