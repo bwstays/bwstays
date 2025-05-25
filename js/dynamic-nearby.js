@@ -1,3 +1,6 @@
+// Import the site data
+import { siteData } from './siteData.js';
+
 function getCurrentPageId() {
     // Get the current URL parameters
     const urlParams = new URLSearchParams(window.location.search);
@@ -21,9 +24,7 @@ function getNearbyPlaces(currentId) {
     const { place } = result;
     if (!place.nearby) return [];
     
-
     return place.nearby.map(nearby => {
-
         const categories = ['culthist', 'waterfalls', 'museums', 'romantic', 'plantation'];
         for (const category of categories) {
             const fullPlace = siteData[category].find(p => p.name === nearby.name);
@@ -46,44 +47,44 @@ function getNearbyPlaces(currentId) {
     });
 }
 
+// Function to create a card for each nearby place
 function createPlaceCard(place) {
     return `
-        <div class="col-md-3 mb-4">
-            <div class="card h-100 d-flex flex-column">
-                <!-- <img src="${place.image}" class="card-img-top" alt="${place.name}" style="height: 200px; object-fit: cover;"> -->
-                <div class="card-body d-flex flex-column">
-                    <div class="flex-grow-1">
-                        <h5 class="card-title">${place.name}</h5>
-                        <p class="card-text">
-                            <small class="text-muted">
-                                <i class="fas fa-map-marker-alt"></i> ${place.distance} km away
-                            </small>
-                            <br>
-                            <small class="text-muted">
-                                <i class="fas fa-star"></i> ${place.rating} Rating
-                            </small>
-                        </p>
-                    </div>
-                    <div class="mt-2">
-                        <a href="${place.knowmore}?id=${place.id}" class="btn btn-primary btn-sm w-100">Learn More</a>
-                    </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">${place.name}</h5>
+                    <p class="card-text">
+                        <i class="fas fa-road"></i> Distance: ${place.distance} km
+                    </p>
                 </div>
             </div>
         </div>
     `;
 }
 
-function initNearbyPlaces() {
-    const currentId = getCurrentPageId();
-    const nearbyPlaces = getNearbyPlaces(currentId);
-    const cardsContainer = document.getElementById('nearby-cards');
-    
-    if (cardsContainer) {
-        cardsContainer.innerHTML = nearbyPlaces
-            .map(place => createPlaceCard(place))
-            .join('');
+// Function to render nearby places
+function renderNearbyPlaces() {
+    const nearbyCardsContainer = document.getElementById('nearby-cards');
+    if (!nearbyCardsContainer) {
+        console.error('Could not find nearby-cards container');
+        return;
     }
+
+    // Get the current page ID from URL
+    const currentId = getCurrentPageId();
+    console.log('Current page ID:', currentId);
+    
+    // Get nearby places for the current location
+    const nearbyPlaces = getNearbyPlaces(currentId);
+    console.log('Nearby places:', nearbyPlaces);
+    
+    // Create HTML for all nearby places
+    const placesHTML = nearbyPlaces.map(place => createPlaceCard(place)).join('');
+    
+    // Update the container with the new content
+    nearbyCardsContainer.innerHTML = placesHTML;
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', initNearbyPlaces);
+// Call the render function when the DOM is loaded
+document.addEventListener('DOMContentLoaded', renderNearbyPlaces);
