@@ -2,7 +2,7 @@
 
   culthist: [
     {
-      id: "tirunelli",
+      id: "4",
       name: "Tirunelli Temple",
       description: "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
       image: "assets/img/tirunelli.png",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      id: "mosque1",
+      id: "3",
       name: "Varampatta mosque",
       description: "Historic Varampatta mosque with beautiful architecture and cultural significance.",
       image: "assets/img/ghats_wayanad.jpg",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      id: "temple2",
+      id: "4",
       name: "Jain Temple",
       description: "Historic Jain temple with beautiful architecture and cultural significance.",
       image: "assets/img/ghats_wayanad.jpg",
