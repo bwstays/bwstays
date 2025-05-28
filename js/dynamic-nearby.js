@@ -60,7 +60,7 @@ function renderNearbyPlaces() {
     nearbyCardsContainer.innerHTML = placesHTML;
 }
 
-// Function to create a card for each nearby place
+// Function to create a card for each nearby place 
 function createPlaceCard(place) {
     return `
         <div class="col-lg-4 col-md-6 mb-4">
