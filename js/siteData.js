@@ -1,8 +1,24 @@
 	const siteData = {
 
   culthist: [
-    {
-      id: 1,
+     {
+       id: 1,
+       name: "Santhi natha Temple, Venniyod",
+       description: "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
+       image: "assets/img/tirunelli.png",
+       holidays: "Sun",
+       timing: "10:00-18:00",
+       Contact: "+91-000 000 0000",
+       locationid: "1",
+ 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+       distance: "10",
+       rating: "4.4",
+       knowmore: "./Santhi.html?id=1",
+
+     },
+
+ 	{
+      id: 4,
       name: "Tirunelli Temple",
       description: "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
       image: "assets/img/tirunelli.png",
@@ -13,11 +29,11 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating: "4.4",
-      knowmore: "./knowmore.html",
-      
+      knowmore: "./tirunelli.html?id=4",
+
     },
     {
-      id: 2,
+      id: 13,
       name: "Varampatta mosque",
       description: "Historic Varampatta mosque with beautiful architecture and cultural significance.",
       image: "assets/img/ghats_wayanad.jpg",
@@ -28,14 +44,14 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html",
-      
+      knowmore: "./Varampatta.html?id=13",
+
     },
     {
       id: 3,
       name: "Jain Temple",
       description: "Historic Jain temple with beautiful architecture and cultural significance.",
-      image: "assets/img/ghats_wayanad.jpg",
+      image: "assets/img/demo-image-01.jpg",
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
@@ -43,11 +59,11 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html",
-      
+      knowmore: "./jaintemple.html?id=3",
+
     },
     {
-      id: 4,
+      id: 12,
       name: "Seetha Lava Kusha Temple",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
       image: "assets/img/wayanad_mist.jpg",
@@ -58,8 +74,8 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html",
-     
+      knowmore: "./seethalavakushatemple.html?id=12",
+
     }
   ],
   waterfalls: [
@@ -75,8 +91,8 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
-      knowmore: "./knowmore.html",
-      
+      knowmore: "./meenmuttyfalls.html?id=5",
+
     },
     {
       id: 6,
@@ -91,7 +107,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-     
+
     },
     {
       id: 7,
@@ -106,7 +122,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-     
+
     }
   ],
   museums: [
@@ -123,7 +139,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     },
     {
       id: 9,
@@ -138,7 +154,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     },
     {
       id: 10,
@@ -153,7 +169,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     }
   ],
   romantic: [
@@ -170,7 +186,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     },
     {
       id: 12,
@@ -185,7 +201,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     },
     {
       id: 13,
@@ -200,7 +216,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-     
+
     }
   ],
   plantation: [
@@ -217,7 +233,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     },
     {
       id: 15,
@@ -232,7 +248,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     }
   ],
   trucking: [
@@ -249,7 +265,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     },
     {
       id: 17,
@@ -264,7 +280,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-     
+
     }
   ],
   wildlife: [
@@ -281,7 +297,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-     
+
     },
     {
       id: 19,
@@ -296,7 +312,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     }
   ],
   farms: [
@@ -327,7 +343,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     }
   ],
   sporting: [
@@ -344,7 +360,7 @@
           distance: "10",
           rating:"4.5",
           knowmore: "./knowmore.html",
-          
+
       }
     ],
   food: [
@@ -361,7 +377,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-      
+
     },
     {
       id: 24,
@@ -376,7 +392,7 @@
       distance: "10",
       rating:"4.5",
       knowmore: "./knowmore.html",
-     
+
     }
   ],
 

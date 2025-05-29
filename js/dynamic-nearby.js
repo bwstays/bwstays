@@ -2,7 +2,9 @@
 function getCurrentPageId() {
 
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('id') || 'tirunelli'; 
+
+
+    return urlParams.get('id') ;
 }
 
 function findPlaceById(id) {
@@ -40,28 +42,31 @@ function renderNearbyPlaces() {
         return;
     }
 
+
     // Santhi natha Temple has ID 1 in the locations data
-    const santhiNathaTempleId = 1;
-    const maxDistance = 25; 
-    
+    const locId = getCurrentPageId();
+    const maxDistance = 25;
+
     // id we can pass dynamically
-    const nearbyPlaces = getNearbyPlaces(santhiNathaTempleId, maxDistance);
+    const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
+
     console.log('Nearby places:', nearbyPlaces);
-    
+
     if (nearbyPlaces.length === 0) {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
         return;
     }
-    
+
     // Create HTML for all nearby places
     const placesHTML = nearbyPlaces.map(place => createPlaceCard(place)).join('');
-    
+
     // Update the container with the new content
     nearbyCardsContainer.innerHTML = placesHTML;
 }
 
-// Function to create a card for each nearby place 
+// Function to create a card for each nearby place
 function createPlaceCard(place) {
+
     return `
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">

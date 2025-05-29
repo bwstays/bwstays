@@ -83,14 +83,14 @@ window.addEventListener('load', function () {
 
       card.innerHTML = `
           <div class="card-img-container" style="height: 200px; overflow: hidden;">
-              <img src="${item.image}" class="card-img-top" alt="${item.name}" 
+              <img src="${item.image}" class="card-img-top" alt="${item.name}"
                    style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
           </div>
           <div class="card-body d-flex flex-column">
               <h5 class="card-title text-white">${item.name}</h5>
               <div class="rating mb-2">
                   <span class="text-warning">★ ${item.rating}</span>
-                  <span class="text-white-50 ml-2">${item.distance}km away</span>
+                  <span class="text-white-50 ml-2">${item.distance}km away from Kalpetta</span>
               </div>
               <p class="card-text text-white-50 flex-grow-1">${item.description}</p>
               <div class="card-footer-info mb-3">

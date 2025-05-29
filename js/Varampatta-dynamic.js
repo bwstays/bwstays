@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
     const sections = document.querySelectorAll('#projects .container .row.justify-content-center');
-  
+
     let sectionIndex = 1;
     Object.keys(siteData).forEach((sectionType) => {
       if (siteData[sectionType]) {
@@ -46,7 +46,7 @@ window.addEventListener('load', function () {
         <p class="text-white-50 mb-3">${currentItem.description}</p>
         <div class="mb-3">
             <span class="text-warning">★ ${currentItem.rating}</span>
-            <span class="text-white-50 ml-2">${currentItem.distance}km away</span>
+            <span class="text-white-50 ml-2">${currentItem.distance}km away from Kalpetta</span>
         </div>
         <div class="mb-3">
             <small class="text-white-50">
@@ -83,7 +83,7 @@ window.addEventListener('load', function () {
 
         card.innerHTML = `
             <div class="card-img-container" style="height: 200px; overflow: hidden;">
-                <img src="${item.image}" class="card-img-top" alt="${item.name}" 
+                <img src="${item.image}" class="card-img-top" alt="${item.name}"
                      style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
             <div class="card-body d-flex flex-column">
@@ -117,18 +117,18 @@ window.addEventListener('load', function () {
     aboutSection.innerHTML = '';
     aboutSection.appendChild(mainContainer);
   });
-  
+
   function initializeSection(sectionType, data, sectionIndex) {
     let sectionContainer;
     let sectionTitle;
-  
+
     const allSections = document.querySelectorAll('#projects .container .row.justify-content-center');
-  
+
     const isOdd = sectionIndex % 2 === 1;
-  
+
     if (sectionIndex - 1 < allSections.length) {
       sectionContainer = allSections[sectionIndex - 1];
-  
+
       const titleElement = sectionContainer.querySelector('.project-text h4');
       if (titleElement) {
         sectionTitle = titleElement.textContent;
@@ -138,82 +138,82 @@ window.addEventListener('load', function () {
     } else {
       return;
     }
-  
+
     if (!sectionContainer) {
       return;
     }
-  
+
     const imgColumn = sectionContainer.querySelector('.col-lg-6 img');
     if (!imgColumn) {
       return;
     }
-  
+
     const imgColumnParent = imgColumn.closest('.col-lg-6');
     const contentColumn = sectionContainer.querySelector('.col-lg-6:not(:has(img))');
     const isImageOnRight = imgColumnParent.nextElementSibling === null || !imgColumnParent.nextElementSibling.classList.contains('col-lg-6');
-  
+
     const imgElement = imgColumn;
-  
+
     const arrowContainer = document.createElement('div');
     arrowContainer.className = 'arrows-container';
     sectionContainer.appendChild(arrowContainer);
-  
+
     const leftArrow = document.createElement('div');
     leftArrow.className = 'tab-arrow tab-arrow-left';
     leftArrow.innerHTML = '&laquo;';
     leftArrow.setAttribute('aria-label', 'Previous tab');
     arrowContainer.appendChild(leftArrow);
-  
+
     const rightArrow = document.createElement('div');
     rightArrow.className = 'tab-arrow tab-arrow-right';
     rightArrow.innerHTML = '&raquo;';
     rightArrow.setAttribute('aria-label', 'Next tab');
     arrowContainer.appendChild(rightArrow);
-  
+
     let currentTabIndex = 0;
-  
+
     leftArrow.addEventListener('click', function () {
       currentTabIndex = (currentTabIndex > 0) ? currentTabIndex - 1 : data.length - 1;
       updateContent('prev', isOdd);
     });
-  
+
     rightArrow.addEventListener('click', function () {
       currentTabIndex = (currentTabIndex < data.length - 1) ? currentTabIndex + 1 : 0;
       updateContent('next', isOdd);
     });
-  
+
     const textContainer = sectionContainer.querySelector('.project-text');
     if (!textContainer) {
       return;
     }
-  
+
     textContainer.innerHTML = '';
-  
+
     const titleElement = document.createElement('h4');
     titleElement.className = 'text-white';
     titleElement.textContent = sectionTitle;
     textContainer.appendChild(titleElement);
-  
+
     const tabContent = document.createElement('div');
     tabContent.className = 'tab-content';
     textContainer.appendChild(tabContent);
-  
+
     const hr = document.createElement('hr');
     hr.className = 'd-none d-lg-block mb-0 ' + (isImageOnRight ? 'ml-0' : 'mr-0');
-  
+
     const imgWrapper = document.createElement('div');
     imgWrapper.className = 'img-wrapper';
     imgWrapper.style.position = 'relative';
     imgWrapper.style.overflow = 'hidden';
     imgWrapper.style.width = '100%';
     imgWrapper.style.height = '100%';
-  
+
     imgElement.parentNode.insertBefore(imgWrapper, imgElement);
     imgWrapper.appendChild(imgElement);
-  
+
     function updateContent(direction = 'next', isHorizontal = true) {
       const currentItem = data[currentTabIndex];
-  
+
       const tempImg = document.createElement('img');
       tempImg.className = 'temp-image';
       tempImg.src = currentItem.image;
@@ -224,7 +224,7 @@ window.addEventListener('load', function () {
       tempImg.style.width = '100%';
       tempImg.style.height = '100%';
       tempImg.style.opacity = '0';
-  
+
       if (isHorizontal) {
         tempImg.style.left = direction === 'next' ? '-100%' : '100%';
         tempImg.style.top = '0';
@@ -232,79 +232,79 @@ window.addEventListener('load', function () {
         tempImg.style.top = direction === 'next' ? '-100%' : '100%';
         tempImg.style.left = '0';
       }
-  
+
       imgWrapper.appendChild(tempImg);
-  
+
       const oldImages = imgWrapper.querySelectorAll('img:not(.temp-image)');
       oldImages.forEach(oldImg => {
         oldImg.style.transition = 'all 0.5s ease';
         oldImg.style.opacity = '0';
-  
+
         if (isHorizontal) {
           oldImg.style.left = direction === 'next' ? '100%' : '-100%';
         } else {
           oldImg.style.top = direction === 'next' ? '100%' : '-100%';
         }
-  
+
         setTimeout(() => {
           oldImg.remove();
         }, 500);
       });
-  
+
       const tempContent = document.createElement('div');
       tempContent.className = 'tab-content-temp';
       tempContent.innerHTML = `
         <h5 class="text-white">${currentItem.name} (${currentItem.rating}★)</h5>
         <p class="mb-0 text-white-50">${currentItem.description}</p>
         <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
-  
+
       tempContent.style.position = 'absolute';
       tempContent.style.width = '100%';
       tempContent.style.opacity = '0';
-  
+
       if (isHorizontal) {
         tempContent.style.left = direction === 'next' ? '-50px' : '50px';
       } else {
         tempContent.style.top = direction === 'next' ? '-50px' : '50px';
       }
-  
+
       tabContent.appendChild(tempContent);
-  
+
       const oldContents = tabContent.querySelectorAll('.tab-content-temp:not(:last-child)');
       oldContents.forEach(oldContent => {
         oldContent.style.transition = 'all 0.5s ease';
         oldContent.style.opacity = '0';
-  
+
         if (isHorizontal) {
           oldContent.style.left = direction === 'next' ? '50px' : '-50px';
         } else {
           oldContent.style.top = direction === 'next' ? '50px' : '-50px';
         }
-  
+
         setTimeout(() => {
           oldContent.remove();
         }, 500);
       });
-  
+
       setTimeout(() => {
         tempImg.style.transition = 'all 0.5s ease';
         tempImg.style.opacity = '1';
-  
+
         if (isHorizontal) {
           tempImg.style.left = '0';
         } else {
           tempImg.style.top = '0';
         }
-  
+
         setTimeout(() => {
           tempImg.classList.remove('temp-image');
         }, 500);
       }, 50);
-  
+
       setTimeout(() => {
         tempContent.style.transition = 'all 0.5s ease';
         tempContent.style.opacity = '1';
-  
+
         if (isHorizontal) {
           tempContent.style.left = '0';
         } else {
@@ -312,9 +312,8 @@ window.addEventListener('load', function () {
         }
       }, 50);
     }
-  
+
     updateContent('next', isOdd);
   }
-  
-  
-  
+
+
