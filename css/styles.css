@@ -10763,4 +10763,62 @@ body {
   padding: 0 20px;
 }
 
+/* Cultural/Historical Cards Styling */
+.about-section .card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-section .card-img-container {
+    position: relative;
+}
+
+.about-section .card-img-top {
+    border-radius: 0;
+}
+
+.about-section .card-body {
+    padding: 1.5rem;
+}
+
+.about-section .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.about-section .rating {
+    font-size: 0.9rem;
+}
+
+.about-section .card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.about-section .card-footer-info {
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+.about-section .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-section .col-md-4 {
+        margin-bottom: 2rem;
+    }
+    
+    .about-section .card-img-container {
+        height: 150px !important;
+    }
+}
+
 

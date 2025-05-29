@@ -2,7 +2,7 @@
 
   culthist: [
     {
-      id: "4",
+      id: 1,
       name: "Tirunelli Temple",
       description: "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
       image: "assets/img/tirunelli.png",
@@ -17,7 +17,7 @@
       
     },
     {
-      id: "3",
+      id: 2,
       name: "Varampatta mosque",
       description: "Historic Varampatta mosque with beautiful architecture and cultural significance.",
       image: "assets/img/ghats_wayanad.jpg",
@@ -32,7 +32,7 @@
       
     },
     {
-      id: "4",
+      id: 3,
       name: "Jain Temple",
       description: "Historic Jain temple with beautiful architecture and cultural significance.",
       image: "assets/img/ghats_wayanad.jpg",
@@ -47,7 +47,7 @@
       
     },
     {
-      id: "temple3",
+      id: 4,
       name: "Seetha Lava Kusha Temple",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
       image: "assets/img/wayanad_mist.jpg",
@@ -64,7 +64,7 @@
   ],
   waterfalls: [
     {
-      id: "meenmutty",
+      id: 5,
       name: "Meenmutty Falls",
       description: "One of the largest and most spectacular waterfalls in Wayanad.",
       image: "assets/img/falls/meenmufalls.png",
@@ -79,7 +79,7 @@
       
     },
     {
-      id: "soochipara",
+      id: 6,
       name: "Soochipara Falls",
       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
       image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
@@ -94,7 +94,7 @@
      
     },
     {
-      id: "kanthanpara",
+      id: 7,
       name: "Kanthanpara Falls",
       description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
       image: "assets/img/falls/kanta_falls.png",
@@ -111,7 +111,7 @@
   ],
   museums: [
     {
-      id: "folklore",
+      id: 8,
       name: "Folklore Museum",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/tirunelli.png",
@@ -126,7 +126,7 @@
       
     },
     {
-      id: "edakkal",
+      id: 9,
       name: "Edakkal Caves",
       description: "Ancient rock shelter with prehistoric carvings and inscriptions.",
       image: "assets/img/edakkal_caves.webp",
@@ -141,7 +141,7 @@
       
     },
     {
-      id: "ambalavayal",
+      id: 10,
       name: "Ambalavayal Heritage Museum",
       description: "Displays tribal heritage and ancient artifacts from the region.",
       image: "assets/img/tea_wayanad.webp",
@@ -158,7 +158,7 @@
   ],
   romantic: [
     {
-      id: "karapuzhadam",
+      id: 11,
       name: "Karapuzhs Dam",
       description: "Karapuzhs Dam.",
       image: "assets/img/falls/meenmufalls.png",
@@ -173,7 +173,7 @@
       
     },
     {
-      id: "PookodeLake",
+      id: 12,
       name: "Pookode Lake",
       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
       image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
@@ -188,7 +188,7 @@
       
     },
     {
-      id: "banasurasagardam",
+      id: 13,
       name: "Banasurasagar Dam",
       description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
       image: "assets/img/falls/kanta_falls.png",
@@ -205,7 +205,7 @@
   ],
   plantation: [
     {
-      id: "plantation",
+      id: 14,
       name: "Harissons",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/plantation/tea_plantaion.jpg",
@@ -220,7 +220,7 @@
       
     },
     {
-      id: "teaestate",
+      id: 15,
       name: "Wayanad Tea Estate",
       description: "Expansive tea plantations with guided tours and tasting sessions.",
       image: "assets/img/plantation/tea_estate.webp",
@@ -237,7 +237,7 @@
   ],
   trucking: [
     {
-      id: "Chundale",
+      id: 16,
       name: "chundale",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/trucking/edakkal_caves.webp",
@@ -252,7 +252,7 @@
       
     },
     {
-      id: "chembra",
+      id: 17,
       name: "Chembra Peak Trek",
       description: "Popular trekking destination with breathtaking views and a heart-shaped lake.",
       image: "assets/img/trucking/trucking.jpg",
@@ -269,7 +269,7 @@
   ],
   wildlife: [
     {
-      id: "Bandipur",
+      id: 18,
       name: "Bandipur Museum",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/wildlife/Wildlife_safari_at_tholpetty_wildlife_sanctuaryjpg.avif",
@@ -284,7 +284,7 @@
      
     },
     {
-      id: "muthanga",
+      id: 19,
       name: "Muthanga Wildlife Sanctuary",
       description: "Sanctuary with elephants, deer, and a variety of birds in their natural habitat.",
       image: "assets/img/wildlife/pakshipathalam-bird-sanctuary-wayanad.jpg",
@@ -301,7 +301,7 @@
   ],
   farms: [
     {
-      id: "ambalavayal",
+      id: 20,
       name: "Ambalavayal",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/tirunelli.png",
@@ -315,7 +315,7 @@
       knowmore: "./knowmore.html"
     },
     {
-      id: "pepperfarm",
+      id: 21,
       name: "Pepper Farm",
       description: "Experience spice cultivation and farm life in Wayanad.",
       image: "assets/img/falls/chitafalls.png",
@@ -332,7 +332,7 @@
   ],
   sporting: [
         {
-          id: "sporting",
+          id: 22,
           name: "Sports",
           description: "Ziplines.",
           image: "assets/img/tirunelli.png",
@@ -349,7 +349,7 @@
     ],
   food: [
     {
-      id: "resturants",
+      id: 23,
       name: "Resturants",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/tirunelli.png",
@@ -364,7 +364,7 @@
       
     },
     {
-      id: "localcuisine",
+      id: 24,
       name: "LocalCuisine",
       description: "Try authentic Kerala dishes at local eateries and food stalls.",
       image: "assets/img/heritage/chain_tree.avif",
