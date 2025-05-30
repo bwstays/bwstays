@@ -185,7 +185,7 @@ function initializeSection(sectionType, data, sectionIndex) {
     tempContent.innerHTML = `
       <h5 class="text-white">${currentItem.name} (${currentItem.rating}★)</h5>
       <p class="mb-0 text-white-50">${currentItem.description}</p>
-      <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
+       <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
 
     tempContent.style.position = 'absolute';
     tempContent.style.width = '100%';

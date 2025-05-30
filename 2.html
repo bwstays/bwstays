@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Change image dynamically
+        when user scrolls
+    </title>
+
+   <style>
+     .image-container { display: flex; flex-wrap: wrap; gap: 10px; }
+     .image-container img { width: 200px; height: auto; border-radius: 8px; }
+     .loading { text-align: center; padding: 20px; font-size: 18px; }
+</style>
+</head>
+
+<body>
+  <div class="image-container" id="imageContainer"></div>
+<div class="loading" id="loading">Loading...</div>
+
+
+    <script>
+
+    var CORRECTION = 50;  // height of the navbar
+	var DELAY_READING = 2000;
+	var DELAY_SCROLLING = 1000;
+	var links = [ '#section-green', '#section-blue', '#section-red' ];
+	var timerId = 0;
+
+
+function delayLinks( i ) {
+  if( i >= links.length ) i = 0;
+  scrollToLink( links[i] );
+
+  var next = ( i == links.length - 1 ? 0 : i + 1);
+  timerId = setTimeout(function() { delayLinks( next ) }, DELAY_READING );
+}
+
+function scrollToLink( link ) {
+  selectLink = $( link );
+  if ( selectLink.length ) {
+    var top = selectLink.offset().top - CORRECTION;
+    $('body,html').stop().animate({scrollTop: top}, DELAY_SCROLLING);
+  } else {
+    colnsole.log('The link is not found: ' + link);
+  }
+}
+
+   const imageContainer = document.getElementById('imageContainer');
+		const loadingIndicator = document.getElementById('loading');
+		let page = 1;
+		const limit = 10;
+let isLoading = false;
+async function fetchImages(page, limit) {
+  isLoading = true; // Set loading flag to true
+  loadingIndicator.style.display = 'block'; // Show the loading indicator
+  try {
+    const response = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=${limit}`); // free open source API to use
+    const images = await response.json(); // Parse JSON response
+    renderImages(images); // Call renderImages to display images in the DOM
+  } catch (error) {
+    console.error("Error fetching images:", error);
+  } finally {
+    setTimeout(() => {
+      loadingIndicator.style.display = 'none'; // Hide loading indicator
+      isLoading = false; // Reset loading flag
+    }, 500); // Delay to ensure the loading indicator is visible
+  }
+}
+
+function renderImages(images) {
+  images.forEach(img => {
+    const imgElement = document.createElement('img');
+    imgElement.src = img.download_url;
+    imgElement.alt = img.author || 'Lorem Picsum Image';
+    imageContainer.appendChild(imgElement);
+  });
+
+
+      scrollToLink( images );
+
+
+}
+
+
+window.addEventListener('scroll', debounce(() => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !isLoading) {
+    page++;
+    fetchImages(page, limit);
+  }
+}, 200));
+
+function debounce(func, delay) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+fetchImages(page, limit);
+    </script>
+
+</body>
+
+</html>

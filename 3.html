@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div id="slider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselContent"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="js/siteData.js"></script>
+
+
+   <script >
+
+  var currentItem = Object.values(siteData)[0].filter(item => item.id === 1);
+
+// Array of objects containing image and caption data
+ sliderData = [
+    {
+        image: 'https://png.pngtree.com/thumb_back/fh260/background/20230411/pngtree-nature-forest-sun-ecology-image_2256183.jpg',
+        caption: 'This is the first image'
+    },
+    {
+        image: 'https://static.vecteezy.com/system/resources/thumbnails/030/353/613/small/natural-background-ai-generated-photo.jpg',
+        caption: 'This is the second image'
+    },
+    {
+        image: 'https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-fairytale-nature-hd-background-image_2887015.jpg',
+        caption: 'This is the third image'
+    }
+];
+
+
+       var currentItem = Object.values(siteData)[0].filter(item => item.id ===  1);
+
+      sliderData =Object.values(currentItem)[0].image;
+
+     // alert(sliderData[0])
+
+renderImages(sliderData);
+function renderImages(images) {
+  images.forEach(img => {
+    const imgElement = document.createElement('img');
+    imgElement.src = img;
+    imageContainer.appendChild(imgElement);
+  });
+}
+
+// Get carousel container element
+const carouselContent = document.getElementById('carouselContent');
+
+// Dynamically add images and captions to the slider
+sliderData.forEach((slide, index) => {
+    const activeClass = index === 0 ? 'active' : ''; // Make the first slide active
+
+    const carouselItem = `
+      <div class="carousel-item ${activeClass}">
+        <img src="${slide.image}" class="d-block w-100" alt="Slide ${index + 1}">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>${slide.caption}</h5>
+        </div>
+      </div>
+    `;
+    carouselContent.innerHTML += carouselItem;
+});
+ </script>
+
+ </body>
+
+</html>

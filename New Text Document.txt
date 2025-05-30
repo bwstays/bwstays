@@ -5,20 +5,8 @@ https://pinetools.com/bulk-batch-grayscale-image
 https://jsoneditoronline.org/#right=local.qapiki
 
  
-1) Check the booking.html , i added a calnder with some dates blocked and some enabled .A sample code for you to start with is added 
-2) Converted a few color images to B/W 
-3) Updated the villa card details 
-4) For now remove the booking.html link from the book button .Since we dont want users to click for now. Let it be not sperate for now till everthing shapes up . 
-5) Added alt to all the images tag 
-6) Check availbility should we just below date selection . Moved it there 
-7) Updates a few texts in index page 
-8) Converted ratio button in booking villa to check box. One may need to book both villas  . 
-9) Also added a jquery checking to disable one checkbox based on a date where atleast if one booking of villa is done  .All done to check the logic .Not a professional style , you can get logic and make the clean later 
 
-
-1) In booking.html and knowmore.html pages, we need  background image in css ,otherwise our log is not visible in these two pages when we load the page 
 2) Discover widget design to add all the json items on top of image and text side ( left and right )  
-3) knowmore.html page design sample we are yet to start,shared a sample 
 4) Add a whatsapp icon near phone to contact over whatsapp by clicking 
 5) We need to add a form in the booking.html read the guest information 
 6) Firebase trail - low priority for now 
