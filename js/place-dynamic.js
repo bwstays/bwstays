@@ -63,6 +63,9 @@ window.addEventListener('load', function () {
 			</ul>
 	</small>
       </div>
+      <div class="mb-3">
+	             <span class="text-white-50 ml-2">${Object.values(currentItem)[0].description}</span>
+       </div>
 
   `;
 
@@ -123,7 +126,7 @@ window.addEventListener('load', function () {
                   <span class="text-warning">★ ${item.rating}</span>
                   <span class="text-white-50 ml-2">${item.distance}km away from Kalpetta</span>
               </div>
-              <p class="card-text text-white-50 flex-grow-1">${item.description}</p>
+              <p class="card-text text-white-50 flex-grow-1">${item.description.substring(0,100)}...</p>
               <div class="card-footer-info mb-3">
                   <small class="text-white-50">
                       <i class="fas fa-clock"></i> ${item.timing}<br>
@@ -286,7 +289,7 @@ function initializeSection(sectionType, data, sectionIndex) {
     tempContent.className = 'tab-content-temp';
     tempContent.innerHTML = `
       <h5 class="text-white">${currentItem.name} (${currentItem.rating}★)</h5>
-      <p class="mb-0 text-white-50">${currentItem.description}</p>
+      <p class="mb-0 text-white-50">${currentItem.description.substring(0,100)}...</p>
       <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
 
     tempContent.style.position = 'absolute';
