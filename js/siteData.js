@@ -87,7 +87,7 @@
     {
       id: 5,
       name: "Meenmutty Falls",
-      description: "One of the largest and most spectacular waterfalls in Wayanad.",
+      description: "One of the largest and most spectacular waterfalls in Wayanad. One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.",
       image: "assets/img/falls/meenmufalls.png",
       holidays: "Sun",
       timing: "10:00-18:00",
@@ -355,7 +355,7 @@
       id: 21,
       name: "Pepper Farm",
       description: "Experience spice cultivation and farm life in Wayanad.",
-      image: "assets/img/falls/chitafalls.png",
+      image: "assets/img/farm/bw_perrer_wayanad.webp",
       holidays: "None",
       timing: "08:00-18:00",
       Contact: "+91-444 444 4444",
@@ -381,7 +381,7 @@
      	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
           distance: "10",
           rating:"4.5",
-       type: "Sporting",
+      	  type: "Sporting",
           knowmore: "./meenmuttyfalls.html?id=22&cat=8",
 
       }

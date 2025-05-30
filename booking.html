@@ -72,7 +72,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <div class="col-md-1 text-center">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <a class="navbar-brand js-scroll-trigger" href="./index.html">
                     <img alt=""  src="assets/img/love.png" alt="Love Icon"
                         style="display: block; margin: 0 auto 5px auto; max-width: 30px;">
                     Black & White
@@ -121,12 +121,12 @@
                         </div>
                         <div class="col-md-4">
                             <div class="step bg-dark p-3 rounded text-white-50 mb-3 text-center">
-                                <h5 class="m-0"><i class="fas fa-home mr-2"></i>2. Select Villas</h5>
+                                <h5 class="m-0"><i class="fas fa-home mr-2"></i><a href="#selectvilla">2. Select Villas</a></h5>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="step bg-dark p-3 rounded text-white-50 mb-3 text-center">
-                                <h5 class="m-0"><i class="fas fa-user mr-2"></i>3. Guest Information</h5>
+                                <h5 class="m-0"><i class="fas fa-user mr-2"></i><a href="#guestinformation">3. Guest Information</a></h5>
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,9 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h4 class="mb-3">When would you like to stay?</h4>
-                            <div id="date-range-calendar"></div>
+  <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
+                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+ <div id="date-range-calendar"></div>
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">
                             <div class="selected-dates p-4 bg-light rounded">
@@ -174,6 +176,7 @@
                         <button class="btn btn-primary py-3 px-5 text-uppercase font-weight-bold" type="button">
                             <i class="fas fa-search mr-2"></i> Check Availability
                         </button>
+                        <a class="py-2  font-weight-bold"  href="#contact-form">Request  Callback</a>
                     </div>
 
                             </div>
@@ -183,10 +186,12 @@
 
                 <!-- Reservation Form -->
                 <div class="reservation-form bg-light p-4 rounded">
-                    <div class="row mb-4">
+                    <div class="row mb-1">
                         <!-- Guest Selection with improved counter design -->
-                        <div class="col-md-8 mb-3">
-                            <h5 class="mb-3">Guests</h5>
+                        <div class="col-md-8 mb-1">
+                            <h5 class="mb-3 text-center">Guests</h5>
+                            <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
+                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label font-weight-bold">Adults</label>
@@ -219,8 +224,10 @@
                     </div>
 
                     <!-- Villa Selection -->
-                    <div class="villa-selection mb-4">
-                        <h5 class="mb-3">Select Your Villa</h5>
+                    <div class="villa-selection mb-4" id="selectvilla">
+                        <h5 class="mb-3 text-center">Select Your Villa</h5>
+ <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
+                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                         <div class="row">
                              <!-- Villa Card 1 -->
                              <div class="col-md-6 mb-4">
@@ -231,7 +238,7 @@
                                              <h5 class="mb-0">Luxury Villa 1 -  Ground Floor</h5>
                                              <span class="price-tag">₹5,000/night</span>
                                          </div>
-                                         <p class="text-muted mb-2">Nestled  </p>
+                                         <p class="text-muted mb-2"> <a href="villa1.html">Nestled</a> </p>
                                          <div class="villa-features">
                                              <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds</div>
                                              <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 2 Guests</div>
@@ -256,7 +263,7 @@
                                              <h5 class="mb-0">Luxury Villa 2- First Floor</h5>
                                              <span class="price-tag">₹5,000/night</span>
                                          </div>
-                                         <p class="text-muted mb-2">Luxurious Villa </p>
+                                         <p class="text-muted mb-2"><a href="villa2.html">Luxurious Villa</a></p>
                                          <div class="villa-features">
                                              <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds</div>
                                              <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 2 Guests</div>
@@ -273,13 +280,38 @@
                              </div>
 
  						</div>
+
+                    </div>
+
+
+
+  				  <!-- Guest information -->
+                    <div class="villa-selection mb-4" id="guestinformation">
+                        <h5 class="mb-3 text-center">Guest Information</h5>
+ <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
+                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+                        <div class="row">
+                             <!-- Villa Card 1 -->
+                             <div class="col-md-6 mb-4">
+                                 <div class="villa-card bg-white">
+                                     <img alt=""  src="assets/img/plantation/tea_estate.webp" class="villa-img w-100" alt="Luxury Villa">
+                                     <div class="p-3">
+                                         <div class="d-flex justify-content-between align-items-center mb-2">
+                                          </div>
+
+                                     </div>
+                                 </div>
+                             </div>
+
+
+
+ 						</div>
  						 <div class="button-container mt-4">
 						                <div class="mx-auto text-center">
-						                    <a class="btn btn-primary btn-lg js-scroll-trigger custom-btn" id="getStarted" href="#">Make Payment</a>
+						                    <a class="btn btn-primary btn-lg js-scroll-trigger custom-btn" id="getStarted" href="#">Make Booking</a>
 						                </div>
          			     </div>
                     </div>
-
 
 
                     <!-- Information Box -->

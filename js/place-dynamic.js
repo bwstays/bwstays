@@ -48,17 +48,22 @@ window.addEventListener('load', function () {
   const descContainer = document.createElement('div');
   descContainer.innerHTML = `
       <h3 class="text-white mb-3">${Object.values(currentItem)[0].name}</h3>
-      <p class="text-white-50 mb-3">${Object.values(currentItem)[0].description}</p>
       <div class="mb-3">
           <span class="text-warning">★ ${Object.values(currentItem)[0].rating}</span>
           <span class="text-white-50 ml-2">${Object.values(currentItem)[0].distance}km away from Kalpetta</span>
       </div>
       <div class="mb-3">
           <small class="text-white-50">
-              <i class="fas fa-clock"></i> ${Object.values(currentItem)[0].timing}<br>
-              <i class="fas fa-phone"></i> ${Object.values(currentItem)[0].Contact}
-          </small>
+			<ul style="list-style:none;">
+			<li><i class="fas fa-clock"></i> Timing: ${Object.values(currentItem)[0].timing}<br></li>
+			<li><i class="fas fa-cog"></i> Visiting: ${Object.values(currentItem)[0].seasontovisit}</li>
+			<li><i class="fas fa-bell"></i> Type: ${Object.values(currentItem)[0].type}</li>
+			<li><i class="fas fa-asterisk"></i> Holiday: ${Object.values(currentItem)[0].holidays}</li>
+			<li> <i class="fas fa-phone"></i> Contact ${Object.values(currentItem)[0].Contact}</li>
+			</ul>
+	</small>
       </div>
+
   `;
 
 

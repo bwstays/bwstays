@@ -12,6 +12,9 @@ https://jsoneditoronline.org/#right=local.qapiki
 6) Firebase trail - low priority for now 
 7) We need to change the style.css to cdn url, but a bit css rework needed in this case 
 8) In booking page Terms and consitions,faq,cancelaltion can be a expand and collpase type for easy use
+9) update the footer request a call 
+10) include maps  in the widget 
+11) including remaning items in the widget
 
 
 5) SEO improvement i will tell you in the next stage 
