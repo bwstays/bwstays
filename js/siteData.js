@@ -13,7 +13,7 @@
  	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
        distance: "10",
        rating: "4.4",
-       knowmore: "./Santhi.html?id=1",
+       knowmore: "./Santhi.html?id=1&cat=0",
 
      },
 
@@ -27,9 +27,9 @@
       Contact: "+91-000 000 0000",
       locationid: "1",
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
-      distance: "10",
+      distance: "899",
       rating: "4.4",
-      knowmore: "./tirunelli.html?id=4",
+      knowmore: "./tirunelli.html?id=4&cat=0",
 
     },
     {
@@ -44,7 +44,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
-      knowmore: "./Varampatta.html?id=13",
+      knowmore: "./Varampatta.html?id=13&cat=0",
 
     },
     {
@@ -59,7 +59,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
-      knowmore: "./jaintemple.html?id=3",
+      knowmore: "./jaintemple.html?id=3&cat=0",
 
     },
     {
@@ -74,7 +74,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
-      knowmore: "./seethalavakushatemple.html?id=12",
+      knowmore: "./seethalavakushatemple.html?id=12&cat=0",
 
     }
   ],

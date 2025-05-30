@@ -7,6 +7,14 @@ function getCurrentPageId() {
     return urlParams.get('id') ;
 }
 
+function getCurrentCatagoryId() {
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+
+    return urlParams.get('cat') ;
+}
+
 function findPlaceById(id) {
 
     const categories = ['culthist', 'waterfalls', 'museums', 'romantic', 'plantation', 'trucking', 'wildlife', 'farms', 'sporting', 'food'];

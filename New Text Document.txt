@@ -31,5 +31,6 @@ https://jsoneditoronline.org/#right=local.qapiki
 7) ID for the elements 
 8) Change all image names and color 
 9) Add title to all images,form fields etc 
+make browser cache data
 
 

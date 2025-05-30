@@ -26,14 +26,20 @@ window.addEventListener('load', function () {
   leftColumn.className = 'col-lg-6';
   leftColumn.style.padding = '1rem';
 
-  const currentPageId = 1;
-  const currentItem = siteData.culthist.find(item => item.id === currentPageId);
+
+  //main page content
+  var  currentPageId = getCurrentPageId();
+  var  currentcatId = getCurrentCatagoryId();
+
+
+
+  var currentItem = Object.values(siteData)[currentcatId].filter(item => item.id === eval(currentPageId));
 
   const imgContainer = document.createElement('div');
   imgContainer.style.marginBottom = '2rem';
   const img = document.createElement('img');
-  img.src = currentItem.image;
-  img.alt = currentItem.name;
+  img.src = Object.values(currentItem)[0].image;
+  img.alt = Object.values(currentItem)[0].name;
   img.className = 'img-fluid';
   img.style.width = '100%';
   img.style.height = 'auto';
@@ -42,23 +48,26 @@ window.addEventListener('load', function () {
 
   const descContainer = document.createElement('div');
   descContainer.innerHTML = `
-      <h3 class="text-white mb-3">${currentItem.name}</h3>
-      <p class="text-white-50 mb-3">${currentItem.description}</p>
+      <h3 class="text-white mb-3">${Object.values(currentItem)[0].name}</h3>
+      <p class="text-white-50 mb-3">${Object.values(currentItem)[0].description}</p>
       <div class="mb-3">
-          <span class="text-warning">★ ${currentItem.rating}</span>
-          <span class="text-white-50 ml-2">${currentItem.distance}km away</span>
+          <span class="text-warning">★ ${Object.values(currentItem)[0].rating}</span>
+          <span class="text-white-50 ml-2">${Object.values(currentItem)[0].distance}km away from Kalpetta</span>
       </div>
       <div class="mb-3">
           <small class="text-white-50">
-              <i class="fas fa-clock"></i> ${currentItem.timing}<br>
-              <i class="fas fa-phone"></i> ${currentItem.Contact}
+              <i class="fas fa-clock"></i> ${Object.values(currentItem)[0].timing}<br>
+              <i class="fas fa-phone"></i> ${Object.values(currentItem)[0].Contact}
           </small>
       </div>
   `;
 
+
   leftColumn.appendChild(imgContainer);
   leftColumn.appendChild(descContainer);
 
+
+  // left pane content
   const rightColumn = document.createElement('div');
   rightColumn.className = 'col-lg-6';
   rightColumn.style.padding = '1rem';
@@ -66,7 +75,7 @@ window.addEventListener('load', function () {
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'row';
 
-  const filteredItems = siteData.culthist.filter(item => item.id !== currentPageId);
+  const filteredItems =  Object.values(siteData)[currentcatId].filter(item => item.id !== eval(currentPageId));
 
   filteredItems.forEach((item, index) => {
       const cardCol = document.createElement('div');
