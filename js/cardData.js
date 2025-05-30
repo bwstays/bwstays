@@ -4,7 +4,7 @@ const aboutCardData = {
             title: "nestle with nature",
             icon: "fas fa-mountain",
             description: "Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep.",
-            image: "assets/img/tirunelli.png"
+            image: "assets/img/wayanad_mist.png"
         },
         {
             title: "hustle in hisspeed",
@@ -16,7 +16,7 @@ const aboutCardData = {
             title: "bustle in budget",
             icon: "fas fa-star",
             description: "Create unforgettable memories with our curated experiences and activities.",
-            image: "assets/img/tea_wayanad.webp"
+            image: "assets/img/plantation/tea_wayanad.webp"
         }
     ]
 };
