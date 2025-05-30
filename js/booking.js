@@ -16,5 +16,4 @@ var booking =
        alert(booking[i].length);
        }
     </script>
-</body>
 
