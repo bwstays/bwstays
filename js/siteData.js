@@ -14,10 +14,8 @@
        distance: "10",
        rating: "4.4",
        type: "Cultural & Historical",
-       knowmore: "./santhi.html?id=1&cat=0",
-
+       knowmore: "./knowmore.html?id=1&cat=0",
      },
-
  	{
       id: 4,
       name: "Tirunelli Temple",
@@ -31,7 +29,7 @@
       distance: "60",
       rating: "4.4",
       type: "Cultural & Historical",
-      knowmore: "./tirunelli.html?id=4&cat=0",
+      knowmore: "./knowmore.html?id=4&cat=0",
 
     },
     {
@@ -47,7 +45,7 @@
       distance: "10",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./varampatta.html?id=13&cat=0",
+      knowmore: "./knowmore.html?id=13&cat=0",
 
     },
     {
@@ -63,7 +61,7 @@
       distance: "10",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./jaintemple.html?id=3&cat=0",
+      knowmore: "./knowmore.html?id=3&cat=0",
 
     },
     {
@@ -79,7 +77,7 @@
       distance: "10",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./seethalavakushatemple.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=12&cat=0",
 
     }
   ],
@@ -97,7 +95,7 @@
       distance: "10",
       rating:"4.5",
        type: "Water Falls",
-      knowmore: "./meenmuttyfalls.html?id=5&cat=1",
+      knowmore: "./knowmore.html?id=5&cat=1",
 
     },
     {
@@ -113,7 +111,7 @@
       distance: "10",
       rating:"4.5",
        type: "Water Falls",
-      knowmore: "./meenmuttyfalls.html?id=6&cat=1",
+      knowmore: "./knowmore.html?id=6&cat=1",
 
     },
     {
@@ -129,7 +127,7 @@
       distance: "10",
       rating:"4.5",
        type: "Water Falls",
-      knowmore: "./meenmuttyfalls.html?id=7&cat=1",
+      knowmore: "./knowmore.html?id=7&cat=1",
 
     }
   ],
@@ -147,7 +145,7 @@
       distance: "10",
       rating:"4.5",
        type: "Museums & Crafts",
-      knowmore: "./meenmuttyfalls.html?id=8&cat=2",
+      knowmore: "./knowmore.html?id=8&cat=2",
 
     },
     {
@@ -163,7 +161,7 @@
       distance: "10",
       rating:"4.5",
        type: "Museums & Crafts",
-      knowmore: "./meenmuttyfalls.html?id=10&cat=2",
+      knowmore: "./knowmore.html?id=10&cat=2",
 
     }
   ],
@@ -181,7 +179,7 @@
       distance: "10",
       rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./meenmuttyfalls.html?id=11&cat=3",
+      knowmore: "./knowmore.html?id=11&cat=3",
 
     },
     {
@@ -197,7 +195,7 @@
       distance: "10",
       rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./meenmuttyfalls.html?id=12&cat=3",
+      knowmore: "./knowmore.html?id=12&cat=3",
 
     },
     {
@@ -213,7 +211,7 @@
       distance: "10",
       rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./meenmuttyfalls.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=13&cat=3",
 
     }
   ],
@@ -231,7 +229,7 @@
       distance: "10",
       rating:"4.5",
        type: "Plantations",
-      knowmore: "./meenmuttyfalls.html?id=14&cat=4",
+      knowmore: "./knowmore.html?id=14&cat=4",
 
     },
     {
@@ -247,7 +245,7 @@
       distance: "10",
       rating:"4.5",
        type: "Plantations",
-      knowmore: "./meenmuttyfalls.html?id=15&cat=4",
+      knowmore: "./knowmore.html?id=15&cat=4",
 
     }
   ],
@@ -265,7 +263,7 @@
       distance: "10",
       rating:"4.5",
        type: "Trucking",
-      knowmore: "./meenmuttyfalls.html?id=16&cat=5",
+      knowmore: "./knowmore.html?id=16&cat=5",
 
     },
     {
@@ -281,7 +279,7 @@
       distance: "10",
       rating:"4.5",
        type: "Museums & Crafts",
-      knowmore: "./meenmuttyfalls.html?id=9&cat=5",
+      knowmore: "./knowmore.html?id=9&cat=5",
 
     },
     {
@@ -297,7 +295,7 @@
       distance: "10",
       rating:"4.5",
        type: "Trucking",
-      knowmore: "./meenmuttyfalls.html?id=17&cat=5",
+      knowmore: "./knowmore.html?id=17&cat=5",
 
     }
   ],
@@ -315,7 +313,7 @@
       distance: "10",
       rating:"4.5",
        type: "Wildlife",
-      knowmore: "./meenmuttyfalls.html?id=18&cat=6",
+      knowmore: "./knowmore.html?id=18&cat=6",
 
     },
     {
@@ -331,7 +329,7 @@
       distance: "10",
       rating:"4.5",
        type: "Wildlife",
-      knowmore: "./meenmuttyfalls.html?id=19&cat=6",
+      knowmore: "./knowmore.html?id=19&cat=6",
 
     }
   ],
@@ -349,7 +347,7 @@
       distance: "10",
       rating:"4.5",
        type: "Farm Visit",
-      knowmore: "./meenmuttyfalls.html?id=20&cat=7"
+      knowmore: "./knowmore.html?id=20&cat=7"
     },
     {
       id: 21,
@@ -364,7 +362,7 @@
       distance: "10",
       rating:"4.5",
        type: "Farm Visit",
-      knowmore: "./meenmuttyfalls.html?id=21&cat=7",
+      knowmore: "./knowmore.html?id=21&cat=7",
 
     }
   ],
@@ -382,7 +380,7 @@
           distance: "10",
           rating:"4.5",
       	  type: "Sporting",
-          knowmore: "./meenmuttyfalls.html?id=22&cat=8",
+          knowmore: "./knowmore.html?id=22&cat=8",
 
       }
     ],
@@ -400,7 +398,7 @@
       distance: "10",
       rating:"4.5",
        type: "Resturants",
-      knowmore: "./meenmuttyfalls.html?id=23&cat=9",
+      knowmore: "./knowmore.html?id=23&cat=9",
 
     },
     {
@@ -416,7 +414,7 @@
       distance: "10",
       rating:"4.5",
        type: "Resturants",
-      knowmore: "./meenmuttyfalls.html?id=24&cat=9",
+      knowmore: "./knowmore.html?id=24&cat=9",
 
     }
   ],
