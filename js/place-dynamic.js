@@ -80,7 +80,7 @@ window.addEventListener('load', function () {
   rightColumnHead.className = 'border-bottom border-primary text-center mb-4';
   rightColumnHead.style ='width:100%;margin:0 auto';
   rightColumnHead.innerHTML = `
-      <h5 class="text-white">${Object.values(currentItem)[0].type}</h5>  `;
+      <h5 class="text-white">${Object.values(currentItem)[0].type} Places</h5>  `;
 
   // right pane content
   const rightColumn = document.createElement('div');
