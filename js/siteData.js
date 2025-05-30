@@ -97,7 +97,7 @@
       distance: "10",
       rating:"4.5",
        type: "Water Falls",
-      knowmore: "./meenmuttyfalls.html?id=5",
+      knowmore: "./meenmuttyfalls.html?id=1&cat=1",
 
     },
     {
@@ -113,7 +113,7 @@
       distance: "10",
       rating:"4.5",
        type: "Water Falls",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=1",
 
     },
     {
@@ -129,7 +129,7 @@
       distance: "10",
       rating:"4.5",
        type: "Water Falls",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=1",
 
     }
   ],
@@ -147,39 +147,24 @@
       distance: "10",
       rating:"4.5",
        type: "Museums & Crafts",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=2",
 
     },
-    {
-      id: 9,
-      name: "Edakkal Caves",
-      description: "Ancient rock shelter with prehistoric carvings and inscriptions.",
-      image: "assets/img/museum/edakkal_caves.webp",
-      holidays: "Sun",
-      timing: "10:00-18:00",
-      Contact: "+91-000 000 0000",
-      locationid: "1",
-	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
-      distance: "10",
-      rating:"4.5",
-       type: "Museums & Crafts",
-      knowmore: "./knowmore.html",
 
-    },
     {
       id: 10,
       name: "Ambalavayal Heritage Museum",
       description: "Displays tribal heritage and ancient artifacts from the region.",
-      image: "assets/img/museum/tea_wayanad.webp",
+      image: "assets/img/museum/bw_wayanad-heritage-wayanad.jpg",
       holidays: "Sun",
       timing: "10:00-18:00",
-      Contact: "+91-000 000 0000",
+      Contact: "+91-000 000 0000"
       locationid: "1",
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
        type: "Museums & Crafts",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=2",
 
     }
   ],
@@ -197,14 +182,14 @@
       distance: "10",
       rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=3",
 
     },
     {
       id: 12,
       name: "Pookode Lake",
       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
-      image: "assets/img/romantic/soojipara_falls_b_w_wayanad.jpg",
+      image: "assets/img/romantic/pookode-lake-wayanad.jpg",
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
@@ -213,14 +198,14 @@
       distance: "10",
       rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=3",
 
     },
     {
       id: 13,
       name: "Banasurasagar Dam",
       description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: "assets/img/romantic/kanta_falls.png",
+      image: "assets/img/romantic/bw_banasura_wayanad.avif",
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
@@ -229,7 +214,7 @@
       distance: "10",
       rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=3",
 
     }
   ],
@@ -247,7 +232,7 @@
       distance: "10",
       rating:"4.5",
        type: "Plantations",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=4",
 
     },
     {
@@ -263,7 +248,7 @@
       distance: "10",
       rating:"4.5",
        type: "Plantations",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=4",
 
     }
   ],
@@ -281,7 +266,7 @@
       distance: "10",
       rating:"4.5",
        type: "Trucking",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=5",
 
     },
     {
@@ -297,7 +282,23 @@
       distance: "10",
       rating:"4.5",
        type: "Trucking",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=5",
+
+    },
+{
+      id: 9,
+      name: "Edakkal Caves",
+      description: "Ancient rock shelter with prehistoric carvings and inscriptions.",
+      image: "assets/img/trucking/edakkal_caves.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      rating:"4.5",
+       type: "Museums & Crafts",
+      knowmore: "./knowmore.html?id=1&cat=5",
 
     }
   ],
@@ -315,7 +316,7 @@
       distance: "10",
       rating:"4.5",
        type: "Wildlife",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=6",
 
     },
     {
@@ -331,7 +332,7 @@
       distance: "10",
       rating:"4.5",
        type: "Wildlife",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=6",
 
     }
   ],
@@ -349,7 +350,7 @@
       distance: "10",
       rating:"4.5",
        type: "Farm Visit",
-      knowmore: "./knowmore.html"
+      knowmore: "./knowmore.html?id=1&cat=7"
     },
     {
       id: 21,
@@ -364,7 +365,7 @@
       distance: "10",
       rating:"4.5",
        type: "Farm Visit",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=7",
 
     }
   ],
@@ -382,7 +383,7 @@
           distance: "10",
           rating:"4.5",
        type: "Sporting",
-          knowmore: "./knowmore.html",
+          knowmore: "./knowmore.html?id=1&cat=8",
 
       }
     ],
@@ -400,7 +401,7 @@
       distance: "10",
       rating:"4.5",
        type: "Resturants",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=9",
 
     },
     {
@@ -416,7 +417,7 @@
       distance: "10",
       rating:"4.5",
        type: "Resturants",
-      knowmore: "./knowmore.html",
+      knowmore: "./knowmore.html?id=1&cat=9",
 
     }
   ],
