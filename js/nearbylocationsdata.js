@@ -107,7 +107,7 @@ const locations = {
 		62: "Coffee Plantation",
 		63: "Boys Town",
 		64: "Ambalavayal Farm ",
-		65: "Vantha Mess Resturant -Veg-Non Veg",
+		65: "Vanitha Mess Resturant -Veg-Non Veg",
 		66: "Ramvilla Kalpetta ",
 		67: "Nesto All Food",
 		68: "Avil Milk,Deserts",
