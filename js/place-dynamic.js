@@ -27,12 +27,11 @@ window.addEventListener('load', function () {
   leftColumn.style.padding = '1rem';
 
 
-  //main page content
-  var  currentPageId = getCurrentPageId();
+   var  currentPageId = getCurrentPageId();
   var  currentcatId = getCurrentCatagoryId();
 
 
-
+// Main page  content start here
   var currentItem = Object.values(siteData)[currentcatId].filter(item => item.id === eval(currentPageId));
 
   const imgContainer = document.createElement('div');
@@ -63,14 +62,32 @@ window.addEventListener('load', function () {
   `;
 
 
+
   leftColumn.appendChild(imgContainer);
+
   leftColumn.appendChild(descContainer);
+ // main page content end here
 
 
-  // left pane content
+
+
+  // right pane heading
+
+  const rightColumnHead = document.createElement('div');
+  rightColumnHead.className = 'col-lg-7';
+  rightColumnHead.style.padding = '1rem';
+  rightColumnHead.description = 'wewewe';
+  rightColumnHead.className = 'border-bottom border-primary text-center mb-4';
+  rightColumnHead.style ='width:100%;margin:0 auto';
+  rightColumnHead.innerHTML = `
+      <h5 class="text-white">${Object.values(currentItem)[0].type}</h5>  `;
+
+  // right pane content
   const rightColumn = document.createElement('div');
   rightColumn.className = 'col-lg-6';
   rightColumn.style.padding = '1rem';
+
+    rightColumn.appendChild(rightColumnHead);
 
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'row';

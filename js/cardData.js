@@ -35,6 +35,8 @@ function populateAboutCards() {
                 <div class="about-card h-100" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); display: flex; flex-direction: column;">
                     <div class="card-image" style="height: 200px; overflow: hidden;">
                         <img alt="" src="${card.image}" alt="${card.title}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+
+
                         <div class="overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);"></div>
                     </div>
                     <div class="card-content p-4 flex-grow-1 d-flex flex-column">
@@ -42,6 +44,7 @@ function populateAboutCards() {
                             <i class="${card.icon} fa-2x text-primary"></i>
                         </div>
                         <h3 class="text-white mb-3">${card.title}</h3>
+     					 <div class="border-bottom border-primary text-center mb-4" id="contact-divider" style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                         <p class="text-white-50 mb-0">${card.description}</p>
                         <div class="mt-auto pt-4 text-center">
                             <a href="#" class="btn btn-primary js-scroll-trigger px-4 py-2">Know More</a>

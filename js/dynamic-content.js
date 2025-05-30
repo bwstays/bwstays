@@ -64,6 +64,9 @@ function initializeSection(sectionType, data, sectionIndex) {
 
   const imgElement = imgColumn;
 
+
+
+
   const arrowContainer = document.createElement('div');
   arrowContainer.className = 'arrows-container';
   sectionContainer.appendChild(arrowContainer);
@@ -106,6 +109,12 @@ function initializeSection(sectionType, data, sectionIndex) {
   titleElement.className = 'text-white';
   titleElement.textContent = sectionTitle;
   textContainer.appendChild(titleElement);
+
+  const line = document.createElement('div');
+  line.className = 'border-bottom border-primary text-center mb-4';
+  line.style ='width:100%;margin:0 auto';
+  textContainer.appendChild(line);
+
 
   const tabContent = document.createElement('div');
   tabContent.className = 'tab-content';

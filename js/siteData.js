@@ -10,9 +10,10 @@
        timing: "10:00-18:00",
        Contact: "+91-000 000 0000",
        locationid: "1",
- 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+ 	   seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
        distance: "10",
        rating: "4.4",
+       type: "Cultural & Historical",
        knowmore: "./Santhi.html?id=1&cat=0",
 
      },
@@ -29,6 +30,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "899",
       rating: "4.4",
+      type: "Cultural & Historical",
       knowmore: "./tirunelli.html?id=4&cat=0",
 
     },
@@ -44,6 +46,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Cultural & Historical",
       knowmore: "./Varampatta.html?id=13&cat=0",
 
     },
@@ -59,6 +62,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Cultural & Historical",
       knowmore: "./jaintemple.html?id=3&cat=0",
 
     },
@@ -74,6 +78,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Cultural & Historical",
       knowmore: "./seethalavakushatemple.html?id=12&cat=0",
 
     }
@@ -91,6 +96,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Water Falls",
       knowmore: "./meenmuttyfalls.html?id=5",
 
     },
@@ -106,6 +112,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Water Falls",
       knowmore: "./knowmore.html",
 
     },
@@ -121,6 +128,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Water Falls",
       knowmore: "./knowmore.html",
 
     }
@@ -138,6 +146,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Museums & Crafts",
       knowmore: "./knowmore.html",
 
     },
@@ -153,6 +162,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Museums & Crafts",
       knowmore: "./knowmore.html",
 
     },
@@ -168,6 +178,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Museums & Crafts",
       knowmore: "./knowmore.html",
 
     }
@@ -185,6 +196,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Romantic Spots",
       knowmore: "./knowmore.html",
 
     },
@@ -200,6 +212,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Romantic Spots",
       knowmore: "./knowmore.html",
 
     },
@@ -215,6 +228,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Romantic Spots",
       knowmore: "./knowmore.html",
 
     }
@@ -232,6 +246,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Plantations",
       knowmore: "./knowmore.html",
 
     },
@@ -247,6 +262,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Plantations",
       knowmore: "./knowmore.html",
 
     }
@@ -264,6 +280,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Trucking",
       knowmore: "./knowmore.html",
 
     },
@@ -279,6 +296,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Trucking",
       knowmore: "./knowmore.html",
 
     }
@@ -296,6 +314,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Wildlife",
       knowmore: "./knowmore.html",
 
     },
@@ -311,6 +330,7 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
       rating:"4.5",
+       type: "Wildlife",
       knowmore: "./knowmore.html",
 
     }
@@ -328,6 +348,7 @@
 	  seasontovisit:["All Season"],
       distance: "10",
       rating:"4.5",
+       type: "Farm Visit",
       knowmore: "./knowmore.html"
     },
     {
@@ -342,6 +363,7 @@
 	  seasontovisit:["All Season"],
       distance: "10",
       rating:"4.5",
+       type: "Farm Visit",
       knowmore: "./knowmore.html",
 
     }
@@ -359,6 +381,7 @@
      	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
           distance: "10",
           rating:"4.5",
+       type: "Sporting",
           knowmore: "./knowmore.html",
 
       }
@@ -376,6 +399,7 @@
 	  seasontovisit:["All Season"],
       distance: "10",
       rating:"4.5",
+       type: "Resturants",
       knowmore: "./knowmore.html",
 
     },
@@ -391,6 +415,7 @@
 	  seasontovisit:["All Season"],
       distance: "10",
       rating:"4.5",
+       type: "Resturants",
       knowmore: "./knowmore.html",
 
     }
