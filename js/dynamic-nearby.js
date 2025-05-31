@@ -1,22 +1,21 @@
 
 function getCurrentPageId() {
-
     const urlParams = new URLSearchParams(window.location.search);
-
-
-    return urlParams.get('id') ;
+	var currId=urlParams.get('id') ;
+ 	if (currId === null || typeof currId == "undefined" || currId === '')
+		 currId=1;
+    return currId;
 }
 
 function getCurrentCatagoryId() {
-
     const urlParams = new URLSearchParams(window.location.search);
-
-
-    return urlParams.get('cat') ;
+	var catId=urlParams.get('cat') ;
+	if (catId === null || typeof catId == "undefined" || catId === '')
+		 catId=0;
+    return catId ;
 }
 
 function findPlaceById(id) {
-
     const categories = ['culthist', 'waterfalls', 'museums', 'romantic', 'plantation', 'trucking', 'wildlife', 'farms', 'sports', 'food'];
     for (const category of categories) {
         if (siteData[category]) {
