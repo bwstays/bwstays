@@ -96,5 +96,5 @@ function createPlaceCard(place) {
         </div>
     `;
 }
-
+ 
 document.addEventListener('DOMContentLoaded', renderNearbyPlaces);

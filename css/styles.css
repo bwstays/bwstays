@@ -10827,6 +10827,44 @@ body {
   min-height: 130px;
   border-radius: 12px;
 }
+ 
+
+/* back to top */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 60px;
+  display: none;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 50px;
+  background-color: grey;
+  height: 50px;
+  padding: 0;
+  line-height: 50px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#btn-back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Nearby Card Styles */
+.nearby-card {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  min-height: 130px;
+  border-radius: 12px;
+}
 
 .nearby-card .card-body {
   padding: 1.5rem;
@@ -10868,32 +10906,4 @@ body {
   color: #64a19d;
   margin-right: 0.5rem;
 } 
-
-/* back to top */
-#btn-back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 60px;
-  display: none;
-  z-index: 1000;
-  border-radius: 50%;
-  width: 50px;
-  background-color: grey;
-  height: 50px;
-  padding: 0;
-  line-height: 50px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-#btn-back-to-top.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-html {
-  scroll-behavior: smooth;
-}
+ 

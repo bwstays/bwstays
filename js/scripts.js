@@ -55,9 +55,7 @@
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
 
-
-
- // Back to top button functionality
+  
  let mybutton = document.getElementById("btn-back-to-top");
 
 

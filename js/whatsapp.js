@@ -12,10 +12,12 @@ var options = {
 	"borderRadius":"3",
 	"marginLeft": "0",
 	"marginRight": "5",
+ 
 
 	"marginBottom": "5",
 
 
+ 
 	"ctaIconWATI":false,
 	"position":"right"
 },
