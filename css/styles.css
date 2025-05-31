@@ -10907,3 +10907,33 @@ html {
   margin-right: 0.5rem;
 } 
  
+/* booking */
+
+.form-control-sm {
+  height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.date-box {
+  transition: all 0.3s ease;
+}
+
+.date-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#selectvilla, #guestinformation
+{ 
+  background-color: white; 
+  border-radius: 10px;
+ 
+}
+#selectvilla{
+
+  padding: 20px 20px;
+}
+#guestinformation{
+  padding-top: 20px;
+}

@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-            <div class="reservation-container p-4">
+            <div class="reservation-container p-4" >
                 <!-- Reservation Steps -->
                 <div class="reservation-steps mb-5">
                     <div class="row">
@@ -143,95 +143,47 @@
                     <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
                         style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
+                            <div class="date-inputs">
+                                <div class="form-group mb-2">
+                                    <label class="form-label small">Check-in</label>
+                                    <input type="text" class="form-control form-control-sm" id="checkInDate"
+                                        placeholder="Select date" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label small">Check-out</label>
+                                    <input type="text" class="form-control form-control-sm" id="checkOutDate"
+                                        placeholder="Select date" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
                             <div id="date-range-calendar"></div>
                         </div>
-                        <div class="col-md-6 d-flex flex-column justify-content-center">
-                            <div class="selected-dates p-4 bg-light rounded">
-                                <div class="row mb-3">
-                                    <div class="col-6">
-                                        <label class="form-label font-weight-bold">Check-in</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="checkInDate"
-                                                placeholder="Select date" readonly>
-                                            <div class="input-group-append">
-                                                <span class="input-group-text bg-primary text-white">
-                                                    <i class="far fa-calendar-alt"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="form-label font-weight-bold">Check-out</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="checkOutDate"
-                                                placeholder="Select date" readonly>
-                                            <div class="input-group-append">
-                                                <span class="input-group-text bg-primary text-white">
-                                                    <i class="far fa-calendar-alt"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="stay-duration text-center p-2 bg-dark text-white rounded mb-3">
-                                    <span id="nights-count">0</span> nights
-                                </div>
-
-                                <!-- Check Availability Button -->
-                                <div class="text-center">
-                                    <button class="btn btn-primary py-3 px-5 text-uppercase font-weight-bold"
-                                        type="button">
-                                        <i class="fas fa-search mr-2"></i> Check Availability
-                                    </button>
-                                    <div class="mt-2">
-                                        <a class="py-2 font-weight-bold" href="#contact-form">Request Callback</a>
-                                    </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <div class="stay-duration text-center p-2 bg-dark text-white rounded">
+                                <span id="nights-count">0</span> nights
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="text-center">
+                                <button class="btn btn-primary py-2 px-4 text-uppercase font-weight-bold"
+                                    type="button">
+                                    <i class="fas fa-search mr-2"></i> Check Availability
+                                </button>
+                                <div class="mt-2">
+                                    <a href="#contact-form" class="text-primary font-weight-bold">
+                                        <i class="fas fa-phone-alt mr-2"></i>Request Callback
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Reservation Form -->
-                <div class="reservation-form bg-light p-4 rounded">
-                    <div class="row mb-1">
-                        <!-- Guest Selection with improved counter design -->
-                        <!-- <div class="col-md-8 mb-1">
-                            <h5 class="mb-3 text-center">Guests</h5>
-                            <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
-                            <!-- <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label font-weight-bold">Adults</label>
-                                    <div class="counter-container d-flex">
-                                        <button class="counter-btn minus" type="button" style="width: 60px; height: 45px; background-color: #64a19d; color: white; border: none; border-radius: 8px 0 0 8px; font-size: 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                        <input type="text" class="counter-input" value="2" readonly style="width: 60px; height: 45px; border: 1px solid #ced4da; border-left: none; border-right: none; text-align: center; font-size: 18px; font-weight: bold; background-color: #f8f9fa;">
-                                        <button class="counter-btn plus" type="button" style="width: 60px; height: 45px; background-color: #64a19d; color: white; border: none; border-radius: 0 8px 8px 0; font-size: 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label font-weight-bold">Children (0-12 years)</label>
-                                    <div class="counter-container d-flex">
-                                        <button class="counter-btn minus" type="button" style="width: 60px; height: 45px; background-color: #64a19d; color: white; border: none; border-radius: 8px 0 0 8px; font-size: 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                        <input type="text" class="counter-input" value="0" readonly style="width: 60px; height: 45px; border: 1px solid #ced4da; border-left: none; border-right: none; text-align: center; font-size: 18px; font-weight: bold; background-color: #f8f9fa;">
-                                        <button class="counter-btn plus" type="button" style="width: 60px; height: 45px; background-color: #64a19d; color: white; border: none; border-radius: 0 8px 8px 0; font-size: 20px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </div> -->
-                        </div>
-
-
-                    </div>
+               
 
                     <!-- Villa Selection -->
                     <div class="villa-selection mb-4" id="selectvilla">
@@ -256,6 +208,8 @@
                                             <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i>
                                                 2 Guests</div>
                                             <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths
+                                            </div>
+                                            <div class="villa-feature"><i class="fas fa-dog text-primary"></i> Pets allowed
                                             </div>
                                         </div>
                                         <div class="form-check mb-3">
@@ -285,6 +239,8 @@
                                             <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i>
                                                 2 Guests</div>
                                             <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths
+                                            </div>
+                                            <div class="villa-feature"><i class="fas fa-dog text-primary"></i> Pets allowed
                                             </div>
                                         </div>
                                         <div class="form-check mb-3">
@@ -652,16 +608,37 @@
                 buttonText: "Select date",
                 dateFormat: "yy-m-dd",
                 minDate: "today",
+                numberOfMonths: 2,
                 onSelect: function (selected) {
-
-
                     var sDate = selected;
                     var bDate;
 
+                    // Format the selected date for display
+                    var formattedDate = $.datepicker.formatDate('D, M d, yy', new Date(sDate));
+                    
+                    // If no check-in date is set, set it
+                    if (!$("#checkInDate").val()) {
+                        $("#checkInDate").val(formattedDate);
+                    } 
+                    // If check-in is set but check-out isn't, set check-out
+                    else if (!$("#checkOutDate").val()) {
+                        $("#checkOutDate").val(formattedDate);
+                        
+                        // Calculate nights
+                        var checkIn = new Date($("#checkInDate").val());
+                        var checkOut = new Date(sDate);
+                        var nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
+                        $("#nights-count").text(nights);
+                    }
+                    // If both dates are set, reset and start new selection
+                    else {
+                        $("#checkInDate").val(formattedDate);
+                        $("#checkOutDate").val("");
+                        $("#nights-count").text("0");
+                    }
 
-
+                    // Check villa availability
                     for (i = 0; i < booking.length; i++) {
-
                         bDate = booking[i][0];
                         if (booking[i].length == 2 && (Date.parse(sDate) == Date.parse(bDate))) {
                             $("#villa1").prop("checked", true).prop("disabled", true);
@@ -673,51 +650,17 @@
                             break;
                         }
                         else {
-
                             $("#villa1").prop("checked", false).prop("disabled", false);
                             $("#villa2").prop("checked", false).prop("disabled", false);
                             break;
                         }
                     }
-
-
-
-                },
-                onChange: function (selectedDates, dateStr, instance) {
-
-                    if (selectedDates.length === 2) {
-
-                        const checkIn = selectedDates[0];
-                        const checkOut = selectedDates[1];
-
-                        //(checkIn);
-                        //alert(checkOut);
-
-                        // Format dates for display
-                        const options = { weekday: 'short', day: 'numeric', month: 'short', year: '2-digit' };
-                        document.getElementById('checkInDate').value = checkIn.toLocaleDateString('en-US', options);
-                        document.getElementById('checkOutDate').value = checkOut.toLocaleDateString('en-US', options);
-
-                        // Calculate nights
-                        const nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
-                        document.getElementById('nights-count').textContent = nights;
-                    }
-                    else {
-                        const checkIn = selectedDates[0];
-                        const checkOut = selectedDates[1];
-                    }
-
-
                 },
                 beforeShowDay: function (date) {
                     var dateAsString = date.getFullYear().toString() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-
-                    var startDate = new Date("2025-8-01");
-                    endDate = new Date("2025-08-12");
                     return ($.inArray(dateAsString, closedDays) > -1 ? [false, 'blocked'] :
                         ($.inArray(dateAsString, bookedDays) > -1 ? [false, 'reserved'] : [true, '']));
                 }
-
             }).datepicker("setDate", new Date("2025-08-01"));
         });
 
@@ -743,29 +686,7 @@
                     input.value = value + 1;
                 });
             });
-            /*
-            // Initialize flatpickr date picker
-            const dateRangePicker = flatpickr("#date-range-calendar", {
-                mode: "range",
-                minDate: "today",
-                dateFormat: "Y-m-d",
-                onChange: function(selectedDates, dateStr, instance) {
-                    if (selectedDates.length === 2) {
-                        const checkIn = selectedDates[0];
-                        const checkOut = selectedDates[1];
-
-                        // Format dates for display
-                        const options = { weekday: 'short', day: 'numeric', month: 'short', year: '2-digit' };
-                        document.getElementById('checkInDate').value = checkIn.toLocaleDateString('en-US', options);
-                        document.getElementById('checkOutDate').value = checkOut.toLocaleDateString('en-US', options);
-
-                        // Calculate nights
-                        const nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
-                        document.getElementById('nights-count').textContent = nights;
-                    }
-                }
-            });
-            */
+            
 
             // Step navigation
             const steps = document.querySelectorAll('.step');
