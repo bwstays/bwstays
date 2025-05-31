@@ -122,6 +122,5 @@ for (i = 0; i < locations.length; i++) {
 }
 
 function getData() {
-
   document.frm.submit();
 }
