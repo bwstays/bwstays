@@ -192,7 +192,7 @@
                             <h5 class="mb-3 text-center">Guests</h5>
                             <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
                         style="width:22%;margin:0 auto; border-radius: 10%;"></div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label font-weight-bold">Adults</label>
                                     <div class="counter-container d-flex">
@@ -217,7 +217,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
 
@@ -311,6 +311,72 @@
 						                    <a class="btn btn-primary btn-lg js-scroll-trigger custom-btn" id="getStarted" href="#">Make Booking</a>
 						                </div>
          			     </div>
+                    < <div class="guest-information mb-4" id="guestinformation">
+                        <h5 class="mb-3 text-center">Guest Information</h5>
+                        <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
+                            style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+
+                        <form class="bg-white p-4 rounded shadow-sm">
+                            <div class="row">
+                                <!-- Primary Guest Information -->
+                                <div class="col-md-6">
+                                    <h6 class="mb-3 text-primary">Primary Guest</h6>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your full name"
+                                            required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter your email"
+                                            required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" placeholder="Enter your phone number"
+                                            required>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <h6 class="mb-3 text-primary">Additional Information</h6>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Special Requests</label>
+                                        <textarea class="form-control" rows="3"
+                                            placeholder="Any special requests or requirements?"></textarea>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Arrival Time</label>
+                                        <select class="form-control">
+                                            <option>Select arrival time</option>
+                                            <option>12:00 PM - 2:00 PM</option>
+                                            <option>2:00 PM - 4:00 PM</option>
+                                            <option>4:00 PM - 6:00 PM</option>
+                                            <option>After 6:00 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="mt-4">
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label" for="termsCheck">
+                                        I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a
+                                            href="#" class="text-primary">Cancellation Policy</a>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                    Complete Booking
+                                </button>
+                            </div>
+                        </form>
                     </div>
 
 
@@ -498,6 +564,9 @@
         </div>
 
     </footer>
+     <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

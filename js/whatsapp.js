@@ -12,7 +12,7 @@ var options = {
 	"borderRadius":"3",
 	"marginLeft": "0",
 	"marginRight": "5",
-	"marginBottom": "5",
+	"marginBottom": "20",
 	"ctaIconWATI":false,
 	"position":"right"
 },

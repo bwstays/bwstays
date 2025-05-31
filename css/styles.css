@@ -10822,3 +10822,81 @@ body {
 }
 
 
+
+/* back to top */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 60px;
+  display: none;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 50px;
+  background-color: grey;
+  height: 50px;
+  padding: 0;
+  line-height: 50px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#btn-back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Nearby Card Styles */
+.nearby-card {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  min-height: 130px;
+  border-radius: 12px;
+}
+
+.nearby-card .card-body {
+  padding: 1.5rem;
+}
+
+.nearby-card .icon-container {
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  border-radius: 12px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.nearby-card .icon-container i {
+  color: #64a19d;
+  font-size: 1.2rem;
+}
+
+.nearby-card .card-title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+.nearby-card .distance-text {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+}
+
+.nearby-card .distance-text i {
+  color: #64a19d;
+  margin-right: 0.5rem;
+} 
