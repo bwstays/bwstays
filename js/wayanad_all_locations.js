@@ -1,11 +1,14 @@
+
+
 var bwlocations = [
+
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Banasura Hills">Banasura Hills</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Banasura Hills"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/banasura-hills-1920x1080-20230429161726128402.webp" width="300" ></a>', 11.695175204072623, 75.90917173969375, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad" title="Brahmagiri Hills">Brahmagiri Hills</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad" title="Brahmagiri Hills"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/brahmagiri-hills-wayanad-34-20230428184555850297.webp" width="300" ></a>', 11.932026, 75.994078, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="Chembra Peak">Chembra Peak</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="Chembra Peak"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.556469, 76.083341, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
-  ['<h6><a target="_blank" href="BW" title="Black & White">Black & White</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="BW"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/bw.png"],
+  ['<h6><a target="_blank" href="https://www.bwstays.com" title="Black & White">Black & White</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="BW"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/bw.png"],
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/jain-temple-wayanad" title="Jain Temple">Jain Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/jain-temple-wayanad" title="Jain Temple"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/jain-temple-sulthan-bathery-wayanad-1-20230428191923325949.webp" width="300" ></a>', 11.660817, 76.250441, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
@@ -48,101 +51,25 @@ var bwlocations = [
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad" title="Karapuzha Dam">Karapuzha Dam</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad" title="Karapuzha Dam"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/karappuzha-dam-wayanad-6-20230429185056480109.webp" width="300" ></a>', 11.618487, 76.167956, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 ];
 
-var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 10,
-  disableDefaultUI: false,
+
+//var iconURLPrefix = 'https://www.dtpcwayanad.com/images/';
+var map = new google.maps.Map(document.getElementById('mapall'), {
+  zoom: 9.999,
+  // disable the default User Interface
+  disableDefaultUI: true,
+  // add back fullscreen, streetview, zoom
   zoomControl: true,
   streetViewControl: true,
   fullscreenControl: true,
-  mapTypeControl: true,
-  center: new google.maps.LatLng(11.6271608969693, 76.08851019534403),
-  mapId: 'f03033acde18bc0d',
-  styles: [
-    {
-      "featureType": "all",
-      "elementType": "geometry",
-      "stylers": [{"color": "#242f3e"}]
-    },
-    {
-      "featureType": "all",
-      "elementType": "labels.text.stroke",
-      "stylers": [{"lightness": -80}]
-    },
-    {
-      "featureType": "administrative",
-      "elementType": "labels.text.fill",
-      "stylers": [{"color": "#ffffff"}]
-    },
-    {
-      "featureType": "administrative.locality",
-      "elementType": "labels.text.fill",
-      "stylers": [{"color": "#ffffff"}]
-    },
-    {
-      "featureType": "poi",
-      "elementType": "labels.text.fill",
-      "stylers": [{"color": "#ffffff"}]
-    },
-    {
-      "featureType": "poi.park",
-      "elementType": "geometry",
-      "stylers": [{"color": "#263c3f"}]
-    },
-    {
-      "featureType": "poi.park",
-      "elementType": "labels.text.fill",
-      "stylers": [{"color": "#ffffff"}]
-    },
-    {
-      "featureType": "road",
-      "elementType": "geometry",
-      "stylers": [{"color": "#38414e"}]
-    },
-    {
-      "featureType": "road",
-      "elementType": "geometry.stroke",
-      "stylers": [{"color": "#212a37"}]
-    },
-    {
-      "featureType": "road",
-      "elementType": "labels.text.fill",
-      "stylers": [{"color": "#ffffff"}]
-    },
-    {
-      "featureType": "road.highway",
-      "elementType": "geometry",
-      "stylers": [{"color": "#746855"}]
-    },
-    {
-      "featureType": "road.highway",
-      "elementType": "geometry.stroke",
-      "stylers": [{"color": "#1f2835"}]
-    },
-    {
-      "featureType": "road.highway",
-      "elementType": "labels.text.fill",
-      "stylers": [{"color": "#ffffff"}]
-    },
-    {
-      "featureType": "water",
-      "elementType": "geometry",
-      "stylers": [{"color": "#17263c"}]
-    },
-    {
-      "featureType": "water",
-      "elementType": "labels.text.fill",
-      "stylers": [{"color": "#ffffff"}]
-    },
-    {
-      "featureType": "water",
-      "elementType": "labels.text.stroke",
-      "stylers": [{"lightness": -20}]
-    }
-  ]
+  //panamaram center
+  center: new google.maps.LatLng(11.7402, 76.0731),
+  //	mapTypeId: google.maps.MapTypeId.ROADMAP,
+  mapId: 'f03033acde18bc0d'
 });
-
 var infowindow = new google.maps.InfoWindow();
+var  i;
 var markers = [];
+
 var directionsService = new google.maps.DirectionsService();
 var directionsRenderer = new google.maps.DirectionsRenderer({
   map: map,
@@ -154,72 +81,18 @@ var directionsRenderer = new google.maps.DirectionsRenderer({
   }
 });
 
-// Find BW Stays location
-var bwLocation = bwlocations.find(loc => loc[0].includes('Black & White'));
-var bwPosition = bwLocation ? new google.maps.LatLng(bwLocation[1], bwLocation[2]) : null;
 
-// Add markers and routes
+
 for (i = 0; i < bwlocations.length; i++) {
-  var position = new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]);
-  var isBW = bwlocations[i][0].includes('Black & White');
-
-  var marker = new google.maps.Marker({
-    position: position,
-    icon: {
-      url: bwlocations[i][4],
-      scaledSize: new google.maps.Size(40, 40),
-      labelOrigin: new google.maps.Point(20, -10)
-    },
-    map: map,
-    title: bwlocations[i][0].match(/<h6>.*?<\/h6>/)[0].replace(/<[^>]*>/g, ''),
-    label: {
-      text: bwlocations[i][0].match(/<h6>.*?<\/h6>/)[0].replace(/<[^>]*>/g, ''),
-      color: "#ffffff",
-      fontSize: "12px",
-      fontWeight: "bold"
-    }
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
+    icon: bwlocations[i][4],
+    map: map
   });
-
-  markers.push(marker);
-
-  // Add click listener for info window
-  google.maps.event.addListener(marker, 'click', (function(marker, i) {
-    return function() {
+  google.maps.event.addListener(marker, 'click', (function (marker, i) {
+    return function () {
       infowindow.setContent(bwlocations[i][0]);
       infowindow.open(map, marker);
     }
   })(marker, i));
-
-  // Draw route from BW Stays to this location if it's not BW Stays
-  if (bwPosition && !isBW) {
-    var request = {
-      origin: bwPosition,
-      destination: position,
-      travelMode: google.maps.TravelMode.DRIVING
-    };
-
-    directionsService.route(request, function(result, status) {
-      if (status === 'OK') {
-        directionsRenderer.setDirections(result);
-      }
-    });
-  }
-}
-
-// Fit map to show all markers with padding
-var bounds = new google.maps.LatLngBounds();
-markers.forEach(function(marker) {
-  bounds.extend(marker.getPosition());
-});
-map.fitBounds(bounds, {
-  padding: {
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50
-  }
-});
-
-function getData() {
-  document.frm.submit();
 }
