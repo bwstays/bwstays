@@ -1,4 +1,5 @@
-<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<!doctype html
+    public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -60,18 +61,17 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/maps.css" rel="stylesheet" />
 
-    <script src="js/siteData.js"></script>
-    <script src="js/nearbylocationsdata.js"></script>
-    <script src="js/dynamic-nearby.js"></script>
+
+    <!-- <link href="css/sidebar.css" rel="stylesheet" /> -->
 </head>
 
-<body id="page-top" class="knowmore-page">
+<body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <div class="col-md-1 text-center">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                    <img  alt=""  src="assets/img/love.png" alt="Love Icon"
+                <a class="navbar-brand js-scroll-trigger" href="./index.html">
+                    <img alt=""  src="assets/img/logo.png" alt="bw Logo"
                         style="display: block; margin: 0 auto 5px auto; max-width: 30px;">
                     Black & White
                 </a>
@@ -87,49 +87,34 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto" id="nav-items">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./index.html">Home</a></li>
+                    <li class="nav-item"  style="padding:21px">
+						  <a class="social-icon mx-2" href="alllocation.html" style="margin-right:1.5rem !important;">
+						  	<img src="assets/img/logo/direction.png" width="45" height="45"/>
+						  </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Discover</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="about-section" id="about">
-        <div class="container">
-            <div class="row">
-                <!-- Left side - Image and Disclaimer -->
-                <div class="col-md-4 sticky-image-container">
-                    <div class="sticky-image">
-                        <img alt="" src="assets/img/heritage/tirunelli.png" alt="Wayanad Mist" class="img-fluid rounded">
-                    </div>
-                    <div class="disclaimer-text mt-3">
-                        <h4 class="text-white mb-3">About Wayanad</h4>
-                        <p class="text-white-50 small">
-                            Discover the rich cultural heritage and historical significance of Wayanad through these magnificent temples and monuments.
-                        </p>
-                    </div>
-                </div>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container h-400  align-items-center">
+             <div class="row">
+				<div class="col-md-10">
+					<h3 class="font-weight-bold mb-10">Direction</h3>
+					<div id="map" class="map"></div>
+				</div>
 
-                <!-- Right side - Cards Container -->
-                <div class="col-md-8">
-                    <!--<h2 class="text-white mb-4 text-center">Cultural & Historical</h2>-->
-                    <div class="row" id="culthist-cards">
-                        <!-- Cards will be dynamically populated here -->
-                    </div>
-                </div>
-            </div>
+              </div>
         </div>
-    </section>
+    </header>
 
 
-<section class="nearby-places py-5" id="nearby-places">
-    <div class="container">
-        <h2 class="text-center mb-5">Nearby Places</h2>
-        <div class="row" id="nearby-cards">
-            <!-- Cards will be dynamically populated here -->
-        </div>
-    </div>
-</section>
+
 
     <!-- Signup-->
     <section class="signup-section" id="signup">
@@ -138,7 +123,7 @@
                 <div class="text-left mb-12 text-center">
                     <h2 class="text-white font-weight-bold text-center">Get in touch with us</h2>
                     <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-            style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                 </div>
             </div>
             <div class="row">
@@ -169,7 +154,7 @@
                         </div>
 
                         <div class="row">
-                        <!--
+                            <!--
                             <div class="col-md-5">
                                 <div class="form-group mb-3">
                                     <label for="inputCity" class="text-white-50 small text-uppercase">City</label>
@@ -195,7 +180,7 @@
                                 placeholder="Your message"></textarea>
                         </div>
                         <button class="btn btn-primary btn-block py-2 text-uppercase font-weight-bold"
-                            type="submit">Send Message</button>
+                            type="submit">Request  Callback</button>
                     </form>
                 </div>
 
@@ -219,7 +204,10 @@
                             </div>
 
                             <div class="mb-4">
-                                <h5 class="text-primary text-uppercase small font-weight-bold">Email</h5>
+                                <h5 class="text-primary text-uppercase small font-weight-bold">Email
+                                    <!-- <i class="fab fa-envelope"></i> -->
+
+                                </h5>
                                 <p class="mb-0"><a href="mailto:reachus@bw.com" class="text-white">me@me.com</a>
                                 </p>
                             </div>
@@ -235,7 +223,6 @@
                                     </a>
                                 </p>
                             </div>
-
                         </div>
 
 
@@ -247,11 +234,18 @@
         </div>
     </section>
 
+    <!-- Signup -->
+    <!-- <section class="map-section" id="maps">
+        <div class="container py-2">
 
+
+		 </div>
+     </section> -->
 
     <!-- Footer with social icons -->
     <footer class="footer bg-black text-white-50">
         <h3 class="text-white font-weight-bold text-center">Location</h3>
+
         <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
             style="width:22%;margin:0 auto; border-radius: 10%;"></div>
 
@@ -262,17 +256,13 @@
                     <div id="map" class="map"></div>
                 </div>
                 <div class="col-md-4 d-flex flex-column align-items-end">
-                    <!-- <div class="social-icons mt-4">
-                        <a class="social-icon mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-icon mx-2" href="#!"><i class="fab fa-instagram"></i></a>
-                    </div> -->
+
                     <div class="mid text-white-50">Discover the beauty of Wayanad</div>
-                    <!-- <div class="mb-2">Copyright © B&W 2023</div> -->
+
                 </div>
             </div>
             <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4">
-                <div class="footer-copyright small">Copyright © B&W 2023</div>
+                <div class="footer-copyright small">Copyright � B&W 2023</div>
                 <div class="footer-social social-icons">
                     <a class="social-icon mx-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="social-icon mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -280,6 +270,10 @@
                     <a class="social-icon mx-2" href="#"> <i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
+            <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4">
+                <div class="footer-copyright small"> Cancellation Policy |  Disclaimer | Testimonials | Privacy | Terms & Conditions | Cookies </div>
+            </div>
+
         </div>
 
     </footer>
@@ -289,16 +283,18 @@
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Core theme JS-->
+    <script src="data/sitedata.js"></script>
+    <script src="data/villacard.js"></script>
     <script src="js/scripts.js"></script>
-
-    <script type="javascript">
-    alert(process.env.GMAPSECRET);
-    </script>
-    <script
+    <script type="text/javascript" src="js/dynamic-content.js"></script>
+     <script
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&sensor=false"
         type="text/javascript"></script>
-    <script src="js/maps.js"></script>
-    <script src="js/place-dynamic.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/wayanad_all_locations.js"></script>
+
+
+
 </body>
 
 </html>

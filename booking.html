@@ -63,7 +63,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Added flatpickr for better date selection -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 </head>
 
@@ -73,7 +73,7 @@
         <div class="container">
             <div class="col-md-1 text-center">
                 <a class="navbar-brand js-scroll-trigger" href="./index.html">
-                    <img alt=""  src="assets/img/love.png" alt="Love Icon"
+                    <img alt="" src="assets/img/love.png" alt="Love Icon"
                         style="display: block; margin: 0 auto 5px auto; max-width: 30px;">
                     Black & White
                 </a>
@@ -121,12 +121,14 @@
                         </div>
                         <div class="col-md-4">
                             <div class="step bg-dark p-3 rounded text-white-50 mb-3 text-center">
-                                <h5 class="m-0"><i class="fas fa-home mr-2"></i><a href="#selectvilla">2. Select Villas</a></h5>
+                                <h5 class="m-0"><i class="fas fa-home mr-2"></i><a href="#selectvilla">2. Select
+                                        Villas</a></h5>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="step bg-dark p-3 rounded text-white-50 mb-3 text-center">
-                                <h5 class="m-0"><i class="fas fa-user mr-2"></i><a href="#guestinformation">3. Guest Information</a></h5>
+                                <h5 class="m-0"><i class="fas fa-user mr-2"></i><a href="#guestinformation">3. Guest
+                                        Information</a></h5>
                             </div>
                         </div>
                     </div>
@@ -137,9 +139,9 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h4 class="mb-3">When would you like to stay?</h4>
-  <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
- <div id="date-range-calendar"></div>
+                            <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
+                                style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+                            <div id="date-range-calendar"></div>
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">
                             <div class="selected-dates p-4 bg-light rounded">
@@ -147,7 +149,8 @@
                                     <div class="col-6">
                                         <label class="form-label font-weight-bold">Check-in</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="checkInDate" placeholder="Select date" readonly>
+                                            <input type="text" class="form-control" id="checkInDate"
+                                                placeholder="Select date" readonly>
                                             <div class="input-group-append">
                                                 <span class="input-group-text bg-primary text-white">
                                                     <i class="far fa-calendar-alt"></i>
@@ -158,7 +161,8 @@
                                     <div class="col-6">
                                         <label class="form-label font-weight-bold">Check-out</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="checkOutDate" placeholder="Select date" readonly>
+                                            <input type="text" class="form-control" id="checkOutDate"
+                                                placeholder="Select date" readonly>
                                             <div class="input-group-append">
                                                 <span class="input-group-text bg-primary text-white">
                                                     <i class="far fa-calendar-alt"></i>
@@ -171,14 +175,16 @@
                                     <span id="nights-count">0</span> nights
                                 </div>
 
-  					 <!-- Check Availability Button -->
-                    <div class="text-center">
-                        <button class="btn btn-primary py-3 px-5 text-uppercase font-weight-bold" type="button">
-                            <i class="fas fa-search mr-2"></i> Check Availability
-                        </button>
-                        <a class="py-2  font-weight-bold"  href="#contact-form">Request  Callback</a>
-                    </div>
-
+                                <!-- Check Availability Button -->
+                                <div class="text-center">
+                                    <button class="btn btn-primary py-3 px-5 text-uppercase font-weight-bold"
+                                        type="button">
+                                        <i class="fas fa-search mr-2"></i> Check Availability
+                                    </button>
+                                    <div class="mt-2">
+                                        <a class="py-2 font-weight-bold" href="#contact-form">Request Callback</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,7 +194,7 @@
                 <div class="reservation-form bg-light p-4 rounded">
                     <div class="row mb-1">
                         <!-- Guest Selection with improved counter design -->
-                        <div class="col-md-8 mb-1">
+                        <!-- <div class="col-md-8 mb-1">
                             <h5 class="mb-3 text-center">Guests</h5>
                             <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
                         style="width:22%;margin:0 auto; border-radius: 10%;"></div>
@@ -218,7 +224,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
 
                     </div>
@@ -226,91 +232,141 @@
                     <!-- Villa Selection -->
                     <div class="villa-selection mb-4" id="selectvilla">
                         <h5 class="mb-3 text-center">Select Your Villa</h5>
- <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+                        <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
+                            style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                         <div class="row">
-                             <!-- Villa Card 1 -->
-                             <div class="col-md-6 mb-4">
-                                 <div class="villa-card bg-white">
-                                     <img alt=""  src="assets/img/plantation/tea_estate.webp" class="villa-img w-100" alt="Luxury Villa">
-                                     <div class="p-3">
-                                         <div class="d-flex justify-content-between align-items-center mb-2">
-                                             <h5 class="mb-0">Luxury Villa 1 -  Ground Floor</h5>
-                                             <span class="price-tag">₹5,000/night</span>
-                                         </div>
-                                         <p class="text-muted mb-2"> <a href="villa1.html">Nestled</a> </p>
-                                         <div class="villa-features">
-                                             <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds</div>
-                                             <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 2 Guests</div>
-                                             <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths</div>
-                                         </div>
-                                         <div class="form-check mb-3">
-                                             <input class="form-check-input" type="checkbox" name="villa1" id="villa1" >
-                                             <label class="form-check-label" for="villa1">
-                                                 Select this Villa
-                                             </label>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
+                            <!-- Villa Card 1 -->
+                            <div class="col-md-6 mb-4">
+                                <div class="villa-card bg-white">
+                                    <img alt="" src="assets/img/plantation/tea_estate.webp" class="villa-img w-100"
+                                        alt="Luxury Villa">
+                                    <div class="p-3">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="mb-0">Luxury Villa 1 - Ground Floor</h5>
+                                            <span class="price-tag">₹5,000/night</span>
+                                        </div>
+                                        <p class="text-muted mb-2"> <a href="villa1.html">Nestled</a> </p>
+                                        <div class="villa-features">
+                                            <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds
+                                            </div>
+                                            <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i>
+                                                2 Guests</div>
+                                            <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths
+                                            </div>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" name="villa1" id="villa1">
+                                            <label class="form-check-label" for="villa1">
+                                                Select this Villa
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                             <!-- Villa Card 2 -->
-                             <div class="col-md-6 mb-4">
-                                 <div class="villa-card bg-white">
-                                     <img alt=""  src="assets/img/falls/thus_falls.png" class="villa-img w-100" alt="Premium Villa">
-                                     <div class="p-3">
-                                         <div class="d-flex justify-content-between align-items-center mb-2">
-                                             <h5 class="mb-0">Luxury Villa 2- First Floor</h5>
-                                             <span class="price-tag">₹5,000/night</span>
-                                         </div>
-                                         <p class="text-muted mb-2"><a href="villa2.html">Luxurious Villa</a></p>
-                                         <div class="villa-features">
-                                             <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds</div>
-                                             <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i> 2 Guests</div>
-                                             <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths</div>
-                                         </div>
-                                         <div class="form-check mb-3">
-                                             <input class="form-check-input" type="checkbox" name="villa2" id="villa2" unchecked>
-                                             <label class="form-check-label" for="villa2">
-                                                 Select this Villa
-                                             </label>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
+                            <!-- Villa Card 2 -->
+                            <div class="col-md-6 mb-4">
+                                <div class="villa-card bg-white">
+                                    <img alt="" src="assets/img/falls/thus_falls.png" class="villa-img w-100"
+                                        alt="Premium Villa">
+                                    <div class="p-3">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="mb-0">Luxury Villa 2- First Floor</h5>
+                                            <span class="price-tag">₹5,000/night</span>
+                                        </div>
+                                        <p class="text-muted mb-2"><a href="villa2.html">Luxurious Villa</a></p>
+                                        <div class="villa-features">
+                                            <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds
+                                            </div>
+                                            <div class="villa-feature"><i class="fas fa-user-friends text-primary"></i>
+                                                2 Guests</div>
+                                            <div class="villa-feature"><i class="fas fa-bath text-primary"></i> 1 Baths
+                                            </div>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" name="villa2" id="villa2"
+                                                unchecked>
+                                            <label class="form-check-label" for="villa2">
+                                                Select this Villa
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
- 						</div>
+                        </div>
 
                     </div>
 
 
 
-  				  <!-- Guest information -->
-                    <div class="villa-selection mb-4" id="guestinformation">
+                    <!-- Guest Information -->
+                    <div class="guest-information mb-4" id="guestinformation">
                         <h5 class="mb-3 text-center">Guest Information</h5>
- <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
-                        <div class="row">
-                             <!-- Villa Card 1 -->
-                             <div class="col-md-6 mb-4">
-                                 <div class="villa-card bg-white">
-                                     <img alt=""  src="assets/img/plantation/tea_estate.webp" class="villa-img w-100" alt="Luxury Villa">
-                                     <div class="p-3">
-                                         <div class="d-flex justify-content-between align-items-center mb-2">
-                                          </div>
+                        <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
+                            style="width:22%;margin:0 auto; border-radius: 10%;"></div>
 
-                                     </div>
-                                 </div>
-                             </div>
+                        <form class="bg-white p-4 rounded shadow-sm">
+                            <div class="row">
+                                <!-- Primary Guest Information -->
+                                <div class="col-md-6">
+                                    <h6 class="mb-3 text-primary">Primary Guest</h6>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your full name"
+                                            required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter your email"
+                                            required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" placeholder="Enter your phone number"
+                                            required>
+                                    </div>
+                                </div>
 
 
+                                <div class="col-md-6">
+                                    <h6 class="mb-3 text-primary">Additional Information</h6>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Special Requests</label>
+                                        <textarea class="form-control" rows="3"
+                                            placeholder="Any special requests or requirements?"></textarea>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Arrival Time</label>
+                                        <select class="form-control">
+                                            <option>Select arrival time</option>
+                                            <option>12:00 PM - 2:00 PM</option>
+                                            <option>2:00 PM - 4:00 PM</option>
+                                            <option>4:00 PM - 6:00 PM</option>
+                                            <option>After 6:00 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
 
- 						</div>
- 						 <div class="button-container mt-4">
-						                <div class="mx-auto text-center">
-						                    <a class="btn btn-primary btn-lg js-scroll-trigger custom-btn" id="getStarted" href="#">Make Booking</a>
-						                </div>
-         			     </div>
+
+                            <div class="mt-4">
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label" for="termsCheck">
+                                        I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a
+                                            href="#" class="text-primary">Cancellation Policy</a>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                    Complete Booking
+                                </button>
+                            </div>
+                        </form>
                     </div>
 
 
@@ -326,7 +382,8 @@
                         <ul class="list-unstyled pl-4 mb-0">
                             <li class="d-flex align-items-center mb-2">
                                 <i class="fas fa-check-circle text-primary mr-2"></i>
-                                <a href="#" class="text-white-50 hover-primary">bwstays Holiday Experiences Cancellation policy</a>
+                                <a href="#" class="text-white-50 hover-primary">bwstays Holiday Experiences Cancellation
+                                    policy</a>
                             </li>
                             <li class="d-flex align-items-center mb-2">
                                 <i class="fas fa-check-circle text-primary mr-2"></i>
@@ -341,8 +398,8 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        </div>
+    </section>
 
 
     <!-- Signup-->
@@ -352,7 +409,7 @@
                 <div class="text-left mb-12 text-center">
                     <h2 class="text-white font-weight-bold text-center">Get in touch with us</h2>
                     <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
-            style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+                        style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                 </div>
             </div>
             <div class="row">
@@ -383,7 +440,7 @@
                         </div>
 
                         <div class="row">
-                        <!--
+                            <!--
                             <div class="col-md-5">
                                 <div class="form-group mb-3">
                                     <label for="inputCity" class="text-white-50 small text-uppercase">City</label>
@@ -441,12 +498,13 @@
                             <div class="mb-4">
 
                                 <h5 class="text-primary text-uppercase small font-weight-bold">Phone
-                                    <i class="fab fa-whatsapp"></i>
+                                    <a href="https://wa.me/919999999999" target="_blank" class=" ml-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
                                 </h5>
                                 <p class="text-white mb-0">
                                     +91 999 999 9999
-                                    <a href="https://wa.me/919999999999" target="_blank" class="text-white ml-2">
-                                    </a>
+
                                 </p>
                             </div>
 
@@ -465,7 +523,7 @@
 
     <!-- Footer with social icons -->
     <footer class="footer bg-black text-white-50">
-            <h3 class="text-white font-weight-bold text-center">Location</h3>
+        <h3 class="text-white font-weight-bold text-center">Location</h3>
 
         <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
             style="width:22%;margin:0 auto; border-radius: 10%;"></div>
@@ -488,12 +546,21 @@
                     <a class="social-icon mx-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="social-icon mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
                     <a class="social-icon mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="social-icon mx-2" href="#"> <i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/919999999999" target="_blank" class=" ml-2">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
+            </div>
+            <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4">
+                <div class="footer-copyright small"> Cancellation Policy | Disclaimer | Testimonials | Privacy | Terms &
+                    Conditions | Cookies </div>
             </div>
         </div>
 
     </footer>
+    <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -511,123 +578,119 @@
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&sensor=false"
         type="text/javascript"></script>
     <script src="js/maps.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
- <script src=
-"https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js">
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js">
     </script>
 
-    <script src=
-"https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js">
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js">
+        
     </script>
+    <script src="js/whatsapp.js"></script>
+
 
     <script>
 
 
-		 $( function() {
+        $(function () {
 
-		 var booking =
-		 [
-			 [
-				 "2025-8-16",
-			 ],
-			 [
-				 "2025-8-17", "2025-8-17"
-			 ],
-			 [
-				 "2025-8-18", "2025-8-18"
-			 ]
-		];
+            var booking =
+                [
+                    [
+                        "2025-8-16",
+                    ],
+                    [
+                        "2025-8-17", "2025-8-17"
+                    ],
+                    [
+                        "2025-8-18", "2025-8-18"
+                    ]
+                ];
 
-		var closed =
-		 [
-			 [
-				 "2025-8-4",
-			 ],
-			 [
-				 "2025-8-5", "2025-8-5"
-			 ],
-			 [
-				 "2025-8-6", "2025-8-6"
-			 ],
-			 [
-				 "2025-08-10", "2025-08-10"
-			 ]
+            var closed =
+                [
+                    [
+                        "2025-8-4",
+                    ],
+                    [
+                        "2025-8-5", "2025-8-5"
+                    ],
+                    [
+                        "2025-8-6", "2025-8-6"
+                    ],
+                    [
+                        "2025-08-10", "2025-08-10"
+                    ]
 
-		];
-		var closedDays = [];
-		var bookedDays = [];
-		for (i = 0; i < booking.length; i++) {
+                ];
+            var closedDays = [];
+            var bookedDays = [];
+            for (i = 0; i < booking.length; i++) {
 
-			 if(booking[i].length==2)
-			 {
-			   bookedDays.push(booking[i][0]);
+                if (booking[i].length == 2) {
+                    bookedDays.push(booking[i][0]);
 
-			      // $("#villa1").prop("checked", true);
-			      // $("#villa2").prop("checked", true);
+                    // $("#villa1").prop("checked", true);
+                    // $("#villa2").prop("checked", true);
 
-			 }
+                }
 
-		}
+            }
 
-		for (i = 0; i < closed.length; i++) {
+            for (i = 0; i < closed.length; i++) {
 
-			 if(closed[i].length==2)
-			 {
-			   closedDays.push(closed[i][0]);
+                if (closed[i].length == 2) {
+                    closedDays.push(closed[i][0]);
 
-			 }
-		}
+                }
+            }
 
-	    $( "#date-range-calendar" ).datepicker({
-	      showOn: "button",
-	      buttonImageOnly: true,
-	      buttonText: "Select date",
-	      dateFormat: "yy-m-dd",
-	      minDate: "today",
-	      onSelect: function (selected)
-	      {
+            $("#date-range-calendar").datepicker({
+                showOn: "button",
+                buttonImageOnly: true,
+                buttonText: "Select date",
+                dateFormat: "yy-m-dd",
+                minDate: "today",
+                onSelect: function (selected) {
 
 
-		var sDate = selected;
-		var bDate ;
+                    var sDate = selected;
+                    var bDate;
 
 
 
-	      for (i = 0; i < booking.length; i++) {
+                    for (i = 0; i < booking.length; i++) {
 
-			bDate=booking[i][0];
-	       if(booking[i].length==2 && (Date.parse(sDate) == Date.parse(bDate)))
-			 {
-	     		  $("#villa1").prop("checked", true).prop("disabled", true);
-	     		  $("#villa2").prop("checked", true).prop("disabled", true);
-	     		  break;
-	        }
-	        else if(booking[i].length==1  && (Date.parse(sDate) == Date.parse(bDate)) )
-	        {
-	      	  $("#villa1").prop("checked", true).prop("disabled", true);
-	      	  break;
-	        }
-	        else {
+                        bDate = booking[i][0];
+                        if (booking[i].length == 2 && (Date.parse(sDate) == Date.parse(bDate))) {
+                            $("#villa1").prop("checked", true).prop("disabled", true);
+                            $("#villa2").prop("checked", true).prop("disabled", true);
+                            break;
+                        }
+                        else if (booking[i].length == 1 && (Date.parse(sDate) == Date.parse(bDate))) {
+                            $("#villa1").prop("checked", true).prop("disabled", true);
+                            break;
+                        }
+                        else {
 
-	         $("#villa1").prop("checked", false).prop("disabled", false);
-	          $("#villa2").prop("checked", false).prop("disabled", false);
-	          break;
-	        }
-           }
+                            $("#villa1").prop("checked", false).prop("disabled", false);
+                            $("#villa2").prop("checked", false).prop("disabled", false);
+                            break;
+                        }
+                    }
 
 
 
-	      },
-          onChange: function(selectedDates, dateStr, instance) {
+                },
+                onChange: function (selectedDates, dateStr, instance) {
 
-          		   if (selectedDates.length === 2) {
+                    if (selectedDates.length === 2) {
 
                         const checkIn = selectedDates[0];
                         const checkOut = selectedDates[1];
 
-						//(checkIn);
-						//alert(checkOut);
+                        //(checkIn);
+                        //alert(checkOut);
 
                         // Format dates for display
                         const options = { weekday: 'short', day: 'numeric', month: 'short', year: '2-digit' };
@@ -638,29 +701,28 @@
                         const nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
                         document.getElementById('nights-count').textContent = nights;
                     }
-                    else
-                    {
-						const checkIn = selectedDates[0];
-						const checkOut = selectedDates[1];
+                    else {
+                        const checkIn = selectedDates[0];
+                        const checkOut = selectedDates[1];
                     }
 
 
-          },
-	      beforeShowDay: function (date) {
-				var dateAsString = date.getFullYear().toString() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+                },
+                beforeShowDay: function (date) {
+                    var dateAsString = date.getFullYear().toString() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
 
-				var startDate = new Date("2025-8-01");
-				endDate = new Date("2025-08-12");
-	 			return ($.inArray(dateAsString, closedDays) > -1 ? [false, 'blocked'] :
-				($.inArray(dateAsString, bookedDays) > -1 ? [false, 'reserved'] : [true, '']));
-	      }
+                    var startDate = new Date("2025-8-01");
+                    endDate = new Date("2025-08-12");
+                    return ($.inArray(dateAsString, closedDays) > -1 ? [false, 'blocked'] :
+                        ($.inArray(dateAsString, bookedDays) > -1 ? [false, 'reserved'] : [true, '']));
+                }
 
-	    }).datepicker("setDate", new Date("2025-08-01"));
-	});
+            }).datepicker("setDate", new Date("2025-08-01"));
+        });
 
 
         // Counter functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const counterContainers = document.querySelectorAll('.counter-container');
 
             counterContainers.forEach(container => {
@@ -668,19 +730,19 @@
                 const plusBtn = container.querySelector('.plus');
                 const input = container.querySelector('.counter-input');
 
-                minusBtn.addEventListener('click', function() {
+                minusBtn.addEventListener('click', function () {
                     let value = parseInt(input.value);
                     if (value > 0) {
                         input.value = value - 1;
                     }
                 });
 
-                plusBtn.addEventListener('click', function() {
+                plusBtn.addEventListener('click', function () {
                     let value = parseInt(input.value);
                     input.value = value + 1;
                 });
             });
-			/*
+            /*
             // Initialize flatpickr date picker
             const dateRangePicker = flatpickr("#date-range-calendar", {
                 mode: "range",
@@ -708,12 +770,12 @@
             const steps = document.querySelectorAll('.step');
             steps.forEach((step, index) => {
                 if (!step.classList.contains('active')) {
-                    step.addEventListener('click', function() {
+                    step.addEventListener('click', function () {
                         // Here you would normally navigate to the corresponding step
                         // For demo purposes, we'll just toggle the active class
                         document.querySelector('.step.active').classList.remove('active');
-                       // step.classList.remove('bg-dark', 'text-white-50');
-                       // step.classList.add('active', 'bg-primary', 'text-white');
+                        // step.classList.remove('bg-dark', 'text-white-50');
+                        // step.classList.add('active', 'bg-primary', 'text-white');
                     });
                 }
             });

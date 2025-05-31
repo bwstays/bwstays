@@ -1,4 +1,4 @@
-   <script>
+
 var booking =
 [
     [
@@ -15,5 +15,5 @@ var booking =
        for (i = 0; i < booking.length; i++) {
        alert(booking[i].length);
        }
-    </script>
+
 

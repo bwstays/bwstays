@@ -54,3 +54,33 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+
+
+
+ // Back to top button functionality
+ let mybutton = document.getElementById("btn-back-to-top");
+
+
+ window.onscroll = function() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.display = "block";
+
+         setTimeout(() => {
+             mybutton.classList.add('show');
+         }, 10);
+     } else {
+         mybutton.classList.remove('show');
+
+         setTimeout(() => {
+             mybutton.style.display = "none";
+         }, 300);
+     }
+ };
+
+
+ mybutton.addEventListener("click", function() {
+     window.scrollTo({
+         top: 0,
+         behavior: 'smooth'
+     });
+ });
