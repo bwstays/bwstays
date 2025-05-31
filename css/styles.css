@@ -10861,7 +10861,7 @@ html {
 
 /* Nearby Card Styles */
 .nearby-card {
-  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  /* background: linear-gradient(145deg, #1a1a1a, #2d2d2d);       */
   min-height: 130px;
   border-radius: 12px;
 }

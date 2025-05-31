@@ -52,7 +52,6 @@ function renderNearbyPlaces() {
         return;
     }
 
-
     // Santhi natha Temple has ID 1 in the locations data
     const locId = getCurrentPageId();
     const maxDistance = 25;
@@ -68,7 +67,18 @@ function renderNearbyPlaces() {
     }
 
     // Create HTML for all nearby places
-    const placesHTML = nearbyPlaces.map(place => createPlaceCard(place)).join('');
+    const placesHTML = nearbyPlaces.map(place => {
+        // Find the full place details from siteData
+        const fullPlaceDetails = findPlaceById(place.id);
+        if (fullPlaceDetails) {
+            return createPlaceCard({
+                ...place,
+                image: fullPlaceDetails.place.image,
+                knowmore: fullPlaceDetails.place.knowmore
+            });
+        }
+        return createPlaceCard(place);
+    }).join('');
 
     // Update the container with the new content
     nearbyCardsContainer.innerHTML = placesHTML;
@@ -76,16 +86,24 @@ function renderNearbyPlaces() {
 
 // Function to create a card for each nearby place
 function createPlaceCard(place) {
+    // const imageUrl = place.image || 'assets/img/villa1/demo-image-02.jpg';
+    const imageUrl =  'assets/img/villa1/demo-image-02.jpg';
+    const knowmoreUrl = place.knowmore || '#';
     return `
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card nearby-card h-100 border-0">
-                <div class="card-body">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="card nearby-card h-100 border-0" style="border-radius: 10px; overflow: hidden;">
+                <div class="card-img-top">
+                    <img src="${imageUrl}" class="img-fluid" alt="${place.name}" style="width: 100%; height: 150px; object-fit: cover;">
+                </div>
+                <div class="card-body p-2">
                     <div class="d-flex align-items-center">
                         <div class="icon-container">
                             <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
                         </div>
                         <div>
-                            <h5 class="card-title">${place.name}</h5>
+                            <h6 class="card-title mb-1">
+                                <a href="${knowmoreUrl}" class="text-decoration-none text-white">${place.name}</a>
+                            </h6>
                             <small class="distance-text">
                                 <i class="fas fa-road"></i>${place.distance} km away
                             </small>
