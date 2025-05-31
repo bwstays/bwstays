@@ -1,4 +1,4 @@
-var locations = [
+var bwlocations = [
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Banasura Hills">Banasura Hills</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Banasura Hills"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/banasura-hills-1920x1080-20230429161726128402.webp" width="300" ></a>', 11.695175204072623, 75.90917173969375, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad" title="Brahmagiri Hills">Brahmagiri Hills</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad" title="Brahmagiri Hills"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/brahmagiri-hills-wayanad-34-20230428184555850297.webp" width="300" ></a>', 11.932026, 75.994078, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
@@ -155,41 +155,41 @@ var directionsRenderer = new google.maps.DirectionsRenderer({
 });
 
 // Find BW Stays location
-var bwLocation = locations.find(loc => loc[0].includes('Black & White'));
+var bwLocation = bwlocations.find(loc => loc[0].includes('Black & White'));
 var bwPosition = bwLocation ? new google.maps.LatLng(bwLocation[1], bwLocation[2]) : null;
 
 // Add markers and routes
-for (i = 0; i < locations.length; i++) {
-  var position = new google.maps.LatLng(locations[i][1], locations[i][2]);
-  var isBW = locations[i][0].includes('Black & White');
-  
+for (i = 0; i < bwlocations.length; i++) {
+  var position = new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]);
+  var isBW = bwlocations[i][0].includes('Black & White');
+
   var marker = new google.maps.Marker({
     position: position,
     icon: {
-      url: locations[i][4],
+      url: bwlocations[i][4],
       scaledSize: new google.maps.Size(40, 40),
       labelOrigin: new google.maps.Point(20, -10)
     },
     map: map,
-    title: locations[i][0].match(/<h6>.*?<\/h6>/)[0].replace(/<[^>]*>/g, ''),
+    title: bwlocations[i][0].match(/<h6>.*?<\/h6>/)[0].replace(/<[^>]*>/g, ''),
     label: {
-      text: locations[i][0].match(/<h6>.*?<\/h6>/)[0].replace(/<[^>]*>/g, ''),
+      text: bwlocations[i][0].match(/<h6>.*?<\/h6>/)[0].replace(/<[^>]*>/g, ''),
       color: "#ffffff",
       fontSize: "12px",
       fontWeight: "bold"
     }
   });
-  
+
   markers.push(marker);
-  
+
   // Add click listener for info window
   google.maps.event.addListener(marker, 'click', (function(marker, i) {
     return function() {
-      infowindow.setContent(locations[i][0]);
+      infowindow.setContent(bwlocations[i][0]);
       infowindow.open(map, marker);
     }
   })(marker, i));
-  
+
   // Draw route from BW Stays to this location if it's not BW Stays
   if (bwPosition && !isBW) {
     var request = {
@@ -197,7 +197,7 @@ for (i = 0; i < locations.length; i++) {
       destination: position,
       travelMode: google.maps.TravelMode.DRIVING
     };
-    
+
     directionsService.route(request, function(result, status) {
       if (status === 'OK') {
         directionsRenderer.setDirections(result);

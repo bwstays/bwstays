@@ -183,7 +183,7 @@
                     </div>
                 </div>
 
-               
+
 
                     <!-- Villa Selection -->
                     <div class="villa-selection mb-4" id="selectvilla">
@@ -513,7 +513,7 @@
             </div>
             <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4">
 
-                <div class="footer-copyright small"> Cancellation Policy |  Disclaimer | Testimonials | Privacy | Terms & Conditions | Cookies </div>
+                <div class="footer-copyright small">Disclaimer | Testimonials | Privacy | Terms & Conditions | Cookies </div>
             </div>
 
 
@@ -615,15 +615,15 @@
 
                     // Format the selected date for display
                     var formattedDate = $.datepicker.formatDate('D, M d, yy', new Date(sDate));
-                    
+
                     // If no check-in date is set, set it
                     if (!$("#checkInDate").val()) {
                         $("#checkInDate").val(formattedDate);
-                    } 
+                    }
                     // If check-in is set but check-out isn't, set check-out
                     else if (!$("#checkOutDate").val()) {
                         $("#checkOutDate").val(formattedDate);
-                        
+
                         // Calculate nights
                         var checkIn = new Date($("#checkInDate").val());
                         var checkOut = new Date(sDate);
@@ -686,7 +686,7 @@
                     input.value = value + 1;
                 });
             });
-            
+
 
             // Step navigation
             const steps = document.querySelectorAll('.step');
