@@ -9,7 +9,7 @@ var locations = [
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="Chembra Peak">Chembra Peak</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="Chembra Peak"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.556469, 76.083341, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
-  ['<h6><a target="_blank" href="BW" title="BW">BW</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="BW"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.605943, 76.083429, 2, "https://cloudties.in"],
+  ['<h6><a target="_blank" href="BW" title="Black & White">Black & White</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="BW"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/bw.png"],
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/jain-temple-wayanad" title="Jain Temple">Jain Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/jain-temple-wayanad" title="Jain Temple"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/jain-temple-sulthan-bathery-wayanad-1-20230428191923325949.webp" width="300" ></a>', 11.660817, 76.250441, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
