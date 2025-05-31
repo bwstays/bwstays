@@ -2,6 +2,16 @@
 
 var bwlocations = [
 
+['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Shanthinatha Swamy Jain Temple"><img alt=""  src="assets/img/heritage/bw-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6963, 76.1411, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
+
+
+
+['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Ananthanatha Swamy Jain Temple Puliyarmala">Ananthanatha Swamy Jain Temple Puliyarmala</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Ananthanatha Swamy Jain Temple Puliyarmala"><img alt=""  src="assets/img/heritage/bw_Anantnatha_Swami_Jain_temple.jpg" width="300" ></a>', 11.6963, 76.1411, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
+
+
+['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Koottamundu Glass Temple">Koottamundu Glass Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Koottamundu Glass Temple"><img alt=""  src="assets/img/heritage/bw_Anantnatha_Swami_Jain_temple.jpg" width="300" ></a>',  11.6184, 76.6942, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
+
+
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Banasura Hills">Banasura Hills</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Banasura Hills"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/banasura-hills-1920x1080-20230429161726128402.webp" width="300" ></a>', 11.695175204072623, 75.90917173969375, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad" title="Brahmagiri Hills">Brahmagiri Hills</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad" title="Brahmagiri Hills"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/brahmagiri-hills-wayanad-34-20230428184555850297.webp" width="300" ></a>', 11.932026, 75.994078, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
