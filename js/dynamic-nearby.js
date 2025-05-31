@@ -1,18 +1,21 @@
-
 function getCurrentPageId() {
     const urlParams = new URLSearchParams(window.location.search);
+
 	var currId=urlParams.get('id') ;
  	if (currId === null || typeof currId == "undefined" || currId === '')
 		 currId=1;
     return currId;
+
 }
 
 function getCurrentCatagoryId() {
     const urlParams = new URLSearchParams(window.location.search);
+
 	var catId=urlParams.get('cat') ;
 	if (catId === null || typeof catId == "undefined" || catId === '')
 		 catId=0;
     return catId ;
+
 }
 
 function findPlaceById(id) {
@@ -73,20 +76,25 @@ function renderNearbyPlaces() {
 
 // Function to create a card for each nearby place
 function createPlaceCard(place) {
-
     return `
         <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
+            <div class="card nearby-card h-100 border-0">
                 <div class="card-body">
-                    <h5 class="card-title">${place.name}</h5>
-                    <p class="card-text mb-2">
-                        <i class="fas fa-road"></i> Distance: ${place.distance} km
-                    </p>
+                    <div class="d-flex align-items-center">
+                        <div class="icon-container">
+                            <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title">${place.name}</h5>
+                            <small class="distance-text">
+                                <i class="fas fa-road"></i>${place.distance} km away
+                            </small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     `;
 }
-
 
 document.addEventListener('DOMContentLoaded', renderNearbyPlaces);
