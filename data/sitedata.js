@@ -585,7 +585,7 @@
       id: 24,
       name: "LocalCuisine",
       description: "Try authentic Kerala dishes at local eateries and food stalls.",
-      image: "assets/img/food/chain_tree.avif",
+      image: "assets/img/food/bw_wayanad_1980.jpg",
       holidays: "None",
       timing: "11:00-23:00",
       Contact: "+91-555 555 5555",

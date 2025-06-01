@@ -86,9 +86,9 @@ function renderNearbyPlaces() {
 
 // Function to create a card for each nearby place
 function createPlaceCard(place) {
-    // const imageUrl = place.image || 'assets/img/villa1/demo-image-02.jpg';
-    const imageUrl =  'assets/img/villa1/demo-image-02.jpg';
-    const knowmoreUrl = place.knowmore || '#';
+    const imageUrl = place.image || 'assets/img/villa1/demo-image-02.jpg';
+     const knowmoreUrl = place.knowmore || '#';
+
     return `
         <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
             <div class="card nearby-card h-100 border-0" style="border-radius: 10px; overflow: hidden;">
@@ -114,5 +114,5 @@ function createPlaceCard(place) {
         </div>
     `;
 }
- 
+
 document.addEventListener('DOMContentLoaded', renderNearbyPlaces);
