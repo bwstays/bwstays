@@ -55,8 +55,8 @@ function renderNearbyPlaces() {
     // Santhi natha Temple has ID 1 in the locations data
     const locId = getCurrentPageId();
     const maxDistance = 25;
-
-    // id we can pass dynamically
+    const locCat = getCurrentCatagoryId();
+     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
 
     console.log('Nearby places:', nearbyPlaces);
@@ -74,7 +74,9 @@ function renderNearbyPlaces() {
             return createPlaceCard({
                 ...place,
                 image: fullPlaceDetails.place.image,
-                knowmore: fullPlaceDetails.place.knowmore
+                knowmore: fullPlaceDetails.place.knowmore,
+                rating: fullPlaceDetails.place.rating
+
             });
         }
         return createPlaceCard(place);
@@ -107,6 +109,9 @@ function createPlaceCard(place) {
                             <small class="distance-text">
                                 <i class="fas fa-road"></i>${place.distance} km away
                             </small>
+                        </div>
+  						<div class="icon-container">
+                            <i  class="fas fa-star" style="color: #64a19d;"></i>
                         </div>
                     </div>
                 </div>
