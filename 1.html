@@ -43,7 +43,7 @@ var WATERMARK_HEIGHT =75;
 	        vendorName: "Aditya M",
 	        vendorAddress: "14/203, Patna, Bihar",
 	        vendorPinCode: "740046",
-	        contactPerson: "Saju K K",
+	        contactPerson: "Aditya M",
 	        contactPersonMobNo: "8993298712",
 	    }
 
@@ -100,9 +100,9 @@ pdf.setProperties({
 	    pdf.line(10, 18, 200, 18)
 	    pdf.text('Contact Person', 13, 23)
 	    pdf.setFont('custom', 'normal');
-	    pdf.text("Saju K K", 13, 28)
+	    pdf.text("Tom K K", 13, 28)
 	    pdf.addImage(callImage, 'PNG', 13, 29, 3, 3);
-	    pdf.text(" 9741496273", 16, 32)
+	    pdf.text(" 99999 99999", 16, 32)
 	    pdf.setFont('Newsreader', 'bold')
 	    pdf.text('Booking No      :', 130, 23)
 	    pdf.text('Booking Date   :', 130, 27)
@@ -117,8 +117,8 @@ pdf.setProperties({
 	    pdf.setFont('Newsreader', 'bold')
 	    pdf.text('Address :', 130, 39)
 	    pdf.setFont('Newsreader', 'normal')
-	    pdf.text('Villa Location', 130, 44)
-	    pdf.text('Kalpetta', 130, 48)
+	    pdf.text('Villa Location', 145, 39)
+	    pdf.text('Kalpetta', 168, 39)
 
 	    // Generate the vendor-specific content
 	    pdf.setFont('Newsreader', 'bold');
