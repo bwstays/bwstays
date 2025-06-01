@@ -1,36 +1,3 @@
-<html>
-<head>
-
-</head>
-<body>
-    <div class="container">
-        <h1>Generate  Referance Booking</h1>
-        <button onclick="gen()">Booking</button>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.2/jspdf.plugin.autotable.min.js"></script>
-
-    <script>
-
-
-
-
-    function addWaterMark(doc) {
-	  var totalPages = doc.internal.getNumberOfPages();
-
-		var WATERMARK_WIDTH =75;
-		var WATERMARK_HEIGHT =75;
-	  for (i = 1; i <= totalPages; i++) {
-	    doc.setPage(i);
-	    //doc.addImage(imgData, 'PNG', 40, 40, WATERMARK_WIDTH, WATERMARK_HEIGHT);
-	    doc.setTextColor(150);
-	    doc.text(50, doc.internal.pageSize.height - 30, 'Watermark');
-	  }
-
-	  return doc;
-}
-
-
     function gen()
     {
 
@@ -248,6 +215,18 @@ pdf.setProperties({
 
     }
 
-    </script>
-</body>
-</html>
+
+    function addWaterMark(doc) {
+		  var totalPages = doc.internal.getNumberOfPages();
+
+			var WATERMARK_WIDTH =75;
+			var WATERMARK_HEIGHT =75;
+		  for (i = 1; i <= totalPages; i++) {
+		    doc.setPage(i);
+		    //doc.addImage(imgData, 'PNG', 40, 40, WATERMARK_WIDTH, WATERMARK_HEIGHT);
+		    doc.setTextColor(150);
+		    doc.text(50, doc.internal.pageSize.height - 30, 'Watermark');
+		  }
+
+		  return doc;
+	}
