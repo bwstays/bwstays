@@ -7,12 +7,10 @@ https://jsoneditoronline.org/#right=local.qapiki
  
 
 2) Discover widget design to add all the json items on top of image and text side ( left and right )  
-4) Add a whatsapp icon near phone to contact over whatsapp by clicking 
-5) We need to add a form in the booking.html read the guest information 
+5) update need to add a form in the booking.html read the guest information 
 6) Firebase trail - low priority for now 
 7) We need to change the style.css to cdn url, but a bit css rework needed in this case 
 8) In booking page Terms and consitions,faq,cancelaltion can be a expand and collpase type for easy use
-9) update the footer request a call 
 10) include maps  in the widget 
 11) including remaning items in the widget
 

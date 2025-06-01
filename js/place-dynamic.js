@@ -56,9 +56,11 @@ window.addEventListener('load', function () {
           <small class="text-white-50">
 			<ul style="list-style:none;">
 			<li><i class="fas fa-clock"></i> Timing: ${Object.values(currentItem)[0].timing}<br></li>
-			<li><i class="fas fa-cog"></i> Visiting: ${Object.values(currentItem)[0].seasontovisit}</li>
+
+			<li><i class="fas fa-car-side"></i> Transportation: ${Object.values(currentItem)[0].transport}</li>
+			<li><i class="fas fa-cog"></i> Best Seasons to Visit: ${Object.values(currentItem)[0].seasontovisit}</li>
 			<li><i class="fas fa-bell"></i> Type: ${Object.values(currentItem)[0].type}</li>
-			<li><i class="fas fa-asterisk"></i> Holiday: ${Object.values(currentItem)[0].holidays}</li>
+			<li><i class="fas fa-power-off"></i> Holiday: ${Object.values(currentItem)[0].holidays}</li>
 			<li> <i class="fas fa-phone"></i> Contact ${Object.values(currentItem)[0].Contact}</li>
 			</ul>
 	</small>
@@ -130,6 +132,8 @@ window.addEventListener('load', function () {
               <div class="card-footer-info mb-3">
                   <small class="text-white-50">
                       <i class="fas fa-clock"></i> ${item.timing}<br>
+                      <i class="fas fa-car-side"></i> ${item.transport} <br>
+					  <i class="fas fa-power-off"></i> ${item.holidays} <br>
                       <i class="fas fa-phone"></i> ${item.Contact}
                   </small>
               </div>

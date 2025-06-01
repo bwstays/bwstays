@@ -10,16 +10,16 @@ var options = {
 	"backgroundColor":"#64a19d",
    // "ctaText":"Chat with us",
 	"borderRadius":"3",
-	"marginLeft": "0",
+	"marginLeft": "10",
 	"marginRight": "5",
- 
-
-	"marginBottom": "5",
 
 
- 
+	"marginBottom": "10",
+
+
+
 	"ctaIconWATI":false,
-	"position":"right"
+	"position":"left"
 },
 "brandSetting":{
 	"brandName":"Wati",
