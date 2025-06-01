@@ -81,8 +81,8 @@ var markers = [];
 
 for (i = 0; i < bwlocations.length; i++) {
 
-new google.maps.DirectionsService().route({
-      origin: new google.maps.LatLng( 11.605943, 76.083429),
+ new google.maps.DirectionsService().route({
+      origin: new google.maps.LatLng( 11.605943, 76.083429), // origin is bw stay
       destination: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
       travelMode: google.maps.TravelMode.DRIVING,
     }, (response, status) => {
@@ -97,7 +97,7 @@ new google.maps.DirectionsService().route({
 						  }
 						}).setDirections(response);
         }
-})
+  })
 
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),

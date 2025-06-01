@@ -64,15 +64,7 @@
 	    const tax=18;
 	    const villaprice=5000;
 
-	    // Sample items data
-	    /*const itemsData = [
-	        { itemName: 'Villa 1', bookdate: "29/12/2005 - 30/12/2005", people: 2,child: 1,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: "30/12/2005 - 31/12/2005", people: 1,child: 1,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: "30/12/2005 - 31/12/2005", people: 3,child: 1,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: "30/12/2005 - 31/12/2005", people: 3,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: "30/12/2005 - 31/12/2005", people: 4,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: "30/12/2005 - 31/12/2005", people: 4,child: 1,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	    ];*/
+
 
 /*
 
@@ -82,9 +74,10 @@
             "30/12/2005,31/12/2005"
         ],
         "total": "",
-        "name": "villa1",
-        "people": 3,
+        "itemName": "villa1",
+        "audlt": 3,
         "child": 2,
+        "unitPrice":5000,
 		"contactName": "Thomas K K",
 		"contactAddress": "14/203, Patna, Bihar",
 		"contactEmail": "thomas@a.com",
@@ -98,9 +91,10 @@
             "30/12/2005,31/12/2005"
         ],
         "total": "",
-        "name": "villa1",
-        "people": 3,
+        "itemName": "villa1",
+        "audlt": 3,
         "child": 2,
+        "unitPrice":5000,
 		"contactName": "Thomas K K",
 		"contactAddress": "14/203, Patna, Bihar",
 		"contactEmail": "thomas@a.com",
@@ -114,9 +108,10 @@
             "30/12/2005,31/12/2005"
         ],
         "total": "",
-        "name": "villa1",
-        "people": 3,
+        "itemName": "villa1",
+        "audlt": 3,
         "child": 2,
+        "unitPrice":5000,
 		"contactName": "Thomas K K",
 		"contactAddress": "14/203, Patna, Bihar",
 		"contactEmail": "thomas@a.com",
@@ -128,13 +123,14 @@
 
 ]
 
+
 */
 
 
 		const itemsData = [
-	        { itemName: 'Villa 2', bookdate: "30/12/2005 - 31/12/2005", people: 3,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: "30/12/2005 - 31/12/2005", people: 4,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: "30/12/2005 - 31/12/2005", people: 4,child: 1,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
+	        { itemName: 'Villa 2', bookdate: ["28/12/2005","29/12/2005","30/12/2005","31/12/2005"], audlt: 3,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
+	        { itemName: 'Villa 2', bookdate: ["30/12/2005","31/12/2005"], audlt: 4,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
+	        { itemName: 'Villa 2', bookdate: ["30/12/2005"], audlt: 4,child: 1,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
 	    ];
 
 	    // Create a new jsPDF instance
@@ -218,15 +214,15 @@
 	    const itemDetailsRows = itemsData?.map((item, index) => [
 	        item.itemName.toString(),
 	        item.bookdate?.toString(),
-	        item.people?.toString(),
+	        item.audlt?.toString(),
 	        item.child?.toString(),
-	        (((item.people+item.child)<=3 ?  item.unitPrice
-                             : ((item.people- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))?.toLocaleString(),
-	         (((item.people+item.child)<=3 ?  item.unitPrice
-                             : ((item.people- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))*tax/100?.toLocaleString(),
-	         ((((item.people+item.child)<=3 ?  item.unitPrice
-                             : ((item.people- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))+(((item.people+item.child)<=3 ?  item.unitPrice
-                             : ((item.people- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))*tax/100)?.toLocaleString(),
+	        (((item.audlt+item.child)<=3 ?  item.unitPrice
+                             : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))?.toLocaleString(),
+	         (((item.audlt+item.child)<=3 ?  item.unitPrice
+                             : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))*tax/100?.toLocaleString(),
+	         ((((item.audlt+item.child)<=3 ?  item.unitPrice
+                             : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))+(((item.audlt+item.child)<=3 ?  item.unitPrice
+                             : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))*tax/100)?.toLocaleString(),
 	    ]);
 	    const itemDetailsHeaders = ['Room Name', 'Booking Date', 'Adult', 'Children', 'Unit Price', 'Tax','Total'];
 	    const columnWidths = [30, 50, 16, 18,22, 25,25]; // Adjust column widths as needed
@@ -312,7 +308,7 @@
 	    //addWaterMark(pdf);
 
 	    // Save the PDF
-	    pdf.save(`bwBooking.pdf`);
+	    pdf.save(`bwBookingRef.pdf`);
 
 	    // pdf open in a new tab
 	    const pdfDataUri = pdf.output('datauristring');
