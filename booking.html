@@ -154,6 +154,35 @@
                                         placeholder="Select date" readonly>
                                 </div>
                             </div>
+                            <div>
+								<div class="col-md-6 mb-3">
+										<label class="form-label small">Adults</label>
+										<div class="counter-container d-flex">
+												<button class="counter-btn minus" type="button" style="width: 30px; height: 15px; background-color: #64a19d; color: white; border: none; border-radius: 8px 0 0 8px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+													<i class="fas fa-minus"></i>
+												</button>
+												<input type="text" class="counter-input" value="2" readonly style="width: 30px; height: 15px; border: 1px solid #ced4da; border-left: none; border-right: none; text-align: center; font-size: 14px; font-weight: bold; background-color: #f8f9fa;">
+												<button class="counter-btn plus" type="button" style="width: 30px; height: 15px; background-color: #64a19d; color: white; border: none; border-radius: 0 8px 8px 0; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+													<i class="fas fa-plus"></i>
+												</button>
+										</div>
+									</div>
+
+								<div class="col-md-6 mb-3">
+										<label class="form-label small">Children (0-12 years)</label>
+										<div class="counter-container d-flex">
+												<button class="counter-btn minus" type="button" style="width: 30px; height: 15px; background-color: #64a19d; color: white; border: none; border-radius: 8px 0 0 8px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+													<i class="fas fa-minus"></i>
+												</button>
+												<input type="text" class="counter-input" value="1" readonly style="width: 30px; height: 15px; border: 1px solid #ced4da; border-left: none; border-right: none; text-align: center; font-size: 15px; font-weight: bold; background-color: #f8f9fa;">
+												<button class="counter-btn plus" type="button" style="width: 30px; height: 15px; background-color: #64a19d; color: white; border: none; border-radius: 0 8px 8px 0; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+													<i class="fas fa-plus"></i>
+												</button>
+										</div>
+									</div>
+
+
+                            </div>
                         </div>
                         <div class="col-md-8">
                             <div id="date-range-calendar"></div>
@@ -168,7 +197,7 @@
                         <div class="col-md-8">
                             <div class="text-center">
                                 <button class="btn btn-primary py-2 px-4 text-uppercase font-weight-bold"
-                                    type="button">
+                                    type="button" id="checkavail">
                                     <i class="fas fa-search mr-2"></i> Check Availability
                                 </button>
                                 <div class="mt-2">
@@ -552,10 +581,56 @@
 	<!-- PDF creation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.2/jspdf.plugin.autotable.min.js"></script>
+	<script src="js/whatsapp.js"></script>
 	<script src="js/pdfgen.js"></script>
 
 
+
+<script>
+
+let myArray = [];
+let obj = new Object();
+obj.total = '';
+obj.name = 'villa1';
+obj.people = 3;
+obj.child = 2;
+obj.contactName = "Thomas K K";
+obj.contactAddress = "14/203, Patna, Bihar";
+obj.contactEmail = "thomas@a.com";
+obj.arrivalTime = "13:00";
+obj.requirementSpec = "";
+obj.contactPersonMobNo = "99999 99999";
+obj["bookdate"]=[
+            "30/12/2005,31/12/2005"
+]
+myArray.push(obj)
+console.log(myArray);
+
+</script>
+
     <script>
+
+
+		$(document).ready(function() {
+
+		  $("#checkavail").click(function() {
+			// Code to execute when the button is clicked
+
+
+
+
+
+			if($("#checkInDate").val()!=="" || $("#checkOutDate").val()!=="")
+			{
+			 alert($("#checkInDate").val());
+			}
+
+		  });
+
+
+
+		});
+
         $(function () {
             var closed =
                 [
@@ -594,6 +669,8 @@
 
                 }
             }
+
+
 
             $("#date-range-calendar").datepicker({
                 showOn: "button",
@@ -696,6 +773,20 @@
             });
         });
 
+  function addWaterMark(doc) {
+	  var totalPages = doc.internal.getNumberOfPages();
+
+		var WATERMARK_WIDTH =75;
+		var WATERMARK_HEIGHT =75;
+	  for (i = 1; i <= totalPages; i++) {
+	    doc.setPage(i);
+	    //doc.addImage(imgData, 'PNG', 40, 40, WATERMARK_WIDTH, WATERMARK_HEIGHT);
+	    doc.setTextColor(150);
+	    doc.text(50, doc.internal.pageSize.height - 30, 'Watermark');
+	  }
+
+	  return doc;
+}
 
 
 

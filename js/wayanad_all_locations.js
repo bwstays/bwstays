@@ -9,7 +9,6 @@ var bwlocations = [
 ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Ananthanatha Swamy Jain Temple Puliyarmala">Ananthanatha Swamy Jain Temple Puliyarmala</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Ananthanatha Swamy Jain Temple Puliyarmala"><img alt=""  src="assets/img/heritage/bw_Anantnatha_Swami_Jain_temple.jpg" width="300" ></a>', 11.6963, 76.1411, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
 
-['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Koottamundu Glass Temple">Koottamundu Glass Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Koottamundu Glass Temple"><img alt=""  src="assets/img/heritage/bw_Anantnatha_Swami_Jain_temple.jpg" width="300" ></a>',  11.6184, 76.6942, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Banasura Hills">Banasura Hills</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/banasura-hills-wayanad" title="Banasura Hills"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/banasura-hills-1920x1080-20230429161726128402.webp" width="300" ></a>', 11.695175204072623, 75.90917173969375, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
@@ -26,9 +25,7 @@ var bwlocations = [
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/pallikunnu-church-wayanad" title="Pallikunnu Church">Pallikunnu Church</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/pallikunnu-church-wayanad" title="Pallikunnu Church"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/pallikunnu-church-wayanad-15-20230429102451469670.webp" width="300" ></a>', 11.638232, 76.010695, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
-  ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad" title="Priyadarshini Hills">Priyadarshini Hills</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad" title="Priyadarshini Hills"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/priyadarshini-tea-environs-wayanad-21-20230429102333297293.webp" width="300" ></a>', 9.655071684595004, 76.53276868947644, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
-
-  ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/seethadevi-lava-kusa-temple-wayanad" title="Seethadevi Lava Kusa Temple">Seethadevi Lava Kusa Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/seethadevi-lava-kusa-temple-wayanad" title="Seethadevi Lava Kusa Temple"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/seetha-lava-kusha-temple-wayanad-6-20230429103025483735.webp" width="300" ></a>', 11.792823, 76.168709, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
+   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/seethadevi-lava-kusa-temple-wayanad" title="Seethadevi Lava Kusa Temple">Seethadevi Lava Kusa Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/seethadevi-lava-kusa-temple-wayanad" title="Seethadevi Lava Kusa Temple"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/seetha-lava-kusha-temple-wayanad-6-20230429103025483735.webp" width="300" ></a>', 11.792823, 76.168709, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad" title="Thirunelli Temple">Thirunelli Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad" title="Thirunelli Temple"><img alt=""  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/thirunelli-temple-wayanad-20-20230429103624709816.webp" width="300" ></a>', 11.911625, 75.995811, 2, "https://www.dtpcwayanad.com/images/pin-drop.png"],
 
@@ -80,29 +77,41 @@ var infowindow = new google.maps.InfoWindow();
 var  i;
 var markers = [];
 
-var directionsService = new google.maps.DirectionsService();
-var directionsRenderer = new google.maps.DirectionsRenderer({
-  map: map,
-  suppressMarkers: true,
-  polylineOptions: {
-    strokeColor: '#4285F4',
-    strokeWeight: 4,
-    strokeOpacity: 0.8
-  }
-});
-
 
 
 for (i = 0; i < bwlocations.length; i++) {
+
+new google.maps.DirectionsService().route({
+      origin: new google.maps.LatLng( 11.605943, 76.083429),
+      destination: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
+      travelMode: google.maps.TravelMode.DRIVING,
+    }, (response, status) => {
+        if (status === "OK") {
+          new google.maps.DirectionsRenderer({
+						  map: map,
+						  suppressMarkers: true,
+						  polylineOptions: {
+							strokeColor: '#4285F4',
+							strokeWeight: 4,
+							strokeOpacity: 0.8
+						  }
+						}).setDirections(response);
+        }
+})
+
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
     icon: bwlocations[i][4],
     map: map
   });
+
+
   google.maps.event.addListener(marker, 'click', (function (marker, i) {
     return function () {
       infowindow.setContent(bwlocations[i][0]);
       infowindow.open(map, marker);
     }
   })(marker, i));
+
 }
+
