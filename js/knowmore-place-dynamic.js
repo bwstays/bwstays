@@ -138,7 +138,7 @@ window.addEventListener('load', function () {
                   <small class="text-white-50">
                       <i class="fas fa-clock"></i> ${item.timing}<br>
                       <i class="fas fa-car-side"></i> ${item.transport} <br>
-					  <i class="fas fa-power-off"></i> ${item.holidays} <br>
+					            <i class="fas fa-calendar-week"></i> ${item.holidays} <br>
                       <i class="fas fa-phone"></i> ${item.Contact}
                   </small>
               </div>
