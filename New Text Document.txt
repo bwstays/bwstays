@@ -24,6 +24,10 @@ BYOF/BYOB/
 provide filter based on short time, nearby, review, type
 
 
+
+
+
+
 5) SEO improvement i will tell you in the next stage 
 6) Index page in github pages 
 7) ID for the elements 
