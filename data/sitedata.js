@@ -501,7 +501,7 @@
      rating:"4.5",
             map: "",
  type: "Museums & Crafts",
-      knowmore: "./knowmore.html?id=260&cat=2",
+      knowmore: "./knowmore.html?id=26&cat=2",
 
     }
 ,
@@ -1231,7 +1231,7 @@
        transport: "Public",
          rating:"4.5",
       	  type: "Tribal",
-          knowmore: "./knowmore.html?id=57&cat=10",
+          knowmore: "./knowmore.html?id=57&cat=8",
 
       },
         {
@@ -1250,7 +1250,7 @@
        transport: "Public",
          rating:"4.5",
       	  type: "Tribal",
-          knowmore: "./knowmore.html?id=59&cat=10",
+          knowmore: "./knowmore.html?id=59&cat=8",
 
       }
     ],
@@ -1264,13 +1264,13 @@
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
-	  seasontovisit:["All Season"]
+	  seasontovisit:["All Season"],
       distance: "10",
        transport: "Public",
       map: "",
      rating:"4.5",
        type: "Resturants",
-      knowmore: "./knowmore.html?id=65&cat=11",
+      knowmore: "./knowmore.html?id=65&cat=9",
 
     },
     {
@@ -1288,7 +1288,7 @@
       map: "",
      rating:"4.5",
        type: "Resturants",
-      knowmore: "./knowmore.html?id=66&cat=11",
+      knowmore: "./knowmore.html?id=66&cat=9",
 
     }
   ],
