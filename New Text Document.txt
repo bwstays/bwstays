@@ -8,7 +8,7 @@ https://diksoochi.blogspot.com/2011/04/asian-elephants-in-bandipur-national.html
 https://thewoodsresorts.com/packages
 https://manage.rentbyowner.com/
 https://www.keralatourism.org/photo-gallery/cheengeri-hills-a-scenic-trekking-escape-in-wayanad/3070/
- 
+https://www.mywayanad.com/ 
 
 2) Discover widget design to add all the json items on top of image and text side ( left and right )  
 5) update need to add a form in the booking.html read the guest information 
