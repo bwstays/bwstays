@@ -182,11 +182,10 @@
       knowmore: "./knowmore.html?id=10&cat=0",
 
     },
-
     {
-      id: 13,
-      name: "Varampatta mosque",
-      description: "Historic Varampatta mosque with beautiful architecture and cultural significance.",
+      id: 11,
+      name: "Trishileri temple ",
+      description: "Historic Trishileri temple  with beautiful architecture and cultural significance.",
       image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
       holidays: "Sun",
       timing: "10:00-18:00",
@@ -204,9 +203,47 @@
 
     {
       id: 12,
-      name: "Seetha Lava Kusha Temple",
+      name: "Sita Lav Kush Temple ponkuzhy",
+      description: "Historic Varampatta mosque with beautiful architecture and cultural significance.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+      type: "Cultural & Historical",
+      knowmore: "./knowmore.html?id=13&cat=0",
+
+    },
+
+    {
+      id: 13,
+      name: "Varampatta mosque",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
-      image: "assets/img/heritage/bw_seetha-lava-kusha-temple-wayanad.webp",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "Cultural & Historical",
+      knowmore: "./knowmore.html?id=12&cat=0",
+
+    }
+    ,
+    {
+      id: 14,
+      name: "Valliyoorkavu temple",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
@@ -221,11 +258,47 @@
 
     }
 
+ ,
+    {
+      id: 24,
+      name: "Mananthavady Pazhassi Tomb",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "Cultural & Historical",
+      knowmore: "./knowmore.html?id=12&cat=0",
 
+    },
+   {
+      id: 24,
+      name: "Chain Tree",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "Cultural & Historical",
+      knowmore: "./knowmore.html?id=12&cat=0",
+
+    }
   ],
   waterfalls: [
     {
-      id: 5,
+      id: 33,
       name: "Meenmutty Falls",
       description: "One of the largest and most spectacular waterfalls in Wayanad. One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.",
       image: "assets/img/falls/meenmufalls.png",
@@ -243,7 +316,25 @@
 
     },
     {
-      id: 17,
+      id: 34,
+      name: "Sentinel Rock Waterfall",
+      description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+      image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      rating:"4.5",
+      map: "",
+       type: "Water Falls",
+      knowmore: "./knowmore.html?id=6&cat=1",
+
+    },
+    {
+      id: 35,
       name: "Soochipara Falls",
       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
       image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
@@ -261,7 +352,25 @@
 
     },
     {
-      id: 7,
+      id: 36,
+      name: "Cheeyambam waterfalls ",
+      description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+      image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      rating:"4.5",
+      map: "",
+       type: "Water Falls",
+      knowmore: "./knowmore.html?id=6&cat=1",
+
+    },
+    {
+      id: 37,
       name: "Kanthanpara Falls",
       description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
       image: "assets/img/falls/kanta_falls.png",
@@ -278,29 +387,108 @@
       knowmore: "./knowmore.html?id=7&cat=1",
 
     }
-  ],
-  museums: [
-    {
-      id: 8,
-      name: "Folklore Museum",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: "assets/img/museum/bw_waynad_heritage_useum.avif",
-      holidays: "Sun",
-      timing: "10:00-18:00",
-      Contact: "+91-000 000 0000",
-      locationid: "1",
-	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
-      distance: "10",
+ ,
+      {
+       id: 38,
+       name: "Kappikalam waterfalls",
+       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+       image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
+       holidays: "Sun",
+       timing: "10:00-18:00",
+       Contact: "+91-000 000 0000",
+       locationid: "1",
+ 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+       distance: "10",
        transport: "Public",
-     rating:"4.5",
-      map: "",
-       type: "Museums & Crafts",
-      knowmore: "./knowmore.html?id=8&cat=2",
+       rating:"4.5",
+       map: "",
+        type: "Water Falls",
+       knowmore: "./knowmore.html?id=6&cat=1",
 
-    },
+    }
+,
+      {
+       id: 39,
+       name: "Karland chira",
+       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+       image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
+       holidays: "Sun",
+       timing: "10:00-18:00",
+       Contact: "+91-000 000 0000",
+       locationid: "1",
+ 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+       distance: "10",
+       transport: "Public",
+       rating:"4.5",
+       map: "",
+        type: "Water Falls",
+       knowmore: "./knowmore.html?id=6&cat=1",
+
+    }
+,
+      {
+       id: 40,
+       name: "Arripara falls",
+       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+       image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
+       holidays: "Sun",
+       timing: "10:00-18:00",
+       Contact: "+91-000 000 0000",
+       locationid: "1",
+ 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+       distance: "10",
+       transport: "Public",
+       rating:"4.5",
+       map: "",
+        type: "Water Falls",
+       knowmore: "./knowmore.html?id=6&cat=1",
+
+    }
+,
+      {
+       id: 41,
+       name: "Irrupu falls ",
+       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+       image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
+       holidays: "Sun",
+       timing: "10:00-18:00",
+       Contact: "+91-000 000 0000",
+       locationid: "1",
+ 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+       distance: "10",
+       transport: "Public",
+       rating:"4.5",
+       map: "",
+        type: "Water Falls",
+       knowmore: "./knowmore.html?id=6&cat=1",
+
+    }
+,
+      {
+       id: 42,
+       name: "Chetalayam falls  ",
+       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+       image: "assets/img/falls/soojipara_falls_b_w_wayanad.jpg",
+       holidays: "Sun",
+       timing: "10:00-18:00",
+       Contact: "+91-000 000 0000",
+       locationid: "1",
+ 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+       distance: "10",
+       transport: "Public",
+       rating:"4.5",
+       map: "",
+        type: "Water Falls",
+       knowmore: "./knowmore.html?id=6&cat=1",
+
+    }
+ ],
+  museums: [
+
+
     {
-      id: 10,
-      name: "Ambalavayal Heritage Museum",
+      id: 26,
+      name: "Tea Museum",
       description: "Displays tribal heritage and ancient artifacts from the region.",
       image: "assets/img/plantation/tea_wayanad.webp",
       holidays: "Sun",
@@ -316,10 +504,30 @@
       knowmore: "./knowmore.html?id=10&cat=2",
 
     }
+,
+    {
+      id: 27,
+      name: "Folklore Museum",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad Pookonth House, Kuthirivallu",
+      image: "assets/img/museum/bw_waynad_heritage_useum.avif",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+       transport: "Public",
+     rating:"4.5",
+      map: "",
+       type: "Museums & Crafts",
+      knowmore: "./knowmore.html?id=8&cat=2",
+
+    }
+
   ],
   romantic: [
     {
-      id: 11,
+      id: 43,
       name: "Karapuzhs Dam",
       description: "Karapuzhs Dam.",
       image: "assets/img/romantic/bw_wayanad_karappuzha_dam.avif",
@@ -337,7 +545,7 @@
 
     },
     {
-      id: 12,
+      id: 44,
       name: "Pookode Lake",
       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
       image: "assets/img/romantic/soojipara_falls_b_w_wayanad.jpg",
@@ -353,10 +561,239 @@
        type: "Romantic Spots",
       knowmore: "./knowmore.html?id=12&cat=3",
 
-    },
+    }
+    ,
     {
-      id: 13,
+      id: 45,
       name: "Banasurasagar Dam",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 46,
+      name: "Mailadippara",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 47,
+      name: "Banasura Sagar Hills   ",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 48,
+      name: "Manjappara",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 49,
+      name: "Chundail Tea Estate",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 50,
+      name: "Phanthom rock",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 51,
+      name: "Kurumbalakotta",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 52,
+      name: "Karlad Lake",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 53,
+      name: "Attamala View Point",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 54,
+      name: "Sunrise valley",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 55,
+      name: "Neelimala view point",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 56,
+      name: "Lakkidi view point",
+      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      image: "assets/img/romantic/kanta_falls.png",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      map: "",
+       transport: "Public",
+     rating:"4.5",
+       type: "Romantic Spots",
+      knowmore: "./knowmore.html?id=13&cat=3",
+
+    }
+    ,
+    {
+      id: 58,
+      name: "900 Kandi",
       description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
       image: "assets/img/romantic/kanta_falls.png",
       holidays: "Sun",
@@ -375,7 +812,7 @@
   ],
   plantation: [
     {
-      id: 14,
+      id: 61,
       name: "Harissons",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/plantation/tea_plantaion.jpg",
@@ -393,9 +830,9 @@
 
     },
     {
-      id: 15,
-      name: "Wayanad Tea Estate",
-      description: "Expansive tea plantations with guided tours and tasting sessions.",
+      id: 62,
+      name: "Coffee Plantation",
+      description: "Expansive Coffee Plantation   with guided tours and tasting sessions.",
       image: "assets/img/plantation/tea_estate.webp",
       holidays: "Mon",
       timing: "09:00-17:00",
@@ -412,45 +849,144 @@
     }
   ],
   trucking: [
+
+
+    {
+      id: 15,
+      name: "Kuruwa Deep",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "trucking",
+      knowmore: "./knowmore.html?id=12&cat=0",
+
+    }
+,
     {
       id: 16,
-      name: "chundale",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: "assets/img/trucking/chundale.jpg",
+      name: "Thusharagiri",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
-       transport: "Public",
-     rating:"4.5",
+      transport: "Public",
       map: "",
-       type: "Trucking",
-      knowmore: "./knowmore.html?id=16&cat=5",
+      rating:"4.5",
+       type: "trucking",
+      knowmore: "./knowmore.html?id=12&cat=0",
 
-    },
-    {
-      id: 9,
-      name: "Edakkal Caves",
-      description: "Ancient rock shelter with prehistoric carvings and inscriptions.",
-      image: "assets/img/trucking/edakkal_caves.webp",
-      holidays: "Sun",
-      timing: "10:00-18:00",
-      Contact: "+91-000 000 0000",
-      locationid: "1",
-	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
-      distance: "10",
-       transport: "Public",
-     rating:"4.5",
-      map: "",
-       type: "Museums & Crafts",
-      knowmore: "./knowmore.html?id=9&cat=5",
-
-    },
+    }
+,
     {
       id: 17,
-      name: "Chembra Peak Trek",
+      name: "Brahmagiri",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "trucking",
+      knowmore: "./knowmore.html?id=12&cat=0",
+
+    }
+,
+    {
+      id: 18,
+      name: "Chembra peak Near Mippady town",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "trucking",
+      knowmore: "./knowmore.html?id=12&cat=0",
+
+    }
+,
+    {
+      id: 19,
+      name: "Cheengeri Hill ",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "trucking",
+      knowmore: "./knowmore.html?id=12&cat=0",
+
+    }
+,
+    {
+      id: 20,
+      name: "Lakkidi Ghats  view point",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "trucking",
+      knowmore: "./knowmore.html?id=12&cat=0",
+
+    }
+,
+    {
+      id: 21,
+      name: "Edakal Caves",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+      transport: "Public",
+      map: "",
+      rating:"4.5",
+       type: "trucking",
+      knowmore: "./knowmore.html?id=12&cat=0",
+
+    }
+,
+    {
+      id: 22,
+      name: "Cheengeri hills   ",
       description: "Popular trekking destination with breathtaking views and a heart-shaped lake.",
       image: "assets/img/trucking/trucking.jpg",
       holidays: "None",
@@ -466,13 +1002,12 @@
       knowmore: "./knowmore.html?id=17&cat=5",
 
     }
-  ],
-  wildlife: [
-    {
-      id: 18,
-      name: "Bandipur Museum",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: "assets/img/wildlife/Wildlife_safari_at_tholpetty_wildlife_sanctuaryjpg.avif",
+,
+   {
+      id: 23,
+      name: "Puliyarmala  ",
+      description: "Ancient rock shelter with prehistoric carvings and inscriptions.",
+      image: "assets/img/trucking/edakkal_caves.webp",
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
@@ -480,14 +1015,17 @@
 	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
       distance: "10",
        transport: "Public",
-      map: "",
      rating:"4.5",
-       type: "Wildlife",
-      knowmore: "./knowmore.html?id=18&cat=6",
+      map: "",
+       type: "trucking",
+      knowmore: "./knowmore.html?id=9&cat=5",
 
-    },
+    }
+  ],
+  wildlife: [
+
     {
-      id: 19,
+      id: 28,
       name: "Muthanga Wildlife Sanctuary",
       description: "Sanctuary with elephants, deer, and a variety of birds in their natural habitat.",
       image: "assets/img/wildlife/pakshipathalam-bird-sanctuary-wayanad.jpg",
@@ -503,11 +1041,85 @@
        type: "Wildlife",
       knowmore: "./knowmore.html?id=19&cat=6",
 
+    },
+{
+      id: 29,
+      name: "Nagarhole wild life sanctury",
+      description: "Sanctuary with elephants, deer, and a variety of birds in their natural habitat.",
+      image: "assets/img/wildlife/pakshipathalam-bird-sanctuary-wayanad.jpg",
+      holidays: "None",
+      timing: "07:00-17:00",
+      Contact: "+91-333 333 3333",
+      locationid: "4",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+       transport: "Public",
+      map: "",
+     rating:"4.5",
+       type: "Wildlife",
+      knowmore: "./knowmore.html?id=19&cat=6",
+
+    },
+{
+      id: 30,
+      name: "Pakshipathalam",
+      description: "Sanctuary with elephants, deer, and a variety of birds in their natural habitat.",
+      image: "assets/img/wildlife/pakshipathalam-bird-sanctuary-wayanad.jpg",
+      holidays: "None",
+      timing: "07:00-17:00",
+      Contact: "+91-333 333 3333",
+      locationid: "4",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+       transport: "Public",
+      map: "",
+     rating:"4.5",
+       type: "Wildlife",
+      knowmore: "./knowmore.html?id=19&cat=6",
+
+    },
+ {
+      id: 31,
+      name: "Tholpetty wild life sanctuary  ",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: "assets/img/wildlife/Wildlife_safari_at_tholpetty_wildlife_sanctuaryjpg.avif",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+       transport: "Public",
+      map: "",
+     rating:"4.5",
+       type: "Wildlife",
+      knowmore: "./knowmore.html?id=18&cat=6",
+
+    },
+
+
+ {
+      id: 32,
+      name: "Begur wild life sanctuary   ",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: "assets/img/wildlife/Wildlife_safari_at_tholpetty_wildlife_sanctuaryjpg.avif",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+      distance: "10",
+       transport: "Public",
+      map: "",
+     rating:"4.5",
+       type: "Wildlife",
+      knowmore: "./knowmore.html?id=18&cat=6",
+
     }
   ],
   farms: [
     {
-      id: 20,
+      id: 64,
       name: "Ambalavayal",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/farm/bw_wayanad_amalavayal.jpg",
@@ -524,7 +1136,26 @@
       knowmore: "./knowmore.html?id=20&cat=7"
     },
     {
-      id: 21,
+      id: 63,
+      name: "Boys Town  ",
+      description: "Experience spice cultivation and farm life in Wayanad.",
+      image: "assets/img/farm/bw_perrer_wayanad.webp",
+      holidays: "None",
+      timing: "08:00-18:00",
+      Contact: "+91-444 444 4444",
+      locationid: "5",
+	  seasontovisit:["All Season"],
+      distance: "10",
+       transport: "Public",
+      map: "",
+     rating:"4.5",
+       type: "Farm Visit",
+      knowmore: "./knowmore.html?id=21&cat=7",
+
+    }
+,
+    {
+      id: 74,
       name: "Pepper Farm",
       description: "Experience spice cultivation and farm life in Wayanad.",
       image: "assets/img/farm/bw_perrer_wayanad.webp",
@@ -542,9 +1173,10 @@
 
     }
   ],
+
   sporting: [
         {
-          id: 22,
+          id: 75,
           name: "Sports",
           description: "Ziplines.",
           image: "assets/img/sports/bw_wayanad-tourism-rop_cycle.jpg",
@@ -562,9 +1194,69 @@
 
       }
     ],
+  cycling: [
+        {
+          id: 76,
+          name: "Chundale",
+          description: "Rippon Tea estate.",
+          image: "assets/img/sports/bw_wayanad-tourism-rop_cycle.jpg",
+          holidays: "Sun",
+          timing: "10:00-18:00",
+          Contact: "+91-000 000 0000",
+          locationid: "1",
+     	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+          distance: "10",
+      map: "",
+       transport: "Public",
+         rating:"4.5",
+      	  type: "Cycling",
+          knowmore: "./knowmore.html?id=22&cat=8",
+
+      }
+    ],
+
+  tribal: [
+ {
+          id: 57,
+          name: "En ooru",
+          description: "En ooru.",
+          image: "assets/img/sports/bw_wayanad-tourism-rop_cycle.jpg",
+          holidays: "Sun",
+          timing: "10:00-18:00",
+          Contact: "+91-000 000 0000",
+          locationid: "1",
+     	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+          distance: "10",
+      map: "",
+       transport: "Public",
+         rating:"4.5",
+      	  type: "Tribal",
+          knowmore: "./knowmore.html?id=22&cat=8",
+
+      },
+        {
+
+          id: 59,
+          name: "Uravu",
+          description: "Uravu.",
+          image: "assets/img/sports/bw_wayanad-tourism-rop_cycle.jpg",
+          holidays: "Sun",
+          timing: "10:00-18:00",
+          Contact: "+91-000 000 0000",
+          locationid: "1",
+     	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+          distance: "10",
+      map: "",
+       transport: "Public",
+         rating:"4.5",
+      	  type: "Tribal",
+          knowmore: "./knowmore.html?id=22&cat=8",
+
+      }
+    ],
   food: [
     {
-      id: 23,
+      id: 65,
       name: "Resturants",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: "assets/img/food/bw_wayanad_1980.jpg",
@@ -582,7 +1274,7 @@
 
     },
     {
-      id: 24,
+      id: 66,
       name: "LocalCuisine",
       description: "Try authentic Kerala dishes at local eateries and food stalls.",
       image: "assets/img/food/bw_wayanad_1980.jpg",

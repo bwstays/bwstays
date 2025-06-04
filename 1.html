@@ -1,15 +1,78 @@
 <html>
 <head>
+<style>
+body {
+   background-color: #c7d4e7;
+   font-family: Arial, sans-serif;
+}
 
+h1 {
+   text-align: center;
+   font-size: 4rem;
+   margin-top: 2rem;
+}
+
+form {
+   margin-top: 2rem;
+   text-align: center;
+}
+
+input[type="text"] {
+   padding: 0.5rem;
+   font-size: 1rem;
+}
+
+button {
+   padding: 0.5rem;
+   font-size: 1rem;
+   background-color: #4CAF50;
+   color: #fff;
+   border: none;
+}
+
+#weather {
+   margin-top: 2rem;
+   text-align: center;
+   font-size: 2rem;
+}
+</style>
 </head>
 <body>
     <div class="container">
         <h1>Generate  Referance Booking</h1>
-        <button onclick="gen()">Booking</button>
+        <button onclick="getWeather()">Booking</button>
+        <input type="text" id="location" placeholder="Enter location">
     </div>
+     <div id="weather"></div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.2/jspdf.plugin.autotable.min.js"></script>
     <script src="js/pdfgen.js"></script>
+    <script >
+
+    function getWeather() {
+	   const location = document.getElementById("location").value;
+	   const apiKey = "c7979b67452c70c06da39939cfcb3430";
+	   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=c7979b67452c70c06da39939cfcb3430&units=metric`;
+
+	   fetch(url)
+	      .then(response => response.json())
+	      .then(data => {
+	         const { temp, feels_like } = data.main;
+	         const description = data.weather[0].description;
+	         const cityName = data.name;
+	         const country = data.sys.country;
+
+	         const weatherDisplay = `Current weather in ${cityName}, ${country}: ${description}, ${temp}°C (feels like ${feels_like}°C)`;
+
+	         document.getElementById("weather").textContent = weatherDisplay;
+	      })
+	      .catch(error => console.log(error));
+		}
+
+	  </script>
 
 
 </body>
