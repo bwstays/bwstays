@@ -197,7 +197,7 @@
       map: "",
       rating:"4.5",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=13&cat=0",
+      knowmore: "./knowmore.html?id=11&cat=0",
 
     },
 
@@ -216,7 +216,7 @@
       map: "",
       rating:"4.5",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=13&cat=0",
+      knowmore: "./knowmore.html?id=12&cat=0",
 
     },
 
@@ -235,7 +235,7 @@
       map: "",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=13&cat=0",
 
     }
     ,
@@ -254,7 +254,7 @@
       map: "",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=14&cat=0",
 
     }
 
@@ -274,11 +274,11 @@
       map: "",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=24&cat=0",
 
     },
    {
-      id: 24,
+      id: 25,
       name: "Chain Tree",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
       image: "assets/img/heritage/bw-varambetta-mosque-wayanad.webp",
@@ -292,7 +292,7 @@
       map: "",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=25&cat=0",
 
     }
   ],
@@ -312,7 +312,7 @@
       rating:"4.5",
       map: "",
        type: "Water Falls",
-      knowmore: "./knowmore.html?id=5&cat=1",
+      knowmore: "./knowmore.html?id=33&cat=1",
 
     },
     {
@@ -330,7 +330,7 @@
       rating:"4.5",
       map: "",
        type: "Water Falls",
-      knowmore: "./knowmore.html?id=6&cat=1",
+      knowmore: "./knowmore.html?id=34&cat=1",
 
     },
     {
@@ -348,7 +348,7 @@
       rating:"4.5",
       map: "",
        type: "Water Falls",
-      knowmore: "./knowmore.html?id=6&cat=1",
+      knowmore: "./knowmore.html?id=35&cat=1",
 
     },
     {
@@ -366,7 +366,7 @@
       rating:"4.5",
       map: "",
        type: "Water Falls",
-      knowmore: "./knowmore.html?id=6&cat=1",
+      knowmore: "./knowmore.html?id=36&cat=1",
 
     },
     {
@@ -384,7 +384,7 @@
      rating:"4.5",
       map: "",
        type: "Water Falls",
-      knowmore: "./knowmore.html?id=7&cat=1",
+      knowmore: "./knowmore.html?id=37&cat=1",
 
     }
  ,
@@ -403,7 +403,7 @@
        rating:"4.5",
        map: "",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=6&cat=1",
+       knowmore: "./knowmore.html?id=38&cat=1",
 
     }
 ,
@@ -422,7 +422,7 @@
        rating:"4.5",
        map: "",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=6&cat=1",
+       knowmore: "./knowmore.html?id=39&cat=1",
 
     }
 ,
@@ -441,7 +441,7 @@
        rating:"4.5",
        map: "",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=6&cat=1",
+       knowmore: "./knowmore.html?id=40&cat=1",
 
     }
 ,
@@ -460,7 +460,7 @@
        rating:"4.5",
        map: "",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=6&cat=1",
+       knowmore: "./knowmore.html?id=41&cat=1",
 
     }
 ,
@@ -479,7 +479,7 @@
        rating:"4.5",
        map: "",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=6&cat=1",
+       knowmore: "./knowmore.html?id=42&cat=1",
 
     }
  ],
@@ -501,7 +501,7 @@
      rating:"4.5",
             map: "",
  type: "Museums & Crafts",
-      knowmore: "./knowmore.html?id=10&cat=2",
+      knowmore: "./knowmore.html?id=260&cat=2",
 
     }
 ,
@@ -520,7 +520,7 @@
      rating:"4.5",
       map: "",
        type: "Museums & Crafts",
-      knowmore: "./knowmore.html?id=8&cat=2",
+      knowmore: "./knowmore.html?id=27&cat=2",
 
     }
 
@@ -541,7 +541,7 @@
      rating:"4.5",
       map: "",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=11&cat=3",
+      knowmore: "./knowmore.html?id=43&cat=3",
 
     },
     {
@@ -559,7 +559,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=12&cat=3",
+      knowmore: "./knowmore.html?id=44&cat=3",
 
     }
     ,
@@ -578,7 +578,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=45&cat=3",
 
     }
     ,
@@ -597,7 +597,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=46&cat=3",
 
     }
     ,
@@ -616,7 +616,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=47&cat=3",
 
     }
     ,
@@ -635,7 +635,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=48&cat=3",
 
     }
     ,
@@ -654,7 +654,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=49&cat=3",
 
     }
     ,
@@ -673,7 +673,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=50&cat=3",
 
     }
     ,
@@ -692,7 +692,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=51&cat=3",
 
     }
     ,
@@ -711,7 +711,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=52&cat=3",
 
     }
     ,
@@ -730,7 +730,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=53&cat=3",
 
     }
     ,
@@ -749,7 +749,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=54&cat=3",
 
     }
     ,
@@ -768,7 +768,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=55&cat=3",
 
     }
     ,
@@ -787,7 +787,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=56&cat=3",
 
     }
     ,
@@ -806,7 +806,7 @@
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=13&cat=3",
+      knowmore: "./knowmore.html?id=58&cat=3",
 
     }
   ],
@@ -826,7 +826,7 @@
       map: "",
      rating:"4.5",
        type: "Plantations",
-      knowmore: "./knowmore.html?id=14&cat=4",
+      knowmore: "./knowmore.html?id=61&cat=4",
 
     },
     {
@@ -844,7 +844,7 @@
      rating:"4.5",
       map: "",
        type: "Plantations",
-      knowmore: "./knowmore.html?id=15&cat=4",
+      knowmore: "./knowmore.html?id=62&cat=4",
 
     }
   ],
@@ -866,7 +866,7 @@
       map: "",
       rating:"4.5",
        type: "trucking",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=15&cat=5",
 
     }
 ,
@@ -885,7 +885,7 @@
       map: "",
       rating:"4.5",
        type: "trucking",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=16&cat=5",
 
     }
 ,
@@ -904,7 +904,7 @@
       map: "",
       rating:"4.5",
        type: "trucking",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=17&cat=5",
 
     }
 ,
@@ -923,7 +923,7 @@
       map: "",
       rating:"4.5",
        type: "trucking",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=18&cat=5",
 
     }
 ,
@@ -942,7 +942,7 @@
       map: "",
       rating:"4.5",
        type: "trucking",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=19&cat=5",
 
     }
 ,
@@ -961,7 +961,7 @@
       map: "",
       rating:"4.5",
        type: "trucking",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=20&cat=5",
 
     }
 ,
@@ -980,7 +980,7 @@
       map: "",
       rating:"4.5",
        type: "trucking",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=21&cat=5",
 
     }
 ,
@@ -999,7 +999,7 @@
       map: "",
      rating:"4.5",
        type: "Trucking",
-      knowmore: "./knowmore.html?id=17&cat=5",
+      knowmore: "./knowmore.html?id=22&cat=5",
 
     }
 ,
@@ -1018,7 +1018,7 @@
      rating:"4.5",
       map: "",
        type: "trucking",
-      knowmore: "./knowmore.html?id=9&cat=5",
+      knowmore: "./knowmore.html?id=23&cat=5",
 
     }
   ],
@@ -1039,7 +1039,7 @@
       map: "",
      rating:"4.5",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=19&cat=6",
+      knowmore: "./knowmore.html?id=28&cat=6",
 
     },
 {
@@ -1057,7 +1057,7 @@
       map: "",
      rating:"4.5",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=19&cat=6",
+      knowmore: "./knowmore.html?id=29&cat=6",
 
     },
 {
@@ -1075,7 +1075,7 @@
       map: "",
      rating:"4.5",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=19&cat=6",
+      knowmore: "./knowmore.html?id=30&cat=6",
 
     },
  {
@@ -1093,7 +1093,7 @@
       map: "",
      rating:"4.5",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=18&cat=6",
+      knowmore: "./knowmore.html?id=31&cat=6",
 
     },
 
@@ -1113,7 +1113,7 @@
       map: "",
      rating:"4.5",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=18&cat=6",
+      knowmore: "./knowmore.html?id=32&cat=6",
 
     }
   ],
@@ -1133,7 +1133,7 @@
       map: "",
      rating:"4.5",
        type: "Farm Visit",
-      knowmore: "./knowmore.html?id=20&cat=7"
+      knowmore: "./knowmore.html?id=64&cat=7"
     },
     {
       id: 63,
@@ -1150,7 +1150,7 @@
       map: "",
      rating:"4.5",
        type: "Farm Visit",
-      knowmore: "./knowmore.html?id=21&cat=7",
+      knowmore: "./knowmore.html?id=63&cat=7",
 
     }
 ,
@@ -1169,7 +1169,7 @@
       map: "",
      rating:"4.5",
        type: "Farm Visit",
-      knowmore: "./knowmore.html?id=21&cat=7",
+      knowmore: "./knowmore.html?id=74&cat=7",
 
     }
   ],
@@ -1190,7 +1190,7 @@
        transport: "Public",
          rating:"4.5",
       	  type: "Sporting",
-          knowmore: "./knowmore.html?id=22&cat=8",
+          knowmore: "./knowmore.html?id=75&cat=8",
 
       }
     ],
@@ -1199,7 +1199,7 @@
           id: 76,
           name: "Chundale",
           description: "Rippon Tea estate.",
-          image: "assets/img/sports/bw_wayanad-tourism-rop_cycle.jpg",
+          image: "assets/img/cycling/chundale.jpg",
           holidays: "Sun",
           timing: "10:00-18:00",
           Contact: "+91-000 000 0000",
@@ -1210,7 +1210,7 @@
        transport: "Public",
          rating:"4.5",
       	  type: "Cycling",
-          knowmore: "./knowmore.html?id=22&cat=8",
+          knowmore: "./knowmore.html?id=76&cat=9",
 
       }
     ],
@@ -1220,7 +1220,7 @@
           id: 57,
           name: "En ooru",
           description: "En ooru.",
-          image: "assets/img/sports/bw_wayanad-tourism-rop_cycle.jpg",
+          image: "assets/img/tribal/bw-en-ooru-tribal-heritage-village-wayanad.webp",
           holidays: "Sun",
           timing: "10:00-18:00",
           Contact: "+91-000 000 0000",
@@ -1231,7 +1231,7 @@
        transport: "Public",
          rating:"4.5",
       	  type: "Tribal",
-          knowmore: "./knowmore.html?id=22&cat=8",
+          knowmore: "./knowmore.html?id=57&cat=10",
 
       },
         {
@@ -1250,7 +1250,7 @@
        transport: "Public",
          rating:"4.5",
       	  type: "Tribal",
-          knowmore: "./knowmore.html?id=22&cat=8",
+          knowmore: "./knowmore.html?id=59&cat=10",
 
       }
     ],
@@ -1264,13 +1264,13 @@
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
-	  seasontovisit:["All Season"],
+	  seasontovisit:["All Season"]
       distance: "10",
        transport: "Public",
       map: "",
      rating:"4.5",
        type: "Resturants",
-      knowmore: "./knowmore.html?id=23&cat=9",
+      knowmore: "./knowmore.html?id=65&cat=11",
 
     },
     {
@@ -1288,7 +1288,7 @@
       map: "",
      rating:"4.5",
        type: "Resturants",
-      knowmore: "./knowmore.html?id=24&cat=9",
+      knowmore: "./knowmore.html?id=66&cat=11",
 
     }
   ],
