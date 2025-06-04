@@ -15,7 +15,7 @@
       map: "",
      rating:"4.5",
        type: "Plantations",
-      knowmore: "./knowmore.html?id=61&cat=4",
+      knowmore: "./knowmore.html?id=61&cat=0",
 
     },
     {
@@ -33,7 +33,7 @@
      rating:"4.5",
       map: "",
        type: "Plantations",
-      knowmore: "./knowmore.html?id=62&cat=4",
+      knowmore: "./knowmore.html?id=62&cat=0",
 
     }
   ],
@@ -590,7 +590,7 @@
        transport: "Public",
        rating: "4.4",
        type: "Cultural & Historical",
-       knowmore: "./knowmore.html?id=1&cat=0",
+       knowmore: "./knowmore.html?id=1&cat=4",
      },
  {
       id: 2,
@@ -608,7 +608,7 @@
       transport: "Public",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=2&cat=0",
+      knowmore: "./knowmore.html?id=2&cat=4",
 
     },
 {
@@ -626,7 +626,7 @@
       map: "https://maps.app.goo.gl/Uv81sPamq88kYvpZ9",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=3&cat=0",
+      knowmore: "./knowmore.html?id=3&cat=4",
 
     },
  	{
@@ -644,7 +644,7 @@
       rating: "4.4",
       map: "https://maps.app.goo.gl/Hdz4GuAFtr6EkYdp9",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=4&cat=0",
+      knowmore: "./knowmore.html?id=4&cat=4",
 
     },
 
@@ -663,7 +663,7 @@
       rating: "4.4",
       map: "https://maps.app.goo.gl/HRWnhr1647s3cWaz6",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=5&cat=0",
+      knowmore: "./knowmore.html?id=5&cat=4",
 
     },
     {
@@ -681,7 +681,7 @@
       transport: "Public",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=6&cat=0",
+      knowmore: "./knowmore.html?id=6&cat=4",
 
     },
  	{
@@ -699,7 +699,7 @@
       rating: "4.4",
       map: "https://maps.app.goo.gl/voAar4qRh1U2jXjk7",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=7&cat=0",
+      knowmore: "./knowmore.html?id=7&cat=4",
 
     },
  	{
@@ -717,7 +717,7 @@
       rating: "4.4",
       map: "https://maps.app.goo.gl/NPNN4szStAv4jwZo6",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=8&cat=0",
+      knowmore: "./knowmore.html?id=8&cat=4",
 
     },
  	{
@@ -735,7 +735,7 @@
       rating: "4.4",
       map: "https://maps.app.goo.gl/HnRNqZZE9x5ZVL2S9",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=9&cat=0",
+      knowmore: "./knowmore.html?id=9&cat=4",
 
     },
  	{
@@ -753,7 +753,7 @@
       rating: "4.4",
       map: "https://maps.app.goo.gl/hiAt2VyFp5Si2LZb9",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=10&cat=0",
+      knowmore: "./knowmore.html?id=10&cat=4",
 
     },
     {
@@ -771,7 +771,7 @@
       map: "",
       rating:"4.5",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=11&cat=0",
+      knowmore: "./knowmore.html?id=11&cat=4",
 
     },
 
@@ -790,7 +790,7 @@
       map: "",
       rating:"4.5",
       type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=12&cat=0",
+      knowmore: "./knowmore.html?id=12&cat=4",
 
     },
 
@@ -809,7 +809,7 @@
       map: "",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=13&cat=0",
+      knowmore: "./knowmore.html?id=13&cat=4",
 
     }
     ,
@@ -828,7 +828,7 @@
       map: "",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=14&cat=0",
+      knowmore: "./knowmore.html?id=14&cat=4",
 
     }
 
@@ -848,7 +848,7 @@
       map: "",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=24&cat=0",
+      knowmore: "./knowmore.html?id=24&cat=4",
 
     },
    {
@@ -866,7 +866,7 @@
       map: "",
       rating:"4.5",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=25&cat=0",
+      knowmore: "./knowmore.html?id=25&cat=4",
 
     }
   ],
@@ -1315,8 +1315,8 @@
        transport: "Public",
       map: "",
      rating:"4.5",
-       type: "Resturants",
-      knowmore: "./knowmore.html?id=65&cat=9",
+       type: "shopping",
+      knowmore: "./knowmore.html?id=77&cat=10",
 
     },
     {
@@ -1333,8 +1333,8 @@
        transport: "Public",
       map: "",
      rating:"4.5",
-       type: "Resturants",
-      knowmore: "./knowmore.html?id=66&cat=9",
+       type: "shopping",
+      knowmore: "./knowmore.html?id=78&cat=10",
 
     }
   ]

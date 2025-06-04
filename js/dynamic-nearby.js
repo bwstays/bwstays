@@ -19,7 +19,7 @@ function getCurrentCatagoryId() {
 }
 
 function findPlaceById(id) {
-    const categories = ['culthist', 'waterfalls', 'museums', 'romantic', 'plantation', 'trucking', 'wildlife', 'farms', 'sporting', 'food','tribal','cycling'];
+    const categories = [ 'plantation', 'waterfalls', 'museums', 'romantic', 'culthist','trucking', 'wildlife', 'farms', 'sporting', 'food','tribal','cycling','shopping'];
     for (const category of categories) {
         if (siteData[category]) {
             const place = siteData[category].find(p => p.id === id);

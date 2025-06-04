@@ -30,13 +30,16 @@ window.addEventListener('load', function () {
    var  currentPageId = getCurrentPageId();
   var  currentcatId = getCurrentCatagoryId();
 
-
-// Main page  content start here
+//alert((Object.values(siteData)[0])[0].image)
+ // Main page  content start here
   var currentItem = Object.values(siteData)[currentcatId].filter(item => item.id === eval(currentPageId));
+
+//alert(currentPageId + " " +currentcatId + " " + currentItem);
 
   const imgContainer = document.createElement('div');
   imgContainer.style.marginBottom = '2rem';
   const img = document.createElement('img');
+
   img.src = Object.values(currentItem)[0].image;
   img.alt = Object.values(currentItem)[0].name;
   img.className = 'img-fluid';
