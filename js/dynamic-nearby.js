@@ -19,7 +19,7 @@ function getCurrentCatagoryId() {
 }
 
 function findPlaceById(id) {
-    const categories = ['culthist', 'waterfalls', 'museums', 'romantic', 'plantation', 'trucking', 'wildlife', 'farms', 'sports', 'food'];
+    const categories = ['culthist', 'waterfalls', 'museums', 'romantic', 'plantation', 'trucking', 'wildlife', 'farms', 'sporting', 'food','tribal','cycling'];
     for (const category of categories) {
         if (siteData[category]) {
             const place = siteData[category].find(p => p.id === id);
@@ -35,6 +35,8 @@ function getLocationNameById(id) {
 }
 
 
+
+
 function getLocationIdByName(name) {
     for (const [id, locationName] of Object.entries(locations.names)) {
         if (locationName === name) {
@@ -44,6 +46,64 @@ function getLocationIdByName(name) {
     return null;
 }
 
+
+/**
+ * Function to get nearby places within a certain distance
+ *
+ * @param {number} locationId - The ID of the current location (1-30)
+ * @param {number} maxDistance - Maximum distance in kilometers (default: 25)
+ * @returns {Array} Array of nearby places sorted by distance, each containing:
+ *                  - id: Location ID (1-30)
+ *                  - name: Full name of the location
+ *                  - distance: Distance in kilometers
+ *
+ * Example Usage:
+ * -------------
+ * 1. Get all places within 25km of Santhi natha Temple (ID: 1):
+ *    const nearby = getNearbyPlaces(1);
+ *    // Returns: [
+ *    //   { id: 26, name: "Vantha Mess", distance: 1 },
+ *    //   { id: 27, name: "Ramvilla Kalpetta", distance: 1 },
+ *    //   { id: 23, name: "Puliyarmala", distance: 3 },
+ *    //   ...
+ *    // ]
+ *
+ * 2. Get all places within 10km of Thirunelly (ID: 4):
+ *    const nearby = getNearbyPlaces(4, 10);
+ *    // Returns places within 10km of Thirunelly
+ */
+function getNearbyPlaces(locationId, maxDistance = maxDistance) {
+    const nearbyPlaces = [];
+    const distances = locations.distances[locationId];
+    //alert("distances"+distances)
+   // alert("maxDistance"+maxDistance);
+   // alert("locationId"+locationId);
+
+
+
+    for (let i = 1; i <= Object.keys(locations.names).length; i++) {
+
+        if (distances[i-1] <= maxDistance && i != locationId) {
+ 			// alert(locations.names[i]);
+            nearbyPlaces.push({
+                id: i,
+                name: locations.names[i],
+                distance: distances[i-1]
+            });
+        }
+    }
+
+	  /*for (let i = 0; i <nearbyPlaces.length; i++)
+	  {
+		    alert(nearbyPlaces[i].distance + " " + i);
+      }
+		*/
+
+    return nearbyPlaces.sort((a, b) => a.distance - b.distance);
+}
+
+
+
 // Function to get nearby places within 25km of Santhi natha Temple
 function renderNearbyPlaces() {
     const nearbyCardsContainer = document.getElementById('nearby-cards');
@@ -52,9 +112,8 @@ function renderNearbyPlaces() {
         return;
     }
 
-    // Santhi natha Temple has ID 1 in the locations data
-    const locId = getCurrentPageId();
-    const maxDistance = 25;
+     const locId = getCurrentPageId();
+    const maxDistance = 20;
     const locCat = getCurrentCatagoryId();
      // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
@@ -75,7 +134,9 @@ function renderNearbyPlaces() {
                 ...place,
                 image: fullPlaceDetails.place.image,
                 knowmore: fullPlaceDetails.place.knowmore,
-                rating: fullPlaceDetails.place.rating
+                rating: fullPlaceDetails.place.rating,
+                timing: fullPlaceDetails.place.timing,
+                map: fullPlaceDetails.place.map,
 
             });
         }
@@ -100,18 +161,19 @@ function createPlaceCard(place) {
                 <div class="card-body p-2">
                     <div class="d-flex align-items-center">
                         <div class="icon-container">
-                            <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+                           <a href="${place.map}"> <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i></a>
                         </div>
                         <div>
                             <h6 class="card-title mb-1">
                                 <a href="${knowmoreUrl}" class="text-decoration-none text-white">${place.name}</a>
                             </h6>
                             <small class="distance-text">
-                                <i class="fas fa-road"></i>${place.distance} km away
+                                <i class="fas fa-road"></i>${place.distance} km
                             </small>
                         </div>
   						<div class="icon-container">
                             <i  class="fas fa-star" style="color: #64a19d;"></i>
+                            <div class="text-white mb-0">${place.timing}</div>
                         </div>
                     </div>
                 </div>

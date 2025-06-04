@@ -48,6 +48,8 @@ window.addEventListener('load', function () {
   const descContainer = document.createElement('div');
   descContainer.innerHTML = `
       <h3 class="text-white mb-3">${Object.values(currentItem)[0].name}</h3>
+<div class="mb-3">
+          <a href="#nearby-places"><span class="text-warning">View places with in 15 Kms </span></a> </div>
       <div class="mb-3">
           <span class="text-warning">★ ${Object.values(currentItem)[0].rating}</span>
           <span class="text-white-50 ml-2">${Object.values(currentItem)[0].distance}km away from Kalpetta</span>
@@ -86,7 +88,7 @@ window.addEventListener('load', function () {
   const rightColumnHead = document.createElement('div');
   rightColumnHead.className = 'col-lg-7';
   rightColumnHead.style.padding = '1rem';
-  rightColumnHead.description = 'wewewe';
+  rightColumnHead.description = 'places';
   rightColumnHead.className = 'border-bottom border-primary text-center mb-4';
   rightColumnHead.style ='width:100%;margin:0 auto';
   rightColumnHead.innerHTML = `
