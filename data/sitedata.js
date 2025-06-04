@@ -252,7 +252,7 @@
       id: 26,
       name: "Tea Museum",
       description: "Displays tribal heritage and ancient artifacts from the region.",
-      image: "assets/img/plantation/tea_wayanad.webp",
+      image: "assets/img/museum/bw_Wayanad_Tea_Museum.jpg",
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
@@ -1303,11 +1303,11 @@
  shopping: [
     {
       id: 77,
-      name: "Honey",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: "assets/img/food/bw_wayanad_1980.jpg",
+      name: "Bevo Beverages ( Govt of Kerala )",
+      description: "Bevo for all types of syrups and spirits",
+      image: "assets/img/shopping/cyrup.webp",
       holidays: "Sun",
-      timing: "10:00-18:00",
+      timing: "10:00-21:00",
       Contact: "+91-000 000 0000",
       locationid: "1",
 	  seasontovisit:["All Season"],
@@ -1321,6 +1321,24 @@
     },
     {
       id: 78,
+      name: "Honey",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: "assets/img/food/bw_wayanad_1980.jpg",
+      holidays: "Sun",
+      timing: "10:00-18:00",
+      Contact: "+91-000 000 0000",
+      locationid: "1",
+	  seasontovisit:["All Season"],
+      distance: "10",
+       transport: "Public",
+      map: "",
+     rating:"4.5",
+       type: "shopping",
+      knowmore: "./knowmore.html?id=78&cat=10",
+
+    },
+    {
+      id: 79,
       name: "Spices",
       description: "Try authentic Kerala dishes at local eateries and food stalls.",
       image: "assets/img/food/bw_wayanad_1980.jpg",
@@ -1334,7 +1352,26 @@
       map: "",
      rating:"4.5",
        type: "shopping",
-      knowmore: "./knowmore.html?id=78&cat=10",
+      knowmore: "./knowmore.html?id=79&cat=10",
+
+    }
+,
+    {
+      id: 80,
+      name: "House Holds",
+      description: "Nesto.",
+      image: "assets/img/shopping/nesto.webp",
+      holidays: "None",
+      timing: "11:00-23:00",
+      Contact: "+91-555 555 5555",
+      locationid: "6",
+	  seasontovisit:["All Season"],
+      distance: "10",
+       transport: "Public",
+      map: "",
+     rating:"4.5",
+       type: "shopping",
+      knowmore: "./knowmore.html?id=80&cat=10",
 
     }
   ]

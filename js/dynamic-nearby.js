@@ -3,7 +3,7 @@ function getCurrentPageId() {
 
 	var currId=urlParams.get('id') ;
  	if (currId === null || typeof currId == "undefined" || currId === '')
-		 currId=1;
+		 currId=61;
     return currId;
 
 }
