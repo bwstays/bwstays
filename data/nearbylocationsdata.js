@@ -43,9 +43,9 @@ const locations = {
     // Each location has a unique ID (1-30) and a corresponding name
     // IDs are used as keys for quick lookup
     names: {
-        1: "Shanthinatha Swamy Jain Temple  Venniyod",
+        1: "Shanthinatha Swamy Jain Temple",
         2: "Ananthanatha Swamy Jain Temple Puliyarmala",
-        3: "Koottamundu Glass Temple Wayanad",
+        3: "Koottamundu Glass Temple",
         4: "Thirunelly",
         5: "Papanasini River",
         6: "Sultan's Batthery Valmiki Ashram",
@@ -60,7 +60,7 @@ const locations = {
         15: "Kuruwa Deep",
         16: "Thusharagiri",
         17: "Brahmagiri",
-        18: "Chembrapeak Near Mippady town",
+        18: "Chembra Peak",
         19: "Cheengeri Hill",
         20: "Lakkidi Ghats",
         21: "Edakal Caves",
