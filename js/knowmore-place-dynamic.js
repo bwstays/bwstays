@@ -38,42 +38,154 @@ window.addEventListener('load', function () {
 
   const imgContainer = document.createElement('div');
   imgContainer.style.marginBottom = '2rem';
-  const img = document.createElement('img');
+  imgContainer.style.position = 'relative';
+  imgContainer.style.overflow = 'hidden';
+  imgContainer.style.width = '100%';
+  imgContainer.style.height = '400px';
 
-  img.src = Object.values(currentItem)[0].image;
-  img.alt = Object.values(currentItem)[0].name;
-  img.className = 'img-fluid';
-  img.style.width = '100%';
-  img.style.height = 'auto';
-  img.style.borderRadius = '10px';
-  imgContainer.appendChild(img);
+  // Create a wrapper for the images
+  const imgWrapper = document.createElement('div');
+  imgWrapper.style.position = 'relative';
+  imgWrapper.style.width = '100%';
+  imgWrapper.style.height = '100%';
+  imgWrapper.style.transition = 'transform 0.5s ease';
+  imgWrapper.style.display = 'flex';
+
+  // Add image navigation arrows with improved design
+  const leftArrow = document.createElement('div');
+  leftArrow.className = 'image-nav-arrow image-nav-left';
+  leftArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
+  leftArrow.style.position = 'absolute';
+  leftArrow.style.left = '15px';
+  leftArrow.style.top = '50%';
+  leftArrow.style.transform = 'translateY(-50%)';
+  leftArrow.style.zIndex = '2';
+  leftArrow.style.cursor = 'pointer';
+  leftArrow.style.color = 'white';
+  leftArrow.style.fontSize = '20px';
+  leftArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+  leftArrow.style.padding = '15px 15px';
+  leftArrow.style.borderRadius = '50%';
+  leftArrow.style.display = 'none';
+  leftArrow.style.transition = 'all 0.3s ease';
+  leftArrow.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+
+  const rightArrow = document.createElement('div');
+  rightArrow.className = 'image-nav-arrow image-nav-right';
+  rightArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
+  rightArrow.style.position = 'absolute';
+  rightArrow.style.right = '15px';
+  rightArrow.style.top = '50%';
+  rightArrow.style.transform = 'translateY(-50%)';
+  rightArrow.style.zIndex = '2';
+  rightArrow.style.cursor = 'pointer';
+  rightArrow.style.color = 'white';
+  rightArrow.style.fontSize = '20px';
+  rightArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+  rightArrow.style.padding = '15px 15px';
+  rightArrow.style.borderRadius = '50%';
+  rightArrow.style.display = 'none';
+  rightArrow.style.transition = 'all 0.3s ease';
+  rightArrow.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+
+  // Add hover effects for arrows
+  leftArrow.addEventListener('mouseenter', () => {
+    leftArrow.style.backgroundColor = 'rgba(0,0,0,0.8)';
+    leftArrow.style.transform = 'translateY(-50%) scale(1.1)';
+  });
+  leftArrow.addEventListener('mouseleave', () => {
+    leftArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+    leftArrow.style.transform = 'translateY(-50%) scale(1)';
+  });
+  rightArrow.addEventListener('mouseenter', () => {
+    rightArrow.style.backgroundColor = 'rgba(0,0,0,0.8)';
+    rightArrow.style.transform = 'translateY(-50%) scale(1.1)';
+  });
+  rightArrow.addEventListener('mouseleave', () => {
+    rightArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+    rightArrow.style.transform = 'translateY(-50%) scale(1)';
+  });
+
+  // Get the first item from currentItem array
+  const currentItemData = currentItem[0];
+  const images = currentItemData.image;
+  const imageArray = Array.isArray(images) ? images : [images];
+  let currentImageIndex = 0;
+
+  // Create all images upfront
+  imageArray.forEach((src, index) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = currentItemData.name;
+    img.className = 'img-fluid';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+    img.style.borderRadius = '10px';
+    img.style.position = 'absolute';
+    img.style.top = '0';
+    img.style.left = `${index * 100}%`;
+    img.style.transition = 'transform 0.5s ease';
+    img.style.minWidth = '100%';
+    imgWrapper.appendChild(img);
+  });
+
+  // Add hover effect to show arrows
+  imgContainer.addEventListener('mouseenter', () => {
+    if (imageArray.length > 1) {
+      leftArrow.style.display = 'block';
+      rightArrow.style.display = 'block';
+    }
+  });
+
+  imgContainer.addEventListener('mouseleave', () => {
+    leftArrow.style.display = 'none';
+    rightArrow.style.display = 'none';
+  });
+
+  // Image navigation logic with sliding animation
+  function updateImage(direction) {
+    if (imageArray.length <= 1) return;
+
+    const newIndex = direction === 'next' 
+      ? (currentImageIndex + 1) % imageArray.length 
+      : (currentImageIndex - 1 + imageArray.length) % imageArray.length;
+
+    imgWrapper.style.transform = `translateX(-${newIndex * 100}%)`;
+    currentImageIndex = newIndex;
+  }
+
+  leftArrow.addEventListener('click', () => updateImage('prev'));
+  rightArrow.addEventListener('click', () => updateImage('next'));
+
+  imgContainer.appendChild(imgWrapper);
+  imgContainer.appendChild(leftArrow);
+  imgContainer.appendChild(rightArrow);
 
   const descContainer = document.createElement('div');
   descContainer.innerHTML = `
-      <h3 class="text-white mb-3">${Object.values(currentItem)[0].name}</h3>
-<div class="mb-3">
+      <h3 class="text-white mb-3">${currentItemData.name}</h3>
+      <div class="mb-3">
           <a href="#nearby-places"><span class="text-warning">View places with in 15 Kms </span></a> </div>
       <div class="mb-3">
-          <span class="text-warning">★ ${Object.values(currentItem)[0].rating}</span>
-          <span class="text-white-50 ml-2">${Object.values(currentItem)[0].distance}km away from Kalpetta</span>
+          <span class="text-warning">★ ${currentItemData.rating}</span>
+          <span class="text-white-50 ml-2">${currentItemData.distance}km away from Kalpetta</span>
       </div>
       <div class="mb-3">
           <small class="text-white-50">
-			<ul style="list-style:none;">
-			<li><i class="fas fa-clock"></i> Timing: ${Object.values(currentItem)[0].timing}<br></li>
-
-			<li><i class="fas fa-car-side"></i> Transportation: ${Object.values(currentItem)[0].transport}</li>
-			<li><i class="fas fa-cog"></i> Best Seasons to Visit: ${Object.values(currentItem)[0].seasontovisit}</li>
-			<li><i class="fas fa-bell"></i> Type: ${Object.values(currentItem)[0].type}</li>
-			<li><i class="fas fa-power-off"></i> Holiday: ${Object.values(currentItem)[0].holidays}</li>
-			<li> <i class="fas fa-phone"></i> Contact ${Object.values(currentItem)[0].Contact}</li>
-			</ul>
-	</small>
+            <ul style="list-style:none;">
+            <li><i class="fas fa-clock"></i> Timing: ${currentItemData.timing}<br></li>
+            <li><i class="fas fa-car-side"></i> Transportation: ${currentItemData.transport}</li>
+            <li><i class="fas fa-cog"></i> Best Seasons to Visit: ${currentItemData.seasontovisit}</li>
+            <li><i class="fas fa-bell"></i> Type: ${currentItemData.type}</li>
+            <li><i class="fas fa-power-off"></i> Holiday: ${currentItemData.holidays}</li>
+            <li> <i class="fas fa-phone"></i> Contact ${currentItemData.Contact}</li>
+            </ul>
+        </small>
       </div>
       <div class="mb-3">
-	             <span class="text-white-50 ml-2">${Object.values(currentItem)[0].description}</span>
+                 <span class="text-white-50 ml-2">${currentItemData.description}</span>
        </div>
-
   `;
 
 
@@ -95,7 +207,7 @@ window.addEventListener('load', function () {
   rightColumnHead.className = 'border-bottom border-primary text-center mb-4';
   rightColumnHead.style ='width:100%;margin:0 auto';
   rightColumnHead.innerHTML = `
-      <h5 class="text-white">${Object.values(currentItem)[0].type} Places</h5>  `;
+      <h5 class="text-white">${currentItemData.type} Places</h5>  `;
 
   // right pane content
   const rightColumn = document.createElement('div');
@@ -122,9 +234,12 @@ window.addEventListener('load', function () {
           this.style.boxShadow = 'none';
       });
 
+      const itemImages = Array.isArray(item.image) ? item.image : [item.image];
+      const firstImage = itemImages[0];
+
       card.innerHTML = `
           <div class="card-img-container" style="height: 200px; overflow: hidden;">
-              <img src="${item.image}" class="card-img-top" alt="${item.name}"
+              <img src="${firstImage}" class="card-img-top" alt="${item.name}"
                    style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
           </div>
           <div class="card-body d-flex flex-column">

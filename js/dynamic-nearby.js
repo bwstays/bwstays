@@ -154,26 +154,25 @@ function createPlaceCard(place) {
 
     return `
         <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="card nearby-card h-100 border-0" style="border-radius: 10px; overflow: hidden;">
+            <div class="card nearby-card h-100 border-0" style="border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
                 <div class="card-img-top">
-                    <img src="${imageUrl}" class="img-fluid" alt="${place.name}" style="width: 100%; height: 150px; object-fit: cover;">
+                    <img src="${imageUrl}" class="img-fluid" alt="${place.name}" style="width: 100%; height: 160px; object-fit: cover;">
                 </div>
-                <div class="card-body p-2">
-                    <div class="d-flex align-items-center">
-                        <div class="icon-container">
-                           <a href="${place.map}"> <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i></a>
-                        </div>
+                <div class="card-body p-3">
+                    <div class="d-flex">
                         <div>
-                            <h6 class="card-title mb-1">
+                            <h6 class="card-title mb-1" style="font-size: 0.95rem;">
                                 <a href="${knowmoreUrl}" class="text-decoration-none text-white">${place.name}</a>
                             </h6>
-                            <small class="distance-text">
-                                <i class="fas fa-road"></i>${place.distance} km
+                            <div class="text-white mb-1" style="font-size: 0.85rem;">${place.timing}</div>
+                            <div class="mb-1">
+                                <span class="text-white" style="font-size: 0.85rem;">
+                                    <i class="fas fa-star" style="color: #64a19d;"></i> ${place.rating}
+                                </span>
+                            </div>
+                            <small class="distance-text" style="color: #a8a8a8;">
+                                <i class="fas fa-road me-1"></i> ${place.distance}  km
                             </small>
-                        </div>
-  						<div class="icon-container">
-                            <i  class="fas fa-star" style="color: #64a19d;"></i>
-                            <div class="text-white mb-0">${place.timing}</div>
                         </div>
                     </div>
                 </div>
@@ -181,5 +180,9 @@ function createPlaceCard(place) {
         </div>
     `;
 }
+
+{/* <div class="icon-container me-2">
+    <a href="${place.map}" class="text-decoration-none"><i class="fas fa-map-marker-alt" style="color: #64a19d; font-size: 1.1rem;"></i></a>
+</div> */}
 
 document.addEventListener('DOMContentLoaded', renderNearbyPlaces);

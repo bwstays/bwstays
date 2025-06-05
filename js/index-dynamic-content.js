@@ -140,7 +140,7 @@ function initializeSection(sectionType, data, sectionIndex) {
     // Create temporary image for animation
     const tempImg = document.createElement('img');
     tempImg.className = 'temp-image';
-    tempImg.src = currentItem.image;
+    tempImg.src = Array.isArray(currentItem.image) ? currentItem.image[0] : currentItem.image;
     tempImg.alt = currentItem.name;
     tempImg.style.position = 'absolute';
     tempImg.style.top = '0';

@@ -10832,8 +10832,8 @@ body {
 /* back to top */
 #btn-back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 60px;
+  bottom: 10px;
+  right: 15px;
   display: none;
   z-index: 1000;
   border-radius: 50%;
