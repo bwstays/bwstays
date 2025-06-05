@@ -25,7 +25,7 @@
 	}
 
 
-    function gen(myArray)
+    function invokeRefBooking(myArray)
     {
 		//pdf creation
 		const { jsPDF } = window.jspdf;
