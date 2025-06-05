@@ -25,31 +25,37 @@
 	}
 
 
-    function gen(data)
+    function gen(myArray)
     {
 		//pdf creation
 		const { jsPDF } = window.jspdf;
 
+//alert(myArray[0]) //object
+
+//alert (myArray[Object.keys(myArray)[0]].people);
+//alert(myArray[1]) //date
+//alert(myArray[2]) //villa
+
+
 		// Sample customer data
 		const customerData = {
-	        customerName: "Aditya M",
-	        vendorAddress: "14/203, Patna, Bihar",
-	        vendorPinCode: "740046",
-	        vendorPerson: "Aditya M",
-	        vendorPersonMobNo: "8993298712",
+	        customerName: myArray[Object.keys(myArray)[0]].contactName,
+	        contactAddress: myArray[Object.keys(myArray)[0]].requirementSpec,
+	        contactPinCode: "740046",
+	        contactPersonMobNo: "8993298712",
 
 	    }
 
 		// Sample vendor data
-		const contactData = {
-	        contactName: "Thomas K K",
-	        contactAddress: "14/203, Patna, Bihar",
-	        contactPersonMobNo: "8993298712",
+		const vendorContactData = {
+	        contactName:'Thomas K K',
+	        contactAddress: ' Kalpetta ',
+	        contactPersonMobNo: '99999 99999',
 	    }
 
 
 	    const allowedOccupancy = [{
-	     audlt:"2", child:"1"}
+	     audlt:myArray[Object.keys(myArray)[0]].people, child:myArray[Object.keys(myArray)[0]].child}
 	    ]
 
 	    const extracost = [{
@@ -65,67 +71,8 @@
 	    const villaprice=5000;
 
 
-
-/*
-
-[
-    {
-        "bookdate": [
-            "30/12/2005,31/12/2005"
-        ],
-        "total": "",
-        "itemName": "villa1",
-        "audlt": 3,
-        "child": 2,
-        "unitPrice":5000,
-		"contactName": "Thomas K K",
-		"contactAddress": "14/203, Patna, Bihar",
-		"contactEmail": "thomas@a.com",
-		"arrivalTime": "13PM",
-		"requirementSpec": "thomas@a.com",
-		"contactPersonMobNo": "8993298712"
-
-    },
-    {
-        "bookdate": [
-            "30/12/2005,31/12/2005"
-        ],
-        "total": "",
-        "itemName": "villa1",
-        "audlt": 3,
-        "child": 2,
-        "unitPrice":5000,
-		"contactName": "Thomas K K",
-		"contactAddress": "14/203, Patna, Bihar",
-		"contactEmail": "thomas@a.com",
-		"arrivalTime": "thomas@a.com",
-		"requirementSpec": "thomas@a.com",
-		"contactPersonMobNo": "8993298712"
-
-    },
-    {
-        "bookdate": [
-            "30/12/2005,31/12/2005"
-        ],
-        "total": "",
-        "itemName": "villa1",
-        "audlt": 3,
-        "child": 2,
-        "unitPrice":5000,
-		"contactName": "Thomas K K",
-		"contactAddress": "14/203, Patna, Bihar",
-		"contactEmail": "thomas@a.com",
-		"arrivalTime": "thomas@a.com",
-		"requirementSpec": "thomas@a.com",
-		"contactPersonMobNo": "8993298712"
-   }
-
-
-]
-
-
-*/
-
+alert(myArray[Object.keys(myArray)[0]])
+       // var villaArray=myArray[Object.keys(myArray)[0]].contactName,
 
 		const itemsData = [
 	        { itemName: 'Villa 2', bookdate: ["28/12/2005","29/12/2005","30/12/2005","31/12/2005"], audlt: 3,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
@@ -161,9 +108,9 @@
 	    pdf.line(10, 18, 200, 18)
 	    pdf.text('Contact Person', 13, 23)
 	    pdf.setFont('custom', 'normal');
-	    pdf.text(`${contactData?.contactName}`, 13, 28)
+	    pdf.text(`${vendorContactData?.contactName}`, 13, 28)
 	    pdf.addImage(callImage, 'PNG', 13, 29, 3, 3);
-	    pdf.text(` ${contactData?.contactPersonMobNo}`, 16, 32)
+	    pdf.text(` ${vendorContactData?.contactPersonMobNo}`, 16, 32)
 	    pdf.setFont('Newsreader', 'bold')
 	    pdf.text('Booking No      :', 130, 23)
 	    pdf.text('Booking Date   :', 130, 27)
@@ -179,22 +126,22 @@
 	    pdf.text('Address :', 130, 39)
 	    pdf.setFont('Newsreader', 'normal')
 	    pdf.text('Villa Location', 145, 39)
-	    pdf.text('Kalpetta', 168, 39)
+	    pdf.text(`${vendorContactData?.contactAddress}`, 168, 39)
 
 	    // Generate the vendor-specific content
 	    pdf.setFont('Newsreader', 'bold');
 	    pdf.text(`${customerData?.customerName}`, 13, 44);
-	    pdf.text(`${customerData?.vendorAddress}`, 13, 48)
+	    pdf.text(`${customerData?.contactAddress}`, 13, 48)
 	    pdf.setFont('Newsreader', 'normal');
-	    pdf.text(`P.O BOX : ${customerData?.vendorPinCode}`, 13, 52);
+	    pdf.text(`P.O BOX : ${customerData?.contactPinCode}`, 13, 52);
 	    pdf.setFont('Newsreader', 'bold')
-	    pdf.text('Contact Person', 13, 56)
-	    pdf.setFont('Newsreader', 'normal')
-	    pdf.text(`${customerData?.vendorPerson}`, 13, 60);
+	    //pdf.text('Contact Person', 13, 56)
+	    //pdf.setFont('Newsreader', 'normal')
+	    //pdf.text(`${customerData?.vendorPerson}`, 13, 60);
 
 
-	    pdf.addImage(callImage, 'PNG', 13, 61, 3, 3);
-	    pdf.text(`  ${customerData?.vendorPersonMobNo || "N/A"}`, 16, 64);
+	    pdf.addImage(callImage, 'PNG', 13, 56, 3, 3);
+	    pdf.text(`  ${customerData?.contactPersonMobNo || "N/A"}`, 16, 56);
 	    pdf.setFont('Newsreader', 'bold')
 	    pdf.text('Dear Sir,', 13, 72)
 	    pdf.setFont('Newsreader', 'normal')
