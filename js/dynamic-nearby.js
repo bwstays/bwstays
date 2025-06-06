@@ -164,14 +164,14 @@ function createPlaceCard(place) {
                             <h6 class="card-title mb-1" style="font-size: 0.95rem;">
                                 <a href="${knowmoreUrl}" class="text-decoration-none text-white">${place.name}</a>
                             </h6>
-                            <div class="text-white mb-1" style="font-size: 0.85rem;">${place.timing}</div>
+                            <div class="text-white mb-1" style="font-size: 0.85rem;">Time: ${place.timing}</div>
                             <div class="mb-1">
                                 <span class="text-white" style="font-size: 0.85rem;">
-                                    <i class="fas fa-star" style="color: #64a19d;"></i> ${place.rating}
+                                    <i class="fas fa-star" style="color: #64a19d;"></i> Rating: ${place.rating}
                                 </span>
                             </div>
                             <small class="distance-text" style="color: #a8a8a8;">
-                                <i class="fas fa-road me-1"></i> ${place.distance}  km
+                                <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: ${place.distance}  km
                             </small>
                         </div>
                     </div>
