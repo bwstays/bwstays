@@ -4,7 +4,7 @@ const siteData = {
       id: 61,
       name: "Rippon Tea estate",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: ["assets/img/plantation/tea_plantaion.jpg","assets/img/plantation/tea_plantaion.jpg","assets/img/plantation/tea_plantaion.jpg"],
+      image: ["assets/img/plantation/tea_plantaion.jpg","assets/img/plantation/tea_wayanad.webp","assets/img/plantation/1569667219_TEA_FACTORY.avif"],
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
@@ -46,7 +46,7 @@ const siteData = {
       id: 33,
       name: "Meenmutty Falls",
       description: "One of the largest and most spectacular waterfalls in Wayanad. One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.",
-      image: ["assets/img/falls/meenmufalls.png"],
+      image: ["assets/img/falls/meenmufalls.png","assets/img/falls/meenumutty-WFtt-1536x1024.jpg","assets/img/falls/bw-meenmutty-wayanad.jpg"],
       holidays: "Sun",
       timing: "10:00-18:00",
       Contact: "+91-000 000 0000",
@@ -629,7 +629,28 @@ const siteData = {
        type: "Romantic Spots",
       knowmore: "./knowmore.html?id=58&cat=3",
 
-    }
+    },
+  {
+          id: 83,
+          name: "Neelarchalu",
+          description: "Neelarchalu.",
+          image: ["assets/img/sports/bw_Bamboo-rafting-Wayanad.jpg"],
+          holidays: "Sun",
+          timing: "10:00-18:00",
+          Contact: "+91-000 000 0000",
+          locationid: "1",
+     	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+          distance: "10",
+          map: "https://maps.app.goo.gl/ESWx6zyHnsxEKLyy8",
+          transport: "Public",
+          rating:"4.5",
+          hrs:"2",
+          fee:"0",
+      	  type: "Romantic Spots",
+          knowmore: "./knowmore.html?id=82&cat=3",
+
+      }
+
   ],
 
 
@@ -1330,7 +1351,7 @@ const siteData = {
 
       },
   {
-          id: 81,
+          id: 82,
           name: "bamboorafting",
           description: "bamboorafting.",
           image: ["assets/img/sports/bw_Bamboo-rafting-Wayanad.jpg"],
@@ -1346,7 +1367,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       	  type: "Sporting",
-          knowmore: "./knowmore.html?id=70&cat=8",
+          knowmore: "./knowmore.html?id=82&cat=8",
 
       }
     ],
@@ -1389,7 +1410,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       	  type: "Cycling",
-          knowmore: "./knowmore.html?id=60&cat=9",
+          knowmore: "./knowmore.html?id=81&cat=9",
 
       }
     ],

@@ -130,25 +130,27 @@ window.addEventListener('load', function () {
     imgWrapper.appendChild(img);
   });
 
+
   // Add hover effect to show arrows
-  imgContainer.addEventListener('mouseenter', () => {
+ // imgContainer.addEventListener('mouseenter', () => {
     if (imageArray.length > 1) {
       leftArrow.style.display = 'block';
       rightArrow.style.display = 'block';
     }
-  });
+ // });
 
-  imgContainer.addEventListener('mouseleave', () => {
-    leftArrow.style.display = 'none';
-    rightArrow.style.display = 'none';
-  });
+//  imgContainer.addEventListener('mouseleave', () => {
+   // leftArrow.style.display = 'none';
+   // rightArrow.style.display = 'none';
+//  });
+
 
   // Image navigation logic with sliding animation
   function updateImage(direction) {
     if (imageArray.length <= 1) return;
 
-    const newIndex = direction === 'next' 
-      ? (currentImageIndex + 1) % imageArray.length 
+    const newIndex = direction === 'next'
+      ? (currentImageIndex + 1) % imageArray.length
       : (currentImageIndex - 1 + imageArray.length) % imageArray.length;
 
     imgWrapper.style.transform = `translateX(-${newIndex * 100}%)`;
