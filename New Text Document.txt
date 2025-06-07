@@ -10,25 +10,16 @@ https://manage.rentbyowner.com/
 https://www.keralatourism.org/photo-gallery/cheengeri-hills-a-scenic-trekking-escape-in-wayanad/3070/
 https://www.mywayanad.com/ 
 
-2) Discover widget design to add all the json items on top of image and text side ( left and right )  
-5) update need to add a form in the booking.html read the guest information 
-6) Firebase trail - low priority for now 
-7) We need to change the style.css to cdn url, but a bit css rework needed in this case 
-8) In booking page Terms and consitions,faq,cancelaltion can be a expand and collpase type for easy use
-10) include maps  in the widget 
-12) provide full url to all links 
+2)  Discover widget design to add all the json items on top of image and text side ( left and right )  
+5)  Update need to add a form in the booking.html read the guest information 
+6)  Firebase trail - low priority for now 
+7)  We need to change the style.css to cdn url, but a bit css rework needed in this case 
+8)  In booking page Terms and consitions,faq,cancelaltion can be a expand and collpase type for easy use
+10) Include maps  in the widget 
+12) Provide full url to all links 
 
-no smoking image 
-no drinks image 
-BYOF/BYOB/
-provide filter based on short time, nearby, review, type
 
 faq like this :https://www.briaux.com/
-
-
-
-
-
 
 5) SEO improvement i will tell you in the next stage 
 6) Index page in github pages 
@@ -37,4 +28,7 @@ faq like this :https://www.briaux.com/
 9) Add title to all images,form fields etc 
 10)make browser cache data
 
-
+no smoking image 
+no drinks image 
+BYOF/BYOB/
+provide filter based on short time, nearby, review, type

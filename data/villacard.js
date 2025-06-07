@@ -34,7 +34,7 @@ function populateAboutCards() {
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="about-card h-100" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); display: flex; flex-direction: column;">
                     <div class="card-image" style="height: 200px; overflow: hidden;">
-                        <img alt="" src="${card.image}" alt="${card.title}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                        <img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad" src="${card.image}" alt="${card.title}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
 
 
                         <div class="overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);"></div>
