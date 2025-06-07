@@ -16,7 +16,6 @@ https://www.mywayanad.com/
 7) We need to change the style.css to cdn url, but a bit css rework needed in this case 
 8) In booking page Terms and consitions,faq,cancelaltion can be a expand and collpase type for easy use
 10) include maps  in the widget 
-11) including remaning items in the widget
 12) provide full url to all links 
 
 no smoking image 

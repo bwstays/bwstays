@@ -172,7 +172,13 @@ window.addEventListener('load', function () {
       <div class="mb-3">
           <span class="text-warning">★ ${currentItemData.rating}</span>
           <span class="text-white-50 ml-2">${currentItemData.distance}km away from Kalpetta</span>
-      </div>
+		  <span class="text-white-50 ml-2">
+			<a href="${currentItemData.map}" target="_new" class="text-decoration-none text-white">
+			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+			</a>
+		  </span>
+
+ </div>
       <div class="mb-3">
           <small class="text-white-50">
             <ul style="list-style:none;">

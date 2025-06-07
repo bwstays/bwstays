@@ -174,7 +174,16 @@ function createPlaceCard(place) {
                                 <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: ${place.distance}  km
                             </small>
                         </div>
-                    </div>
+
+                         <div>
+
+                             <div class="text-white mb-1" style="font-size: 0.85rem;">&nbsp; </div>
+                             <div class="text-white mb-1" style="font-size: 0.85rem;"> &nbsp; </div>
+                             <div class="text-white mb-1" style="font-size: 0.85rem;">                               <a href="${place.map}" target="_new" class="text-decoration-none text-white"><i class="fas fa-map-marker-alt"" style="color: #64a19d;"> </i></a>
+</div>
+
+                        </div>
+ 				</div>
                 </div>
             </div>
         </div>
