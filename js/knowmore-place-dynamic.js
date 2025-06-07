@@ -108,6 +108,9 @@ window.addEventListener('load', function () {
 
   // Get the first item from currentItem array
   const currentItemData = currentItem[0];
+
+  //	alert( currentItem[0])
+
   const images = currentItemData.image;
   const imageArray = Array.isArray(images) ? images : [images];
   let currentImageIndex = 0;
@@ -171,7 +174,7 @@ window.addEventListener('load', function () {
           <a href="#nearby-places"><span class="text-warning">View places with in 15 Kms </span></a> </div>
       <div class="mb-3">
           <span class="text-warning">★ ${currentItemData.rating}</span>
-          <span class="text-white-50 ml-2">${currentItemData.distance}km away from Kalpetta</span>
+          <span class="text-white-50 ml-2">${currentItemData.distance}km from Kalpetta</span>
 		  <span class="text-white-50 ml-2">
 			<a href="${currentItemData.map}" target="_new" class="text-decoration-none text-white">
 			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
@@ -187,7 +190,8 @@ window.addEventListener('load', function () {
             <li><i class="fas fa-cog"></i> Best Seasons to Visit: ${currentItemData.seasontovisit}</li>
             <li><i class="fas fa-bell"></i> Type: ${currentItemData.type}</li>
             <li><i class="fas fa-power-off"></i> Holiday: ${currentItemData.holidays}</li>
-            <li> <i class="fas fa-phone"></i> Contact ${currentItemData.Contact}</li>
+            <li><i class="fas fa-phone"></i> Contact: ${currentItemData.Contact}</li>
+            <li><img  width="20" height="20" src="assets/img/icons/cloudy.png" alt="" />Weather: <span id="temperature"></span></p> </li>
             </ul>
         </small>
       </div>
@@ -254,7 +258,12 @@ window.addEventListener('load', function () {
               <h5 class="card-title text-white">${item.name}</h5>
               <div class="rating mb-2">
                   <span class="text-warning">★ ${item.rating}</span>
-                  <span class="text-white-50 ml-2">${item.distance}km away from Kalpetta</span>
+                  <span class="text-white-50 ml-2">${item.distance}km from Kalpetta</span>
+
+                    <span class="text-white-50 ml-2"><a href="${currentItemData.map}" target="_new" class="text-decoration-none text-white">
+				  			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+						</a>
+						</span>
               </div>
               <p class="card-text text-white-50 flex-grow-1">${item.description.substring(0,100)}...</p>
               <div class="card-footer-info mb-3">

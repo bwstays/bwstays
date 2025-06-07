@@ -22,7 +22,7 @@ fetch(apiUrl)
     return response.json();
   })
   .then(data => {
-  //  locationDisplay.textContent = `Latitude: ${lat}, Longitude: ${lon}`;
+    // locationDisplay.textContent = `Latitude: ${lat}, Longitude: ${lon}`;
     // Assuming you want the current temperature, use the first element of the hourly data
     const currentTemperature = data.hourly.temperature_2m[0];
     temperatureDisplay.textContent = `${currentTemperature}°C`;

@@ -19,6 +19,22 @@ function getCurrentCatagoryId() {
 }
 
 function findPlaceById(id) {
+
+	  	  //0 plantation
+	  	  //1 waterfalls
+	  	  //2,museums
+	  	  //3,romantic
+	  	  //4,culthist
+	  	  //5, trucking
+	  	  //6 wildlife
+	  	  //7 farms
+	  	  //8,sporting
+	  	  //9,food
+	  	  //10,tribal
+	  	  //11,cycling
+	  	  //12,shopping
+
+
     const categories = [ 'plantation', 'waterfalls', 'museums', 'romantic', 'culthist','trucking', 'wildlife', 'farms', 'sporting', 'food','tribal','cycling','shopping'];
     for (const category of categories) {
         if (siteData[category]) {
