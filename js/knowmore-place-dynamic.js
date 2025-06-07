@@ -202,6 +202,8 @@ window.addEventListener('load', function () {
 
 
 
+
+
   leftColumn.appendChild(imgContainer);
 
   leftColumn.appendChild(descContainer);

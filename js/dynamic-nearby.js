@@ -1,6 +1,7 @@
 function getCurrentPageId() {
     const urlParams = new URLSearchParams(window.location.search);
 
+  //61 is the first catagory code in the sitedata
 	var currId=urlParams.get('id') ;
  	if (currId === null || typeof currId == "undefined" || currId === '')
 		 currId=61;
