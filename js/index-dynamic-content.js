@@ -185,6 +185,7 @@ function initializeSection(sectionType, data, sectionIndex) {
     tempContent.innerHTML = `
       <h5 class="text-white">${currentItem.name} (${currentItem.rating}★)</h5>
       <p class="mb-0 text-white-50">${currentItem.description.substring(0,100)}....</p>
+      <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: ${currentItem.distance} km <br>
        <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
 
     tempContent.style.position = 'absolute';
