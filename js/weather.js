@@ -22,7 +22,7 @@ fetch(apiUrl)
     // locationDisplay.textContent = `Latitude: ${lat}, Longitude: ${lon}`;
     // Assuming you want the current temperature, use the first element of the hourly data
     const currentTemperature = data.hourly.temperature_2m[0];
-    temperatureDisplay.textContent = `${currentTemperature}°C`;
+    temperatureDisplay.innerHTML = `${currentTemperature}<sup>o</sup>C`;
   })
   .catch(error => {
     console.error('There has been a problem with your fetch operation:', error);
