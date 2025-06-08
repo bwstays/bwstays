@@ -10838,9 +10838,9 @@ body {
   display: none;
   z-index: 1000;
   border-radius: 50%;
-  width: 50px;
-  background-color: grey;
-  height: 50px;
+  width: 55px;
+  background-color: #64a19d;
+  height: 55px;
   padding: 0;
   line-height: 50px;
   text-align: center;

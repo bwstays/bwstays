@@ -1,10 +1,10 @@
 function getCurrentPageId() {
     const urlParams = new URLSearchParams(window.location.search);
 
-  //61 is the first catagory code in the sitedata
-	var currId=urlParams.get('id') ;
- 	if (currId === null || typeof currId == "undefined" || currId === '')
-		 currId=61;
+    //61 is the first catagory code in the sitedata
+    var currId = urlParams.get('id');
+    if (currId === null || typeof currId == "undefined" || currId === '')
+        currId = 61;
     return currId;
 
 }
@@ -12,31 +12,31 @@ function getCurrentPageId() {
 function getCurrentCatagoryId() {
     const urlParams = new URLSearchParams(window.location.search);
 
-	var catId=urlParams.get('cat') ;
-	if (catId === null || typeof catId == "undefined" || catId === '')
-		 catId=0;
-    return catId ;
+    var catId = urlParams.get('cat');
+    if (catId === null || typeof catId == "undefined" || catId === '')
+        catId = 0;
+    return catId;
 
 }
 
 function findPlaceById(id) {
 
-	  	  //0 plantation
-	  	  //1 waterfalls
-	  	  //2,museums
-	  	  //3,romantic
-	  	  //4,culthist
-	  	  //5, trucking
-	  	  //6 wildlife
-	  	  //7 farms
-	  	  //8,sporting
-	  	  //9,food
-	  	  //10,tribal
-	  	  //11,cycling
-	  	  //12,shopping
+    //0 plantation
+    //1 waterfalls
+    //2,museums
+    //3,romantic
+    //4,culthist
+    //5, trucking
+    //6 wildlife
+    //7 farms
+    //8,sporting
+    //9,food
+    //10,tribal
+    //11,cycling
+    //12,shopping
 
 
-    const categories = [ 'plantation', 'waterfalls', 'museums', 'romantic', 'culthist','trucking', 'wildlife', 'farms', 'sporting', 'food','tribal','cycling','shopping'];
+    const categories = ['plantation', 'waterfalls', 'museums', 'romantic', 'culthist', 'trucking', 'wildlife', 'farms', 'sporting', 'food', 'tribal', 'cycling', 'shopping'];
     for (const category of categories) {
         if (siteData[category]) {
             const place = siteData[category].find(p => p.id === id);
@@ -93,28 +93,28 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
     //alert("distances"+distances)
-   // alert("maxDistance"+maxDistance);
-   // alert("locationId"+locationId);
+    // alert("maxDistance"+maxDistance);
+    // alert("locationId"+locationId);
 
 
 
     for (let i = 1; i <= Object.keys(locations.names).length; i++) {
 
-        if (distances[i-1] <= maxDistance && i != locationId) {
- 			// alert(locations.names[i]);
+        if (distances[i - 1] <= maxDistance && i != locationId) {
+            // alert(locations.names[i]);
             nearbyPlaces.push({
                 id: i,
                 name: locations.names[i],
-                distance: distances[i-1]
+                distance: distances[i - 1]
             });
         }
     }
 
-	  /*for (let i = 0; i <nearbyPlaces.length; i++)
-	  {
-		    alert(nearbyPlaces[i].distance + " " + i);
-      }
-		*/
+    /*for (let i = 0; i <nearbyPlaces.length; i++)
+    {
+          alert(nearbyPlaces[i].distance + " " + i);
+    }
+      */
 
     return nearbyPlaces.sort((a, b) => a.distance - b.distance);
 }
@@ -127,7 +127,7 @@ function renderNearbyPlaces() {
     if (!nearbyCardsContainer) {
         console.error('Could not find nearby-cards container');
         return;
-    }													 s
+    } s
 
 
 
@@ -137,10 +137,10 @@ function renderNearbyPlaces() {
 
 
 
-     const locId = getCurrentPageId();
+    const locId = getCurrentPageId();
     const maxDistance = 20;
     const locCat = getCurrentCatagoryId();
-     // id we can pass dynamically
+    // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
 
     console.log('Nearby places:', nearbyPlaces);
@@ -175,7 +175,7 @@ function renderNearbyPlaces() {
 // Function to create a card for each nearby place
 function createPlaceCard(place) {
     const imageUrl = place.image || 'assets/img/villa1/demo-image-02.jpg';
-     const knowmoreUrl = place.knowmore || '#';
+    const knowmoreUrl = place.knowmore || '#';
 
     return `
         <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -185,11 +185,15 @@ function createPlaceCard(place) {
                 </div>
                 <div class="card-body p-3">
                     <div class="d-flex">
-                        <div>
-                            <h6 class="card-title mb-1" style="font-size: 0.95rem;">
-
-                                <a href="${knowmoreUrl}" class="text-decoration-none text-white">${place.name}</a>
-                            </h6>
+                        <div style="flex: 1;">
+                            <div class="d-flex justify-content-between align-items-start mb-1">
+                                <h6 class="card-title mb-0" style="font-size: 0.95rem; word-wrap: break-word; max-width: calc(100% - 40px);">
+                                    <a href="${knowmoreUrl}" class="text-decoration-none text-white">${place.name}</a>
+                                </h6>
+                                <a href="${place.map}" target="_new" class="ms-2" style="background: rgba(255,255,255,0.9); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); flex-shrink: 0;">
+                                    <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+                                </a>
+                            </div>
                             <div class="text-white mb-1" style="font-size: 0.85rem;">Time: ${place.timing}</div>
                             <div class="mb-1">
                                 <span class="text-white" style="font-size: 0.85rem;">
@@ -200,16 +204,7 @@ function createPlaceCard(place) {
                                 <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: ${place.distance}  km
                             </small>
                         </div>
-
-                         <div>
-
-                             <div class="text-white mb-1" style="font-size: 0.85rem;">&nbsp; </div>
-                             <div class="text-white mb-1" style="font-size: 0.85rem;"> &nbsp; </div>
-                             <div class="text-white mb-1" style="font-size: 0.85rem;">                               <a href="${place.map}" target="_new" class="text-decoration-none text-white"><i class="fas fa-map-marker-alt"" style="color: #64a19d;"> </i></a>
-</div>
-
-                        </div>
- 				</div>
+                    </div>
                 </div>
             </div>
         </div>
