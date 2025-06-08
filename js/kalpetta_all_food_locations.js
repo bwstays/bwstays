@@ -2,7 +2,7 @@
 
 var foodations = [
 
-['<h6><a target="_blank" href="https://www.bwstays.com" title="Black & White">Black & White</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/restaurant.png"],
+['<h6><a target="_blank" href="https://www.blackandwhite.com" title="Black & White">Black & White</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/restaurant.png"],
 
 ['<h6><a target="_blank" href="Muzwalla Resturant" title="Muzwalla Resturant">Muzwalla Resturant</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.6963, 76.1411, 2, "assets/img/logo/restaurant.png"],
 

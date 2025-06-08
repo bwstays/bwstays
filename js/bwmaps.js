@@ -2,7 +2,7 @@
 
 var bwlocations = [
 
-    ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/pookode-lake-wayanad" title="Pookode Lake">Pookode Lake</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/pookode-lake-wayanad" title="Pookode Lake"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/pookode-lake-wayanad-3-20230429174142824511.webp" width="300" ></a>', 11.542470, 76.027224, 2, "assets/img/logo/bw.png"],
+    ['<h6><a target="_blank" href="https://www.blackandwhite.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.blackandwhite.com" title="Black and White Stays"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/logo/pin-drop.png" width="300" ></a>', 11.542470, 76.027224, 2, "assets/img/logo/bw.png"],
 
 
 ];
