@@ -2,9 +2,6 @@
 
 var foodations = [
 
-
-
-
 ['<h6><a target="_blank" href="https://www.bwstays.com" title="Black & White">Black & White</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/restaurant.png"],
 
 ['<h6><a target="_blank" href="Muzwalla Resturant" title="Muzwalla Resturant">Muzwalla Resturant</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.6963, 76.1411, 2, "assets/img/logo/restaurant.png"],
@@ -97,15 +94,11 @@ var foodations = [
 
 ['<h6><a target="_blank" href="Olan Resturant" title="Olan Resturant">Olan Resturant</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.644692054539417, 76.11396083068944, 2, "assets/img/logo/restaurant.png"],
 
-
 ['<h6><a target="_blank" href="Touffequqee Resturant" title="Touffequqee Resturant">Touffequqee Resturant</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.615868291399686, 76.08321320185325, 2, "assets/img/logo/restaurant.png"],
 
 ['<h6><a target="_blank" href="Hotel Pankaj" title="Hotel Pankaj">Hotel Pankaj</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.609547800012608, 76.08195152328292, 2, "assets/img/logo/restaurant.png"],
 
-
 ['<h6><a target="_blank" href="Night Tattu Kada" title="Night Tattu Kada">Night Tattu Kada</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.604806010573219, 76.08376805542096, 2, "assets/img/logo/restaurant.png"],
-
-
 
 ['<h6><a target="_blank" href="Maracana Resturants" title="Maracana Resturants">Maracana Resturants</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.600071240199552, 76.0812581584653, 2, "assets/img/logo/restaurant.png"],
 
@@ -115,10 +108,6 @@ var foodations = [
 
 
 ['<h6><a target="_blank" href="Ramavilas Chundale" title="Ramavilas Chundale">Ramavilas Chundale</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.5738608278821, 76.05500967074094, 2, "assets/img/logo/restaurant.png"],
-
-
-
-
 
   ];
 
