@@ -179,6 +179,7 @@ function createPlaceCard(place) {
                     <div class="d-flex">
                         <div>
                             <h6 class="card-title mb-1" style="font-size: 0.95rem;">
+
                                 <a href="${knowmoreUrl}" class="text-decoration-none text-white">${place.name}</a>
                             </h6>
                             <div class="text-white mb-1" style="font-size: 0.85rem;">Time: ${place.timing}</div>
