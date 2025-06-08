@@ -198,9 +198,14 @@ window.addEventListener('load', function () {
       <div class="mb-3">
                  <span class="text-white-50 ml-2">${currentItemData.description}</span>
        </div>
+
+
+
   `;
 
 
+ //update the location nearby with the location name choosen
+ $('h2').text("Location Nearby " + currentItemData.name);
 
 
 

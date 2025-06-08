@@ -2,7 +2,7 @@
 
 var bwlocations = [
 
-['<h6><a target="_blank" href="./knowmore.html?id=1&cat=4" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><a target="_blank" href="./knowmore.html?id=1&cat=4" title="Shanthinatha Swamy Jain Temple"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/bw-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6963, 76.1411, 2, "assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="./knowmore.html?id=1&cat=4" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6> <span>10km</span><a target="_blank" href="./knowmore.html?id=1&cat=4" title="Shanthinatha Swamy Jain Temple"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/bw-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6963, 76.1411, 2, "assets/img/logo/pin-drop.png"],
 
 
 
@@ -15,7 +15,7 @@ var bwlocations = [
 
   ['<h6><a target="_blank" href="./knowmore.html?id=18&cat=5" title="Chembra Peak">Chembra Peak</a></h6><a target="_blank" href="./knowmore.html?id=18&cat=5" title="Chembra Peak"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.556469, 76.083341, 2, "assets/img/logo/pin-drop.png"],
 
-  ['<h6><a target="_blank" href="https://www.blackandwhite.com" title="Black & White">Black & White</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="BW"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/bw.png"],
+  ['<h6><a target="_blank" href="https://www.blackandwhite.com" title="Black & White">Black & White</a><span>10km</span></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="BW"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/bw.png"],
 
   ['<h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/jain-temple-wayanad" title="Jain Temple">Jain Temple</a></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/jain-temple-wayanad" title="Jain Temple"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/jain-temple-sulthan-bathery-wayanad-1-20230428191923325949.webp" width="300" ></a>', 11.660817, 76.250441, 2, "assets/img/logo/pin-drop.png"],
 
@@ -48,6 +48,7 @@ var bwlocations = [
   ['<h6><a target="_blank" href="./knowmore.html?id=31&cat=6"title="Tholpetty Wildlife Sanctuary">Tholpetty Wildlife Sanctuary</a></h6><a target="_blank" href="./knowmore.html?id=31&cat=6" title="Tholpetty Wildlife Sanctuary"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/wildlife/bw_tholpetty-wildlife-sanctuary-wayanad.webp" width="300" ></a>', 11.951629, 76.059502, 2, "assets/img/logo/pin-drop.png"],
 
   ['<h6><a target="_blank" href="./knowmore.html?id=27&cat=2" title="Wayanad Heritage Museum">Wayanad Heritage Museum</a></h6><a target="_blank" href="./knowmore.html?id=27&cat=2" title="Wayanad Heritage Museum"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/wayanad-heritage-museum-wayanad-32-20230429181434727269.webp" width="300" ></a>', 11.619335, 76.210626, 2, "assets/img/logo/pin-drop.png"],
+
 
   ['<h6><a target="_blank" href="./knowmore.html?id=15&cat=5" title="Kuruva Island">Kuruva Island</a></h6><a target=" blank" href="./knowmore.html?id=15&cat=5" title="Kuruva Island"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad" src="assets/img/trucking/bw-kuruva-island-wayanad.jpg" width="300" ></a>', 11.824576, 76.094040, 2, "assets/img/logo/pin-drop.png"],
 

@@ -127,7 +127,15 @@ function renderNearbyPlaces() {
     if (!nearbyCardsContainer) {
         console.error('Could not find nearby-cards container');
         return;
-    }
+    }													 s
+
+
+
+
+
+
+
+
 
      const locId = getCurrentPageId();
     const maxDistance = 20;
