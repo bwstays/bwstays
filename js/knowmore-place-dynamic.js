@@ -198,9 +198,6 @@ window.addEventListener('load', function () {
       <div class="mb-3">
                  <span class="text-white-50 ml-2">${currentItemData.description}</span>
        </div>
-
-
-
   `;
 
 
