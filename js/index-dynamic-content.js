@@ -183,16 +183,26 @@ function initializeSection(sectionType, data, sectionIndex) {
     const tempContent = document.createElement('div');
     tempContent.className = 'tab-content-temp';
     tempContent.innerHTML = `
-      <h5 class="text-white">${currentItem.name} (${currentItem.rating}★)</h5>
-      <p class="mb-0 text-white-50">${currentItem.description.substring(0,100)}....</p>
-      <i class="fas fa-times me-1" style="color: #64a19d;"></i> Holiday: ${currentItem.holidays}<br>
-      <i class="fas fa-clock me-1" style="color: #64a19d;"></i> Timing: ${currentItem.timing}<br>
-       <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
+      <h5 class="text-white mb-1" style="font-size: 1rem;">${currentItem.name} (${currentItem.rating}★)</h5>
+      <p class="mb-1 text-white-50" style="font-size: 0.8rem; line-height: 1.2;">${currentItem.description.substring(0,50)}...</p>
+      <div class="mb-1 text-white-50" style="font-size: 0.8rem;">
+        <i class="fas fa-times me-1" style="color: #64a19d;"></i> Holiday: ${currentItem.holidays}
+      </div>
+      <div class="mb-1 text-white-50" style="font-size: 0.8rem; ">
+        <i class="fas fa-clock me-1" style="color: #64a19d;"></i> Timing: ${currentItem.timing}
+      </div>
+      <a href="${currentItem.knowmore || '#'}" class="js-scroll-trigger" style="font-size: 0.8rem;">Know More</a>`;
 
-
-     tempContent.style.position = 'absolute';
+    tempContent.style.position = 'absolute';
     tempContent.style.width = '100%';
     tempContent.style.opacity = '0';
+    tempContent.style.height = 'auto';
+    tempContent.style.maxHeight = 'none';
+    tempContent.style.overflow = 'visible';
+    tempContent.style.padding = '0';
+    tempContent.style.margin = '0';
+    tempContent.style.display = 'flex';
+    tempContent.style.flexDirection = 'column';
 
     if (isHorizontal) {
       tempContent.style.left = direction === 'next' ? '-50px' : '50px';
