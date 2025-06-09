@@ -185,10 +185,12 @@ function initializeSection(sectionType, data, sectionIndex) {
     tempContent.innerHTML = `
       <h5 class="text-white">${currentItem.name} (${currentItem.rating}★)</h5>
       <p class="mb-0 text-white-50">${currentItem.description.substring(0,100)}....</p>
-      <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: ${currentItem.distance} km <br>
+      <i class="fas fa-times me-1" style="color: #64a19d;"></i> Holiday: ${currentItem.holidays}<br>
+      <i class="fas fa-clock me-1" style="color: #64a19d;"></i> Timing: ${currentItem.timing}<br>
        <a href="${currentItem.knowmore || '#'}"   class=" js-scroll-trigger">Know More</a>`;
 
-    tempContent.style.position = 'absolute';
+
+     tempContent.style.position = 'absolute';
     tempContent.style.width = '100%';
     tempContent.style.opacity = '0';
 
