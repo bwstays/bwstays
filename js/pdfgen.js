@@ -87,9 +87,9 @@ alert(myArray[Object.keys(myArray)[0]])
 		pdf.setProperties({
 			title: 'Booking',
 			subject: 'Booking ',
-			author: 'bwstays',
+			author: 'blackandwhite',
 			keywords: 'generated, javascript, web 2.0, ajax',
-			creator: 'bwstays'
+			creator: 'blackandwhite'
 		});
 		//https://www.base64-image.de/
 	    // Add images and text to the PDF

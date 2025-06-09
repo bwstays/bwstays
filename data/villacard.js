@@ -4,13 +4,13 @@ const aboutCardData = {
             title: "nestle with nature",
             icon: "fas fa-mountain",
             description: "Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep.",
-            image: "assets/img/villa1/wayanad_mist.jpg"
+            image: "assets/img/villa1/wayanad_mist.avif"
         },
         {
             title: "hustle in hisspeed",
             icon: "fas fa-home",
             description: "Luxurious amenities and thoughtfully designed spaces for your perfect stay.",
-            image: "assets/img/villa1/wayanad_mist.jpg"
+            image: "assets/img/villa1/wayanad_mist.avif"
         },
         {
             title: "bustle in budget",

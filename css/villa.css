@@ -1,6 +1,6 @@
 .villa-section
 {
-    background-image: url("../assets/img/bg-masthead.jpg");
+    background-image: url("../assets/img/bg-masthead.avif");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -11,7 +11,7 @@
 .villa-section, #villaSection {
   padding-top: 5rem;
   
-  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url("../assets/img/bg-masthead.avif");
   min-height: 100vh;
   padding-bottom: 5rem;
   background-position: center;

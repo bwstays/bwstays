@@ -9,6 +9,12 @@ https://manage.rentbyowner.com/
 https://www.keralatourism.org/photo-gallery/cheengeri-hills-a-scenic-trekking-escape-in-wayanad/3070/
 https://www.mywayanad.com/ 
 
+
+perfformance 
+https://developer.yahoo.com/performance/rules.html
+https://cloudinary.com/tools/png-to-avif
+
+
 2)  Discover widget design to add all the json items on top of image and text side ( left and right )  
 5)  Update need to add a form in the booking.html read the guest information 
 6)  Firebase trail - low priority for now 

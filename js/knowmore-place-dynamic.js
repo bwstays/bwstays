@@ -202,7 +202,7 @@ window.addEventListener('load', function () {
 
 
  //update the location nearby with the location name choosen
- $('h2').text("Location Nearby " + currentItemData.name);
+// $('h2').text("Location Nearby " + currentItemData.name);
 
 
 

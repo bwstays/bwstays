@@ -10293,7 +10293,7 @@ body {
 
 .map-section {
   padding: 6rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/ghats_wayanad.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/ghats_wayanad.avif");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10302,7 +10302,7 @@ body {
 
 .signup-section {
   padding: 6rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/bg-signup.avif");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10390,7 +10390,7 @@ body {
 }
 
 .footer {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/ghats_wayanad.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/ghats_wayanad.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -10417,7 +10417,7 @@ body {
 }
 
 .signup-section {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 75%, #000 100%), url('../assets/img/bg-signup.jpg');
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 75%, #000 100%), url('../assets/img/bg-signup.avif');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10646,7 +10646,7 @@ body {
 
 .about-section
 {
-    background-image: url("../assets/img/plantation/tea_plantaion.jpg");
+    background-image: url("../assets/img/plantation/tea_plantaion.avif");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10657,7 +10657,7 @@ body {
 .about-section, #aboutSection {
   padding-top: 5rem;
   
-  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("../assets/img/bg-masthead.avif");
   min-height: 100vh;
   padding-bottom: 5rem;
   background-position: center;

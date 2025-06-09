@@ -6,7 +6,7 @@ var bwlocations = [
 
 
 
-['<h6><a target="_blank" href="./knowmore.html?id=2&cat=4" title="Ananthanatha Swamy Jain Temple Puliyarmala">Ananthanatha Swamy Jain Temple Puliyarmala</a></h6><a target="_blank" href="./knowmore.html?id=2&cat=4" title="Ananthanatha Swamy Jain Temple Puliyarmala"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/bw_Anantnatha_Swami_Jain_temple.jpg" width="300" ></a>', 11.6963, 76.1411, 2, "assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="./knowmore.html?id=2&cat=4" title="Ananthanatha Swamy Jain Temple Puliyarmala">Ananthanatha Swamy Jain Temple Puliyarmala</a></h6><a target="_blank" href="./knowmore.html?id=2&cat=4" title="Ananthanatha Swamy Jain Temple Puliyarmala"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/bw_Anantnatha_Swami_Jain_temple.avif" width="300" ></a>', 11.6963, 76.1411, 2, "assets/img/logo/pin-drop.png"],
 
 
   ['<h6><a target="_blank" href="./knowmore.html?id=47&cat=3" title="Banasura Hills">Banasura Hills</a></h6><a target="_blank" href="./knowmore.html?id=47&cat=3" title="Banasura Hills"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/banasura-hills-1920x1080-20230429161726128402.webp" width="300" ></a>', 11.695175204072623, 75.90917173969375, 2, "assets/img/logo/pin-drop.png"],
@@ -50,7 +50,7 @@ var bwlocations = [
   ['<h6><a target="_blank" href="./knowmore.html?id=27&cat=2" title="Wayanad Heritage Museum">Wayanad Heritage Museum</a></h6><a target="_blank" href="./knowmore.html?id=27&cat=2" title="Wayanad Heritage Museum"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/wayanad-heritage-museum-wayanad-32-20230429181434727269.webp" width="300" ></a>', 11.619335, 76.210626, 2, "assets/img/logo/pin-drop.png"],
 
 
-  ['<h6><a target="_blank" href="./knowmore.html?id=15&cat=5" title="Kuruva Island">Kuruva Island</a></h6><a target=" blank" href="./knowmore.html?id=15&cat=5" title="Kuruva Island"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad" src="assets/img/trucking/bw-kuruva-island-wayanad.jpg" width="300" ></a>', 11.824576, 76.094040, 2, "assets/img/logo/pin-drop.png"],
+  ['<h6><a target="_blank" href="./knowmore.html?id=15&cat=5" title="Kuruva Island">Kuruva Island</a></h6><a target=" blank" href="./knowmore.html?id=15&cat=5" title="Kuruva Island"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad" src="assets/img/trucking/bw-kuruva-island-wayanad.avif" width="300" ></a>', 11.824576, 76.094040, 2, "assets/img/logo/pin-drop.png"],
 
   ['<h6><a target="_blank" href="./knowmore.html?id=45&cat=3" title="Banasura Sagar Dam">Banasura Sagar Dam</a></h6><a target="_blank" href="./knowmore.html?id=45&cat=3" title="Banasura Sagar Dam"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/banasura-sagar-dam-wayanad-43-20230429183921377875.webp" width="300" ></a>', 11.670692, 75.955571, 2, "assets/img/logo/pin-drop.png"],
 
