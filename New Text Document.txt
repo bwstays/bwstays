@@ -16,6 +16,8 @@ https://www.mywayanad.com/
 8)  In booking page Terms and consitions,faq,cancelaltion can be a expand and collpase type for easy use
 12) Provide full url to all links 
 13) Ask your prompt
+14) Festival offer enabler 
+15) 
 
 
 faq like this :https://www.briaux.com/
