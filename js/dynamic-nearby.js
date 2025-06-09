@@ -157,7 +157,7 @@ function renderNearbyPlaces() {
         if (fullPlaceDetails) {
             return createPlaceCard({
                 ...place,
-                image: fullPlaceDetails.place.image,
+                image: fullPlaceDetails.place.image[0],
                 knowmore: fullPlaceDetails.place.knowmore,
                 rating: fullPlaceDetails.place.rating,
                 timing: fullPlaceDetails.place.timing,

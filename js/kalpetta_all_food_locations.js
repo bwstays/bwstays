@@ -22,6 +22,7 @@ var foodations = [
 
 ['<h6><a target="_blank" href="Affas Pure Vegiterian " title="Affas Pure Vegiterian">Affas Pure Vegiterian</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.607133989832576, 76.08324548447946, 2, "assets/img/logo/restaurant.png"],
 
+  ['<h6><a target="_blank" href="https://www.blackandwhite.com" title="Black & White">Black & White</a><span>10km</span></h6><a target="_blank" href="https://www.dtpcwayanad.com/destination/chembra-peak-wayanad" title="BW"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="https://www.dtpcwayanad.com/uploads/picture_gallery/gallery_images/chembra-peak-20230429161812306996.webp" width="300" ></a>', 11.605943, 76.083429, 2, "assets/img/logo/bw.png"],
 
 ['<h6><a target="_blank" href="Jallels Kitchen " title="Jallels Kitchen">Jallels Kitchen</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/heritage/Muzwalla Resturant.webp" width="300" ></a>', 11.610667798353557, 76.0833430886246, 2, "assets/img/logo/cafe.png"],
 
