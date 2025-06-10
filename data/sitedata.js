@@ -272,7 +272,26 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
  ],
   museums: [
 
+{
+      id: 78,
+      name: "Honey Museum",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: ["assets/img/museum/bw_Honey_wayanad.avif"],
+      holidays: "Sun",
+      timing:[ "09:00-17:00"],
+      Contact: "+91-000 000 0000",
+	  seasontovisit:["All Season"],
+      distance: "10",
+       transport: "Public",
+      latlong: "11.537878297366712, 76.04345802698292",
+      map: "https://maps.app.goo.gl/8x4fQb5Cr9RBCFr17",
+     rating:"4.5",
+      hrs:"2",
+      fee:"0",
+       type: "shopping",
+      knowmore: "./knowmore.html?id=78&cat=2",
 
+    },
     {
       id: 26,
       name: "Tea Museum",
@@ -1279,26 +1298,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       knowmore: "./knowmore.html?id=77&cat=12",
 
     },
-    {
-      id: 78,
-      name: "Honey",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: ["assets/img/food/bw_wayanad_1980.avif"],
-      holidays: "Sun",
-      timing:[ "09:00-17:00"],
-      Contact: "+91-000 000 0000",
-	  seasontovisit:["All Season"],
-      distance: "10",
-       transport: "Public",
-      latlong: "",
-      map: "",
-     rating:"4.5",
-      hrs:"2",
-      fee:"0",
-       type: "shopping",
-      knowmore: "./knowmore.html?id=78&cat=12",
 
-    },
     {
       id: 79,
       name: "Spices",
@@ -1340,7 +1340,28 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       knowmore: "./knowmore.html?id=67&cat=12",
 
     }
-  ],
+ ,
+     {
+       id: 85,
+       name: "Ali's WAYANADAN NATURAL HONEY",
+       description: "NATURAL HONEY.",
+       image: ["assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.avif"],
+       holidays: "None",
+       timing:[ "11:00-23:00"],
+       Contact: "+91-555 555 5555",
+ 	  seasontovisit:["All Season"],
+       distance: "10",
+       transport: "Public",
+       latlong: "11.596827238325503, 76.21948657283083",
+       map: "https://maps.app.goo.gl/ZCFPmqauSefZ61UP7",
+       rating:"5",
+       hrs:"2",
+       fee:"0",
+       type: "shopping",
+       knowmore: "./knowmore.html?id=86&cat=12",
+
+    }
+ ],
 
  pilgrimage: [
 
