@@ -55,7 +55,7 @@
 
 
 	    const allowedOccupancy = [{
-	     audlt:myArray[Object.keys(myArray)[0]].people, child:myArray[Object.keys(myArray)[0]].child}
+	     audlt:"2", child:"1"}
 	    ]
 
 	    const extracost = [{
@@ -69,16 +69,35 @@
 
 	    const tax=18;
 	    const villaprice=5000;
+ var itemsData;
 
 
-alert(myArray[Object.keys(myArray)[0]])
-       // var villaArray=myArray[Object.keys(myArray)[0]].contactName,
+if(myArray[(Object.keys(myArray)[3])[0]][0]!==undefined   )
+{
+	   itemsData = [
+	        { itemName: myArray[(Object.keys(myArray)[3])[0]][0], bookdate: myArray[(Object.keys(myArray)[1])[0]], audlt: myArray[(Object.keys(myArray)[3])[0]][1],child: myArray[(Object.keys(myArray)[3])[0]][2],unitPrice: villaprice, tax:(tax * villaprice/100), total: "" }]
+}
 
-		const itemsData = [
-	        { itemName: 'Villa 2', bookdate: ["28/12/2005","29/12/2005","30/12/2005","31/12/2005"], audlt: 3,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: ["30/12/2005","31/12/2005"], audlt: 4,child: 2,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	        { itemName: 'Villa 2', bookdate: ["30/12/2005"], audlt: 4,child: 1,unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
-	    ];
+if (myArray[(Object.keys(myArray)[2])[0]][0]!==undefined )
+{
+	        itemsData = [
+	        { itemName: myArray[(Object.keys(myArray)[2])[0]][0], bookdate: myArray[(Object.keys(myArray)[1])[0]], audlt: myArray[(Object.keys(myArray)[2])[0]][1],child: myArray[(Object.keys(myArray)[2])[0]][2],unitPrice: villaprice, tax:(tax * villaprice/100), total: "" } ]
+}
+
+if (myArray[(Object.keys(myArray)[2])[0]][0]!==undefined && myArray[(Object.keys(myArray)[3])[0]][0]!==undefined)
+{
+		  itemsData = [
+		        { itemName: myArray[(Object.keys(myArray)[2])[0]][0], bookdate: myArray[(Object.keys(myArray)[1])[0]], audlt: myArray[(Object.keys(myArray)[2])[0]][1],child: myArray[(Object.keys(myArray)[2])[0]][2],unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
+		        { itemName: myArray[(Object.keys(myArray)[3])[0]][0], bookdate: myArray[(Object.keys(myArray)[1])[0]], audlt: myArray[(Object.keys(myArray)[3])[0]][1],child: myArray[(Object.keys(myArray)[3])[0]][2],unitPrice: villaprice, tax:(tax * villaprice/100), total: "" },
+		    ];
+
+
+}
+
+
+		//alert(myArray[(Object.keys(myArray)[2][0]).children])
+        // var villaArray=myArray[Object.keys(myArray)[0]].contactName,
+
 
 	    // Create a new jsPDF instance
 	    const pdf = new jsPDF();
@@ -258,7 +277,7 @@ alert(myArray[Object.keys(myArray)[0]])
 	    pdf.save(`bwBookingRef.pdf`);
 
 	    // pdf open in a new tab
-	    const pdfDataUri = pdf.output('datauristring');
-	    const newTab = window.open();
-	    newTab?.document.write(`<iframe width='100%' height='100%' src='${pdfDataUri}'></iframe>`);
+	   // const pdfDataUri = pdf.output('datauristring');
+	   // const newTab = window.open();
+	   // newTab?.document.write(`<iframe width='100%' height='100%' src='${pdfDataUri}'></iframe>`);
     }

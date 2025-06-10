@@ -382,7 +382,7 @@
                                 <div class="form-group mb-3">
                                     <label class="form-label">Your Address</label>
                                     <textarea alt="Black and White Stays Wayanad" class="form-control" rows="3"
-                                        placeholder="Your Address "></textarea>
+                                        placeholder="Your Address"></textarea>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="form-label">Arrival Time</label>
@@ -688,7 +688,7 @@
                 const villa2 = document.getElementById('villa2').checked;
 
                 // Get additional information
-                const specialRequests = document.querySelector('textarea[placeholder="Any special requests or requirements?"]').value;
+                const specialRequests = document.querySelector('textarea[placeholder="Your Address"]').value;
                 const arrivalTime = document.querySelector('select').value;
 
                 // Validate required fields
@@ -703,33 +703,34 @@
                 }
 
                 // Get counter values
-                const adultsInput = document.querySelectorAll('.counter-inputvilla1')[0].value;
-                const childrenInput = document.querySelectorAll('.counter-inputvilla')[0].value;
+                const adultsInput1 = document.querySelectorAll('.counter-inputvilla1')[0].value;
+                const childrenInput1 = document.querySelectorAll('.counter-inputvilla')[0].value;
                 const adultsInput2 = document.querySelectorAll('.counter-input')[0].value;
                 const childrenInput2 = document.querySelectorAll('.counter-input')[1].value;
 
                 // Create booking data object
                 let myArray = [];
                 let dateArray = [];
-                let villaArray = [];
+                let villaArray1 = [];
+                let villaArray2 = [];
                 let obj = new Object();
 
                 obj.total = '';
 
                 if(villa1) {
-                    let villaObj = new Object();
-                    villaArray.push("villa1");
-                    villaObj.people = parseInt(adultsInput);
-                    villaObj.child = parseInt(childrenInput);
-                    villaArray.push(villaObj);
+                   // let villaObj2 = new Object();
+					villaArray1.push("villa1");
+					villaArray1.push(adultsInput1);
+					villaArray1.push(childrenInput1);
+                   // villaArray1.push(villaObj2);
                 }
 
                 if(villa2) {
-                    let villaObj = new Object();
-                    villaArray.push("villa2");
-                    villaObj.people = parseInt(adultsInput2);
-                    villaObj.child = parseInt(childrenInput2);
-                    villaArray.push(villaObj);
+                    //let villaObj2 = new Object();
+                    villaArray2.push("villa2");
+                    villaArray2.push(adultsInput2);
+                    villaArray2.push(childrenInput2);
+                    //villaArray2.push(villaObj2);
                 }
 
                 obj.unitPrice = 5000; // Fixed price per night
@@ -743,7 +744,8 @@
 
                 myArray.push(obj);
                 myArray.push(dateArray);
-                myArray.push(villaArray);
+                myArray.push(villaArray1);
+                myArray.push(villaArray2);
 
                 // Log the data
                 console.log('Booking Data:', myArray);
