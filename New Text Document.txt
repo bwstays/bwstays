@@ -19,14 +19,13 @@ https://www.githubstatus.com/
 
 
 2)  Discover widget design to add all the json items on top of image and text side ( left and right )  
-5)  Update need to add a form in the booking.html read the guest information 
 6)  Firebase trail - low priority for now 
 7)  We need to change the style.css to cdn url, but a bit css rework needed in this case 
 8)  In booking page Terms and consitions,faq,cancelaltion can be a expand and collpase type for easy use
 12) Provide full url to all links 
-13) Ask your prompt
+13) Ask your prompt chat
 14) Festival offer enabler 
-15) 
+15) fooding and alllocation top heading  
 
 
 faq like this :https://www.briaux.com/
