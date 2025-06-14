@@ -15,7 +15,7 @@ const aboutCardData = {
         {
             title: "bustle in budget",
             icon: "fas fa-star",
-            description: "Create unforgettable memories with our curated experiences and activities.",
+            description: "Increased productivity. Group Workation without distraction (and with the motivation of their new, beautiful setting)",
             image: "assets/img/plantation/tea_wayanad.webp"
         }
     ]
