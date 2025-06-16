@@ -19,6 +19,12 @@ monitoring
 https://www.githubstatus.com/
 
 
+search in file 
+dtpc 
+jpg
+png
+
+
 2)  Discover widget design to add all the json items on top of image and text side ( left and right )  
 6)  Firebase trail - low priority for now 
 7)  We need to change the style.css to cdn url, but a bit css rework needed in this case 
