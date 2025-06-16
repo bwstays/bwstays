@@ -1119,6 +1119,26 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 			type: "Sporting",
 			knowmore: "./knowmore.html?id=82&cat=8",
 
+      },
+ {
+          id: 87,
+          name: "Turf",
+          description: "Turf.",
+          image: ["assets/img/sports/bw_green-grass-field-background-football-wayanad.webp"],
+          holidays: "Sun",
+          timing:[ "09:00-17:00"],
+          Contact: "+91-000 000 0000",
+     	  seasontovisit:["Summer (Febuary-May)","Monsoon (June-September)","Winter (October-January)"],
+          distance: "3",
+			latlong: "11.633206251508627, 76.08336925584594",
+			map: "https://maps.app.goo.gl/XqTMS94np895ge9w5",
+			transport: "Public",
+			rating:"4.5",
+			hrs:"2",
+			fee:"0",
+			type: "Sporting",
+			knowmore: "./knowmore.html?id=87&cat=8",
+
       }
     ]
    ,

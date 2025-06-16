@@ -1,13 +1,8 @@
 
+var iconURLPrefix = '';
 
-var bwlocations = [
+var bwlocations = [['<h6><a target="_blank" href="https://www.blackandwhite.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.blackandwhite.com" title="Black and White Stays"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/logo/pin-drop.png" width="300" ></a>', 11.542470, 76.027224, 2, iconURLPrefix+"assets/img/logo/bw.png"],];
 
-    ['<h6><a target="_blank" href="https://www.blackandwhite.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.blackandwhite.com" title="Black and White Stays"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/logo/pin-drop.png" width="300" ></a>', 11.542470, 76.027224, 2, "assets/img/logo/bw.png"],
-
-
-];
-
-//var iconURLPrefix = 'https://www.dtpcwayanad.com/images/';
 var map = new google.maps.Map(document.getElementById('map'), {
   zoom: 10,
   // disable the default User Interface
@@ -16,7 +11,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
   zoomControl: true,
   streetViewControl: true,
   fullscreenControl: true,
-  center: new google.maps.LatLng( 11.542470, 76.027224),
+  center: new google.maps.LatLng( 11.542841751488135, 76.02595022698385),
   //	mapTypeId: google.maps.MapTypeId.ROADMAP,
   mapId: 'f03033acde18bc0d'
 });

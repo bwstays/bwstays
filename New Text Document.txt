@@ -32,14 +32,15 @@ png
 12) Provide full url to all links 
 13) Ask your prompt chat
 14) Festival offer enabler 
-15) fooding and alllocation top heading  
+15) vertical side menu
+16) seperte  locaton pages 
+17) free forms
 
 
 faq like this :https://www.briaux.com/
 
-5) SEO improvement i will tell you in the next stage 
+5) SEO improvement 
 6) Index page in github pages 
-7) ID for the elements 
 8) Change all image names and color 
 9) Add title to all images,form fields etc 
 10)make browser cache data
