@@ -13,6 +13,7 @@ perfformance
 https://developer.yahoo.com/performance/rules.html
 https://cloudinary.com/tools/png-to-avif
 https://pinetools.com/bulk-batch-grayscale-image
+https://www.simpleimageresizer.com/resize-image-to-10-kb
 
 
 monitoring
