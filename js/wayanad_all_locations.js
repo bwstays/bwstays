@@ -47,10 +47,6 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="./knowmore.html?id=55&cat=3" title="Neelimala view point">Neelimala view point</a></h6><a target="_blank" href="./knowmore.html?id=55&cat=3" title="Neelimala view point"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/romantic/neelimala-view-point-wayanad.avif" width="300" ></a>', 11.53679433721778, 76.22909644232763, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-
-
-
-
 ['<h6><a target="_blank" href="./knowmore.html?id=6&cat=4" title="Sultans Batthery Valmiki Ashram">Sultans Batthery Valmiki Ashram</a></h6><a target="_blank" href="./knowmore.html?id=6&cat=4" title="Sultans Batthery Valmiki Ashram	"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/heritage/bw_valmiki_ashramam.webp" width="300" ></a>', 11.778971412702218, 76.19547348280202, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="./knowmore.html?id=7&cat=13" title="Meenangadi Church">Meenangadi Church</a></h6><a target="_blank" href="./knowmore.html?id=7&cat=13" title="Meenangadi Church"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/pilgrimage/bw_meengadhi_church.avif" width="300" ></a>', 11.660422442249578, 76.17374499957178, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
@@ -77,10 +73,7 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="./knowmore.html?id=63&cat=7" title="Boys Town">Boys Town</a></h6><a target="_blank" href="./knowmore.html?id=63&cat=7" title="Boys Town"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/farm/bw_boys-town_wayanad.avif" width="300" ></a>',11.842370909585952, 75.92226125826711, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-
 ['<h6><a target="_blank" href="./knowmore.html?id=64&cat=7" title="Ambalavayal">Ambalavayal</a></h6><a target="_blank" href="./knowmore.html?id=64&cat=7" title="Ambalavayal"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/farm/bw_wayanad_amalavayal.avif" width="300" ></a>',11.616591290587456, 76.21447474945045, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
-
-
 
 ['<h6><a target="_blank" href="./knowmore.html?id=33&cat=1" title="Banasura Meenmutty Waterfalls">Banasura Meenmutty Waterfalls</a></h6><a target="_blank" href="./knowmore.html?id=33&cat=1" title="Banasura Meenmutty Waterfalls"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/falls/bw_meenmufalls_wayanad.avif" width="300" ></a>', 11.677697, 75.935689, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
@@ -111,11 +104,6 @@ var bwlocations = [
 ['<h6><a target="_blank" href="./knowmore.html?id=46&cat=3" title="Mailadippara">Mailadippara</a></h6><a target="_blank" href="./knowmore.html?id=46&cat=3" title="Mailadippara"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/romantic/bw_mailadanpara.avif" width="300" ></a>', 11.624409556486977, 76.0923043558191, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="./knowmore.html?id=48&cat=3" title="Manjappara">Manjappara</a></h6><a target="_blank" href="./knowmore.html?id=48&cat=3" title="Manjappara"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/romantic/bw_manjapara_viewpoint.avif" width="300" ></a>', 11.611800749127921, 76.20194402698291, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
-
-
-
-
-
 
 ['<h6><a target="_blank" href="./knowmore.html?id=32&cat=6" title="Begur wild life sanctuary">Begur wild life sanctuary</a></h6><a target="_blank" href="./knowmore.html?id=32&cat=6" title="Begur wild life sanctuary"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/wildlife/Wildlife_safari_at_tholpetty_wildlife_sanctuary.avif" width="300" ></a>', 11.84916385461648, 76.08839341349146, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
