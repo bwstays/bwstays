@@ -1,6 +1,5 @@
 blackandwhitestays.com
 
-https://pinetools.com/bulk-batch-grayscale-image
 https://jsoneditoronline.org/#right=local.qapiki
 https://travalam.com/district/wayanad/
 https://diksoochi.blogspot.com/2011/04/asian-elephants-in-bandipur-national.html
@@ -13,6 +12,8 @@ https://www.mywayanad.com/
 perfformance 
 https://developer.yahoo.com/performance/rules.html
 https://cloudinary.com/tools/png-to-avif
+https://pinetools.com/bulk-batch-grayscale-image
+
 
 monitoring
 https://www.githubstatus.com/
