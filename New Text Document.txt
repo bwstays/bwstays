@@ -24,6 +24,8 @@ search in file
 dtpc 
 jpg
 png
+www.company.in
+blackandwhite.
 
 
 2)  Discover widget design to add all the json items on top of image and text side ( left and right )  
