@@ -89,9 +89,28 @@
             $("#checkavail").click(function () {
                 // Code to execute when the button is clicked
 
-                if ($("#checkInDate").val() !== "" || $("#checkOutDate").val() !== "") {
-                    alert($("#checkInDate").val());
-                }
+
+                var checkin  = $("#checkInDate").val(); //2013-09-5
+				var checkout    = $("#checkOutDate").val(); //2013-09-10
+
+                if ($("#checkInDate").val().trim() === "" )
+                {
+						   alert("Please provide checkin  date ");
+						   return;
+			    }
+
+                if ( $("#checkOutDate").val().trim() === ""    )
+                {
+						   alert("Please provide  checkout date ");
+						   return;
+			    }
+
+ 				if (new Date(checkout)<new Date(checkin) ){
+						   alert("Check out date  should be same or greater than the  check in date ");
+						   return;
+			    }
+
+
 
             });
 
@@ -183,6 +202,10 @@
                         var checkIn = new Date($("#checkInDate").val());
                         var checkOut = new Date(sDate);
                         var nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
+                        if(nights<=0)
+                        {
+							  $("#checkOutDate").focus();
+						}
                         $("#nights-count").text(nights);
                     }
                     // If both dates are set, reset and start new selection
@@ -255,7 +278,8 @@
 							// step.classList.remove('bg-dark', 'text-white-50');
 							// step.classList.add('active', 'bg-primary', 'text-white');
 						});
-					}
+
+			}
 				});
             */
         });
