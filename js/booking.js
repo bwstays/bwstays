@@ -268,7 +268,7 @@
 
 			    for (i = 0; i < booking.length; i++) {
 
-			     // if (booking[i].length == 2)
+			        //if (booking[i].length == 2)
 
                  }
 		    }
