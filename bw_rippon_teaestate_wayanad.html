@@ -107,7 +107,7 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- About Section with new design from knowmore-place-dynamic.js -->
     <section class="about-section" id="about">
         <div class="container-fluid" style="padding: 2rem;">
@@ -117,25 +117,25 @@
                     <!-- Image Container with Carousel -->
                     <div style="margin-bottom: 2rem; position: relative; overflow: hidden; width: 100%; height: 400px;">
                         <div style="position: relative; width: 100%; height: 100%; transition: transform 0.5s ease; display: flex;">
-                            <img src="assets/img/plantation/tea_plantaion.avif" alt="Rippon Tea estate" class="img-fluid" 
+                            <img src="assets/img/plantation/tea_plantaion.avif" alt="Rippon Tea estate" class="img-fluid"
                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; position: absolute; top: 0; left: 0%; transition: transform 0.5s ease; min-width: 100%;">
-                            <img src="assets/img/plantation/tea_wayanad.webp" alt="Rippon Tea estate" class="img-fluid" 
+                            <img src="assets/img/plantation/tea_wayanad.webp" alt="Rippon Tea estate" class="img-fluid"
                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; position: absolute; top: 0; left: 100%; transition: transform 0.5s ease; min-width: 100%;">
-                            <img src="assets/img/plantation/tea_plantaion.avif" alt="Rippon Tea estate" class="img-fluid" 
+                            <img src="assets/img/plantation/tea_plantaion.avif" alt="Rippon Tea estate" class="img-fluid"
                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; position: absolute; top: 0; left: 200%; transition: transform 0.5s ease; min-width: 100%;">
                         </div>
-                        
+
                         <!-- Navigation Arrows -->
-                        <div class="image-nav-arrow image-nav-left" 
+                        <div class="image-nav-arrow image-nav-left"
                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); z-index: 2; cursor: pointer; color: white; font-size: 20px; background-color: rgba(0,0,0,0.6); padding: 15px 15px; border-radius: 50%; display: block; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
                             <i class="fas fa-chevron-left"></i>
                         </div>
-                        <div class="image-nav-arrow image-nav-right" 
+                        <div class="image-nav-arrow image-nav-right"
                             style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); z-index: 2; cursor: pointer; color: white; font-size: 20px; background-color: rgba(0,0,0,0.6); padding: 15px 15px; border-radius: 50%; display: block; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
                             <i class="fas fa-chevron-right"></i>
                         </div>
                     </div>
-                    
+
                     <!-- Description Container -->
                     <div>
                         <h3 class="text-white mb-3">Rippon Tea estate</h3>
@@ -169,13 +169,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Right Column - Other Plantation Places -->
                 <div class="col-lg-6" style="padding: 1rem;">
                     <div class="border-bottom border-primary text-center mb-4" style="width:100%;margin:0 auto">
                         <h5 class="text-white">Plantations Places</h5>
                     </div>
-                    
+
                     <div class="row">
                         <!-- Coffee Plantation Card -->
                         <div class="col-md-6 mb-4">
@@ -423,7 +423,7 @@
     <script src="js/bwmaps.js"></script>
     <script src="js/whatsapp.js"></script>
     <script src="js/weather.js"></script>
-    
+
     <!-- Script to initialize nearby places and image carousel -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -431,21 +431,21 @@
             window.getCurrentPageId = function() {
                 return 61;
             };
-            
+
             window.getCurrentCatagoryId = function() {
                 return 0;
             };
-            
+
             // Call the renderNearbyPlaces function
             renderNearbyPlaces();
-            
+
             // Image carousel functionality
             const imgWrapper = document.querySelector('.col-lg-6 > div:first-child > div:first-child');
             const leftArrow = document.querySelector('.image-nav-left');
             const rightArrow = document.querySelector('.image-nav-right');
             let currentImageIndex = 0;
             const imageCount = 3; // Number of images in the carousel
-            
+
             function updateImage(direction) {
                 if (direction === 'next') {
                     currentImageIndex = (currentImageIndex + 1) % imageCount;
@@ -454,31 +454,31 @@
                 }
                 imgWrapper.style.transform = `translateX(-${currentImageIndex * 100}%)`;
             }
-            
+
             leftArrow.addEventListener('click', function() {
                 updateImage('prev');
             });
-            
+
             rightArrow.addEventListener('click', function() {
                 updateImage('next');
             });
-            
+
             // Add hover effects for arrows
             leftArrow.addEventListener('mouseenter', function() {
                 this.style.backgroundColor = 'rgba(0,0,0,0.8)';
                 this.style.transform = 'translateY(-50%) scale(1.1)';
             });
-            
+
             leftArrow.addEventListener('mouseleave', function() {
                 this.style.backgroundColor = 'rgba(0,0,0,0.6)';
                 this.style.transform = 'translateY(-50%) scale(1)';
             });
-            
+
             rightArrow.addEventListener('mouseenter', function() {
                 this.style.backgroundColor = 'rgba(0,0,0,0.8)';
                 this.style.transform = 'translateY(-50%) scale(1.1)';
             });
-            
+
             rightArrow.addEventListener('mouseleave', function() {
                 this.style.backgroundColor = 'rgba(0,0,0,0.6)';
                 this.style.transform = 'translateY(-50%) scale(1)';

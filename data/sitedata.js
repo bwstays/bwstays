@@ -846,7 +846,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 ,
     {
       id: 20,
-      name: "Lakkidi Ghats  view point",
+      name: "Lakkidi Ghats View Point",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
       image: ["assets/img/romantic/ghats.webp"],
       holidays: "Sun",
