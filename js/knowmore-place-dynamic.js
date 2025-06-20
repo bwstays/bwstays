@@ -167,6 +167,7 @@ window.addEventListener('load', function () {
   imgContainer.appendChild(leftArrow);
   imgContainer.appendChild(rightArrow);
 
+
   const descContainer = document.createElement('div');
   descContainer.innerHTML = `
       <h3 class="text-white mb-3">${currentItemData.name}</h3>
