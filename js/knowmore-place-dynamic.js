@@ -14,7 +14,16 @@ window.addEventListener('load', function () {
       console.error('About section not found');
       return;
   }
+  
+  // Check if we're on a page that should use static content for the left column
+  const isStaticLeftColumnPage = document.body.classList.contains('knowmore-page');
+  if (isStaticLeftColumnPage) {
+    // Only update the right column with dynamic content
+    updateRightColumnOnly();
+    return;
+  }
 
+  // For other pages, continue with the original full page dynamic content
   const mainContainer = document.createElement('div');
   mainContainer.className = 'container-fluid';
   mainContainer.style.padding = '2rem';
@@ -195,11 +204,11 @@ window.addEventListener('load', function () {
             <li><img alt="Black and White Stays Wayanad"  width="20" height="20" src="assets/img/icons/cloudy.png" alt="Black and White Stays Wayanad" />Weather: <span id="temperature"></span></p> </li>
             </ul>
         </small>
-      </div>
+      </div> 
       <div class="mb-3">
                  <span class="text-white-50 ml-2">${currentItemData.description}</span>
        </div>
-  `;
+ `;
 
 
 
@@ -302,6 +311,84 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
   aboutSection.innerHTML = '';
   aboutSection.appendChild(mainContainer);
 });
+
+// Function to update only the right column with dynamic content
+function updateRightColumnOnly() {
+  var currentPageId = getCurrentPageId();
+  var currentcatId = getCurrentCatagoryId();
+  
+  // Find the right column container
+  const rightColumnContainer = document.querySelector('#plantation-places');
+  if (!rightColumnContainer) {
+    console.error('Right column container not found');
+    return;
+  }
+  
+  // Clear existing content in the right column
+  rightColumnContainer.innerHTML = '';
+  
+  // Get filtered items (excluding current page)
+  const filteredItems = Object.values(siteData)[currentcatId].filter(item => item.id !== eval(currentPageId));
+  
+  // Create cards for each filtered item
+  filteredItems.forEach((item) => {
+    const cardCol = document.createElement('div');
+    cardCol.className = 'col-md-6 mb-4';
+    
+    const card = document.createElement('div');
+    card.className = 'card bg-dark border-light h-100';
+    card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = 'none';
+    });
+    
+    const itemImages = Array.isArray(item.image) ? item.image : [item.image];
+    const firstImage = itemImages[0];
+    
+    card.innerHTML = `
+      <div class="card-img-container" style="height: 200px; overflow: hidden;">
+        <img alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"
+             style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
+      </div>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title text-white">${item.name}</h5>
+        <div class="rating mb-2">
+          <span class="text-warning">★ ${item.rating}</span>
+          <span class="text-white-50 ml-2">${item.distance}km from Kalpetta</span>
+          <span class="text-white-50 ml-2">
+            <a href="${item.map}" target="_new" class="text-decoration-none text-white">
+              <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+            </a>
+          </span>
+        </div>
+        <p class="card-text text-white-50 flex-grow-1">${item.description.substring(0,100)}...</p>
+        <div class="card-footer-info mb-3">
+          <small class="text-white-50">
+            <i class="fas fa-clock"></i> ${item.timing}<br>
+            <i class="fas fa-car-side"></i> ${item.transport} <br>
+            <i class="fas fa-calendar-week"></i> ${item.holidays} <br>
+            <i class="fas fa-phone"></i> ${item.Contact}
+          </small>
+        </div>
+        <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Know More</a>
+      </div>
+    `;
+    
+    cardCol.appendChild(card);
+    rightColumnContainer.appendChild(cardCol);
+  });
+  
+  // Update the nearby places section title if needed
+  const nearbyPlacesTitle = document.querySelector('#nearby-places h2');
+  if (nearbyPlacesTitle) {
+    const currentItem = Object.values(siteData)[currentcatId].find(item => item.id === eval(currentPageId));
+    if (currentItem) {
+      nearbyPlacesTitle.textContent = "Location Nearby " + currentItem.name;
+    }
+  }
+}
 
 function initializeSection(sectionType, data, sectionIndex) {
   let sectionContainer;
