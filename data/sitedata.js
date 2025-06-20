@@ -264,7 +264,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       rating:"4.4",
       hrs:"2",
       fee:"0",
-       type: "trucking",
+       type: "Trucking",
       knowmore: "./knowmore.html?id=16&cat=1",
 
     }
@@ -777,7 +777,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       rating:"4.1",
       hrs:"2",
       fee:"0",
-       type: "trucking",
+       type: "Trucking",
       knowmore: "./knowmore.html?id=15&cat=5",
 
     },
@@ -797,7 +797,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       rating:"4.5",
       hrs:"2",
       fee:"0",
-       type: "trucking",
+       type: "Trucking",
       knowmore: "./knowmore.html?id=17&cat=5",
 
     }
@@ -818,7 +818,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       rating:"4.6",
       hrs:"2",
       fee:"0",
-       type: "trucking",
+       type: "Trucking",
       knowmore: "./knowmore.html?id=18&cat=5",
 
     }
@@ -839,7 +839,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
          rating:"4.6",
          hrs:"2",
          fee:"0",
-          type: "trucking",
+          type: "Trucking",
          knowmore: "./knowmore.html?id=19&cat=5",
 
     }
@@ -860,7 +860,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       rating:"4.5",
       hrs:"2",
       fee:"0",
-      type: "trucking",
+      type: "Trucking",
       knowmore: "./knowmore.html?id=20&cat=5",
 
     }
@@ -903,7 +903,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       fee:"0",
       latlong: "11.639978909862197, 76.08420612038587",
       map: "https://maps.app.goo.gl/n2aJqSpipqQjE6x56",
-       type: "trucking",
+       type: "Trucking",
       knowmore: "./knowmore.html?id=23&cat=5",
 
     }
@@ -925,7 +925,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       fee:"0",
       latlong: "11.650880848883398, 76.19276045292615",
       map: "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
-       type: "trucking",
+       type: "Trucking",
       knowmore: "./knowmore.html?id=87&cat=5",
 
     }
