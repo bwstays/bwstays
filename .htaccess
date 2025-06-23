@@ -27,18 +27,18 @@ RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
 RewriteCond %{HTTP_HOST} ^92\.61\.153\.220
 RewriteCond %{HTTP_HOST} ^clayhut\.co\.in [NC]
 RewriteCond %{SERVER_PORT} 80 
-RewriteRule (.*) http://www.blackandwhite.com/$1 [R=301,L]
+RewriteRule (.*) http://www.bwstays.com/$1 [R=301,L]
 
  
-RewriteCond %{HTTP_HOST} ^blackandwhite.com$ [NC]
+RewriteCond %{HTTP_HOST} ^bwstays.com$ [NC]
 RewriteCond %{HTTP_HOST} !^$ 
 RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ http://www.blackandwhite.com/$1 [L,R=301]
+RewriteRule ^(.*)$ http://www.bwstays.com/$1 [L,R=301]
 
 
-#RewriteCond %{HTTP_HOST} www.blackandwhite.com$ [NC]
-#RewriteCond %{HTTP_HOST} !^www.blackandwhite.com$ [NC]
-#RewriteRule ^(.*)$ http://www.blackandwhite.com/$1 [L,R=301]
+#RewriteCond %{HTTP_HOST} www.bwstays.com$ [NC]
+#RewriteCond %{HTTP_HOST} !^www.bwstays.com$ [NC]
+#RewriteRule ^(.*)$ http://www.bwstays.com/$1 [L,R=301]
 
 
  
