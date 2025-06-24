@@ -63,3 +63,8 @@ no smoking image
 no drinks image 
 BYOF/BYOB/
 provide filter based on short time, nearby, review, type
+
+
+
+contens security policy
+https://stackoverflow.com/questions/40360109/content-security-policy-img-src-self-data
