@@ -1,6 +1,8 @@
 const filesToCache = [
   '/',
-  'https://bwstays.github.io/bwstays/error.html'
+  'https://bwstays.github.io/bwstays/css/styles.css',
+  'https://bwstays.github.io/bwstays/data/sitedata.js',
+  'https://bwstays.github.io/bwstays/data/nearbylocationsdata.js'
 ];
 const staticCacheName = 'pages-cache-v1';
 
