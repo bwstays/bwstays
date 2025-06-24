@@ -1,6 +1,6 @@
 const filesToCache = [
   '/',
-  'error.html'
+  'https://bwstays.github.io/bwstays/error.html'
 ];
 const staticCacheName = 'pages-cache-v1';
 
@@ -25,7 +25,7 @@ self.addEventListener('fetch', event => {
 
         // fetch request returned 404, serve custom 404 page
         if (response.status === 404) {
-          return caches.match('error.html');
+          return caches.match('https://bwstays.github.io/bwstays/error.html');
         }
       });
     });
