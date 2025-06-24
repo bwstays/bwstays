@@ -31,7 +31,7 @@ search in file
 dtpc 
 jpg
 png
-www.company.in
+https://bwstays.github.io/bwstays
 blackandwhite.
 blogs.bwstays.com
 
