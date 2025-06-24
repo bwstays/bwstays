@@ -1,9 +1,9 @@
 //https://medium.com/@straker/custom-404-page-without-a-server-2dad21c8f480
 const filesToCache = [
   '/',
-  'https://bwstays.github.io/bwstays/css/styles.css',
-  'https://bwstays.github.io/bwstays/data/sitedata.js',
-  'https://bwstays.github.io/bwstays/data/nearbylocationsdata.js'
+  'https://www.bwstays.com/css/styles.css',
+  'https://www.bwstays.com/data/sitedata.js',
+  'https://www.bwstays.com/data/nearbylocationsdata.js'
 ];
 const staticCacheName = 'pages-cache-v1';
 
@@ -28,7 +28,7 @@ self.addEventListener('fetch', event => {
 
          // fetch request returned 404, serve custom 404 page
         if (response.status === 404) {
-          return caches.match('https://bwstays.github.io/bwstays/error.html');
+          return caches.match('https://www.bwstays.com/error.html');
         }
         return caches.open(staticCacheName)
         .then(cache => {

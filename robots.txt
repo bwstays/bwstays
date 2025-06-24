@@ -6,4 +6,4 @@ User-agent: Baiduspider
 Crawl-Delay: 1
 Allow: /
 Disallow: .htaccess
-Sitemap: https://bwstays.github.io/bwstays/sitemap.txt
+Sitemap: https://www.bwstays.com/sitemap.txt

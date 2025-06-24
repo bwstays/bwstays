@@ -1,4 +1,4 @@
-var iconURLPrefix = 'https://bwstays.github.io/bwstays/';
+var iconURLPrefix = 'https://www.bwstays.com/';
 
 const aboutCardData = {
     cards: [

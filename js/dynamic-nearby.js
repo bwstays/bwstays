@@ -173,7 +173,7 @@ function renderNearbyPlaces() {
     nearbyCardsContainer.innerHTML = placesHTML;
 }
 
-var iconURLPrefix = 'https://bwstays.github.io/bwstays/';
+var iconURLPrefix = 'https://www.bwstays.com/';
 
 
 // Function to create a card for each nearby place

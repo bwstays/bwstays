@@ -201,7 +201,7 @@ window.addEventListener('load', function () {
             <li><i class="fas fa-bell"></i> Type: ${currentItemData.type}</li>
             <li><i class="fas fa-power-off"></i> Holiday: ${currentItemData.holidays}</li>
             <li><i class="fas fa-phone"></i> Contact: ${currentItemData.Contact}</li>
-            <li><img alt="Black and White Stays Wayanad"  width="20" height="20" src="https://bwstays.github.io/bwstays/assets/img/icons/cloudy.png" alt="Black and White Stays Wayanad" />Weather: <span id="temperature"></span></p> </li>
+            <li><img alt="Black and White Stays Wayanad"  width="20" height="20" src="https://www.bwstays.com/assets/img/icons/cloudy.png" alt="Black and White Stays Wayanad" />Weather: <span id="temperature"></span></p> </li>
             </ul>
         </small>
       </div>
