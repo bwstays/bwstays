@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
       console.error('About section not found');
       return;
   }
-  
+
   // Check if we're on a page that should use static content for the left column
   const isStaticLeftColumnPage = document.body.classList.contains('knowmore-page');
   if (isStaticLeftColumnPage) {
@@ -201,10 +201,10 @@ window.addEventListener('load', function () {
             <li><i class="fas fa-bell"></i> Type: ${currentItemData.type}</li>
             <li><i class="fas fa-power-off"></i> Holiday: ${currentItemData.holidays}</li>
             <li><i class="fas fa-phone"></i> Contact: ${currentItemData.Contact}</li>
-            <li><img alt="Black and White Stays Wayanad"  width="20" height="20" src="assets/img/icons/cloudy.png" alt="Black and White Stays Wayanad" />Weather: <span id="temperature"></span></p> </li>
+            <li><img alt="Black and White Stays Wayanad"  width="20" height="20" src="https://bwstays.github.io/bwstays/assets/img/icons/cloudy.png" alt="Black and White Stays Wayanad" />Weather: <span id="temperature"></span></p> </li>
             </ul>
         </small>
-      </div> 
+      </div>
       <div class="mb-3">
                  <span class="text-white-50 ml-2">${currentItemData.description}</span>
        </div>
@@ -316,37 +316,37 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
 function updateRightColumnOnly() {
   var currentPageId = getCurrentPageId();
   var currentcatId = getCurrentCatagoryId();
-  
+
   // Find the right column container
   const rightColumnContainer = document.querySelector('#plantation-places');
   if (!rightColumnContainer) {
     console.error('Right column container not found');
     return;
   }
-  
+
   // Clear existing content in the right column
   rightColumnContainer.innerHTML = '';
-  
+
   // Get filtered items (excluding current page)
   const filteredItems = Object.values(siteData)[currentcatId].filter(item => item.id !== eval(currentPageId));
-  
+
   // Create cards for each filtered item
   filteredItems.forEach((item) => {
     const cardCol = document.createElement('div');
     cardCol.className = 'col-md-6 mb-4';
-    
+
     const card = document.createElement('div');
     card.className = 'card bg-dark border-light h-100';
     card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-    
+
     card.addEventListener('mouseleave', function() {
       this.style.transform = 'translateY(0)';
       this.style.boxShadow = 'none';
     });
-    
+
     const itemImages = Array.isArray(item.image) ? item.image : [item.image];
     const firstImage = itemImages[0];
-    
+
     card.innerHTML = `
       <div class="card-img-container" style="height: 200px; overflow: hidden;">
         <img alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"
@@ -375,11 +375,11 @@ function updateRightColumnOnly() {
         <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Know More</a>
       </div>
     `;
-    
+
     cardCol.appendChild(card);
     rightColumnContainer.appendChild(cardCol);
   });
-  
+
   // Update the nearby places section title if needed
   const nearbyPlacesTitle = document.querySelector('#nearby-places h2');
   if (nearbyPlacesTitle) {

@@ -1,22 +1,24 @@
+var iconURLPrefix = 'https://bwstays.github.io/bwstays/';
+
 const aboutCardData = {
     cards: [
         {
             title: "nestle with nature",
             icon: "fas fa-mountain",
             description: "Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep.",
-            image: "assets/img/villa1/wayanad_mist.avif"
+            image: iconURLPrefix+"assets/img/villa1/wayanad_mist.avif"
         },
         {
             title: "hustle in hisspeed",
             icon: "fas fa-home",
             description: "Luxurious amenities and thoughtfully designed spaces for your perfect stay.",
-            image: "assets/img/villa1/wayanad_mist.avif"
+            image: iconURLPrefix+"assets/img/villa1/wayanad_mist.avif"
         },
         {
             title: "bustle in budget",
             icon: "fas fa-star",
             description: "Increased productivity. Group Workation without distraction (and with the motivation of their new, beautiful setting)",
-            image: "assets/img/plantation/tea_wayanad.webp"
+            image: iconURLPrefix+"assets/img/plantation/tea_wayanad.webp"
         }
     ]
 };

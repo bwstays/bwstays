@@ -1,4 +1,5 @@
-var iconURLPrefix = '';
+var iconURLPrefix = 'https://bwstays.github.io/bwstays/';
+
 
 
 var bwlocations = [
