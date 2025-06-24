@@ -3,6 +3,8 @@ var iconURLPrefix = '';
 
 var bwlocations = [['<h6><a target="_blank" href="https://bwstays.github.io/bwstays" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://bwstays.github.io/bwstays" title="Black and White Stays"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/logo/pin-drop.png" width="300" ></a>', 11.542470, 76.027224, 2, iconURLPrefix+"assets/img/logo/bw.png"],];
 
+const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
+
 var map = new google.maps.Map(document.getElementById('map'), {
   zoom: 10,
   // disable the default User Interface
@@ -18,10 +20,12 @@ var map = new google.maps.Map(document.getElementById('map'), {
 var infowindow = new google.maps.InfoWindow();
 var marker, i;
 for (i = 0; i < bwlocations.length; i++) {
-  marker = new google.maps.Marker({
+
+  marker = new  AdvancedMarkerElement({
+	  map: map,
     position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
-    icon: bwlocations[i][4],
-    map: map
+    icon: bwlocations[i][4]
+
   });
   google.maps.event.addListener(marker, 'click', (function (marker, i) {
     return function () {
