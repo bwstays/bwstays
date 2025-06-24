@@ -57,6 +57,8 @@ faq like this :https://www.briaux.com/
 9) Add title to all images,form fields etc 
 10)make browser cache data
 
+SPF Record/DMARC Record
+
 no smoking image 
 no drinks image 
 BYOF/BYOB/
