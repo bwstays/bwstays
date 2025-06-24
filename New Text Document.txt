@@ -34,6 +34,7 @@ png
 https://bwstays.github.io/bwstays
 blackandwhite.
 blogs.bwstays.com
+dtpcwayanad
 
 
 2)  Discover widget design to add all the json items on top of image and text side ( left and right )  
