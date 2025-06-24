@@ -1,3 +1,4 @@
+//https://medium.com/@straker/custom-404-page-without-a-server-2dad21c8f480
 const filesToCache = [
   '/',
   'https://bwstays.github.io/bwstays/css/styles.css',
