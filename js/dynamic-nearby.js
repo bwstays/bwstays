@@ -173,9 +173,12 @@ function renderNearbyPlaces() {
     nearbyCardsContainer.innerHTML = placesHTML;
 }
 
+var iconURLPrefix = 'https://bwstays.github.io/bwstays/';
+
+
 // Function to create a card for each nearby place
 function createPlaceCard(place) {
-    const imageUrl = place.image || 'assets/img/villa1/demo-image-02.avif';
+    const imageUrl = place.image || iconURLPrefix+'assets/img/villa1/demo-image-02.avif';
     const knowmoreUrl = place.knowmore || '#';
 
     return `
