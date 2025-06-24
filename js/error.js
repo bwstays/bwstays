@@ -28,6 +28,6 @@ self.addEventListener('fetch', event => {
           return caches.match('https://bwstays.github.io/bwstays/error.html');
         }
       });
-    });
+    })
   );
 });
