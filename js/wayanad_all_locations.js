@@ -98,8 +98,7 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="./knowmore.html?id=24&cat=4" title="Pazhassi Smarakam">Pazhassi Smarakam</a></h6><a target="_blank" href="./knowmore.html?id=24&cat=4" title="Pazhassi Smarakam"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src=iconURLPrefix+"assets/img/heritage/bw-stays-pazhassi-tomb-wayanad-resort.avif" width="300" ></a>', 11.817826, 76.217964, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-['<h6><a target="_blank" href="./knowmore.html?id=44&cat=3" title="Pookode Lake">Pookode Lake</a></h6>
-<a target="_blank" href="./knowmore.html?id=44&cat=3" title="Pookode Lake"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/romantic/bw-vacation-pookode-lake-wayanad.avif" width="300" ></a>', 11.542470, 76.027224, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="./knowmore.html?id=44&cat=3" title="Pookode Lake">Pookode Lake</a></h6><a target="_blank" href="./knowmore.html?id=44&cat=3" title="Pookode Lake"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/romantic/bw-vacation-pookode-lake-wayanad.avif" width="300" ></a>', 11.542470, 76.027224, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="./knowmore.html?id=35&cat=1" title="Soochipara Waterfalls">Soochipara Waterfalls</a></h6><a target="_blank" href="./knowmore.html?id=35&cat=1" title="Soochipara Waterfalls"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/falls/bw-service-apartment-soochipara-wayanad.avif" width="300" ></a>', 11.511654, 76.163737, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
