@@ -98,7 +98,8 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="./knowmore.html?id=24&cat=4" title="Pazhassi Smarakam">Pazhassi Smarakam</a></h6><a target="_blank" href="./knowmore.html?id=24&cat=4" title="Pazhassi Smarakam"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src=iconURLPrefix+"assets/img/heritage/bw-stays-pazhassi-tomb-wayanad-resort.avif" width="300" ></a>', 11.817826, 76.217964, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-['<h6><a target="_blank" href="./knowmore.html?id=44&cat=3" title="Pookode Lake">Pookode Lake</a></h6><a target="_blank" href="./knowmore.html?id=44&cat=3" title="Pookode Lake"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src=iconURLPrefix+"assets/img/romantic/pookode-lake-wayanad.avif" width="300" ></a>', 11.542470, 76.027224, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="./knowmore.html?id=44&cat=3" title="Pookode Lake">Pookode Lake</a></h6>
+<a target="_blank" href="./knowmore.html?id=44&cat=3" title="Pookode Lake"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src='+iconURLPrefix+'"assets/img/romantic/bw-vacation-pookode-lake-wayanad.avif" width="300" ></a>', 11.542470, 76.027224, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="./knowmore.html?id=35&cat=1" title="Soochipara Waterfalls">Soochipara Waterfalls</a></h6><a target="_blank" href="./knowmore.html?id=35&cat=1" title="Soochipara Waterfalls"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/falls/bw-service-apartment-soochipara-wayanad.avif" width="300" ></a>', 11.511654, 76.163737, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
@@ -116,7 +117,7 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="./knowmore.html?id=15&cat=5" title="Kuruva Island">Kuruva Island</a></h6><a target=" blank" href="./knowmore.html?id=15&cat=5" title="Kuruva Island"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad" src=iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad.avif" width="300" ></a>', 11.824576, 76.094040, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-['<h6><a target="_blank" href="./knowmore.html?id=45&cat=3" title="Banasura Sagar Dam">Banasura Sagar Dam</a></h6><a target="_blank" href="./knowmore.html?id=45&cat=3" title="Banasura Sagar Dam"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/romantic/banasura-sagar-dam-wayanad.avif" width="300" ></a>', 11.670692, 75.955571, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="./knowmore.html?id=45&cat=3" title="Banasura Sagar Dam">Banasura Sagar Dam</a></h6><a target="_blank" href="./knowmore.html?id=45&cat=3" title="Banasura Sagar Dam"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/romantic/bw_stays-banasura-sagar-dam-wayanad.avif" width="300" ></a>', 11.670692, 75.955571, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="./knowmore.html?id=43&cat=3" title="Karapuzha Dam">Karapuzha Dam</a></h6><a target="_blank" href="./knowmore.html?id=43&cat=3" title="Karapuzha Dam"><img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad"  src="assets/img/romantic/bw_wayanad_karappuzha_dam.avif" width="300" ></a>', 11.618487, 76.167956, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ];
