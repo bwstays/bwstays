@@ -18,7 +18,7 @@ const aboutCardData = {
             title: "bustle in budget",
             icon: "fas fa-star",
             description: "Increased productivity. Group Workation without distraction (and with the motivation of their new, beautiful setting)",
-            image: iconURLPrefix+"assets/img/plantation/tea_wayanad.webp"
+            image: iconURLPrefix+"assets/img/plantation/bw-tea-estate-kalpetta-india.webp"
         }
     ]
 };
