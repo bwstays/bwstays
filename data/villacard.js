@@ -6,13 +6,13 @@ const aboutCardData = {
             title: "nestle with nature",
             icon: "fas fa-mountain",
             description: "Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep.",
-            image: iconURLPrefix+"assets/img/villa1/wayanad_mist.avif"
+            image: iconURLPrefix+"assets/img/villa1/black-and-white-wayanad-mist.avif"
         },
         {
             title: "hustle in hisspeed",
             icon: "fas fa-home",
             description: "Luxurious amenities and thoughtfully designed spaces for your perfect stay.",
-            image: iconURLPrefix+"assets/img/villa1/wayanad_mist.avif"
+            image: iconURLPrefix+"assets/img/villa1/black-and-white-wayanad-mist.avif"
         },
         {
             title: "bustle in budget",
@@ -36,7 +36,7 @@ function populateAboutCards() {
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="about-card h-100" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); display: flex; flex-direction: column;">
                     <div class="card-image" style="height: 200px; overflow: hidden;">
-                        <img alt="Black and White Stays Wayanad" alt="Black and White Stays Wayanad" src="${card.image}" alt="${card.title}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                        <img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="${card.image}" alt="${card.title}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
 
 
                         <div class="overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);"></div>

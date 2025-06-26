@@ -201,7 +201,7 @@ window.addEventListener('load', function () {
             <li><i class="fas fa-bell"></i> Type: ${currentItemData.type}</li>
             <li><i class="fas fa-power-off"></i> Holiday: ${currentItemData.holidays}</li>
             <li><i class="fas fa-phone"></i> Contact: ${currentItemData.Contact}</li>
-            <li><img alt="Black and White Stays Wayanad"  width="20" height="20" src="https://www.bwstays.com/assets/img/icons/cloudy.png" alt="Black and White Stays Wayanad" />Weather: <span id="temperature"></span></p> </li>
+            <li><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  width="20" height="20" src="https://www.bwstays.com/assets/img/icons/cloudy.png"  />Weather: <span id="temperature"></span></p> </li>
             </ul>
         </small>
       </div>
@@ -270,7 +270,7 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
 
       card.innerHTML = `
           <div class="card-img-container" style="height: 200px; overflow: hidden;">
-              <img alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"
+              <img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"
                    style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
           </div>
           <div class="card-body d-flex flex-column">
@@ -349,7 +349,7 @@ function updateRightColumnOnly() {
 
     card.innerHTML = `
       <div class="card-img-container" style="height: 200px; overflow: hidden;">
-        <img alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"
+        <img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"
              style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
       </div>
       <div class="card-body d-flex flex-column">

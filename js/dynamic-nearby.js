@@ -185,7 +185,7 @@ function createPlaceCard(place) {
         <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
             <div class="card nearby-card h-100 border-0" style="border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
                 <div class="card-img-top">
-                    <img alt="Black and White Stays Wayanad" src="${imageUrl}" class="img-fluid" alt="${place.name}" style="width: 100%; height: 160px; object-fit: cover;">
+                    <img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="${imageUrl}" class="img-fluid" alt="${place.name}" style="width: 100%; height: 160px; object-fit: cover;">
                 </div>
                 <div class="card-body p-3">
                     <div class="d-flex">

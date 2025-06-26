@@ -18,6 +18,10 @@ https://www.simpleimageresizer.com/resize-image-to-10-kb
 https://www.freehosting.com/client/cart.php?a=view
 https://treeofliferesorts.com/offers/pawsome-holidays/
 
+CACHE WITH CLOUDFARE 
+https://mrmarble.dev/blog/caching-github-pa
+
+
 compress image 
 https://rajteachers.net/image-compressor-online
 
