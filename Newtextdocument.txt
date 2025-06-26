@@ -78,3 +78,37 @@ provide filter based on short time, nearby, review, type
 
 contens security policy
 https://stackoverflow.com/questions/40360109/content-security-policy-img-src-self-data
+
+
+
+title="Black and White Stays Holidays" 
+title="Black and White Stays Staycations" 
+title="Black and White Stays Workations" 
+title="Black and White Stays Team" 
+title="Black and White Stays Villa" 
+title="Black and White Stays Service Villa" 
+title="Black and White Stays Service Apartments" 
+title="Black and White Stays Travel" 
+title="Black and White Stays Resort" 
+title="Black and White Stays Tour" 
+title="Black and White Stays Rooms" 
+title="Black and White Stays Hotel" 
+title="Black and White Stays Family" 
+title="Black and White Stays Adventure" 
+title="Black and White Hotel Sports" 
+title="Black and White Stays Workations" 
+title="Black and White Stays Vacation" 
+title="Black and White Stays Tourist" 
+title="Black and White Service Villa" 
+title="Black and White Stays Plantations" 
+title="Black and White Stays Cycling" 
+title="Black and White Stays Wildlife" 
+title="Black and White Stays Heritage" 
+title="Black and White Stays Waterfall" 
+title="Black and White Stays Trucking" 
+title="Black and White Stays Zipeline" 
+title="Black and White Budget Weekend" 
+title="Black and White Stays Bikers" 
+title="Black and White Stays Riders" 
+title="Black and White Service Apartments" 
+title="Black and White City Center"
