@@ -356,7 +356,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        latlong: "11.649866740589097, 75.9810562735357",
       map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=39&cat=1",
+       knowmore: "./knowmore.html?id=39&cat=3",
 
     }
 ,
