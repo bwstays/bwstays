@@ -270,7 +270,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
      rating:"4.5",
       hrs:"2",
       fee:"0",
-       type: "shopping",
+       type: "Museums & Crafts",
       knowmore: "./knowmore.html?id=78&cat=2",
 
     },
