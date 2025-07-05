@@ -61,7 +61,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.74131093962623, 75.88750680755587",
       map: "https://maps.app.goo.gl/SvSDuShnpWmcceyg8",
       type: "Water Falls",
-      knowmore: "./knowmore.html?id=33&cat=1",
+      knowmore: "./bw_meenmutty_waterfall_wayanad.html",
 
     },
     {
