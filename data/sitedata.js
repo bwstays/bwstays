@@ -166,27 +166,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 
     }
 ,
-      {
-       id: 39,
-       name: "Karland Lake",
-       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
-       image: [iconURLPrefix+"assets/img/falls/bw-stays-karlad-lake-wayanad-tourism.avif",iconURLPrefix+"assets/img/romantic/bw-rooms-karlad-lake-wayanad.webp"],
-       holidays: "Sun",
-       timing:[ "09:00-17:00"],
-       Contact: "+91-000 000 0000",
- 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-       distance: "15",
-       transport: "Public",
-       rating:"4.1",
-      hrs:"2",
-      fee:"0",
-       latlong: "11.649866740589097, 75.9810562735357",
-      map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
-        type: "Water Falls",
-       knowmore: "./knowmore.html?id=39&cat=1",
 
-    }
-,
       {
        id: 40,
        name: "Arripara falls",
@@ -358,6 +338,28 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       knowmore: "./knowmore.html?id=43&cat=3",
 
     },
+
+{
+       id: 39,
+       name: "Karland Lake",
+       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+       image: [iconURLPrefix+"assets/img/romantic/bw-stays-karlad-lake-wayanad-tourism.avif",iconURLPrefix+"assets/img/romantic/bw-rooms-karlad-lake-wayanad.webp"],
+       holidays: "Sun",
+       timing:[ "09:00-17:00"],
+       Contact: "+91-000 000 0000",
+ 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+       distance: "15",
+       transport: "Public",
+       rating:"4.1",
+      hrs:"2",
+      fee:"0",
+       latlong: "11.649866740589097, 75.9810562735357",
+      map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
+        type: "Water Falls",
+       knowmore: "./knowmore.html?id=39&cat=1",
+
+    }
+,
     {
       id: 44,
       name: "Pookode Lake",
