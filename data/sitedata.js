@@ -1060,7 +1060,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Farm Visit",
-      knowmore: "./knowmore.html?id=64&cat=7"
+      knowmore: iconURLPrefix+"bw_ambalavayal_farm_rars_wayanad.html"
     },
     {
       id: 63,
