@@ -1295,7 +1295,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 			hrs:"2",
 			fee:"0",
       	  type: "Cycling",
-          knowmore: "./knowmore.html?id=81&cat=11",
+          knowmore: iconURLPrefix+"bw_rippon_teaestate_wayanad.html",
 
       }
     ],
