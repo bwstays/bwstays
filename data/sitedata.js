@@ -320,8 +320,8 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
   romantic: [
     {
       id: 43,
-      name: "Karapuzhs Dam",
-      description: "Karapuzhs Dam.",
+      name: "Karapuzha Dam",
+      description: "Karapuzha Dam.",
       image: [iconURLPrefix+"assets/img/romantic/bw-service-apartment-wayanad-karappuzha-dam.avif"],
       holidays: "Sun",
       timing:[ "09:00-18:00"],
@@ -335,7 +335,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.62062222750829, 76.1738547832114",
       map: "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=43&cat=3",
+      knowmore: iconURLPrefix+"bw_karapuzha_dam_romantic_wayanad.html",
 
     },
 
