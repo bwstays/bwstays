@@ -736,7 +736,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=25&cat=4",
+      knowmore: iconURLPrefix+"bw_chain_tree_cultural_heritage_wayanad.html",
 
     },
  {
