@@ -956,7 +956,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=28&cat=6",
+      knowmore: iconURLPrefix+"bw_muthanga_wildlife_sanctuary_wayanad.html",
 
     },
 {
