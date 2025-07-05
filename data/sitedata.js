@@ -61,7 +61,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.74131093962623, 75.88750680755587",
       map: "https://maps.app.goo.gl/SvSDuShnpWmcceyg8",
       type: "Water Falls",
-      knowmore: "./bw_meenmutty_waterfall_wayanad.html",
+      knowmore: iconURLPrefix+"bw_meenmutty_waterfall_wayanad.html",
 
     },
     {
@@ -884,7 +884,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"4",
       fee:"50 INR- 70 INR",
        type: "Trucking",
-      knowmore: "./bw_edakkal_caves_trucking_wayanad.html",
+      knowmore: iconURLPrefix+"bw_edakkal_caves_trucking_wayanad.html",
 
     }
 ,
