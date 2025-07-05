@@ -271,7 +271,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Museums & Crafts",
-      knowmore: "./knowmore.html?id=78&cat=2",
+      knowmore: iconURLPrefix+"bw_honey_museum_wayanad.html",
 
     },
     {
