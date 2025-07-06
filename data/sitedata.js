@@ -272,7 +272,7 @@ const siteData = {
 		latlong: "11.600747990313033, 76.0148553711638",
 		map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
 		type: "Museums & Crafts",
-		knowmore: iconURLPrefix+"knowmore.html?id=26&cat=2",
+		knowmore: iconURLPrefix+"bw_tea_museum_wayanad.html",
 
     },
 {
@@ -313,7 +313,7 @@ const siteData = {
       latlong: "11.739158003776806, 76.21355871892317",
       map: "https://maps.app.goo.gl/1E9kADRsBfxLQfs69",
        type: "Museums & Crafts",
-      knowmore: iconURLPrefix+"knowmore.html?id=27&cat=2",
+      knowmore: iconURLPrefix+"bw_folklore_museum_wayanad.html",
 
     }
 
@@ -357,7 +357,7 @@ const siteData = {
        latlong: "11.649866740589097, 75.9810562735357",
       map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"knowmore.html?id=39&cat=3",
+       knowmore: iconURLPrefix+"bw_karland_lake_romantic_wayanad.html",
 
     }
 ,
