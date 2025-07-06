@@ -19,7 +19,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Plantations",
-      knowmore: iconURLPrefix+"knowmore.html?id=61&cat=0",
+      knowmore: iconURLPrefix+"bw_rippon_tea_estate_plantation_wayanad.html",
     },
     {
       id: 62,
