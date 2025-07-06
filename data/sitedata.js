@@ -1108,7 +1108,27 @@ const siteData = {
   ],
 
   sporting: [
-        {
+  {
+            id: 82,
+            name: "Bamboo Rafting",
+            description: "bamboorafting.",
+            image: [iconURLPrefix+"assets/img/sports/bw-stay-bamboo-sport-rafting-wayanad.avif"],
+            holidays: "Sun",
+            timing:[ "09:00-17:00"],
+            Contact: "+91-000 000 0000",
+       	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+            distance: "10",
+  			latlong: "11.510131107991237, 76.14768727205123",
+  			map: "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
+  			transport: "Public",
+  			rating:"4.5",
+  			hrs:"2",
+  			fee:"0",
+  			type: "Sporting",
+  			knowmore: iconURLPrefix+"knowmore.html?id=82&cat=8",
+
+      },
+  {
           id: 70,
           name: "Ziplines",
           description: "Ziplines.",
@@ -1128,26 +1148,7 @@ const siteData = {
           knowmore: iconURLPrefix+"knowmore.html?id=70&cat=8",
 
       },
-  {
-          id: 82,
-          name: "Bamboo Rafting",
-          description: "bamboorafting.",
-          image: [iconURLPrefix+"assets/img/sports/bw-stay-bamboo-sport-rafting-wayanad.avif"],
-          holidays: "Sun",
-          timing:[ "09:00-17:00"],
-          Contact: "+91-000 000 0000",
-     	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-          distance: "10",
-			latlong: "11.510131107991237, 76.14768727205123",
-			map: "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
-			transport: "Public",
-			rating:"4.5",
-			hrs:"2",
-			fee:"0",
-			type: "Sporting",
-			knowmore: iconURLPrefix+"knowmore.html?id=82&cat=8",
 
-      },
  {
           id: 87,
           name: "Turf",
@@ -1214,6 +1215,27 @@ const siteData = {
     }
   ],
   tribal: [
+  {
+
+           id: 59,
+           name: "Uravu",
+           description: "Uravu",
+           image: [iconURLPrefix+"assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.avif",iconURLPrefix+"assets/img/tribal/bw_uravu_thrikkaipetta_village_wayanad.avif", iconURLPrefix+"assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.avif"],
+           holidays: "Sun",
+           timing:[ "09:00-17:00"],
+           Contact: "+91-000 000 0000",
+      	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+           distance: "11",
+ 			latlong: "11.61393216314223, 76.13407505880957",
+ 			map: "https://maps.app.goo.gl/8HGVbA8w5gkfw6Sd7",
+ 			transport: "Public",
+ 			rating:"4.5",
+ 			hrs:"2",
+ 			fee:"0",
+       	  type: "Tribal",
+           knowmore: iconURLPrefix+"knowmore.html?id=59&cat=10",
+
+      },
  {
           id: 57,
           name: "En ooru",
@@ -1233,53 +1255,12 @@ const siteData = {
 			type: "Tribal",
           knowmore: iconURLPrefix+"knowmore.html?id=57&cat=10",
 
-      },
-        {
-
-          id: 59,
-          name: "Uravu",
-          description: "Uravu",
-          image: [iconURLPrefix+"assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.avif",iconURLPrefix+"assets/img/tribal/bw_uravu_thrikkaipetta_village_wayanad.avif", iconURLPrefix+"assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.avif"],
-          holidays: "Sun",
-          timing:[ "09:00-17:00"],
-          Contact: "+91-000 000 0000",
-     	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-          distance: "11",
-			latlong: "11.61393216314223, 76.13407505880957",
-			map: "https://maps.app.goo.gl/8HGVbA8w5gkfw6Sd7",
-			transport: "Public",
-			rating:"4.5",
-			hrs:"2",
-			fee:"0",
-      	  type: "Tribal",
-          knowmore: iconURLPrefix+"knowmore.html?id=59&cat=10",
-
       }
+
     ],
 
 
   cycling: [
-        {
-          id: 49,
-          name: "Chundail Tea Estate",
-          description: "Chundail Tea Estate",
-          image: [iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw_stays-resort-wayanad-cycle-workation.webp" ,iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif"],
-          holidays: "Sun",
-          timing:[ "09:00-17:00"],
-          Contact: "+91-000 000 0000",
-     	  seasontovisit:["Summer (March-May)","Winter (October-February)"],
-          distance: "6",
-		latlong: "11.53521523160273, 76.17895032231527",
-		map: "https://maps.app.goo.gl/UQHFNVCdWwFxWRsa8",
-		transport: "Public",
-		rating:"4.7",
-		hrs:"2",
-		fee:"0",
-      	  type: "Cycling",
-          knowmore: iconURLPrefix+"bw_chundail_tea_estate_cycling_wayanad.html",
-
-      },
-
 {
           id: 81,
           name: "Rippon",
@@ -1299,7 +1280,29 @@ const siteData = {
       	  type: "Cycling",
           knowmore: iconURLPrefix+"bw_rippon_teaestate_wayanad.html",
 
+      },
+        {
+          id: 49,
+          name: "Chundail Tea Estate",
+          description: "Chundail Tea Estate",
+          image: [iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw_stays-resort-wayanad-cycle-workation.webp" ,iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif"],
+          holidays: "Sun",
+          timing:[ "09:00-17:00"],
+          Contact: "+91-000 000 0000",
+     	  seasontovisit:["Summer (March-May)","Winter (October-February)"],
+          distance: "6",
+		latlong: "11.53521523160273, 76.17895032231527",
+		map: "https://maps.app.goo.gl/UQHFNVCdWwFxWRsa8",
+		transport: "Public",
+		rating:"4.7",
+		hrs:"2",
+		fee:"0",
+      	  type: "Cycling",
+          knowmore: iconURLPrefix+"bw_chundail_tea_estate_cycling_wayanad.html",
+
       }
+
+
     ],
 
 
@@ -1391,6 +1394,26 @@ const siteData = {
 
  pilgrimage: [
 
+{
+          id: 4,
+          name: "Tirunelli Temple",
+          description: "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
+          image: [iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif",iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif"],
+          holidays: "Sun",
+          timing:["05:30-12:30","17:00-19:30"],
+          Contact: "+91-000 000 0000",
+    	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+          distance: "48",
+          transport: "Public",
+          rating: "4.7",
+          hrs:"2",
+          fee:"0",
+          latlong: "11.911851118207249, 75.9958816441809",
+          map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
+          type: "Pilgrimage",
+          knowmore: iconURLPrefix+"knowmore.html?id=4&cat=13",
+
+        },
 
      {
           id: 2,
@@ -1430,26 +1453,6 @@ const siteData = {
           fee:"0",
            type: "Pilgrimage",
           knowmore: iconURLPrefix+"knowmore.html?id=3&cat=13",
-
-        },
-     	{
-          id: 4,
-          name: "Tirunelli Temple",
-          description: "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
-          image: [iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif",iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif"],
-          holidays: "Sun",
-          timing:["05:30-12:30","17:00-19:30"],
-          Contact: "+91-000 000 0000",
-    	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-          distance: "48",
-          transport: "Public",
-          rating: "4.7",
-          hrs:"2",
-          fee:"0",
-          latlong: "11.911851118207249, 75.9958816441809",
-          map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
-          type: "Pilgrimage",
-          knowmore: iconURLPrefix+"knowmore.html?id=4&cat=13",
 
         },
 
