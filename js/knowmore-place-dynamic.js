@@ -184,7 +184,7 @@ window.addEventListener('load', function () {
           <a href="#nearby-places"><span class="text-warning">View places with in 15 Kms </span></a> </div>
       <div class="mb-3">
           <span class="text-warning">★ ${currentItemData.rating}</span>
-          <span class="text-white-50 ml-2">${currentItemData.distance}km from ${currentItemData.name}</span>
+          <span class="text-white-50 ml-2">${currentItemData.distance}km from Kalpetta</span>
 		  <span class="text-white-50 ml-2">
 			<a href="${currentItemData.map}" target="_new" class="text-decoration-none text-white">
 			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
