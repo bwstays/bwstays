@@ -48,7 +48,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
     {
       id: 33,
       name: "Meenmutty Falls",
-      description: "One of the largest and most spectacular waterfalls in Wayanad. One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.One of the largest and most spectacular waterfalls in Wayanad.",
+      description: "One of the largest and most spectacular waterfalls in Wayanad.",
       image: [iconURLPrefix+"assets/img/falls/bw-stays-meenmutty-homestay-wayanad.webp",iconURLPrefix+"assets/img/falls/bw-stays-meenmutty-waterfall-wayanad.avif",iconURLPrefix+"assets/img/falls/bw_meenmufalls_wayanad2.avif",iconURLPrefix+"assets/img/falls/bw-stays-meenmutty-falls-wayanad.avif"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
