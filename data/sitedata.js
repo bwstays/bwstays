@@ -771,7 +771,7 @@ const siteData = {
       id: 15,
       name: "Kuruwa Deep",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
-      image: [iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad.avif",iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad-2.avif"],
+      image: [iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad-2.avif",iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad.avif"],
       holidays: "Sun",
       timing:[ "09:00-16:00"],
       Contact: "+91-000 000 0000",
