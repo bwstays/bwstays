@@ -32,7 +32,7 @@ const siteData = {
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
       distance: "7",
       transport: "Public",
-      rating:"4.5",
+      rating:"4.0",
       hrs:"2",
 		fee:"0",
 		latlong: "11.758218103566884, 75.99955554569163",
@@ -82,7 +82,7 @@ const siteData = {
       latlong: "11.495418956600835, 76.16077748465527",
       map: "https://maps.app.goo.gl/WTkrrH73W95w23Xm8",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"knowmore.html?id=34&cat=1",
+      knowmore: iconURLPrefix+"bw_sentinel_rock_waterfall_wayanad.html",
 
     },
     {
@@ -102,7 +102,7 @@ const siteData = {
       latlong: "11.511772142854758, 76.16379662884363",
       map: "https://maps.app.goo.gl/qr1RZdxc5WMa5j71A",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"knowmore.html?id=35&cat=1",
+      knowmore: iconURLPrefix+"bw_soochipara_waterfall_wayanad.html",
 
     },
     {
@@ -122,7 +122,7 @@ const siteData = {
       latlong: "11.766189025300932, 76.25203494478279",
       map: "https://maps.app.goo.gl/Xi6e2aPFEjWFkHBi9",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"knowmore.html?id=36&cat=1",
+      knowmore: iconURLPrefix+"bw_cheeyambam_waterfall_wayanad.html",
 
     },
     {
@@ -142,20 +142,20 @@ const siteData = {
       latlong: "11.524171332429411, 76.1526252269829",
       map: "https://maps.app.goo.gl/UkTgsP4fZoRngCyBA",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"knowmore.html?id=37&cat=1",
+      knowmore: iconURLPrefix+"bw_kanthanpara_waterfall_wayanad.html",
 
     }
  ,
       {
        id: 38,
        name: "Kappikalam waterfalls",
-       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+       description: "Kappikalam waterfalls, perfect for trekking and rock climbing.",
        image: [iconURLPrefix+"assets/img/falls/bw-homestay-meenmufalls-wayanad.avif"],
        holidays: "Sun",
        timing:[ "09:00-17:00"],
        Contact: "+91-000 000 0000",
  	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-       distance: "14",
+       distance: "22",
        transport: "Public",
        rating:"4.1",
       hrs:"2",
@@ -163,7 +163,7 @@ const siteData = {
        latlong: "11.524617527477, 76.15260365204358",
       map: "https://maps.app.goo.gl/fzrjabJfK5GG7CgD9",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"knowmore.html?id=38&cat=1",
+       knowmore: iconURLPrefix+"bw_kappikalam_waterfall_wayanad.html",
 
     }
 ,
@@ -185,10 +185,9 @@ const siteData = {
        latlong: "11.43840307285013, 76.04597666931055",
       map: "https://maps.app.goo.gl/BLpuvUbHqgNC54up8",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"knowmore.html?id=40&cat=1",
+       knowmore: iconURLPrefix+"bw_arripara_waterfall_wayanad.html",
 
-    }
-,
+    },
       {
        id: 41,
        name: "Irrupu falls ",
@@ -206,7 +205,7 @@ const siteData = {
        latlong: "11.967284462093113, 75.98393572809631",
       map: "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"knowmore.html?id=41&cat=1",
+       knowmore: iconURLPrefix+"bw_Irrupu_waterfall_wayanad.html",
 
     }
 ,
