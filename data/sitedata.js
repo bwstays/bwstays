@@ -19,7 +19,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Plantations",
-      knowmore: "./knowmore.html?id=61&cat=0",
+      knowmore: iconURLPrefix+"knowmore.html?id=61&cat=0",
     },
     {
       id: 62,
@@ -38,9 +38,10 @@ const siteData = {
       	  latlong: "11.758218103566884, 75.99955554569163",
 map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       type: "Plantations",
-      knowmore: "./knowmore.html?id=62&cat=0",
+      knowmore: iconURLPrefix+"knowmore.html?id=62&cat=0",
 
     }
+
   ],
 
   waterfalls: [
@@ -81,7 +82,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.495418956600835, 76.16077748465527",
       map: "https://maps.app.goo.gl/WTkrrH73W95w23Xm8",
       type: "Water Falls",
-      knowmore: "./knowmore.html?id=34&cat=1",
+      knowmore: iconURLPrefix+"knowmore.html?id=34&cat=1",
 
     },
     {
@@ -101,7 +102,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.511772142854758, 76.16379662884363",
       map: "https://maps.app.goo.gl/qr1RZdxc5WMa5j71A",
       type: "Water Falls",
-      knowmore: "./knowmore.html?id=35&cat=1",
+      knowmore: iconURLPrefix+"knowmore.html?id=35&cat=1",
 
     },
     {
@@ -121,7 +122,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.766189025300932, 76.25203494478279",
       map: "https://maps.app.goo.gl/Xi6e2aPFEjWFkHBi9",
       type: "Water Falls",
-      knowmore: "./knowmore.html?id=36&cat=1",
+      knowmore: iconURLPrefix+"knowmore.html?id=36&cat=1",
 
     },
     {
@@ -141,7 +142,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.524171332429411, 76.1526252269829",
       map: "https://maps.app.goo.gl/UkTgsP4fZoRngCyBA",
       type: "Water Falls",
-      knowmore: "./knowmore.html?id=37&cat=1",
+      knowmore: iconURLPrefix+"knowmore.html?id=37&cat=1",
 
     }
  ,
@@ -162,7 +163,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        latlong: "11.524617527477, 76.15260365204358",
       map: "https://maps.app.goo.gl/fzrjabJfK5GG7CgD9",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=38&cat=1",
+       knowmore: iconURLPrefix+"knowmore.html?id=38&cat=1",
 
     }
 ,
@@ -184,7 +185,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        latlong: "11.43840307285013, 76.04597666931055",
       map: "https://maps.app.goo.gl/BLpuvUbHqgNC54up8",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=40&cat=1",
+       knowmore: iconURLPrefix+"knowmore.html?id=40&cat=1",
 
     }
 ,
@@ -205,7 +206,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        latlong: "11.967284462093113, 75.98393572809631",
       map: "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=41&cat=1",
+       knowmore: iconURLPrefix+"knowmore.html?id=41&cat=1",
 
     }
 ,
@@ -226,7 +227,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        latlong: "11.765721623585334, 76.25204562883619",
       map: "https://maps.app.goo.gl/z4pftdA2hc1Ea7Ny6",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=42&cat=1",
+       knowmore: iconURLPrefix+"knowmore.html?id=42&cat=1",
 
     },
 
@@ -247,7 +248,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Trucking",
-      knowmore: "./knowmore.html?id=16&cat=1",
+      knowmore: iconURLPrefix+"knowmore.html?id=16&cat=1",
 
     }
 
@@ -291,7 +292,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 		latlong: "11.600747990313033, 76.0148553711638",
 		map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
 		type: "Museums & Crafts",
-		knowmore: "./knowmore.html?id=26&cat=2",
+		knowmore: iconURLPrefix+"knowmore.html?id=26&cat=2",
 
     }
 ,
@@ -312,7 +313,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.739158003776806, 76.21355871892317",
       map: "https://maps.app.goo.gl/1E9kADRsBfxLQfs69",
        type: "Museums & Crafts",
-      knowmore: "./knowmore.html?id=27&cat=2",
+      knowmore: iconURLPrefix+"knowmore.html?id=27&cat=2",
 
     }
 
@@ -356,7 +357,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        latlong: "11.649866740589097, 75.9810562735357",
       map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
         type: "Water Falls",
-       knowmore: "./knowmore.html?id=39&cat=3",
+       knowmore: iconURLPrefix+"knowmore.html?id=39&cat=3",
 
     }
 ,
@@ -377,7 +378,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"4.1",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=44&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=44&cat=3",
 
     }
     ,
@@ -398,7 +399,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"4.3",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=45&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=45&cat=3",
 
     }
     ,
@@ -419,7 +420,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=46&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=46&cat=3",
 
     }
     ,
@@ -440,7 +441,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"4.3",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=47&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=47&cat=3",
 
     }
     ,
@@ -461,7 +462,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=48&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=48&cat=3",
 
     }
     ,
@@ -482,7 +483,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"3.9",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=50&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=50&cat=3",
 
     }
     ,
@@ -503,7 +504,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=51&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=51&cat=3",
 
     }
     ,
@@ -524,7 +525,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"4.6",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=53&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=53&cat=3",
 
     }
     ,
@@ -545,7 +546,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"4.4",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=54&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=54&cat=3",
 
     }
     ,
@@ -566,7 +567,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        transport: "Public",
      rating:"3.9",
        type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=55&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=55&cat=3",
 
     }
     ,
@@ -587,7 +588,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 		hrs:"2",
 		fee:"0",
 		type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=56&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=56&cat=3",
 
     }
     ,
@@ -608,7 +609,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 		hrs:"2",
 		fee:"0",
 		type: "Romantic Spots",
-      knowmore: "./knowmore.html?id=58&cat=3",
+      knowmore: iconURLPrefix+"knowmore.html?id=58&cat=3",
 
     },
   {
@@ -628,7 +629,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: "./knowmore.html?id=83&cat=3",
+          knowmore: iconURLPrefix+"knowmore.html?id=83&cat=3",
 
       }
 ,
@@ -649,7 +650,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: "./knowmore.html?id=84&cat=3",
+          knowmore: iconURLPrefix+"knowmore.html?id=84&cat=3",
 
       }
 ,
@@ -670,7 +671,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: "./knowmore.html?id=85&cat=3",
+          knowmore: iconURLPrefix+"knowmore.html?id=85&cat=3",
 
       }
   ],
@@ -695,7 +696,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=6&cat=4",
+      knowmore: iconURLPrefix+"knowmore.html?id=6&cat=4",
 
     }
 ,
@@ -716,7 +717,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Cultural & Historical",
-      knowmore: "./knowmore.html?id=24&cat=4",
+      knowmore: iconURLPrefix+"knowmore.html?id=24&cat=4",
 
     },
    {
@@ -756,7 +757,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           hrs:"2",
           fee:"0",
            type: "Cultural & Historical",
-           knowmore: "./knowmore.html?id=1&cat=4",
+           knowmore: iconURLPrefix+"knowmore.html?id=1&cat=4",
          },
   ],
 
@@ -782,7 +783,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Trucking",
-      knowmore: "./knowmore.html?id=15&cat=5",
+      knowmore: iconURLPrefix+"knowmore.html?id=15&cat=5",
 
     },
     {
@@ -802,7 +803,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Trucking",
-      knowmore: "./knowmore.html?id=17&cat=5",
+      knowmore: iconURLPrefix+"knowmore.html?id=17&cat=5",
 
     }
 ,
@@ -823,7 +824,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"3",
       fee:"0",
        type: "Trucking",
-      knowmore: "./knowmore.html?id=18&cat=5",
+      knowmore: iconURLPrefix+"knowmore.html?id=18&cat=5",
 
     }
 ,
@@ -844,7 +845,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
          hrs:"2",
          fee:"0",
           type: "Trucking",
-         knowmore: "./knowmore.html?id=19&cat=5",
+         knowmore: iconURLPrefix+"knowmore.html?id=19&cat=5",
 
     }
 ,
@@ -865,7 +866,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
       type: "Trucking",
-      knowmore: "./knowmore.html?id=20&cat=5",
+      knowmore: iconURLPrefix+"knowmore.html?id=20&cat=5",
 
     }
 ,
@@ -908,7 +909,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.639978909862197, 76.08420612038587",
       map: "https://maps.app.goo.gl/n2aJqSpipqQjE6x56",
        type: "Trucking",
-      knowmore: "./knowmore.html?id=23&cat=5",
+      knowmore: iconURLPrefix+"knowmore.html?id=23&cat=5",
 
     }
 ,
@@ -930,7 +931,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.650880848883398, 76.19276045292615",
       map: "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
        type: "Trucking",
-      knowmore: "./knowmore.html?id=87&cat=5",
+      knowmore: iconURLPrefix+"knowmore.html?id=87&cat=5",
 
     }
   ],
@@ -976,7 +977,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=29&cat=6",
+      knowmore: iconURLPrefix+"knowmore.html?id=29&cat=6",
 
     },
 {
@@ -996,7 +997,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=30&cat=6",
+      knowmore: iconURLPrefix+"knowmore.html?id=30&cat=6",
 
     },
  {
@@ -1016,7 +1017,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=31&cat=6",
+      knowmore: iconURLPrefix+"knowmore.html?id=31&cat=6",
 
     },
 
@@ -1038,7 +1039,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: "./knowmore.html?id=32&cat=6",
+      knowmore: iconURLPrefix+"knowmore.html?id=32&cat=6",
 
     }
   ],
@@ -1079,7 +1080,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Farm Visit",
-      knowmore: "./knowmore.html?id=63&cat=7",
+      knowmore: iconURLPrefix+"knowmore.html?id=63&cat=7",
 
     }
 ,
@@ -1100,7 +1101,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 		hrs:"2",
 		fee:"0",
 		type: "Farm Visit",
-      knowmore: "./knowmore.html?id=74&cat=7",
+      knowmore: iconURLPrefix+"knowmore.html?id=74&cat=7",
 
     }
   ],
@@ -1123,7 +1124,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
       	  type: "Sporting",
-          knowmore: "./knowmore.html?id=70&cat=8",
+          knowmore: iconURLPrefix+"knowmore.html?id=70&cat=8",
 
       },
   {
@@ -1143,7 +1144,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 			hrs:"2",
 			fee:"0",
 			type: "Sporting",
-			knowmore: "./knowmore.html?id=82&cat=8",
+			knowmore: iconURLPrefix+"knowmore.html?id=82&cat=8",
 
       },
  {
@@ -1163,7 +1164,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 			hrs:"2",
 			fee:"0",
 			type: "Sporting",
-			knowmore: "./knowmore.html?id=87&cat=8",
+			knowmore: iconURLPrefix+"knowmore.html?id=87&cat=8",
 
       }
     ]
@@ -1187,7 +1188,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Food",
-      knowmore: "./knowmore.html?id=65&cat=9",
+      knowmore: iconURLPrefix+"bw_resturants_food_wayanad.html",
 
     },
     {
@@ -1207,7 +1208,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 		hrs:"2",
 		fee:"0",
 		type: "Food",
-      knowmore: "./knowmore.html?id=66&cat=9",
+      knowmore: iconURLPrefix+"knowmore.html?id=66&cat=9",
 
     }
   ],
@@ -1229,7 +1230,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 			hrs:"2",
 			fee:"0",
 			type: "Tribal",
-          knowmore: "./knowmore.html?id=57&cat=10",
+          knowmore: iconURLPrefix+"knowmore.html?id=57&cat=10",
 
       },
         {
@@ -1250,7 +1251,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 			hrs:"2",
 			fee:"0",
       	  type: "Tribal",
-          knowmore: "./knowmore.html?id=59&cat=10",
+          knowmore: iconURLPrefix+"knowmore.html?id=59&cat=10",
 
       }
     ],
@@ -1261,11 +1262,11 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           id: 49,
           name: "Chundail Tea Estate",
           description: "Chundail Tea Estate",
-          image: [iconURLPrefix+"assets/img/romantic/bw-workation-chundale-tea-estate-wayanad.webp",iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw_stays-resort-wayanad-cycle-workation.webp" ,iconURLPrefix+"assets/img/romantic/bw-stays-chundale-cycling-hotel-wayanad.webp"],
+          image: [iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw_stays-resort-wayanad-cycle-workation.webp" ,iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif"],
           holidays: "Sun",
           timing:[ "09:00-17:00"],
           Contact: "+91-000 000 0000",
-     	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+     	  seasontovisit:["Summer (March-May)","Winter (October-February)"],
           distance: "6",
 		latlong: "11.53521523160273, 76.17895032231527",
 		map: "https://maps.app.goo.gl/UQHFNVCdWwFxWRsa8",
@@ -1274,7 +1275,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
 		hrs:"2",
 		fee:"0",
       	  type: "Cycling",
-          knowmore: "./knowmore.html?id=49&cat=11",
+          knowmore: iconURLPrefix+"bw_chundail_tea_estate_cycling_wayanad.html",
 
       },
 
@@ -1282,7 +1283,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           id: 81,
           name: "Rippon",
           description: "Rippon Tea estate.",
-          image: [iconURLPrefix+"assets/img/sports/bw-private-villa-cycle-wayanad.avif"],
+          image: [iconURLPrefix+"assets/img/cycling/bw_stays-resort-wayanad-cycle-workation.webp"],
           holidays: "Sun",
           timing:[ "09:00-17:00"],
           Contact: "+91-000 000 0000",
@@ -1319,7 +1320,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "shopping",
-      knowmore: "./knowmore.html?id=77&cat=12",
+      knowmore: iconURLPrefix+"knowmore.html?id=77&cat=12",
 
     },
 
@@ -1340,7 +1341,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "shopping",
-      knowmore: "./knowmore.html?id=79&cat=12",
+      knowmore: iconURLPrefix+"knowmore.html?id=79&cat=12",
 
     }
 ,
@@ -1361,17 +1362,17 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
       type: "shopping",
-      knowmore: "./knowmore.html?id=67&cat=12",
+      knowmore: iconURLPrefix+"knowmore.html?id=67&cat=12",
 
     }
  ,
      {
        id: 85,
-       name: "Ali's WAYANADAN NATURAL HONEY",
+       name: "Ali's wayanadan natural honey",
        description: "NATURAL HONEY.",
        image: [iconURLPrefix+"assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.avif"],
        holidays: "None",
-       timing:[ "11:00-23:00"],
+       timing:[ "11:00-20:00"],
        Contact: "+91-555 555 5555",
  	  seasontovisit:["All Season"],
        distance: "25",
@@ -1382,7 +1383,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
        hrs:"2",
        fee:"0",
        type: "shopping",
-       knowmore: "./knowmore.html?id=86&cat=12",
+       knowmore: iconURLPrefix+"bw_ali_wayanadan_honey_shopping_wayanad.html",
 
     }
  ],
@@ -1407,7 +1408,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           hrs:"2",
           fee:"0",
            type: "Pilgrimage",
-          knowmore: "./knowmore.html?id=2&cat=13",
+          knowmore: iconURLPrefix+"bw_ananthanatha_swamy_jain_temple_pilgrimage_wayanad.html",
 
         },
     {
@@ -1427,7 +1428,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           hrs:"2",
           fee:"0",
            type: "Pilgrimage",
-          knowmore: "./knowmore.html?id=3&cat=13",
+          knowmore: iconURLPrefix+"knowmore.html?id=3&cat=13",
 
         },
      	{
@@ -1447,7 +1448,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           latlong: "11.911851118207249, 75.9958816441809",
           map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
           type: "Pilgrimage",
-          knowmore: "./knowmore.html?id=4&cat=13",
+          knowmore: iconURLPrefix+"knowmore.html?id=4&cat=13",
 
         },
 
@@ -1468,7 +1469,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
           latlong: "11.911882611618777, 75.99584945767235",
           map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
           type: "Pilgrimage",
-          knowmore: "./knowmore.html?id=5&cat=13",
+          knowmore: iconURLPrefix+"knowmore.html?id=5&cat=13",
 
     },
 
@@ -1488,7 +1489,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.660422442249578, 76.17374499957178",
       map: "https://maps.app.goo.gl/voAar4qRh1U2jXjk7",
       type: "Pilgrimage",
-      knowmore: "./knowmore.html?id=7&cat=13",
+      knowmore: iconURLPrefix+"knowmore.html?id=7&cat=13",
 
     },
  	{
@@ -1508,7 +1509,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.685229537534148, 76.05606037116382",
       map: "https://maps.app.goo.gl/GWhpBVduuz5Sm1a67",
       type: "Pilgrimage",
-      knowmore: "./knowmore.html?id=8&cat=13",
+      knowmore: iconURLPrefix+"knowmore.html?id=8&cat=13",
 
     },
  	{
@@ -1528,7 +1529,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.793030398758432, 76.16871715767236",
       map: "https://maps.app.goo.gl/7EMqf1GJLZbLWdLSA",
       type: "Pilgrimage",
-      knowmore: "./knowmore.html?id=9&cat=13",
+      knowmore: iconURLPrefix+"knowmore.html?id=9&cat=13",
 
     },
  	{
@@ -1548,7 +1549,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       latlong: "11.618497853276832, 76.1344553537423",
       map: "https://maps.app.goo.gl/mF1JKbkHQBNDeC4S9",
       type: "Pilgrimage",
-      knowmore: "./knowmore.html?id=10&cat=13",
+      knowmore: iconURLPrefix+"knowmore.html?id=10&cat=13",
 
     },
     {
@@ -1568,7 +1569,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
       type: "Pilgrimage",
-      knowmore: "./knowmore.html?id=11&cat=13",
+      knowmore: iconURLPrefix+"knowmore.html?id=11&cat=13",
 
     },
 
@@ -1589,7 +1590,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
       type: "Pilgrimage",
-      knowmore: "./knowmore.html?id=12&cat=13",
+      knowmore: iconURLPrefix+"knowmore.html?id=12&cat=13",
 
     },
 
@@ -1610,7 +1611,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Pilgrimage",
-      knowmore: "./knowmore.html?id=13&cat=13",
+      knowmore: iconURLPrefix+"knowmore.html?id=13&cat=13",
 
     }
     ,
@@ -1631,7 +1632,7 @@ map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       hrs:"2",
       fee:"0",
        type: "Pilgrimage",
-      knowmore: "./knowmore.html?id=14&cat=13",
+      knowmore: iconURLPrefix+"knowmore.html?id=14&cat=13",
 
     }
   ]
