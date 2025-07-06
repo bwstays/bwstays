@@ -226,14 +226,14 @@ const siteData = {
        latlong: "11.765721623585334, 76.25204562883619",
       map: "https://maps.app.goo.gl/z4pftdA2hc1Ea7Ny6",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"knowmore.html?id=42&cat=1",
+       knowmore: iconURLPrefix+"bw_chetalayam_waterfall_wayanad.html",
 
     },
 
  {
       id: 16,
       name: "Thusharagiri",
-      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      description: "Water fall down the Ghats of wayanad.",
       image: [iconURLPrefix+"assets/img/falls/bw-stays-thusharagiri-falls-service-apartment.avif"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
@@ -246,8 +246,8 @@ const siteData = {
       rating:"4.4",
       hrs:"2",
       fee:"0",
-       type: "Trucking",
-      knowmore: iconURLPrefix+"knowmore.html?id=16&cat=1",
+       type: "Water Falls",
+      knowmore: iconURLPrefix+"bw_thusharagiri_waterfall_wayanad.html",
 
     }
 
