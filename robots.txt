@@ -5,17 +5,6 @@ User-agent: Slurp
 User-agent: Baiduspider
 Crawl-Delay: 1
 Allow: /
-Disallow: .htaccess
-Disallow: https://api.open-meteo.com
-Disallow: https://wati-integration-prod-service.clare.ai
-Disallow: https://maps.googleapis.com
-Disallow: https://use.fontawesome.com
-Disallow: https://wati-integration-prod-service.clare.ai
-Disallow: https://cdn.jsdelivr.net
-Disallow: https://fonts.googleapis.com
-Disallow: https://api.open-meteo.com
-Disallow: https://fonts.gstatic.com
-Disallow: https://www.google-analytics.com
-
+Disallow: *
 Sitemap: https://www.bwstays.com/sitemap.txt
 Sitemap: https://www.bwstays.com/sitemap.xml
