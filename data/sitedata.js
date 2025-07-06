@@ -255,26 +255,7 @@ const siteData = {
  ],
   museums: [
 
-{
-      id: 78,
-      name: "Honey Museum",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: [iconURLPrefix+"assets/img/museum/bw-stays-honey-museum-wayanad.avif"],
-      holidays: "Sun",
-      timing:[ "09:00-17:00"],
-      Contact: "+91-000 000 0000",
-	  seasontovisit:["All Season"],
-      distance: "12",
-       transport: "Public",
-      latlong: "11.537878297366712, 76.04345802698292",
-      map: "https://maps.app.goo.gl/8x4fQb5Cr9RBCFr17",
-      rating:"4.5",
-      hrs:"2",
-      fee:"0",
-       type: "Museums & Crafts",
-      knowmore: iconURLPrefix+"bw_honey_museum_wayanad.html",
 
-    },
     {
       id: 26,
       name: "Tea Museum",
@@ -293,6 +274,26 @@ const siteData = {
 		map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
 		type: "Museums & Crafts",
 		knowmore: iconURLPrefix+"knowmore.html?id=26&cat=2",
+
+    },
+{
+      id: 78,
+      name: "Honey Museum",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: [iconURLPrefix+"assets/img/museum/bw-stays-honey-museum-wayanad.avif"],
+      holidays: "Sun",
+      timing:[ "09:00-17:00"],
+      Contact: "+91-000 000 0000",
+	  seasontovisit:["All Season"],
+      distance: "12",
+       transport: "Public",
+      latlong: "11.537878297366712, 76.04345802698292",
+      map: "https://maps.app.goo.gl/8x4fQb5Cr9RBCFr17",
+      rating:"4.5",
+      hrs:"2",
+      fee:"0",
+       type: "Museums & Crafts",
+      knowmore: iconURLPrefix+"bw_honey_museum_wayanad.html",
 
     }
 ,
