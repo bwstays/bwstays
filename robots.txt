@@ -6,5 +6,5 @@ User-agent: Baiduspider
 Crawl-Delay: 1
 Allow: /
 Disallow: *
-Sitemap: https://www.bwstays.com/sitemap.txt
-Sitemap: https://www.bwstays.com/sitemap.xml
+sitemap: https://www.bwstays.com/sitemap.txt
+sitemap: https://www.bwstays.com/sitemap.xml
