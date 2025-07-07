@@ -1252,7 +1252,7 @@ const siteData = {
 			hrs:"2",
 			fee:"0",
 			type: "Tribal",
-          knowmore: iconURLPrefix+"knowmore.html?id=57&cat=10",
+          knowmore: iconURLPrefix+"bw_en_ooru_tribal_wayanad.html",
 
       }
 
