@@ -441,7 +441,7 @@ const siteData = {
        transport: "Public",
      rating:"4.3",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=47&cat=3",
+      knowmore: iconURLPrefix+"bw_banasura_sagar_hills_romantic_wayanad.html",
 
     }
     ,
@@ -462,7 +462,7 @@ const siteData = {
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=48&cat=3",
+      knowmore: iconURLPrefix+"bw_manjappara_romantic_wayanad.html",
 
     }
     ,
@@ -483,7 +483,7 @@ const siteData = {
        transport: "Public",
      rating:"3.9",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=50&cat=3",
+      knowmore: iconURLPrefix+"bw_phanthom_rock_romantic_wayanad.html",
 
     }
     ,
@@ -504,7 +504,7 @@ const siteData = {
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=51&cat=3",
+      knowmore: iconURLPrefix+"bw_kurumbalakotta_romantic_wayanad.html",
 
     }
     ,
