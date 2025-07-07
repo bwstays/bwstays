@@ -525,7 +525,7 @@ const siteData = {
        transport: "Public",
      rating:"4.6",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=53&cat=3",
+      knowmore: iconURLPrefix+"bw_attamala_view_point_romantic_wayanad.html",
 
     }
     ,
@@ -546,7 +546,7 @@ const siteData = {
        transport: "Public",
      rating:"4.4",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=54&cat=3",
+      knowmore: iconURLPrefix+"bw_sunrise_valley_romantic_wayanad.html",
 
     }
     ,
