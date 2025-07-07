@@ -399,7 +399,7 @@ const siteData = {
        transport: "Public",
      rating:"4.3",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=45&cat=3",
+      knowmore: iconURLPrefix+"bw_banasurasagar_dam_romantic_wayanad.html",
 
     }
     ,

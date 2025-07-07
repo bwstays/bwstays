@@ -181,7 +181,7 @@ window.addEventListener('load', function () {
   descContainer.innerHTML = `
       <h3 class="text-white mb-3">${currentItemData.name}</h3>
       <div class="mb-3">
-          <a href="#nearby-places"><span class="text-warning">View places with in 15 Kms </span></a> </div>
+          <a href="#nearby-places"><span class="text-warning">View places within 15 Kms from ${currentItemData.name}</span></a> </div>
       <div class="mb-3">
           <span class="text-warning">★ ${currentItemData.rating}</span>
           <span class="text-white-50 ml-2">${currentItemData.distance}km from Kalpetta</span>
