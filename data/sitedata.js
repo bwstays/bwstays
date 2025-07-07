@@ -38,7 +38,7 @@ const siteData = {
 		latlong: "11.758218103566884, 75.99955554569163",
 		map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       type: "Plantations",
-      knowmore: iconURLPrefix+"knowmore.html?id=62&cat=0",
+      knowmore: iconURLPrefix+"bw_coffee_plantation_plantation_wayanad.html",
 
     }
 

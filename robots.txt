@@ -7,4 +7,3 @@ Crawl-Delay: 1
 Allow: /
 sitemap: https://www.bwstays.com/sitemap.txt
 sitemap: https://www.bwstays.com/sitemap.xml
-Disallow: *
