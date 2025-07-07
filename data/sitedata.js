@@ -412,7 +412,7 @@ const siteData = {
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-      distance: "21",
+      distance: "3",
       latlong: "11.624409556486977, 76.0923043558191",
       map: "https://maps.app.goo.gl/BAfPDiMsxSXDTAy49",
        transport: "Public",
@@ -420,7 +420,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=46&cat=3",
+      knowmore: iconURLPrefix+"bw_mailadippara_romantic_wayanad.html",
 
     }
     ,
@@ -1564,7 +1564,7 @@ const siteData = {
       timing:["05:30-12:30","17:00-19:30"],
       Contact: "+91-000 000 0000",
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-      distance: "12",
+      distance: "36",
       transport: "Public",
       latlong: "11.8516904520993, 76.01646686931055",
       map: "https://maps.app.goo.gl/kKhmvmG6fLcWVG5a6",
