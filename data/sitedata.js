@@ -671,7 +671,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: iconURLPrefix+"knowmore.html?id=85&cat=3",
+          knowmore: iconURLPrefix+"bw_bamboo_forest_valentine_park_wayanad.html",
 
       }
   ],
@@ -696,7 +696,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Cultural & Historical",
-      knowmore: iconURLPrefix+"knowmore.html?id=6&cat=4",
+      knowmore: iconURLPrefix+"bw_sultan_batthery_valmiki_ashram_heritage_wayanad.html",
 
     }
 ,
@@ -717,7 +717,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Cultural & Historical",
-      knowmore: iconURLPrefix+"knowmore.html?id=24&cat=4",
+      knowmore: iconURLPrefix+"bw_mananthavady_pazhassi_tomb_heritage_wayanad.html",
 
     },
    {
@@ -757,7 +757,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
            type: "Cultural & Historical",
-           knowmore: iconURLPrefix+"knowmore.html?id=1&cat=4",
+           knowmore: iconURLPrefix+"bw_santhinatha_temple_heritage_wayanad.html",
          },
   ],
 
