@@ -1004,7 +1004,7 @@ const siteData = {
       id: 31,
       name: "Tholpetty wild life sanctuary",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: [iconURLPrefix+"assets/img/wildlife/bw-home-away-wildlife-safari-tholpetty-sanctuary.avif"],
+      image: [iconURLPrefix+"assets/img/wildlife/bw-team-event-tholpetty-wildlife-sanctuary-wayanad.avif"],
       holidays: "Sun",
       timing:["09:00-10:00","15:00-17:00"],
       Contact: "+91-000 000 0000",
@@ -1017,16 +1017,16 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"knowmore.html?id=31&cat=6",
+      knowmore: iconURLPrefix+"bw_tholpetty_wildlife_sanctuary_wayanad.html",
 
     },
 
 
  {
       id: 32,
-      name: "Begur wild life sanctuary",
+      name: "Begur wildlife sanctuary",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: [iconURLPrefix+"assets/img/wildlife/bw-home-away-wildlife-safari-tholpetty-sanctuary.avif"],
+      image: [iconURLPrefix+"assets/img/wildlife/bw-kerala-begur-wildlife-sanctuary-wayanad.jpg"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
@@ -1039,7 +1039,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"knowmore.html?id=32&cat=6",
+      knowmore: iconURLPrefix+"bw_begur_wildlife_sanctuary_wayanad.html",
 
     }
   ],
@@ -1080,7 +1080,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Farm Visit",
-      knowmore: iconURLPrefix+"knowmore.html?id=63&cat=7",
+      knowmore: iconURLPrefix+"bw_boys_town_farm_wayanad.html",
 
     }
 ,
