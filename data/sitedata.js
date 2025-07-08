@@ -1101,7 +1101,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
 		type: "Farm Visit",
-      knowmore: iconURLPrefix+"knowmore.html?id=74&cat=7",
+      knowmore: iconURLPrefix+"bw_pepper_farm_wayanad.html",
 
     }
   ],
@@ -1110,7 +1110,7 @@ const siteData = {
   {
             id: 82,
             name: "Bamboo Rafting",
-            description: "bamboorafting.",
+            description: "bamboo rafting",
             image: [iconURLPrefix+"assets/img/sports/bw-stay-bamboo-sport-rafting-wayanad.avif"],
             holidays: "Sun",
             timing:[ "09:00-17:00"],
