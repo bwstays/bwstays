@@ -824,7 +824,7 @@ const siteData = {
       hrs:"3",
       fee:"0",
        type: "Trucking",
-      knowmore: iconURLPrefix+"knowmore.html?id=18&cat=5",
+      knowmore: iconURLPrefix+"bw_chembra_peak_trucking_wayanad.html",
 
     }
 ,
@@ -845,7 +845,7 @@ const siteData = {
          hrs:"2",
          fee:"0",
           type: "Trucking",
-         knowmore: iconURLPrefix+"knowmore.html?id=19&cat=5",
+         knowmore: iconURLPrefix+"bw_cheengeri_hill_trucking_wayanad.html",
 
     }
 ,
@@ -853,7 +853,7 @@ const siteData = {
       id: 20,
       name: "Lakkidi Ghats View Point",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
-      image: [iconURLPrefix+"assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp",iconURLPrefix+"assets/img/romantic/bw-vacation-ghats-viewpoint-kalpetta.avif",iconURLPrefix+"assets/img/romantic/bw-villa-rooms-ghats-wayanad.webp",iconURLPrefix+"assets/img/romantic/bw-stays-ghats-wayanad.avif"],
+      image: [iconURLPrefix+"assets/img/trucking/bw-stays-ghats-viewpoint-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-vacation-ghats-viewpoint-kalpetta.avif",iconURLPrefix+"assets/img/trucking/bw-villa-rooms-ghats-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-stays-ghats-wayanad.avif"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
@@ -866,7 +866,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Trucking",
-      knowmore: iconURLPrefix+"knowmore.html?id=20&cat=5",
+      knowmore: iconURLPrefix+"bw_lakkidi_ghats_view_point_wayanad.html",
 
     }
 ,
@@ -909,7 +909,7 @@ const siteData = {
       latlong: "11.639978909862197, 76.08420612038587",
       map: "https://maps.app.goo.gl/n2aJqSpipqQjE6x56",
        type: "Trucking",
-      knowmore: iconURLPrefix+"knowmore.html?id=23&cat=5",
+      knowmore: iconURLPrefix+"bw_puliyarmala_trucking_wayanad.html",
 
     }
 ,
@@ -918,7 +918,7 @@ const siteData = {
       id: 87,
       name: "Kolagapara",
       description: "Ancient rock shelter ",
-      image: [iconURLPrefix+"assets/img/romantic/bw-service-villa-kolagappara-wayanad.avif"],
+      image: [iconURLPrefix+"assets/img/trucking/bw-service-villa-kolagappara-wayanad.avif"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
@@ -931,7 +931,7 @@ const siteData = {
       latlong: "11.650880848883398, 76.19276045292615",
       map: "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
        type: "Trucking",
-      knowmore: iconURLPrefix+"knowmore.html?id=87&cat=5",
+      knowmore: iconURLPrefix+"bw_kolagapara_trucking_wayanad.html",
 
     }
   ],
@@ -977,7 +977,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"knowmore.html?id=29&cat=6",
+      knowmore: iconURLPrefix+"bw_nagarhole_wildlife_sanctuary_wayanad.html",
 
     },
 {
@@ -989,7 +989,7 @@ const siteData = {
       timing:[ "07:00-17:00"],
       Contact: "+91-333 333 3333",
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-      distance: "0",
+      distance: "42",
        transport: "Public",
       latlong: "11.938242187351989, 75.96156549814673",
       map: "https://maps.app.goo.gl/umBUHNr1ZaCRCiHN7",
@@ -997,7 +997,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"knowmore.html?id=30&cat=6",
+      knowmore: iconURLPrefix+"bw_pakshipathalam_wildlife_sanctuary_wayanad.html",
 
     },
  {
