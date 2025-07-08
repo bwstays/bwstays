@@ -783,7 +783,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Trucking",
-      knowmore: iconURLPrefix+"knowmore.html?id=15&cat=5",
+      knowmore: iconURLPrefix+"bw_kuruwa_deep_trucking_wayanad.html",
 
     },
     {
@@ -803,7 +803,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Trucking",
-      knowmore: iconURLPrefix+"knowmore.html?id=17&cat=5",
+      knowmore: iconURLPrefix+"bw_brahmagiri_trucking_wayanad.html",
 
     }
 ,
