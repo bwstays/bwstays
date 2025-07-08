@@ -595,7 +595,7 @@ const siteData = {
     {
       id: 58,
       name: "900 Kandi",
-      description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+      description: "Welcome to the. Land of Bliss · Meet Kerala's longest hanging glass bridge.",
       image: [iconURLPrefix+"assets/img/romantic/bw-weekend-destination-glassbridge-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
@@ -609,7 +609,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
 		type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=58&cat=3",
+      knowmore: iconURLPrefix+"bw_900_kandi_romantic_wayanad.html",
 
     },
   {
@@ -629,7 +629,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: iconURLPrefix+"knowmore.html?id=83&cat=3",
+          knowmore: iconURLPrefix+"bw_neelarchalu_lake_romantic_wayanad.html",
 
       }
 ,
@@ -650,7 +650,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: iconURLPrefix+"knowmore.html?id=84&cat=3",
+          knowmore: iconURLPrefix+"bw_munneswaran_kunnu_romantic_wayanad.html",
 
       }
 ,
