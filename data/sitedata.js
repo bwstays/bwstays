@@ -1329,6 +1329,27 @@ const siteData = {
 
 
  shopping: [
+
+  {
+       id: 85,
+       name: "Ali's wayanadan natural honey",
+       description: "NATURAL HONEY.",
+       image: [iconURLPrefix+"assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.avif"],
+       holidays: "None",
+       timing:[ "11:00-20:00"],
+       Contact: "+91-555 555 5555",
+ 	  seasontovisit:["All Season"],
+       distance: "25",
+       transport: "Public",
+       latlong: "11.596827238325503, 76.21948657283083",
+       map: "https://maps.app.goo.gl/ZCFPmqauSefZ61UP7",
+       rating:"5",
+       hrs:"2",
+       fee:"0",
+       type: "shopping",
+       knowmore: iconURLPrefix+"bw_ali_wayanadan_honey_shopping_wayanad.html",
+
+    },
     {
       id: 77,
       name: "Bevo Beverages ( Govt of Kerala )",
@@ -1346,7 +1367,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "shopping",
-      knowmore: iconURLPrefix+"knowmore.html?id=77&cat=12",
+      knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8"
 
     },
 
@@ -1369,8 +1390,7 @@ const siteData = {
        type: "shopping",
       knowmore: iconURLPrefix+"knowmore.html?id=79&cat=12",
 
-    }
-,
+    },
     {
       id: 67,
       name: "House Holds",
@@ -1392,26 +1412,7 @@ const siteData = {
 
     }
  ,
-     {
-       id: 85,
-       name: "Ali's wayanadan natural honey",
-       description: "NATURAL HONEY.",
-       image: [iconURLPrefix+"assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.avif"],
-       holidays: "None",
-       timing:[ "11:00-20:00"],
-       Contact: "+91-555 555 5555",
- 	  seasontovisit:["All Season"],
-       distance: "25",
-       transport: "Public",
-       latlong: "11.596827238325503, 76.21948657283083",
-       map: "https://maps.app.goo.gl/ZCFPmqauSefZ61UP7",
-       rating:"5",
-       hrs:"2",
-       fee:"0",
-       type: "shopping",
-       knowmore: iconURLPrefix+"bw_ali_wayanadan_honey_shopping_wayanad.html",
 
-    }
  ],
 
  pilgrimage: [
