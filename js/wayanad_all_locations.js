@@ -1,9 +1,10 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
 
 
+
 var bwlocations = [
 
-['<h6><a target="_blank" href='+iconURLPrefix+'"bw_tirunelli_temple_pilgrimage_wayanad.html" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><span>10km</span><a target="_blank" href="./knowmore.html?id=1&cat=4" title="Shanthinatha Swamy Jain Temple"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/heritage/bw-stays-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6963, 76.1411, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="./knowmore.html?id=1&cat=4" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><span>10km</span><a target="_blank" href="./knowmore.html?id=1&cat=4" title="Shanthinatha Swamy Jain Temple"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/heritage/bw-stays-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6963, 76.1411, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="./knowmore.html?id=23&cat=5" title="Puliyarmala">Puliyarmala</a></h6><a target="_blank" href="./knowmore.html?id=23&cat=5" title="Puliyarmala"><img title="Black and White Stays Service Villa"   alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp" width="300" ></a>', 11.639978909862197, 76.08420612038587, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
@@ -55,7 +56,7 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="./knowmore.html?id=11&cat=13" title="Trishileri temple ">Trishileri temple </a></h6><a target="_blank" href="./knowmore.html?id=11&cat=13" title="Trishileri temple "><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/pilgrimage/bw-workation-trishilerry-temple-wayanad.avif" width="300" ></a>', 11.8516904520993, 76.01646686931055, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-['<h6><a target="_blank" href="./knowmore.html?id=4&cat=4" title="Thirunelli Temple">Thirunelli Temple</a></h6><a target="_blank" href="./knowmore.html?id=4&cat=4" title="Thirunelli Temple"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif" width="300" ></a>', 11.911625, 75.995811, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href='+iconURLPrefix+'"bw_tirunelli_temple_pilgrimage_wayanad.html" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><span>10km</span><a target="_blank" href="./knowmore.html?id=1&cat=4" title="Shanthinatha Swamy Jain Temple"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/heritage/bw-stays-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6963, 76.1411, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="./knowmore.html?id=14&cat=4" title="Valliyoorkavu Bhagavathy Temple">Valliyoorkavu Bhagavathy Temple</a></h6><a target="_blank" href="./knowmore.html?id=14&cat=4" title="Valliyoorkavu Bhagavathy Temple"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/pilgrimage/bw-valliyoorkavu-bhagavathy-temple-wayanad.avif" width="300" ></a>', 11.804457, 76.030023, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
