@@ -1399,7 +1399,7 @@ const siteData = {
       id: 79,
       name: "Spices",
       description: "Try authentic Kerala spices at local market",
-      image: [iconURLPrefix+"assets/img/food/bw-whole-spices-wholesale-kalpetta-wayanad.jpg"],
+      image: [iconURLPrefix+"assets/img/shopping/bw-whole-spices-wholesale-kalpetta-wayanad.jpg"],
       holidays: "None",
       timing:[ "11:00-23:00"],
       Contact: "+91-555 555 5555",
@@ -1560,7 +1560,7 @@ const siteData = {
       latlong: "11.685229537534148, 76.05606037116382",
       map: "https://maps.app.goo.gl/GWhpBVduuz5Sm1a67",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"knowmore.html?id=8&cat=13",
+      knowmore: iconURLPrefix+"bw_our_lady_of_lourdes_shrine_pilgrimage_wayanad.html",
 
     },
  	{
@@ -1580,7 +1580,7 @@ const siteData = {
       latlong: "11.793030398758432, 76.16871715767236",
       map: "https://maps.app.goo.gl/7EMqf1GJLZbLWdLSA",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"knowmore.html?id=9&cat=13",
+      knowmore: iconURLPrefix+"bw_pulpally_sitadevi_temple_pilgrimage_wayanad.html",
 
     },
  	{
@@ -1600,7 +1600,7 @@ const siteData = {
       latlong: "11.618497853276832, 76.1344553537423",
       map: "https://maps.app.goo.gl/mF1JKbkHQBNDeC4S9",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"knowmore.html?id=10&cat=13",
+      knowmore: iconURLPrefix+"bw_trikaipatta_temple_pilgrimage_wayanad.html",
 
     },
     {
@@ -1620,14 +1620,14 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"knowmore.html?id=11&cat=13",
+      knowmore: iconURLPrefix+"bw_trishileri_temple_pilgrimage_wayanad.html",
 
     },
 
     {
       id: 12,
       name: "Sita Lav Kush Temple ponkuzhy",
-      description: "Historic Varampatta mosque with beautiful architecture and cultural significance.",
+      description: "Temple associated with the epic Ramayana, located in a serene setting.",
       image: [iconURLPrefix+"assets/img/pilgrimage/bw-stays-lava-kush-ponkuzhi-wayanad.avif"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
@@ -1648,7 +1648,7 @@ const siteData = {
     {
       id: 13,
       name: "Varampatta mosque",
-      description: "Temple associated with the epic Ramayana, located in a serene setting.",
+      description: "Historic Varampatta mosque with beautiful architecture and cultural significance.",
       image: [iconURLPrefix+"assets/img/pilgrimage/bw-stays-korome-mosque-wayanad.webp",iconURLPrefix+"assets/img/pilgrimage/bw-stays-varambetta-mosque-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
