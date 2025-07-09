@@ -1540,7 +1540,7 @@ const siteData = {
       latlong: "11.660422442249578, 76.17374499957178",
       map: "https://maps.app.goo.gl/voAar4qRh1U2jXjk7",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"knowmore.html?id=7&cat=13",
+      knowmore: iconURLPrefix+"bw_meenangadi_church_pilgrimage_wayanad.html",
 
     },
  	{
