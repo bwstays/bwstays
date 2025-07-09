@@ -944,7 +944,7 @@ const siteData = {
       id: 28,
       name: "Muthanga Wildlife Sanctuary",
       description: "Sanctuary with elephants, deer, and a variety of birds in their natural habitat.",
-      image: [iconURLPrefix+"assets/img/wildlife/bw-night-safari-muthanga-wildlife-wayanad.avif"],
+      image: [iconURLPrefix+"assets/img/wildlife/bw-food-stay-muthanga-wildlife-wayanad.webp"],
       holidays: "None",
       timing:["06:00-19:00"],
       Contact: "+91-333 333 3333",
@@ -1044,6 +1044,27 @@ const siteData = {
     }
   ],
   farms: [
+       {
+	      id: 88,
+	      name: "Gurukula Botanical Sanctuary",
+	      description: "Gurukula Botanical Sanctuary hosts over 2,000 native plant species including around 100 native trees restored to their natural habitat, 500 herbs, shrubs.",
+	      image: [iconURLPrefix+"assets/img/farm/bw-gurukula-botanical-sanctuary-wayanad.png"],
+	      holidays: "None",
+	      timing:[ "10:00-16:00"],
+			Contact: "+91-444 444 4444",
+			seasontovisit:["All Season"],
+			distance: "10",
+			transport: "Public",
+			latlong: "11.821216, 75.844855",
+			map: "https://maps.app.goo.gl/gLZB7Pnn3mDAnuYw8",
+			rating:"4.9",
+			hrs:"2",
+			fee:"0",
+			type: "Farm Visit",
+	      knowmore: iconURLPrefix+"bw_pepper_farm_wayanad.html",
+
+    },
+
     {
       id: 64,
       name: "Ambalavayal",
@@ -1104,28 +1125,9 @@ const siteData = {
       knowmore: iconURLPrefix+"bw_pepper_farm_wayanad.html",
 
     }
-,
 
-    {
-      id: 88,
-      name: "Gurukula Botanical Sanctuary",
-      description: "Gurukula Botanical Sanctuary hosts over 2,000 native plant species including around 100 native trees restored to their natural habitat, 500 herbs, shrubs.",
-      image: [iconURLPrefix+"assets/img/farm/bw-gurukula-botanical-sanctuary-wayanad.png"],
-      holidays: "None",
-      timing:[ "10:00-16:00"],
-		Contact: "+91-444 444 4444",
-		seasontovisit:["All Season"],
-		distance: "10",
-		transport: "Public",
-		latlong: "11.821216, 75.844855",
-		map: "https://maps.app.goo.gl/gLZB7Pnn3mDAnuYw8",
-		rating:"4.9",
-		hrs:"2",
-		fee:"0",
-		type: "Farm Visit",
-      knowmore: iconURLPrefix+"bw_pepper_farm_wayanad.html",
 
-    }
+
   ],
 
   sporting: [
@@ -1440,7 +1442,7 @@ const siteData = {
 
 {
           id: 4,
-          name: "Tirunelli Temple",
+          name: "Tirunelli",
           description: "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
           image: [iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif",iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif"],
           holidays: "Sun",
@@ -1455,13 +1457,13 @@ const siteData = {
           latlong: "11.911851118207249, 75.9958816441809",
           map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
           type: "Pilgrimage",
-          knowmore: iconURLPrefix+"knowmore.html?id=4&cat=13",
+          knowmore: iconURLPrefix+"bw_tirunelli_temple_pilgrimage_wayanad.html",
 
         },
 
      {
           id: 2,
-          name: "Ananthanatha Swamy Jain Temple",
+          name: "Ananthanatha Swamy Jain",
           description: "Temple associated with the epic Ramayana, located in a serene setting.",
           image: [iconURLPrefix+"assets/img/pilgrimage/bw-stays-anantha-swami-jain-temple-wayanad.avif"],
           holidays: "Sun",
@@ -1485,18 +1487,18 @@ const siteData = {
           description: "Historic Koottamundu Glass Temple Wayanad with beautiful architecture and cultural significance.",
           image: [iconURLPrefix+"assets/img/pilgrimage/bw-workation-jain-glass-temple-wayanad.avif"],
           holidays: "Sun",
-          timing:[ "09:00-17:00"],
+          timing:[ "09:00-18:30"],
           Contact: "+91-000 000 0000",
     	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
           distance: "7",
           transport: "Public",
           latlong: "11.571875045855256, 76.08657265424115",
           map: "https://maps.app.goo.gl/Uv81sPamq88kYvpZ9",
-          rating:"4.5",
+          rating:"4.0",
           hrs:"2",
           fee:"0",
            type: "Pilgrimage",
-          knowmore: iconURLPrefix+"knowmore.html?id=3&cat=13",
+          knowmore: iconURLPrefix+"bw_koottamundu_glass_temple_pilgrimage_wayanad.html",
 
         },
 
@@ -1523,7 +1525,8 @@ const siteData = {
 
 {
       id: 7,
-      name: "Meenangadi Church",      description: "Ancient Meenangadi Church  , nestled in the hills of Wayanad.",
+      name: "Meenangadi Church",
+      description: "Ancient Meenangadi Church  , nestled in the hills of Wayanad.",
       image: [iconURLPrefix+"assets/img/pilgrimage/bw-staycation-meenagadhi-church-wayanad.avif"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
