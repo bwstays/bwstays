@@ -1124,7 +1124,7 @@ const siteData = {
   			hrs:"2",
   			fee:"0",
   			type: "Sporting",
-  			knowmore: iconURLPrefix+"knowmore.html?id=82&cat=8",
+  			knowmore: iconURLPrefix+"bw_bamboo_rafting_sporting_wayanad.html",
 
       },
   {
@@ -1153,7 +1153,7 @@ const siteData = {
           name: "Turf",
           description: "Turf.",
           image: [iconURLPrefix+"assets/img/sports/bw-green-grass-football-wayanad.webp"],
-          holidays: "Sun",
+          holidays: "NA",
           timing:[ "09:00-17:00"],
           Contact: "+91-000 000 0000",
      	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
@@ -1165,13 +1165,34 @@ const siteData = {
 			hrs:"2",
 			fee:"0",
 			type: "Sporting",
-			knowmore: iconURLPrefix+"knowmore.html?id=87&cat=8",
+			knowmore: iconURLPrefix+"bw_football_turf_sporting_wayanad.html",
 
       }
     ]
    ,
 
  food: [
+ {
+       id: 90,
+       name: "Food Spots Kalpetta",
+       description: "Try authentic Kerala dishes at local eateries and food stalls at kalpetta.",
+       image: [iconURLPrefix+"assets/img/food/bw-stays-hotel-wayanad-inn.avif"],
+       holidays: "None",
+       timing:[ "11:00-23:00"],
+       Contact: "+91-555 555 5555",
+ 	  seasontovisit:["All Season"],
+ 		distance: "5",
+ 		transport: "Public",
+ 		latlong: "",
+ 		map: "",
+ 		rating:"4",
+ 		hrs:"2",
+ 		fee:"0",
+ 		type: "Food",
+       knowmore: iconURLPrefix+"all_fooding_wayanad.html",
+
+    },
+
     {
       id: 65,
       name: "Resturants",
@@ -1212,6 +1233,8 @@ const siteData = {
       knowmore: iconURLPrefix+"knowmore.html?id=66&cat=9",
 
     }
+
+
   ],
   tribal: [
   {
