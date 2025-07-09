@@ -378,7 +378,7 @@ const siteData = {
        transport: "Public",
      rating:"4.1",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=44&cat=3",
+      knowmore: iconURLPrefix+"bw_pookode_lake_romantic_wayanad.html",
 
     }
     ,
@@ -567,7 +567,7 @@ const siteData = {
        transport: "Public",
      rating:"3.9",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=55&cat=3",
+      knowmore: iconURLPrefix+"bw_neelimala_view_point_romantic_wayanad.html",
 
     }
     ,
@@ -588,7 +588,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
 		type: "Romantic Spots",
-      knowmore: iconURLPrefix+"knowmore.html?id=56&cat=3",
+      knowmore: iconURLPrefix+"bw_lakkidi_ghats_view_point_wayanad.html",
 
     }
     ,
@@ -1519,7 +1519,7 @@ const siteData = {
           latlong: "11.911882611618777, 75.99584945767235",
           map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
           type: "Pilgrimage",
-          knowmore: iconURLPrefix+"knowmore.html?id=5&cat=13",
+          knowmore: iconURLPrefix+"bw_papanasini_river_temple_pilgrimage_wayanad.html",
 
     },
 
