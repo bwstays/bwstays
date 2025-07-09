@@ -1,3 +1,10 @@
+https://www.bwstays.com/all_fooding_wayanad.html
+https://www.bwstays.com/all_locations_wayanad.html
+https://www.bwstays.com/booking.html
+https://www.bwstays.com/index.html
+https://www.bwstays.com/reciprocal.html
+https://www.bwstays.com/robots.txt
+https://www.bwstays.com/sitemap.txt
 https://www.bwstays.com/bw_bamboo_rafting_sporting_wayanad.html
 https://www.bwstays.com/bw_ziplines_sporting_wayanad.html
 https://www.bwstays.com/bw_football_turf_sporting_wayanad.html
@@ -18,9 +25,6 @@ https://www.bwstays.com/bw_valliyoorkavu_temple_pilgrimage_wayanad.html
 https://www.bwstays.com/bw_tirunelli_temple_pilgrimage_wayanad.html
 https://www.bwstays.com/bw_pookode_lake_romantic_wayanad.html
 https://www.bwstays.com/404.html
-https://www.bwstays.com/all_fooding_wayanad.html
-https://www.bwstays.com/all_locations_wayanad.html
-https://www.bwstays.com/booking.html
 https://www.bwstays.com/bw_ali_wayanadan_honey_shopping_wayanad.html
 https://www.bwstays.com/bw_ambalavayal_farm_rars_wayanad.html
 https://www.bwstays.com/bw_ananthanatha_swamy_jain_temple_pilgrimage_wayanad.html
@@ -56,10 +60,6 @@ https://www.bwstays.com/bw_soochipara_waterfall_wayanad.html
 https://www.bwstays.com/bw_tea_museum_wayanad.html
 https://www.bwstays.com/bw_thusharagiri_waterfall_wayanad.html
 https://www.bwstays.com/bw_ziplines_sporting_wayanad.html
-https://www.bwstays.com/index.html
-https://www.bwstays.com/reciprocal.html
-https://www.bwstays.com/robots.txt
-https://www.bwstays.com/sitemap.txt
 https://www.bwstays.com/villa1.html
 https://www.bwstays.com/villa2.html
 https://www.bwstays.com/yandex_67f75044b7220479.html
