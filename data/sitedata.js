@@ -1174,9 +1174,9 @@ const siteData = {
  food: [
  {
        id: 90,
-       name: "Food Spots Kalpetta",
+       name: "All Food Spots near Kalpetta",
        description: "Try authentic Kerala dishes at local eateries and food stalls at kalpetta.",
-       image: [iconURLPrefix+"assets/img/food/bw-stays-hotel-wayanad-inn.avif"],
+       image: [iconURLPrefix+"assets/img/food/bw-kalpetta-food-drinks-collage-all-images.jpg"],
        holidays: "None",
        timing:[ "11:00-23:00"],
        Contact: "+91-555 555 5555",
@@ -1242,7 +1242,7 @@ const siteData = {
            id: 59,
            name: "Uravu",
            description: "Uravu",
-           image: [iconURLPrefix+"assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.avif",iconURLPrefix+"assets/img/tribal/bw_uravu_thrikkaipetta_village_wayanad.avif", iconURLPrefix+"assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.avif"],
+           image: [iconURLPrefix+"assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.avif",iconURLPrefix+"assets/img/tribal/bw-workation-uravu-thrikkaipetta-bamboo-wayanad-1.webp", iconURLPrefix+"assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.avif",iconURLPrefix+"assets/img/tribal/bw-service-apartment-uravu-thrikkaipetta-bamboo-wayanad.WEBP"],
            holidays: "Sun",
            timing:[ "09:00-17:00"],
            Contact: "+91-000 000 0000",
@@ -1255,7 +1255,7 @@ const siteData = {
  			hrs:"2",
  			fee:"0",
        	  type: "Tribal",
-           knowmore: iconURLPrefix+"knowmore.html?id=59&cat=10",
+           knowmore: iconURLPrefix+"bw_uravu_bamboo_tribal_wayanad.html",
 
       },
  {
