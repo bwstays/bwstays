@@ -1104,6 +1104,28 @@ const siteData = {
       knowmore: iconURLPrefix+"bw_pepper_farm_wayanad.html",
 
     }
+,
+
+    {
+      id: 88,
+      name: "Gurukula Botanical Sanctuary",
+      description: "Gurukula Botanical Sanctuary hosts over 2,000 native plant species including around 100 native trees restored to their natural habitat, 500 herbs, shrubs.",
+      image: [iconURLPrefix+"assets/img/farm/bw-gurukula-botanical-sanctuary-wayanad.png"],
+      holidays: "None",
+      timing:[ "10:00-16:00"],
+		Contact: "+91-444 444 4444",
+		seasontovisit:["All Season"],
+		distance: "10",
+		transport: "Public",
+		latlong: "11.821216, 75.844855",
+		map: "https://maps.app.goo.gl/gLZB7Pnn3mDAnuYw8",
+		rating:"4.9",
+		hrs:"2",
+		fee:"0",
+		type: "Farm Visit",
+      knowmore: iconURLPrefix+"bw_pepper_farm_wayanad.html",
+
+    }
   ],
 
   sporting: [
