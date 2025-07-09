@@ -1411,7 +1411,6 @@ const siteData = {
       knowmore: iconURLPrefix+"knowmore.html?id=67&cat=12",
 
     }
- ,
 
  ],
 
