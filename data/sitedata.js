@@ -1641,7 +1641,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"knowmore.html?id=12&cat=13",
+      knowmore: iconURLPrefix+"bw_sita_lav_kush_temple_pilgrimage_wayanad.html",
 
     },
 
@@ -1662,7 +1662,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Pilgrimage",
-      knowmore: iconURLPrefix+"knowmore.html?id=13&cat=13",
+      knowmore: iconURLPrefix+"bw_varampatta_mosque_pilgrimage_wayanad.html",
 
     }
     ,
@@ -1683,7 +1683,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Pilgrimage",
-      knowmore: iconURLPrefix+"knowmore.html?id=14&cat=13",
+      knowmore: iconURLPrefix+"bw_valliyoorkavu_temple_pilgrimage_wayanad.html",
 
     }
   ]
