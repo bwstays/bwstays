@@ -1444,7 +1444,7 @@ const siteData = {
           id: 4,
           name: "Tirunelli",
           description: "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
-          image: [iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif",iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif"],
+          image: [iconURLPrefix+"assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.avif",iconURLPrefix+"assets/img/pilgrimage/bw-stays-thirunelli-temple_wayanad.webp"],
           holidays: "Sun",
           timing:["05:30-12:30","17:00-19:30"],
           Contact: "+91-000 000 0000",
