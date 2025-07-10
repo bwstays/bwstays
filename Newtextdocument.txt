@@ -43,20 +43,18 @@ https://rajteachers.net/image-compressor-online
 
 monitoring
 https://www.githubstatus.com/
-https://gravatar.com/profile/about
+https://gravatar.com/profile/about
 https://wordpress.com/sites
 https://www.djubo.com/en-in/#section2
 
 
 
 search in file 
-dtpc 
 jpg
 png
 https://bwstays.github.io/bwstays
 blackandwhite.
 blogs.bwstays.com
-dtpcwayanad
 png conversion 
 @bwstays
 ./knowmore
@@ -131,3 +129,20 @@ title="Black and White Stays Bikers"
 title="Black and White Stays Riders" 
 title="Black and White Service Apartments" 
 title="Black and White City Center"
+title="Black and White Spice Plantations"
+title="Wayanad resorts" 
+title="Wayanad sightseeing" 
+title="Wayanad homestays," 
+title="Wayanad tourism" 
+title="Wayanad hotels" 
+title="Things to do in Wayanad"
+title="Wayanad trekking"
+title="Wayanad Tour Packages"
+title="Wayanad Car Rental"
+title="Wayanad Camping"
+title="Best resorts in Wayanad"
+title="Luxury resorts in Wayanad"
+title="Family stay in Kalpetta"
+title="Budget hotels in Kalpetta
+title="Wayanad weather in Kalpetta"
+title="Wayanad resorts in Kalpetta"
