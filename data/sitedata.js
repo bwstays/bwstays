@@ -853,7 +853,7 @@ const siteData = {
       id: 20,
       name: "Lakkidi Ghats View Point",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
-      image: [iconURLPrefix+"assets/img/trucking/bw-stays-ghats-viewpoint-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-vacation-ghats-viewpoint-kalpetta.avif",iconURLPrefix+"assets/img/trucking/bw-villa-rooms-ghats-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-stays-ghats-wayanad.avif"],
+      image: [iconURLPrefix+"assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-vacation-ghats-viewpoint-kalpetta.avif",iconURLPrefix+"assets/img/trucking/bw-villa-rooms-ghats-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-stays-ghats-wayanad.avif"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
