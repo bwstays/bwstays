@@ -96,6 +96,7 @@ provide filter based on short time, nearby, review, type
 contens security policy
 https://stackoverflow.com/questions/40360109/content-security-policy-img-src-self-data
 
+https://www.sitemaps.org/protocol.html
 
 
 title="Black and White Stays Holidays" 

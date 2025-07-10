@@ -75,21 +75,13 @@ var foodations = [
 
 ['<h6><a target="_blank" href="New Hotel" title="New Hotel">New Hotel</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.607452677265156, 76.08362059821074, 2, iconURLPrefix+"assets/img/logo/restaurant.png"],
 
-
-
 ['<h6><a target="_blank" href="Chill Out" title="Chill Out">Chill Out</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.608996367231134, 76.08346178431843, 2, iconURLPrefix+"assets/img/logo/cafe.png"],
-
 
 ['<h6><a target="_blank" href="Vanita Mess" title="Vanita Mess">Vanita Mess</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.609012788111084, 76.0832646419536, 2, iconURLPrefix+"assets/img/logo/restaurant.png"],
 
-
 ['<h6><a target="_blank" href="Walnuts cake shop" title="Walnuts cake shop">Walnuts cake shop</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.614855354258184, 76.08281021303468, 2, iconURLPrefix+"assets/img/logo/cafe.png"],
 
-
-
-
 ['<h6><a target="_blank" href="Cafe 41 Kalpetta" title="Cafe 41 Kalpetta">Cafe 41 Kalpetta</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.610153825099772, 76.08097305952563, 2, iconURLPrefix+"assets/img/logo/cafe.png"],
-
 
 ['<h6><a target="_blank" href="Olan Resturant" title="Olan Resturant">Olan Resturant</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.644692054539417, 76.11396083068944, 2, iconURLPrefix+"assets/img/logo/restaurant.png"],
 
@@ -105,11 +97,9 @@ var foodations = [
 
 ['<h6><a target="_blank" href="The Coffee Shop" title="The Coffee Shop">The Coffee Shop</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.617154317507989, 76.06854264615934, 2, iconURLPrefix+"assets/img/logo/restaurant.png"],
 
-
 ['<h6><a target="_blank" href="Ramavilas Chundale" title="Ramavilas Chundale">Ramavilas Chundale</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.5738608278821, 76.05500967074094, 2, iconURLPrefix+"assets/img/logo/restaurant.png"],
 
   ];
-
 
 var map = new google.maps.Map(document.getElementById('mapall'), {
   zoom: 9.999,
