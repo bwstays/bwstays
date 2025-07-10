@@ -99,6 +99,10 @@ https://stackoverflow.com/questions/40360109/content-security-policy-img-src-sel
 https://www.sitemaps.org/protocol.html
 
 
+theme for blogs 
+https://github.com/alshedivat/al-folio
+
+
 title="Black and White Stays Holidays" 
 title="Black and White Stays Staycations" 
 title="Black and White Stays Workations" 
