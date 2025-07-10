@@ -12,7 +12,7 @@ const aboutCardData = {
             title: "hustle in hisspeed",
             icon: "fas fa-home",
             description: "Luxurious amenities and thoughtfully designed spaces for your perfect stay.",
-            image: iconURLPrefix+"assets/img/villa1/black-and-white-wayanad-mist.avif"
+            image: iconURLPrefix+"assets/img/villa1/bw-destination-chembra-wayanad.avif"
         },
         {
             title: "bustle in budget",
