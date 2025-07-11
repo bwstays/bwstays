@@ -5,8 +5,7 @@ User-agent: Slurp
 User-agent: Baiduspider
 Disallow: /data/
 Disallow: /js/
-Disallow: /post.html
 Crawl-Delay: 1
 Allow: /
-sitemap: https://www.bwstays.com/sitemap.txt
 sitemap: https://www.bwstays.com/sitemap.xml
+sitemap: https://www.bwstays.com/sitemap.txt
