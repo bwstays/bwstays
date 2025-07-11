@@ -161,7 +161,7 @@
 							<h1>XML Sitemap</h1>
 
 															<p>
-									  what search engines like Google use to crawl and re-crawl posts/pages/products/images/archives on your website.								</p>
+									  what search engines like Google use to crawl and re-crawl posts/pages/images on your bwstays.com.								</p>
 							
 							<p>
 								Learn more about <a href="http://sitemaps.org" target="_blank">XML Sitemaps</a>.							</p>
