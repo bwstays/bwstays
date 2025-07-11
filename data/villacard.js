@@ -46,7 +46,7 @@ function populateAboutCards() {
                             <i class="${card.icon} fa-2x text-primary"></i>
                         </div>
                         <h3 class="text-white mb-3">${card.title}</h3>
-     					 <div class="border-bottom border-primary text-center mb-4" id="contact-divider" style="width:22%;margin:0 auto; border-radius: 10%;"></div>
+     					 <div class="border-bottom border-primary text-center mb-4"   style="width:22%;margin:0 auto; border-radius: 10%;"></div>
                         <p class="text-white-50 mb-0">${card.description}</p>
                         <div class="mt-auto pt-4 text-center">
                             <a href="#" class="btn btn-primary js-scroll-trigger px-4 py-2">Know More</a>
