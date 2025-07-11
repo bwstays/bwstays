@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>Locations for bwstays.</name>
+		<atom:author>
+			<atom:name>bwstays</atom:name>
+		</atom:author>
+		<atom:link rel="related" href="https://www.bwstays.com" />
+		<Folder>
+			<Placemark>
+				<name><![CDATA[bwstays]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 67312, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>76.0828087,11.6103277,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>
