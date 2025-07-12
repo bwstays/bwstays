@@ -7,7 +7,7 @@
 					<xsl:when test="kml:kml">
 						<title>Locations Sitemap - BWStays</title>
 					</xsl:when>
-					 <xsl:otherwise>
+					<xsl:otherwise>
 						<title>XML Sitemap - bwstays</title>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -95,9 +95,68 @@
 				<xsl:choose>
 					<xsl:when test="kml:kml">
 
+						<div id="description">
+
+							<h1>KML File</h1>
+
+							<p>
+									This KML File is is used to provide location information to Google.								</p>
+							
+							<p>
+								Learn more about <a href="https://developers.google.com/kml/documentation/" target="_blank">KML File</a>.							</p>
+
+						</div>
+
+						<div id="content">
+							<p class="expl">
+								This KML file contains <xsl:value-of select="count(kml:kml/kml:Document/kml:Folder/kml:Placemark)"/> Locations.
+							</p>
+							<p class="expl">
+								<a href="https://www.bwstays.com/sitemap_index.xml">&#8592; Sitemap Index</a>							</p>
+							<table id="sitemap" cellpadding="3">
+								<thead>
+									<tr>
+										<th width="25%">Name</th>
+										<th width="40%">Address</th>
+										<th width="15%">Phone number</th>
+										<th width="10%">Latitude</th>
+										<th width="10%">Longitude</th>
+									</tr>
+								</thead>
+								<tbody>
+									<xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
+									<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
+									<xsl:for-each select="kml:kml/kml:Document/kml:Folder/kml:Placemark">
+										<tr>
+											<td>
+												<xsl:variable name="itemURL">
+													<xsl:value-of select="atom:link/@href"/>
+												</xsl:variable>
+												<a href="{$itemURL}">
+													<xsl:value-of select="kml:name"/>
+												</a>
+											</td>
+											<td>
+												<xsl:value-of select="kml:address"/>
+											</td>
+											<td>
+												<xsl:value-of select="kml:phoneNumber"/>
+											</td>
+											<td>
+												<xsl:value-of select="kml:LookAt/kml:latitude"/>
+											</td>
+											<td>
+												<xsl:value-of select="kml:LookAt/kml:longitude"/>
+											</td>
+										</tr>
+									</xsl:for-each>
+								</tbody>
+							</table>
+						</div>
 					</xsl:when>
-					<xsl:otherwise>						
-					<div id="description">
+					<xsl:otherwise>
+
+						<div id="description">
 
 							<h1>XML Sitemap</h1>
 
