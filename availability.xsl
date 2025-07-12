@@ -133,8 +133,8 @@
 										<tr>
 											 
 											<th width="25%">Date</th>
-											<th width="25%">Villa 1</th>
-											<th width="25%">Villa 2</th>
+											<th width="25%"><a href="https://www.bwstays.com/villa1.html">Villa 1</a></th>
+											<th width="25%"><a href="https://www.bwstays.com/villa2.html">Villa 2</a></th>
 										</tr>
 									</thead>
 
@@ -155,15 +155,15 @@
 											<tr>
 												 
 												<td>
-													 <xsl:value-of select="sitemap:date"/> 
+													  <xsl:value-of select="sitemap:date"/> 
 												</td>
 
 												<td>
-													 <xsl:value-of select="sitemap:villa1"/> 
+													<a href="https://www.bwstays.com/booking.html"> <xsl:value-of select="sitemap:villa1"/> </a>
 												</td>
 
 												<td>
-													 <xsl:value-of select="sitemap:villa2"/> 
+													<a href="https://www.bwstays.com/booking.html"> <xsl:value-of select="sitemap:villa2"/> </a>
 												</td>
 
 											</tr>
