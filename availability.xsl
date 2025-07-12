@@ -8,7 +8,7 @@
 						<title>Locations Sitemap - BWStays</title>
 					</xsl:when>
 					<xsl:otherwise>
-						<title>XML Sitemap - bwstays</title>
+						<title>Availability Check - bwstays</title>
 					</xsl:otherwise>
 				</xsl:choose>
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
