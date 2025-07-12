@@ -4,7 +4,10 @@
 		<html xmlns="http://www.w3.org/1999/xhtml">
 			<head>
 				<xsl:choose>
-										<xsl:otherwise>
+					<xsl:when test="kml:kml">
+						<title>Locations Sitemap - BWStays</title>
+					</xsl:when>
+					 <xsl:otherwise>
 						<title>XML Sitemap - bwstays</title>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -90,9 +93,11 @@
 			<body>
 
 				<xsl:choose>
-					 
+					<xsl:when test="kml:kml">
 
-						<div id="description">
+					</xsl:when>
+					<xsl:otherwise>						
+					<div id="description">
 
 							<h1>XML Sitemap</h1>
 
