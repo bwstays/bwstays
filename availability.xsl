@@ -109,49 +109,11 @@
 
 						<div id="content">
 							<p class="expl">
-								This KML file contains <xsl:value-of select="count(kml:kml/kml:Document/kml:Folder/kml:Placemark)"/> Locations.
+								Available Dates .
 							</p>
 							<p class="expl">
-								<a href="https://www.bwstays.com/sitemap_index.xml">&#8592; Sitemap Index</a>							</p>
-							<table id="sitemap" cellpadding="3">
-								<thead>
-									<tr>
-										<th width="25%">Name</th>
-										<th width="40%">Address</th>
-										<th width="15%">Phone number</th>
-										<th width="10%">Latitude</th>
-										<th width="10%">Longitude</th>
-									</tr>
-								</thead>
-								<tbody>
-									<xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
-									<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
-									<xsl:for-each select="kml:kml/kml:Document/kml:Folder/kml:Placemark">
-										<tr>
-											<td>
-												<xsl:variable name="itemURL">
-													<xsl:value-of select="atom:link/@href"/>
-												</xsl:variable>
-												<a href="{$itemURL}">
-													<xsl:value-of select="kml:name"/>
-												</a>
-											</td>
-											<td>
-												<xsl:value-of select="kml:address"/>
-											</td>
-											<td>
-												<xsl:value-of select="kml:phoneNumber"/>
-											</td>
-											<td>
-												<xsl:value-of select="kml:LookAt/kml:latitude"/>
-											</td>
-											<td>
-												<xsl:value-of select="kml:LookAt/kml:longitude"/>
-											</td>
-										</tr>
-									</xsl:for-each>
-								</tbody>
-							</table>
+								<a href="https://www.bwstays.com/avail_index.xml">&#8592; Sitemap Index</a>							</p>
+							 
 						</div>
 					</xsl:when>
 					<xsl:otherwise>
@@ -172,7 +134,7 @@
 							<xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &gt; 0">
 
 								<p>
-									This XML Sitemap Index file contains <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> sitemaps.								</p>
+									Availbale Dates <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> sitemaps.								</p>
 
 								<table id="sitemap" cellpadding="3">
 
@@ -180,6 +142,9 @@
 										<tr>
 											<th width="75%">Sitemap</th>
 											<th width="25%">Last Modified</th>
+											<th width="25%">Date</th>
+											<th width="25%">Villa 1</th>
+											<th width="25%">Villa 2</th>
 										</tr>
 									</thead>
 
@@ -188,6 +153,17 @@
 											<xsl:variable name="sitemapURL">
 												<xsl:value-of select="sitemap:loc"/>
 											</xsl:variable>
+											<xsl:variable name="date">
+												<xsl:value-of select="sitemap:date"/>
+											</xsl:variable>
+											<xsl:variable name="villa1">
+												<xsl:value-of select="sitemap:villa1"/>
+											</xsl:variable>
+											<xsl:variable name="villa2">
+												<xsl:value-of select="sitemap:villa2"/>
+											</xsl:variable>
+
+
 											<tr>
 												<td>
 													<a href="{$sitemapURL}"><xsl:value-of select="sitemap:loc"/></a>
@@ -195,6 +171,18 @@
 												<td>
 													<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"/>
 												</td>
+												<td>
+													<a href="{$date}"><xsl:value-of select="sitemap:loc"/></a>
+												</td>
+
+												<td>
+													<a href="{$villa1}"><xsl:value-of select="sitemap:loc"/></a>
+												</td>
+
+												<td>
+													<a href="{$villa2}"><xsl:value-of select="sitemap:loc"/></a>
+												</td>
+
 											</tr>
 										</xsl:for-each>
 									</tbody>
@@ -207,7 +195,7 @@
 									This XML Sitemap contains <strong><xsl:value-of select="count(sitemap:urlset/sitemap:url)"/></strong> URLs.								</p>
 
 								<p class="expl">
-									<a href="https://www.bwstays.com/sitemap_index.xml">&#8592; Sitemap Index</a>								</p>
+									<a href="https://www.bwstays.com/avail_index.xml">&#8592; Sitemap Index</a>								</p>
 
 								<table id="sitemap" cellpadding="3">
 
