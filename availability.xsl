@@ -158,15 +158,15 @@
 											<tr>
 												 
 												<td>
-													<a href="{$date}"><xsl:value-of select="sitemap:loc"/></a>
+													 <xsl:value-of select="sitemap:date"/> 
 												</td>
 
 												<td>
-													<a href="{$villa1}"><xsl:value-of select="sitemap:loc"/></a>
+													 <xsl:value-of select="sitemap:villa1"/> 
 												</td>
 
 												<td>
-													<a href="{$villa2}"><xsl:value-of select="sitemap:loc"/></a>
+													 <xsl:value-of select="sitemap:villa2"/> 
 												</td>
 
 											</tr>
