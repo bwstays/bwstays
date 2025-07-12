@@ -120,13 +120,7 @@
 
 						<div id="description">
 
-							<h1>XML Sitemap</h1>
-
-															<p>
-									  what search engines like Google use to crawl and re-crawl posts/pages/images on your bwstays.com.								</p>
-							
-							<p>
-								Learn more about <a href="http://sitemaps.org" target="_blank">XML Sitemaps</a>.							</p>
+							<h1>Availability Date</h1> 
 
 						</div>
 
@@ -134,14 +128,13 @@
 							<xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &gt; 0">
 
 								<p>
-									Availbale Dates <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> sitemaps.								</p>
+									Availbale Dates <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> 								</p>
 
 								<table id="sitemap" cellpadding="3">
 
 									<thead>
 										<tr>
-											<th width="75%">Sitemap</th>
-											<th width="25%">Last Modified</th>
+											 
 											<th width="25%">Date</th>
 											<th width="25%">Villa 1</th>
 											<th width="25%">Villa 2</th>
@@ -150,9 +143,7 @@
 
 									<tbody>
 										<xsl:for-each select="sitemap:sitemapindex/sitemap:sitemap">
-											<xsl:variable name="sitemapURL">
-												<xsl:value-of select="sitemap:loc"/>
-											</xsl:variable>
+											 
 											<xsl:variable name="date">
 												<xsl:value-of select="sitemap:date"/>
 											</xsl:variable>
@@ -165,12 +156,7 @@
 
 
 											<tr>
-												<td>
-													<a href="{$sitemapURL}"><xsl:value-of select="sitemap:loc"/></a>
-												</td>
-												<td>
-													<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"/>
-												</td>
+												 
 												<td>
 													<a href="{$date}"><xsl:value-of select="sitemap:loc"/></a>
 												</td>
@@ -190,48 +176,7 @@
 								</table>
 
 							</xsl:if>
-							<xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &lt; 1">
-								<p>
-									This XML Sitemap contains <strong><xsl:value-of select="count(sitemap:urlset/sitemap:url)"/></strong> URLs.								</p>
-
-								<p class="expl">
-									<a href="https://www.bwstays.com/avail_index.xml">&#8592; Sitemap Index</a>								</p>
-
-								<table id="sitemap" cellpadding="3">
-
-									<thead>
-										<tr>
-											<th width="75%">URL</th>
-											<th width="5%">Images</th>											<th title="Last Modification Time" width="20%">Last Mod.</th>
-										</tr>
-									</thead>
-
-									<tbody>
-										<xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
-										<xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
-										<xsl:for-each select="sitemap:urlset/sitemap:url">
-											<tr>
-												<td>
-													<xsl:variable name="itemURL">
-														<xsl:value-of select="sitemap:loc"/>
-													</xsl:variable>
-													<a href="{$itemURL}">
-														<xsl:value-of select="sitemap:loc"/>
-													</a>
-												</td>
-																								<td>
-													<xsl:value-of select="count(image:image)"/>
-												</td>
-																								<td>
-													<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"/>
-												</td>
-											</tr>
-										</xsl:for-each>
-									</tbody>
-
-								</table>
-
-							</xsl:if>
+							 
 						</div>
 					</xsl:otherwise>
 				</xsl:choose>
