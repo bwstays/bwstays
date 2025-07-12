@@ -124,9 +124,7 @@
 						<div id="content">
 							<xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &gt; 0">
 
-								<p>
-									Availbale Dates <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> 								</p>
-
+								 
 								<table id="sitemap" cellpadding="3">
 
 									<thead>
