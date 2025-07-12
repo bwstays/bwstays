@@ -107,10 +107,7 @@
 
 						</div>
 
-						<div id="content">
-							<p class="expl">
-								Available Dates .
-							</p>
+						<div id="content">							 
 							<p class="expl">
 								<a href="https://www.bwstays.com/avail_index.xml">&#8592; Sitemap Index</a>							</p>
 							 
