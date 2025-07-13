@@ -1,11 +1,37 @@
-User-agent: *
 User-agent: Googlebot
-User-agent: Bingbot
+Disallow: 
+User-agent: googlebot-image
+Disallow: 
+User-agent: googlebot-mobile
+Disallow: 
+User-agent: MSNBot
+Disallow: 
 User-agent: Slurp
-User-agent: Baiduspider
-Disallow: /data/
-Disallow: /js/
-Crawl-Delay: 1
-Allow: /
-sitemap: https://www.bwstays.com/sitemap.xml
-sitemap: https://www.bwstays.com/sitemap.txt
+Disallow: 
+User-agent: Teoma
+Disallow: 
+User-agent: Gigabot
+Disallow: 
+User-agent: Robozilla
+Disallow: 
+User-agent: Nutch
+Disallow: 
+User-agent: ia_archiver
+Disallow: 
+User-agent: baiduspider
+Disallow: 
+User-agent: naverbot
+Disallow: 
+User-agent: yeti
+Disallow: 
+User-agent: yahoo-mmcrawler
+Disallow: 
+User-agent: psbot
+Disallow: 
+User-agent: yahoo-blogs/v3.9
+Disallow: 
+User-agent: *
+Disallow: 
+Disallow: /data
+Sitemap: www.bwstays.com/sitemap.xml
+Sitemap: www.bwstays.com/sitemap.txt
