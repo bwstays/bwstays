@@ -155,6 +155,7 @@ function renderNearbyPlaces() {
     const placesHTML = nearbyPlaces.map(place => {
         // Find the full place details from siteData
         const fullPlaceDetails = findPlaceById(place.id);
+        alert(place.id)
         if (fullPlaceDetails) {
             return createPlaceCard({
                 ...place,
