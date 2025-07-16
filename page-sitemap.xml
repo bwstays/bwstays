@@ -1,10 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//www.lanternstay.com/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//www.bwstays.com/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.lanternstay.com/</loc>
+		<loc>https://www.bwstays.com</loc>
 		<lastmod>2024-12-13T07:16:39+00:00</lastmod>
 		<image:image>
-			<image:loc>https://www.lanternstay.com/wp-content/uploads/2024/04/pool.png</image:loc>
+			<image:loc>https://www.bwstays.com/pool.png</image:loc>
 		</image:image>
 	</url>
+
+         <url>
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw_bamboo_rafting_sporting_wayanad.html</loc>
+		<lastmod>2024-12-13T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-stay-bamboo-sport-rafting-wayanad.avif</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-private-villa-river-rafting-in-wayanad.avif</image:loc>
+		</image:image>
+	  </url>
 </urlset>
