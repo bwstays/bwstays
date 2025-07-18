@@ -279,7 +279,7 @@ const siteData = {
       id: 78,
       name: "Honey Museum",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
-      image: [iconURLPrefix+"assets/img/museum/bw-stays-honey-museum-wayanad.web"],
+      image: [iconURLPrefix+"assets/img/museum/bw-stays-honey-museum-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
