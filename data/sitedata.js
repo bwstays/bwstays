@@ -1331,7 +1331,7 @@ const siteData = {
           id: 49,
           name: "Chundail Tea Estate",
           description: "Chundail Tea Estate",
-          image: [iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw_stays-resort-wayanad-cycle-workation.webp" ,iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.avif"],
+          image: [iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp",iconURLPrefix+"assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.avif",iconURLPrefix+"assets/img/cycling/bw_stays-resort-wayanad-cycle-workation.webp" ,iconURLPrefix+"assets/img/cycling/bw-hotel-stays-chundale-wayanad.webp"],
           holidays: "Sun",
           timing:[ "09:00-17:00"],
           Contact: "+91-000 000 0000",
