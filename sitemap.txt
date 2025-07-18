@@ -212,13 +212,13 @@ https://www.bwstays.com/assets/img/romantic/bw-resort-phanthom-rock-wayanad.webp
 https://www.bwstays.com/assets/img/romantic/bw-rooms-karlad-lake-wayanad.webp
 https://www.bwstays.com/assets/img/romantic/bw-service-apartment-wayanad-karappuzha-dam.webp
 https://www.bwstays.com/assets/img/romantic/bw-service-apartment-wayanad-pookode-lake.webp
-https://www.bwstays.com/assets/img/romantic/bw-service-villa-chembra-peak-wayanad.avif
+https://www.bwstays.com/assets/img/romantic/bw-service-villa-chembra-peak-wayanad.webp
 https://www.bwstays.com/assets/img/trucking/bw-service-villa-kolagappara-wayanad.webp
 https://www.bwstays.com/assets/img/romantic/bw-service-villa-lakkidi-view-point-wayanad.webp
-https://www.bwstays.com/assets/img/romantic/bw-stay-rooms-kurumbalakotta-hillock-wayanad.avif
-https://www.bwstays.com/assets/img/romantic/bw-staycation-banasura-sagar-dam-wayanad.avif
-https://www.bwstays.com/assets/img/romantic/bw-staycation-banasura-sagar-wayanad.avif
-https://www.bwstays.com/assets/img/romantic/bw-staycation-chembra-peak-lake.jpg
+https://www.bwstays.com/assets/img/romantic/bw-stay-rooms-kurumbalakotta-hillock-wayanad.webp
+https://www.bwstays.com/assets/img/romantic/bw-staycation-banasura-sagar-dam-wayanad.webp
+https://www.bwstays.com/assets/img/romantic/bw-staycation-banasura-sagar-wayanad.webp
+https://www.bwstays.com/assets/img/romantic/bw-staycation-chembra-peak-lake.webp
 https://www.bwstays.com/assets/img/romantic/bw-staycation-karapuzha-dam.webp
 https://www.bwstays.com/assets/img/romantic/bw-staycations-ghats-viewpoint.webp
 https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp
@@ -243,7 +243,7 @@ https://www.bwstays.com/assets/img/romantic/bw-villa-home-banasura-hills.webp
 https://www.bwstays.com/assets/img/trucking/bw-villa-rooms-ghats-wayanad.webp
 https://www.bwstays.com/assets/img/romantic/bw-villa-staycation-chembra-wayanad.webp
 https://www.bwstays.com/assets/img/romantic/bw-weekend-destination-glassbridge-wayanad.webp
-https://www.bwstays.com/assets/img/romantic/bw-weekend-kurumbalakotta-wayanad.avif
+https://www.bwstays.com/assets/img/romantic/bw-weekend-kurumbalakotta-wayanad.webp
 https://www.bwstays.com/assets/img/romantic/bw-weekend-stay-pookode-lake-wayand.webp
 https://www.bwstays.com/assets/img/romantic/bw-weekend-wayanad-ghats.webp
 https://www.bwstays.com/assets/img/romantic/bw-workation-bamboo-park-wayanad.webp
