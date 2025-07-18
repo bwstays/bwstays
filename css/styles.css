@@ -12454,7 +12454,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.avif");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -12886,7 +12886,7 @@ body {
 
 .about-section
 {
-    background-image: url("https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.avif");
+    background-image: url("https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;

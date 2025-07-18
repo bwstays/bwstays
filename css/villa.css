@@ -1,7 +1,7 @@
 .villa-section
 {
    /* background-image: url("https://www.bwstays.com/assets/img/bw-destination-wayanad.avif");*/
-    background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.avif");
+    background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,7 +12,7 @@
 .villa-section, #villaSection {
   padding-top: 5rem;
   
-  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.avif");
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp");
   min-height: 100vh;
   padding-bottom: 5rem;
   background-position: center;
