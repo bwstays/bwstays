@@ -6,7 +6,7 @@ const aboutCardData = {
             title: "nestle with nature",
             icon: "fas fa-mountain",
             description: "Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep.",
-            image: iconURLPrefix+"assets/img/villa1/black-and-white-wayanad-mist.avif"
+            image: iconURLPrefix+"assets/img/villa1/black-and-white-wayanad-mist.webp"
         },
         {
             title: "hustle in hisspeed",

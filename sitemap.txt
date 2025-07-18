@@ -122,7 +122,7 @@ https://www.bwstays.com/assets/img/farm/bw-stays-pepper-farm-wayanad.webp
 https://www.bwstays.com/assets/img/farm/bw-stays-rars-wayanad-ambalavayal.webp
 https://www.bwstays.com/assets/img/farm/Explore-Wayanad-Your-Next-Adventure-In-Keralas-Lush-Landscapes.webp
 https://www.bwstays.com/assets/img/food/bw-stay-nearby-food_restaurant.webp
-https://www.bwstays.com/assets/img/food/bw-stays-hotel-wayanad-inn.avif
+https://www.bwstays.com/assets/img/food/bw-stays-hotel-wayanad-inn.webp
 https://www.bwstays.com/assets/img/heritage/bw-homestay-shanthinatha-jain-temple-wayanad.webp
 https://www.bwstays.com/assets/img/heritage/bw-staycation-jain-temple-wayanad.webp
 https://www.bwstays.com/assets/img/heritage/bw-stays-chain-tree-service_apartment.webp
@@ -267,10 +267,10 @@ https://www.bwstays.com/assets/img/sports/bw-stay-service-apartment-sport-stadiu
 https://www.bwstays.com/assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp
 https://www.bwstays.com/assets/img/sports/bw-villa-wayanad-tourism-rop-cycle.avif
 https://www.bwstays.com/assets/img/sports/bw-villa-zipline-wayanad-travel.webp
-https://www.bwstays.com/assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.avif
+https://www.bwstays.com/assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.webp
 https://www.bwstays.com/assets/img/tribal/bw-homestay-en-ooru-tribal-heritage-village-wayanad.webp
 https://www.bwstays.com/assets/img/tribal/bw-service-apartment-uravu-thrikkaipetta-bamboo-wayanad.webp
-https://www.bwstays.com/assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.avif
+https://www.bwstays.com/assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.webp
 https://www.bwstays.com/assets/img/tribal/bw-workation-uravu-thrikkaipetta-bamboo-wayanad-1.webp
 https://www.bwstays.com/assets/img/trucking/black-and-white-travel-chembra-wayanad.webp
 https://www.bwstays.com/assets/img/trucking/bw-city-tourist-phantom-rock-wayanad.webp
@@ -292,10 +292,9 @@ https://www.bwstays.com/assets/img/trucking/bw-villa-family-edakkal-caves-wayana
 https://www.bwstays.com/assets/img/trucking/bw-villa-homestay-trucking-wayanad.webp
 https://www.bwstays.com/assets/img/trucking/bw-weekend-destination-cheengeri-hills.avif
 https://www.bwstays.com/assets/img/trucking/bw-workation-kuruva-island-wayanad.webp
-https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.avif
 https://www.bwstays.com/assets/img/villa1/demo-image-01.avif
 https://www.bwstays.com/assets/img/villa1/demo-image-02.avif
-https://www.bwstays.com/assets/img/villa2/black-and-white-wayanad-mist.avif
+https://www.bwstays.com/assets/img/villa2/black-and-white-wayanad-mist.webp
 https://www.bwstays.com/assets/img/wildlife/black-and-white-stays-brahmagiri-wayanad.avif
 https://www.bwstays.com/assets/img/wildlife/bw-family-service-villa-pakshipatalam-wayanad.webp
 https://www.bwstays.com/assets/img/wildlife/bw-food-stay-muthanga-wildlife-wayanad.webp
