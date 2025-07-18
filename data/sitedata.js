@@ -365,7 +365,7 @@ const siteData = {
       id: 44,
       name: "Pookode Lake",
       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
-      image: [iconURLPrefix+"assets/img/romantic/bw-vacation-pookode-lake-wayanad.avif",iconURLPrefix+"assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp"],
+      image: [iconURLPrefix+"assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp",iconURLPrefix+"assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
