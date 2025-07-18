@@ -1,3 +1,11 @@
+User-agent: Yeti
+Disallow: 
+User-agent: NAVER Blog Rssbot
+Disallow: 
+User-agent: SeznamBot
+Disallow: 
+User-agent: YandexBot
+Disallow: 
 User-agent: Googlebot
 Disallow: 
 User-agent: googlebot-image
