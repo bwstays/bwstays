@@ -150,7 +150,7 @@ https://www.bwstays.com/assets/img/logo/ab.jpg
 https://www.bwstays.com/assets/img/logo/bw.png
 https://www.bwstays.com/assets/img/logo/bw1.png
 https://www.bwstays.com/assets/img/logo/cafe.png
-https://www.bwstays.com/assets/img/logo/direction.avif
+https://www.bwstays.com/assets/img/logo/direction.webp
 https://www.bwstays.com/assets/img/logo/direction_invert.webp
 https://www.bwstays.com/assets/img/logo/logo.avif
 https://www.bwstays.com/assets/img/logo/logo1.avif
