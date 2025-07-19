@@ -118,7 +118,7 @@
 						<div id="description">
 
 							<h1>Availability Date</h1> 
-							<h2><a href="https://www.bwstays.com/booking.html">Click here for Reservation</a></h2> 
+							<h2><a href="https://www.bwstays.com/bwstays-booking.html">Click here for Reservation</a></h2> 
 
 						</div>
 
@@ -160,11 +160,11 @@
 												</td>
 
 												<td>
-													<a href="https://www.bwstays.com/booking.html"> <xsl:value-of select="sitemap:villa1"/> </a>
+													<a href="https://www.bwstays.com/bwstays-booking.html"> <xsl:value-of select="sitemap:villa1"/> </a>
 												</td>
 
 												<td>
-													<a href="https://www.bwstays.com/booking.html"> <xsl:value-of select="sitemap:villa2"/> </a>
+													<a href="https://www.bwstays.com/bwstays-booking.html"> <xsl:value-of select="sitemap:villa2"/> </a>
 												</td>
 
 											</tr>

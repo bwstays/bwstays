@@ -38,7 +38,7 @@ const siteData = {
 		latlong: "11.758218103566884, 75.99955554569163",
 		map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
       type: "Plantations",
-      knowmore: iconURLPrefix+"bw_coffee_plantation_plantation_wayanad.html",
+      knowmore: iconURLPrefix+"bw-coffee-plantation-plantation-wayanad.html",
 
     }
 
@@ -62,7 +62,7 @@ const siteData = {
       latlong: "11.74131093962623, 75.88750680755587",
       map: "https://maps.app.goo.gl/SvSDuShnpWmcceyg8",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"bw_meenmutty_waterfall_wayanad.html",
+      knowmore: iconURLPrefix+"bw-meenmutty-waterfall-wayanad.html",
 
     },
     {
@@ -122,7 +122,7 @@ const siteData = {
       latlong: "11.766189025300932, 76.25203494478279",
       map: "https://maps.app.goo.gl/Xi6e2aPFEjWFkHBi9",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"bw_cheeyambam_waterfall_wayanad.html",
+      knowmore: iconURLPrefix+"bw-cheeyambam-waterfall-wayanad.html",
 
     },
     {
@@ -142,7 +142,7 @@ const siteData = {
       latlong: "11.524171332429411, 76.1526252269829",
       map: "https://maps.app.goo.gl/UkTgsP4fZoRngCyBA",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"bw_kanthanpara_waterfall_wayanad.html",
+      knowmore: iconURLPrefix+"bw-kanthanpara-waterfall-wayanad.html",
 
     }
  ,
@@ -163,7 +163,7 @@ const siteData = {
        latlong: "11.524617527477, 76.15260365204358",
       map: "https://maps.app.goo.gl/fzrjabJfK5GG7CgD9",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"bw_kappikalam_waterfall_wayanad.html",
+       knowmore: iconURLPrefix+"bw-kappikalam-waterfall-wayanad.html",
 
     }
 ,
@@ -185,7 +185,7 @@ const siteData = {
        latlong: "11.43840307285013, 76.04597666931055",
       map: "https://maps.app.goo.gl/BLpuvUbHqgNC54up8",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"bw_arripara_waterfall_wayanad.html",
+       knowmore: iconURLPrefix+"bw-arripara-waterfall-wayanad.html",
 
     },
       {
@@ -205,7 +205,7 @@ const siteData = {
        latlong: "11.967284462093113, 75.98393572809631",
       map: "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"bw_Irrupu_waterfall_wayanad.html",
+       knowmore: iconURLPrefix+"bw-Irrupu-waterfall-wayanad.html",
 
     }
 ,
@@ -226,7 +226,7 @@ const siteData = {
        latlong: "11.765721623585334, 76.25204562883619",
       map: "https://maps.app.goo.gl/z4pftdA2hc1Ea7Ny6",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"bw_chetalayam_waterfall_wayanad.html",
+       knowmore: iconURLPrefix+"bw-chetalayam-waterfall-wayanad.html",
 
     },
 
@@ -292,7 +292,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Museums & Crafts",
-      knowmore: iconURLPrefix+"bw_honey_museum_wayanad.html",
+      knowmore: iconURLPrefix+"bw-honey-museum-wayanad.html",
 
     }
 ,
@@ -313,7 +313,7 @@ const siteData = {
       latlong: "11.739158003776806, 76.21355871892317",
       map: "https://maps.app.goo.gl/1E9kADRsBfxLQfs69",
        type: "Museums & Crafts",
-      knowmore: iconURLPrefix+"bw_folklore_museum_wayanad.html",
+      knowmore: iconURLPrefix+"bw-folklore-museum-wayanad.html",
 
     }
 
@@ -336,7 +336,7 @@ const siteData = {
       latlong: "11.62062222750829, 76.1738547832114",
       map: "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_karapuzha_dam_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-karapuzha-dam-romantic-wayanad.html",
 
     },
 
@@ -357,7 +357,7 @@ const siteData = {
        latlong: "11.649866740589097, 75.9810562735357",
       map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
         type: "Water Falls",
-       knowmore: iconURLPrefix+"bw_karland_lake_romantic_wayanad.html",
+       knowmore: iconURLPrefix+"bw-karland-lake-romantic-wayanad.html",
 
     }
 ,
@@ -399,7 +399,7 @@ const siteData = {
        transport: "Public",
      rating:"4.3",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_banasurasagar_dam_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-banasurasagar-dam-romantic-wayanad.html",
 
     }
     ,
@@ -420,7 +420,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_mailadippara_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-mailadippara-romantic-wayanad.html",
 
     }
     ,
@@ -441,7 +441,7 @@ const siteData = {
        transport: "Public",
      rating:"4.3",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_banasura_sagar_hills_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-banasura-sagar-hills-romantic-wayanad.html",
 
     }
     ,
@@ -462,7 +462,7 @@ const siteData = {
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_manjappara_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-manjappara-romantic-wayanad.html",
 
     }
     ,
@@ -483,7 +483,7 @@ const siteData = {
        transport: "Public",
      rating:"3.9",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_phanthom_rock_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-phanthom-rock-romantic-wayanad.html",
 
     }
     ,
@@ -504,7 +504,7 @@ const siteData = {
        transport: "Public",
      rating:"4.5",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_kurumbalakotta_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-kurumbalakotta-romantic-wayanad.html",
 
     }
     ,
@@ -525,7 +525,7 @@ const siteData = {
        transport: "Public",
      rating:"4.6",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_attamala_view_point_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-attamala-view-point-romantic-wayanad.html",
 
     }
     ,
@@ -567,7 +567,7 @@ const siteData = {
        transport: "Public",
      rating:"3.9",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_neelimala_view_point_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-neelimala-view-point-romantic-wayanad.html",
 
     }
     ,
@@ -588,7 +588,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
 		type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_lakkidi_ghats_view_point_wayanad.html",
+      knowmore: iconURLPrefix+"bw-lakkidi-ghats-view-point-wayanad.html",
 
     }
     ,
@@ -609,7 +609,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
 		type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_900_kandi_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-900-kandi-romantic-wayanad.html",
 
     },
   {
@@ -629,7 +629,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: iconURLPrefix+"bw_neelarchalu_lake_romantic_wayanad.html",
+          knowmore: iconURLPrefix+"bw-neelarchalu-lake-romantic-wayanad.html",
 
       }
 ,
@@ -650,7 +650,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: iconURLPrefix+"bw_munneswaran_kunnu_romantic_wayanad.html",
+          knowmore: iconURLPrefix+"bw-munneswaran-kunnu-romantic-wayanad.html",
 
       }
 ,
@@ -671,7 +671,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
       	  type: "Romantic Spots",
-          knowmore: iconURLPrefix+"bw_bamboo_forest_valentine_park_wayanad.html",
+          knowmore: iconURLPrefix+"bw-bamboo-forest-valentine-park-wayanad.html",
 
       }
   ],
@@ -717,7 +717,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Cultural & Historical",
-      knowmore: iconURLPrefix+"bw_mananthavady_pazhassi_tomb_heritage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-mananthavady-pazhassi-tomb-heritage-wayanad.html",
 
     },
    {
@@ -737,7 +737,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Cultural & Historical",
-      knowmore: iconURLPrefix+"bw_chain_tree_cultural_heritage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-chain-tree-cultural-heritage-wayanad.html",
 
     },
  {
@@ -783,7 +783,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Trucking",
-      knowmore: iconURLPrefix+"bw_kuruwa_deep_trucking_wayanad.html",
+      knowmore: iconURLPrefix+"bw-kuruwa-deep-trucking-wayanad.html",
 
     },
     {
@@ -803,7 +803,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Trucking",
-      knowmore: iconURLPrefix+"bw_brahmagiri_trucking_wayanad.html",
+      knowmore: iconURLPrefix+"bw-brahmagiri-trucking-wayanad.html",
 
     }
 ,
@@ -824,7 +824,7 @@ const siteData = {
       hrs:"3",
       fee:"0",
        type: "Trucking",
-      knowmore: iconURLPrefix+"bw_chembra_peak_trucking_wayanad.html",
+      knowmore: iconURLPrefix+"bw-chembra-peak-trucking-wayanad.html",
 
     }
 ,
@@ -845,7 +845,7 @@ const siteData = {
          hrs:"2",
          fee:"0",
           type: "Trucking",
-         knowmore: iconURLPrefix+"bw_cheengeri_hill_trucking_wayanad.html",
+         knowmore: iconURLPrefix+"bw-cheengeri-hill-trucking-wayanad.html",
 
     }
 ,
@@ -866,7 +866,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Trucking",
-      knowmore: iconURLPrefix+"bw_lakkidi_ghats_view_point_wayanad.html",
+      knowmore: iconURLPrefix+"bw-lakkidi-ghats-view-point-wayanad.html",
 
     }
 ,
@@ -887,7 +887,7 @@ const siteData = {
       hrs:"4",
       fee:"50 INR- 70 INR",
        type: "Trucking",
-      knowmore: iconURLPrefix+"bw_edakkal_caves_trucking_wayanad.html",
+      knowmore: iconURLPrefix+"bw-edakkal-caves-trucking-wayanad.html",
 
     }
 ,
@@ -931,7 +931,7 @@ const siteData = {
       latlong: "11.650880848883398, 76.19276045292615",
       map: "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
        type: "Trucking",
-      knowmore: iconURLPrefix+"bw_kolagapara_trucking_wayanad.html",
+      knowmore: iconURLPrefix+"bw-kolagapara-trucking-wayanad.html",
 
     }
   ],
@@ -957,7 +957,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"bw_muthanga_wildlife_sanctuary_wayanad.html",
+      knowmore: iconURLPrefix+"bw-muthanga-wildlife-sanctuary-wayanad.html",
 
     },
 {
@@ -977,7 +977,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"bw_nagarhole_wildlife_sanctuary_wayanad.html",
+      knowmore: iconURLPrefix+"bw-nagarhole-wildlife-sanctuary-wayanad.html",
 
     },
 {
@@ -997,7 +997,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"bw_pakshipathalam_wildlife_sanctuary_wayanad.html",
+      knowmore: iconURLPrefix+"bw-pakshipathalam-wildlife-sanctuary-wayanad.html",
 
     },
  {
@@ -1039,7 +1039,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"bw_begur_wildlife_sanctuary_wayanad.html",
+      knowmore: iconURLPrefix+"bw-begur-wildlife-sanctuary-wayanad.html",
 
     }
   ],
@@ -1061,7 +1061,7 @@ const siteData = {
 			hrs:"2",
 			fee:"0",
 			type: "Farm Visit",
-	      knowmore: iconURLPrefix+"bw_pepper_farm_wayanad.html",
+	      knowmore: iconURLPrefix+"bw-pepper-farm-wayanad.html",
 
     },
 
@@ -1082,7 +1082,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Farm Visit",
-      knowmore: iconURLPrefix+"bw_ambalavayal_farm_rars_wayanad.html"
+      knowmore: iconURLPrefix+"bw-ambalavayal-farm-rars-wayanad.html"
     },
     {
       id: 63,
@@ -1101,7 +1101,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Farm Visit",
-      knowmore: iconURLPrefix+"bw_boys_town_farm_wayanad.html",
+      knowmore: iconURLPrefix+"bw-boys-town-farm-wayanad.html",
 
     }
 ,
@@ -1122,7 +1122,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
 		type: "Farm Visit",
-      knowmore: iconURLPrefix+"bw_pepper_farm_wayanad.html",
+      knowmore: iconURLPrefix+"bw-pepper-farm-wayanad.html",
 
     }
 
@@ -1148,7 +1148,7 @@ const siteData = {
   			hrs:"2",
   			fee:"0",
   			type: "Sporting",
-  			knowmore: iconURLPrefix+"bw_bamboo_rafting_sporting_wayanad.html",
+  			knowmore: iconURLPrefix+"bw-bamboo-rafting-sporting-wayanad.html",
 
       },
   {
@@ -1189,7 +1189,7 @@ const siteData = {
 			hrs:"2",
 			fee:"0",
 			type: "Sporting",
-			knowmore: iconURLPrefix+"bw_football_turf_sporting_wayanad.html",
+			knowmore: iconURLPrefix+"bw-football-turf-sporting-wayanad.html",
 
       }
     ]
@@ -1213,7 +1213,7 @@ const siteData = {
  		hrs:"2",
  		fee:"0",
  		type: "Food",
-       knowmore: iconURLPrefix+"all_fooding_wayanad.html",
+       knowmore: iconURLPrefix+"all-fooding-wayanad.html",
 
     },
 
@@ -1299,7 +1299,7 @@ const siteData = {
 			hrs:"2",
 			fee:"0",
 			type: "Tribal",
-          knowmore: iconURLPrefix+"bw_en_ooru_tribal_wayanad.html",
+          knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
       }
 
@@ -1344,7 +1344,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
       	  type: "Cycling",
-          knowmore: iconURLPrefix+"bw_chundail_tea_estate_cycling_wayanad.html",
+          knowmore: iconURLPrefix+"bw-chundail-tea-estate-cycling-wayanad.html",
 
       }
 
@@ -1371,7 +1371,7 @@ const siteData = {
        hrs:"2",
        fee:"0",
        type: "shopping",
-       knowmore: iconURLPrefix+"bw_ali_wayanadan_honey_shopping_wayanad.html",
+       knowmore: iconURLPrefix+"bw-ali-wayanadan-honey-shopping-wayanad.html",
 
     },
     {
@@ -1478,7 +1478,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
            type: "Pilgrimage",
-          knowmore: iconURLPrefix+"bw_ananthanatha_swamy_jain_temple_pilgrimage_wayanad.html",
+          knowmore: iconURLPrefix+"bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html",
 
         },
     {
@@ -1498,7 +1498,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
            type: "Pilgrimage",
-          knowmore: iconURLPrefix+"bw_koottamundu_glass_temple_pilgrimage_wayanad.html",
+          knowmore: iconURLPrefix+"bw-koottamundu-glass-temple-pilgrimage-wayanad.html",
 
         },
 
@@ -1519,7 +1519,7 @@ const siteData = {
           latlong: "11.911882611618777, 75.99584945767235",
           map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
           type: "Pilgrimage",
-          knowmore: iconURLPrefix+"bw_papanasini_river_temple_pilgrimage_wayanad.html",
+          knowmore: iconURLPrefix+"bw-papanasini-river-temple-pilgrimage-wayanad.html",
 
     },
 
@@ -1540,7 +1540,7 @@ const siteData = {
       latlong: "11.660422442249578, 76.17374499957178",
       map: "https://maps.app.goo.gl/voAar4qRh1U2jXjk7",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"bw_meenangadi_church_pilgrimage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-meenangadi-church-pilgrimage-wayanad.html",
 
     },
  	{
@@ -1560,7 +1560,7 @@ const siteData = {
       latlong: "11.685229537534148, 76.05606037116382",
       map: "https://maps.app.goo.gl/GWhpBVduuz5Sm1a67",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"bw_our_lady_of_lourdes_shrine_pilgrimage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html",
 
     },
  	{
