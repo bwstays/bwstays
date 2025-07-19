@@ -19,7 +19,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Plantations",
-      knowmore: iconURLPrefix+"bw_rippon_tea_estate_plantation_wayanad.html",
+      knowmore: iconURLPrefix+"bw-rippon-tea-estate-plantation-wayanad.html",
     },
     {
       id: 62,
@@ -82,7 +82,7 @@ const siteData = {
       latlong: "11.495418956600835, 76.16077748465527",
       map: "https://maps.app.goo.gl/WTkrrH73W95w23Xm8",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"bw_sentinel_rock_waterfall_wayanad.html",
+      knowmore: iconURLPrefix+"bw-sentinel-rock-waterfall-wayanad.html",
 
     },
     {
@@ -102,7 +102,7 @@ const siteData = {
       latlong: "11.511772142854758, 76.16379662884363",
       map: "https://maps.app.goo.gl/qr1RZdxc5WMa5j71A",
       type: "Water Falls",
-      knowmore: iconURLPrefix+"bw_soochipara_waterfall_wayanad.html",
+      knowmore: iconURLPrefix+"bw-soochipara-waterfall-wayanad.html",
 
     },
     {
@@ -247,7 +247,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Water Falls",
-      knowmore: iconURLPrefix+"bw_thusharagiri_waterfall_wayanad.html",
+      knowmore: iconURLPrefix+"bw-thusharagiri-waterfall-wayanad.html",
 
     }
 
@@ -272,7 +272,7 @@ const siteData = {
 		latlong: "11.600747990313033, 76.0148553711638",
 		map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
 		type: "Museums & Crafts",
-		knowmore: iconURLPrefix+"bw_tea_museum_wayanad.html",
+		knowmore: iconURLPrefix+"bw-tea-museum-wayanad.html",
 
     },
 {
@@ -378,7 +378,7 @@ const siteData = {
        transport: "Public",
      rating:"4.1",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_pookode_lake_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-pookode-lake-romantic-wayanad.html",
 
     }
     ,
@@ -546,7 +546,7 @@ const siteData = {
        transport: "Public",
      rating:"4.4",
        type: "Romantic Spots",
-      knowmore: iconURLPrefix+"bw_sunrise_valley_romantic_wayanad.html",
+      knowmore: iconURLPrefix+"bw-sunrise-valley-romantic-wayanad.html",
 
     }
     ,
@@ -696,7 +696,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Cultural & Historical",
-      knowmore: iconURLPrefix+"bw_sultan_batthery_valmiki_ashram_heritage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html",
 
     }
 ,
@@ -724,7 +724,7 @@ const siteData = {
       id: 25,
       name: "Chain Tree",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
-      image: [iconURLPrefix+"assets/img/heritage/bw-stays-chain-tree-service_apartment.webp",iconURLPrefix+"assets/img/heritage/bw-stays-chain-tree-wayanad-homestay.webp"],
+      image: [iconURLPrefix+"assets/img/heritage/bw-stays-chain-tree-service-apartment.webp",iconURLPrefix+"assets/img/heritage/bw-stays-chain-tree-wayanad-homestay.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
@@ -757,7 +757,7 @@ const siteData = {
           hrs:"2",
           fee:"0",
            type: "Cultural & Historical",
-           knowmore: iconURLPrefix+"bw_santhinatha_temple_heritage_wayanad.html",
+           knowmore: iconURLPrefix+"bw-santhinatha-temple-heritage-wayanad.html",
          },
   ],
 
@@ -909,7 +909,7 @@ const siteData = {
       latlong: "11.639978909862197, 76.08420612038587",
       map: "https://maps.app.goo.gl/n2aJqSpipqQjE6x56",
        type: "Trucking",
-      knowmore: iconURLPrefix+"bw_puliyarmala_trucking_wayanad.html",
+      knowmore: iconURLPrefix+"bw-puliyarmala-trucking-wayanad.html",
 
     }
 ,
@@ -1017,7 +1017,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Wildlife",
-      knowmore: iconURLPrefix+"bw_tholpetty_wildlife_sanctuary_wayanad.html",
+      knowmore: iconURLPrefix+"bw-tholpetty-wildlife-sanctuary-wayanad.html",
 
     },
 
@@ -1234,7 +1234,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Food",
-      knowmore: iconURLPrefix+"bw_resturants_food_wayanad.html",
+      knowmore: iconURLPrefix+"bw-resturants-food-wayanad.html",
 
     },
     {
@@ -1279,7 +1279,7 @@ const siteData = {
  			hrs:"2",
  			fee:"0",
        	  type: "Tribal",
-           knowmore: iconURLPrefix+"bw_uravu_bamboo_tribal_wayanad.html",
+           knowmore: iconURLPrefix+"bw-uravu-bamboo-tribal-wayanad.html",
 
       },
  {
@@ -1324,7 +1324,7 @@ const siteData = {
 			hrs:"2",
 			fee:"0",
       	  type: "Cycling",
-          knowmore: iconURLPrefix+"bw_rippon_teaestate_cycling_wayanad.html",
+          knowmore: iconURLPrefix+"bw-rippon-teaestate-cycling-wayanad.html",
 
       },
         {
@@ -1457,7 +1457,7 @@ const siteData = {
           latlong: "11.911851118207249, 75.9958816441809",
           map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
           type: "Pilgrimage",
-          knowmore: iconURLPrefix+"bw_tirunelli_temple_pilgrimage_wayanad.html",
+          knowmore: iconURLPrefix+"bw-tirunelli-temple-pilgrimage-wayanad.html",
 
         },
 
@@ -1580,7 +1580,7 @@ const siteData = {
       latlong: "11.793030398758432, 76.16871715767236",
       map: "https://maps.app.goo.gl/7EMqf1GJLZbLWdLSA",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"bw_pulpally_sitadevi_temple_pilgrimage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html",
 
     },
  	{
@@ -1600,7 +1600,7 @@ const siteData = {
       latlong: "11.618497853276832, 76.1344553537423",
       map: "https://maps.app.goo.gl/mF1JKbkHQBNDeC4S9",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"bw_trikaipatta_temple_pilgrimage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-trikaipatta-temple-pilgrimage-wayanad.html",
 
     },
     {
@@ -1620,7 +1620,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"bw_trishileri_temple_pilgrimage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-trishileri-temple-pilgrimage-wayanad.html",
 
     },
 
@@ -1641,7 +1641,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "Pilgrimage",
-      knowmore: iconURLPrefix+"bw_sita_lav_kush_temple_pilgrimage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-sita-lav-kush-temple-pilgrimage-wayanad.html",
 
     },
 
@@ -1662,7 +1662,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Pilgrimage",
-      knowmore: iconURLPrefix+"bw_varampatta_mosque_pilgrimage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-varampatta-mosque-pilgrimage-wayanad.html",
 
     }
     ,
@@ -1683,7 +1683,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Pilgrimage",
-      knowmore: iconURLPrefix+"bw_valliyoorkavu_temple_pilgrimage_wayanad.html",
+      knowmore: iconURLPrefix+"bw-valliyoorkavu-temple-pilgrimage-wayanad.html",
 
     }
   ]
