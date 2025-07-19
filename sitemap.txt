@@ -98,7 +98,7 @@ https://www.bwstays.com/assets/img/camp/bw-stays-air-bed-wayanad.webp
 https://www.bwstays.com/assets/img/cycling/bw-hotel-stays-chundale-wayanad.webp
 https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp
 https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.webp
-https://www.bwstays.com/assets/img/cycling/bw_stays-resort-wayanad-cycle-workation.webp
+https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp
 https://www.bwstays.com/assets/img/events/bw-stays-offer-staycation-wayanad.webp
 https://www.bwstays.com/assets/img/falls/black-and-white-chethalayam-falls-wayanad.webp
 https://www.bwstays.com/assets/img/falls/black-and-white-kanthanpara-falls-wayanad.webp
@@ -151,7 +151,7 @@ https://www.bwstays.com/assets/img/logo/bw.png
 https://www.bwstays.com/assets/img/logo/bw1.png
 https://www.bwstays.com/assets/img/logo/cafe.png
 https://www.bwstays.com/assets/img/logo/direction.webp
-https://www.bwstays.com/assets/img/logo/direction_invert.webp
+https://www.bwstays.com/assets/img/logo/direction-invert.webp
 https://www.bwstays.com/assets/img/logo/logo.avif
 https://www.bwstays.com/assets/img/logo/logo1.avif
 https://www.bwstays.com/assets/img/logo/maps.svg
@@ -178,7 +178,7 @@ https://www.bwstays.com/assets/img/pilgrimage/bw-stays-pallikunnu-church-wayanad
 https://www.bwstays.com/assets/img/pilgrimage/bw-stays-papanasini-thirunelli-wayanad.webp
 https://www.bwstays.com/assets/img/pilgrimage/bw-stays-papanasini-wayanad-tourist.webp
 https://www.bwstays.com/assets/img/pilgrimage/bw-stays-resort-valliyurkavu-wayanad.webp
-https://www.bwstays.com/assets/img/pilgrimage/bw-stays-thirunelli-temple_wayanad.webp
+https://www.bwstays.com/assets/img/pilgrimage/bw-stays-thirunelli-temple-wayanad.webp
 https://www.bwstays.com/assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.webp
 https://www.bwstays.com/assets/img/pilgrimage/bw-stays-trikaipattta-temple-wayanad.webp
 https://www.bwstays.com/assets/img/pilgrimage/bw-stays-trishilerry-temple-wayanad.webp
