@@ -93,10 +93,10 @@
     <link href="https://www.bwstays.com/css/styles.css" rel="stylesheet" />
     <link href="https://www.bwstays.com/css/maps.css" rel="stylesheet" />
 
-    <!-- <link href="./css/styles.css" rel="stylesheet" />
-    <link href="./css/maps.css" rel="stylesheet" /> -->
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/maps.css" rel="stylesheet" />
 
-    <!-- <link href="css/sidebar.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
 </head>
 
 <body id="page-top">
@@ -748,9 +748,6 @@
 
     </footer>
 
-    <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
     <!-- Jquery party plugin JS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
@@ -830,6 +827,121 @@
 <div style="position: fixed; top: 50%; right: 0; transform: translateY(-50%); z-index: 1000;">
     <a href="#about" class="btn btn-primary" style="writing-mode: vertical-lr; transform: rotate(180deg); padding: 30px 13px; border-top-left-radius: 0; border-bottom-left-radius: 0;">Reservation</a>
 </div>
+
+<!-- Sidebar inspired by user-provided screenshot. Custom design for Black & White Stays project. -->
+<div class="custom-vertical-sidebar">
+  <div class="sidebar-top">
+    <a href="#mainNav" class="sidebar-icon" title="Menu"><i class="fas fa-bars"></i></a>
+  </div>
+  <div class="sidebar-middle">
+    <a href="https://www.instagram.com/bwstays/" class="sidebar-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/black-white-0315a0367/" class="sidebar-icon" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://wa.me/919999999999" class="sidebar-icon" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-bottom">
+    <button id="sidebar-scroll-btn" class="sidebar-icon" title="Scroll" style="background:none;border:none;padding:0;cursor:pointer;">
+      <i id="sidebar-scroll-icon" class="fas fa-angle-down"></i>
+    </button>
+  </div>
+</div>
+
+<script>
+// Scroll button logic: down if not at bottom, up if at bottom
+function isAtBottom() {
+  return (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 2);
+}
+function updateSidebarScrollIcon() {
+  const icon = document.getElementById('sidebar-scroll-icon');
+  if (icon) {
+    if (isAtBottom()) {
+      icon.classList.remove('fa-angle-down');
+      icon.classList.add('fa-angle-up');
+    } else {
+      icon.classList.remove('fa-angle-up');
+      icon.classList.add('fa-angle-down');
+    }
+  }
+}
+window.addEventListener('scroll', updateSidebarScrollIcon);
+window.addEventListener('resize', updateSidebarScrollIcon);
+document.addEventListener('DOMContentLoaded', updateSidebarScrollIcon);
+
+const scrollBtn = document.getElementById('sidebar-scroll-btn');
+if (scrollBtn) {
+  scrollBtn.addEventListener('click', function() {
+    if (isAtBottom()) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  });
+}
+</script>
+
+<style>
+.custom-vertical-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 60px;
+  background: linear-gradient(135deg, rgba(20,20,20,0.85) 60%, rgba(0,255,200,0.15) 100%);
+  box-shadow: 2px 0 16px rgba(0,0,0,0.12);
+  backdrop-filter: blur(8px);
+  z-index: 1200;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.custom-vertical-sidebar .sidebar-top,
+.custom-vertical-sidebar .sidebar-middle,
+.custom-vertical-sidebar .sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.custom-vertical-sidebar .sidebar-top {
+  margin-top: 18px;
+}
+.custom-vertical-sidebar .sidebar-middle {
+  gap: 18px;
+  margin-top: 40px;
+}
+.custom-vertical-sidebar .sidebar-divider {
+  width: 70%;
+  height: 1px;
+  background: rgba(255,255,255,0.18);
+  margin: 24px 0;
+  align-self: center;
+}
+.custom-vertical-sidebar .sidebar-bottom {
+  margin-bottom: 18px;
+  gap: 10px;
+}
+.custom-vertical-sidebar .sidebar-icon {
+  color: #00ffe0;
+  font-size: 1.5rem;
+  margin: 12px 0;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+.custom-vertical-sidebar .sidebar-icon:hover {
+  color: #fff;
+  transform: scale(1.18);
+}
+@media (max-width: 768px) {
+  .custom-vertical-sidebar {
+    display: none !important;
+  }
+}
+</style>
 
  </body>
 
