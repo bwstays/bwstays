@@ -101,7 +101,7 @@ var foodations = [
 
   ];
 
-var map = new google.maps.Map(document.getElementById('mapall'), {
+var mapfood = new google.maps.Map(document.getElementById('mapall'), {
   zoom: 9.999,
   // disable the default User Interface
   disableDefaultUI: true,
@@ -129,7 +129,7 @@ for (i = 0; i < foodations.length; i++) {
     }, (response, status) => {
         if (status === "OK") {
           new google.maps.DirectionsRenderer({
-						  map: map,
+						  map: mapfood,
 						  suppressMarkers: true,
 						  polylineOptions: {
 							strokeColor: '#4285F4',
@@ -143,14 +143,14 @@ for (i = 0; i < foodations.length; i++) {
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(foodations[i][1], foodations[i][2]),
     icon: foodations[i][4],
-    map: map
+    map: mapfood
   });
 
 
   google.maps.event.addListener(marker, 'click', (function (marker, i) {
     return function () {
       infowindow.setContent(foodations[i][0]);
-      infowindow.open(map, marker);
+      infowindow.open(mapfood, marker);
     }
   })(marker, i));
 

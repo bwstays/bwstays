@@ -146,7 +146,7 @@ for (i = 0; i < bwlocations.length; i++) {
     }, (response, status) => {
         if (status === "OK") {
           new google.maps.DirectionsRenderer({
-						  map: map,
+						  map: mapall,
 						  suppressMarkers: true,
 						  polylineOptions: {
 							strokeColor: '#4285F4',
