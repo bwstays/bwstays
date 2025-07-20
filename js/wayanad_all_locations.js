@@ -118,7 +118,7 @@ var bwlocations = [
 ];
 
 
-var map = new google.maps.Map(document.getElementById('mapall'), {
+var mapall = new google.maps.Map(document.getElementById('mapall'), {
   zoom: 9.999,
   // disable the default User Interface
   disableDefaultUI: true,
@@ -160,14 +160,14 @@ for (i = 0; i < bwlocations.length; i++) {
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
     icon: bwlocations[i][4],
-    map: map
+    map: mapall
   });
 
 
   google.maps.event.addListener(marker, 'click', (function (marker, i) {
     return function () {
       infowindow.setContent(bwlocations[i][0]);
-      infowindow.open(map, marker);
+      infowindow.open(mapall, marker);
     }
   })(marker, i));
 
