@@ -126,7 +126,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 function renderNearbyPlaces() {
     const nearbyCardsContainer = document.getElementById('nearby-cards');
     if (!nearbyCardsContainer) {
-        console.error('Could not find nearby-cards container');
+//        console.error('Could not find nearby-cards container');
         return;
     }
 
@@ -144,7 +144,7 @@ function renderNearbyPlaces() {
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
 
-    console.log('Nearby places:', nearbyPlaces);
+//    console.log('Nearby places:', nearbyPlaces);
 
     if (nearbyPlaces.length === 0) {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';

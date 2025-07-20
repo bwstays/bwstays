@@ -38,7 +38,7 @@ self.addEventListener('fetch', event => {
 
       });
     }).catch(error => {
-         console.log('Network request for   ', event.request.url);
+//         console.log('Network request for   ', event.request.url);
 	})
   );
 });

@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
 
   const aboutSection = document.querySelector('#about');
   if (!aboutSection) {
-      console.error('About section not found');
+//      console.error('About section not found');
       return;
   }
 
@@ -320,7 +320,7 @@ function updateRightColumnOnly() {
   // Find the right column container
   const rightColumnContainer = document.querySelector('#plantation-places');
   if (!rightColumnContainer) {
-    console.error('Right column container not found');
+//    console.error('Right column container not found');
     return;
   }
 

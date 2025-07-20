@@ -25,8 +25,8 @@ fetch(apiUrl)
     temperatureDisplay.innerHTML = `${currentTemperature}<sup>o</sup>C`;
   })
   .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
+    //console.error('There has been a problem with your fetch operation:', error);
     temperatureDisplay.textContent = 'Error fetching data';
   });
-  
+
   })(jQuery); // End of use strict

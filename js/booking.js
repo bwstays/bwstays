@@ -77,7 +77,7 @@
                 myArray.push(villaArray2);
 
                 // Log the data
-                console.log('Booking Data:', myArray);
+//                console.log('Booking Data:', myArray);
                 invokeRefBooking(myArray);
                 alert('Booking completed successfully!');
             });
