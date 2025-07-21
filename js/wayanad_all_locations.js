@@ -171,10 +171,12 @@ for (i = 0; i < bwlocations.length; i++) {
 google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
   var gMapControlsCheck = setInterval(function() {
     //console.log('Checking for Google Maps controls...');
-    var images = document.querySelectorAll('#map .gm-fullscreen-control img');
+//    var images = document.querySelectorAll('#map .gm-fullscreen-control img');
+    var images = document.querySelectorAll('#map img');
     if( images.length > 0 ) {
       images.forEach(function(image) {
-        image.alt = 'This is a test alt';
+		   if(!image.alt || image.alt ==="")
+       			 image.alt = 'This is a test alt';
       });
       clearInterval(gMapControlsCheck);
     }

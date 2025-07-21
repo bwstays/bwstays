@@ -150,6 +150,21 @@ for (i = 0; i < foodations.length; i++) {
     map: map
   });
 
+// Add alt text to Google Maps images
+google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+  var gMapControlsCheck = setInterval(function() {
+    //console.log('Checking for Google Maps controls...');
+//    var images = document.querySelectorAll('#map .gm-fullscreen-control img');
+    var images = document.querySelectorAll('#map img');
+    if( images.length > 0 ) {
+      images.forEach(function(image) {
+		   if(!image.alt || image.alt ==="")
+		        image.alt = 'This is a test alt';
+      });
+      clearInterval(gMapControlsCheck);
+    }
+  }, 250);
+});
 
   google.maps.event.addListener(marker, 'click', (function (marker, i) {
     return function () {
