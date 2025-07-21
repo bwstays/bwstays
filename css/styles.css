@@ -12364,6 +12364,12 @@ body {
   letter-spacing: 0.0625em;
 }
 
+
+@font-face {
+  font-family: 'Nunito';
+  font-display: swap;
+}
+
 #mainNav {
   min-height: 3.5rem;
   background-color: #fff;
