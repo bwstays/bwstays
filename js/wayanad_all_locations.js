@@ -159,7 +159,11 @@ for (i = 0; i < bwlocations.length; i++) {
 
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
-    icon: bwlocations[i][4],
+    icon: {
+	    url: bwlocations[i][4],
+	    alt: 'BW Stays Utilmate Places'
+	  },
+
     map: map
   });
 
@@ -172,4 +176,5 @@ for (i = 0; i < bwlocations.length; i++) {
   })(marker, i));
 
 }
+
 
