@@ -765,6 +765,22 @@
     <script type="text/javascript"  src="https://www.bwstays.com/data/sitedata.js"></script>
     <script type="text/javascript"  src="https://www.bwstays.com/data/villacard.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/index-dynamic-content.js"></script>
+
+<script>
+       function initMap() {
+         const map = new google.maps.Map(document.getElementById("map"), {
+           center: { lat: 11.606592761660165, lng:76.08350199577485},
+           zoom: 8,
+         });
+         // ... (add markers, etc. to the map)
+         const image = document.querySelector('#map img');
+         if (image) {
+          if(!image.alt || image.alt ==="")
+             image.setAttribute('alt', 'A map of the area.');
+         }
+       }
+     </script>
+
     <script
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&sensor=false"
         type="text/javascript"></script>
