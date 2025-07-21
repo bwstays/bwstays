@@ -170,11 +170,11 @@ for (i = 0; i < bwlocations.length; i++) {
 // Add alt text to Google Maps images
 google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
   var gMapControlsCheck = setInterval(function() {
-    console.log('Checking for Google Maps controls...');
+    //console.log('Checking for Google Maps controls...');
     var images = document.querySelectorAll('#map .gm-fullscreen-control img');
     if( images.length > 0 ) {
       images.forEach(function(image) {
-        image.alt = '';
+        image.alt = 'This is a test alt';
       });
       clearInterval(gMapControlsCheck);
     }
