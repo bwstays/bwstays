@@ -1168,7 +1168,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       	  type: "Sporting",
-          knowmore: iconURLPrefix+"knowmore.html?id=70&cat=8",
+          knowmore: iconURLPrefix+"knowmore.html",
 
       },
 
@@ -1254,7 +1254,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
 		type: "Food",
-      knowmore: iconURLPrefix+"knowmore.html?id=66&cat=9",
+      knowmore: iconURLPrefix+"knowmore.html",
 
     }
 
@@ -1412,7 +1412,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "shopping",
-      knowmore: iconURLPrefix+"knowmore.html?id=79&cat=12",
+      knowmore: iconURLPrefix+"knowmore.html",
 
     },
     {
@@ -1432,7 +1432,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "shopping",
-      knowmore: iconURLPrefix+"knowmore.html?id=67&cat=12",
+      knowmore: iconURLPrefix+"knowmore.html",
 
     }
 
