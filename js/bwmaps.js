@@ -8,6 +8,8 @@ var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title
 //  const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
 
 
+
+
 var map = new google.maps.Map(document.getElementById('map'), {
   zoom: 10,
   // disable the default User Interface
@@ -45,7 +47,7 @@ https://jsfiddle.net/gh/get/library/pure/googlemaps/js-samples/tree/master/dist/
 for (i = 0; i < bwlocations.length; i++) {
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
-    icon:  {url: bwlocations[i][4],scaledSize: new google.maps.Size(50, 50), origin: new google.maps.Point(0,0),anchor: new google.maps.Point(0, 0) },
+    icon:  {url: bwlocations[i][4],scaledSize: new google.maps.Size(20, 20), origin: new google.maps.Point(0,0),anchor: new google.maps.Point(0, 0) },
     map: map
   });
   google.maps.event.addListener(marker, 'click', (function (marker, i) {
