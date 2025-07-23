@@ -179,7 +179,7 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 
 // Function to create a card for each nearby place
 function createPlaceCard(place) {
-    const imageUrl = place.image || iconURLPrefix+'assets/img/villa1/demo-image-02.avif';
+    const imageUrl = place.image || iconURLPrefix+'assets/img/villa1/demo-image-02.webp';
     const knowmoreUrl = place.knowmore || '#';
 
     return `
