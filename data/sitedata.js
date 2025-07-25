@@ -1168,7 +1168,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       	  type: "Sporting",
-          knowmore: iconURLPrefix+"knowmore.html",
+          knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
       },
 
@@ -1254,7 +1254,7 @@ const siteData = {
 		hrs:"2",
 		fee:"0",
 		type: "Food",
-      knowmore: iconURLPrefix+"knowmore.html",
+      knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
     }
 
@@ -1412,7 +1412,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "shopping",
-      knowmore: iconURLPrefix+"knowmore.html",
+      knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
     },
     {
@@ -1432,7 +1432,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
       type: "shopping",
-      knowmore: iconURLPrefix+"knowmore.html",
+      knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
     }
 
