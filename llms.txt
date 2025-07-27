@@ -7,7 +7,7 @@ Black and White Stays offers a unique staycation and workation experience in Ker
 - [Black & White](https://www.bwstays.com/index.html): The main page for Black and White Stays, providing an overview of services and offerings.
 - [About](https://www.bwstays.com/#about): Information about the establishment, its mission, and the experiences it offers.
 - [Discover](https://www.bwstays.com/#projects): A guide to exploring the local attractions and activities available in the area.
-- [Contact](https://www.bwstays.com/#signup): Contact information for inquiries and reservations.
+- [Contact](https://www.bwstays.com/#signup): BW Stays Contact for inquiries and reservations.
 
 ## Accommodations
 - [Reservations - Black and White Wayanad](https://www.bwstays.com/booking.html): Details on how to book your stay at Black and White Wayanad.
