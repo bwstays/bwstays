@@ -3,6 +3,7 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 
 var lat=getLatitude();
 var long=getLongitude();
+var map1=getMapName();
 
 var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', lat, long, 2, iconURLPrefix+"assets/img/logo/bw.png"]];
 
@@ -13,7 +14,7 @@ var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title
 
 
 
-var map = new google.maps.Map(document.getElementById('map'), {
+var map = new google.maps.Map(document.getElementById(map1), {
   zoom: 10,
   // disable the default User Interface
   disableDefaultUI: true,
