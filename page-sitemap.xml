@@ -2,21 +2,344 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://www.bwstays.com</loc>
-		<lastmod>2024-12-13T07:16:39+00:00</lastmod>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
 		<image:image>
 			<image:loc>https://www.bwstays.com/pool.png</image:loc>
 		</image:image>
 	</url>
 
-         <url>
+      
     	 <url>
     	 	<loc>https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html</loc>
-		<lastmod>2024-12-13T07:16:39+00:00</lastmod>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
 		<image:image>
 			<image:loc>https://www.bwstays.com/assets/img/sports/bw-stay-bamboo-sport-rafting-wayanad.webp</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://www.bwstays.com/assets/img/sports/bw-private-villa-river-rafting-in-wayanad.webp</image:loc>
 		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-homestay-rafting-wayanadbw-private-villa-river-rafting-in-wayanad.webp</image:loc>
+		</image:image>
 	  </url>
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-ziplines-sporting-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-hotel-zipline-wayanad-travel.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-villa-zipline-wayanad-travel.webp</image:loc>
+		</image:image>
+	  </url>
+	
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-football-turf-sporting-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-room-mudfootball-wayanad.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-green-grass-football-wayanad.webp</image:loc>
+		</image:image>
+		 
+	  </url>
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/tribal/bbw-workation-uravu-thrikkaipetta-bamboo-wayanad-1.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/tribal/bw-service-apartment-uravu-thrikkaipetta-bamboo-wayanad.webp</image:loc>
+		</image:image>
+		 
+	  </url>
+	  
+	  
+	      	 <url>
+	      	 	<loc>https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html</loc>
+	  		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+	  		<image:image>
+	  			<image:loc>https://www.bwstays.com/assets/img/cycling/bw-hotel-stays-chundale-wayanad.webp</image:loc>
+	  		</image:image>
+	  		<image:image>
+	  			<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp</image:loc>
+	  		</image:image>
+	  		<image:image>
+	  			<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.webp</image:loc>
+	  		</image:image>
+	  		<image:image>
+	  			<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp</image:loc>
+	  		</image:image>
+	  		 
+	  		 
+	  </url>
+	
+		  
+		      	 <url>
+		      	 	<loc> https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html</loc>
+		  		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		  		<image:image>
+		  			<image:loc>https://www.bwstays.com/assets/img/cycling/bw-hotel-stays-chundale-wayanad.webp</image:loc>
+		  		</image:image>
+		  		<image:image>
+		  			<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp</image:loc>
+		  		</image:image>
+		  		<image:image>
+		  			<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.webp</image:loc>
+		  		</image:image>
+		  		<image:image>
+		  			<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp</image:loc>
+		  		</image:image>
+		  		 
+		  		 
+			  </url>
+	  
+	
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-workation-jain-glass-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+		 
+		 
+	  </url>  
+	  
+	
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-anantha-swami-jain-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-jain-temple-shanthi-wayanad.webp</image:loc>
+		</image:image>
+		 
+		 
+	  </url>  
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-staycation-papanashini-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-papanasini-thirunelli-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-papanasini-wayanad-tourist.webp</image:loc>
+		</image:image>
+		 
+		 
+	  </url>
+	  
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-staycation-meenagadhi-church-wayanad.webp</image:loc>
+		</image:image>
+ 
+		 
+	  </url>
+	  
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-workation-pallikkunnu-church-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-pallikunnu-church-wayanad.webp</image:loc>
+		</image:image>
+		 
+		 
+	  </url>
+	  
+	  
+	      	 <url>
+	      	 	<loc>https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html</loc>
+	  		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+	  		<image:image>
+	  			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-seetha-lava-kusha-temple-wayanad.webp</image:loc>
+	  		</image:image>
+	  		 
+	  		 
+	  		 
+	  </url>
+
+
+    	 <url>
+    	        <loc>https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-trikaipattta-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-trishilerry-temple-wayanad.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-workation-trishilerry-temple-wayanad.webp</image:loc>
+		</image:image> 
+	  </url>
+	  
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-trishileri-temple-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-workation-trishilerry-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-trishilerry-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+		 
+	  </url>	  
+	  
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-lav-kush-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-lava-kush-ponkuzhi-wayanad.webp</image:loc>
+		</image:image>
+		 
+		 <image:image>
+		 			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-seetha-lava-kusha-temple-wayanad.webp</image:loc>
+		</image:image>
+	  </url>
+	  
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-workation-korome-mosque-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-korome-mosque-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-staycation-korome-mosque-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-varambetta-mosque-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-wayanad-varambetta-mosque.webp</image:loc>
+		</image:image>
+		 
+		 
+	  </url>
+
+
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-valliyoorkavu-temple-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-valliyoorkavu-homestay-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-valliyoorkavu-bhagavathy-temple-wayanad.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-valliyurkavu-bhagavathy-temple-wayanad.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-valliyoorkavu-homestay-wayanad.avif</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-resort-valliyurkavu-wayanad.webp</image:loc>
+		</image:image>
+		 
+		 
+	  </url>
+	  
+	  
+	  
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-villa-tirunelli-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-thirunelli-temple-wayanad.webp</image:loc>
+		</image:image>
+		 
+	  </url>
+	  
+	  
+	      	 <url>
+	      	 	<loc>https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html</loc>
+	  		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+	  		<image:image>
+	  			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-anantha-swami-jain-temple-wayanad.webp</image:loc>
+	  		</image:image> 
+	  </url>
+
+
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp</image:loc>
+		</image:image>
+		 
+		 
+		 
+	  </url>
+	  
+	
+    	 <url>
+    	 	<loc>https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html</loc>
+		<lastmod>2025-07-07T07:16:39+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.bwstays.com/assets/img/romantic/bw-stays-attamala-resort-wayanad.avif</image:loc>
+		</image:image>
+		 
+		 
+		 
+	  </url> 
 </urlset>
