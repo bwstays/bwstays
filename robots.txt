@@ -1,5 +1,3 @@
-Disallow: /data
-Disallow: /cdn-cgi/
 User-agent: Yeti
 Disallow: 
 User-agent: NAVER Blog Rssbot
@@ -128,5 +126,7 @@ User-agent: YandexAdditional
 User-agent: YandexAdditionalBot
 User-agent: YouBot
 Disallow: 
+Disallow: /data
+Disallow: /cdn-cgi/
 Sitemap: www.bwstays.com/sitemap.xml
 Sitemap: www.bwstays.com/sitemap.txt
