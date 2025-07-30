@@ -128,5 +128,5 @@ User-agent: YouBot
 Disallow: 
 Disallow: /data
 Disallow: /cdn-cgi/
-Sitemap: www.bwstays.com/sitemap.xml
-Sitemap: www.bwstays.com/sitemap.txt
+Sitemap: https://www.bwstays.com/sitemap.xml
+Sitemap: https://www.bwstays.com/sitemap.txt
