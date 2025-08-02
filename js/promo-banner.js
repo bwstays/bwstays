@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {``
 (function() {
-    const showPromo = true;
+    const showPromo = false;
 
     if (!showPromo) return;
 
