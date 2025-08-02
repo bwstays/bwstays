@@ -7,6 +7,11 @@
 		</atom:author>
 		<atom:link rel="related" href="https://www.bwstays.com" />
 		<Folder>
+			<name>locations.kml</name>
+			<open>1</open>
+			<description>
+			   A folder containing food location
+			</description>
 			<Placemark>
 				<name><![CDATA[bwstays]]></name>
 				<address><![CDATA[kalpetta, kalpetta, 67312, India]]></address>
@@ -16,6 +21,7 @@
 					<coordinates>76.0828087,11.6103277,0</coordinates>
 				</Point>
 			</Placemark>
+			<Placemark/>
 		</Folder>
 	</Document>
 </kml>
