@@ -242,7 +242,7 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
 
 
   // right pane heading
-/*
+
   const rightColumnHead = document.createElement('div');
   rightColumnHead.className = 'col-lg-7';
   rightColumnHead.style.padding = '1rem';
@@ -250,7 +250,7 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
   rightColumnHead.className = 'border-bottom border-primary text-center mb-4';
   rightColumnHead.style ='width:100%;margin:0 auto';
   rightColumnHead.innerHTML = `
-      <h5 class="text-white">${currentItemData.type} Places</h5>  `;
+      <h5 class="text-white">${currentItemData.type} Placesssssssssssss</h5>  `;
 
   // right pane content
   const rightColumn = document.createElement('div');
@@ -258,7 +258,7 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
   rightColumn.style.padding = '1rem';
 
     rightColumn.appendChild(rightColumnHead);
-*/
+
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'row';
 
