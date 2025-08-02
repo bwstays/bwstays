@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {``
+// document.addEventListener("DOMContentLoaded", function () {
 (function() {
     const showPromo = true;
 
@@ -71,4 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {``
       navbar.style.top = '0';
     });
   })();
-});
+// });
