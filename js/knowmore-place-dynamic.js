@@ -242,7 +242,7 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
 
 
   // right pane heading
-
+/*
   const rightColumnHead = document.createElement('div');
   rightColumnHead.className = 'col-lg-7';
   rightColumnHead.style.padding = '1rem';
@@ -258,7 +258,7 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
   rightColumn.style.padding = '1rem';
 
     rightColumn.appendChild(rightColumnHead);
-
+*/
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'row';
 
