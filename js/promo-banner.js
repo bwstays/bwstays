@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {``
 (function() {
-    const showPromo = true; 
-  
+    const showPromo = true;
+
     if (!showPromo) return;
-  
+
     const navbar = document.querySelector('nav#mainNav.navbar');
     if (!navbar) return;
-  
+
 
     const style = document.createElement('style');
     style.innerHTML = `
@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {``
       }
     `;
     document.head.appendChild(style);
-  
+
 
     const promoBannerHTML = `<!-- Professional Promo Banner -->
-      <div class="promo-banner" id="promo-banner" style="position:fixed; top:0; left:0; width:100%; background:#000; z-index:2001; padding:8px 0; display:flex; align-items:center; justify-content:center; font-family:'Nunito', sans-serif;">
+      <div class="promo-banner" id="promo-banner" style="position:fixed; top:0; left:0; width:100%; background:#000; z-index:201; padding:8px 0; display:flex; align-items:center; justify-content:center; font-family:'Nunito', sans-serif;">
         <div class="container d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center">
             <span class="promo-title" style="color:#fff; font-weight:600; font-size:14px; margin-right:15px;">Premium Villa Experience</span>
@@ -53,17 +53,17 @@ document.addEventListener("DOMContentLoaded", function () {``
           </div>
         </div>
       </div>`;
-  
+
 
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = promoBannerHTML;
     const promoBanner = tempDiv.firstElementChild;
-  
+
     navbar.parentNode.insertBefore(promoBanner, navbar);
-  
+
     const promoHeight = promoBanner.offsetHeight;
     navbar.style.top = promoHeight + 'px';
-  
+
 
     const closeBtn = promoBanner.querySelector('#close-promo');
     closeBtn.addEventListener('click', () => {
