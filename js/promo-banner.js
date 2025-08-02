@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {``
 
 
     const promoBannerHTML = `<!-- Professional Promo Banner -->
-      <div class="promo-banner" id="promo-banner" style="position:fixed; top:0; left:0; width:100%; background:#000; z-index:201; padding:8px 0; display:flex; align-items:center; justify-content:center; font-family:'Nunito', sans-serif;">
+      <div class="promo-banner" id="promo-banner" style="position:fixed; top:0; left:0; width:100%; background:#000; z-index:2001; padding:8px 0; display:flex; align-items:center; justify-content:center; font-family:'Nunito', sans-serif;">
         <div class="container d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center">
             <span class="promo-title" style="color:#fff; font-weight:600; font-size:14px; margin-right:15px;">Premium Villa Experience</span>
