@@ -1,0 +1,46 @@
+.villa-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(100,161,157,0.5)), url('https://www.bwstays.com/assets/img/villa3/hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.villa-hero h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.villa-hero .subtitle {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+.promo-banner{
+    width:100%;
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:6px 0;
+    font-size:1rem;
+    letter-spacing:0.5px;
+    position:relative;
+    z-index:1000;
+}
+.promo-title{
+    font-weight:600;
+}
+.promo-separator{
+    margin:0 10px;
+}
+.promo-link{
+    color:#fff;
+    text-decoration:underline;
+    font-weight:500;
+    margin-left:16px;
+}
+
+
