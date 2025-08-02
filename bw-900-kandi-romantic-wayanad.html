@@ -791,7 +791,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ></script>
     <script
       type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&sensor=false"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&sensor=false&loading=async"
     ></script>
     <script
       type="text/javascript"
@@ -832,6 +832,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       window.getCurrentCatagoryId = function () {
         return 3;
       };
+
+      // Fix for navbar error - add null check
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector('#mainNav');
+        if (navbar) {
+          // Only run navbar-related code if navbar exists
+          const navbarCollapse = function() {
+            if (navbar.getBoundingClientRect().top < 0) {
+              navbar.classList.add("navbar-shrink");
+            } else {
+              navbar.classList.remove("navbar-shrink");
+            }
+          };
+          
+          navbarCollapse();
+          document.addEventListener("scroll", navbarCollapse);
+        }
+      });
 
       // Image carousel functionality for the static left column
       document.addEventListener("DOMContentLoaded", function () {
