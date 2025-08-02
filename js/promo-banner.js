@@ -1,12 +1,12 @@
 (function() {
-    const showPromo = true; // Set to false to hide the banner on all pages
+    const showPromo = true; 
   
     if (!showPromo) return;
   
     const navbar = document.querySelector('nav#mainNav.navbar');
     if (!navbar) return;
   
-    // Embed the additional CSS styles (can be moved to an external file)
+
     const style = document.createElement('style');
     style.innerHTML = `
       .promo-banner {
@@ -35,7 +35,7 @@
     `;
     document.head.appendChild(style);
   
-    // Promo banner HTML (with inline styles from your query, overriding CSS where needed)
+
     const promoBannerHTML = `<!-- Professional Promo Banner -->
       <div class="promo-banner" id="promo-banner" style="position:fixed; top:0; left:0; width:100%; background:#000; z-index:2001; padding:8px 0; display:flex; align-items:center; justify-content:center; font-family:'Nunito', sans-serif;">
         <div class="container d-flex align-items-center justify-content-between">
