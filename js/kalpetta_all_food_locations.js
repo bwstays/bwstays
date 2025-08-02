@@ -1,4 +1,4 @@
-
+                
 var iconURLPrefix = 'https://www.bwstays.com/';
 
 
