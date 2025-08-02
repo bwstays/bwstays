@@ -150,7 +150,7 @@ const siteData = {
        id: 38,
        name: "Kappikalam waterfalls",
        description: "Kappikalam waterfalls, perfect for trekking and rock climbing.",
-       image: [iconURLPrefix+"assets/img/falls/bw-homestay-meenmufalls-wayanad.webp"],
+       image: [iconURLPrefix+"assets/img/falls/bw-homestay-kappikalam-wayanad.webp"],
        holidays: "Sun",
        timing:[ "09:00-17:00"],
        Contact: "+91-000 000 0000",
