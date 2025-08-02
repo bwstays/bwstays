@@ -61,7 +61,69 @@ window.addEventListener('load', function () {
   imgWrapper.style.display = 'flex';
 
   // Add image navigation arrows with improved design
+  const leftArrow = document.createElement('div');
+leftArrow.className = 'image-nav-arrow image-nav-left';
+leftArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
+leftArrow.style.position = 'absolute';
+leftArrow.style.left = '15px';
+leftArrow.style.top = '50%';
+leftArrow.style.transform = 'translateY(-50%)';
+leftArrow.style.zIndex = '2';
+leftArrow.style.cursor = 'pointer';
+leftArrow.style.color = 'white';
+leftArrow.style.fontSize = '20px';
+leftArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+leftArrow.style.width = '40px';
+leftArrow.style.height = '40px';
+leftArrow.style.borderRadius = '50%';
+leftArrow.style.display = 'none';
+leftArrow.style.transition = 'all 0.3s ease';
+leftArrow.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+leftArrow.style.display = 'flex';
+leftArrow.style.alignItems = 'center';
+leftArrow.style.justifyContent = 'center';
+leftArrow.style.padding = '0';
 
+const rightArrow = document.createElement('div');
+rightArrow.className = 'image-nav-arrow image-nav-right';
+rightArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
+rightArrow.style.position = 'absolute';
+rightArrow.style.right = '15px';
+rightArrow.style.top = '50%';
+rightArrow.style.transform = 'translateY(-50%)';
+rightArrow.style.zIndex = '2';
+rightArrow.style.cursor = 'pointer';
+rightArrow.style.color = 'white';
+rightArrow.style.fontSize = '20px';
+rightArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+rightArrow.style.width = '40px';
+rightArrow.style.height = '40px';
+rightArrow.style.borderRadius = '50%';
+rightArrow.style.display = 'none';
+rightArrow.style.transition = 'all 0.3s ease';
+rightArrow.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+rightArrow.style.display = 'flex';
+rightArrow.style.alignItems = 'center';
+rightArrow.style.justifyContent = 'center';
+rightArrow.style.padding = '0';
+
+// Add hover effects for arrows
+leftArrow.addEventListener('mouseenter', () => {
+  leftArrow.style.backgroundColor = 'rgba(0,0,0,0.8)';
+  leftArrow.style.transform = 'translateY(-50%) scale(1.1)';
+});
+leftArrow.addEventListener('mouseleave', () => {
+  leftArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+  leftArrow.style.transform = 'translateY(-50%) scale(1)';
+});
+rightArrow.addEventListener('mouseenter', () => {
+  rightArrow.style.backgroundColor = 'rgba(0,0,0,0.8)';
+  rightArrow.style.transform = 'translateY(-50%) scale(1.1)';
+});
+rightArrow.addEventListener('mouseleave', () => {
+  rightArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+  rightArrow.style.transform = 'translateY(-50%) scale(1)';
+});
 
 console.log("knowmore-place-dynamic.js loaded");
 
