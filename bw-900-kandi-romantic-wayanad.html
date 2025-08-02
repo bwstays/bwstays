@@ -244,23 +244,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </nav>
 
-    <!-- Professional Promo Banner -->
-    <div class="promo-banner" id="promo-banner" style="position:fixed; top:0; left:0; width:100%; background:#000; z-index:2001; padding:8px 0; display:flex; align-items:center; justify-content:center; font-family:'Nunito', sans-serif;">
-      <div class="container d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
-          <span class="promo-title" style="color:#fff; font-weight:600; font-size:14px; margin-right:15px;">Premium Villa Experience</span>
-          <span class="promo-separator" style="color:#64a19d; margin-right:15px;">|</span>
-          <span class="promo-desc" style="color:#fff; font-size:13px;">Where luxury meets the mystical beauty of Wayanad's rolling hills</span>
-        </div>
-        <div class="d-flex align-items-center">
-          <a href="#booking" class="js-scroll-trigger promo-link" style="color:#64a19d; text-decoration:none; font-weight:600; font-size:13px; margin-right:20px; transition:color 0.3s ease;">Reserve Your Escape</a>
-          <button id="close-promo" style="background:none; border:none; color:#fff; font-size:16px; cursor:pointer; padding:0; width:20px; height:20px; display:flex; align-items:center; justify-content:center; transition:color 0.3s ease;" title="Close banner">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
 
     <section class="about-section" id="about">
       <div class="container-fluid" style="padding: 2rem">
@@ -906,16 +889,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           this.style.backgroundColor = "rgba(0,0,0,0.6)";
           this.style.transform = "translateY(-50%) scale(1)";
         });
-
-        // Promo banner close functionality
-        const closePromoBtn = document.getElementById('close-promo');
-        const promoBanner = document.getElementById('promo-banner');
-        
-        if (closePromoBtn && promoBanner) {
-          closePromoBtn.addEventListener('click', function() {
-            promoBanner.style.display = 'none';
-          });
-        }
       });
     </script>
 
@@ -941,5 +914,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         >Reservation</a
       >
     </div>
+  <script type="text/javascript" src="https://www.bwstays.com/js/promo-banner.js"></script>
+
   </body>
 </html>
