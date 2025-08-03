@@ -60,3 +60,23 @@
         .vertical-menu a:last-child {
             border-bottom: none;
         }
+ /* Responsive Design */
+        @media (max-width: 768px) {
+            .villa-hero h1 {
+                font-size: 2.5em;
+            }
+
+            .vertical-menu {
+                display: none;
+            }
+
+            .festival-banner h4 {
+                font-size: 1em;
+            }
+
+            .offer-text {
+                font-size: 0.8em;
+            }
+
+            
+        }
