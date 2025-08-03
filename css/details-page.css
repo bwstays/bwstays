@@ -24,3 +24,39 @@
     /* margin-bottom: 30px; */
     opacity: 0.9;
 }
+
+  /* Vertical Side Menu */
+        .vertical-menu {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: rgba(0,0,0,0.8);
+            border-radius: 10px 0 0 10px;
+            padding: 10px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .vertical-menu a {
+            display: block;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: 600;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .vertical-menu a:hover {
+            background: #64a19d;
+            color: white;
+            text-decoration: none;
+        }
+
+        .vertical-menu a:last-child {
+            border-bottom: none;
+        }
