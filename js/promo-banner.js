@@ -1,6 +1,6 @@
 
 (function() {
-     //const showPromo = false;
+    // const showPromo = false;
     const showPromo = true;
 
     if (!showPromo) return;
