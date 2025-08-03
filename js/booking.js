@@ -81,30 +81,24 @@
                 invokeRefBooking(myArray);
                 const jsonString = JSON.stringify(myArray);
                 alert('Booking completed successfully!');
-
-
-
-
-
         // Send AJAX request
         $.ajax({
             type: "POST",
             url: "https://formsubmit.co/ajax/bwstays@gmail.com",
             data:  jsonString,
-
 			 dataType: 'json',
 	    accepts: 'application/json',
 	    success: function(response) {
                 // Handle successful response
                 console.log('Success:', response);
                 // Update UI, e.g., display a message
-                $('#result').html('<p>Form submitted successfully!</p>');
+                $('#result').html('<p>Form submitted successfully!</p>'+jsonString);
             },
             error: function(xhr, status, error) {
                 // Handle error
                 console.error('Error:', error);
                 // Display error message
-                $('#result').html('<p>Error submitting form.</p>');
+                $('#result').html('<p>Error submitting form.</p>'+jsonString);
             }
         });
 
