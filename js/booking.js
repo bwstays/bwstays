@@ -81,14 +81,8 @@
                 invokeRefBooking(myArray);
                 const jsonString = JSON.stringify(myArray);
                 alert('Booking completed successfully!');
-            });
-        });
 
-
-
-$(document).ready(function() {
-alert(1);
-    $('#myForm').submit(function(event) {
+$('#myForm').submit(function(event) {
         // Prevent default form submission
         event.preventDefault();
 
@@ -123,7 +117,11 @@ alert(1);
             }
         });
     });
-});
+
+            });
+        });
+
+
 
 
         $(document).ready(function () {
