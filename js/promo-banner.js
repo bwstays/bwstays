@@ -44,7 +44,7 @@
           <div class="d-flex align-items-center">
             <span class="promo-title" style="color:#fff; font-weight:600; font-size:14px; margin-right:15px;">Premium Villa Experience</span>
             <span class="promo-separator" style="color:#64a19d; margin-right:15px;">|</span>
-            <span class="promo-desc" style="color:#fff; font-size:13px;">Where luxury meets the mystical beauty of Wayanad's rolling hills</span>
+            <span class="promo-desc" style="color:#fff; font-size:13px;">Where luxury meets the Mystical beauty of Wayanad's rolling hills. Festival Offer !!. 25% On Stay</span>
           </div>
           <div class="d-flex align-items-center">
             <a href="#booking" class="js-scroll-trigger promo-link" style="color:#64a19d; text-decoration:none; font-weight:600; font-size:13px; margin-right:20px; transition:color 0.3s ease;">Reserve Your Escape</a>
