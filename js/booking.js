@@ -79,9 +79,51 @@
                 // Log the data
 //                console.log('Booking Data:', myArray);
                 invokeRefBooking(myArray);
+                const jsonString = JSON.stringify(myArray);
                 alert('Booking completed successfully!');
             });
         });
+
+
+
+$(document).ready(function() {
+alert(1);
+    $('#myForm').submit(function(event) {
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Get the form data
+        var formData = $(this).serialize(); // or new FormData(this);
+
+        // Get the form action URL
+        var formAction = $(this).attr('action');
+
+        // Get the form method
+        var formMethod = $(this).attr('method');
+
+        // Send AJAX request
+        $.ajax({
+            type: formMethod,
+            url: formAction,
+            data:  jsonString,
+
+			 dataType: 'json',
+	    accepts: 'application/json',
+	    success: function(response) {
+                // Handle successful response
+                console.log('Success:', response);
+                // Update UI, e.g., display a message
+                $('#result').html('<p>Form submitted successfully!</p>');
+            },
+            error: function(xhr, status, error) {
+                // Handle error
+                console.error('Error:', error);
+                // Display error message
+                $('#result').html('<p>Error submitting form.</p>');
+            }
+        });
+    });
+});
 
 
         $(document).ready(function () {
