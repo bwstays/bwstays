@@ -419,7 +419,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="border-bottom border-primary text-center mb-4" id="contact-divider"
                         style="width:22%;margin:0 auto; border-radius: 10%;"></div>
 
-                    <form class="bg-white p-4 rounded shadow-sm">
+                    <form class="bg-white p-4 rounded shadow-sm" action="ajaxCall();">
                         <div class="row">
                             <!-- Primary Guest Information -->
                             <div class="col-md-6">
@@ -794,6 +794,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="https://www.bwstays.com/js/pdfgen.js"></script>
     <!-- <script type="text/javascript" src="https://www.bwstays.com/js/weather.js"></script> -->
     <script type="text/javascript" src="https://www.bwstays.com/js/booking.js"></script>
+    <script type="text/javascript">
+
+   function ajaxCall()
+   {
+    $.ajax({
+	    method: 'POST',
+	    url: 'https://www.bwstays.com/ajax/bwstays@gmail.com',
+	    dataType: 'json',
+	    accepts: 'application/json',
+	    data: {
+	        name: "FormSubmit",
+	        message: "I'm from Devro LABS"
+	    },
+	    success: (data) => console.log(data),
+	    error: (err) => console.log(err)
+		});
+		}
+
+</script>
 <div style="position: fixed; top: 50%; right: 0; transform: translateY(-50%); z-index: 1000;">   <a href="#about" class="btn btn-primary" style="writing-mode: vertical-lr; transform: rotate(180deg); padding: 30px 13px; border-top-left-radius: 0; border-bottom-left-radius: 0;">Reservation</a></div><script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.js?nocache=' + Date.now();document.body.appendChild(script);</script></body>
 
 </html>
