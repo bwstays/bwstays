@@ -69,3 +69,8 @@ background-color:#64a19d;
 .location-marker {
     background-image: url('https://www.bwstays.com/assets/img/logo/pin-drop.png');
 }
+
+.padding-top-120 {
+  padding-top: 120px;
+}
+
