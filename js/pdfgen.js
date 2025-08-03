@@ -55,7 +55,7 @@
 
 
 	    const allowedOccupancy = [{
-	     audlt:"2", child:"1"}
+	     audlt:"4", child:"1"}
 	    ]
 
 	    const extracost = [{
@@ -63,13 +63,13 @@
 	    ]
 
 	    const commondata = [{
-	     audlt:1000, child:800,audlt:2, child:1,villaprice:5000}
+	     audlt:1000, child:800,audlt:4, child:1,villaprice:5000}
 	    ]
 
 
 	    const tax=18;
 	    const villaprice=5000;
- var itemsData;
+		 var itemsData;
 
 
 if(myArray[(Object.keys(myArray)[3])[0]][0]!==undefined   )
