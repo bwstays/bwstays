@@ -25,6 +25,41 @@
     opacity: 0.9;
 }
 
+ /* Enhanced SEO structured data styles */
+        .villa-details {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .detail-icon {
+            font-size: 1.5em;
+            color: #64a19d;
+            margin-right: 15px;
+            width: 30px;
+        }
+
+        .detail-text {
+            flex: 1;
+        }
+
+        .detail-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9em;
+        }
   /* Vertical Side Menu */
         .vertical-menu {
             position: fixed;
