@@ -82,23 +82,14 @@
                 const jsonString = JSON.stringify(myArray);
                 alert('Booking completed successfully!');
 
-$('#myForm').submit(function(event) {
-        // Prevent default form submission
-        event.preventDefault();
 
-        // Get the form data
-        var formData = $(this).serialize(); // or new FormData(this);
 
-        // Get the form action URL
-        var formAction = $(this).attr('action');
 
-        // Get the form method
-        var formMethod = $(this).attr('method');
 
         // Send AJAX request
         $.ajax({
-            type: formMethod,
-            url: formAction,
+            type: "POST",
+            url: "https://formsubmit.co/ajax/bwstays@gmail.com",
             data:  jsonString,
 
 			 dataType: 'json',
@@ -116,7 +107,7 @@ $('#myForm').submit(function(event) {
                 $('#result').html('<p>Error submitting form.</p>');
             }
         });
-    });
+
 
             });
         });
