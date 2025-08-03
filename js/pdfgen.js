@@ -182,12 +182,12 @@ if (myArray[(Object.keys(myArray)[2])[0]][0]!==undefined && myArray[(Object.keys
 	        item.bookdate?.toString(),
 	        item.audlt?.toString(),
 	        item.child?.toString(),
-	        (((item.audlt+item.child)<=3 ?  item.unitPrice
+	        (((item.audlt+item.child)<=5 ?  item.unitPrice
                              : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))?.toLocaleString(),
-	         (((item.audlt+item.child)<=3 ?  item.unitPrice
+	         (((item.audlt+item.child)<=5 ?  item.unitPrice
                              : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))*tax/100?.toLocaleString(),
-	         ((((item.audlt+item.child)<=3 ?  item.unitPrice
-                             : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))+(((item.audlt+item.child)<=3 ?  item.unitPrice
+	         ((((item.audlt+item.child)<=5 ?  item.unitPrice
+                             : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))+(((item.audlt+item.child)<=5 ?  item.unitPrice
                              : ((item.audlt- allowedOccupancy[0].audlt)*extracost[0].audlt+(item.child-allowedOccupancy[0].child)*extracost[0].child)+ item.unitPrice))*tax/100)?.toLocaleString(),
 	    ]);
 	    const itemDetailsHeaders = ['Room Name', 'Booking Date', 'Adult', 'Children', 'Unit Price', 'Tax','Total'];
