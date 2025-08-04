@@ -12,9 +12,15 @@
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
-.villa-hero h2 {
-    font-size: 3.2em;
-    font-weight: 650;
+.villa-hero1 h1 {
+    font-size: 4.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.villa-hero1 h2 {
+    font-size: 3.1em;
+    font-weight: 300;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
