@@ -7,23 +7,18 @@
     color: white;
 }
 .villa-hero h1 {
-    font-size: 3.5em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-.villa-hero1 h1 {
     font-size: 3.9em;
     font-weight: 710;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
-.villa-hero1 h2 {
-    font-size: 3.1em;
-    font-weight: 300;
+.villa-hero h2 {
+    font-size: 3.9em;
+    font-weight: 710;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
+ 
 
 .villa-hero .subtitle {
     font-size: 1.3em;
