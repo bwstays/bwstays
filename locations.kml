@@ -7,10 +7,10 @@
 		</atom:author>
 		<atom:link rel="related" href="https://www.bwstays.com" />
 		<Folder>
-			<name>locations.kml</name>
+			<name>Black and White Stays</name>
 			<open>1</open>
 			<description>
-			   A folder containing food location
+			   A folder containing all tourist location in wayanad
 			</description>
 			<Placemark>
 				<name><![CDATA[bwstays]]></name>
