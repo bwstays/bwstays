@@ -134,3 +134,10 @@
              overflow: hidden;
              box-shadow: 0 20px 60px rgba(0,0,0,0.4);
          }
+
+.index-card {
+background: linear-gradient(45deg, #1a1a1a, #2a2a2a); 
+border-radius: 20px; 
+overflow: hidden; 
+box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
