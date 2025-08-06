@@ -447,6 +447,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   Thollayiram Kandi and is approximately 13km from Meppadi.
                 </span>
               </div>
+              <div class="mb-3">
+                 <div id="foodmap" class="mb-3"/>
+              </div>
+
             </div>
           </div>
 
@@ -846,6 +850,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           this.style.transform = "translateY(-50%) scale(1)";
         });
       });
+
+ var map = new google.maps.Map(document.getElementById('foodmap');
+var location = new google.maps.LatLng( 11.542841751488135, 76.02595022698385);
+   // Initialize the PlacesService with the map object
+  var service = new google.maps.places.PlacesService(map);
+
+  // Define the search request
+  var request = {
+    location: location, // The center point for the search (e.g., user's location)
+    radius: 5000,      // Search radius in meters (e.g., 5km)
+    type: ['restaurant'] // Type of place to search for
+  };
+
+  // Perform the Nearby Search
+  service.nearbySearch(request, function(results, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+      // Process the results (e.g., add markers to the map)
+      for (var i = 0; i < results.length; i++) {
+        createMarker(results[i]); // A function to create a marker for each place
+      }
+    } else {
+      console.error('Places search failed:', status);
+    }
+  });
+
     </script>
 
     <div
