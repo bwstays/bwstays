@@ -1219,7 +1219,7 @@ const siteData = {
 
     {
       id: 65,
-      name: "Resturants",
+      name: "Restaurants",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: [iconURLPrefix+"assets/img/food/bw-stays-hotel-wayanad-inn.webp"],
       holidays: "Sun",
@@ -1234,7 +1234,7 @@ const siteData = {
       hrs:"2",
       fee:"0",
        type: "Food",
-      knowmore: iconURLPrefix+"bw-resturants-food-wayanad.html",
+      knowmore: iconURLPrefix+"bw-restaurants-food-wayanad.html",
 
     },
     {

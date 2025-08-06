@@ -1,5 +1,5 @@
 ## Black and White Stays  👋
-## Discover comfortable and affordable short-term stays with  Black and White. Our selection for vacation, rentals and find your perfect home away from home today. Travelers looking for a quieter, more relaxed stay with quick city access.Explore trendy kerala traditional cusines, spice shopping, parks and tourist spots  👋
+## Discover comfortable and affordable short-term stays with  Black and White. Our selection for vacation, rentals and find your perfect home away from home today. Travelers looking for a quieter, more relaxed stay with quick city access.Explore trendy kerala traditional  cuisines , spice shopping, parks and tourist spots  👋
 <!--
 **bwstays/bwstays** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 Here are some ideas to get you started:
