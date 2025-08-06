@@ -468,7 +468,7 @@ const siteData = {
     ,
     {
       id: 50,
-      name: "Phanthom rock",
+      name: "Phantom rock",
       description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
       image: [iconURLPrefix+"assets/img/romantic/bw-resort-phanthom-rock-wayanad.webp"],
       holidays: "Sun",
@@ -962,7 +962,7 @@ const siteData = {
     },
 {
       id: 29,
-      name: "Nagarhole wild life sanctury",
+      name: "Nagarhole wild life sanctuary",
       description: "Sanctuary with elephants, deer, and a variety of birds in their natural habitat.",
       image: [iconURLPrefix+"assets/img/wildlife/bw-homestays-nagarhole-wayanad-wildlife-sanctuary.webp"],
       holidays: "None",
