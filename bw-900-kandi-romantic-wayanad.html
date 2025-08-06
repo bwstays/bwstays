@@ -851,29 +851,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         });
       });
 
- var map = new google.maps.Map(document.getElementById('foodmap'));
-var location = new google.maps.LatLng( 11.542841751488135, 76.02595022698385);
-   // Initialize the PlacesService with the map object
-  var service = new google.maps.places.PlacesService(map);
 
-  // Define the search request
-  var request = {
-    location: location, // The center point for the search (e.g., user's location)
-    radius: 5000,      // Search radius in meters (e.g., 5km)
-    type: ['restaurant'] // Type of place to search for
-  };
+  var map = new google.maps.Map(document.getElementById('foodmap'), {
+                center: { lat: 25.276987, lng: 55.296249 },
+                zoom: 15
+            });
 
-  // Perform the Nearby Search
-  service.nearbySearch(request, function(results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-      // Process the results (e.g., add markers to the map)
-      for (var i = 0; i < results.length; i++) {
-        createMarker(results[i]); // A function to create a marker for each place
-      }
-    } else {
-      console.error('Places search failed:', status);
-    }
-  });
+          var infoWindow = new google.maps.InfoWindow({ map: map });
+  var myPlace = {lat: 25.276987, lng: 55.296249 };
+
+var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch({
+                location : myPlace,
+                radius : 5500,
+                type : [ 'restaurant' ]
+            }, callback);
+
+
+function callback(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
+                }
+            }
+        }
+
+function createMarker(place) {
+            var placeLoc = place.geometry.location;
+            var marker = new google.maps.Marker({
+                map : map,
+                position : place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(place.name);
+                infowindow.open(map, this);
+            });
+        }
+
+
+
 
     </script>
 
