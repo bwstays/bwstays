@@ -25,7 +25,7 @@ for (i = 0; i < bwlocations.length; i++) {
   });
   google.maps.event.addListener(marker, 'click', (function (marker, i) {
     return function () {
-      infowindow.setContent(bwlocations[i][0]);
+    //  infowindow.setContent(bwlocations[i][0]);
       infowindow.open(map, marker);
     }
   })(marker, i));
