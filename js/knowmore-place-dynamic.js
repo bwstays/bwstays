@@ -305,7 +305,7 @@ $("#nearby-places h2").text("Location Nearby " + currentItemData.name);
                       <i class="fas fa-phone"></i> ${item.Contact}
                   </small>
               </div>
-              <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Know More</a>
+              <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Attractions</a>
           </div>
       `;
 
