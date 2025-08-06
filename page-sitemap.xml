@@ -20,7 +20,7 @@
 			<image:loc>https://www.bwstays.com/assets/img/sports/bw-private-villa-river-rafting-in-wayanad.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://www.bwstays.com/assets/img/sports/bw-homestay-rafting-wayanadbw-private-villa-river-rafting-in-wayanad.webp</image:loc>
+			<image:loc>https://www.bwstays.com/assets/img/sports/bw-homestay-rafting-wayanad.webp</image:loc>
 		</image:image>
 	  </url>
 
@@ -1170,24 +1170,7 @@
 	 
 </url> 
 
-<url>
-	<loc>https://www.bwstays.com/bw-ziplines-sporting-wayanad.html</loc>
-	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/sports/bw-villa-bamboo-sport-rafting-wayanad.webp</image:loc>
-	</image:image>  
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/sports/bw-private-villa-adventure-sports-wayanad.webp</image:loc>
-	</image:image>  
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/sports/bw-stay-bamboo-sport-rafting-wayanad.webp</image:loc>
-	</image:image>  
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/sports/bw-stay-service-apartment-sport-stadium.webp</image:loc>
-	</image:image>  
-	 
-</url> 
-
+ 
 
 <url>
 	<loc>https://www.bwstays.com/index.html</loc>
