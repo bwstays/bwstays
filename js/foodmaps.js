@@ -23,25 +23,33 @@ const service = new google.maps.places.PlacesService(map1);
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
 
 			for (let i = 0; i < results.length; i++) {
+				  new google.maps.Marker({
+					map: map1,
+					position: results[i].geometry.location,
+					title: results[i].name,
+				});
+
+				results[i].forEach(function(l) {
+					var request = {
+					placeId: l.placeId,
+					fields: ['rating', 'reviews', 'user_ratings_total']
+					};
+					var service = new google.maps.places.PlacesService(map1);
+					service.getDetails(request, function(place, status) {
+					if (status === google.maps.places.PlacesServiceStatus.OK) {
+					var reviews = place.reviews;
+					console.log("--------"+place.rating + ' ' + place.user_ratings_total)
+					// Process and display the reviews on your web page as desired
+					}
+					});
+				})
 
 
-
-			  new google.maps.Marker({
-				map: map1,
-				position: results[i].geometry.location,
-				title: results[i].name,
-			});
-      }
+      		}
     }
   });
 
-  service.getDetails(request, function(results, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-  var reviews =results.reviews;
-   console.log("---------"+results.rating + ' ' + results.user_ratings_total)
-  // Process and display the reviews on your web page as desired
-  }
-  });
+
 
 
 
