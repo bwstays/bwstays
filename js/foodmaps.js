@@ -40,7 +40,7 @@ const service = new google.maps.places.PlacesService(map1);
 					var service = new google.maps.places.PlacesService(map1);
 
 
-					service.getDetails(request, function(place, status)
+					/*service.getDetails(request, function(place, status)
 					{
 						if (status === google.maps.places.PlacesServiceStatus.OK) {
 						var reviews =place.reviews;
@@ -48,6 +48,7 @@ const service = new google.maps.places.PlacesService(map1);
 						// Process and display the reviews on your web page as desired
 						}
 					});
+					*/
 
       		}
     }
