@@ -19,7 +19,7 @@ const service = new google.maps.places.PlacesService(map1);
     types: ['restaurant','mess','hotel'],
   };
 
-  service.nearbySearch(request, (results, status) => {
+    service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
 
 			for (let i = 0; i < results.length; i++)
@@ -28,7 +28,7 @@ const service = new google.maps.places.PlacesService(map1);
 					map: map1,
 					position: results[i].geometry.location,
 					title: results[i].name,
-				});
+					});
 
  				    //alert(results[i].place_id);
 					var request = {
@@ -36,16 +36,17 @@ const service = new google.maps.places.PlacesService(map1);
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 
-
 					//var service = new google.maps.places.PlacesService(map1);
 					service.getDetails(request, function(place, status)
 					{
 
 						if (status === google.maps.places.PlacesServiceStatus.OK  && place) {
-						var reviews =place.reviews;
-						alert(3);
-						console.log("--------"+place.rating + ' ' + place.user_ratings_total);
-						// Process and display the reviews on your web page as desired
+							var reviews =place.reviews;
+ 							console.log("--------"+place.rating + ' ' + place.user_ratings_total);
+							if(place.rating>4.0)
+							{
+							// Process and display the reviews on your web page as desired
+							}
 						}
 					});
 
