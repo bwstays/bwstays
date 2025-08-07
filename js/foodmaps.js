@@ -18,7 +18,6 @@ const service = new google.maps.places.PlacesService(map1);
     radius: 4000, // Search within a 4km radius
     types: ['restaurant','mess','hotel'],
   };
-
     service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
 
@@ -53,8 +52,3 @@ const service = new google.maps.places.PlacesService(map1);
       		}
     }
   });
-
-
-
-
-
