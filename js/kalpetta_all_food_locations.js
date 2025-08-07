@@ -159,7 +159,7 @@ google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
     if( images.length > 0 ) {
       images.forEach(function(image) {
 		   if(!image.alt || image.alt ==="")
-		        image.alt = 'This is a test alt';
+		        image.alt = 'Food & Dine for travelers';
       });
       clearInterval(gMapControlsCheck);
     }
