@@ -25,6 +25,7 @@ const service = new google.maps.places.PlacesService(map1);
 			for (let i = 0; i < results.length; i++)
 			{
 				 var place=results[i];
+				 alert(place);
 				  new google.maps.Marker({
 					map: map1,
 					position: results[i].geometry.location,
@@ -37,6 +38,8 @@ const service = new google.maps.places.PlacesService(map1);
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
+
+
 					service.getDetails(request, function(place, status)
 					{
 						if (status === google.maps.places.PlacesServiceStatus.OK) {
