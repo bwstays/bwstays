@@ -23,7 +23,7 @@ var infowindow = new google.maps.InfoWindow();
   const request = {
     location: centerloca,
     radius: 3000, // Search within a 3km radius
-    types: ['restaurant','mess','hotel'],
+    types: ['restaurant','hotel'],
   };
     service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
