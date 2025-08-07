@@ -22,16 +22,18 @@ const service = new google.maps.places.PlacesService(map1);
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
 
-			for (let i = 0; i < results.length; i++) {
+			for (let i = 0; i < results.length; i++)
+			{
 				  new google.maps.Marker({
 					map: map1,
 					position: results[i].geometry.location,
 					title: results[i].name,
 				});
 
-				results[i].forEach(function(l) {
+				//results[i].forEach(function(l)
+				//{
 					var request = {
-					placeId: l.placeId,
+					placeId: results[i].placeId,
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
@@ -42,7 +44,7 @@ const service = new google.maps.places.PlacesService(map1);
 					// Process and display the reviews on your web page as desired
 					}
 					});
-				})
+				//})
 
 
       		}
