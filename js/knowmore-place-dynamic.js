@@ -125,7 +125,7 @@ rightArrow.addEventListener('mouseleave', () => {
   rightArrow.style.transform = 'translateY(-50%) scale(1)';
 });
 
-console.log("knowmore-place-dynamic.js loaded");
+//console.log("knowmore-place-dynamic.js loaded");
 
   // Get the first item from currentItem array
   const currentItemData = currentItem[0];

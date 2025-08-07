@@ -90,7 +90,7 @@
 	    accepts: 'application/json',
 	    success: function(response) {
                 // Handle successful response
-                console.log('Success:', response);
+              //  console.log('Success:', response);
                 // Update UI, e.g., display a message
                 $('#result').html('<p>Form submitted successfully!</p>'+jsonString);
             },
