@@ -1,8 +1,4 @@
 
-var iconURLPrefix = 'https://www.bwstays.com/';
-
-var bwlocations = [[11.542841751488135, 76.02595022698385]];
-//var centerloca =new google.maps.LatLng('11.542841751488135', '76.02595022698385');
 var map1 = new google.maps.Map(document.getElementById('foodmap'), {
   zoom: 10,
   // disable the default User Interface
