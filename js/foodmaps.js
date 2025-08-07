@@ -38,7 +38,7 @@ const service = new google.maps.places.PlacesService(map1);
   service.getDetails(request, function(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK && results) {
   var reviews =results.reviews;
-   console.log("---------"+results.rating + ' ' + results[i].user_ratings_total)
+   console.log("---------"+results.rating + ' ' + results.user_ratings_total)
   // Process and display the reviews on your web page as desired
   }
   });
