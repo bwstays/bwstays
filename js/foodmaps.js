@@ -30,14 +30,16 @@ const service = new google.maps.places.PlacesService(map1);
 					title: results[i].name,
 				});
 
+				alert(results[i].place_Id);
+
 					var request = {
-					placeId: results[i].placeId,
+					placeId: results[i].place_Id,
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
 					service.getDetails(request, function(place, status)
 					{
-						alert(2);
+
 						if (status === google.maps.places.PlacesServiceStatus.OK  && place) {
 						var reviews =place.reviews;
 						alert(3);
