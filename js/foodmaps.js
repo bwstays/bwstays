@@ -17,42 +17,25 @@ var map1 = new google.maps.Map(document.getElementById('foodmap'), {
 });
 var infowindow = new google.maps.InfoWindow();
 var marker, i;
-performNearbySearch(map1,new google.maps.LatLng('11.542841751488135', '76.02595022698385'));
-/*for (i = 0; i < bwlocations.length; i++) {
-  marker = new google.maps.Marker({
-    position: new google.maps.LatLng('11.542841751488135', '76.02595022698385'),
-    icon: 'https://maps.google.com/mapfiles/ms/icons/purple-dot.png',
-    map: map1
-  });
-  google.maps.event.addListener(marker, 'click', (function (marker, i) {
-    return function () {
-    //  infowindow.setContent(bwlocations[i][0]);
-      infowindow.open(map, marker);
-    }
-  })(marker, i));
-}*/
 
-function performNearbySearch(map1, center) {
-  const service = new google.maps.places.PlacesService(map1);
+
+const service = new google.maps.places.PlacesService(map1);
   const request = {
-    location: center,
+    location: new google.maps.LatLng('11.542841751488135', '76.02595022698385'),
     radius: 5000, // Search within a 5km radius
     types: ['restaurant'],
   };
 
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-      for (let i = 0; i < results.length; i++) {
-        createMarker(results[i], map1);
+			for (let i = 0; i < results.length; i++) {
+			  new google.maps.Marker({
+				map: map1,
+				position: results[i].geometry.location,
+				title: results[i].name,
+			});
       }
     }
   });
-}
 
-function createMarker(place, map1) {
-  new google.maps.Marker({
-    map: map1,
-    position: place.geometry.location,
-    title: place.name,
-  });
-}
+
