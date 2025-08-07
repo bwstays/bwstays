@@ -31,7 +31,6 @@ const service = new google.maps.places.PlacesService(map1);
 				});
 
  				//alert(results[i].place_id);
-
 					var request = {
 					placeId: results[i].place_id,
 					fields: ['rating', 'reviews', 'user_ratings_total']
