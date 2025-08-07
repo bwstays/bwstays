@@ -36,10 +36,10 @@ const service = new google.maps.places.PlacesService(map1);
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
-					service.getDetails(request, function(place, status) {
+					service.getDetails(request, function(results[i], status) {
 					if (status === google.maps.places.PlacesServiceStatus.OK) {
-					var reviews = place.reviews;
-					console.log("--------"+place.rating + ' ' + place.user_ratings_total)
+					var reviews = results[i].reviews;
+					console.log("--------"+results[i].rating + ' ' + results[i].user_ratings_total)
 					// Process and display the reviews on your web page as desired
 					}
 					});
