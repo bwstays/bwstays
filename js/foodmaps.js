@@ -46,7 +46,6 @@ const service = new google.maps.places.PlacesService(map1);
 					});
 				//})
 
-
       		}
     }
   });
