@@ -8,7 +8,7 @@ var map1 = new google.maps.Map(document.getElementById('foodmap'), {
   streetViewControl: true,
   fullscreenControl: true,
   center: centerloca,
-  icon: https://www.bwstays.com/assets/img/logo/pin-drop.png,
+  icon: 'https://www.bwstays.com/assets/img/logo/pin-drop.png',
   mapId: 'f03033acde18bc0d'
 });
 var infowindow = new google.maps.InfoWindow();
