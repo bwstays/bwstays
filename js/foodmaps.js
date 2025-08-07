@@ -24,6 +24,7 @@ const service = new google.maps.places.PlacesService(map1);
 
 			for (let i = 0; i < results.length; i++)
 			{
+				 var place=results[i];
 				  new google.maps.Marker({
 					map: map1,
 					position: results[i].geometry.location,
@@ -36,12 +37,13 @@ const service = new google.maps.places.PlacesService(map1);
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
-					service.getDetails(request, function(results[i], status) {
-					if (status === google.maps.places.PlacesServiceStatus.OK) {
-					var reviews = results[i].reviews;
-					console.log("--------"+results[i].rating + ' ' + results[i].user_ratings_total)
-					// Process and display the reviews on your web page as desired
-					}
+					service.getDetails(request, function(place, status)
+					{
+						if (status === google.maps.places.PlacesServiceStatus.OK) {
+						var reviews =place.reviews;
+						console.log("--------"+place.rating + ' ' + place.user_ratings_total);
+						// Process and display the reviews on your web page as desired
+						}
 					});
 
       		}
