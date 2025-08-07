@@ -30,8 +30,7 @@ const service = new google.maps.places.PlacesService(map1);
 					title: results[i].name,
 				});
 
-				//results[i].forEach(function(l)
-				//{
+
 					var request = {
 					placeId: results[i].placeId,
 					fields: ['rating', 'reviews', 'user_ratings_total']
@@ -44,7 +43,6 @@ const service = new google.maps.places.PlacesService(map1);
 					// Process and display the reviews on your web page as desired
 					}
 					});
-				//})
 
       		}
     }
