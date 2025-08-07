@@ -33,13 +33,13 @@ const service = new google.maps.places.PlacesService(map1);
 
 
 					var request = {
-					placeId: results[i].placeId,
+					placeId: place.placeId,
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
 				 alert(1);
 
-					service.getDetails(request, function(place, status)
+					service.getDetails(request, function(place.placeId, status)
 					{
 						alert(2);
 						if (status === google.maps.places.PlacesServiceStatus.OK  && place) {
