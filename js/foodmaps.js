@@ -12,10 +12,10 @@ var map1 = new google.maps.Map(document.getElementById('foodmap'), {
   mapId: 'f03033acde18bc0d'
 });
 var infowindow = new google.maps.InfoWindow();
-const service = new google.maps.places.PlacesService(map1);
+  const service = new google.maps.places.PlacesService(map1);
   const request = {
     location: centerloca,
-    radius: 4000, // Search within a 4km radius
+    radius: 3000, // Search within a 3km radius
     types: ['restaurant','mess','hotel'],
   };
     service.nearbySearch(request, (results, status) => {
@@ -28,13 +28,11 @@ const service = new google.maps.places.PlacesService(map1);
 					position: results[i].geometry.location,
 					title: results[i].name,
 					});
-
  					var request = {
 					placeId: results[i].place_id,
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
-
-					//var service = new google.maps.places.PlacesService(map1);
+  					//var service = new google.maps.places.PlacesService(map1);
 					service.getDetails(request, function(place, status)
 					{
 
