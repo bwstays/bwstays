@@ -40,15 +40,15 @@ const service = new google.maps.places.PlacesService(map1);
 					var service = new google.maps.places.PlacesService(map1);
 
 
-					/*service.getDetails(request, function(place, status)
+					service.getDetails(request, function(place, status)
 					{
-						if (status === google.maps.places.PlacesServiceStatus.OK) {
+						if (status === google.maps.places.PlacesServiceStatus.OK  && place) {
 						var reviews =place.reviews;
 						console.log("--------"+place.rating + ' ' + place.user_ratings_total);
 						// Process and display the reviews on your web page as desired
 						}
 					});
-					*/
+
 
       		}
     }
