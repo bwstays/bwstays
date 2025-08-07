@@ -39,7 +39,6 @@ const service = new google.maps.places.PlacesService(map1);
 					};
 					var service = new google.maps.places.PlacesService(map1);
 
-
 					service.getDetails(request, function(place, status)
 					{
 						if (status === google.maps.places.PlacesServiceStatus.OK  && place) {
