@@ -33,7 +33,7 @@ performNearbySearch(map1,new google.maps.LatLng('11.542841751488135', '76.025950
 }*/
 
 function performNearbySearch(map1, center) {
-  const service = new google.maps.places.PlacesService(map);
+  const service = new google.maps.places.PlacesService(map1);
   const request = {
     location: center,
     radius: 5000, // Search within a 5km radius
