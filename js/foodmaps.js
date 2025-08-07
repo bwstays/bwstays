@@ -24,8 +24,7 @@ const service = new google.maps.places.PlacesService(map1);
 
 			for (let i = 0; i < results.length; i++) {
 
-				var reviews = results[i].reviews;
-				console.log("---------"+results[i].rating + ' ' + results[i].user_ratings_total)
+
 
 			  new google.maps.Marker({
 				map: map1,
@@ -35,5 +34,14 @@ const service = new google.maps.places.PlacesService(map1);
       }
     }
   });
+
+  service.getDetails(request, function(results, status) {
+  if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+  var reviews =results.reviews;
+   console.log("---------"+results.rating + ' ' + results[i].user_ratings_total)
+  // Process and display the reviews on your web page as desired
+  }
+  });
+
 
 
