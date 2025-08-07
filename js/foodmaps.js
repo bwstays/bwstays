@@ -17,8 +17,8 @@ var map1 = new google.maps.Map(document.getElementById('foodmap'), {
 });
 var infowindow = new google.maps.InfoWindow();
 var marker, i;
-performNearbySearch(map1,new google.maps.LatLng('11.542841751488135', '76.02595022698385'))
-for (i = 0; i < bwlocations.length; i++) {
+performNearbySearch(map1,new google.maps.LatLng('11.542841751488135', '76.02595022698385'));
+/*for (i = 0; i < bwlocations.length; i++) {
   marker = new google.maps.Marker({
     position: new google.maps.LatLng('11.542841751488135', '76.02595022698385'),
     icon: 'https://maps.google.com/mapfiles/ms/icons/purple-dot.png',
@@ -30,7 +30,7 @@ for (i = 0; i < bwlocations.length; i++) {
       infowindow.open(map, marker);
     }
   })(marker, i));
-}
+}*/
 
 function performNearbySearch(map1, center) {
   const service = new google.maps.places.PlacesService(map);
