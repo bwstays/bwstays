@@ -30,10 +30,11 @@ const service = new google.maps.places.PlacesService(map1);
 					title: results[i].name,
 				});
 
+
  				alert(results[i].place_id);
 
 					var request = {
-					placeId: results[i].place_Id,
+					placeId: results[i].place_id,
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
