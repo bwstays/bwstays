@@ -7,7 +7,7 @@ const customIcon = {
 };
 
 var map1 = new google.maps.Map(document.getElementById('foodmap'), {
-  zoom: 15,
+  zoom: 11,
   // disable the default User Interface
   disableDefaultUI: true,
   // add back fullscreen, streetview, zoom
