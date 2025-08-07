@@ -2,7 +2,7 @@
 	"name": "Black and White Stays",
 	"short_name": "BWStays",
 	"description": "BWStays Villa Stays ",
-	"start_url": "./index.html",
+	"start_url": "index.html",
 	"display": "standalone",
 	"icons": [
 		{
