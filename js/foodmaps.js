@@ -1,6 +1,6 @@
 
 var map1 = new google.maps.Map(document.getElementById('foodmap'), {
-  zoom: 10,
+  zoom: 30,
   // disable the default User Interface
   disableDefaultUI: true,
   // add back fullscreen, streetview, zoom
@@ -45,7 +45,9 @@ const service = new google.maps.places.PlacesService(map1);
  							console.log("--------"+place.rating + ' ' + place.user_ratings_total);
 							if(place.rating>4.0)
 							{
+
 							// Process and display the reviews on your web page as desired
+
 							}
 						}
 					});
