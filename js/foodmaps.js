@@ -36,7 +36,6 @@ const service = new google.maps.places.PlacesService(map1);
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
-
 					service.getDetails(request, function(place, status)
 					{
 						alert(2);
