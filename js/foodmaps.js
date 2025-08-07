@@ -25,7 +25,6 @@ const service = new google.maps.places.PlacesService(map1);
 			for (let i = 0; i < results.length; i++)
 			{
 				 var place=results[i];
-				 alert(place);
 				  new google.maps.Marker({
 					map: map1,
 					position: results[i].geometry.location,
@@ -38,11 +37,14 @@ const service = new google.maps.places.PlacesService(map1);
 					fields: ['rating', 'reviews', 'user_ratings_total']
 					};
 					var service = new google.maps.places.PlacesService(map1);
+				 alert(1);
 
 					service.getDetails(request, function(place, status)
 					{
+						alert(2);
 						if (status === google.maps.places.PlacesServiceStatus.OK  && place) {
 						var reviews =place.reviews;
+						alert(3);
 						console.log("--------"+place.rating + ' ' + place.user_ratings_total);
 						// Process and display the reviews on your web page as desired
 						}
