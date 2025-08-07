@@ -1,6 +1,6 @@
 
 var map1 = new google.maps.Map(document.getElementById('foodmap'), {
-  zoom: 30,
+  zoom: 10,
   // disable the default User Interface
   disableDefaultUI: true,
   // add back fullscreen, streetview, zoom
