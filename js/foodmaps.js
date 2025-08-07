@@ -1,4 +1,11 @@
 
+const customIcon = {
+  url: 'https://www.bwstays.com/assets/img/logo/pin.png',
+  size: new google.maps.Size(40, 40), // Size of the icon image
+  origin: new google.maps.Point(0, 0), // Origin of the icon within the image (usually 0,0)
+  anchor: new google.maps.Point(20, 20) // Anchor point at the center of a 40x40 icon
+};
+
 var map1 = new google.maps.Map(document.getElementById('foodmap'), {
   zoom: 15,
   // disable the default User Interface
@@ -8,7 +15,7 @@ var map1 = new google.maps.Map(document.getElementById('foodmap'), {
   streetViewControl: true,
   fullscreenControl: true,
   center: centerloca,
-  icon: 'https://www.bwstays.com/assets/img/logo/pin.webp',
+  icon: customIcon,
   mapId: 'f03033acde18bc0d'
 });
 var infowindow = new google.maps.InfoWindow();
