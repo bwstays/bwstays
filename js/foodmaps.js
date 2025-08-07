@@ -12,14 +12,11 @@ var map1 = new google.maps.Map(document.getElementById('foodmap'), {
   mapId: 'f03033acde18bc0d'
 });
 var infowindow = new google.maps.InfoWindow();
-var marker, i;
-
-
 const service = new google.maps.places.PlacesService(map1);
   const request = {
     location: centerloca,
     radius: 4000, // Search within a 4km radius
-    types: ['restaurant'],
+    types: ['restaurant','mess','hotel'],
   };
 
   service.nearbySearch(request, (results, status) => {
