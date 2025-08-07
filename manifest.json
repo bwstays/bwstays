@@ -1,0 +1,23 @@
+{
+	"name": "Black and White Stays",
+	"short_name": "BWStays",
+	"description": "BWStays Villa Stays ",
+	"start_url": "./index.html",
+	"display": "standalone",
+	"icons": [
+		{
+			"src": "./assets/img/icons/logo.avif",
+			"type": "image/avif",
+			"sizes": "192x192"
+		},
+        {
+            "src": "./assets/img/icons/bw.png",
+            "type": "image/png",
+            "sizes": "512x512",
+			"purpose": "maskable"
+        }
+	],
+	"author": {
+		"name": "BWStays"
+	}
+}
