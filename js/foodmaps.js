@@ -1,32 +1,41 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('#food-places');
   if (!section) return;
-
 
   const centerAttr = section.getAttribute('data-center');
   if (!centerAttr) return;
   const [lat, lng] = centerAttr.split(',').map(Number);
   const centerloca = { lat, lng };
 
-
   const customIcon = {
     url: 'https://www.bwstays.com/assets/img/logo/pin.png',
-    size: new google.maps.Size(40, 40), 
-    origin: new google.maps.Point(0, 0), 
-    anchor: new google.maps.Point(20, 20)
+    size: new google.maps.Size(40, 40),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(20, 40)
   };
 
+  const mainLocationIcon = {
+    url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+    size: new google.maps.Size(40, 40),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(20, 40)
+  };
 
   var map1 = new google.maps.Map(document.getElementById('foodmap'), {
-    zoom: 11,
+    zoom: 13,
     disableDefaultUI: true,
     zoomControl: true,
     streetViewControl: true,
     fullscreenControl: true,
     center: centerloca,
-    icon: customIcon,
     mapId: 'f03033acde18bc0d'
+  });
+
+  new google.maps.Marker({
+    position: centerloca,
+    map: map1,
+    icon: mainLocationIcon,
+    title: "This Place"
   });
 
   var infowindow = new google.maps.InfoWindow();
@@ -38,19 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
     types: ['restaurant', 'hotel']
   };
 
-
   const foodPlacesContainer = document.getElementById('food-list');
 
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-
-
       const topResults = results
         .filter(r => r.rating >= 4.0)
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5);
 
-      topResults.forEach((result, i) => {
+      topResults.forEach((result) => {
         let marker = new google.maps.Marker({
           map: map1,
           position: result.geometry.location,
@@ -65,10 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         service.getDetails(detailsRequest, function (place, status) {
           if (status === google.maps.places.PlacesServiceStatus.OK && place) {
-
             let ratingStars = getStarHTML(place.rating);
             let cuisineType = guessCuisineFromTypes(place.types);
-
 
             let placeHTML = `
               <div class="mb-4 text-right">
