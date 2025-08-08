@@ -1,109 +1,99 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('#food-places');
   if (!section) return;
 
-  const locationId = parseInt(section.getAttribute('data-location-id'), 10);
-  if (!locationId) return;
 
-  // Load site data dynamically
-  const script = document.createElement('script');
-  script.src = "https://www.bwstays.com/data/sitedata.js";
-  script.onload = () => {
-    if (typeof sitedata === 'undefined' || !Array.isArray(sitedata)) {
-      console.error("Site data not loaded or invalid");
-      return;
-    }
+  const centerAttr = section.getAttribute('data-center');
+  if (!centerAttr) return;
+  const [lat, lng] = centerAttr.split(',').map(Number);
+  const centerloca = { lat, lng };
 
-    const locationData = sitedata.find(loc => loc.id === locationId);
-    if (!locationData || !locationData.latlong) {
-      console.error("Location data not found for ID:", locationId);
-      return;
-    }
 
-    const [lat, lng] = locationData.latlong.split(',').map(Number);
-    const centerloca = { lat, lng };
-
-    const customIcon = {
-      url: 'https://www.bwstays.com/assets/img/logo/pin.png',
-      size: new google.maps.Size(40, 40),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(20, 20)
-    };
-
-    var map1 = new google.maps.Map(document.getElementById('foodmap'), {
-      zoom: 11,
-      disableDefaultUI: true,
-      zoomControl: true,
-      streetViewControl: true,
-      fullscreenControl: true,
-      center: centerloca,
-      icon: customIcon,
-      mapId: 'f03033acde18bc0d'
-    });
-
-    var infowindow = new google.maps.InfoWindow();
-    const service = new google.maps.places.PlacesService(map1);
-
-    const request = {
-      location: centerloca,
-      radius: 3000,
-      types: ['restaurant', 'hotel']
-    };
-
-    const foodPlacesContainer = document.getElementById('food-list');
-
-    service.nearbySearch(request, (results, status) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-        const topResults = results
-          .filter(r => r.rating >= 4.0)
-          .sort((a, b) => b.rating - a.rating)
-          .slice(0, 5);
-
-        topResults.forEach((result) => {
-          let marker = new google.maps.Marker({
-            map: map1,
-            position: result.geometry.location,
-            title: result.name,
-            icon: customIcon
-          });
-
-          let detailsRequest = {
-            placeId: result.place_id,
-            fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
-          };
-
-          service.getDetails(detailsRequest, function (place, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK && place) {
-              let ratingStars = getStarHTML(place.rating);
-              let cuisineType = guessCuisineFromTypes(place.types);
-
-              let placeHTML = `
-                <div class="mb-4 text-right">
-                  <h6 class="text-white">${place.name}</h6>
-                  <p class="text-white-50 small mb-1">
-                    <i class="fas fa-map-marker-alt text-primary mr-2"></i>
-                    ${place.vicinity || 'Unknown location'}
-                  </p>
-                  <p class="text-white-50 small mb-1">
-                    <i class="fas fa-utensils text-primary mr-2"></i>
-                    ${cuisineType} <br> ${ratingStars}
-                  </p>
-                </div>
-              `;
-              foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
-            }
-          });
-
-          google.maps.event.addListener(marker, 'click', () => {
-            infowindow.setContent(result.name);
-            infowindow.open(map1, marker);
-          });
-        });
-      }
-    });
+  const customIcon = {
+    url: 'https://www.bwstays.com/assets/img/logo/pin.png',
+    size: new google.maps.Size(40, 40), 
+    origin: new google.maps.Point(0, 0), 
+    anchor: new google.maps.Point(20, 20)
   };
 
-  document.body.appendChild(script);
+
+  var map1 = new google.maps.Map(document.getElementById('foodmap'), {
+    zoom: 11,
+    disableDefaultUI: true,
+    zoomControl: true,
+    streetViewControl: true,
+    fullscreenControl: true,
+    center: centerloca,
+    icon: customIcon,
+    mapId: 'f03033acde18bc0d'
+  });
+
+  var infowindow = new google.maps.InfoWindow();
+  const service = new google.maps.places.PlacesService(map1);
+
+  const request = {
+    location: centerloca,
+    radius: 5000, // Search within a 5km radius
+    types: ['restaurant', 'hotel']
+  };
+
+
+  const foodPlacesContainer = document.getElementById('food-list');
+
+  service.nearbySearch(request, (results, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+
+
+      const topResults = results
+        .filter(r => r.rating >= 4.0)
+        .sort((a, b) => b.rating - a.rating)
+        .slice(0, 5);
+
+      topResults.forEach((result, i) => {
+        let marker = new google.maps.Marker({
+          map: map1,
+          position: result.geometry.location,
+          title: result.name,
+          icon: customIcon
+        });
+
+        let detailsRequest = {
+          placeId: result.place_id,
+          fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
+        };
+
+        service.getDetails(detailsRequest, function (place, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK && place) {
+
+            let ratingStars = getStarHTML(place.rating);
+            let cuisineType = guessCuisineFromTypes(place.types);
+
+
+            let placeHTML = `
+              <div class="mb-4 text-right">
+                <h6 class="text-white">${place.name}</h6>
+                <p class="text-white-50 small mb-1">
+                  <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                  ${place.vicinity || 'Unknown location'}
+                </p>
+                <p class="text-white-50 small mb-1">
+                  <i class="fas fa-utensils text-primary mr-2"></i>
+                  ${cuisineType} <br> ${ratingStars}
+                </p>
+              </div>
+            `;
+            foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
+          }
+        });
+
+        google.maps.event.addListener(marker, 'click', () => {
+          infowindow.setContent(result.name);
+          infowindow.open(map1, marker);
+        });
+      });
+    }
+  });
 });
 
 function getStarHTML(rating) {
