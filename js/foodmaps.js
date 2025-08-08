@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('#food-places');
   if (!section) return;
@@ -11,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const customIcon = {
     url: 'https://www.bwstays.com/assets/img/logo/pin.png',
-    size: new google.maps.Size(40, 40), 
-    origin: new google.maps.Point(0, 0), 
+    size: new google.maps.Size(40, 40),
+    origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(20, 20)
   };
 
@@ -28,70 +26,48 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   var infowindow = new google.maps.InfoWindow();
-  const service = new google.maps.places.PlacesService(map1);
-
-  const request = {
-    location: centerloca,
-    radius: 3000, // Search within a 3km radius
-    types: ['restaurant', 'hotel']
-  };
-
-
   const foodPlacesContainer = document.getElementById('food-list');
 
-  service.nearbySearch(request, (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+  // Fetch the site data file
+  fetch('https://www.bwstays.com/data/sitedata.js')
+    .then(response => response.text())
+    .then(text => {
+      // Convert the JS file into usable JSON
+      const siteData = eval(text); // ⚠ Uses eval because file is JS, not pure JSON
+      const foodPlaces = siteData.filter(item => item.type && item.type.toLowerCase().includes('restaurant'));
 
-
-      const topResults = results
-        .filter(r => r.rating >= 4.0)
-        .sort((a, b) => b.rating - a.rating)
-        .slice(0, 5);
-
-      topResults.forEach((result, i) => {
+      foodPlaces.forEach(place => {
+        const [lat, lng] = place.latlong.split(',').map(Number);
         let marker = new google.maps.Marker({
           map: map1,
-          position: result.geometry.location,
-          title: result.name,
+          position: { lat, lng },
+          title: place.name,
           icon: customIcon
         });
 
-        let detailsRequest = {
-          placeId: result.place_id,
-          fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
-        };
-
-        service.getDetails(detailsRequest, function (place, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK && place) {
-
-            let ratingStars = getStarHTML(place.rating);
-            let cuisineType = guessCuisineFromTypes(place.types);
-
-
-            let placeHTML = `
-              <div class="mb-4 text-right">
-                <h6 class="text-white">${place.name}</h6>
-                <p class="text-white-50 small mb-1">
-                  <i class="fas fa-map-marker-alt text-primary mr-2"></i>
-                  ${place.vicinity || 'Unknown location'}
-                </p>
-                <p class="text-white-50 small mb-1">
-                  <i class="fas fa-utensils text-primary mr-2"></i>
-                  ${cuisineType} <br> ${ratingStars}
-                </p>
-              </div>
-            `;
-            foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
-          }
-        });
+        let ratingStars = getStarHTML(parseFloat(place.rating));
+        let placeHTML = `
+          <div class="mb-4 text-right">
+            <h6 class="text-white">${place.name}</h6>
+            <p class="text-white-50 small mb-1">
+              <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+              ${place.description || 'No description'}
+            </p>
+            <p class="text-white-50 small mb-1">
+              <i class="fas fa-star text-primary mr-2"></i>
+              ${ratingStars}
+            </p>
+          </div>
+        `;
+        foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 
         google.maps.event.addListener(marker, 'click', () => {
-          infowindow.setContent(result.name);
+          infowindow.setContent(place.name);
           infowindow.open(map1, marker);
         });
       });
-    }
-  });
+    })
+    .catch(err => console.error('Error loading sitedata.js:', err));
 });
 
 
@@ -101,13 +77,4 @@ function getStarHTML(rating) {
   let halfStar = rating % 1 >= 0.5 ? 1 : 0;
   let emptyStars = 5 - fullStars - halfStar;
   return '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(emptyStars);
-}
-
-function guessCuisineFromTypes(types) {
-  if (!types) return 'Multi-Cuisine';
-  if (types.includes('cafe')) return 'Cafe';
-  if (types.includes('restaurant')) return 'Restaurant';
-  if (types.includes('bakery')) return 'Bakery';
-  if (types.includes('bar')) return 'Bar';
-  return 'Multi-Cuisine';
 }
