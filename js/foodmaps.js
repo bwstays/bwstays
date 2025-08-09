@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const request = {
     location: centerloca,
     radius: 5000, // Search within a 5km radius
-    types: ['restaurant', 'hotel']
+    types: ['restaurant']
   };
 
   const foodPlacesContainer = document.getElementById('food-list');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const topResults = results
         .filter(r => r.rating >= 4.0)
         .sort((a, b) => b.rating - a.rating)
-        .slice(0, 5); // Limit to the top 5 results	
+        .slice(0, 5); // Limit to the top 5 results
 
       topResults.forEach((result) => {
         let marker = new google.maps.Marker({
