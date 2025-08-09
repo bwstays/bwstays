@@ -105,7 +105,8 @@ function getStarHTML(rating) {
   let fullStars = Math.floor(rating);
   let halfStar = rating % 1 >= 0.5 ? 1 : 0;
   let emptyStars = 5 - fullStars - halfStar;
-  return '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(emptyStars);
+ // return '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(emptyStars);
+  return '★'.repeat(fullStars) + (halfStar ? '&2BE8' : '') + '☆'.repeat(emptyStars);
 }
 
 function guessCuisineFromTypes(types) {
