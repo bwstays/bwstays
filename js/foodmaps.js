@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     zoomControl: true,
     streetViewControl: true,
     fullscreenControl: true,
-    center: centerloca,
-    mapId: 'f03033acde18bc0d'
-  });
+    center: centerloca  });
 
   new google.maps.Marker({
     position: centerloca,
