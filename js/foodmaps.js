@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     zoomControl: true,
     streetViewControl: true,
     fullscreenControl: true,
-    center: centerloca  });
+    center: centerloca ,
+     mapId: "foodmapdata"
+    });
 
   new google.maps.Marker({
     position: centerloca,
