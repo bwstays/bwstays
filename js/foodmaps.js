@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5); // Limit to the top 5 results
 
-      results.forEach((result) => {
+      topResults.forEach((result) => {
         let marker = new google.maps.Marker({
           map: map1,
           position: result.geometry.location,
