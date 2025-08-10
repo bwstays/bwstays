@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const request = {
     location: centerloca,
-    radius: 5000, // Search within a 5km radius
+    radius: 4000, // Search within a 5km radius
     types: ['restaurant']
   };
 
