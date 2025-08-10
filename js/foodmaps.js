@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     position: centerloca,
     map: map1,
     icon: mainLocationIcon,
-    title: "This Place"
+    title: "Food and Dine near Location"
   });
 
   var infowindow = new google.maps.InfoWindow();
