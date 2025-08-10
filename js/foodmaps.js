@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let marker = new google.maps.Marker({
           map: map1,
           position: result.geometry.location,
-          title: result.name,
-          icon: customIcon
+          title: result.name
+         // icon: customIcon
         });
 
         let detailsRequest = {
