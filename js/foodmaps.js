@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   var map1 = new google.maps.Map(document.getElementById('foodmap'), {
-    zoom: 10,
+    zoom: 13,
     disableDefaultUI: true,
     zoomControl: true,
     streetViewControl: true,
