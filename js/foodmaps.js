@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Sort the filtered results by rating in descending order
 		const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
-
 		/*const topResults = results
 		.filter(r => r.rating >= 4.0)
 		.sort((a, b) => b.rating - a.rating)
