@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
  var addressName ="";
-geocoder.geocode({ location: centerloca }, (results, status) => {
+geocoder.geocode({
+	location:  { lat: centerloca.lat, lng:centerloca.lng} }, (results, status) => {
         if (status === "OK") {
             if (results[0]) {
                 // Access the formatted address or specific components
