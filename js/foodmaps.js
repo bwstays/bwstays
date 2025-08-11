@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 service.getDetails(request, function (place, status) {
  if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+	 alert("Place ID 1" );
         alert("Place ID:" +place.place_id);
      }
 });
