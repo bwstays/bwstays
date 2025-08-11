@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   var map1 = new google.maps.Map(document.getElementById('foodmap'), {
-    zoom: 13,
+    zoom: 10,
     disableDefaultUI: true,
     zoomControl: true,
     streetViewControl: true,
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     position: centerloca,
     map: map1,
     icon: mainLocationIcon,
-    title: "Food and Dine near Location"
+    title: "Food and Dine in Wayanad Location"
   });
 
   var infowindow = new google.maps.InfoWindow();
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const request = {
     location: centerloca,
-    radius: 4000, // Search within a 4km radius
+    radius: 5000, // Search within a 4km radius
     types: ['restaurant','hotel']
   };
 
@@ -62,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let marker = new google.maps.Marker({
           map: map1,
           position: results[i].geometry.location,
-          title: results[i].name,
-          icon: customIcon
+          title: results[i].name
         });
 
         let detailsRequest = {
