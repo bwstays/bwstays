@@ -84,7 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
 					  <div class="mb-4 text-right">
 						<h6 class="text-white">${place.name}</h6>
 						<p class="text-white-50 small mb-1">
-						  <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+						  <i class="fas fa-map-marker-alt text-primary mr-2">
+						  <a href="https://www.google.com/maps/place/?q=${detailsRequest.placeId}" alt="location map"></a>
+						  </i>
 						  ${place.vicinity || 'Unknown location'}
 						</p>
 						<p class="text-white-50 small mb-1">
