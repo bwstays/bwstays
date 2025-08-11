@@ -61,13 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			{
       let marker = new google.maps.Marker({
           map: map1,
-          position: result.geometry.location,
-          title: result.name,
+          position: results[i].geometry.location,
+          title: results[i].name,
           icon: customIcon
         });
 
         let detailsRequest = {
-          placeId: result.place_id,
+          placeId: results[i].place_id,
           fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
         };
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         google.maps.event.addListener(marker, 'click', () => {
-          infowindow.setContent(result.name);
+          infowindow.setContent(results[i].name);
           infowindow.open(map1, marker);
         });
 	};
