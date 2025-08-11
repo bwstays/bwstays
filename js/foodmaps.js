@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (status === google.maps.GeocoderStatus.OK)
          {
             if (results[0]) {
-				alert(results[0])
+
                 // Access the formatted address or specific components
                 addressName = results[0].formatted_address;
                 originPlaceId = results[0].place_id;
