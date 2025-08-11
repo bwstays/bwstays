@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 geocoder = new google.maps.Geocoder();
 alert(centerloca.lat)
+alert(centerloca.lng)
 geocoder.geocode({
 	location:  { lat: centerloca.lat, lng:centerloca.lng} }, (results, status) => {
         if (status === "OK") {
