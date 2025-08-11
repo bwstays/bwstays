@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
  var addressName ="";
 
 geocoder = new google.maps.Geocoder();
+latlng = {lat: centerloca.lat, lng: centerloca.lng};
 alert(centerloca.lat)
 alert(centerloca.lng)
-geocoder.geocode({
-	location:  { lat: centerloca.lat, lng:centerloca.lng} }, (results, status) => {
+geocoder.geocode( {'location': latlng}, (results, status) => {
         if (status === "OK") {
 			alert(1)
             if (results[0]) {
