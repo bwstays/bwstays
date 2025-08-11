@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 	var addressName ="";
+	var originPlaceId ="";
 	geocoder = new google.maps.Geocoder();
 	latlng = {lat: centerloca.lat, lng: centerloca.lng};
 	geocoder.geocode( {'location': latlng}, (results, status) => {
@@ -31,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				alert(results[0])
                 // Access the formatted address or specific components
                 addressName = results[0].formatted_address;
+                originPlaceId = results[0].place_id;
+
 
 			}
 		}
@@ -61,14 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
     radius: 5000, // Search within a 5km radius
     types: ['restaurant','hotel'],
     min_rating: 3.5
+
   };
 
-service.getDetails(request, function (place, status) {
- if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-	 alert("Place ID 1" );
-        alert("Place ID:" +place.place_id);
-     }
-});
+
+
   const foodPlacesContainer = document.getElementById('food-list');
 
   service.nearbySearch(request, (results, status) => {
@@ -104,7 +104,7 @@ service.getDetails(request, function (place, status) {
 					let placeHTML = `
 					  <div class="mb-4 text-right">
 						<h6 class="text-white">${place.name}</h6>
-						<a href="https://www.google.com/maps/dir/?api=1&origin_place_id=${results[i].place_id}&destination_place_id=${detailsRequest.placeId}&origin=${addressName}&destination=${place.name}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+						<a href="https://www.google.com/maps/dir/?api=1&origin_place_id=${originPlaceId}&destination_place_id=${detailsRequest.placeId}&origin=${addressName}&destination=${place.name}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
 						  <i class="fas fa-map-marker-alt text-primary mr-2">
 
 						  </i>
