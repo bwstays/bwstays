@@ -55,10 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .filter(r => r.rating >= 4.0)
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5); // Limit to the top 5 results
-		alert(topResults.length +"  "+  r.rating);
+		alert(topResults.length );
 
 		 for (let i = 0; i < topResults.length; i++)
 			{
+				alert(results[i].rating );
  				let detailsRequest = {
 				  placeId: results[i].place_id,
 				  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
