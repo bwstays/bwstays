@@ -84,32 +84,34 @@ document.addEventListener('DOMContentLoaded', () => {
 				if (status === google.maps.places.PlacesServiceStatus.OK && place) {
 
 
-					if (place.geometry && place.geometry.location) {
+					if (place.geometry && place.geometry.location)
+					{
 							const latitude = place.geometry.location.lat();
-					        const longitude = place.geometry.location.lng();
-				    }
-					let ratingStars = getStarHTML(place.rating);
+							const longitude = place.geometry.location.lng();
 
-					let cuisineType = guessCuisineFromTypes(place.types);
+							let ratingStars = getStarHTML(place.rating);
+
+							let cuisineType = guessCuisineFromTypes(place.types);
 
 
-					let placeHTML = `
-					  <div class="mb-4 text-right">
-						<h6 class="text-white">${place.name}</h6>
-						<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${latitude},${longitude}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
-						  <i class="fas fa-map-marker-alt text-primary mr-2">
+							let placeHTML = `
+							  <div class="mb-4 text-right">
+								<h6 class="text-white">${place.name}</h6>
+								<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${latitude},${longitude}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+								  <i class="fas fa-map-marker-alt text-primary mr-2">
 
-						  </i>
-						  ${place.vicinity || 'Unknown location'}
-						</p>
-						</a>
-						<p class="text-white-50 small mb-1">
-						  <i class="fas fa-utensils text-primary mr-2"></i>
-						  ${cuisineType} <br> ${ratingStars}
-						</p>
-					  </div>
-					`;
-					foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
+								  </i>
+								  ${place.vicinity || 'Unknown location'}
+								</p>
+								</a>
+								<p class="text-white-50 small mb-1">
+								  <i class="fas fa-utensils text-primary mr-2"></i>
+								  ${cuisineType} <br> ${ratingStars}
+								</p>
+							  </div>
+							`;
+							foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
+				     }
 				  }
         		});
     	  }
