@@ -76,7 +76,6 @@ const cityCircle = new google.maps.Circle({
 		.slice(0, 5); // Limit to the top 5 results
 		*/
 		//alert("topResults.length:"+ topResults.length );
-
 		 for (let i = 0; i < topResults.length; i++)
 			{
 				//alert("rating:"+results[i].rating );
