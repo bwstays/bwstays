@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
       const topResults = results
-        .filter(r => r.rating >= 4.0)
+        .filter(r => r.rating >= 4.5)
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5); // Limit to the top 5 results
 
