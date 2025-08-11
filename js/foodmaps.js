@@ -25,20 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 geocoder = new google.maps.Geocoder();
 latlng = {lat: centerloca.lat, lng: centerloca.lng};
-alert(centerloca.lat)
-alert(centerloca.lng)
+
 geocoder.geocode( {'location': latlng}, (results, status) => {
-        if (status === "OK") {
-			alert(1)
+	if (status === google.maps.GeocoderStatus.OK)
+         {
+
             if (results[0]) {
 				alert(results[0])
                 // Access the formatted address or specific components
                 addressName = results[0].formatted_address;
+                alert("addressName"+addressName);
 			}
 		}
 	});
 
-alert("addressName"+addressName);
+
   var map1 = new google.maps.Map(document.getElementById('foodmap'), {
     zoom: 13,
     disableDefaultUI: true,
