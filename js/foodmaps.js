@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const request = {
     location: centerloca,
-    radius: 4000, // Search within a 5km radius
-    types: ['restaurant']
+    radius: 4000, // Search within a 4km radius
+    types: ['restaurant','hotel']
   };
 
   const foodPlacesContainer = document.getElementById('food-list');
@@ -56,12 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5); // Limit to the top 5 results
 
-      results.forEach((result) => {
-        let marker = new google.maps.Marker({
+      //topResults.forEach((result) => {
+      for (let i = 0; i < results.length; i++)
+			{
+      let marker = new google.maps.Marker({
           map: map1,
           position: result.geometry.location,
-          title: result.name
-         // icon: customIcon
+          title: result.name,
+          icon: customIcon
         });
 
         let detailsRequest = {
@@ -95,7 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
           infowindow.setContent(result.name);
           infowindow.open(map1, marker);
         });
-      });
+	};
+     // });
     }
   });
 });
