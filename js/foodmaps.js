@@ -64,12 +64,12 @@ const cityCircle = new google.maps.Circle({
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results)
     {
-		const filteredResults = results.filter(place =>
+		const topResults = results.filter(place =>
 		place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10
 		);
 
 		// Sort the filtered results by rating in descending order
-		const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
+		//const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
 		/*const topResults = results
 		.filter(r => r.rating >= 4.0)
 		.sort((a, b) => b.rating - a.rating)
