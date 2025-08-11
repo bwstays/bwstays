@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					let placeHTML = `
 					  <div class="mb-4 text-right">
 						<h6 class="text-white">${place.name}</h6>
-						<a href="https://www.google.com/maps/place/?q=place_id:${detailsRequest.placeId}" alt="location map"> <p class="text-white-50 small mb-1">
+						<a href="https://www.google.com/maps/place/?q=place_id:${detailsRequest.placeId}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
 						  <i class="fas fa-map-marker-alt text-primary mr-2">
 
 						  </i>
