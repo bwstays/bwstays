@@ -45,15 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const service = new google.maps.places.PlacesService(map1);
 
   const request = {
-    location: centerloca,
-    radius: 5000, // Search within a 5km radius
     types: ['restaurant','hotel'],
     min_rating: 3.5
 
   };
 
-
-
+const cityCircle = new google.maps.Circle({
+        strokeColor: "#FF0000", // Red outline
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#FF0000", // Red fill
+        fillOpacity: 0.35,
+        center: centerloca, // Same center as the map for this example
+        radius: 5000, // 5 kilometers in meters
+      });
+ cityCircle.setMap(map1);
   const foodPlacesContainer = document.getElementById('food-list');
 
   service.nearbySearch(request, (results, status) => {
@@ -88,12 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					{
 							const latitude = place.geometry.location.lat();
 							const longitude = place.geometry.location.lng();
-
 							let ratingStars = getStarHTML(place.rating);
-
 							let cuisineType = guessCuisineFromTypes(place.types);
-
-
 							let placeHTML = `
 							  <div class="mb-4 text-right">
 								<h6 class="text-white">${place.name}</h6>
