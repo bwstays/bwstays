@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
      mapId: "foodmapdata"
     });
 
- alert("addressName"+addressName);
+  //alert("addressName"+addressName);
   new google.maps.Marker({
     position: centerloca,
     map: map1,
@@ -63,23 +63,32 @@ document.addEventListener('DOMContentLoaded', () => {
     min_rating: 3.5
   };
 
+service.getDetails(request, function (place, status) {
+ if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+
+
+       alert("Place ID:" +place[0].place_id);
+
+    }
+
+});
   const foodPlacesContainer = document.getElementById('food-list');
 
   service.nearbySearch(request, (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results)
+    {
+		const filteredResults = results.filter(place =>
+		place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10
+		);
 
-	const filteredResults = results.filter(place =>
-	  place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10 // Example: min 10 reviews
-	);
+		// Sort the filtered results by rating in descending order
+		const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
 
-// Sort the filtered results by rating in descending order
-    const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
-
-      /*const topResults = results
-        .filter(r => r.rating >= 4.0)
-        .sort((a, b) => b.rating - a.rating)
-        .slice(0, 5); // Limit to the top 5 results
-        */
+		/*const topResults = results
+		.filter(r => r.rating >= 4.0)
+		.sort((a, b) => b.rating - a.rating)
+		.slice(0, 5); // Limit to the top 5 results
+		*/
 		//alert("topResults.length:"+ topResults.length );
 
 		 for (let i = 0; i < topResults.length; i++)
@@ -91,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				};
 
 				service.getDetails(detailsRequest, function (place, status) {
-				  if (status === google.maps.places.PlacesServiceStatus.OK && place) {
+				if (status === google.maps.places.PlacesServiceStatus.OK && place) {
 					let ratingStars = getStarHTML(place.rating);
 					let cuisineType = guessCuisineFromTypes(place.types);
 
@@ -114,22 +123,20 @@ document.addEventListener('DOMContentLoaded', () => {
 					foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 				  }
         		});
-
-			}
-      //topResults.forEach((result) => {
-      for (let i = 0; i < results.length; i++)
-      {
-		  let marker = new google.maps.Marker({
-			  map: map1,
-			  position: results[i].geometry.location,
-			  title: results[i].name
-			});
-
-			google.maps.event.addListener(marker, 'click', () => {
-			  infowindow.setContent(results[i].name);
-			  infowindow.open(map1, marker);
-			});
-	   };
+    	  }
+		  //topResults.forEach((result) => {
+		  for (let i = 0; i < results.length; i++)
+		  {
+			  let marker = new google.maps.Marker({
+				  map: map1,
+				  position: results[i].geometry.location,
+				  title: results[i].name
+				});
+				google.maps.event.addListener(marker, 'click', () => {
+				  infowindow.setContent(results[i].name);
+				  infowindow.open(map1, marker);
+				});
+		   };
      // });
     }
   });
