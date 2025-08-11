@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
- const addressName ;
+ var addressName ="";
 geocoder.geocode({ location: centerloca }, (results, status) => {
         if (status === "OK") {
             if (results[0]) {
@@ -31,6 +31,8 @@ geocoder.geocode({ location: centerloca }, (results, status) => {
 		}
 	}
 });
+
+alert("addressName"+addressName);
   var map1 = new google.maps.Map(document.getElementById('foodmap'), {
     zoom: 13,
     disableDefaultUI: true,
@@ -75,11 +77,11 @@ geocoder.geocode({ location: centerloca }, (results, status) => {
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5); // Limit to the top 5 results
         */
-		alert("topResults.length:"+ topResults.length );
+		//alert("topResults.length:"+ topResults.length );
 
 		 for (let i = 0; i < topResults.length; i++)
 			{
-				alert("rating:"+results[i].rating );
+				//alert("rating:"+results[i].rating );
  				let detailsRequest = {
 				  placeId: results[i].place_id,
 				  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
