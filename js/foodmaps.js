@@ -24,10 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
  var addressName ="";
 
 geocoder = new google.maps.Geocoder();
+alert(centerloca.lat)
 geocoder.geocode({
 	location:  { lat: centerloca.lat, lng:centerloca.lng} }, (results, status) => {
         if (status === "OK") {
+			alert(1)
             if (results[0]) {
+				alert(results[0])
                 // Access the formatted address or specific components
                 addressName = results[0].formatted_address;
 			}
