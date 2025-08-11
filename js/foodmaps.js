@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     min_rating: 3.5
 
   };
-
 const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
         strokeOpacity: 0.8,
