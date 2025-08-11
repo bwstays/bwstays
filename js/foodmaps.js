@@ -30,8 +30,7 @@ geocoder.geocode({
                 addressName = results[0].formatted_address;
 			}
 		}
-	}
-});
+	});
 
 alert("addressName"+addressName);
   var map1 = new google.maps.Map(document.getElementById('foodmap'), {
