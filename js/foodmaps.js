@@ -32,10 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Access the formatted address or specific components
                 addressName = results[0].formatted_address;
-                originPlaceId = results[0].place_id;
-
 
 			}
+ 			if (results[1]) {
+       			 originPlaceId = results[1].place_id;
+    		}
 		}
 	});
     var map1 = new google.maps.Map(document.getElementById('foodmap'), {
