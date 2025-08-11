@@ -44,17 +44,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const request = {
     location: centerloca,
     radius: 5000, // Search within a 4km radius
-    types: ['restaurant','hotel']
+    types: ['restaurant','hotel'],
+    min_rating: 3.5
   };
 
   const foodPlacesContainer = document.getElementById('food-list');
 
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-      const topResults = results
+
+	const filteredResults = results.filter(place =>
+	  place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10 // Example: min 50 reviews
+	);
+
+// Sort the filtered results by rating in descending order
+    const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
+
+      /*const topResults = results
         .filter(r => r.rating >= 4.0)
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5); // Limit to the top 5 results
+        */
 		alert(topResults.length );
 
 		 for (let i = 0; i < topResults.length; i++)
