@@ -21,15 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
- var addressName ="";
-
-geocoder = new google.maps.Geocoder();
-latlng = {lat: centerloca.lat, lng: centerloca.lng};
-
-geocoder.geocode( {'location': latlng}, (results, status) => {
+	var addressName ="";
+	geocoder = new google.maps.Geocoder();
+	latlng = {lat: centerloca.lat, lng: centerloca.lng};
+	geocoder.geocode( {'location': latlng}, (results, status) => {
 	if (status === google.maps.GeocoderStatus.OK)
          {
-
             if (results[0]) {
 				alert(results[0])
                 // Access the formatted address or specific components
@@ -38,9 +35,7 @@ geocoder.geocode( {'location': latlng}, (results, status) => {
 			}
 		}
 	});
-
-
-  var map1 = new google.maps.Map(document.getElementById('foodmap'), {
+    var map1 = new google.maps.Map(document.getElementById('foodmap'), {
     zoom: 13,
     disableDefaultUI: true,
     zoomControl: true,
