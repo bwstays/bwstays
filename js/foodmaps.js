@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				alert(results[0])
                 // Access the formatted address or specific components
                 addressName = results[0].formatted_address;
-                alert("addressName"+addressName);
+
 			}
 		}
 	});
@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
      mapId: "foodmapdata"
     });
 
+ alert("addressName"+addressName);
   new google.maps.Marker({
     position: centerloca,
     map: map1,
