@@ -102,12 +102,14 @@ document.addEventListener('DOMContentLoaded', () => {
 					let ratingStars = getStarHTML(place.rating);
 					let cuisineType = guessCuisineFromTypes(place.types);
 					let dlng=place.geometry.location.lng();
-					let dlat=place.geometry.location.lat();
+
+			const latitude = place.geometry.location.lat();
+			const longitude = place.geometry.location.lng();
 
 					let placeHTML = `
 					  <div class="mb-4 text-right">
 						<h6 class="text-white">${place.name}</h6>
-						<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${dlat},${dlng}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+						<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${latitude},${longitude}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
 						  <i class="fas fa-map-marker-alt text-primary mr-2">
 
 						  </i>
