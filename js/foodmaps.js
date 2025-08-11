@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .filter(r => r.rating >= 4.0)
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5); // Limit to the top 5 results
-//alert(topResults.length);
+alert(topResults.length +"  "+  r.rating);
 
 		 for (let i = 0; i < topResults.length; i++)
 			{
