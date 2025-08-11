@@ -94,11 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
 				//alert("rating:"+results[i].rating );
  				let detailsRequest = {
 				  placeId: results[i].place_id,
-				  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
+				  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total','geometry']
 				};
 
 				service.getDetails(detailsRequest, function (place, status) {
 				if (status === google.maps.places.PlacesServiceStatus.OK && place) {
+					if (place.geometry && place.geometry.location)
+						 alert(1)
+					else
+					alert (2)
 					let ratingStars = getStarHTML(place.rating);
 					let cuisineType = guessCuisineFromTypes(place.types);
 					let dlng=place.geometry.location.lng();
