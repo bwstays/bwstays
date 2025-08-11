@@ -21,24 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
-	var addressName ="";
-	var originPlaceId ="";
-	geocoder = new google.maps.Geocoder();
-	latlng = {lat: centerloca.lat, lng: centerloca.lng};
-	geocoder.geocode( {'location': latlng}, (results, status) => {
-	if (status === google.maps.GeocoderStatus.OK)
-         {
-            if (results[0]) {
 
-                // Access the formatted address or specific components
-                addressName = results[0].formatted_address;
 
-			}
- 			if (results[1]) {
-       			 originPlaceId = results[1].place_id;
-    		}
-		}
-	});
     var map1 = new google.maps.Map(document.getElementById('foodmap'), {
     zoom: 13,
     disableDefaultUI: true,
@@ -99,15 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				service.getDetails(detailsRequest, function (place, status) {
 				if (status === google.maps.places.PlacesServiceStatus.OK && place) {
-					 alert(0)
-					if (place.geometry && place.geometry.location)
-						 alert(1)
-					else
-						alert (2)
+
+
+					if (place.geometry && place.geometry.location) {
+							const latitude = place.geometry.location.lat();
+					        const longitude = place.geometry.location.lng();
+				    }
 					let ratingStars = getStarHTML(place.rating);
+
 					let cuisineType = guessCuisineFromTypes(place.types);
- 			const latitude = place.geometry.location.lat();
-			const longitude = place.geometry.location.lng();
+
 
 					let placeHTML = `
 					  <div class="mb-4 text-right">
