@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
  var addressName ="";
- geocoder = new google.maps.Geocoder();
+
+geocoder = new google.maps.Geocoder();
 geocoder.geocode({
 	location:  { lat: centerloca.lat, lng:centerloca.lng} }, (results, status) => {
         if (status === "OK") {
