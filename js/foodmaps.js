@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const request = {
     location: centerloca,
-    radius: 5000, // Search within a 4km radius
+    radius: 5000, // Search within a 5km radius
     types: ['restaurant','hotel'],
     min_rating: 3.5
   };
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
 
 	const filteredResults = results.filter(place =>
-	  place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10 // Example: min 50 reviews
+	  place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10 // Example: min 10 reviews
 	);
 
 // Sort the filtered results by rating in descending order
