@@ -21,6 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
+ const addressName ;
+geocoder.geocode({ location: centerloca }, (results, status) => {
+        if (status === "OK") {
+            if (results[0]) {
+                // Access the formatted address or specific components
+                addressName = results[0].formatted_address;
+			}
+		}
+	}
+});
   var map1 = new google.maps.Map(document.getElementById('foodmap'), {
     zoom: 13,
     disableDefaultUI: true,
@@ -83,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					let placeHTML = `
 					  <div class="mb-4 text-right">
 						<h6 class="text-white">${place.name}</h6>
-						<a href="https://www.google.com/maps/dir/?api=1&origin_place_id=${results[i].place_id}&destination_place_id=${detailsRequest.placeId}&origin=${place.name}&destination=${detailsRequest.name}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+						<a href="https://www.google.com/maps/dir/?api=1&origin_place_id=${results[i].place_id}&destination_place_id=${detailsRequest.placeId}&origin=${addressName}&destination=${detailsRequest.name}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
 						  <i class="fas fa-map-marker-alt text-primary mr-2">
 
 						  </i>
