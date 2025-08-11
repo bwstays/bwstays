@@ -56,47 +56,50 @@ document.addEventListener('DOMContentLoaded', () => {
         .sort((a, b) => b.rating - a.rating)
         .slice(0, 5); // Limit to the top 5 results
 
+		 for (let i = 0; i < topResults.length; i++)
+			{
+				let detailsRequest = {
+				  placeId: results[i].place_id,
+				  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
+				};
+
+				service.getDetails(detailsRequest, function (place, status) {
+				  if (status === google.maps.places.PlacesServiceStatus.OK && place) {
+					let ratingStars = getStarHTML(place.rating);
+					let cuisineType = guessCuisineFromTypes(place.types);
+
+					let placeHTML = `
+					  <div class="mb-4 text-right">
+						<h6 class="text-white">${place.name}</h6>
+						<p class="text-white-50 small mb-1">
+						  <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+						  ${place.vicinity || 'Unknown location'}
+						</p>
+						<p class="text-white-50 small mb-1">
+						  <i class="fas fa-utensils text-primary mr-2"></i>
+						  ${cuisineType} <br> ${ratingStars}
+						</p>
+					  </div>
+					`;
+					foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
+				  }
+        		});
+
+			}
       //topResults.forEach((result) => {
       for (let i = 0; i < results.length; i++)
-			{
-      let marker = new google.maps.Marker({
-          map: map1,
-          position: results[i].geometry.location,
-          title: results[i].name
-        });
+      {
+		  let marker = new google.maps.Marker({
+			  map: map1,
+			  position: results[i].geometry.location,
+			  title: results[i].name
+			});
 
-        let detailsRequest = {
-          placeId: results[i].place_id,
-          fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
-        };
-
-        service.getDetails(detailsRequest, function (place, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK && place) {
-            let ratingStars = getStarHTML(place.rating);
-            let cuisineType = guessCuisineFromTypes(place.types);
-
-            let placeHTML = `
-              <div class="mb-4 text-right">
-                <h6 class="text-white">${place.name}</h6>
-                <p class="text-white-50 small mb-1">
-                  <i class="fas fa-map-marker-alt text-primary mr-2"></i>
-                  ${place.vicinity || 'Unknown location'}
-                </p>
-                <p class="text-white-50 small mb-1">
-                  <i class="fas fa-utensils text-primary mr-2"></i>
-                  ${cuisineType} <br> ${ratingStars}
-                </p>
-              </div>
-            `;
-            foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
-          }
-        });
-
-        google.maps.event.addListener(marker, 'click', () => {
-          infowindow.setContent(results[i].name);
-          infowindow.open(map1, marker);
-        });
-	};
+			google.maps.event.addListener(marker, 'click', () => {
+			  infowindow.setContent(results[i].name);
+			  infowindow.open(map1, marker);
+			});
+	   };
      // });
     }
   });
