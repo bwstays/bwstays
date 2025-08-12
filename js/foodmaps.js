@@ -21,9 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
+ var addressName ="";
 
+geocoder = new google.maps.Geocoder();
+alert(centerloca.lat)
+geocoder.geocode({
+	location:  { lat: centerloca.lat, lng:centerloca.lng} }, (results, status) => {
+        if (status === "OK") {
+			alert(1)
+            if (results[0]) {
+				alert(results[0])
+                // Access the formatted address or specific components
+                addressName = results[0].formatted_address;
+			}
+		}
+	});
 
-    var map1 = new google.maps.Map(document.getElementById('foodmap'), {
+alert("addressName"+addressName);
+  var map1 = new google.maps.Map(document.getElementById('foodmap'), {
     zoom: 13,
     disableDefaultUI: true,
     zoomControl: true,
@@ -32,99 +47,92 @@ document.addEventListener('DOMContentLoaded', () => {
     center: centerloca ,
      mapId: "foodmapdata"
     });
-  //alert("addressName"+addressName);
+
   new google.maps.Marker({
     position: centerloca,
     map: map1,
     icon: mainLocationIcon,
     title: "Food and Dine in Wayanad Location"
   });
+
   var infowindow = new google.maps.InfoWindow();
   const service = new google.maps.places.PlacesService(map1);
+
   const request = {
+    location: centerloca,
+    radius: 5000, // Search within a 5km radius
     types: ['restaurant','hotel'],
     min_rating: 3.5
   };
-/*const cityCircle = new google.maps.Circle({
-        strokeColor: "#FF0000", // Red outline
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: "#FF0000", // Red fill
-        fillOpacity: 0.35,
-        center: centerloca, // Same center as the map for this example
-        radius: 5000 // 5 kilometers in meters
-      });
-cityCircle.setMap(map1);
-*/
-  const foodPlacesContainer = document.getElementById('food-list');
-  service.nearbySearch(request, (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK && results)
-    {
-		const filteredResults = results.filter(place =>
-		place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10
-		);
 
-		// Sort the filtered results by rating in descending order
-		const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
-	    /*const topResults = results
-		.filter(r => r.rating >= 4.0)
-		.sort((a, b) => b.rating - a.rating)
-		.slice(0, 5); // Limit to the top 5 results
-		*/
+  const foodPlacesContainer = document.getElementById('food-list');
+
+  service.nearbySearch(request, (results, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+
+	const filteredResults = results.filter(place =>
+	  place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10 // Example: min 10 reviews
+	);
+
+// Sort the filtered results by rating in descending order
+    const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
+
+      /*const topResults = results
+        .filter(r => r.rating >= 4.0)
+        .sort((a, b) => b.rating - a.rating)
+        .slice(0, 5); // Limit to the top 5 results
+        */
 		//alert("topResults.length:"+ topResults.length );
+
 		 for (let i = 0; i < topResults.length; i++)
 			{
 				//alert("rating:"+results[i].rating );
  				let detailsRequest = {
 				  placeId: results[i].place_id,
-		//		  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total','geometry.location','geometry']
-		 		  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total' ]
- 				};
+				  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
+				};
 
 				service.getDetails(detailsRequest, function (place, status) {
-				if (status === google.maps.places.PlacesServiceStatus.OK && place) {
+				  if (status === google.maps.places.PlacesServiceStatus.OK && place) {
+					let ratingStars = getStarHTML(place.rating);
+					let cuisineType = guessCuisineFromTypes(place.types);
 
-					//if (place.geometry && place.geometry.location)
-					{
-						//	const latitude = place.geometry.location.lat();
-						//	const longitude = place.geometry.location.lng();
-							let ratingStars = getStarHTML(place.rating);
-							let cuisineType = guessCuisineFromTypes(place.types);
-							let placeHTML = `
-							  <div class="mb-4 text-right">
-								<h6 class="text-white">${place.name}</h6>
-								<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${latitude},${longitude}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
-								  <i class="fas fa-map-marker-alt text-primary mr-2">
+					let placeHTML = `
+					  <div class="mb-4 text-right">
+						<h6 class="text-white">${place.name}</h6>
+						<a href="https://www.google.com/maps/dir/?api=1&origin_place_id=${results[i].place_id}&destination_place_id=${detailsRequest.placeId}&origin=${addressName}&destination=${place.name}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+						  <i class="fas fa-map-marker-alt text-primary mr-2">
 
-								  </i>
-								  ${place.vicinity || 'Unknown location'}
-								</p>
-								</a>
-								<p class="text-white-50 small mb-1">
-								  <i class="fas fa-utensils text-primary mr-2"></i>
-								  ${cuisineType} <br> ${ratingStars}
-								</p>
-							  </div>
-							`;
-							foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
-				     }
+						  </i>
+						  ${place.vicinity || 'Unknown location'}
+						</p>
+						</a>
+						<p class="text-white-50 small mb-1">
+						  <i class="fas fa-utensils text-primary mr-2"></i>
+						  ${cuisineType} <br> ${ratingStars}
+						</p>
+					  </div>
+					`;
+					foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 				  }
         		});
-    	  }
-		  // all food location
-		  for (let i = 0; i < results.length; i++)
-		  {
-			  let marker = new google.maps.Marker({
-				  map: map1,
-				  position: results[i].geometry.location,
-				  title: results[i].name
-				});
-				google.maps.event.addListener(marker, 'click', () => {
-				  infowindow.setContent(results[i].name);
-				  infowindow.open(map1, marker);
-				});
-		   };
 
+			}
+      //topResults.forEach((result) => {
+      for (let i = 0; i < results.length; i++)
+      {
+		  let marker = new google.maps.Marker({
+			  map: map1,
+			  position: results[i].geometry.location,
+			  title: results[i].name
+			});
+
+			google.maps.event.addListener(marker, 'click', () => {
+			  infowindow.setContent(results[i].name);
+			  infowindow.open(map1, marker);
+			});
+	   };
+     // });
     }
   });
 });
