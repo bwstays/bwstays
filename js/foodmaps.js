@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
-
   var map1 = new google.maps.Map(document.getElementById('foodmap'), {
     zoom: 13,
     disableDefaultUI: true,
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         center: centerloca, // Same center as the map for this example
         radius: 5000 // 5 kilometers in meters
       });
-cityCircle.setMap(map1);
+  cityCircle.setMap(map1);
   const foodPlacesContainer = document.getElementById('food-list');
 
   service.nearbySearch(request, (results, status) => {
