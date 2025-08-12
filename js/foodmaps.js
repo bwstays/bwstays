@@ -64,17 +64,18 @@ const cityCircle = new google.maps.Circle({
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results)
     {
-		const topResults = results.filter(place =>
+		const filteredResults = results.filter(place =>
 		place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10
 		);
 
 		// Sort the filtered results by rating in descending order
-		//const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
-		/*const topResults = results
+		const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
+	    /*const topResults = results
 		.filter(r => r.rating >= 4.0)
 		.sort((a, b) => b.rating - a.rating)
 		.slice(0, 5); // Limit to the top 5 results
 		*/
+
 		//alert("topResults.length:"+ topResults.length );
 		 for (let i = 0; i < topResults.length; i++)
 			{
@@ -115,7 +116,7 @@ const cityCircle = new google.maps.Circle({
 				  }
         		});
     	  }
-		  //topResults.forEach((result) => {
+		  // all food location
 		  for (let i = 0; i < results.length; i++)
 		  {
 			  let marker = new google.maps.Marker({
@@ -128,7 +129,7 @@ const cityCircle = new google.maps.Circle({
 				  infowindow.open(map1, marker);
 				});
 		   };
-     // });
+
     }
   });
 });
