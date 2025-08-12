@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
 cityCircle.setMap(map1);
 */
   const foodPlacesContainer = document.getElementById('food-list');
-
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results)
     {
@@ -72,7 +71,6 @@ cityCircle.setMap(map1);
 		.sort((a, b) => b.rating - a.rating)
 		.slice(0, 5); // Limit to the top 5 results
 		*/
-
 		//alert("topResults.length:"+ topResults.length );
 		 for (let i = 0; i < topResults.length; i++)
 			{
