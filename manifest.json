@@ -12,15 +12,10 @@
 	"icons": [
 		{
 			"src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
-			"type": "image/avif",
-			"sizes": "192x192"
-		},
-        {
-            "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
-            "type": "image/png",
-            "sizes": "512x512",
+			"type": "image/png",
+			"sizes": "41x41",
 			"purpose": "maskable"
-        }
+		}
 	],
     "screenshots" : [
                   {
