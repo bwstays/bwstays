@@ -20,14 +20,14 @@
     "screenshots" : [
                   {
                     "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
-                    "sizes": "540x720",
+                    "sizes": "41x41",
                     "type": "image/png",
                     "form_factor": "narrow",
                     "label": "Service Villa "
                   },
                   {
                     "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
-                    "sizes": "1280x720",
+                    "sizes": "41x41",
                     "type": "image/png",
                     "form_factor": "wide",
                     "label": "The best Service Villa."
