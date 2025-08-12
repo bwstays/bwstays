@@ -54,7 +54,6 @@ const CACHE_BLACKLIST = [
     //},
 ];
 
-
 const SUPPORTED_METHODS = [
     'GET',
 ];
@@ -62,9 +61,8 @@ const SUPPORTED_METHODS = [
 /**
 * To cache local url
 */
-
 function    canCache(url) {
-        if (url.startsWith("http://localhost")) {
+        if (url.startsWith("https://localhost")) {
             return false;
         }
         const result = url.toString().startsWith(this.host);
