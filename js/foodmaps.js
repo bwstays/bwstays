@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     min_rating: 3.5
 
   };
-const cityCircle = new google.maps.Circle({
+/*const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
         strokeOpacity: 0.8,
         strokeWeight: 2,
@@ -58,7 +58,8 @@ const cityCircle = new google.maps.Circle({
         center: centerloca, // Same center as the map for this example
         radius: 5000 // 5 kilometers in meters
       });
- cityCircle.setMap(map1);
+cityCircle.setMap(map1);
+*/
   const foodPlacesContainer = document.getElementById('food-list');
 
   service.nearbySearch(request, (results, status) => {
