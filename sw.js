@@ -2,7 +2,7 @@ const CACHE_VERSION = 1;
 const GHPATH = 'https://www.bwstays.com/';
 const Version = new URL(location).searchParams.get("version");
 
-const host = "${self.location.protocol}//${self.location.host}";
+const host = `${self.location.protocol}//${self.location.host}`;
 console.info(`Host: ${host}`);
 
 const ServerApiPath = "https://cloudflare.com/api";
