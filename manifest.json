@@ -2,21 +2,42 @@
 	"name": "Black and White Stays",
 	"short_name": "BWStays",
 	"description": "BWStays Villa Stays ",
-	"start_url": "index.html",
 	"display": "standalone",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "orientation": "portrait",
+    "start_url": "/",
+    "id": "/index.html",
+    "scope": "https:\/\/www.bwstays.com\/"
 	"icons": [
 		{
-			"src": "./assets/img/icons/logo.avif",
+			"src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
 			"type": "image/avif",
 			"sizes": "192x192"
 		},
         {
-            "src": "./assets/img/icons/bw.png",
+            "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
             "type": "image/png",
             "sizes": "512x512",
 			"purpose": "maskable"
         }
 	],
+    "screenshots" : [
+                  {
+                    "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
+                    "sizes": "540x720",
+                    "type": "image/png",
+                    "form_factor": "narrow",
+                    "label": "Service Villa "
+                  },
+                  {
+                    "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
+                    "sizes": "1280x720",
+                    "type": "image/png",
+                    "form_factor": "wide",
+                    "label": "The best Service Villa."
+                  }
+    ],
 	"author": {
 		"name": "BWStays"
 	}
