@@ -93,11 +93,6 @@ function getLocationIdByName(name) {
 function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
-    //alert("distances"+distances)
-    // alert("maxDistance"+maxDistance);
-    // alert("locationId"+locationId);
-
-
 
     for (let i = 1; i <= Object.keys(locations.names).length; i++) {
 
@@ -111,11 +106,6 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
         }
     }
 
-    /*for (let i = 0; i <nearbyPlaces.length; i++)
-    {
-          alert(nearbyPlaces[i].distance + " " + i);
-    }
-      */
 
     return nearbyPlaces.sort((a, b) => a.distance - b.distance);
 }
@@ -144,7 +134,6 @@ function renderNearbyPlaces() {
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
 
-//    console.log('Nearby places:', nearbyPlaces);
 
     if (nearbyPlaces.length === 0) {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
