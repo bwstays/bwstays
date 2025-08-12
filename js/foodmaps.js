@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         radius: 5000 // 5 kilometers in meters
       });
 cityCircle.setMap(map1);
-
   const foodPlacesContainer = document.getElementById('food-list');
 
   service.nearbySearch(request, (results, status) => {
