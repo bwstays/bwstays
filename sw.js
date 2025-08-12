@@ -46,10 +46,14 @@ const MAX_TTL = {
 };
 
 const CACHE_BLACKLIST = [
-    //(str) => {
-    //    return !str.startsWith('http://localhost') && !str.startsWith('https://gohugohq.com');
+ 	    // str = URL of the resource
+	    // apply this rule when you do not want to cache external files
+
+     //(str) => {
+     //    return !str.startsWith('http://localhost') && !str.startsWith('https://yourwebsite.com');
     //},
 ];
+
 
 const SUPPORTED_METHODS = [
     'GET',
