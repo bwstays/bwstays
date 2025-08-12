@@ -7,29 +7,28 @@ console.info(`Host: ${host}`);
 
 const ServerApiPath = "https://cloudflare.com/api";
 const BASE_CACHE_FILES = [
-    '${GHPATH}/style.css',
-    '${GHPATH}/script.js',
-    '${GHPATH}/search.json',
-    '${GHPATH}/manifest.json',
-    '${GHPATH}/favicon.png',
+    './css/style.css',
+    './js/script.js',
+    './manifest.json',
+    './favicon.png',
 ];
 
 alert(BASE_CACHE_FILES[0]);
 
 const OFFLINE_CACHE_FILES = [
-    '${GHPATH}/style.css',
-    '${GHPATH}/script.js',
-    '${GHPATH}/offline/index.html',
+    './css/style.css',
+    './js//script.js',
+    './offline/index.html',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    '${GHPATH}/style.css',
-    '${GHPATH}/script.js',
-    '${GHPATH}/404.html',
+    './css/style.css',
+    './js/script.js',
+    './404.html',
 ];
 
-const OFFLINE_PAGE = '${GHPATH}/offline/index.html';
-const NOT_FOUND_PAGE = '${GHPATH}/404.html';
+const OFFLINE_PAGE = './offline/index.html';
+const NOT_FOUND_PAGE = './404.html';
 
 const CACHE_VERSIONS = {
     assets: 'assets-v' + CACHE_VERSION,
