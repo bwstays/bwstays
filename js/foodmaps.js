@@ -61,12 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Sort the filtered results by rating in descending order
     const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
 
-      /*const topResults = results
-        .filter(r => r.rating >= 4.0)
-        .sort((a, b) => b.rating - a.rating)
-        .slice(0, 5); // Limit to the top 5 results
-        */
-		//alert("topResults.length:"+ topResults.length );
 
 		 for (let i = 0; i < topResults.length; i++)
 			{
