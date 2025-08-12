@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const request = {
     location: centerloca,
-    radius: 5000, // Search within a 5km radius
+    radius: 4000, // Search within a 4km radius
     types: ['restaurant','hotel'],
     min_rating: 3.5
   };
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fillColor: "#FF0000", // Red fill
         fillOpacity: 0.35,
         center: centerloca, // Same center as the map for this example
-        radius: 5000 // 5 kilometers in meters
+        radius: 4000 // 4 kilometers in meters
       });
   cityCircle.setMap(map1);
   const foodPlacesContainer = document.getElementById('food-list');
@@ -91,13 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
 					let placeHTML = `
 					  <div class="mb-4 text-right">
 						<h6 class="text-white">${place.name}</h6>
-						<a href="https://www.google.com/maps/dir/?api=1&origin_place_id=${results[i].place_id}&destination_place_id=${detailsRequest.placeId}&origin=&destination=${place.name}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
-						  <i class="fas fa-map-marker-alt text-primary mr-2">
+						 								<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${latitude},${longitude}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+						 								  <i class="fas fa-map-marker-alt text-primary mr-2">
 
-						  </i>
-						  ${place.vicinity || 'Unknown location'}
-						</p>
-						</a>
+						 								  </i>
+						 								  ${place.vicinity || 'Unknown location'}
+						 								</p>
+								</a>
 						<p class="text-white-50 small mb-1">
 						  <i class="fas fa-utensils text-primary mr-2"></i>
 						  ${cuisineType} <br> ${ratingStars}
