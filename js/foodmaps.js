@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				  placeId: results[i].place_id,
 				  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total']
 				};
-
 				service.getDetails(detailsRequest, function (place, status) {
 				  if (status === google.maps.places.PlacesServiceStatus.OK && place) {
 					let ratingStars = getStarHTML(place.rating);
