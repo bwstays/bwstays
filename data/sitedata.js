@@ -18,6 +18,9 @@ const siteData = {
       rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "Immerse yourself in aromatic spice plantations while staying in our cozy mountain cottage. Perfect for nature lovers and those interested in learning about Kerala's famous spices. Includes guided plantation walks and spice processing demonstrations.",
+amenities: ["Mountain Views", "Spice Tours", "Nature Walks", "Organic Kitchen"],
+tags: ["tea plantation", "wayanad", "mountain", "cottage", "nature", "spice processing", "organic"],
       type: "Plantations",
       knowmore: iconURLPrefix+"bw-rippon-tea-estate-plantation-wayanad.html",
     },
@@ -37,6 +40,11 @@ const siteData = {
 		fee:"0",
 		latlong: "11.758218103566884, 75.99955554569163",
 		map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
+content: "Immerse yourself in aromatic spice plantations while staying in our cozy mountain cottage. Perfect for nature lovers and those interested in learning about Kerala's famous spices. Includes guided plantation walks and spice processing demonstrations.",
+amenities: ["Mountain Views", "Spice Tours", "Nature Walks", "Organic Kitchen"],
+tags: ["coffee plantation", "wayanad", "mountain", "cottage", "nature", "spice processing", "organic"],
+
+
       type: "Plantations",
       knowmore: iconURLPrefix+"bw-coffee-plantation-plantation-wayanad.html",
 
@@ -61,6 +69,10 @@ const siteData = {
       fee:"0",
       latlong: "11.74131093962623, 75.88750680755587",
       map: "https://maps.app.goo.gl/SvSDuShnpWmcceyg8",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],
+
       type: "Water Falls",
       knowmore: iconURLPrefix+"bw-meenmutty-waterfall-wayanad.html",
 
@@ -81,7 +93,9 @@ const siteData = {
       fee:"0",
       latlong: "11.495418956600835, 76.16077748465527",
       map: "https://maps.app.goo.gl/WTkrrH73W95w23Xm8",
-      type: "Water Falls",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],      type: "Water Falls",
       knowmore: iconURLPrefix+"bw-sentinel-rock-waterfall-wayanad.html",
 
     },
@@ -101,7 +115,9 @@ const siteData = {
       fee:"0",
       latlong: "11.511772142854758, 76.16379662884363",
       map: "https://maps.app.goo.gl/qr1RZdxc5WMa5j71A",
-      type: "Water Falls",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],      type: "Water Falls",
       knowmore: iconURLPrefix+"bw-soochipara-waterfall-wayanad.html",
 
     },
@@ -121,7 +137,9 @@ const siteData = {
       fee:"0",
       latlong: "11.766189025300932, 76.25203494478279",
       map: "https://maps.app.goo.gl/Xi6e2aPFEjWFkHBi9",
-      type: "Water Falls",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],      type: "Water Falls",
       knowmore: iconURLPrefix+"bw-cheeyambam-waterfall-wayanad.html",
 
     },
@@ -141,7 +159,9 @@ const siteData = {
      fee:"0",
       latlong: "11.524171332429411, 76.1526252269829",
       map: "https://maps.app.goo.gl/UkTgsP4fZoRngCyBA",
-      type: "Water Falls",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],      type: "Water Falls",
       knowmore: iconURLPrefix+"bw-kanthanpara-waterfall-wayanad.html",
 
     }
@@ -162,7 +182,10 @@ const siteData = {
       fee:"0",
        latlong: "11.524617527477, 76.15260365204358",
       map: "https://maps.app.goo.gl/fzrjabJfK5GG7CgD9",
-        type: "Water Falls",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],
+type: "Water Falls",
        knowmore: iconURLPrefix+"bw-kappikalam-waterfall-wayanad.html",
 
     }
@@ -184,6 +207,9 @@ const siteData = {
       fee:"0",
        latlong: "11.43840307285013, 76.04597666931055",
       map: "https://maps.app.goo.gl/BLpuvUbHqgNC54up8",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],
         type: "Water Falls",
        knowmore: iconURLPrefix+"bw-arripara-waterfall-wayanad.html",
 
@@ -204,6 +230,9 @@ const siteData = {
       fee:"0",
        latlong: "11.967284462093113, 75.98393572809631",
       map: "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],
         type: "Water Falls",
        knowmore: iconURLPrefix+"bw-Irrupu-waterfall-wayanad.html",
 
@@ -225,6 +254,9 @@ const siteData = {
       fee:"0",
        latlong: "11.765721623585334, 76.25204562883619",
       map: "https://maps.app.goo.gl/z4pftdA2hc1Ea7Ny6",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],
         type: "Water Falls",
        knowmore: iconURLPrefix+"bw-chetalayam-waterfall-wayanad.html",
 
@@ -246,6 +278,9 @@ const siteData = {
       rating:"4.4",
       hrs:"2",
       fee:"0",
+content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
+tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],
        type: "Water Falls",
       knowmore: iconURLPrefix+"bw-thusharagiri-waterfall-wayanad.html",
 
@@ -271,6 +306,11 @@ const siteData = {
 		fee:"0",
 		latlong: "11.600747990313033, 76.0148553711638",
 		map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
+
+content: "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
+amenities: ["WiFi", "Villa Architecture", "museums","Central Location", "Guided Tours"],
+tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "jain temple", "kerala dishes"],
+
 		type: "Museums & Crafts",
 		knowmore: iconURLPrefix+"bw-tea-museum-wayanad.html",
 
@@ -291,6 +331,12 @@ const siteData = {
       rating:"4.5",
       hrs:"2",
       fee:"0",
+
+content: "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
+amenities: ["WiFi", "Villa Architecture", "museums","Central Location", "Guided Tours"],
+tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "jain temple", "kerala dishes"],
+
+
        type: "Museums & Crafts",
       knowmore: iconURLPrefix+"bw-honey-museum-wayanad.html",
 
@@ -312,6 +358,11 @@ const siteData = {
       fee:"0",
       latlong: "11.739158003776806, 76.21355871892317",
       map: "https://maps.app.goo.gl/1E9kADRsBfxLQfs69",
+
+content: "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
+amenities: ["WiFi", "Villa Architecture", "museums","Central Location", "Guided Tours"],
+tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "jain temple", "kerala dishes"],
+
        type: "Museums & Crafts",
       knowmore: iconURLPrefix+"bw-folklore-museum-wayanad.html",
 
@@ -335,6 +386,11 @@ const siteData = {
       fee:"0",
       latlong: "11.62062222750829, 76.1738547832114",
       map: "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-karapuzha-dam-romantic-wayanad.html",
 
@@ -356,6 +412,12 @@ const siteData = {
       fee:"0",
        latlong: "11.649866740589097, 75.9810562735357",
       map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
+
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
+
         type: "Water Falls",
        knowmore: iconURLPrefix+"bw-karland-lake-romantic-wayanad.html",
 
@@ -377,6 +439,11 @@ const siteData = {
       fee:"0",
        transport: "Public",
      rating:"4.1",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-pookode-lake-romantic-wayanad.html",
 
@@ -398,6 +465,10 @@ const siteData = {
       fee:"10 INR",
        transport: "Public",
      rating:"4.3",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-banasurasagar-dam-romantic-wayanad.html",
 
@@ -419,6 +490,10 @@ const siteData = {
      rating:"4.3",
       hrs:"2",
       fee:"0",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-mailadippara-romantic-wayanad.html",
 
@@ -440,6 +515,10 @@ const siteData = {
       fee:"0",
        transport: "Public",
      rating:"4.3",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-banasura-sagar-hills-romantic-wayanad.html",
 
@@ -461,6 +540,10 @@ const siteData = {
       fee:"0",
        transport: "Public",
      rating:"4.5",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-manjappara-romantic-wayanad.html",
 
@@ -482,6 +565,10 @@ const siteData = {
       fee:"0",
        transport: "Public",
      rating:"3.9",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-phanthom-rock-romantic-wayanad.html",
 
@@ -503,6 +590,10 @@ const siteData = {
       fee:"0",
        transport: "Public",
      rating:"4.5",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-kurumbalakotta-romantic-wayanad.html",
 
@@ -524,6 +615,10 @@ const siteData = {
       fee:"0",
        transport: "Public",
      rating:"4.6",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-attamala-view-point-romantic-wayanad.html",
 
@@ -545,6 +640,10 @@ const siteData = {
       fee:"0",
        transport: "Public",
      rating:"4.4",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-sunrise-valley-romantic-wayanad.html",
 
@@ -566,6 +665,10 @@ const siteData = {
       fee:"0",
        transport: "Public",
      rating:"3.9",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-neelimala-view-point-romantic-wayanad.html",
 
@@ -587,6 +690,10 @@ const siteData = {
 		rating:"4.5",
 		hrs:"2",
 		fee:"0",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
 		type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-lakkidi-ghats-view-point-wayanad.html",
 
@@ -608,6 +715,10 @@ const siteData = {
 		rating:"3.9",
 		hrs:"2",
 		fee:"0",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
 		type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-900-kandi-romantic-wayanad.html",
 
@@ -628,6 +739,10 @@ const siteData = {
           rating:"4.5",
           hrs:"2",
           fee:"0",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
       	  type: "Romantic Spots",
           knowmore: iconURLPrefix+"bw-neelarchalu-lake-romantic-wayanad.html",
 
@@ -649,6 +764,10 @@ const siteData = {
           rating:"4.5",
           hrs:"2",
           fee:"0",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
       	  type: "Romantic Spots",
           knowmore: iconURLPrefix+"bw-munneswaran-kunnu-romantic-wayanad.html",
 
@@ -670,6 +789,10 @@ const siteData = {
           rating:"3.2",
           hrs:"2",
           fee:"0",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
       	  type: "Romantic Spots",
           knowmore: iconURLPrefix+"bw-bamboo-forest-valentine-park-wayanad.html",
 
@@ -695,6 +818,10 @@ const siteData = {
       map:"https://maps.app.goo.gl/iWXqG43yzZb3iSo66",
       hrs:"2",
       fee:"0",
+content: "Experience authentic Kerala living in our beautifully villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+amenities: ["Air Conditioning", "Gourmet Kitchen", "Boat Rides", "Spice Garden Tour"],
+tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "quiet", "relaxed"],
+
        type: "Cultural & Historical",
       knowmore: iconURLPrefix+"bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html",
 
@@ -716,6 +843,10 @@ const siteData = {
       rating:"4.2",
       hrs:"2",
       fee:"0",
+content: "Experience authentic Kerala living in our beautifully villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+amenities: ["Air Conditioning", "Gourmet Kitchen", "Boat Rides", "Spice Garden Tour"],
+tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "quiet", "relaxed"],
+
        type: "Cultural & Historical",
       knowmore: iconURLPrefix+"bw-mananthavady-pazhassi-tomb-heritage-wayanad.html",
 
@@ -736,6 +867,10 @@ const siteData = {
       rating:"4.2",
       hrs:"2",
       fee:"0",
+content: "Experience authentic Kerala living in our beautifully villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+amenities: ["Air Conditioning", "Gourmet Kitchen", "Boat Rides", "Spice Garden Tour"],
+tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "quiet", "relaxed"],
+
        type: "Cultural & Historical",
       knowmore: iconURLPrefix+"bw-chain-tree-cultural-heritage-wayanad.html",
 
@@ -756,6 +891,10 @@ const siteData = {
            rating: "4.4",
           hrs:"2",
           fee:"0",
+content: "Experience authentic Kerala living in our beautifully villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+amenities: ["Air Conditioning", "Gourmet Kitchen", "Boat Rides", "Spice Garden Tour"],
+tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "quiet", "relaxed"],
+
            type: "Cultural & Historical",
            knowmore: iconURLPrefix+"bw-santhinatha-temple-heritage-wayanad.html",
          },
@@ -782,6 +921,9 @@ const siteData = {
       rating:"4.1",
       hrs:"2",
       fee:"0",
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-kuruwa-deep-trucking-wayanad.html",
 
@@ -802,6 +944,9 @@ const siteData = {
       rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-brahmagiri-trucking-wayanad.html",
 
@@ -823,6 +968,9 @@ const siteData = {
       rating:"4.6",
       hrs:"3",
       fee:"0",
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-chembra-peak-trucking-wayanad.html",
 
@@ -844,6 +992,9 @@ const siteData = {
          rating:"4.6",
          hrs:"2",
          fee:"0",
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
           type: "Trucking",
          knowmore: iconURLPrefix+"bw-cheengeri-hill-trucking-wayanad.html",
 
@@ -865,6 +1016,9 @@ const siteData = {
       rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
       type: "Trucking",
       knowmore: iconURLPrefix+"bw-lakkidi-ghats-view-point-wayanad.html",
 
@@ -886,6 +1040,9 @@ const siteData = {
       rating:"4.1",
       hrs:"4",
       fee:"50 INR- 70 INR",
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-edakkal-caves-trucking-wayanad.html",
 
@@ -908,6 +1065,9 @@ const siteData = {
       fee:"0",
       latlong: "11.639978909862197, 76.08420612038587",
       map: "https://maps.app.goo.gl/n2aJqSpipqQjE6x56",
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-puliyarmala-trucking-wayanad.html",
 
@@ -930,6 +1090,9 @@ const siteData = {
       fee:"0",
       latlong: "11.650880848883398, 76.19276045292615",
       map: "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-kolagapara-trucking-wayanad.html",
 
@@ -956,6 +1119,10 @@ const siteData = {
      rating:"3.9",
       hrs:"2",
       fee:"0",
+
+content: "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+amenities: ["Wildlife Viewing", "Spice Plantations", "Boat Rides", "Nature Trails"],
+tags: ["Bandipur", "wildlife", "sanctuary", "elephants", "tigers", "birds", "Muthanga", "nature", "adventure"],
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-muthanga-wildlife-sanctuary-wayanad.html",
 
@@ -976,6 +1143,10 @@ const siteData = {
      rating:"4.1",
       hrs:"2",
       fee:"0",
+content: "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+amenities: ["Wildlife Viewing", "Spice Plantations", "Boat Rides", "Nature Trails"],
+tags: ["Nagarhole", "wildlife", "sanctuary", "elephants", "tigers", "birds", "spice plantations", "nature", "adventure"],
+
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-nagarhole-wildlife-sanctuary-wayanad.html",
 
@@ -996,6 +1167,9 @@ const siteData = {
      rating:"4.3",
       hrs:"2",
       fee:"0",
+content: "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+amenities: ["Wildlife Viewing", "Spice Plantations", "Boat Rides", "Nature Trails"],
+tags: ["Pakshipathalam", "wildlife", "sanctuary", "elephants", "tigers", "birds", "spice plantations", "nature", "adventure"],
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-pakshipathalam-wildlife-sanctuary-wayanad.html",
 
@@ -1016,6 +1190,9 @@ const siteData = {
      rating:"4.0",
       hrs:"2",
       fee:"0",
+content: "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+amenities: ["Wildlife Viewing", "Spice Plantations", "Boat Rides", "Nature Trails"],
+tags: ["Tholpetty", "wildlife", "sanctuary", "elephants", "tigers", "birds", "spice plantations", "nature", "adventure"],
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-tholpetty-wildlife-sanctuary-wayanad.html",
 
@@ -1038,6 +1215,9 @@ const siteData = {
      rating:"4.3",
       hrs:"2",
       fee:"0",
+content: "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+amenities: ["Wildlife Viewing", "Spice Plantations", "Boat Rides", "Nature Trails"],
+tags: ["Begur", "wildlife", "sanctuary", "elephants", "tigers", "birds", "spice plantations", "nature", "adventure"],
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-begur-wildlife-sanctuary-wayanad.html",
 
@@ -1060,6 +1240,10 @@ const siteData = {
 			rating:"4.9",
 			hrs:"2",
 			fee:"0",
+content: " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
+amenities: [ "agritourism", "educational", "recreational", "working farm" ],
+tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educational Farm", "HandsOnLearning"],
+
 			type: "Farm Visit",
 	      knowmore: iconURLPrefix+"bw-pepper-farm-wayanad.html",
 
@@ -1081,6 +1265,10 @@ const siteData = {
      rating:"4.3",
       hrs:"2",
       fee:"0",
+content: " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
+amenities: [ "agritourism", "educational", "recreational", "working farm" ],
+tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educational Farm", "HandsOnLearning"],
+
        type: "Farm Visit",
       knowmore: iconURLPrefix+"bw-ambalavayal-farm-rars-wayanad.html"
     },
@@ -1100,6 +1288,9 @@ const siteData = {
      rating:"4.0",
       hrs:"2",
       fee:"0",
+content: " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
+amenities: [ "agritourism", "educational", "recreational", "working farm" ],
+tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educational Farm", "HandsOnLearning"],
        type: "Farm Visit",
       knowmore: iconURLPrefix+"bw-boys-town-farm-wayanad.html",
 
@@ -1121,6 +1312,9 @@ const siteData = {
 		rating:"4.7",
 		hrs:"2",
 		fee:"0",
+content: " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
+amenities: [ "agritourism", "educational", "recreational", "working farm" ],
+tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educational Farm", "HandsOnLearning"],
 		type: "Farm Visit",
       knowmore: iconURLPrefix+"bw-pepper-farm-wayanad.html",
 
@@ -1147,6 +1341,11 @@ const siteData = {
   			rating:"4.5",
   			hrs:"2",
   			fee:"0",
+content: "Explore Kerala's pristine waters by kayak. Paddle through narrow canals, observe local wildlife, and visit village spice gardens. A perfect combination of adventure and cultural immersion for quiet travel enthusiasts.",
+amenities: ["Kayak Equipment", "Safety Gear", "Local Guide", "Refreshments"],
+tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "cultural", "quiet travel"],
+
+
   			type: "Sporting",
   			knowmore: iconURLPrefix+"bw-bamboo-rafting-sporting-wayanad.html",
 
@@ -1167,6 +1366,11 @@ const siteData = {
          rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "Explore Kerala's pristine waters by kayak. Paddle through narrow canals, observe local wildlife, and visit village spice gardens. A perfect combination of adventure and cultural immersion for quiet travel enthusiasts.",
+amenities: ["Kayak Equipment", "Safety Gear", "Local Guide", "Refreshments"],
+tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "cultural", "quiet travel"],
+
+
       	  type: "Sporting",
           knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
@@ -1188,6 +1392,11 @@ const siteData = {
 			rating:"4.5",
 			hrs:"2",
 			fee:"0",
+content: "Explore Kerala's pristine waters by kayak. Paddle through narrow canals, observe local wildlife, and visit village spice gardens. A perfect combination of adventure and cultural immersion for quiet travel enthusiasts.",
+amenities: ["Kayak Equipment", "Safety Gear", "Local Guide", "Refreshments"],
+tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "cultural", "quiet travel"],
+
+
 			type: "Sporting",
 			knowmore: iconURLPrefix+"bw-football-turf-sporting-wayanad.html",
 
@@ -1212,6 +1421,10 @@ const siteData = {
  		rating:"4",
  		hrs:"2",
  		fee:"0",
+content: "Learn to prepare authentic Kerala dishes using traditional spices and techniques. Our cooking classes include market visits for spice selection, hands-on cooking, and enjoying the meal you've prepared.",
+amenities: ["Cooking Equipment", "Recipe Book", "Spice Kit", "Traditional Methods"],
+tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on", "authentic"],
+
  		type: "Food",
        knowmore: iconURLPrefix+"all-fooding-wayanad.html",
 
@@ -1233,6 +1446,10 @@ const siteData = {
      rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "Learn to prepare authentic Kerala dishes using traditional spices and techniques. Our cooking classes include market visits for spice selection, hands-on cooking, and enjoying the meal you've prepared.",
+amenities: ["Cooking Equipment", "Recipe Book", "Spice Kit", "Traditional Methods"],
+tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on", "authentic"],
+
        type: "Food",
       knowmore: iconURLPrefix+"bw-restaurants-food-wayanad.html",
 
@@ -1253,6 +1470,10 @@ const siteData = {
 		rating:"4.5",
 		hrs:"2",
 		fee:"0",
+content: "Learn to prepare authentic Kerala dishes using traditional spices and techniques. Our cooking classes include market visits for spice selection, hands-on cooking, and enjoying the meal you've prepared.",
+amenities: ["Cooking Equipment", "Recipe Book", "Spice Kit", "Traditional Methods"],
+tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on", "authentic"],
+
 		type: "Food",
       knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
@@ -1278,6 +1499,10 @@ const siteData = {
  			rating:"4.5",
  			hrs:"2",
  			fee:"0",
+content: "Tucked away in the lush hills of Kerala, Wayanad is home to some of India's most vibrant and resilient tribal communities",
+amenities: ["Tribal Communities", "Tribal History", "Cultural Preservation", "Languages"],
+tags: ["Tribal Festivals", "Music", "Crafts", "Wisdom", "Ethnic Diversity", "Oral Traditions"],
+
        	  type: "Tribal",
            knowmore: iconURLPrefix+"bw-uravu-bamboo-tribal-wayanad.html",
 
@@ -1298,6 +1523,10 @@ const siteData = {
 			rating:"4.1",
 			hrs:"2",
 			fee:"0",
+content: "Tucked away in the lush hills of Kerala, Wayanad is home to some of India's most vibrant and resilient tribal communities",
+amenities: ["Tribal Communities", "Tribal History", "Cultural Preservation", "Languages"],
+tags: ["Tribal Festivals", "Music", "Crafts", "Wisdom", "Ethnic Diversity", "Oral Traditions"],
+
 			type: "Tribal",
           knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
@@ -1323,6 +1552,10 @@ const siteData = {
 			rating:"4.7",
 			hrs:"2",
 			fee:"0",
+content: "Cycling in Wayanad is a fantastic way to explore the lush landscapes, rolling hills, and serene villages of this scenic region in Kerala. ",
+amenities: ["expansive tea estates", "rustic mud trails", "sensory delight", "Quiet"],
+tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", "adventure tour"],
+
       	  type: "Cycling",
           knowmore: iconURLPrefix+"bw-rippon-teaestate-cycling-wayanad.html",
 
@@ -1343,6 +1576,9 @@ const siteData = {
 		rating:"4.7",
 		hrs:"2",
 		fee:"0",
+content: "Cycling in Wayanad is a fantastic way to explore the lush landscapes, rolling hills, and serene villages of this scenic region in Kerala. ",
+amenities: ["expansive tea estates", "rustic mud trails", "sensory delight", "Quiet"],
+tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", "adventure tour"],
       	  type: "Cycling",
           knowmore: iconURLPrefix+"bw-chundail-tea-estate-cycling-wayanad.html",
 
@@ -1370,6 +1606,10 @@ const siteData = {
        rating:"5",
        hrs:"2",
        fee:"0",
+content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
+amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
+tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
+
        type: "shopping",
        knowmore: iconURLPrefix+"bw-ali-wayanadan-honey-shopping-wayanad.html",
 
@@ -1390,6 +1630,10 @@ const siteData = {
      rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
+amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
+tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
+
        type: "shopping",
       knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8"
 
@@ -1411,6 +1655,10 @@ const siteData = {
       rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
+amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
+tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
+
        type: "shopping",
       knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
@@ -1431,6 +1679,10 @@ const siteData = {
       rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
+amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
+tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
+
       type: "shopping",
       knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
@@ -1456,6 +1708,9 @@ const siteData = {
           fee:"0",
           latlong: "11.911851118207249, 75.9958816441809",
           map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           type: "Pilgrimage",
           knowmore: iconURLPrefix+"bw-tirunelli-temple-pilgrimage-wayanad.html",
 
@@ -1477,6 +1732,9 @@ const siteData = {
           rating:"4.3",
           hrs:"2",
           fee:"0",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
            type: "Pilgrimage",
           knowmore: iconURLPrefix+"bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html",
 
@@ -1497,6 +1755,9 @@ const siteData = {
           rating:"4.0",
           hrs:"2",
           fee:"0",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
            type: "Pilgrimage",
           knowmore: iconURLPrefix+"bw-koottamundu-glass-temple-pilgrimage-wayanad.html",
 
@@ -1518,6 +1779,9 @@ const siteData = {
           fee:"0",
           latlong: "11.911882611618777, 75.99584945767235",
           map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           type: "Pilgrimage",
           knowmore: iconURLPrefix+"bw-papanasini-river-temple-pilgrimage-wayanad.html",
 
@@ -1539,6 +1803,9 @@ const siteData = {
       fee:"0",
       latlong: "11.660422442249578, 76.17374499957178",
       map: "https://maps.app.goo.gl/voAar4qRh1U2jXjk7",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-meenangadi-church-pilgrimage-wayanad.html",
 
@@ -1559,6 +1826,9 @@ const siteData = {
       fee:"0",
       latlong: "11.685229537534148, 76.05606037116382",
       map: "https://maps.app.goo.gl/GWhpBVduuz5Sm1a67",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html",
 
@@ -1579,6 +1849,9 @@ const siteData = {
       fee:"0",
       latlong: "11.793030398758432, 76.16871715767236",
       map: "https://maps.app.goo.gl/7EMqf1GJLZbLWdLSA",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html",
 
@@ -1599,6 +1872,9 @@ const siteData = {
       fee:"0",
       latlong: "11.618497853276832, 76.1344553537423",
       map: "https://maps.app.goo.gl/mF1JKbkHQBNDeC4S9",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-trikaipatta-temple-pilgrimage-wayanad.html",
 
@@ -1619,6 +1895,9 @@ const siteData = {
       rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-trishileri-temple-pilgrimage-wayanad.html",
 
@@ -1640,6 +1919,9 @@ const siteData = {
       rating:"4.8",
       hrs:"2",
       fee:"0",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-sita-lav-kush-temple-pilgrimage-wayanad.html",
 
@@ -1661,6 +1943,9 @@ const siteData = {
       rating:"4.8",
       hrs:"2",
       fee:"0",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
        type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-varampatta-mosque-pilgrimage-wayanad.html",
 
@@ -1682,6 +1967,9 @@ const siteData = {
       rating:"4.5",
       hrs:"2",
       fee:"0",
+content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+tags: ["Church", "temple", "mosque", "yoga", "festivals"],
        type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-valliyoorkavu-temple-pilgrimage-wayanad.html",
 

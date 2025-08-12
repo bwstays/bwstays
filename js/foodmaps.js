@@ -56,7 +56,7 @@ const cityCircle = new google.maps.Circle({
         fillColor: "#FF0000", // Red fill
         fillOpacity: 0.35,
         center: centerloca, // Same center as the map for this example
-        radius: 5000, // 5 kilometers in meters
+        radius: 5000 // 5 kilometers in meters
       });
  cityCircle.setMap(map1);
   const foodPlacesContainer = document.getElementById('food-list');
