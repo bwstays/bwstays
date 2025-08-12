@@ -14,7 +14,7 @@ const BASE_CACHE_FILES = [
     '${GHPATH}/favicon.png',
 ];
 
-alert(BASE_CACHE_FILES[0])
+alert(BASE_CACHE_FILES[0]);
 
 const OFFLINE_CACHE_FILES = [
     '${GHPATH}/style.css',
