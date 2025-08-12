@@ -79,12 +79,12 @@ cityCircle.setMap(map1);
 				//alert("rating:"+results[i].rating );
  				let detailsRequest = {
 				  placeId: results[i].place_id,
-				  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total','geometry.location','geometry']
+		//		  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total','geometry.location','geometry']
+		 		  fields: ['name', 'rating', 'vicinity', 'types', 'user_ratings_total' ]
  				};
 
 				service.getDetails(detailsRequest, function (place, status) {
 				if (status === google.maps.places.PlacesServiceStatus.OK && place) {
-
 
 					//if (place.geometry && place.geometry.location)
 					{
