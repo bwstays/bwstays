@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     center: centerloca ,
      mapId: "foodmapdata"
     });
-
   //alert("addressName"+addressName);
   new google.maps.Marker({
     position: centerloca,
@@ -40,14 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     icon: mainLocationIcon,
     title: "Food and Dine in Wayanad Location"
   });
-
   var infowindow = new google.maps.InfoWindow();
   const service = new google.maps.places.PlacesService(map1);
-
   const request = {
     types: ['restaurant','hotel'],
     min_rating: 3.5
-
   };
 /*const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
