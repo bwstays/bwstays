@@ -12,9 +12,7 @@ const BASE_CACHE_FILES = [
     './manifest.json',
     './favicon.png',
 ];
-
 alert(BASE_CACHE_FILES[0]);
-
 const OFFLINE_CACHE_FILES = [
     './css/style.css',
     './js//script.js',
