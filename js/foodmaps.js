@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				  if (status === google.maps.places.PlacesServiceStatus.OK && place) {
 					let ratingStars = getStarHTML(place.rating);
 					let cuisineType = guessCuisineFromTypes(place.types);
-
 					let placeHTML = `
 					  <div class="mb-4 text-right">
 						<h6 class="text-white">${place.name}</h6>
