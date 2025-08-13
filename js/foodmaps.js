@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, (response, status) => {
         if (status === "OK") {
           new google.maps.DirectionsRenderer({
-						  map: map,
+						  map: map1,
 						  suppressMarkers: true,
 						  polylineOptions: {
 							strokeColor: '#4285F4',
