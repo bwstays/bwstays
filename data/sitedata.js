@@ -1588,15 +1588,14 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
 
 
  shopping: [
-
   {
        id: 85,
        name: "Ali's wayanadan natural honey",
-       description: "NATURAL HONEY.",
+       description: "Ali's Wayanadan Natural Honey is a brand of honey sourced from the Wayanad region of Kerala.",
        image: [iconURLPrefix+"assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.webp"],
-       holidays: "None",
-       timing:[ "11:00-20:00"],
-       Contact: "+91-555 555 5555",
+       holidays: "NA",
+       timing:[ "09:00-20:00"],
+       Contact: "+91-70129 18296",
  	  seasontovisit:["All Season"],
        distance: "25",
        transport: "Public",
@@ -1604,14 +1603,12 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
        map: "https://maps.app.goo.gl/ZCFPmqauSefZ61UP7",
        rating:"5",
        hrs:"2",
-       fee:"0",
-content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
-amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
-tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
-
+       fee:"Market Price",
+	   content: "Authentic Natural Honey shopping in Wayanad.",
+	   amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
+	   tags: ["Honey shopping",  "local markets",  "cinnamon", "kerala cuisine"],
        type: "shopping",
        knowmore: iconURLPrefix+"bw-ali-wayanadan-honey-shopping-wayanad.html",
-
     },
     {
       id: 77,
