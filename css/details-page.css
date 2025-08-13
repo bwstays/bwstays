@@ -96,6 +96,15 @@
         .vertical-menu a:last-child {
             border-bottom: none;
         }
+        .vertical-res{
+		writing-mode: vertical-lr; 
+		transform: rotate(180deg); 
+		padding: 30px 13px;
+		border-top-left-radius: 0; 
+		border-bottom-left-radius: 0;
+        }
+        
+        
  /* Responsive Design */
         @media (max-width: 768px) {
             .villa-hero h1 {
