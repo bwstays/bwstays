@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
   						  suppressMarkers: true,
   						  polylineOptions: {
   							strokeColor: '#4285F4',
-  							strokeWeight: 5,
-  							strokeOpacity: 0.4
+  							strokeWeight: 6,
+  							strokeOpacity: 0.2
   						  }
   						}).setDirections(response);
           }
