@@ -31,6 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
      mapId: "foodmapdata"
     });
 
+ new google.maps.DirectionsService().route({
+      origin: new google.maps.LatLng( 11.605943, 76.083429), // origin is bw stay
+      destination: new google.maps.LatLng(centerloca.lat, centerloca.lng),
+      travelMode: google.maps.TravelMode.DRIVING,
+    }, (response, status) => {
+        if (status === "OK") {
+          new google.maps.DirectionsRenderer({
+						  map: map,
+						  suppressMarkers: true,
+						  polylineOptions: {
+							strokeColor: '#4285F4',
+							strokeWeight: 4,
+							strokeOpacity: 0.8
+						  }
+						}).setDirections(response);
+        }
+  })
+
+
   new google.maps.Marker({
     position: centerloca,
     map: map1,
