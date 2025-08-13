@@ -150,3 +150,9 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     background-size: cover;
     position: relative;
 }
+.logo-loc
+{
+display: block; 
+margin: 0 auto 5px auto; 
+max-width: 30px;
+}
