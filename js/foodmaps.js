@@ -31,23 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
      mapId: "foodmapdata"
     });
 
- new google.maps.DirectionsService().route({
-      origin: new google.maps.LatLng( 11.605943, 76.083429), // origin is bw stay
-      destination: new google.maps.LatLng(centerloca.lat, centerloca.lng), // destination location driving from bw stay
-      travelMode: google.maps.TravelMode.DRIVING,
-    }, (response, status) => {
-        if (status === "OK") {
-          new google.maps.DirectionsRenderer({
-						  map: map1,
-						  suppressMarkers: true,
-						  polylineOptions: {
-							strokeColor: '#4285F4',
-							strokeWeight: 4,
-							strokeOpacity: 0.8
-						  }
-						}).setDirections(response);
-        }
-  })
 
 
   new google.maps.Marker({
@@ -144,6 +127,26 @@ document.addEventListener('DOMContentLoaded', () => {
      // });
     }
   });
+
+   new google.maps.DirectionsService().route({
+        origin: new google.maps.LatLng( 11.605943, 76.083429), // origin is bw stay
+        destination: new google.maps.LatLng(centerloca.lat, centerloca.lng), // destination location driving from bw stay
+        travelMode: google.maps.TravelMode.DRIVING,
+      }, (response, status) => {
+          if (status === "OK") {
+            new google.maps.DirectionsRenderer({
+  						  map: map1,
+  						  suppressMarkers: true,
+  						  polylineOptions: {
+  							strokeColor: '#4285F4',
+  							strokeWeight: 4,
+  							strokeOpacity: 0.8
+  						  }
+  						}).setDirections(response);
+          }
+    });
+
+
 });
 
 function getStarHTML(rating) {
