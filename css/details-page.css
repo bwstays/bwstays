@@ -190,7 +190,7 @@ transition: transform 0.5s ease; min-width: 100%;
 width:40%;margin:0 auto; border-radius: 10%;
 }
 
-.contact-divider{
+#contact-divider{
     width:22%;
     margin:0 auto;
     border-radius: 10%;
