@@ -142,10 +142,12 @@ for (i = 0; i < foodations.length; i++) {
 
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(foodations[i][1], foodations[i][2]),
+    //zIndex: google.maps.Marker.MAX_ZINDEX + 10,
     icon: {
 	    url: foodations[i][4],
 	    alt: 'BW Stays Utilmate Places'
 	  },
+
 
     map: map
   });
