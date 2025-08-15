@@ -540,7 +540,6 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
 
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-banasura-sagar-hills-romantic-wayanad.html",
-
     duration : "1-2 Hours",
 }
     ,
