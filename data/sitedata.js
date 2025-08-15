@@ -77,7 +77,6 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
 
       type: "Water Falls",
       knowmore: iconURLPrefix+"bw-meenmutty-waterfall-wayanad.html",
-
     duration : "1-2 Hours",
 },
     {
