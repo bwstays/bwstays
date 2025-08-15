@@ -1434,8 +1434,6 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
 content: "Explore Kerala's pristine waters by kayak. Paddle through narrow canals, observe local wildlife, and visit village spice gardens. A perfect combination of adventure and cultural immersion for quiet travel enthusiasts.",
 amenities: ["Kayak Equipment", "Safety Gear", "Local Guide", "Refreshments"],
 tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "cultural", "quiet travel"],
-
-
 			type: "Sporting",
 			knowmore: iconURLPrefix+"bw-football-turf-sporting-wayanad.html",
 
