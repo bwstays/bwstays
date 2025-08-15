@@ -1410,11 +1410,8 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
 content: "Explore Kerala's pristine waters by kayak. Paddle through narrow canals, observe local wildlife, and visit village spice gardens. A perfect combination of adventure and cultural immersion for quiet travel enthusiasts.",
 amenities: ["Kayak Equipment", "Safety Gear", "Local Guide", "Refreshments"],
 tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "cultural", "quiet travel"],
-
-
       	  type: "Sporting",
           knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
-
       duration : "1-2 Hours",
 },
 
@@ -1467,10 +1464,8 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
 content: "Learn to prepare authentic Kerala dishes using traditional spices and techniques. Our cooking classes include market visits for spice selection, hands-on cooking, and enjoying the meal you've prepared.",
 amenities: ["Cooking Equipment", "Recipe Book", "Spice Kit", "Traditional Methods"],
 tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on", "authentic"],
-
  		type: "Food",
        knowmore: iconURLPrefix+"all-fooding-wayanad.html",
-
     duration : "1-2 Hours",
 },
 
@@ -1493,10 +1488,8 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
 content: "Learn to prepare authentic Kerala dishes using traditional spices and techniques. Our cooking classes include market visits for spice selection, hands-on cooking, and enjoying the meal you've prepared.",
 amenities: ["Cooking Equipment", "Recipe Book", "Spice Kit", "Traditional Methods"],
 tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on", "authentic"],
-
        type: "Food",
       knowmore: iconURLPrefix+"bw-restaurants-food-wayanad.html",
-
     duration : "1-2 Hours",
 },
     {
@@ -1521,7 +1514,6 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
 
 		type: "Food",
       knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
-
     duration : "1-2 Hours",
 }
 
