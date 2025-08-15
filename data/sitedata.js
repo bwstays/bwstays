@@ -1389,7 +1389,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
   			type: "Sporting",
   			knowmore: iconURLPrefix+"bw-bamboo-rafting-sporting-wayanad.html",
 
-      duration : 2 Hours,
+      duration : "2 Hours",
 },
   {
           id: 70,
