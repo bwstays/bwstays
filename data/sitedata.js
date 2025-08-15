@@ -153,7 +153,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       id: 37,
       name: "Kanthanpara Falls",
       description: "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [iconURLPrefix+"assets/img/falls/bw-stays-kanthanpara-waterfalls-wayanad.webp",iconURLPrefix+"assets/img/falls/black-and-white-kanthanpara-falls-wayanad.webp",iconURLPrefix+"assets/img/falls/bw-stays-kanthanpara-waterfalls-kalpetta.webp",iconURLPrefix+"assets/img/falls/bw-stays-kanthanpara-waterfalls.avif"],
+      image: [iconURLPrefix+"assets/img/falls/bw-stays-kanthanpara-waterfalls-wayanad.webp",iconURLPrefix+"assets/img/falls/black-and-white-kanthanpara-falls-wayanad.webp",iconURLPrefix+"assets/img/falls/bw-stays-kanthanpara-waterfalls-kalpetta.webp",iconURLPrefix+"assets/img/falls/bw-stays-kanthanpara-waterfalls.webp"],
       holidays: "Sun",
       timing:[ "09:00-16:30"],
       Contact: "+91-000 000 0000",
