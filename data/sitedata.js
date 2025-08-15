@@ -78,7 +78,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       type: "Water Falls",
       knowmore: iconURLPrefix+"bw-meenmutty-waterfall-wayanad.html",
 
-    duration : 1-2 Hours",
+    duration : "1-2 Hours"",
 },
     {
       id: 34,
@@ -101,7 +101,7 @@ amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
 tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],      type: "Water Falls",
       knowmore: iconURLPrefix+"bw-sentinel-rock-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 35,
@@ -124,7 +124,7 @@ amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
 tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],      type: "Water Falls",
       knowmore: iconURLPrefix+"bw-soochipara-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 36,
@@ -147,7 +147,7 @@ amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
 tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],      type: "Water Falls",
       knowmore: iconURLPrefix+"bw-cheeyambam-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 37,
@@ -170,7 +170,7 @@ amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
 tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],      type: "Water Falls",
       knowmore: iconURLPrefix+"bw-kanthanpara-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
  ,
       {
@@ -195,7 +195,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
 type: "Water Falls",
        knowmore: iconURLPrefix+"bw-kappikalam-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
 
@@ -221,7 +221,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
         type: "Water Falls",
        knowmore: iconURLPrefix+"bw-arripara-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
       {
        id: 41,
@@ -245,7 +245,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
         type: "Water Falls",
        knowmore: iconURLPrefix+"bw-Irrupu-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
       {
@@ -270,7 +270,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
         type: "Water Falls",
        knowmore: iconURLPrefix+"bw-chetalayam-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
  {
@@ -295,7 +295,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
        type: "Water Falls",
       knowmore: iconURLPrefix+"bw-thusharagiri-waterfall-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 
  ],
@@ -326,7 +326,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
 		type: "Museums & Crafts",
 		knowmore: iconURLPrefix+"bw-tea-museum-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 {
       id: 78,
@@ -353,7 +353,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
        type: "Museums & Crafts",
       knowmore: iconURLPrefix+"bw-honey-museum-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
     {
@@ -380,7 +380,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
        type: "Museums & Crafts",
       knowmore: iconURLPrefix+"bw-folklore-museum-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 
   ],
@@ -409,7 +409,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-karapuzha-dam-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
 {
@@ -437,7 +437,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
         type: "Water Falls",
        knowmore: iconURLPrefix+"bw-karland-lake-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
     {
@@ -464,7 +464,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-pookode-lake-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -490,7 +490,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-banasurasagar-dam-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -516,7 +516,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-mailadippara-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -542,7 +542,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-banasura-sagar-hills-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -568,7 +568,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-manjappara-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -594,7 +594,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-phanthom-rock-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -620,7 +620,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-kurumbalakotta-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -646,7 +646,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-attamala-view-point-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -672,7 +672,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-sunrise-valley-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -698,7 +698,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-neelimala-view-point-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -724,7 +724,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
 		type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-lakkidi-ghats-view-point-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -749,7 +749,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
 	type: "Romantic Spots",
 	knowmore: iconURLPrefix+"bw-900-kandi-romantic-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
   {
           id: 83,
@@ -774,7 +774,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       	  type: "Romantic Spots",
           knowmore: iconURLPrefix+"bw-neelarchalu-lake-romantic-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 }
 ,
   {
@@ -800,7 +800,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       	  type: "Romantic Spots",
           knowmore: iconURLPrefix+"bw-munneswaran-kunnu-romantic-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 }
 ,
   {
@@ -826,7 +826,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       	  type: "Romantic Spots",
           knowmore: iconURLPrefix+"bw-bamboo-forest-valentine-park-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 }
   ],
 
@@ -856,7 +856,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
        type: "Cultural & Historical",
       knowmore: iconURLPrefix+"bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
     {
@@ -882,7 +882,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
        type: "Cultural & Historical",
       knowmore: iconURLPrefix+"bw-mananthavady-pazhassi-tomb-heritage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
    {
       id: 25,
@@ -907,7 +907,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
        type: "Cultural & Historical",
       knowmore: iconURLPrefix+"bw-chain-tree-cultural-heritage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
  {
            id: 1,
@@ -931,7 +931,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
 
            type: "Cultural & Historical",
            knowmore: iconURLPrefix+"bw-santhinatha-temple-heritage-wayanad.html",
-         duration : 1-2 Hours,
+         duration : "1-2 Hours",
 },
   ],
 
@@ -962,7 +962,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-kuruwa-deep-trucking-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 17,
@@ -986,7 +986,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-brahmagiri-trucking-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
     {
@@ -1011,7 +1011,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-chembra-peak-trucking-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
    {
@@ -1036,7 +1036,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
           type: "Trucking",
          knowmore: iconURLPrefix+"bw-cheengeri-hill-trucking-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
     {
@@ -1061,7 +1061,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       type: "Trucking",
       knowmore: iconURLPrefix+"bw-lakkidi-ghats-view-point-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
     {
@@ -1086,7 +1086,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-edakkal-caves-trucking-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
 
@@ -1112,7 +1112,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-puliyarmala-trucking-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
 
@@ -1138,7 +1138,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
        type: "Trucking",
       knowmore: iconURLPrefix+"bw-kolagapara-trucking-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
   ],
 
@@ -1169,7 +1169,7 @@ tags: ["Bandipur", "wildlife", "sanctuary", "elephants", "tigers", "birds", "Mut
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-muthanga-wildlife-sanctuary-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 {
       id: 29,
@@ -1194,7 +1194,7 @@ tags: ["Nagarhole", "wildlife", "sanctuary", "elephants", "tigers", "birds", "sp
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-nagarhole-wildlife-sanctuary-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 {
       id: 30,
@@ -1218,7 +1218,7 @@ tags: ["Pakshipathalam", "wildlife", "sanctuary", "elephants", "tigers", "birds"
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-pakshipathalam-wildlife-sanctuary-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
  {
       id: 31,
@@ -1242,7 +1242,7 @@ tags: ["Tholpetty", "wildlife", "sanctuary", "elephants", "tigers", "birds", "sp
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-tholpetty-wildlife-sanctuary-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
 
@@ -1268,7 +1268,7 @@ tags: ["Begur", "wildlife", "sanctuary", "elephants", "tigers", "birds", "spice 
        type: "Wildlife",
       knowmore: iconURLPrefix+"bw-begur-wildlife-sanctuary-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
   ],
   farms: [
@@ -1295,7 +1295,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
 			type: "Farm Visit",
 	      knowmore: iconURLPrefix+"bw-pepper-farm-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
     {
@@ -1320,7 +1320,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
 
        type: "Farm Visit",
       knowmore: iconURLPrefix+"bw-ambalavayal-farm-rars-wayanad.html"
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 63,
@@ -1344,7 +1344,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
        type: "Farm Visit",
       knowmore: iconURLPrefix+"bw-boys-town-farm-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 ,
     {
@@ -1369,7 +1369,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
 		type: "Farm Visit",
       knowmore: iconURLPrefix+"bw-pepper-farm-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 
 
@@ -1427,7 +1427,7 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
       	  type: "Sporting",
           knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 },
 
  {
@@ -1454,7 +1454,7 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
 			type: "Sporting",
 			knowmore: iconURLPrefix+"bw-football-turf-sporting-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 }
     ]
    ,
@@ -1483,7 +1483,7 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
  		type: "Food",
        knowmore: iconURLPrefix+"all-fooding-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
     {
@@ -1509,7 +1509,7 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
        type: "Food",
       knowmore: iconURLPrefix+"bw-restaurants-food-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 66,
@@ -1534,7 +1534,7 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
 		type: "Food",
       knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 
 
@@ -1564,7 +1564,7 @@ tags: ["Tribal Festivals", "Music", "Crafts", "Wisdom", "Ethnic Diversity", "Ora
        	  type: "Tribal",
            knowmore: iconURLPrefix+"bw-uravu-bamboo-tribal-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 },
  {
           id: 57,
@@ -1589,7 +1589,7 @@ tags: ["Tribal Festivals", "Music", "Crafts", "Wisdom", "Ethnic Diversity", "Ora
 			type: "Tribal",
           knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 }
 
     ],
@@ -1619,7 +1619,7 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
       	  type: "Cycling",
           knowmore: iconURLPrefix+"bw-rippon-teaestate-cycling-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 },
         {
           id: 49,
@@ -1643,7 +1643,7 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
       	  type: "Cycling",
           knowmore: iconURLPrefix+"bw-chundail-tea-estate-cycling-wayanad.html",
 
-      duration : 1-2 Hours,
+      duration : "1-2 Hours",
 }
 
 
@@ -1672,7 +1672,7 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
 	   tags: ["Honey shopping",  "local markets",  "cinnamon", "kerala cuisine"],
        type: "shopping",
        knowmore: iconURLPrefix+"bw-ali-wayanadan-honey-shopping-wayanad.html",
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 77,
@@ -1697,7 +1697,7 @@ tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", 
        type: "shopping",
       knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8"
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
     {
@@ -1723,7 +1723,7 @@ tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", 
        type: "shopping",
       knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 67,
@@ -1748,7 +1748,7 @@ tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", 
       type: "shopping",
       knowmore: iconURLPrefix+"bw-en-ooru-tribal-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
 
  ],
@@ -1777,7 +1777,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           type: "Pilgrimage",
           knowmore: iconURLPrefix+"bw-tirunelli-temple-pilgrimage-wayanad.html",
 
-        duration : 1-2 Hours,
+        duration : "1-2 Hours",
 },
 
      {
@@ -1802,7 +1802,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
            type: "Pilgrimage",
           knowmore: iconURLPrefix+"bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html",
 
-        duration : 1-2 Hours,
+        duration : "1-2 Hours",
 },
     {
           id: 3,
@@ -1826,7 +1826,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
            type: "Pilgrimage",
           knowmore: iconURLPrefix+"bw-koottamundu-glass-temple-pilgrimage-wayanad.html",
 
-        duration : 1-2 Hours,
+        duration : "1-2 Hours",
 },
 
      	{
@@ -1851,7 +1851,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           type: "Pilgrimage",
           knowmore: iconURLPrefix+"bw-papanasini-river-temple-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
 {
@@ -1876,7 +1876,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-meenangadi-church-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
  	{
       id: 8,
@@ -1900,7 +1900,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
  	{
       id: 9,
@@ -1924,7 +1924,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
  	{
       id: 10,
@@ -1948,7 +1948,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-trikaipatta-temple-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
     {
       id: 11,
@@ -1972,7 +1972,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-trishileri-temple-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
     {
@@ -1997,7 +1997,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-sita-lav-kush-temple-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 },
 
     {
@@ -2022,7 +2022,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
        type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-varampatta-mosque-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
     ,
     {
@@ -2047,7 +2047,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
        type: "Pilgrimage",
       knowmore: iconURLPrefix+"bw-valliyoorkavu-temple-pilgrimage-wayanad.html",
 
-    duration : 1-2 Hours,
+    duration : "1-2 Hours",
 }
   ]
 }
