@@ -1306,7 +1306,6 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
 content: " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
 amenities: [ "agritourism", "educational", "recreational", "working farm" ],
 tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educational Farm", "HandsOnLearning"],
-
        type: "Farm Visit",
       knowmore: iconURLPrefix+"bw-ambalavayal-farm-rars-wayanad.html",
     duration : "1-2 Hours",
