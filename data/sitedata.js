@@ -1318,7 +1318,7 @@ amenities: [ "agritourism", "educational", "recreational", "working farm" ],
 tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educational Farm", "HandsOnLearning"],
 
        type: "Farm Visit",
-      knowmore: iconURLPrefix+"bw-ambalavayal-farm-rars-wayanad.html"
+      knowmore: iconURLPrefix+"bw-ambalavayal-farm-rars-wayanad.html",
     duration : "1-2 Hours",
 },
     {
@@ -1694,7 +1694,7 @@ amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
 tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
 
        type: "shopping",
-      knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8"
+      knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8",
 
     duration : "1-2 Hours",
 },
