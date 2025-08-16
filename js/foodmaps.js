@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					  }
 					});
 					directionsRenderer.setDirections(response);
-  				    directionsRenderer.setPanel(document.getElementById('directions-panel'));
+  				   // directionsRenderer.setPanel(document.getElementById('directions-panel'));
 
 
             /*new google.maps.DirectionsRenderer({
