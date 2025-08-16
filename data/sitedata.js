@@ -1375,7 +1375,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
             Contact: "+91-75938 92956",
        	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
             distance: "10",
-  			latlong: "11.510131107991237, 76.14768727205123",
+  			latlong: "11.808946574960723, 76.00202559265286",
   			map: "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
   			transport: "Public",
   			rating:"4.5",
