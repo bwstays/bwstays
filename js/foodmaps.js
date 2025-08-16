@@ -150,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
 						<div>Distance: ${distance}</div>
 						<div>Time: ${duration}</div>
 						`;
-
           }
     });
 
