@@ -143,13 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
   							strokeWeight: 5,
   							strokeOpacity: 0.6
   						  }
-  						}).setDirections(response);
-						const distance = response.routes[0].legs[0].distance.text;
-						const duration = response.routes[0].legs[0].duration.text;
-						document.getElementById("directions-panel").innerHTML = `
-						<div>Distance: ${distance}</div>
-						<div>Time: ${duration}</div>
-						`;
+  						}).setDirections(response).setPanel(document.getElementById('directionsPanel'));
+
           }
     });
 
