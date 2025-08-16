@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
   							strokeWeight: 5,
   							strokeOpacity: 0.6
   						  }
-  						}).setDirections(response).setPanel(document.getElementById('directionsPanel'));
+  						}).setDirections(response).setPanel(document.getElementById('directions-panel'));
 
           }
     });
