@@ -138,7 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
           if (status === "OK") {
 			  var directionsRenderer = new google.maps.DirectionsRenderer();
 					directionsRenderer.setMap(map1);
-					directionsRenderer.setOptions({
+					directionsRenderer.setDirections(response);
+
+					//	const distanceInMeters = response.routes[0].legs[0].distance.value;
+					//					const distanceText = response.routes[0].legs[0].distance.text;
+ 					directionsRenderer.setOptions({
 					  draggable: true, // Allows users to drag and modify the route path
 					  suppressMarkers: true, // Hides the default A/B markers
 					  polylineOptions: {
@@ -147,20 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
 						strokeOpacity: 0.6
 					  }
 					});
-					directionsRenderer.setDirections(response);
   				   // directionsRenderer.setPanel(document.getElementById('directions-panel'));
 
 
-            /*new google.maps.DirectionsRenderer({
-  						  map: map1,
-  						  suppressMarkers: true,
-  						  polylineOptions: {
-  							strokeColor: '#4285F4',
-  							strokeWeight: 5,
-  							strokeOpacity: 0.6
-  						  }
-  						}).setDirections(response);
-  						*/
           }
     });
 
