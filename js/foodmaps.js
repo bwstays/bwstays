@@ -136,7 +136,22 @@ document.addEventListener('DOMContentLoaded', () => {
         unitSystem: google.maps.UnitSystem.METRIC,
       }, (response, status) => {
           if (status === "OK") {
-            new google.maps.DirectionsRenderer({
+			  var directionsRenderer = new google.maps.DirectionsRenderer();
+					directionsRenderer.setMap(map1);
+					directionsRenderer.setOptions({
+					  draggable: true, // Allows users to drag and modify the route path
+					  suppressMarkers: true, // Hides the default A/B markers
+					  polylineOptions: {
+						strokeColor: '#4285F4', // Changes the route line color to red
+						strokeWeight: 5, // Sets the route line thickness
+						strokeOpacity: 0.6
+					  }
+					});
+					directionsRenderer.setDirections(response);
+  				    directionsRenderer.setPanel(document.getElementById('directions-panel'));
+
+
+            /*new google.maps.DirectionsRenderer({
   						  map: map1,
   						  suppressMarkers: true,
   						  polylineOptions: {
@@ -144,7 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
   							strokeWeight: 5,
   							strokeOpacity: 0.6
   						  }
-  						}).setDirections(response);//.setPanel(document.getElementById('directions-panel'));
+  						}).setDirections(response);
+  						*/
           }
     });
 
