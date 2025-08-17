@@ -79,12 +79,12 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-ambalavayal-farm-rars-wayanad.html" title="Ambalavayal">Ambalavayal</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-ambalavayal-farm-rars-wayanad.html" title="Ambalavayal"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw_wayanad_amalavayal.avif" width="300" ></a>',11.616591290587456, 76.21447474945045, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-['<h6><a target="_blank" href="'+iconURLPrefix+'bw-meenmutty-waterfall-wayanad.html" title="Banasura Meenmutty Waterfalls">Banasura Meenmutty Waterfalls</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-meenmutty-waterfall-wayanad.html" title="Banasura Meenmutty Waterfalls"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/falls/bw-homestay-meenmufalls-wayanad.webp" width="300" ></a>', 11.677697, 75.935689, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="'+iconURLPrefix+'bw-meenmutty-waterfall-wayanad.html" title="Meenmutty Waterfalls">Banasura Meenmutty Waterfalls</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-meenmutty-waterfall-wayanad.html" title="Banasura Meenmutty Waterfalls"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/falls/bw-homestay-meenmufalls-wayanad.webp" width="300" ></a>', 11.74131093962623, 75.935689, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-edakkal-caves-trucking-wayanad.html" title="Edakkal Caves">Edakkal Caves</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-edakkal-caves-trucking-wayanad.html" title="Edakkal Caves"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp" width="300" ></a>', 11.626856, 76.234287, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-['<h6><a target="_blank" href="'+iconURLPrefix+'bw-nagarhole-wildlife-sanctuary-wayanad.html" title="Nagarhole wild life sanctuary">Nagarhole wild life sanctuary</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-nagarhole-wildlife-sanctuary-wayanad.html" title="Nagarhole wild life sanctuary"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/wildlife/bw-homestays-nagarhole-wayanad-wildlife-sanctuary.webp" width="300" ></a>', 12.002671727787199, 76.0667218165248, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="'+iconURLPrefix+'bw-nagarhole-wildlife-sanctuary-wayanad.html" title="Nagarhole wild life sanctuary">Nagarhole wild life sanctuary</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-nagarhole-wildlife-sanctuary-wayanad.html" title="Nagarhole wild life sanctuary"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/wildlife/bw-homestays-nagarhole-wayanad-wildlife-sanctuary.webp" width="300" ></a>', 11.99814346014371, 76.06648764392638, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-kanthanpara-waterfall-wayanad.html" title="Kanthanpara Waterfalls">Kanthanpara Waterfalls</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-kanthanpara-waterfall-wayanad.html" title="Kanthanpara Waterfalls"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/falls/bw-stays-kanthanpara-waterfalls-wayanad.webp" width="300" ></a>', 11.524134527182937, 76.1526895955301, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
@@ -128,7 +128,7 @@ var map = new google.maps.Map(document.getElementById('mapall'), {
   streetViewControl: true,
   fullscreenControl: true,
   //panamaram center
-  center: new google.maps.LatLng(11.542841751488135, 76.02595022698385),
+  center: new google.maps.LatLng(11.542442317568533, 76.02721621504702),
   //	mapTypeId: google.maps.MapTypeId.ROADMAP,
   mapId: 'f03033acde18bc0d'
 });

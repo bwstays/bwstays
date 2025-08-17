@@ -1,7 +1,7 @@
 
 var iconURLPrefix = 'https://www.bwstays.com/';
 
-var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.542841751488135, 76.02595022698385, 2, iconURLPrefix+"assets/img/logo/bw.png"]];
+var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.542442317568533, 76.02721621504702, 2, iconURLPrefix+"assets/img/logo/bw.png"]];
 
 //  const { Map } = await google.maps.importLibrary("maps");
 
@@ -18,7 +18,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
   zoomControl: true,
   streetViewControl: true,
   fullscreenControl: true,
-  center: new google.maps.LatLng( 11.542841751488135, 76.02595022698385),
+  center: new google.maps.LatLng( 11.542442317568533, 76.02721621504702),
   //	mapTypeId: google.maps.MapTypeId.ROADMAP,
   mapId: 'f03033acde18bc0d'
 });
