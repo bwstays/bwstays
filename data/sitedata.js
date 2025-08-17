@@ -426,7 +426,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        rating:"4.1",
       hrs:"2",
       fee:"0",
-       latlong: "11.650035025731679, 75.98102900497037",
+       latlong: "11.650035025731679, 75.9824076530733",
       map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
 
 content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
