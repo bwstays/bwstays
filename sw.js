@@ -266,7 +266,7 @@ self.addEventListener(
 
  if (event.request.url.includes('maps.googleapis.com') ||
       event.request.url.includes('maps.gstatic.com')) {
-		  alert(event.request.url)
+		  console.log(event.request.url);
 		  event.respondWith(fetch(event.request));
 	  }
 	  else{
