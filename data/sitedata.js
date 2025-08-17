@@ -1402,7 +1402,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
           Contact: "+91-000 000 0000",
      	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
           distance: "10",
-      latlong: "11.551007553580956, 76.16268127073981",
+      latlong: "11.608549709214055, 76.13382250444883",
       map: "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
        transport: "Public",
          rating:"4.5",
