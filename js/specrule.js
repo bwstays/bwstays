@@ -1,0 +1,96 @@
+
+        // Method 2: Dynamic Speculation Rules with JavaScript
+        function addSpeculationRules() {
+            // Check if Speculation Rules API is supported
+            if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+                const script = document.createElement('script');
+                script.type = 'speculationrules';
+                script.textContent = JSON.stringify(
+					    {
+					      "prerender": [
+					        {
+							  "source": "document",
+					          "where": { "href_matches": "/" },
+					          "eagerness": "moderate"
+					        },
+					        {
+						  "source": "document",
+				          "where": { "href_matches": "/bw-900-kandi-romantic-wayanad.html" },
+					          "eagerness": "moderate"
+					        },
+					        {
+						  "source": "document",
+					          "where": { "href_matches": "/all-locations-wayanad.html" },
+					          "eagerness": "conservative"
+					        }
+					      ],
+					      "prefetch": [
+					        {
+						  "source": "document",
+					          "where": { "href_matches": "/*.html" },
+					          "eagerness": "conservative"
+					        },
+						    {
+						  "source": "document",
+							  "where": {
+								"and": [
+								  { "href_matches": "/api/*" },
+								  { "not": { "href_matches": "*/search*" } }
+								]
+						     },
+						     "eagerness": "conservative"
+						    }
+					      ],
+						  "cache_control": {
+							"max_age": 300,
+							"stale_while_revalidate": 86400
+						  },
+						  "network_conditions": {
+							"connection_types": ["wifi", "4g"],
+							"save_data": false
+						  },
+						  "device_conditions": {
+							"memory": {
+							  "min": 1024
+							},
+							"storage": {
+							  "available_mb": 50
+							}
+						  }
+    				}
+					);
+                document.head.appendChild(script);
+                console.log('Speculation rules added dynamically');
+            } else {
+                console.log('Speculation Rules API not supported');
+            }
+        }
+
+        // Method 3: Hover-based speculation rules
+        function addHoverBasedRules() {
+            if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+                const hoverScript = document.createElement('script');
+                hoverScript.type = 'speculationrules';
+                hoverScript.textContent = JSON.stringify({
+                    "prerender": [
+                        {
+                            "where": { "href_matches": "/*.html" },
+                            "eagerness": "conservative"
+                        }
+                    ]
+                });
+                document.head.appendChild(hoverScript);
+            }
+        }
+         // Performance monitoring
+        if ('PerformanceObserver' in window) {
+            const observer = new PerformanceObserver((list) => {
+                list.getEntries().forEach((entry) => {
+                    if (entry.entryType === 'navigation') {
+                        console.log('Navigation timing:', entry.duration + 'ms');
+                    }
+                });
+            });
+            observer.observe({entryTypes: ['navigation']});
+        }
+
