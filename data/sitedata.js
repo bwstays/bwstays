@@ -1530,7 +1530,7 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
            Contact: "+91-000 000 0000",
       	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
            distance: "11",
- 			latlong: "11.6085076716113, 76.13369017849446",
+ 			latlong: "11.608488004868862, 76.1366479072789",
  			map: "https://maps.app.goo.gl/8HGVbA8w5gkfw6Sd7",
  			transport: "Public",
  			rating:"4.5",
