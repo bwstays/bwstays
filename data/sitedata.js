@@ -79,7 +79,8 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       knowmore: iconURLPrefix+"bw-meenmutty-waterfall-wayanad.html",
     duration : "1-2 Hours",
 },
-    {
+
+     {
       id: 34,
       name: "Sentinel Rock Waterfall",
       description: "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
@@ -93,7 +94,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       rating:"4.0",
       hrs:"2",
       fee:"0",
-      latlong: "11.495418956600835, 76.16077748465527",
+      latlong: "11.511709053469259, 76.1637670659447",
       map: "https://maps.app.goo.gl/WTkrrH73W95w23Xm8",
 content: "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
 amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
