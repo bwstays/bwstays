@@ -269,7 +269,7 @@ self.addEventListener(
 			  url.includes('maps.gstatic.com') ||
 			  url.includes('googleapis.com/maps') ||
 			  url.includes('google.com/maps')) {
-			return; // Don't intercept these requests — let them go to the network
+			//return; // Don't intercept these requests — let them go to the network
 		  }
 
         event.respondWith(
