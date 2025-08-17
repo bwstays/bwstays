@@ -116,13 +116,14 @@ function getTTL(url) {
  * @returns {Promise}
  */
 function installServiceWorker() {
+	alert(caches);
     return Promise.all(
         [
             caches.open(CACHE_VERSIONS.assets)
                 .then(
                     (cache) => {
 
-						alert(cache);
+
                         return cache.addAll(BASE_CACHE_FILES);
                     }
                 ),
