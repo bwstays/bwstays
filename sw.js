@@ -263,10 +263,10 @@ self.addEventListener(
 
 self.addEventListener(
     'fetch', event => {
-
+console.log(event.request.url);
  if (event.request.url.includes('maps.googleapis.com') ||
       event.request.url.includes('maps.gstatic.com')) {
-		  console.log(event.request.url);
+
 		  event.respondWith(fetch(event.request));
 	  }
 	  else{
