@@ -117,7 +117,7 @@ var bwlocations = [
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-karapuzha-dam-romantic-wayanad.html" title="Karapuzha Dam">Karapuzha Dam</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-karapuzha-dam-romantic-wayanad.html" title="Karapuzha Dam"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/romantic/bw-service-apartment-wayanad-karappuzha-dam.webp" width="300" ></a>', 11.618487, 76.167956, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 
-['<h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Zipline">Longest Zipline</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Longest Zipline"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp" width="300" ></a>', 11.608549709214055, 76.13382250444883, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Zipline">Longest Zipline</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Longest Zipline"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp" width="300" ></a>', 11.518830432585704, 76.14432496945525, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ],
 
 
