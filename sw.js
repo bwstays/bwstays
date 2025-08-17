@@ -115,7 +115,7 @@ function getTTL(url) {
  * @returns {Promise}
  */
 function installServiceWorker() {
-	alert(caches);
+	alert(caches + " "+BASE_CACHE_FILES);
     return Promise.all(
         [
             caches.open(CACHE_VERSIONS.assets)
