@@ -14,24 +14,30 @@
 					          "eagerness": "moderate"
 					        },
 					        {
-						  "source": "document",
-				          "where": { "href_matches": "/bw-900-kandi-romantic-wayanad.html" },
-					          "eagerness": "moderate"
+							  "source": "document",
+					          "where": { "href_matches": "/all-fooding-wayanad.html" },
+					          "eagerness": "conservative"
 					        },
 					        {
-						  "source": "document",
+							  "source": "document",
 					          "where": { "href_matches": "/all-locations-wayanad.html" },
+					          "eagerness": "conservative"
+
+					        },
+					        {
+							  "source": "document",
+					          "where": { "href_matches": "/bwstays-booking.html" },
 					          "eagerness": "conservative"
 					        }
 					      ],
 					      "prefetch": [
 					        {
-						  "source": "document",
-					          "where": { "href_matches": "/*.html" },
+						 	  "source": "document",
+					          "where": { "href_matches": "/bw*.html" },
 					          "eagerness": "conservative"
 					        },
 						    {
-						  "source": "document",
+						  	  "source": "document",
 							  "where": {
 								"and": [
 								  { "href_matches": "/api/*" },
@@ -82,15 +88,3 @@
                 document.head.appendChild(hoverScript);
             }
         }
-         // Performance monitoring
-        if ('PerformanceObserver' in window) {
-            const observer = new PerformanceObserver((list) => {
-                list.getEntries().forEach((entry) => {
-                    if (entry.entryType === 'navigation') {
-                        console.log('Navigation timing:', entry.duration + 'ms');
-                    }
-                });
-            });
-            observer.observe({entryTypes: ['navigation']});
-        }
-
