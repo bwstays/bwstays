@@ -1346,7 +1346,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
 		seasontovisit:["All Season"],
 		distance: "10",
 		transport: "Public",
-		latlong: "11.69790798210248, 76.19169749493271",
+		latlong: "11.69283527987838, 76.1911296389339",
 		map: "https://maps.app.goo.gl/fihSsqhSHPCNRJzk9",
 		rating:"4.7",
 		hrs:"2",

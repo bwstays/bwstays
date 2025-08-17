@@ -116,8 +116,16 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-banasurasagar-dam-romantic-wayanad.html" title="Banasura Sagar Dam">Banasura Sagar Dam</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-banasurasagar-dam-romantic-wayanad.html" title="Banasura Sagar Dam"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/romantic/bw-stays-banasura-sagar-dam-wayanad.avif" width="300" ></a>', 11.670692, 75.955571, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
+['<h6><a target="_blank" href="'+iconURLPrefix+'bw-karapuzha-dam-romantic-wayanad.html" title="Karapuzha Dam">Karapuzha Dam</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-karapuzha-dam-romantic-wayanad.html" title="Karapuzha Dam"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/romantic/bw-service-apartment-wayanad-karappuzha-dam.webp" width="300" ></a>', 11.618487, 76.167956, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+
+
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Zipline">Longest Zipline</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Longest Zipline"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp" width="300" ></a>', 11.551007553580956, 76.16268127073981, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+],
+
+
+
+['<h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm">Pepper Farm</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-pepper-farm-wayanad.webp" width="300" ></a>', 11.69283527987838, 76.1911296389339, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ],
 
 ];
