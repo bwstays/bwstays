@@ -114,13 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		navigator.serviceWorker
 			.register('/sw.js', { scope: '/' })
 			.then(() => {
-				console.info('Developer for Life Service Worker Registered');
+				console.info('PWA Service Worker Registered');
 			}, err => console.error("Developer for Life Service Worker registration failed: ", err));
 
 		navigator.serviceWorker
 			.ready
 			.then(() => {
-				console.info('Developer for Life Service Worker Ready');
+				console.info('PWA Service Worker Ready');
 			});
 	}
 
