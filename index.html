@@ -103,6 +103,9 @@
 <!-- <link href="css/sidebar.css" rel="stylesheet"   type='text/css' media='all'  /> -->
 <noscript><link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"     type='text/css' media='all'   rel="dns-prefetch"  /></noscript>
 
+<!--
+
+PWA Code commneted for now
 
 <script  type="text/javascript" >
     //Initialize speculation rules on page load
@@ -110,6 +113,43 @@
 	//addSpeculationRules();
 	//addHoverBasedRules();
 	if ('serviceWorker' in navigator) {
+
+		//  Define if link rel='next|prev|prefetch' should  be preloaded when accessing this page
+
+        const PREFETCH = true;
+
+
+        // Define which link-rel's should be preloaded if enabled.
+
+        const PREFETCH_LINK_RELS = ['index', 'prefetch'];
+
+
+         // prefetchCache
+
+        function prefetchCache() {
+            if(navigator.serviceWorker.controller) {
+
+                let links = document.querySelectorAll(
+                    PREFETCH_LINK_RELS.map((rel) => {
+                        return 'link[rel='+rel+']';
+                    }).join(',')
+                );
+
+                if(links.length > 0) {
+                    Array.from(links)
+                        .map((link) => {
+                            let href = link.getAttribute('href');
+                            navigator.serviceWorker.controller.postMessage({
+                                action : 'cache',
+                                url : href,
+                            });
+                        });
+                }
+
+
+            }
+        }
+
 		navigator.serviceWorker
 			.register('/sw.js', { scope: '/' })
 			.then(() => {
@@ -119,6 +159,9 @@
 		navigator.serviceWorker
 			.ready
 			.then(() => {
+				if(PREFETCH) {
+			       prefetchCache();
+                }
 				console.info('PWA Service Worker Ready');
 			});
 	}
@@ -137,6 +180,7 @@
 
    });
 </script>
+-->
 <!-- Google tag (gtag.js) -->
 
 <script type="text/javascript"  src="https://www.googletagmanager.com/gtag/js?id=G-VZWJNHM47Z" async></script>
@@ -817,10 +861,6 @@ setTimeout(ldinsp, 0);
                 </div>
                 </div>
             </div>
-
-
-
-
 
 
         </div>
