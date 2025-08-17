@@ -110,7 +110,6 @@ function getTTL(url) {
         return null;
     }
 }
-
 /**
  * installServiceWorker
  * @returns {Promise}
