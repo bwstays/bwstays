@@ -339,7 +339,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
 	  seasontovisit:["All Season"],
       distance: "12",
        transport: "Public",
-      latlong: "11.537767577723109, 76.04356195245359",
+      latlong: "11.5375175, 76.0434972",
       map: "https://maps.app.goo.gl/8x4fQb5Cr9RBCFr17",
       rating:"4.5",
       hrs:"2",
