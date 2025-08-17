@@ -41,7 +41,7 @@
 							  "where": {
 								"and": [
 								  { "href_matches": "/api/*" },
-								  { "not": { "href_matches": "*/search*" } }
+								  { "not": { "href_matches": "*/blogs*" } }
 								]
 						     },
 						     "eagerness": "conservative"

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Street View Embed</title>
+    <style>
+        #pano {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="pano"></div>
+    <script>
+        function initPano() {
+            var panorama = new google.maps.StreetViewPanorama(
+                document.getElementById('pano'), {
+                    position: {lat: 11.5297, lng: 76.0154}, // Example: Los Angeles
+                    pov: {heading: 165, pitch: 0},
+                    zoom: 1
+                });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbk&callback=initPano"></script>
+
+ </body>
+</html>
