@@ -263,13 +263,14 @@ self.addEventListener(
 
 self.addEventListener(
     'fetch', event => {
-console.log(event.request.url);
- if (event.request.url.includes('maps.googleapis.com') ||
-      event.request.url.includes('maps.gstatic.com')) {
 
-		  event.respondWith(fetch(event.request));
-	  }
-	  else{
+		const url = event.request.url;
+		if (url.includes('maps.googleapis.com') ||
+			  url.includes('maps.gstatic.com') ||
+			  url.includes('googleapis.com/maps') ||
+			  url.includes('google.com/maps')) {
+			return; // Don't intercept these requests — let them go to the network
+		  }
 
         event.respondWith(
             caches.open(CACHE_VERSIONS.content)
@@ -395,7 +396,6 @@ console.log(event.request.url);
                     }
                 )
         );
-	}
 
     }
 );
