@@ -15,7 +15,7 @@ const BASE_CACHE_FILES = [
 
 const OFFLINE_CACHE_FILES = [
     '/css/style.css',
-    '/js//script.js',
+    '/js/script.js',
     '/offline/index.html',
 ];
 
@@ -115,14 +115,12 @@ function getTTL(url) {
  * @returns {Promise}
  */
 function installServiceWorker() {
-	alert(caches + " "+BASE_CACHE_FILES);
+//	alert(caches + " "+BASE_CACHE_FILES);
     return Promise.all(
         [
             caches.open(CACHE_VERSIONS.assets)
                 .then(
                     (cache) => {
-
-
                         return cache.addAll(BASE_CACHE_FILES);
                     }
                 ),
@@ -266,6 +264,12 @@ self.addEventListener(
 self.addEventListener(
     'fetch', event => {
 
+ if (event.request.url.includes('maps.googleapis.com') ||
+      event.request.url.includes('maps.gstatic.com')) {
+		  event.respondWith(fetch(event.request));
+	  }
+	  else{
+
         event.respondWith(
             caches.open(CACHE_VERSIONS.content)
                 .then(
@@ -390,6 +394,7 @@ self.addEventListener(
                     }
                 )
         );
+	}
 
     }
 );
