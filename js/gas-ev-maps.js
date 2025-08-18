@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     position: centerloca,
     map: map1,
     icon: mainLocationIcon,
-    title: "Fuel and EV Charger",
+    title: "Kalpetta Center",
     zIndex: google.maps.Marker.MAX_ZINDEX + 10
   });
 
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const request = {
     location: centerloca,
     radius: 40000, // Search within a 40km radius
-    types: ['gas_station','electric_vehicle_charging_station','fuel']
+    types: ['gas_station','electric_vehicle_charging_station','EV']
   };
 /* const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-   new google.maps.DirectionsService().route({
+ /*  new google.maps.DirectionsService().route({
         origin: new google.maps.LatLng( 11.605943, 76.083429), // origin is bw stay
         destination: new google.maps.LatLng(centerloca.lat, centerloca.lng), // destination location driving from bw stay
         travelMode: google.maps.TravelMode.DRIVING,
@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   				   // directionsRenderer.setPanel(document.getElementById('directions-panel'));
          }
     });
+    */
 
 
 });

@@ -18,7 +18,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
   zoomControl: true,
   streetViewControl: true,
   fullscreenControl: true,
-  center: new google.maps.LatLng( 11.542442317568533, 76.02721621504702),
+  center: new google.maps.LatLng( 11.542442317568533, 76.02721621504702),  // kalpetta center
   //	mapTypeId: google.maps.MapTypeId.ROADMAP,
   mapId: 'f03033acde18bc0d'
 });
