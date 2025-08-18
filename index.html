@@ -106,32 +106,24 @@
 <!--
 
 PWA Code commneted for now
-
 <script  type="text/javascript" >
     //Initialize speculation rules on page load
     document.addEventListener('DOMContentLoaded', function() {
 	//addSpeculationRules();
 	//addHoverBasedRules();
 	if ('serviceWorker' in navigator) {
-
 		//  Define if link rel='next|prev|prefetch' should  be preloaded when accessing this page
         const PREFETCH = true;
-
-
         // Define which link-rel's should be preloaded if enabled.
         const PREFETCH_LINK_RELS = ['index', 'prefetch'];
-
-
          // prefetchCache
         function prefetchCache() {
             if(navigator.serviceWorker.controller) {
-
                 let links = document.querySelectorAll(
                     PREFETCH_LINK_RELS.map((rel) => {
                         return 'link[rel='+rel+']';
                     }).join(',')
                 );
-
                 if(links.length > 0) {
                     Array.from(links)
                         .map((link) => {
@@ -142,8 +134,6 @@ PWA Code commneted for now
                             });
                         });
                 }
-
-
             }
         }
 
@@ -174,16 +164,13 @@ PWA Code commneted for now
 		});
 		observer.observe({entryTypes: ['navigation']});
 	}
-
    });
 </script>
  -->
 <!-- Google tag (gtag.js) -->
-
 <script type="text/javascript"  src="https://www.googletagmanager.com/gtag/js?id=G-VZWJNHM47Z" async></script>
 <script type="text/javascript" src="https://analytics.ahrefs.com/analytics.js" data-key="65LXpG9qPXZ91m/BgZ6YpA" ></script>
 <script type="text/javascript" id="google_gtagjs-js-after">
-
 	/* <![CDATA[ */
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
