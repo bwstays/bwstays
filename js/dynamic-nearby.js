@@ -195,7 +195,7 @@ function createPlaceCard(place) {
                                 </span>
                             </div>
                             <small class="distance-text" style="color: #a8a8a8;">
-                                <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: <span class="text-warning">${place.distance}  km </span>
+                                <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: <span class="text-warning">${place.distance} km </span>
                             </small>
                         </div>
                     </div>
