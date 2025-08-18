@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const customIconEv = {
-    url: 'https://www.bwstays.com/assets/img/logo/pin.png',
+    url: 'https://www.bwstays.com/assets/img/logo/ev.png',
     size: new google.maps.Size(30, 30),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(20, 30)
@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		   //alert(results[i].types)
 		  let marker = new google.maps.Marker({
 			  map: map1,
+			  icon:customIconEv
 			  position: results[i].geometry.location,
 			  title: results[i].name
 			});
