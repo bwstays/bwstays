@@ -941,7 +941,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
       distance: "33",
       transport: "Public",
-      latlong: "11.822653918268028, 76.09205033862114",
+      latlong: "11.821667, 76.092222",
       map: "https://maps.app.goo.gl/V593gUux4rqrEqWaA",
       rating:"4.1",
       hrs:"2",
