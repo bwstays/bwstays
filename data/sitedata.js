@@ -601,7 +601,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       Contact: "+91-000 000 0000",
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
       distance: "18",
-      latlong: "11.700551034894234, 76.03350983777753",
+      latlong: "11.698245, 76.028686",
       map: "https://maps.app.goo.gl/uv6HuRSHrQJTb7hd7",
       hrs:"2",
       fee:"0",
