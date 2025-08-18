@@ -112,8 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 			google.maps.event.addListener(marker, 'click', () => {
-			  infowindow.setContent(results[i].name);
+			  infowindow.setContent( {content: `<strong>${results[i].name || "" }</strong><br>}`, });
 			  infowindow.open(map1, marker);
+
 			});
 	   };
      // });
