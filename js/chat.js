@@ -65,7 +65,7 @@
   }
 
   async function sendToGroq(messages){
-    const apiKey = window.GROQ_API_KEY || '';
+    const apiKey = window.GROQ_API_KEY || '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';
     if(!apiKey){
       throw new Error('Missing GROQ_API_KEY. Please set window.GROQ_API_KEY before using chat.');
     }
