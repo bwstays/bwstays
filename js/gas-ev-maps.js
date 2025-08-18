@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const lat = section.getAttribute('data-lat');
   const lng = section.getAttribute('data-lng');
-
   const centerloca = { lat, lng };
-
   const customIcon = {
     url: 'https://www.bwstays.com/assets/img/logo/pin.png',
     size: new google.maps.Size(40, 40),
@@ -47,11 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const request = {
     location: centerloca,
-    radius: 40000, // Search within a 4km radius
-    types: ['petrol pump','EV charging', 'petrol pump','gas station','fuel'],
-    min_rating: 3.5
+    radius: 40000, // Search within a 40km radius
+    types: ['petrol pump','EV charging', 'petrol pump','gas station','fuel']
   };
- const cityCircle = new google.maps.Circle({
+/* const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
         strokeOpacity: 0.8,
         strokeWeight: 2,
@@ -61,19 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
         radius: 40000 // 50 kilometers in meters
       });
   cityCircle.setMap(map1);
+  */
 
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
 
-	const filteredResults = results.filter(place =>
+	/*const filteredResults = results.filter(place =>
 	  place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10 // Example: min 10 reviews
-	);
+	);*/
 
-// Sort the filtered results by rating in descending order
-    const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
+	// Sort the filtered results by rating in descending order
+    //const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
 
 
-		 for (let i = 0; i < topResults.length; i++)
+		 for (let i = 0; i < results.length; i++)
 			{
 				//alert("rating:"+results[i].rating );
  				let detailsRequest = {
@@ -122,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					directionsRenderer.setDirections(response);
 
 					//	const distanceInMeters = response.routes[0].legs[0].distance.value;
-					//					const distanceText = response.routes[0].legs[0].distance.text;
+					//	const distanceText = response.routes[0].legs[0].distance.text;
  					directionsRenderer.setOptions({
 					  draggable: true, // Allows users to drag and modify the route path
 					  suppressMarkers: true, // Hides the default A/B markers
@@ -133,9 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					  }
 					});
   				   // directionsRenderer.setPanel(document.getElementById('directions-panel'));
-
-
-          }
+         }
     });
 
 
