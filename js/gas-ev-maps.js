@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       //topResults.forEach((result) => {
       for (let i = 0; i < results.length; i++)
       {
-		   alert(results[i].types)
+		   //alert(results[i].types)
 		  let marker = new google.maps.Marker({
 			  map: map1,
 			  position: results[i].geometry.location,
