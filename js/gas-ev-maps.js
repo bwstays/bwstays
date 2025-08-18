@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const lat = div.getAttribute('data-lat');
-  const lng = div.getAttribute('data-lng');
+  const section = document.querySelector('#fuel-places');
+  if (!section) return;
+
+  const lat = section.getAttribute('data-lat');
+  const lng = section.getAttribute('data-lng');
 
   const centerloca = { lat, lng };
 
