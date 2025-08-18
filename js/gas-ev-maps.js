@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		   //alert(results[i].types)
 		  let marker = new google.maps.Marker({
 			  map: map1,
-			  icon:customIconEv
+			  icon:customIconEv,
 			  position: results[i].geometry.location,
 			  title: results[i].name
 			});
