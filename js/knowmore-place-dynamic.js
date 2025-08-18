@@ -226,7 +226,7 @@ rightArrow.addEventListener('mouseleave', () => {
 
 
 
-$("#nearby-places h2").text("Location Nearby " + currentItemData.name);
+$("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
 
  //update the location nearby with the location name choosen
 
@@ -397,7 +397,7 @@ function updateRightColumnOnly() {
   if (nearbyPlacesTitle) {
     const currentItem = Object.values(siteData)[currentcatId].find(item => item.id === eval(currentPageId));
     if (currentItem) {
-      nearbyPlacesTitle.textContent = "Location Nearby " + currentItem.name;
+      nearbyPlacesTitle.textContent = "Locations Nearby " + currentItem.name;
     }
   }
 }
