@@ -291,6 +291,7 @@
     width: 340px;
     max-width: calc(100% - 30px);
     max-height: 70vh;
+    height: 70vh; 
     background: rgba(26, 26, 26, 0.98);
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
@@ -506,6 +507,7 @@
         left: 10px;
         width: auto;
         max-height: 75vh;
+        height: 75vh; 
     }
 
     #btn-chat {

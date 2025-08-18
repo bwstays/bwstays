@@ -1,13 +1,83 @@
 (function(){
-  const chatBtn = document.getElementById('btn-chat');
-  const chatModal = document.getElementById('chat-modal');
-  const chatClose = document.getElementById('chat-close');
-  const chatBody = document.getElementById('chat-body');
-  const chatInput = document.getElementById('chat-input');
-  const chatSend = document.getElementById('chat-send');
-  const typingEl = document.getElementById('chat-typing');
+  function createChatWidget() {
+    // Create chat button
+    const chatBtn = document.createElement('button');
+    chatBtn.type = 'button';
+    chatBtn.className = 'btn btn-primary btn-floating btn-lg';
+    chatBtn.id = 'btn-chat';
+    chatBtn.innerHTML = '<i class="fas fa-comments"></i>';
+    
+    // Create chat modal
+    const chatModal = document.createElement('div');
+    chatModal.id = 'chat-modal';
+    chatModal.className = 'chat-modal';
+    chatModal.innerHTML = `
+      <div class="chat-modal-content">
+        <div class="chat-header">
+          <h5 class="chat-title">
+            <i class="fas fa-headset me-2"></i>
+            Chat Assistant
+          </h5>
+          <button type="button" class="chat-close" id="chat-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="chat-body" id="chat-body">
+          <div class="chat-message bot-message">
+            <div class="message-avatar">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="message-content">
+              Hello! I'm your travel assistant for Wayanad. How can I help you today?
+            </div>
+          </div>
+        </div>
+        <div class="chat-footer">
+          <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message..." maxlength="500">
+            <button type="button" id="chat-send" disabled>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="chat-typing" id="chat-typing" style="display: none;">
+            <div class="typing-indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Assistant is typing...</span>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Append to body
+    document.body.appendChild(chatBtn);
+    document.body.appendChild(chatModal);
+    
+    return {
+      chatBtn: chatBtn,
+      chatModal: chatModal,
+      chatClose: document.getElementById('chat-close'),
+      chatBody: document.getElementById('chat-body'),
+      chatInput: document.getElementById('chat-input'),
+      chatSend: document.getElementById('chat-send'),
+      typingEl: document.getElementById('chat-typing')
+    };
+  }
 
-  if(!chatBtn || !chatModal) return;
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initChat);
+  } else {
+    initChat();
+  }
+
+  function initChat() {
+    const elements = createChatWidget();
+    const { chatBtn, chatModal, chatClose, chatBody, chatInput, chatSend, typingEl } = elements;
+
+    if(!chatBtn || !chatModal) return;
 
   function toggleModal(forceOpen){
     const shouldOpen = forceOpen !== undefined ? forceOpen : !chatModal.classList.contains('open');
@@ -107,7 +177,7 @@
 
   async function sendToGroq(messages){
     // Expect user to set window.GROQ_API_KEY somewhere safely (e.g., injected at runtime)
-  const apiKey = window.GROQ_API_KEY || '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';
+    const apiKey = window.GROQ_API_KEY;
     if(!apiKey){
       throw new Error('Missing GROQ_API_KEY. Please set window.GROQ_API_KEY before using chat.');
     }
@@ -166,7 +236,6 @@
       chatHistory.push({ role: 'assistant', content: reply });
     }catch(err){
       console.error(err);
-      // Provide a helpful local fallback instead of a generic error
       const fallback = localFallbackAnswer(text);
       appendMessage('assistant', fallback);
     }finally{
@@ -182,4 +251,4 @@
       handleSend();
     }
   });
-})();
+}})();
