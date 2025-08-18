@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const section = document.querySelector('#fuel-places');
-  if (!section) return;
 
-  const centerAttr = section.getAttribute('data-center');
-  if (!centerAttr) return;
-  const [lat, lng] = centerAttr.split(',').map(Number);
+  const lat = div.getAttribute('data-lat');
+  const lng = div.getAttribute('data-lng');
+
   const centerloca = { lat, lng };
 
   const customIcon = {
@@ -21,14 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
-  var map1 = new google.maps.Map(document.getElementById('foodmap'), {
+  var map1 = new google.maps.Map(document.getElementById('fuel-places'), {
     zoom: 13,
     disableDefaultUI: true,
     zoomControl: true,
     streetViewControl: true,
     fullscreenControl: true,
     center: centerloca ,
-     mapId: "foodmapdata"
+     mapId: "fuelmapdata"
     });
 
 
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         radius: 40000 // 50 kilometers in meters
       });
   cityCircle.setMap(map1);
-  const foodPlacesContainer = document.getElementById('fuel');
 
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
