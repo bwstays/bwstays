@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
-  var map1 = new google.maps.Map(document.getElementById('fuel-places'), {
+  var map1 = new google.maps.Map(document.getElementById('fuel'), {
     zoom: 13,
     disableDefaultUI: true,
     zoomControl: true,
