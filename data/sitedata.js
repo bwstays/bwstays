@@ -399,7 +399,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
      rating:"4.3",
       hrs:"2",
       fee:"0",
-      latlong: "11.62062222750829, 76.1738547832114",
+      latlong: "11.6182113, 76.1722152",
       map: "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
 content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
 amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
