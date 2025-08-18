@@ -112,7 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			  title: results[i].name
 			});
 			google.maps.event.addListener(marker, 'click', () => {
-			  infowindow.setContent( {content: `<strong>${results[i].name || "" }</strong><br>}`, });
+//			  infowindow.setContent( {content: `<strong>${results[i].name || "" }</strong><br>}`, });
+			  infowindow.setContent(  results[i].name  );
 			  infowindow.open(map1, marker);
 
 			});
