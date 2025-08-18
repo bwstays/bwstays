@@ -3,9 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('#fuel-places');
   if (!section) return;
 
-  const lat = section.getAttribute('data-lat');
-  const lng = section.getAttribute('data-lng');
+
+ const centerAttr = section.getAttribute('data-center');
+  if (!centerAttr) return;
+  const [lat, lng] = centerAttr.split(',').map(Number);
   const centerloca = { lat, lng };
+
   const customIcon = {
     url: 'https://www.bwstays.com/assets/img/logo/pin.png',
     size: new google.maps.Size(40, 40),
