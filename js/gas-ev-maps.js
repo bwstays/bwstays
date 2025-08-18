@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const customIconEv = {
     url: 'https://www.bwstays.com/assets/img/icons/ev.png',
-    size: new google.maps.Size(30, 30),
+    size: new google.maps.Size(30, 25),
     origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(20, 30)
+    anchor: new google.maps.Point(40, 50)
   };
 
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
     size: new google.maps.Size(40, 40),
     origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(40, 40)
+    anchor: new google.maps.Point(20, 40)
   };
 
   var map1 = new google.maps.Map(document.getElementById('fuel'), {
