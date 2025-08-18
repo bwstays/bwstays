@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			  position: results[i].geometry.location,
 			  title: results[i].name
 			});
-
 			google.maps.event.addListener(marker, 'click', () => {
 			  infowindow.setContent( {content: `<strong>${results[i].name || "" }</strong><br>}`, });
 			  infowindow.open(map1, marker);
