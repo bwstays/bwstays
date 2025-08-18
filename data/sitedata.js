@@ -907,7 +907,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
            holidays: "Sun",
            timing:[ "08:00-17:30"],
            Contact: "+91-000 000 0000",
-           latlong: "11.689935582325285, 76.01938248001923",
+           latlong: "11.6788328, 76.0221398",
           map: "https://maps.app.goo.gl/9c6PX7YqCDLEAp2s7",
      	   seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
            distance: "17",
