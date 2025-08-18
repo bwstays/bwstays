@@ -6,7 +6,8 @@ var bwlocations = [
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-rippon-tea-estate-plantation-wayanad.html" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><span>10km</span><a target="_blank" href="'+iconURLPrefix+'bw-rippon-tea-estate-plantation-wayanad.html" title="Shanthinatha Swamy Jain Temple"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/heritage/bw-stays-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6788328, 76.0221398, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
-['<h6><a target="_blank" href="'+iconURLPrefix+'bw-puliyarmala-trucking-wayanad.html" title="Puliyarmala">Puliyarmala</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-puliyarmala-trucking-wayanad.html" title="Puliyarmala"><img title="Black and White Stays Service Villa"   alt="Black and White Stays Wayanad"  src="'+iconURLPrefix+'assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp" width="300" ></a>', 11.6268407, 76.08420612038587, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
+['<h6><a target="_blank"
+href="'+iconURLPrefix+'bw-puliyarmala-trucking-wayanad.html" title="Puliyarmala">Puliyarmala</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-puliyarmala-trucking-wayanad.html" title="Puliyarmala"><img title="Black and White Stays Service Villa"   alt="Black and White Stays Wayanad"  src="'+iconURLPrefix+'assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp" width="300" ></a>', 11.6268407, 76.08420612038587, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-tea-museum-wayanad.html" title="Tea Museum">Tea Museum</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-tea-museum-wayanad.html" title="Tea Museum"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/museum/bw-stays-wayanad-tea-museum.webp" width="300" ></a>', 11.600747990313033, 76.0148553711638, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 
@@ -118,12 +119,11 @@ var bwlocations = [
 
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Zipline">Longest Zipline</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Longest Zipline"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp" width="300" ></a>', 11.6076643, 76.1350769, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
-],
+
 
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm">Pepper Farm</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-pepper-farm-wayanad.webp" width="300" ></a>', 11.69283527987838, 76.1911296389339, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Honey Museaum">Honey Museaum</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-honey-museum-wayanad.webp" width="300" ></a>',  11.5375175, 76.0434972, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
-],
 ];
 var map = new google.maps.Map(document.getElementById('mapall'), {
   zoom: 9.999,
