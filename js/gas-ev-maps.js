@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
     size: new google.maps.Size(40, 40),
     origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(20, 40)
+    anchor: new google.maps.Point(40, 40)
   };
 
   var map1 = new google.maps.Map(document.getElementById('fuel'), {
