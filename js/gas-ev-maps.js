@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const customIconEv = {
-    url: 'https://www.bwstays.com/assets/img/icons/ev.png',
-    size: new google.maps.Size(25, 25),
+ url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
+    size: new google.maps.Size(40, 40),
     origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(40, 50)
+    anchor: new google.maps.Point(20, 40)
   };
 
 
