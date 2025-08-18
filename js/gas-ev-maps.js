@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const request = {
     location: centerloca,
     radius: 40000, // Search within a 40km radius
-    types: ['petrol pump','EV charging', 'petrol pump','gas station','fuel']
+    types: ['gas_station','EV charging','fuel']
   };
 /* const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
