@@ -191,11 +191,11 @@ function createPlaceCard(place) {
                             <div class="text-white mb-1" style="font-size: 0.85rem;">Time: ${place.timing}</div>
                             <div class="mb-1">
                                 <span class="text-white" style="font-size: 0.85rem;">
-                                    <i class="fas fa-star" style="color: #64a19d;"></i> Rating: ${place.rating}
+                                    <i class="fas fa-star" style="color: #64a19d;"></i> Rating: <span class="text-warning">${place.rating}</span>
                                 </span>
                             </div>
                             <small class="distance-text" style="color: #a8a8a8;">
-                                <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: ${place.distance}  km
+                                <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance: <span class="text-warning">${place.distance}  km </span>
                             </small>
                         </div>
                     </div>
