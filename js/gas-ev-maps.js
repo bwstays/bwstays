@@ -9,12 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const [lat, lng] = centerAttr.split(',').map(Number);
   const centerloca = { lat, lng };
 
-  const customIcon = {
+  const customIconPump = {
     url: 'https://www.bwstays.com/assets/img/logo/pin.png',
-    size: new google.maps.Size(40, 40),
+    size: new google.maps.Size(30, 30),
     origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(20, 40)
+    anchor: new google.maps.Point(20, 30)
   };
+
+  const customIconEv = {
+    url: 'https://www.bwstays.com/assets/img/logo/pin.png',
+    size: new google.maps.Size(30, 30),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(20, 30)
+  };
+
 
   const mainLocationIcon = {
     url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
@@ -49,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const request = {
     location: centerloca,
     radius: 40000, // Search within a 40km radius
-    types: ['gas_station','electric_vehicle_charging_station','EV']
+    types: ['gas_station','electric_vehicle_charging_station','Electric vehicle charging station']
   };
 /* const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
@@ -96,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       //topResults.forEach((result) => {
       for (let i = 0; i < results.length; i++)
       {
+		   alert(results[i].types)
 		  let marker = new google.maps.Marker({
 			  map: map1,
 			  position: results[i].geometry.location,
