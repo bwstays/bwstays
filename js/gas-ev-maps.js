@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   var map1 = new google.maps.Map(document.getElementById('fuel'), {
-    zoom: 13,
+    zoom: 9,
     disableDefaultUI: true,
     zoomControl: true,
     streetViewControl: true,
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const request = {
     location: centerloca,
     radius: 40000, // Search within a 40km radius
-    types: ['gas_station','electric_vehicle_charging_station']
+    types: ['electric_vehicle_charging_station','gas_station']
   };
 /* const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
