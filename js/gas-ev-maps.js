@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				//alert("rating:"+results[i].rating );
  				let detailsRequest = {
 				  placeId: results[i].place_id,
- 		 		  fields: ['name','vicinity', 'types','geometry.location','geometry','displayName']
+ 		 		  fields: ['name','vicinity', 'types','geometry.location','geometry']
 
 				};
 				service.getDetails(detailsRequest, function (place, status) {
