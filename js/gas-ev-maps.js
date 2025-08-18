@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
 						{
 						const latitude = place.geometry.location.lat();
 						const longitude = place.geometry.location.lng();
-
 				  }
 			      }
         		});
