@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const section = document.querySelector('#food-places');
+  const section = document.querySelector('#fuel-places');
   if (!section) return;
 
   const centerAttr = section.getAttribute('data-center');
