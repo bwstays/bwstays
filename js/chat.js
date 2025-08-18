@@ -13,9 +13,15 @@
     const shouldOpen = forceOpen !== undefined ? forceOpen : !chatModal.classList.contains('open');
     if(shouldOpen){
       chatModal.classList.add('open');
+      // Prevent background page from scrolling when chat is open
+      document.body.dataset.prevOverflow = document.body.style.overflow || '';
+      document.body.style.overflow = 'hidden';
       setTimeout(()=> chatInput?.focus(), 50);
     } else {
       chatModal.classList.remove('open');
+      // Restore background scroll
+      document.body.style.overflow = document.body.dataset.prevOverflow || '';
+      delete document.body.dataset.prevOverflow;
     }
   }
 
@@ -64,6 +70,41 @@
     return keywords.some(k => t.includes(k));
   }
 
+  // Simple local fallback when AI is unreachable
+  function localFallbackAnswer(userText){
+    const t = (userText || '').toLowerCase();
+
+    // Intent hints
+    const wantsStay = t.includes('stay') || t.includes('room') || t.includes('villa') || t.includes('homestay') || t.includes('resort');
+    const wantsPrice = t.includes('price') || t.includes('rate') || t.includes('cost');
+    const wantsAvail = t.includes('availability') || t.includes('available') || t.includes('date');
+    const wantsCheckin = t.includes('check-in') || t.includes('checkin') || t.includes('check out') || t.includes('checkout');
+    const wantsAttractions = t.includes('attraction') || t.includes('things to do') || t.includes('waterfall') || t.includes('trek') || t.includes('temple');
+
+    const parts = [];
+
+    if(wantsStay){
+      parts.push('For stays in Wayanad, you can explore our villas and homestays here:');
+      parts.push('- Villa options: villa1.html, villa2.html, villa3.html');
+    }
+    if(wantsAvail || wantsPrice){
+      parts.push('For live prices and availability, please use our booking page: bwstays-booking.html');
+    }
+    if(wantsCheckin){
+      parts.push('Standard check-in is typically 2 PM and check-out is 11 AM. Exact timings vary by property.');
+    }
+    if(wantsAttractions){
+      parts.push('Looking for places to visit? Check Discover section on the homepage or the attractions listed across the site.');
+    }
+
+    if(parts.length === 0){
+      parts.push('I couldn’t reach our AI right now. How can I help with Wayanad stays, availability, prices, or nearby attractions?');
+    }
+
+    parts.push('If you still need assistance, please drop a message in the Contact section on the homepage.');
+    return parts.join('\n');
+  }
+
   async function sendToGroq(messages){
     const apiKey = window.GROQ_API_KEY || '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';
     if(!apiKey){
@@ -109,7 +150,7 @@
     chatInput.value = '';
     chatSend.disabled = true;
 
-    // Off-topic guard: refuse gracefully without calling the API
+    // Off-topic guard: refuse gracefully without calling the AI
     if(!isOnTopic(text)){
       appendMessage('assistant', 'I can help with BWStays and Wayanad-related questions only (stays, attractions, travel info). Please ask something related to BWStays/Wayanad.');
       chatSend.disabled = false;
@@ -124,9 +165,12 @@
       chatHistory.push({ role: 'assistant', content: reply });
     }catch(err){
       console.error(err);
-      appendMessage('assistant', 'There was an error contacting the AI. Please try again later.');
+      // Provide a helpful local fallback instead of a generic error
+      const fallback = localFallbackAnswer(text);
+      appendMessage('assistant', fallback);
     }finally{
       typingEl.style.display = 'none';
+      chatSend.disabled = false;
     }
   }
 

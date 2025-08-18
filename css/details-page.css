@@ -280,6 +280,9 @@ border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 .chat-body {
   padding: 12px; overflow-y: auto; flex: 1; background: #1a1a1a;
   min-height: 0; /* Enables flex child to shrink below content size */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
 }
 
 .chat-message { display: flex; gap: 8px; margin-bottom: 10px; }
