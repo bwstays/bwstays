@@ -47,6 +47,7 @@
     chatBody.scrollTop = chatBody.scrollHeight;
   }
 
+  // Guardrail: only respond to BWStays/Wayanad-related questions
   function isOnTopic(text){
     const t = (text || '').toLowerCase();
     const keywords = [
@@ -62,18 +63,18 @@
     ];
     return keywords.some(k => t.includes(k));
   }
-  
+
   async function sendToGroq(messages){
-    const apK = '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';
-    if(!apk){
-      throw new Error('Missing . Please set window. before using chat.');
+    const apiKey = window.GROQ_API_KEY || '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';
+    if(!apiKey){
+      throw new Error('Missing GROQ_API_KEY. Please set window.GROQ_API_KEY before using chat.');
     }
 
     const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apk}`
+        'Authorization': `Bearer ${apiKey}`
       },
       body: JSON.stringify({
         model: 'openai/gpt-oss-120b',
