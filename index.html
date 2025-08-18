@@ -94,10 +94,10 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"  href="https://www.bwstays.com/blogs/feed.xml" />
 -->
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="https://www.bwstays.com/css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
-<link href="https://www.bwstays.com/css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
-<link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
-<link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
+<link href="css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
+<link href="css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
 <!-- <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
 <link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  /> -->
 <!-- <link href="css/sidebar.css" rel="stylesheet"   type='text/css' media='all'  /> -->
@@ -853,6 +853,53 @@ setTimeout(ldinsp, 0);
     <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Chat Icon Button -->
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-chat">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Modal -->
+    <div id="chat-modal" class="chat-modal">
+        <div class="chat-modal-content">
+            <div class="chat-header">
+                <h5 class="chat-title">
+                    <i class="fas fa-headset me-2"></i>
+                    Chat Assistant
+                </h5>
+                <button type="button" class="chat-close" id="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="message-content">
+                        Hello! I'm your travel assistant for Wayanad. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type your message..." maxlength="500">
+                    <button type="button" id="chat-send" disabled>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="chat-typing" id="chat-typing" style="display: none;">
+                    <div class="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span>Assistant is typing...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Jquery party plugin JS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
@@ -983,6 +1030,7 @@ setTimeout(ldinsp, 0);
 
   <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/61ca2eec7dff3025fb51cf16daffc31e.js"></script>
 
+  <script src="js/chat.js"></script>
 
 
  </body>
