@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const centerloca = { lat, lng };
 
   const customIconPump = {
-    url: 'https://www.bwstays.com/assets/img/logo/pin.png',
+    url: 'https://www.bwstays.com/assets/img/icons/pin.png',
     size: new google.maps.Size(30, 30),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(20, 30)
   };
 
   const customIconEv = {
-    url: 'https://www.bwstays.com/assets/img/logo/ev.png',
+    url: 'https://www.bwstays.com/assets/img/icons/ev.png',
     size: new google.maps.Size(30, 30),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(20, 30)
