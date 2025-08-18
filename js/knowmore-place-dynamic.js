@@ -289,7 +289,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
               <h5 class="card-title text-white">${item.name}</h5>
               <div class="rating mb-2">
                   <span class="text-warning">★ ${item.rating}</span>
-                  <span class="text-white-50 ml-2">${item.distance}km from Kalpetta</span>
+                  <span class="text-white-50 ml-2 "> <span class="text-warning">${item.distance}km </span> from Kalpetta</span>
 
                     <span class="text-white-50 ml-2"><a href="${currentItemData.map}" target="_new" class="text-decoration-none text-white">
 				  			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
