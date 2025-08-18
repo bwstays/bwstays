@@ -214,6 +214,18 @@ border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+#fuel 
+{
+
+ height: 400px;max-width: 95%;
+          width: 100%;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 
 /* Chat icon and modal styles */
