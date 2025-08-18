@@ -990,7 +990,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
       distance: "17",
       transport: "Public",
-      latlong: "11.55775562232221, 76.08725353361567",
+      latlong: "11.5472138, 76.0827242",
       map: "https://maps.app.goo.gl/ivaAp162Cc3bVmpX6",
       rating:"4.6",
       hrs:"3",
