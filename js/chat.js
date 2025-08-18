@@ -64,10 +64,7 @@
   }
   
   async function sendToGroq(messages){
-    const apK = '';
-    if(!apk){
-      throw new Error('Missing . Please set window. before using chat.');
-    }
+    
 
     const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
