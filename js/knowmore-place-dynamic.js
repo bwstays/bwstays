@@ -279,7 +279,6 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
 
       const itemImages = Array.isArray(item.image) ? item.image : [item.image];
       const firstImage = itemImages[0];
-
       card.innerHTML = `
           <div class="card-img-container" style="height: 200px; overflow: hidden;">
               <img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"

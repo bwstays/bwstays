@@ -158,7 +158,6 @@ function renderNearbyPlaces() {
         }
         return createPlaceCard(place);
     }).join('');
-
     // Update the container with the new content
     nearbyCardsContainer.innerHTML = placesHTML;
 }
