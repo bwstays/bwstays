@@ -107,7 +107,7 @@
 
   async function sendToGroq(messages){
     // Expect user to set window.GROQ_API_KEY somewhere safely (e.g., injected at runtime)
-    const apiKey = window.GROQ_API_KEY || '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';
+  const apiKey = window.GROQ_API_KEY || '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';
     if(!apiKey){
       throw new Error('Missing GROQ_API_KEY. Please set window.GROQ_API_KEY before using chat.');
     }
