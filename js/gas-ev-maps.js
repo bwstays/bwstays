@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const customIconEv = {
     url: 'https://www.bwstays.com/assets/img/icons/ev.png',
-    size: new google.maps.Size(30, 25),
+    size: new google.maps.Size(25, 25),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(40, 50)
   };
