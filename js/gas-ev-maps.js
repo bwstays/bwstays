@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   var map1 = new google.maps.Map(document.getElementById('fuel'), {
-    zoom: 9,
+    zoom: 11,
     disableDefaultUI: true,
     zoomControl: true,
     streetViewControl: true,
