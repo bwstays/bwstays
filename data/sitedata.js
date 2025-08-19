@@ -3,7 +3,7 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 const siteData = {
   plantation: [
 {
-      id: 90,
+      id: 80,
       name: "Peria tea plantation",
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: [iconURLPrefix+"assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp",iconURLPrefix+"assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp",iconURLPrefix+"assets/img/plantation/bw-stays-tea-kalpetta-wayanad.webp",iconURLPrefix+"assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp",iconURLPrefix+"assets/img/plantation/bw-stays-estate-green-stay-kalpetta-wayanad.webp"],
@@ -338,7 +338,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
   museums: [
 
  {
-      id: 92,
+      id: 52,
       name: "Gandhi Museaum",
       description: "Gandhi Museaum.",
       image: [iconURLPrefix+"assets/img/museum/bw-stays-wayanad-tea-museum.webp"],
@@ -478,7 +478,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
   ],
   romantic: [
 {
-      id: 43,
+      id: 22,
       name: "Mullanpara View Point",
       description: "Mullanpara View Point.",
       image: [iconURLPrefix+"assets/img/romantic/bw-staycation-karapuzha-dam.webp",iconURLPrefix+"assets/img/romantic/bw-service-apartment-wayanad-karappuzha-dam.webp"],
@@ -1627,8 +1627,8 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
 
  food: [
  {
-       id: 91,
-       name: "All Food Spots near Kalpetta",
+       id: 60,
+       name: "Kalpetta Food Spots",
        description: "Try authentic Kerala dishes at local eateries and food stalls at kalpetta.",
        image: [iconURLPrefix+"assets/img/food/bw-kalpetta-food-drinks-collage-all-images.webp"],
        holidays: "None",
