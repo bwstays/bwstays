@@ -497,11 +497,8 @@ aliases: [],
 content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
 amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
 tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
-
-
        type: "Romantic Spots",
       knowmore: iconURLPrefix+"bw-karapuzha-dam-romantic-wayanad.html",
-
     duration : "1-2 Hours",
 },
     {
