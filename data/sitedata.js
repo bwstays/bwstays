@@ -2,6 +2,30 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 
 const siteData = {
   plantation: [
+{
+      id: 90,
+      name: "Peria tea plantation",
+      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      image: [iconURLPrefix+"assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp",iconURLPrefix+"assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp",iconURLPrefix+"assets/img/plantation/bw-stays-tea-kalpetta-wayanad.webp",iconURLPrefix+"assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp",iconURLPrefix+"assets/img/plantation/bw-stays-estate-green-stay-kalpetta-wayanad.webp"],
+      holidays: "Sun",
+      timing:[ "09:00-17:00"],
+      Contact: "+91-000 000 0000",
+	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+      distance: "11",
+      transport: "Public",
+	  latlong: "11.534836134024715, 76.17498437471619",
+      map: "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
+      rating:"4.5",
+      hrs:"2",
+      fee:"0",
+aliases: [],
+content: "Immerse yourself in aromatic spice plantations while staying in our cozy mountain cottage. Perfect for nature lovers and those interested in learning about Kerala's famous spices. Includes guided plantation walks and spice processing demonstrations.",
+amenities: ["Mountain Views", "Spice Tours", "Nature Walks", "Organic Kitchen"],
+tags: ["tea plantation", "wayanad", "mountain", "cottage", "nature", "spice processing", "organic"],
+      type: "Plantations",
+      knowmore: iconURLPrefix+"bw-rippon-tea-estate-plantation-wayanad.html",
+      duration : "1-2 Hours",
+    },
     {
       id: 61,
       name: "Rippon Tea estate",
@@ -313,7 +337,60 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
  ],
   museums: [
 
+ {
+      id: 92,
+      name: "Gandhi Museaum",
+      description: "Gandhi Museaum.",
+      image: [iconURLPrefix+"assets/img/museum/bw-stays-wayanad-tea-museum.webp"],
+      holidays: "Sun",
+      timing:[ "09:00-17:00"],
+      Contact: "+91-000 000 0000",
+	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+		distance: "12",
+		transport: "Public",
+		rating:"4.3",
+		hrs:"2",
+		fee:"0",
+aliases: [],
+		latlong: "11.600747990313033, 76.0148553711638",
+		map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
 
+content: "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
+amenities: ["WiFi", "Villa Architecture", "museums","Central Location", "Guided Tours"],
+tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "jain temple", "kerala dishes"],
+
+		type: "Museums & Crafts",
+		knowmore: iconURLPrefix+"bw-tea-museum-wayanad.html",
+
+    duration : "1-2 Hours",
+},
+ {
+      id: 89,
+      name: "Kungichira Museum & Chira",
+      description: "Kungichira Museum & Chira.",
+      image: [iconURLPrefix+"assets/img/museum/bw-stays-wayanad-tea-museum.webp"],
+      holidays: "Sun",
+      timing:[ "09:00-17:00"],
+      Contact: "+91-000 000 0000",
+	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+		distance: "12",
+		transport: "Public",
+		rating:"4.3",
+		hrs:"2",
+		fee:"0",
+aliases: [],
+		latlong: "11.600747990313033, 76.0148553711638",
+		map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
+
+content: "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
+amenities: ["WiFi", "Villa Architecture", "museums","Central Location", "Guided Tours"],
+tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "jain temple", "kerala dishes"],
+
+		type: "Museums & Crafts",
+		knowmore: iconURLPrefix+"bw-tea-museum-wayanad.html",
+
+    duration : "1-2 Hours",
+},
     {
       id: 26,
       name: "Tea Museum",
@@ -400,6 +477,33 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
 
   ],
   romantic: [
+{
+      id: 43,
+      name: "Mullanpara View Point",
+      description: "Mullanpara View Point.",
+      image: [iconURLPrefix+"assets/img/romantic/bw-staycation-karapuzha-dam.webp",iconURLPrefix+"assets/img/romantic/bw-service-apartment-wayanad-karappuzha-dam.webp"],
+      holidays: "Sun",
+      timing:[ "09:00-18:00"],
+      Contact: "+91-000 000 0000",
+	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+      distance: "16",
+       transport: "Public",
+     rating:"4.3",
+      hrs:"2",
+      fee:"0",
+aliases: [],
+      latlong: "11.6182113, 76.1722152",
+      map: "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
+content: "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+amenities: ["Mountain View", "Private Pool", "Yoga Classes", "Ayurvedic Spa"],
+tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurvedic", "spice shops"],
+
+
+       type: "Romantic Spots",
+      knowmore: iconURLPrefix+"bw-karapuzha-dam-romantic-wayanad.html",
+
+    duration : "1-2 Hours",
+},
     {
       id: 43,
       name: "Karapuzha Dam",
@@ -965,6 +1069,31 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
 
   trucking: [
 
+ {
+      id: 87,
+      name: "Kolagapara",
+      description: "Kolagapara.",
+      image: [iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad-2.webp",iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad.webp"],
+      holidays: "Sun",
+      timing:[ "09:00-16:00"],
+      Contact: "+91-000 000 0000",
+	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+      distance: "33",
+      transport: "Public",
+      latlong: "11.821667, 76.092222",
+      map: "https://maps.app.goo.gl/V593gUux4rqrEqWaA",
+      rating:"4.1",
+      hrs:"2",
+      fee:"0",
+aliases: [],
+content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
+tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
+       type: "Trucking",
+      knowmore: iconURLPrefix+"bw-kuruwa-deep-trucking-wayanad.html",
+
+    duration : "1-2 Hours",
+},
 
     {
       id: 15,
@@ -1501,7 +1630,7 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
 
  food: [
  {
-       id: 90,
+       id: 91,
        name: "All Food Spots near Kalpetta",
        description: "Try authentic Kerala dishes at local eateries and food stalls at kalpetta.",
        image: [iconURLPrefix+"assets/img/food/bw-kalpetta-food-drinks-collage-all-images.webp"],
@@ -1694,7 +1823,7 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
 
  shopping: [
   {
-       id: 85,
+       id: 86,
        name: "Ali's wayanadan natural honey",
        description: "Ali's Wayanadan Natural Honey is a brand of honey sourced from the Wayanad region of Kerala.",
        image: [iconURLPrefix+"assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.webp"],
