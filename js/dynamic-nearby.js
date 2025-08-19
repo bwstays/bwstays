@@ -95,6 +95,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const distances = locations.distances[locationId];
     for (let i = 1; i <= Object.keys(locations.names).length; i++) {
 
+alert(distances[i - 1] +" locationId:"+locationId )
         if ( distances[i - 1]!=""  &&  distances[i - 1] <= maxDistance && i != locationId) {
             // alert(locations.names[i]);
             nearbyPlaces.push({
