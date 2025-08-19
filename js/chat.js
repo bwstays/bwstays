@@ -356,7 +356,7 @@
 
       if(wantsStay){
         parts.push('For comfortable stays in Wayanad, explore our handpicked villas and homestays. Each offers the perfect base for your Wayanad adventures.');
-        parts.push('- Villa options: villa1.html, villa2.html, villa3.html');
+        parts.push('- Villa options: villa1.html, villa2.html');
       }
       if(wantsAvail || wantsPrice){
         parts.push('For real-time prices and availability, visit our booking page: https://www.bwstays.com/bwstays-booking.html');
