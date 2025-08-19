@@ -116,7 +116,7 @@ const locations = {
 		74: "Pepper Farm",
 		75: "Muneeswaran Kunnu View point",
 		76: "Bamboo Park",
-		77: "Shopping"
+		77: "Shopping",
 		78: "zipline",
 		79: "Black & White ( Kalpetta)",
 		80: "Manathavady",
