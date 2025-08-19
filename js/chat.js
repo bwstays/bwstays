@@ -3,26 +3,26 @@
   let knowledgeBase = [];
   let knowledgeLoaded = false;
 
-  // Load and parse knowledge base from llms-full.txt
+  // Load and parse knowledge base from llm-full.txt
   async function loadKnowledgeBase() {
     if (knowledgeLoaded) return;
-    
+
     try {
-      const response = await fetch('/llms-full.txt');
+      const response = await fetch('/llm-full.txt');
       if (!response.ok) throw new Error('Failed to load knowledge base');
-      
+
       const text = await response.text();
-      
+
       // Split into meaningful chunks based on headings and content sections
       const chunks = [];
       const sections = text.split(/(?=##\s)|(?=###\s)|(?=####\s)|(?=#####\s)/);
-      
+
       sections.forEach((section, index) => {
         if (section.trim().length < 50) return; // Skip tiny sections
-        
+
         // Further split large sections into paragraphs
         const paragraphs = section.split(/\n\s*\n/);
-        
+
         paragraphs.forEach(paragraph => {
           const cleanParagraph = paragraph.trim();
           if (cleanParagraph.length > 30) { // Minimum useful content length
@@ -36,7 +36,7 @@
           }
         });
       });
-      
+
       knowledgeBase = chunks;
       knowledgeLoaded = true;
       console.log(`Knowledge base loaded: ${chunks.length} chunks`);
@@ -49,31 +49,31 @@
   function extractKeyTerms(text) {
     const terms = new Set();
     const cleanText = text.toLowerCase();
-    
+
     // BWStays specific terms
     const bwTerms = ['bwstays', 'bw stays', 'black and white stays'];
     bwTerms.forEach(term => {
       if (cleanText.includes(term)) terms.add(term);
     });
-    
+
     // Location terms
     const locations = ['wayanad', 'kalpetta', 'vythiri', 'lakkidi', 'sultan bathery', 'mananthavady'];
     locations.forEach(loc => {
       if (cleanText.includes(loc)) terms.add(loc);
     });
-    
+
     // Attraction categories
     const categories = ['waterfall', 'temple', 'dam', 'lake', 'wildlife', 'plantation', 'museum', 'heritage', 'romantic', 'trekking', 'trucking', 'cycling', 'bamboo', 'rafting', 'food', 'restaurant'];
     categories.forEach(cat => {
       if (cleanText.includes(cat)) terms.add(cat);
     });
-    
+
     // Accommodation terms
     const accommodation = ['villa', 'homestay', 'resort', 'stay', 'booking', 'room', 'amenities', 'check-in', 'checkout'];
     accommodation.forEach(acc => {
       if (cleanText.includes(acc)) terms.add(acc);
     });
-    
+
     return Array.from(terms);
   }
 
@@ -150,13 +150,13 @@
   }
   function searchKnowledgeBase(query, maxChunks = 3) {
     if (!knowledgeLoaded || knowledgeBase.length === 0) return [];
-    
+
     const queryLower = query.toLowerCase();
     const queryTerms = extractKeyTerms(query);
-    
+
     const scoredChunks = knowledgeBase.map(chunk => {
       let score = 0;
-      
+
       if (chunk.content.toLowerCase().includes(queryLower)) {
         score += 10;
       }
@@ -169,15 +169,15 @@
           score += 3;
         }
       });
-      
+
       // Boost for shorter, more focused content
       if (chunk.content.length < 500) {
         score += 1;
       }
-      
+
       return { ...chunk, score };
     });
-    
+
     // Return top scoring, trimmed chunks
     return scoredChunks
       .filter(chunk => chunk.score > 0)
@@ -193,7 +193,7 @@
     chatBtn.className = 'btn btn-primary btn-floating btn-lg';
     chatBtn.id = 'btn-chat';
     chatBtn.innerHTML = '<i class="fas fa-comments"></i>';
-    
+
     // Create chat modal
     const chatModal = document.createElement('div');
     chatModal.id = 'chat-modal';
@@ -237,11 +237,11 @@
         </div>
       </div>
     `;
-    
+
     // Append to body
     document.body.appendChild(chatBtn);
     document.body.appendChild(chatModal);
-    
+
     return {
       chatBtn: chatBtn,
       chatModal: chatModal,
@@ -386,9 +386,9 @@
       // Enhance system prompt with relevant context from knowledge base
       const relevantChunks = searchKnowledgeBase(userQuery, 2);
       let enhancedSystemPrompt = messages[0].content;
-      
+
       if (relevantChunks.length > 0) {
-        enhancedSystemPrompt += '\n\nRelevant information from BWStays knowledge base:\n' + 
+        enhancedSystemPrompt += '\n\nRelevant information from BWStays knowledge base:\n' +
           relevantChunks.map((chunk, i) => `[Context ${i + 1}]: ${chunk}`).join('\n\n');
       }
 
@@ -397,7 +397,7 @@
       if (detectedPopular) {
         enhancedSystemPrompt += `\n\nFor this query about ${detectedPopular}, include a short section titled "Local insights from BWStays" with 2–4 concise bullet points on: best time windows, how to avoid crowds, and smart nearby spot combinations. Keep tone warm, local-expert, and on-brand.`;
       }
-      
+
       // Create modified messages array with enhanced system prompt
       const enhancedMessages = [
         { role: 'system', content: enhancedSystemPrompt },
