@@ -105,8 +105,6 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
             });
         }
     }
-
-
     return nearbyPlaces.sort((a, b) => a.distance - b.distance);
 }
 
