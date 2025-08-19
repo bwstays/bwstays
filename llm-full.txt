@@ -2072,7 +2072,7 @@ Sun
 
 ###### Sagar Food Point
 
-[Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5001064,76.1595732)
+[Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5001064,76.1595732)
 
 Restaurant
 
@@ -2081,19 +2081,19 @@ Restaurant
 
 ###### Badriya Hotel
 
-[F5X5+WRW, Chooralmala, Meppadi](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.4998513,76.1595791)
+[F5X5+WRW, Chooralmala, Meppadi](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.4998513,76.1595791)
 
 Restaurant
 
 ###### Chulicka - Boche 1000 acre
 
-[G527+JHG, Chooralmala Rd, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.501561,76.1639672)
+[G527+JHG, Chooralmala Rd, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.501561,76.1639672)
 
 Restaurant
 
 ###### Chateau Woods
 
-[Sentinel Rock Estates Road, Chateau Woods Rd, Chooralmala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5031559,76.1746292)
+[Sentinel Rock Estates Road, Chateau Woods Rd, Chooralmala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5031559,76.1746292)
 
 Restaurant
 
@@ -2102,7 +2102,7 @@ Restaurant
 
 ###### Hotel River View
 
-[G525+66W, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5006004,76.1580852)
+[G525+66W, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5006004,76.1580852)
 
 Restaurant
 
@@ -9106,7 +9106,7 @@ Distance: 20 km
 
 ###### Chateau Woods
 
-[Sentinel Rock Estates Road, Chateau Woods Rd, Chooralmala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5031559,76.1746292)
+[Sentinel Rock Estates Road, Chateau Woods Rd, Chooralmala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5031559,76.1746292)
 
 Restaurant
 
@@ -9115,7 +9115,7 @@ Restaurant
 
 ###### Sagar Food Point
 
-[Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5001064,76.1595732)
+[Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5001064,76.1595732)
 
 Restaurant
 
@@ -9124,7 +9124,7 @@ Restaurant
 
 ###### Hotel River View
 
-[G525+66W, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5006004,76.1580852)
+[G525+66W, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5006004,76.1580852)
 
 Restaurant
 
@@ -9133,13 +9133,13 @@ Restaurant
 
 ###### Badriya Hotel
 
-[F5X5+WRW, Chooralmala, Meppadi](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.4998513,76.1595791)
+[F5X5+WRW, Chooralmala, Meppadi](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.4998513,76.1595791)
 
 Restaurant
 
 ###### Chulicka - Boche 1000 acre
 
-[G527+JHG, Chooralmala Rd, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.501561,76.1639672)
+[G527+JHG, Chooralmala Rd, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.501561,76.1639672)
 
 Restaurant
 
@@ -32224,7 +32224,7 @@ Distance: 0 km
 
 ###### Chateau Woods
 
-[Sentinel Rock Estates Road, Chateau Woods Rd, Chooralmala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5031559,76.1746292)
+[Sentinel Rock Estates Road, Chateau Woods Rd, Chooralmala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5031559,76.1746292)
 
 Restaurant
 
@@ -32233,13 +32233,13 @@ Restaurant
 
 ###### Badriya Hotel
 
-[F5X5+WRW, Chooralmala, Meppadi](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.4998513,76.1595791)
+[F5X5+WRW, Chooralmala, Meppadi](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.4998513,76.1595791)
 
 Restaurant
 
 ###### Sagar Food Point
 
-[Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5001064,76.1595732)
+[Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5001064,76.1595732)
 
 Restaurant
 
@@ -32248,7 +32248,7 @@ Restaurant
 
 ###### Hotel River View
 
-[G525+66W, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.5006004,76.1580852)
+[G525+66W, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.5006004,76.1580852)
 
 Restaurant
 
@@ -32257,7 +32257,7 @@ Restaurant
 
 ###### Chulicka - Boche 1000 acre
 
-[G527+JHG, Chooralmala Rd, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.502888095484339,76.16049747547224&daddr=11.501561,76.1639672)
+[G527+JHG, Chooralmala Rd, Chooralmala, Vellarimala](https://www.google.com/maps?saddr=11.4967237,76.1051083&daddr=11.501561,76.1639672)
 
 Restaurant
 
