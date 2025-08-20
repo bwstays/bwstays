@@ -183,8 +183,8 @@ function renderNearbyPlaces() {
         return;
     }
 
-const fullPlaceDetails = findPlaceById(58);
-console.log(fullPlaceDetails);
+ const fullPlaceDetails = findPlaceById(58);
+ console.log("fullPlaceDetails:"+fullPlaceDetails);
 
     // Create HTML for all nearby places
     const placesHTML = nearbyPlaces.map(place => {
