@@ -100,7 +100,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 		var value =locations.names[i];
 	    value =locations.names[i];
-			console.log("is value empty check before if::"+ value + " ::  distances[i]" + distances[i] );
+			console.log("i value::"+i +" locations ::"+ value + " ::  distances[i]" + distances[i] );
 
 			// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
 			/* if (value === null || typeof value === 'undefined' ||
