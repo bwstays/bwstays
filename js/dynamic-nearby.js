@@ -120,14 +120,13 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			{
 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 					var thisId=findPlaceById(i); //TODO
-					console.log("thisId findPlaceById i ");
+					 console.log(" i "+ i);
 					console.log(thisId);
 					// alert(locations.names[i]);
 					nearbyPlaces.push({
 						id: i,
 						name: locations.names[i+1],
 						distance: distances[i],
-
 						rating: thisId.place.rating,
                			knowmore: thisId.place.knowmore,
 						timing: thisId.place.timing,
