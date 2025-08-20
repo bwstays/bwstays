@@ -120,13 +120,19 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 			if(distances[i]!="0")
 			{
+					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 
+					var thisId=findPlaceById(i+1);
 
 					// alert(locations.names[i]);
 					nearbyPlaces.push({
 						id: i,
 						name: locations.names[i+1],
-						distance: distances[i ]
+						distance: distances[i ],
+						image: thisId.image[0],
+						rating: thisId.rating,
+						timing: thisId.timing,
+						map: thisId.map
 					});
 			}
         }
@@ -182,8 +188,7 @@ function renderNearbyPlaces() {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
         return;
     }
-console.log(nearbyPlaces);
-// const fullPlaceDetails = findPlaceById(30);
+//console.log(nearbyPlaces);
 // console.log(fullPlaceDetails);
     // Create HTML for all nearby places
     const placesHTML = nearbyPlaces.map(place => {
