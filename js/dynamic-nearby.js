@@ -191,6 +191,9 @@ function renderNearbyPlaces() {
         return;
     }
 
+const fullPlaceDetails = findPlaceById(place.id);
+console.log(fullPlaceDetails);
+
     // Create HTML for all nearby places
     const placesHTML = nearbyPlaces.map(place => {
 
@@ -198,7 +201,7 @@ function renderNearbyPlaces() {
         const fullPlaceDetails = findPlaceById(place.id);
       //  alert(place.id +" " +fullPlaceDetails.place.rating)
         if (fullPlaceDetails) {
-			console.log("place.id"+place.id+"fullPlaceDetails.place.knowmore"+fullPlaceDetails.place.knowmore);
+
             return createPlaceCard({
                 ...place,
                 image: fullPlaceDetails.place.image[0],
