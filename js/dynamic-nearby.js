@@ -103,7 +103,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			console.log("is value empty check before if::"+ value + " ::");
 
 		// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
-	    if (value === null || typeof value === 'undefined' ||
+	   /* if (value === null || typeof value === 'undefined' ||
 	        (typeof value === 'string' && value.trim() === '') ||
 	        (Array.isArray(value) && value.length === 0) ||
 	        (typeof value === 'object' && value !== null && Object.keys(value).length === 0)) {
@@ -111,7 +111,13 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 	      			console.log("continue");
 
 	      continue;
-	    }
+	    }*/
+
+	   if ( isEmpty(value))
+	   {
+		   console.log("continue");
+	    continue;
+	}
 
 
         if ( distances[i ]!=""  && distances[i ] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
@@ -134,6 +140,33 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 
 
+// Speed up calls to hasOwnProperty
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+function isEmpty(obj) {
+
+    // null and undefined are "empty"
+    if (obj == null) return true;
+
+    // Assume if it has a length property with a non-zero value
+    // that that property is correct.
+    if (obj.length > 0)    return false;
+    if (obj.length === 0)  return true;
+
+    // If it isn't an object at this point
+    // it is empty, but it can't be anything *but* empty
+    // Is it empty?  Depends on your application.
+    if (typeof obj !== "object") return true;
+
+    // Otherwise, does it have any properties of its own?
+    // Note that this doesn't handle
+    // toString and valueOf enumeration bugs in IE < 9
+    for (var key in obj) {
+        if (hasOwnProperty.call(obj, key)) return false;
+    }
+
+    return true;
+}
 // Function to get nearby places within 25km of Santhi natha Temple
 function renderNearbyPlaces() {
     const nearbyCardsContainer = document.getElementById('nearby-cards');
