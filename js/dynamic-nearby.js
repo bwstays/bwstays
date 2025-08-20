@@ -114,8 +114,6 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 				console.log("continue");
 				continue;
 			}*/
-
-
         if ( distances[i]!=""  && distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 
 			if(distances[i]!="0")
