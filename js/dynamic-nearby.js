@@ -98,10 +98,10 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 		var value =locations.names[i+1];
 	    //value =locations.names[i];
-			console.log(locations.names);
+		/*	console.log(locations.names);
 			console.log(distances);
 			console.log("i value::"+i+" locations ::"+ value + " ::  distances[i]" + distances[i] );
-
+*/
 			// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
 			/* if (value === null || typeof value === 'undefined' ||
 			(typeof value === 'string' && value.trim() === '') ||
@@ -193,10 +193,12 @@ function renderNearbyPlaces() {
 
     // Create HTML for all nearby places
     const placesHTML = nearbyPlaces.map(place => {
+
         // Find the full place details from siteData
         const fullPlaceDetails = findPlaceById(place.id);
       //  alert(place.id +" " +fullPlaceDetails.place.rating)
         if (fullPlaceDetails) {
+			console.log("place.id"+place.id+"fullPlaceDetails.place.knowmore"+fullPlaceDetails.place.knowmore);
             return createPlaceCard({
                 ...place,
                 image: fullPlaceDetails.place.image[0],

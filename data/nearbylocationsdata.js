@@ -43,7 +43,7 @@ const locations = {
     // Each location has a unique ID (1-30) and a corresponding name
     // IDs are used as keys for quick lookup
     names: {
-        1: "Shanthinatha Swamy Jain Temple",
+        1: "Santhinatha Temple",
         2: "Ananthanatha Swamy Jain Temple Puliyarmala",
         3: "Koottamundu Glass Temple",
         4: "Thirunelly",
