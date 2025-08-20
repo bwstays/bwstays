@@ -123,7 +123,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 
 					var thisId=findPlaceById(i+1);
-
+					console.log("thisId");
 					console.log(thisId);
 					// alert(locations.names[i]);
 					nearbyPlaces.push({
