@@ -171,19 +171,13 @@ function renderNearbyPlaces() {
         return;
     }
 
-
-
-
-
-
-
-
-
     const locId = getCurrentPageId();
     const maxDistance = 20;
     const locCat = getCurrentCatagoryId();
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
+
+
     if (nearbyPlaces.length === 0) {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
         return;
@@ -212,8 +206,12 @@ console.log(fullPlaceDetails);
         }
         return createPlaceCard(place);
     }).join('');
+
+     console.log(placesHTML);
     // Update the container with the new content
     nearbyCardsContainer.innerHTML = placesHTML;
+
+    console.log.
 }
 
 var iconURLPrefix = 'https://www.bwstays.com/';
