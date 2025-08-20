@@ -1144,7 +1144,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
 ,
     {
       id: 18,
-      name: "Chembra peak Near Mippady town",
+      name: "Chembra Peak",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
       image: [iconURLPrefix+"assets/img/trucking/bw-destination-chembra-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-homestay-chembra-wayanad.webp"],
       holidays: "Sun",
