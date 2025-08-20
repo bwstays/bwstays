@@ -121,7 +121,6 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			if(distances[i]!="0")
 			{
 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
-
 					var thisId=findPlaceById(i+1);
 					console.log("thisId");
 					console.log(thisId);
