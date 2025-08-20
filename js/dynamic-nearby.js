@@ -184,6 +184,7 @@ function renderNearbyPlaces() {
     const locCat = getCurrentCatagoryId();
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
+
      console.log("nearbyPlaces");
      console.log(nearbyPlaces);
     if (nearbyPlaces.length === 0) {
@@ -193,7 +194,7 @@ function renderNearbyPlaces() {
 //console.log(nearbyPlaces);
 // console.log(fullPlaceDetails);
     // Create HTML for all nearby places
-    const placesHTML = nearbyPlaces.map(place => {
+   /* const placesHTML = nearbyPlaces.map(place => {
 
         // Find the full place details from siteData
         const fullPlaceDetails = findPlaceById(place.id);
@@ -212,9 +213,23 @@ function renderNearbyPlaces() {
         }
         return createPlaceCard(place);
     }).join('');
-     console.log(placesHTML);
+     //console.log(placesHTML);
     // Update the container with the new content
     nearbyCardsContainer.innerHTML = placesHTML;
+    */
+
+    const cardHTMLArray = [];
+		for (let i = 0; i < nearbyPlaces.length; i++) {
+		const place = nearbyPlaces[i];
+
+		var html=createPlaceCard(place);
+
+		cardHTMLArray.push(html);
+		}
+
+
+	nearbyCardsContainer.innerHTML = cardHTMLArray.join('');
+
 }
 
 var iconURLPrefix = 'https://www.bwstays.com/';
