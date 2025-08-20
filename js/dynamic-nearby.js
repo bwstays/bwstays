@@ -104,7 +104,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			console.log(locations.names);
 			console.log(distances);
 
-			console.log("i value::"+i+" locations ::"+ value + " ::  distances[i]" + distances[i] );
+			console.log("i value::"+i+" locations ::"+ value + " ::  distances[i-1]" + distances[i-1] );
 
 			// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
 			/* if (value === null || typeof value === 'undefined' ||
@@ -124,14 +124,14 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			}*/
 
 
-        if ( distances[i]!=""  && distances[i ] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
+        if ( distances[i-1]!=""  && distances[i-1 ] !== undefined &&  distances[i-1 ] <= maxDistance && i != locationId) {
 
-			if(distances[i]!="0")
+			if(distances[i-1]!="0")
             // alert(locations.names[i]);
             nearbyPlaces.push({
                 id: i,
                 name: locations.names[i+1],
-                distance: distances[i ]
+                distance: distances[i-1 ]
             });
         }
     }
