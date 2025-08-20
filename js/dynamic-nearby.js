@@ -113,13 +113,13 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 				console.log("continue");
 				continue;
 			}*/
-        if ( distances[i]!=""  && distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
+           if ( distances[i]!=""  && distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 
 			if(distances[i]!="0")
 			{
 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 					var thisId=findPlaceById(i); //TODO
-					 console.log(" i "+ i);
+					 console.log(" i "+ i + "  locationId" + locationId);
 					console.log(thisId);
 					// alert(locations.names[i]);
 					nearbyPlaces.push({
