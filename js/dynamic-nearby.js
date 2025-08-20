@@ -97,8 +97,9 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
     for (let i = 0; i < Object.keys(locations.names).length; i++) {
 
-		console.log(locations.names);
+
         if ( distances[i ]!=""  && distances[i ] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
+			console.log(locations.names);
 		 	console.log(i+ " " + distances[i ] + ": locationId:"+locationId + " " + locations.names[i] )
 
             // alert(locations.names[i]);
