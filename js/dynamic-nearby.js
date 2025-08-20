@@ -211,7 +211,7 @@ console.log(fullPlaceDetails);
     // Update the container with the new content
     nearbyCardsContainer.innerHTML = placesHTML;
 
-    console.log.
+
 }
 
 var iconURLPrefix = 'https://www.bwstays.com/';
