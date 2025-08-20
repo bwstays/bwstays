@@ -94,7 +94,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
 
-
+console.log(Object.keys(locations.names).length);
     for (let i = 0; i < Object.keys(locations.names).length; i++) {
 
 
