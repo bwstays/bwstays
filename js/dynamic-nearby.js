@@ -122,8 +122,8 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			{
 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 					var thisId=findPlaceById(i+1);
-					console.log("thisId");
-					console.log(thisId);
+					//console.log("thisId");
+					//console.log(thisId);
 					// alert(locations.names[i]);
 					nearbyPlaces.push({
 						id: i,
@@ -131,6 +131,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 						distance: distances[i],
 						image: thisId.place.image[0],
 						rating: thisId.place.rating,
+               			knowmore: thisId.place.knowmore,
 						timing: thisId.place.timing,
 						map: thisId.place.map
 
@@ -184,7 +185,8 @@ function renderNearbyPlaces() {
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
 
-
+     console.log("nearbyPlaces");
+     console.log(nearbyPlaces);
     if (nearbyPlaces.length === 0) {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
         return;
