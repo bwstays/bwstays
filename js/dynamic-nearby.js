@@ -191,7 +191,7 @@ function renderNearbyPlaces() {
         return;
     }
 
-const fullPlaceDetails = findPlaceById(place.id);
+const fullPlaceDetails = findPlaceById(58);
 console.log(fullPlaceDetails);
 
     // Create HTML for all nearby places
