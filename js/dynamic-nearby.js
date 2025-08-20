@@ -98,7 +98,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
      var loclength=Object.keys(locations.names).length;
     for (let i = 0; i < loclength; i++) {
         if ( distances[i ]!=""  && distances[i ] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
-			console.log(loclength);
+
 			console.log(locations.names);
 			console.log(distances);
 		 	console.log("i"+ i + " " + distances[i ] + ": locationId:"+locationId + " " + locations.names[i+1] )
@@ -109,7 +109,9 @@ var value =locations.names[i+1];
         (typeof value === 'string' && value.trim() === '') ||
         (Array.isArray(value) && value.length === 0) ||
         (typeof value === 'object' && value !== null && Object.keys(value).length === 0)) {
-      // If empty, skip to the next iteration (effectively taking the "next non-empty cell")
+         // If empty, skip to the next iteration (effectively taking the "next non-empty cell")
+      			console.log("continue");
+
       continue;
     }
 
