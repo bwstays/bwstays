@@ -103,7 +103,6 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 			console.log(locations.names);
 			console.log(distances);
-
 			console.log("i value::"+i+" locations ::"+ value + " ::  distances[i-1]" + distances[i-1] );
 
 			// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
