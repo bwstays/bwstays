@@ -453,7 +453,17 @@
       typingEl.style.display = 'flex';
 
       try{
+        // Get LLM answer without restriction
+        const unrestrictedMessages = [
+          { role: 'system', content: '' },
+          ...chatHistory.slice(1)
+        ];
+        const unrestrictedReply = await sendToGroq(unrestrictedMessages, text);
+        console.log('LLM answer WITHOUT restriction:', unrestrictedReply);
+
+        // Get LLM answer with restriction (current logic)
         const reply = await sendToGroq(chatHistory, text);
+        console.log('LLM answer WITH restriction:', reply);
         appendMessage('assistant', reply);
         chatHistory.push({ role: 'assistant', content: reply });
       }catch(err){
