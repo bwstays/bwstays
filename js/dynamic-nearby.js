@@ -184,8 +184,6 @@ function renderNearbyPlaces() {
     const locCat = getCurrentCatagoryId();
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
-
-
     if (nearbyPlaces.length === 0) {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
         return;
