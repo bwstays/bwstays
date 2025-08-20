@@ -99,25 +99,27 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     for (let i = 0; i < loclength; i++) {
 
 		var value =locations.names[i];
-	console.log("is value empty check before if::"+ value + " ::");
+	  value =locations.names[i];
+			console.log("is value empty check before if::"+ value + " ::");
+
+		// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
+	    if (value === null || typeof value === 'undefined' ||
+	        (typeof value === 'string' && value.trim() === '') ||
+	        (Array.isArray(value) && value.length === 0) ||
+	        (typeof value === 'object' && value !== null && Object.keys(value).length === 0)) {
+	         // If empty, skip to the next iteration (effectively taking the "next non-empty cell")
+	      			console.log("continue");
+
+	      continue;
+	    }
+
+
         if ( distances[i ]!=""  && distances[i ] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 
 			console.log(locations.names);
 			console.log(distances);
 		 	console.log("i"+ i + " " + distances[i ] + ": locationId:"+locationId + " " + locations.names[i+1] )
 
-	  value =locations.names[i];
-	 //console.log("is value empty check ::"+ value + " ::");
-	// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
-    if (value === null || typeof value === 'undefined' ||
-        (typeof value === 'string' && value.trim() === '') ||
-        (Array.isArray(value) && value.length === 0) ||
-        (typeof value === 'object' && value !== null && Object.keys(value).length === 0)) {
-         // If empty, skip to the next iteration (effectively taking the "next non-empty cell")
-      			console.log("continue");
-
-      continue;
-    }
 
             // alert(locations.names[i]);
             nearbyPlaces.push({
