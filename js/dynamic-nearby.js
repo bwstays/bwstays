@@ -93,10 +93,13 @@ function getLocationIdByName(name) {
 function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
+
+
     for (let i = 0; i < Object.keys(locations.names).length; i++) {
 
+		console.log(locations.names);
         if ( distances[i ]!=""  && distances[i ] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
-		 	alert(distances[i ] + ": locationId:"+locationId + " " + locations.names[i] )
+		 	console.log(i+ " " + distances[i ] + ": locationId:"+locationId + " " + locations.names[i] )
 
             // alert(locations.names[i]);
             nearbyPlaces.push({
