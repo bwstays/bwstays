@@ -185,7 +185,6 @@ function renderNearbyPlaces() {
 
  const fullPlaceDetails = findPlaceById(58);
  console.log(fullPlaceDetails);
-
     // Create HTML for all nearby places
     const placesHTML = nearbyPlaces.map(place => {
 
