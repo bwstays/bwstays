@@ -129,11 +129,12 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 					nearbyPlaces.push({
 						id: i,
 						name: locations.names[i+1],
-						distance: distances[i],
-						image: thisId.image[0],
+						distance: distances[i]
+						/*image: thisId.image[0],
 						rating: thisId.rating,
 						timing: thisId.timing,
 						map: thisId.map
+						*/
 					});
 			}
         }
