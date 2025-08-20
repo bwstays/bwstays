@@ -97,11 +97,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     for (let i = 0; i < loclength; i++) {
 
 		var value =locations.names[i+1];
-	    //value =locations.names[i];
-		/*	console.log(locations.names);
-			console.log(distances);
-			console.log("i value::"+i+" locations ::"+ value + " ::  distances[i]" + distances[i] );
-*/
+
 			// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
 			/* if (value === null || typeof value === 'undefined' ||
 			(typeof value === 'string' && value.trim() === '') ||
@@ -123,12 +119,16 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
         if ( distances[i]!=""  && distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 
 			if(distances[i]!="0")
-            // alert(locations.names[i]);
-            nearbyPlaces.push({
-                id: i,
-                name: locations.names[i+1],
-                distance: distances[i ]
-            });
+			{
+
+
+					// alert(locations.names[i]);
+					nearbyPlaces.push({
+						id: i,
+						name: locations.names[i+1],
+						distance: distances[i ]
+					});
+			}
         }
     }
     return nearbyPlaces.sort((a, b) => a.distance - b.distance);
@@ -183,7 +183,7 @@ function renderNearbyPlaces() {
         return;
     }
 
- const fullPlaceDetails = findPlaceById(58);
+ const fullPlaceDetails = findPlaceById(30);
  console.log(fullPlaceDetails);
     // Create HTML for all nearby places
     const placesHTML = nearbyPlaces.map(place => {

@@ -405,17 +405,22 @@ function initializeSection(sectionType, data, sectionIndex) {
   let sectionContainer;
   let sectionTitle;
 
+
   const allSections = document.querySelectorAll('#projects .container .row.justify-content-center');
+
 
   const isOdd = sectionIndex % 2 === 1;
 
+
   if (sectionIndex - 1 < allSections.length) {
     sectionContainer = allSections[sectionIndex - 1];
+
 
     const titleElement = sectionContainer.querySelector('.project-text h4');
     if (titleElement) {
       sectionTitle = titleElement.textContent;
     } else {
+
       sectionTitle = sectionType.charAt(0).toUpperCase() + sectionType.slice(1);
     }
   } else {
