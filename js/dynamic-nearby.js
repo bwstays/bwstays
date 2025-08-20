@@ -100,12 +100,12 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
         if ( distances[i ]!=""  && distances[i ] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 			console.log(locations.names);
-		 	console.log("i"+ i + " " + distances[i ] + ": locationId:"+locationId + " " + locations.names[i+2] )
+		 	console.log("i"+ i + " " + distances[i ] + ": locationId:"+locationId + " " + locations.names[i+1] )
 
             // alert(locations.names[i]);
             nearbyPlaces.push({
                 id: i,
-                name: locations.names[i+2],
+                name: locations.names[i+1],
                 distance: distances[i ]
             });
         }
