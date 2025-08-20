@@ -184,7 +184,6 @@ function renderNearbyPlaces() {
     const locCat = getCurrentCatagoryId();
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
-
      console.log("nearbyPlaces");
      console.log(nearbyPlaces);
     if (nearbyPlaces.length === 0) {
