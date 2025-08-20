@@ -182,7 +182,7 @@ function renderNearbyPlaces() {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
         return;
     }
-
+console.log(nearbyPlaces);
  const fullPlaceDetails = findPlaceById(30);
  console.log(fullPlaceDetails);
     // Create HTML for all nearby places
