@@ -129,10 +129,11 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 						id: i,
 						name: locations.names[i+1],
 						distance: distances[i],
-						image: thisId.place.image[0],
+
 						rating: thisId.place.rating,
                			knowmore: thisId.place.knowmore,
 						timing: thisId.place.timing,
+						image: thisId.place.image[0],
 						map: thisId.place.map
 
 					});
