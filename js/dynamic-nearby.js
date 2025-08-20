@@ -100,7 +100,6 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 		var value =locations.names[i+1];
 	    //value =locations.names[i];
-
 			console.log(locations.names);
 			console.log(distances);
 			console.log("i value::"+i+" locations ::"+ value + " ::  distances[i]" + distances[i] );
