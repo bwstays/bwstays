@@ -206,14 +206,12 @@ console.log(fullPlaceDetails);
         }
         return createPlaceCard(place);
     }).join('');
-
      console.log(placesHTML);
     // Update the container with the new content
     nearbyCardsContainer.innerHTML = placesHTML;
 }
 
 var iconURLPrefix = 'https://www.bwstays.com/';
-
 
 // Function to create a card for each nearby place
 function createPlaceCard(place) {
