@@ -474,7 +474,6 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
 
     duration : "1-2 Hours",
 }
-
   ],
   romantic: [
 {
