@@ -42,11 +42,11 @@ function findPlaceById(id) {
 		    console.log("4444444444" +category );
 
         if (siteData[category]) {
-					    console.log("66666666" + id + " check id " );
+			console.log("66666666" + id + " check id " );
 
             const place = siteData[category].find(p => p.id === id);
 
-            					    console.log("place" +place);
+            console.log("place" +place);
 
             if (place)
             {
