@@ -101,7 +101,6 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
     for (let i = 0; i < loclength; i++) {
 			var value =locations.names[i+1];
-
 			// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
 			/* if (value === null || typeof value === 'undefined' ||
 			(typeof value === 'string' && value.trim() === '') ||
