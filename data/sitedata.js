@@ -1944,10 +1944,8 @@ stays: [
 			content: " Black and White stay   ",
 			amenities: ["expansive tea estates", "rustic mud trails", "sensory delight", "Quiet"],
 			tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", "adventure tour"],
-
 			type: "stays",
 			knowmore: iconURLPrefix+"bw-rippon-teaestate-cycling-wayanad.html",
-
 			duration : "1-2 Hours",
 			},
 		],
