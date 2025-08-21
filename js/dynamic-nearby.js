@@ -97,6 +97,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
      console.log("distances locations");
      console.log(distances);
      console.log(locations);
+     console.log("loclength"+loclength);
 
     for (let i = 0; i < loclength; i++) {
 			var value =locations.names[i+1];
