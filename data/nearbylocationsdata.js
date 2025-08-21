@@ -137,9 +137,9 @@ const locations = {
 
     // Distance matrix where distances[i][j] represents the distance from location i to j
     // For example:
-    // - distances[1][2] = 13 means it's 13km from Santhi natha Temple to Ananthanatha Swami temple
+    // - distances[1][2] = 12 means it's 13km from Santhi natha Temple to Ananthanatha Swami temple
     // - distances[1][1] = 0 means distance from a location to itself is always 0
-    // - distances[1][4] = 65 means it's 65km from Santhi natha Temple to Thirunelly
+    // - distances[1][4] = 41 means it's 65km from Santhi natha Temple to Thirunelly
     // All distances are in kilometers
     distances: {
 

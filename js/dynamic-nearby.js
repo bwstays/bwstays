@@ -37,18 +37,17 @@ function findPlaceById(id) {
     //13,pilgrimage
 
     const categories = ['plantation', 'waterfalls', 'museums', 'romantic', 'culthist', 'trucking', 'wildlife', 'farms', 'sporting', 'food', 'tribal', 'cycling', 'shopping','pilgrimage'];
-    console.log("333333333333" );
-    for (const category of categories) {
-		    console.log("4444444444" +category );
+     for (const category of categories) {
+		    //console.log("4444444444" +category );
 
         if (siteData[category]) {
-			console.log("66666666" + id + " check id " );
+			//console.log("66666666" + id + " check id " );
             const place = siteData[category].find(p => p.id === id);
-            console.log("place" +place);
+            //console.log("place" +place);
 
             if (place)
             {
-				console.log("findPlaceById place" +place);
+				//console.log("findPlaceById place" +place);
 				return { place, category };
 			}
         }
@@ -129,10 +128,9 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 			if(distances[i]!="0")
 			{
-				console.log("222222" );
-					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
-					var thisId=findPlaceById(i); //TODO
-									console.log("555555555" );
+ 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
+					var thisId=findPlaceById(i+1); //TODO
+					//console.log("555555555" );
 
 					console.log(" i "+ i + "  locationId" + locationId);
 					console.log(thisId);
