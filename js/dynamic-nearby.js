@@ -41,7 +41,12 @@ function findPlaceById(id) {
     for (const category of categories) {
         if (siteData[category]) {
             const place = siteData[category].find(p => p.id === id);
-            if (place) return { place, category };
+            if (place)
+            {
+				console.log("findPlaceById place" +place);
+
+				return { place, category };
+			}
         }
     }
     return null;
