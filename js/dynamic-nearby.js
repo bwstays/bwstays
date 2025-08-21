@@ -120,8 +120,12 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			}*/
 			console.log("distances"+distances[i]);
            if ( distances[i]!=""  && distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
+
+			   			console.log("111111" );
+
 			if(distances[i]!="0")
 			{
+				console.log("222222" );
 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 					var thisId=findPlaceById(i); //TODO
 					console.log(" i "+ i + "  locationId" + locationId);
