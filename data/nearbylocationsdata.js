@@ -132,7 +132,6 @@ const locations = {
 		87: "Kolagapara",
 		88: "Gurukula Botanical Sanctuary",
 		89: "Kungichira Museum & Chira",
-
      },
 
     // Distance matrix where distances[i][j] represents the distance from location i to j
