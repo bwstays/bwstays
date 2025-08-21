@@ -517,3 +517,104 @@
     }
 
 }
+
+
+
+/* Footer: Stay highlights block */
+.stay-highlights {
+    background: transparent;
+    width: 100%;
+  }
+  
+  .stay-highlights .stay-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .feature-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    align-items: start;
+    column-gap: 16px;
+  }
+  
+  .feature-icon {
+    height: 48px;
+    width: 48px;
+    display: grid;
+    place-items: center;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    color: #ffffff;
+    opacity: 0.95;
+    position: relative;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.08),
+                0 6px 16px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  
+  .feature-icon::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+  }
+  
+  .feature-item:hover .feature-icon {
+    border-color: rgba(100, 161, 157, 0.85);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.12),
+                0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+  }
+  
+  .feature-icon i { 
+    font-size: 22px;
+    color: #64a19d;
+    line-height: 1;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  }
+  
+  .feature-title {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+  
+  .feature-desc {
+    font-size: 0.985rem;
+    line-height: 1.45;
+  }
+  
+  /* Tighten spacing on very small screens */
+  @media (max-width: 576px) {
+    .feature-list { gap: 18px; }
+    .feature-icon { height: 44px; width: 44px; }
+  }
+  
+  /* Ensure footer map fills its column even if maps.css limits width */
+  .footer .dir-map.map {
+    min-height: 320px;
+    width: 100%;
+    max-width: none;
+  }
+  
+
+#discover {
+    border-radius: 20px;
+}
