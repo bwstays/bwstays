@@ -9,6 +9,8 @@ var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title
 
 // Create Leaflet map on map element.
 var map = L.map(element);
+// Create Leaflet map on map element.
+var map = L.map(element);
 let customIcon = {
     iconUrl:"https://www.bwstays.com/assets/img/icons/ev.png",
     iconSize:[40,40]
