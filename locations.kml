@@ -14,14 +14,261 @@
 			</description>
 			<Placemark>
 				<name><![CDATA[bwstays]]></name>
-				<address><![CDATA[kalpetta, kalpetta, 67312, India]]></address>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
 				<phoneNumber><![CDATA[]]></phoneNumber>
 				<description><![CDATA[]]></description>
 				<Point>
 					<coordinates>76.0828087,11.6103277,0</coordinates>
 				</Point>
 			</Placemark>
-			<Placemark/>
+			<Placemark>
+				<name><![CDATA[Shanthinatha Swamy Jain Temple]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 76.0221398,11.6788328,0</coordinates>
+				</Point>
+			</Placemark>
+
+			<Placemark>
+				<name><![CDATA[Puliyarmala]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.08420612038587,11.6268407,0</coordinates>
+				</Point>
+			</Placemark>
+
+			<Placemark>
+				<name><![CDATA[Tea Museum]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.0148553711638,11.600747990313033,0</coordinates>
+				</Point>
+			</Placemark>
+
+
+			<Placemark>
+				<name><![CDATA[Ananthanatha Swamy Jain Temple Puliyarmala]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.1411,11.6963,0</coordinates>
+				</Point>
+			</Placemark>
+
+			<Placemark>
+				<name><![CDATA[Koottamundu Glass Temple]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>76.08657265424115,11.571875045855256,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Banasura Hills]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 75.90797008546211,11.695175204242553,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Cheengeri Hills]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>76.19931730771042,11.619354812785145,0</coordinates>
+				</Point>
+			</Placemark>
+
+			<Placemark>
+				<name><![CDATA[Cheeyambam waterfalls]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>76.25203494478279,11.766189025300932, 0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Brahmagiri Hills]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 75.994078, 11.932026,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Chembra Peak]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 76.0827242,11.5472138, 0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[bwstays]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 76.083429, 11.605943, 0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Korome Mosque]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  75.88027044523321,11.744250584874738, 0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Pallikunnu Church]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 76.010695, 11.638232,  0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Seethadevi Lava Kusa Temple]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>   76.168709, 11.792823, 0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Sentinel Rock Waterfall]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>   76.16077748465527, 11.495418956600835,0</coordinates>
+				</Point>
+			</Placemark>
+
+			<Placemark>
+				<name><![CDATA[Chundail Tea Estate]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 76.1350769, 11.6076643, 0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Phantom rock]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>   76.20460141779273,11.636687345789426, 0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name><![CDATA[Kurumbalakotta]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 76.028686, 11.698245, 0</coordinates>
+				</Point>
+			</Placemark>			
+			<Placemark>
+				<name><![CDATA[Attamala View Point]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.17549155352333, 11.498498126983506, 0</coordinates>
+				</Point>
+			</Placemark>			
+			<Placemark>
+				<name><![CDATA[Sunrise valley]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.2140645,  11.5233771, 0</coordinates>
+				</Point>
+			</Placemark>			
+			<Placemark>
+				<name><![CDATA[Neelimala view point]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.22909644232763, 11.53679433721778,  0</coordinates>
+				</Point>
+			</Placemark>			
+
+			<Placemark>
+				<name><![CDATA[Sultans Bathery Valmiki Ashram]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.19547348280202, 11.778971412702218,  0</coordinates>
+				</Point>
+			</Placemark>			
+			<Placemark>
+				<name><![CDATA[Meenangadi Church]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.1676252001014,  11.65965314607536, 0</coordinates>
+				</Point>
+			</Placemark>			
+
+			<Placemark>
+				<name><![CDATA[Trikaipatta temple]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>   76.133523,11.6057586, 0</coordinates>
+				</Point>
+			</Placemark>			
+
+
+			<Placemark>
+				<name><![CDATA[Trishileri temple]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>  76.01646686931055,11.8516904520993, 0</coordinates>
+				</Point>
+			</Placemark>			
+
+			<Placemark>
+				<name><![CDATA[Thirunelli Temple]]></name>
+				<address><![CDATA[kalpetta, kalpetta, 673121, India]]></address>
+				<phoneNumber><![CDATA[]]></phoneNumber>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates> 75.995828, 11.9116989, 0</coordinates>
+				</Point>
+			</Placemark>			
+
+
 		</Folder>
 	</Document>
 </kml>
