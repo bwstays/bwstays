@@ -124,8 +124,11 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			//console.log("distances"+distances[i]);
            if ( distances[i]!=""  &&  distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 
-			if( distances[i]!="0"  ||  locations.names[i+1].search(/bwstays)==0 )
+			if( distances[i]!="0")
 			{
+				if(locations.names[i+1].search(/bwstays)==0 )
+
+
  					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 					var thisId=findPlaceById(i+1); //TODO
 					//console.log("555555555" );
