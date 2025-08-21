@@ -2351,12 +2351,10 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
   content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
   amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
   tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
-
          type: "stays",
        knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8",
       duration : "1-2 Hours",
   },
-
 
 		]
 }
