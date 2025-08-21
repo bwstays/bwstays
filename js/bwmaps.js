@@ -7,8 +7,9 @@ var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title
 
 //  const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
 
-// Create Leaflet map on map element.
-var map = L.map(element);
+
+// Where you want to render the map.
+var element = document.getElementById('map');
 // Create Leaflet map on map element.
 var map = L.map(element);
 let customIcon = {
