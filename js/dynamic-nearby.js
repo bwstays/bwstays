@@ -35,8 +35,9 @@ function findPlaceById(id) {
     //11,cycling
     //12,shopping
     //13,pilgrimage
+    //14,stays
 
-    const categories = ['plantation', 'waterfalls', 'museums', 'romantic', 'culthist', 'trucking', 'wildlife', 'farms', 'sporting', 'food', 'tribal', 'cycling', 'shopping','pilgrimage'];
+    const categories = ['plantation', 'waterfalls', 'museums', 'romantic', 'culthist', 'trucking', 'wildlife', 'farms', 'sporting', 'food', 'tribal', 'cycling', 'shopping','pilgrimage','stays'];
      for (const category of categories) {
 		    //console.log("4444444444" +category );
 
