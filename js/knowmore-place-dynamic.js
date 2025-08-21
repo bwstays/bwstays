@@ -276,6 +276,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
           this.style.transform = 'translateY(0)';
           this.style.boxShadow = 'none';
       });
+
       const itemImages = Array.isArray(item.image) ? item.image : [item.image];
       const firstImage = itemImages[0];
       card.innerHTML = `
@@ -419,7 +420,6 @@ function initializeSection(sectionType, data, sectionIndex) {
     if (titleElement) {
       sectionTitle = titleElement.textContent;
     } else {
-
       sectionTitle = sectionType.charAt(0).toUpperCase() + sectionType.slice(1);
     }
   } else {

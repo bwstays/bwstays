@@ -41,7 +41,7 @@ function findPlaceById(id) {
 		    //console.log("4444444444" +category );
 
         if (siteData[category]) {
-			console.log("66666666" + id + " check id "  + " category" +category);
+			//console.log("66666666" + id + " check id "  + " category" +category);
             const place = siteData[category].find(p => p.id === id);
             //console.log("place" +place);
 
@@ -98,10 +98,10 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
      var loclength=Object.keys(locations.names).length;
-     console.log("distances locations");
-     console.log(distances);
-     console.log(locations);
-     console.log("loclength"+loclength);
+     //console.log("distances locations");
+     //console.log(distances);
+     //console.log(locations);
+     //console.log("loclength"+loclength);
 
     for (let i = 0; i < loclength; i++) {
 			var value =locations.names[i+1];
@@ -121,18 +121,17 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 				continue;
 			}*/
-			console.log("distances"+distances[i]);
+			//console.log("distances"+distances[i]);
            if ( distances[i]!=""  && distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 
-			   			console.log("111111" );
 
 			if(distances[i]!="0")
 			{
  					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 					var thisId=findPlaceById(i+1); //TODO
 					//console.log("555555555" );
-					console.log(" i "+ i + "  locationId" + locationId);
-					console.log(thisId);
+					//console.log(" i "+ i + "  locationId" + locationId);
+					//console.log(thisId);
 					// alert(locations.names[i]);
 					nearbyPlaces.push({
 						id: i,
@@ -189,9 +188,7 @@ function renderNearbyPlaces() {
     const locCat = getCurrentCatagoryId();
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
-     console.log("nearbyPlaces");
-     console.log(nearbyPlaces);
-    if (nearbyPlaces.length === 0) {
+     if (nearbyPlaces.length === 0) {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
         return;
     }
