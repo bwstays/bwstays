@@ -1921,7 +1921,6 @@ tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", 
 
     duration : "1-2 Hours",
 }
-
  ],
 
 stays: [

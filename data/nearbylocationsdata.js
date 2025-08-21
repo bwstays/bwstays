@@ -113,7 +113,7 @@ const locations = {
 		68: "Avil Milk,Deserts",
 		69: "Ruchi Pura",
 		70: "zipline",
-		71: "Black & White ( Kalpetta)",
+		71: "bwstays",
 		72: "Manathavady",
 		73: "Sulthan Batery",
 		74: "Pepper Farm",
