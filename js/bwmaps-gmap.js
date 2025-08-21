@@ -7,31 +7,9 @@ var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title
 
 //  const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
 
-// Create Leaflet map on map element.
-var map = L.map(element);
-let customIcon = {
-    iconUrl:"https://www.bwstays.com/assets/img/icons/ev.png",
-    iconSize:[40,40]
-}
-
-let myIcon = L.icon(customIcon);
-//let myIcon = L.divIcon();
-
-let iconOptions = {
-    title:"company name",
-    draggable:true,
-    icon:myIcon
-}
-
-// Add OSM tile layer to the Leaflet map.
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
 
 
 
-
-/*
 var map = new google.maps.Map(document.getElementById('map'), {
   zoom: 10,
   // disable the default User Interface
@@ -46,7 +24,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
 });
 var infowindow = new google.maps.InfoWindow();
 var marker, i;
-*/
+
 /*
 https://jsfiddle.net/gh/get/library/pure/googlemaps/js-samples/tree/master/dist/samples/advanced-markers-html/jsfiddle
  // Marker with a custom PinElement.
@@ -66,22 +44,8 @@ https://jsfiddle.net/gh/get/library/pure/googlemaps/js-samples/tree/master/dist/
 
 
 
-
-
-
-
 for (i = 0; i < bwlocations.length; i++) {
-
-// Target's GPS coordinates.
-var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
-
-// Set map's center to target with zoom 14.
-map.setView(target, 10);
-
-// Place a marker on the same location.
-L.marker(target,iconOptions).addTo(map);
-
- /* marker = new google.maps.Marker({
+  marker = new google.maps.Marker({
     position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
     icon:  {url: bwlocations[i][4],scaledSize: new google.maps.Size(20, 20), origin: new google.maps.Point(0,0),anchor: new google.maps.Point(0, 0) },
     map: map
@@ -92,11 +56,10 @@ L.marker(target,iconOptions).addTo(map);
       infowindow.open(map, marker);
     }
   })(marker, i));
-  */
 }
 
 
-/*
+
 function initPano() {
   var panoramas = [];
   panoDivs = document.getElementsByClassName('pano');
@@ -119,4 +82,3 @@ function initPano() {
 
 }
 google.maps.event.addDomListener(window, "load", initPano);
-*/
