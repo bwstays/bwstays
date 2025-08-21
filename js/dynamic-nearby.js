@@ -126,7 +126,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
 			if( distances[i]!="0")
 			{
-				if(locations.names[i+1].search(/bwstays)==0 )
+				if(locations.names[i+1].search('/bwstays')==0 )
 
 
  					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
