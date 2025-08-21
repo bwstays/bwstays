@@ -44,7 +44,6 @@ function findPlaceById(id) {
             if (place)
             {
 				console.log("findPlaceById place" +place);
-
 				return { place, category };
 			}
         }
@@ -52,12 +51,9 @@ function findPlaceById(id) {
     return null;
 }
 
-
 function getLocationNameById(id) {
     return locations.names[id] || null;
 }
-
-
 
 
 function getLocationIdByName(name) {
