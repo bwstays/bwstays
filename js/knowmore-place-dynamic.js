@@ -276,7 +276,6 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
           this.style.transform = 'translateY(0)';
           this.style.boxShadow = 'none';
       });
-
       const itemImages = Array.isArray(item.image) ? item.image : [item.image];
       const firstImage = itemImages[0];
       card.innerHTML = `

@@ -1,5 +1,4 @@
 /**
-
  * This file contains a complete distance matrix for 30 locations in Wayanad.
  * The data is structured to make it easy to:
  * 1. Look up any location by its ID

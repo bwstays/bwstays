@@ -2355,6 +2355,5 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
        knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8",
       duration : "1-2 Hours",
   },
-
 		]
 }

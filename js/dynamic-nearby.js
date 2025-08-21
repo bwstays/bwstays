@@ -18,7 +18,6 @@ function getCurrentCatagoryId() {
     return catId;
 
 }
-
 function findPlaceById(id) {
 
     //0, plantation
