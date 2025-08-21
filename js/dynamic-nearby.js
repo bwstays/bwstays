@@ -109,17 +109,17 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			(typeof value === 'object' && value !== null && Object.keys(value).length === 0)) {
 			// If empty, skip to the next iteration (effectively taking the "next non-empty cell")
 				console.log("continue");
-
 				continue;
 			}
 
 			if ( isEmpty(value))
-			{
-				console.log("continue");
+			{			console.log("continue");
+
+
 				continue;
 			}*/
+			console.log("distances"+distances[i]);
            if ( distances[i]!=""  && distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
-
 			if(distances[i]!="0")
 			{
 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
@@ -142,8 +142,6 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     }
     return nearbyPlaces.sort((a, b) => a.distance - b.distance);
 }
-
-
 
 // Speed up calls to hasOwnProperty
 var hasOwnProperty = Object.prototype.hasOwnProperty;
