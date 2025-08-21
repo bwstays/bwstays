@@ -43,9 +43,7 @@ function findPlaceById(id) {
 
         if (siteData[category]) {
 			console.log("66666666" + id + " check id " );
-
             const place = siteData[category].find(p => p.id === id);
-
             console.log("place" +place);
 
             if (place)
