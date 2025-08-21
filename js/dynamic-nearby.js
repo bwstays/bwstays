@@ -124,7 +124,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			{
 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 					var thisId=findPlaceById(i); //TODO
-					 console.log(" i "+ i + "  locationId" + locationId);
+					console.log(" i "+ i + "  locationId" + locationId);
 					console.log(thisId);
 					// alert(locations.names[i]);
 					nearbyPlaces.push({
@@ -177,13 +177,11 @@ function renderNearbyPlaces() {
 //        console.error('Could not find nearby-cards container');
         return;
     }
-
     const locId = getCurrentPageId();
     const maxDistance = 20;
     const locCat = getCurrentCatagoryId();
     // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
-
      console.log("nearbyPlaces");
      console.log(nearbyPlaces);
     if (nearbyPlaces.length === 0) {
