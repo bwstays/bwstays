@@ -1,33 +1,12 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
-var mainlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.542442317568533, 76.02721621504702, 2, iconURLPrefix+"assets/img/logo/bw.png"]];
- // Where you want to render the map.
-var element = document.getElementById('map');
+
+var element1 = document.getElementById('mapall');
 // Create Leaflet map on map element.
-var map = L.map(element);
-let customIcon = {
-    iconUrl:"https://www.bwstays.com/assets/img/icons/ev.png",
-    iconSize:[40,40]
-}
-let myIcon = L.icon(customIcon);
-//let myIcon = L.divIcon();
-let iconOptions = {
-    title:"company name",
-    draggable:true,
-    icon:myIcon
-}
+var map1 = L.map(element1);
 // Add OSM tile layer to the Leaflet map.
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-for (i = 0; i < mainlocations.length; i++) {
-// Target's GPS coordinates.
-var target = L.latLng(mainlocations[i][1], mainlocations[i][2]);
-// Set map's center to target with zoom 14.
-map.setView(target, 10);
-// Place a marker on the same location.
-L.marker(target,iconOptions).addTo(map);
-}
-
+}).addTo(map1);
 
 
 
@@ -147,14 +126,6 @@ var bwlocations = [
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Zipline">Longest Zipline</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Longest Zipline"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp" width="300" ></a>', 11.6076643, 76.1350769, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm">Pepper Farm</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-pepper-farm-wayanad.webp" width="300" ></a>', 11.69283527987838, 76.1911296389339, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Honey Museaum">Honey Museaum</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-honey-museum-wayanad.webp" width="300" ></a>',  11.5375175, 76.0434972, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"]];
-
-var element1 = document.getElementById('mapall');
-// Create Leaflet map on map element.
-var map1 = L.map(element1);
-// Add OSM tile layer to the Leaflet map.
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map1);
 
 for (i = 0; i < bwlocations.length; i++) {
 
