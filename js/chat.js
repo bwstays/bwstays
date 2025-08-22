@@ -63,7 +63,7 @@
     });
 
     // Attraction categories
-    const categories = ['waterfall', 'temple', 'dam', 'lake', 'wildlife', 'plantation', 'museum', 'heritage', 'romantic', 'trekking', 'trucking', 'cycling', 'bamboo', 'rafting', 'food', 'restaurant'];
+    const categories = ['waterfall', 'temple', 'dam', 'lake', 'wildlife', 'plantation', 'museum', 'heritage', 'romantic', 'trekking', 'trucking', 'cycling', 'bamboo', 'rafting', 'food', 'restaurant','stays'];
     categories.forEach(cat => {
       if (cleanText.includes(cat)) terms.add(cat);
     });
