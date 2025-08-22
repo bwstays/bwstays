@@ -121,16 +121,16 @@ var bwlocations = [
 var element = document.getElementById('mapall');
 // Create Leaflet map on map element.
 var map = L.map(element);
-let customIcon = {
+let customIcon1 = {
     iconUrl:"https://www.bwstays.com/assets/img/icons/ev.png",
     iconSize:[40,40]
 }
-let myIcon = L.icon(customIcon);
+let myIcon1 = L.icon(customIcon1);
 //let myIcon = L.divIcon();
-let iconOptions = {
+let iconOptions1 = {
     title:"company name",
     draggable:true,
-    icon:myIcon
+    icon:myIcon1
 }
 
 // Add OSM tile layer to the Leaflet map.
@@ -160,7 +160,7 @@ for (i = 0; i < bwlocations.length; i++) {
   // Set map's center to target with zoom 14.
   map.setView(target, 10);
   // Place a marker on the same location.
-L.marker(target,iconOptions).addTo(map);
+L.marker(target,iconOptions1).addTo(map);
 
 
 
