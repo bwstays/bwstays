@@ -117,78 +117,55 @@ var bwlocations = [
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Zipline">Longest Zipline</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-ziplines-sporting-wayanad.html" title="Longest Zipline"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp" width="300" ></a>', 11.6076643, 76.1350769, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm">Pepper Farm</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-pepper-farm-wayanad.webp" width="300" ></a>', 11.69283527987838, 76.1911296389339, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Honey Museaum">Honey Museaum</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-honey-museum-wayanad.webp" width="300" ></a>',  11.5375175, 76.0434972, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"]];
-var map = new google.maps.Map(document.getElementById('mapall'), {
-  zoom: 9.999,
-  // disable the default User Interface
-  disableDefaultUI: true,
-  // add back fullscreen, streetview, zoom
-  zoomControl: true,
-  streetViewControl: true,
-  fullscreenControl: true,
-  //panamaram center
-  center: new google.maps.LatLng(11.542442317568533, 76.02721621504702),
-  //	mapTypeId: google.maps.MapTypeId.ROADMAP,
-  mapId: 'f03033acde18bc0d'
-});
-var infowindow = new google.maps.InfoWindow();
-var  i;
-var markers = [];
+
+var element = document.getElementById('mapall');
+// Create Leaflet map on map element.
+var map = L.map(element);
+let customIcon = {
+    iconUrl:"https://www.bwstays.com/assets/img/icons/ev.png",
+    iconSize:[40,40]
+}
+let myIcon = L.icon(customIcon);
+//let myIcon = L.divIcon();
+let iconOptions = {
+    title:"company name",
+    draggable:true,
+    icon:myIcon
+}
+
+// Add OSM tile layer to the Leaflet map.
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+
 
 
 
 for (i = 0; i < bwlocations.length; i++) {
 
- new google.maps.DirectionsService().route({
-      origin: new google.maps.LatLng( 11.605943, 76.083429), // origin is bw stay
-      destination: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
-      travelMode: google.maps.TravelMode.DRIVING,
-    }, (response, status) => {
-        if (status === "OK") {
-          new google.maps.DirectionsRenderer({
-						  map: map,
-						  suppressMarkers: true,
-						  polylineOptions: {
-							strokeColor: '#4285F4',
-							strokeWeight: 4,
-							strokeOpacity: 0.8
-						  }
-						}).setDirections(response);
-        }
-  })
-
-  marker = new google.maps.Marker({
-    position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
-    icon: {
-	    url: bwlocations[i][4],
-	    alt: 'BW Stays Utilmate Places'
-	  },
-
-    map: map
-  });
-
-// Add alt text to Google Maps images
-google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
-  var gMapControlsCheck = setInterval(function() {
-    //console.log('Checking for Google Maps controls...');
-//    var images = document.querySelectorAll('#map .gm-fullscreen-control img');
-    var images = document.querySelectorAll('#map img');
-    if( images.length > 0 ) {
-      images.forEach(function(image) {
-		   if(!image.alt || image.alt ==="")
-       			 image.alt = 'This is a test alt';
-      });
-      clearInterval(gMapControlsCheck);
-    }
-  }, 250);
-});
 
 
-  google.maps.event.addListener(marker, 'click', (function (marker, i) {
-    return function () {
-      infowindow.setContent(bwlocations[i][0]);
-      infowindow.open(map, marker);
-    }
-  })(marker, i));
+  L.Routing.control({
+    waypoints: [
+      L.latLng('11.542442317568533', '76.02721621504702'),
+      L.latLng(bwlocations[i][1], bwlocations[i][2])
+    ],
+    routeWhileDragging: true,
+    router: L.Routing.osrmv1({
+      serviceUrl: 'https://router.project-osrm.org/route/v1'
+    })
+}).addTo(map);
+
+  // Set map's center to target with zoom 14.
+  map.setView(target, 10);
+  // Place a marker on the same location.
+L.marker(target,iconOptions).addTo(map);
+
+
+
+
+
 
 }
 
