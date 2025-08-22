@@ -50,27 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     types: ['restaurant','hotel'],
     min_rating: 3.5
   };
- const cityCircle = new google.maps.Circle({
-        strokeColor: "#FF0000", // Red outline
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: "#FF0000", // Red fill
-        fillOpacity: 0.35,
-        center: centerloca, // Same center as the map for this example
-        radius: 4000 // 4 kilometers in meters
-      });
-  cityCircle.setMap(map1);
+
   const foodPlacesContainer = document.getElementById('food-list');
 
-  service.nearbySearch(request, (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
 
-	const filteredResults = results.filter(place =>
-	  place.rating >= 4.0 && place.user_ratings_total && place.user_ratings_total >= 10 // Example: min 10 reviews
-	);
 
-// Sort the filtered results by rating in descending order
-    const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
 
 
 		 for (let i = 0; i < topResults.length; i++)
@@ -88,92 +72,36 @@ document.addEventListener('DOMContentLoaded', () => {
 						{
 						const latitude = place.geometry.location.lat();
 						const longitude = place.geometry.location.lng();
-						let ratingStars = getStarHTML(place.rating);
-						let cuisineType = guessCuisineFromTypes(place.types);
-						let placeHTML = `
-					  <div class="mb-4 text-right">
-						<h6 class="text-white">${place.name}</h6>
-						 								<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${latitude},${longitude}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
-						 								  <i class="fas fa-map-marker-alt text-primary mr-2">
+						const lat = place.lat;
+								const lon = place.lon;
+						const name = place.tags.name || "Unnamed";
+								const type = place.tags.amenity || "Unknown";
 
-						 								  </i>
-						 								  ${place.vicinity || 'Unknown location'}
-						 								</p>
-								</a>
-						<p class="text-white-50 small mb-1">
-						  <i class="fas fa-utensils text-primary mr-2"></i>
-						  ${cuisineType} <br> ${ratingStars}
-						</p>
-					  </div>
+					        let placeHTML = `
+									  <div class="mb-4 text-right">
+										<h6 class="text-white">${name}</h6>
+																		<a href="https://www.google.com/maps?daddr=11.641044660114158,76.08687012883617&saddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+																		  <i class="fas fa-map-marker-alt text-primary mr-2">
+
+																		  </i>
+																		  ${type}
+																		</p>
+												</a>
+
+									  </div>
 					`;
+
 					foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 				  }
 			      }
         		});
 			}
-      //topResults.forEach((result) => {
-      for (let i = 0; i < results.length; i++)
-      {
-		  let marker = new google.maps.Marker({
-			  map: map1,
-			  position: results[i].geometry.location,
-			  title: results[i].name
-			});
-
-			google.maps.event.addListener(marker, 'click', () => {
-			  infowindow.setContent(results[i].name);
-			  infowindow.open(map1, marker);
-			});
-	   };
-     // });
-    }
-  });
-
-   new google.maps.DirectionsService().route({
-        origin: new google.maps.LatLng( 11.605943, 76.083429), // origin is bw stay
-        destination: new google.maps.LatLng(centerloca.lat, centerloca.lng), // destination location driving from bw stay
-        travelMode: google.maps.TravelMode.DRIVING,
-        unitSystem: google.maps.UnitSystem.METRIC,
-      }, (response, status) => {
-          if (status === "OK") {
-			  var directionsRenderer = new google.maps.DirectionsRenderer();
-					directionsRenderer.setMap(map1);
-					directionsRenderer.setDirections(response);
-
-					//	const distanceInMeters = response.routes[0].legs[0].distance.value;
-					//					const distanceText = response.routes[0].legs[0].distance.text;
- 					directionsRenderer.setOptions({
-					  draggable: true, // Allows users to drag and modify the route path
-					  suppressMarkers: true, // Hides the default A/B markers
-					  polylineOptions: {
-						strokeColor: '#4285F4', // Changes the route line color to red
-						strokeWeight: 5, // Sets the route line thickness
-						strokeOpacity: 0.6
-					  }
-					});
-  				   // directionsRenderer.setPanel(document.getElementById('directions-panel'));
 
 
-          }
-    });
+
+
+
 
 
 });
 
-function getStarHTML(rating) {
-  if (!rating) return '';
-  let fullStars = Math.floor(rating);
-  let halfStar = rating % 1 >= 0.5 ? 1 : 0;
-  let emptyStars = 5 - fullStars - halfStar;
-  return '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(emptyStars);
- // return '★'.repeat(fullStars) + (halfStar ? '&2BE8' : '') + '☆'.repeat(emptyStars);
-}
-
-function guessCuisineFromTypes(types) {
-  if (!types) return 'Multi-Cuisine';
-  if (types.includes('cafe')) return 'Cafe';
-  if (types.includes('restaurant')) return 'Restaurant';
-  if (types.includes('bakery')) return 'Bakery';
-  if (types.includes('bar')) return 'Bar';
-  return 'Multi-Cuisine';
-}
