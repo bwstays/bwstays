@@ -9,9 +9,7 @@
      url: 'https://www.bwstays.com/assets/img/logo/pin.png'
    };
 
-   const mainLocationIcon = {
-     url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
-  };
+
  // Initialize map
     const map1 = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
 
@@ -76,8 +74,6 @@
 		.setContent("Welcome to location")
 		.openOn(map1);
 		});
-
-
 
       });
     })
