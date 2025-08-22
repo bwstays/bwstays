@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 // Initialize map
+var container = L.DomUtil.get('map');
+
+ if(container != null){
+        container._leaflet_id = null;
+      }
+
     const map = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
 
     // Add OpenStreetMap tiles
