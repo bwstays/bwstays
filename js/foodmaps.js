@@ -1,3 +1,4 @@
+$( document ).ready(function() {
     const section = document.querySelector('#food-places');
    const centerAttr = section.getAttribute('data-center');
     const [lat, lng] = centerAttr.split(',').map(Number);
@@ -65,3 +66,5 @@
       });
     })
     .catch(err => console.error("Overpass API error:", err));
+
+ });
