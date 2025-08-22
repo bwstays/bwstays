@@ -1,7 +1,4 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
-
-
-
 var bwlocations = [
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-rippon-tea-estate-plantation-wayanad.html" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><span>10km</span><a target="_blank" href="'+iconURLPrefix+'bw-rippon-tea-estate-plantation-wayanad.html" title="Shanthinatha Swamy Jain Temple"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/heritage/bw-stays-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6788328, 76.0221398, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
@@ -138,14 +135,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-
-
-
-
 for (i = 0; i < bwlocations.length; i++) {
-
-
-
   L.Routing.control({
     waypoints: [
       L.latLng('11.542442317568533', '76.02721621504702'),
