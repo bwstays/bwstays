@@ -1,10 +1,13 @@
-$( document ).ready(function() {
-    const section = document.querySelector('#food-places');
+ /*    const section = document.querySelector('#food-places');
    const centerAttr = section.getAttribute('data-center');
     const [lat, lng] = centerAttr.split(',').map(Number);
    const centerloca = { lat, lng };
+   */
 
-    const map1 = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
+var lat=11.4967237;
+var lng=76.1051083;
+
+    const map1 = L.map('foodmap').setView([lat, lng], 10);
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
@@ -14,9 +17,9 @@ $( document ).ready(function() {
       [out:json];
       (
 
-         node["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng );
-        way["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng);
-        relation["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng);
+         node["amenity"="restaurant"](around:5000,lat, lng );
+        way["amenity"="restaurant"](around:5000,lat, lng);
+        relation["amenity"="restaurant"](around:5000,lat, lng);
       );
       out center;
     `;
@@ -28,20 +31,20 @@ $( document ).ready(function() {
     .then(data => {
       data.elements.forEach(el => {
 
-					const lat = el.lat || el.center?.lat;
-						const lon = el.lon || el.center?.lon;
+					const latd = el.lat || el.center?.lat;
+						const lond = el.lon || el.center?.lon;
 						const name = el.tags.name || "Unnamed";
 						const type = el.tags.amenity || "Unknown";
  						const foodPlacesContainer = document.getElementById('food-list');
 
-						const marker =  L.marker([lat, lon])
+						const marker =  L.marker([latd, lond])
 						.addTo(map1)
 						.bindPopup(el.tags.name || "Unnamed Restaurant").openPopup();
 
 						let placeHTML = `
 						<div class="mb-4 text-right">
 						<h6 class="text-white">${name}</h6>
-								<a href="https://www.google.com/maps?saddr=11.592, 76.117&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+								<a href="https://www.google.com/maps?saddr=11.592, 76.117&daddr=${latd},${lond}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
 								  <i class="fas fa-map-marker-alt text-primary mr-2">
 
 								  </i>
@@ -55,7 +58,7 @@ $( document ).ready(function() {
 	   foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 
  		marker.on('click', () => {
-		map1.setView([centerloca.lat, centerloca.lng], 10);
+		map1.setView([lat, lng], 10);
 		L.popup()
 		.setLatLng([lat, lon])
 		.setContent("Welcome to location")
