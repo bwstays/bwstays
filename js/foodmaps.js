@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
    const customIcon = {
      url: 'https://www.bwstays.com/assets/img/logo/pin.png'
    };
-
-
- // Initialize map
     const map1 = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
 
     // Add OpenStreetMap tiles
