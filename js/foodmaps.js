@@ -31,7 +31,6 @@
       );
       out center;
     `;
-
     fetch("https://overpass-api.de/api/interpreter", {
       method: "POST",
       body: query
@@ -40,12 +39,10 @@
     .then(data => {
       data.elements.forEach(el => {
 
-
-						const lat = el.lat || el.center?.lat;
+					const lat = el.lat || el.center?.lat;
 						const lon = el.lon || el.center?.lon;
 						const name = el.tags.name || "Unnamed";
 						const type = el.tags.amenity || "Unknown";
-
 
 
 						const foodPlacesContainer = document.getElementById('food-list');
