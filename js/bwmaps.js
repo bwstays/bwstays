@@ -131,7 +131,7 @@ var bwlocations = [
 
 for (i = 0; i < bwlocations.length; i++) {
 
-await sleep( 1000);
+await sleep( 500);
 	var dest = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 
   L.Routing.control({
