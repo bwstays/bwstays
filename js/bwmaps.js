@@ -131,7 +131,7 @@ var bwlocations = [
 
 for (i = 0; i < bwlocations.length; i++) {
 
-
+await sleep( 1000);
 	var dest = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 
   L.Routing.control({
@@ -145,4 +145,8 @@ for (i = 0; i < bwlocations.length; i++) {
     })
 }).addTo(map1);
 
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
