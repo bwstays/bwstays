@@ -1,5 +1,4 @@
     const section = document.querySelector('#food-places');
-
    const centerAttr = section.getAttribute('data-center');
     const [lat, lng] = centerAttr.split(',').map(Number);
    const centerloca = { lat, lng };
@@ -7,7 +6,6 @@
      url: 'https://www.bwstays.com/assets/img/logo/pin.png'
    };
     const map1 = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
-
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
