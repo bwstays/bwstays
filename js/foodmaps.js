@@ -66,16 +66,7 @@ var container = L.DomUtil.get('map');
 						let placeHTML = `
 						<div class="mb-4 text-right">
 						<h6 class="text-white">${name}</h6>
-								<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
-								  <i class="fas fa-map-marker-alt text-primary mr-2">
-
-								  </i>
-								  ${type}
-								</p>
-						</a>
-
-						</div>
-						`;
+								<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">	 <i class="fas fa-map-marker-alt text-primary mr-2">	 </i> ${type}</p> </a></div>`;
 	   foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 
 
