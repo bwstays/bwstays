@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 // Initialize map
-    const map = L.map('map').setView([centerloca.lat, centerloca.lng], 10);
+    const map = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
