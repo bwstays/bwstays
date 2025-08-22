@@ -1,10 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-   const section = document.querySelector('#food-places');
-   if (!section) return;
+    const section = document.querySelector('#food-places');
 
    const centerAttr = section.getAttribute('data-center');
-   if (!centerAttr) return;
-   const [lat, lng] = centerAttr.split(',').map(Number);
+    const [lat, lng] = centerAttr.split(',').map(Number);
    const centerloca = { lat, lng };
    const customIcon = {
      url: 'https://www.bwstays.com/assets/img/logo/pin.png'
@@ -74,4 +71,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     })
     .catch(err => console.error("Overpass API error:", err));
-    });
