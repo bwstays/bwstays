@@ -66,9 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	   foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 
-
-		// Add click event to marker
-		marker.on('click', () => {
+ marker.on('click', () => {
 		map1.setView([centerloca.lat, centerloca.lng], 10);
 		L.popup()
 		.setLatLng([lat, lon])
