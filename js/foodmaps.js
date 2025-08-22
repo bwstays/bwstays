@@ -5,7 +5,6 @@
    if (!centerAttr) return;
    const [lat, lng] = centerAttr.split(',').map(Number);
    const centerloca = { lat, lng };
-
    const customIcon = {
      url: 'https://www.bwstays.com/assets/img/logo/pin.png'
    };
