@@ -1,4 +1,3 @@
-
     // Initialize map
     const map1 = L.map('foodmap').setView([11.592, 76.117], 10);
 
