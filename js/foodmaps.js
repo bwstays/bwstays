@@ -1,23 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const section = document.querySelector('#food-places');
-  if (!section) return;
-
-  const centerAttr = section.getAttribute('data-center');
-  if (!centerAttr) return;
-  const [lat, lng] = centerAttr.split(',').map(Number);
-  const centerloca = { lat, lng };
-
-  const customIcon = {
-    url: 'https://www.bwstays.com/assets/img/logo/pin.png'
-  };
-
-  const mainLocationIcon = {
-    url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
-  };
-
 
     // Initialize map
-    const map1 = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
+    const map1 = L.map('foodmap').setView([11.592, 76.117], 10);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -29,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
       [out:json];
       (
 
-         node["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng );
-        way["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng);
-        relation["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng);
+         node["amenity"="restaurant"](around:5000,11.592, 76.117 );
+        way["amenity"="restaurant"](around:5000,11.592, 76.117);
+        relation["amenity"="restaurant"](around:5000,11.592, 76.117);
       );
       out center;
     `;
@@ -61,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						let placeHTML = `
 						<div class="mb-4 text-right">
 						<h6 class="text-white">${name}</h6>
-								<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+								<a href="https://www.google.com/maps?saddr=11.592, 76.117&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
 								  <i class="fas fa-map-marker-alt text-primary mr-2">
 
 								  </i>
@@ -77,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Add click event to marker
 		marker.on('click', () => {
-		map1.setView([centerloca.lat, centerloca.lng], 10);
+		map1.setView([11.592, 76.117], 10);
 		L.popup()
 		.setLatLng([lat, lon])
 		.setContent("Welcome to location")
@@ -89,6 +72,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     })
     .catch(err => console.error("Overpass API error:", err));
-
-
- });
