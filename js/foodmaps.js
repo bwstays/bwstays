@@ -79,9 +79,6 @@ var container = L.DomUtil.get('map');
 	   foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 
 
-
-
-
 		// Add click event to marker
 		marker.on('click', () => {
 		map.setView([centerloca.lat, centerloca.lng], 10);
@@ -94,8 +91,7 @@ var container = L.DomUtil.get('map');
 
 
       });
-    })
-    .catch(err => console.error("Overpass API error:", err));
+    }).catch(err => console.error("Overpass API error:", err));
 
 });
 
