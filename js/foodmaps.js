@@ -1,28 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const section = document.querySelector('#food-places');
-  if (!section) return;
-
-  const centerAttr = section.getAttribute('data-center');
-  if (!centerAttr) return;
-  const [lat, lng] = centerAttr.split(',').map(Number);
-  const centerloca = { lat, lng };
-
-  const customIcon = {
-    url: 'https://www.bwstays.com/assets/img/logo/pin.png'
-  };
-
-  const mainLocationIcon = {
-    url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
-  };
-
-// Initialize map
-var container = L.DomUtil.get('map');
-
- if(container != null){
-        container._leaflet_id = null;
-      }
-
-    const map = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
+    // Initialize map
+    const map = L.map('foodmap').setView([11.592, 76.117], 10);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -34,9 +11,9 @@ var container = L.DomUtil.get('map');
       [out:json];
       (
 
-         node["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng] );
-        way["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng]);
-        relation["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng]);
+         node["amenity"="restaurant"](around:5000,11.592, 76.117 );
+        way["amenity"="restaurant"](around:5000,11.592, 76.117);
+        relation["amenity"="restaurant"](around:5000,11.592, 76.117);
       );
       out center;
     `;
@@ -47,7 +24,7 @@ var container = L.DomUtil.get('map');
     })
     .then(response => response.json())
     .then(data => {
-     					 data.elements.forEach(el => {
+      data.elements.forEach(el => {
 
 
 						const lat = el.lat || el.center?.lat;
@@ -66,13 +43,23 @@ var container = L.DomUtil.get('map');
 						let placeHTML = `
 						<div class="mb-4 text-right">
 						<h6 class="text-white">${name}</h6>
-								<a href="https://www.google.com/maps?saddr=${centerloca.lat},${centerloca.lng}&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">	 <i class="fas fa-map-marker-alt text-primary mr-2">	 </i> ${type}</p> </a></div>`;
+								<a href="https://www.google.com/maps?saddr=11.592, 76.117&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+								  <i class="fas fa-map-marker-alt text-primary mr-2">
+
+								  </i>
+								  ${type}
+								</p>
+						</a>
+
+						</div>
+						`;
+
 	   foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 
 
 		// Add click event to marker
 		marker.on('click', () => {
-		map.setView([centerloca.lat, centerloca.lng], 10);
+		map.setView([11.592, 76.117], 10);
 		L.popup()
 		.setLatLng([lat, lon])
 		.setContent("Welcome to location")
@@ -82,7 +69,5 @@ var container = L.DomUtil.get('map');
 
 
       });
-    }).catch(err => console.error("Overpass API error:", err));
-
-});
-
+    })
+    .catch(err => console.error("Overpass API error:", err));
