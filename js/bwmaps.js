@@ -148,11 +148,9 @@ var bwlocations = [
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm">Pepper Farm</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-pepper-farm-wayanad.webp" width="300" ></a>', 11.69283527987838, 76.1911296389339, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Honey Museaum">Honey Museaum</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-honey-museum-wayanad.webp" width="300" ></a>',  11.5375175, 76.0434972, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"]];
 
-
 var element1 = document.getElementById('mapall');
 // Create Leaflet map on map element.
 var map1 = L.map(element1);
-
 // Add OSM tile layer to the Leaflet map.
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
