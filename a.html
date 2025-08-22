@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OpenStreetMap Directions</title>
+  <title>Nearby Restaurants</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
-  />
-  <style>
-    #map {
-      height: 100vh;
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>#map { height: 100vh; }</style>
 </head>
 <body>
   <div id="map"></div>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    // Initialize the map
-    const map = L.map('map').setView([12.9716, 77.5946], 13); // Bengaluru
+    // Initialize map
+    const map = L.map('map').setView([11.592, 76.117], 10); // Bengaluru coordinates
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
+      attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Add routing control
-    L.Routing.control({
-      waypoints: [
-        L.latLng(12.9716, 77.5946), // Start: Bengaluru
-        L.latLng(12.9616, 77.7046)  // End: Nearby destination
-      ],
-      routeWhileDragging: true
-    }).addTo(map);
+    // Overpass API query to find restaurants within 1km radius
+    const query = `
+      [out:json];
+      (
+
+         node["amenity"="restaurant"](around:5000,11.592, 76.117 );
+        way["amenity"="restaurant"](around:5000,11.592, 76.117);
+        relation["amenity"="restaurant"](around:5000,11.592, 76.117);
+      );
+      out center;
+    `;
+
+    fetch("https://overpass-api.de/api/interpreter", {
+      method: "POST",
+      body: query
+    })
+    .then(response => response.json())
+    .then(data => {
+      data.elements.forEach(el => {
+        const lat = el.lat || el.center?.lat;
+        const lon = el.lon || el.center?.lon;
+        if (lat && lon) {
+          L.marker([lat, lon])
+            .addTo(map)
+            .bindPopup(el.tags.name || "Unnamed Restaurant");
+        }
+      });
+    })
+    .catch(err => console.error("Overpass API error:", err));
   </script>
 </body>
 </html>
