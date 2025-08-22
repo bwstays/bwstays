@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       restaurants.forEach(restaurant => {
         const cuisineType = guessCuisineFromTags(restaurant.tags);
-        
+
         // Add marker to map
         L.marker([restaurant.lat, restaurant.lon], {
           icon: L.icon({
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let placeHTML = `
           <div class="mb-4 text-right">
             <h6 class="text-white">${restaurant.tags.name}</h6>
-            <a href="https://www.google.com/maps?saddr=${lat},${lng}&daddr=${restaurant.lat},${restaurant.lon}" 
+            <a href="https://www.google.com/maps?saddr=${lat},${lng}&daddr=${restaurant.lat},${restaurant.lon}"
                alt="location map" target="_blank" rel="noopener noreferrer nofollow">
               <p class="text-white-50 small mb-1">
                 <i class="fas fa-map-marker-alt text-primary mr-2"></i>
@@ -118,6 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function guessCuisineFromTags(tags) {
   if (tags.cuisine) return tags.cuisine.charAt(0).toUpperCase() + tags.cuisine.slice(1);
+  if (tags.amenity === 'pub') return 'Pub';
+  if (tags.amenity === 'food_court') return 'Food Court';
+  if (tags.amenity === 'bar') return 'Bar';
   if (tags.amenity === 'cafe') return 'Cafe';
   if (tags.amenity === 'fast_food') return 'Fast Food';
   if (tags.amenity === 'restaurant') return 'Restaurant';

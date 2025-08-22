@@ -139,9 +139,9 @@ for (i = 0; i < bwlocations.length; i++) {
       L.latLng(dest)
     ],
     routeWhileDragging: true,
-    router: L.Routing.osrmv1({
+    /*router: L.Routing.osrmv1({
       serviceUrl: 'https://router.project-osrm.org/route/v1'
-    })
+    })*/
 }).addTo(map1);
 
 }
