@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
    const section = document.querySelector('#food-places');
    if (!section) return;
 
@@ -78,3 +79,5 @@
       });
     })
     .catch(err => console.error("Overpass API error:", err));
+
+    });
