@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	   foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
 
- marker.on('click', () => {
+ 		marker.on('click', () => {
 		map1.setView([centerloca.lat, centerloca.lng], 10);
 		L.popup()
 		.setLatLng([lat, lon])
@@ -77,5 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     })
     .catch(err => console.error("Overpass API error:", err));
-
     });
