@@ -190,7 +190,7 @@
     // Create chat button
     const chatBtn = document.createElement('button');
     chatBtn.type = 'button';
-    chatBtn.className = 'btn btn-primary btn-floating btn-lg';
+    chatBtn.className = 'btn btn-primary btn-floating btn-lg';
     chatBtn.id = 'btn-chat';
     chatBtn.innerHTML = '<i class="fas fa-comments"></i>';
 
@@ -323,9 +323,8 @@
         'amenities', 'pool', 'wifi', 'breakfast', 'parking', 'pet friendly', 'ac', 'air conditioning',
         'price', 'prices', 'rate', 'rates', 'cost', 'availability', 'rooms', 'room', 'night', 'per night',
         'cancellation', 'refund', 'policy', 'policies', 'terms', 'check-in time', 'check-out time',
-        'contact', 'phone', 'whatsapp', 'email', 'support', 'customer care',
-        'location', 'address', 'map', 'directions', 'near', 'nearby', 'distance', 'airport', 'railway', 'bus',
-        'season', 'weather', 'monsoon', 'summer', 'winter'
+        'contact', 'phone', 'whatsapp', 'email', 'support', 'customer care','location', 'address', 'map', 'directions', 'near', 'nearby', 'distance', 'airport', 'railway', 'bus','season', 'weather', 'monsoon', 'summer','winter','place','places','discover','natural','modern','greenery','location','food','resturant','valleys','kerala','hills','hill','mountain','stays','contact','tour','tourist','vacation','weekend','homestay','staycation','workation','estate','plantation','coffee','tea','kitchen','service','gourmet','romantic','swim','swimming','sports','trucking',
+        , 'dam', 'plantation', 'museum', 'heritage', 'romantic', 'trekking',  'cycling', 'bamboo', 'rafting',  'restaurant']
       ];
       return keywords.some(k => t.includes(k));
     }
