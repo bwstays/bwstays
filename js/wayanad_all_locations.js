@@ -141,6 +141,9 @@ for (i = 0; i < bwlocations.length; i++) {
 	var origin = L.latLng('11.542442317568533', '76.02721621504702');
 	var dest = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 
+
+
+
   L.Routing.control({
     waypoints: [
       L.latLng(origin),
@@ -152,6 +155,8 @@ for (i = 0; i < bwlocations.length; i++) {
     })
 }).addTo(map1);
 
+/*
+
   // Set map's center to dest with zoom 14.
   map1.setView(origin, 10);
   map1.setView(dest, 10);
@@ -159,6 +164,7 @@ for (i = 0; i < bwlocations.length; i++) {
   L.marker(origin,iconOptions1).addTo(map1);
   L.marker(dest,iconOptions1).addTo(map1);
 
+*/
 }
 
 
