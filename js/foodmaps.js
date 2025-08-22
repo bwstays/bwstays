@@ -69,4 +69,3 @@ var lng=76.1051083;
     })
     .catch(err => console.error("Overpass API error:", err));
 
- });
