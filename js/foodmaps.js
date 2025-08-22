@@ -1,5 +1,20 @@
-    // Initialize map
-    const map1 = L.map('foodmap').setView([11.592, 76.117], 10);
+   const section = document.querySelector('#food-places');
+   if (!section) return;
+
+   const centerAttr = section.getAttribute('data-center');
+   if (!centerAttr) return;
+   const [lat, lng] = centerAttr.split(',').map(Number);
+   const centerloca = { lat, lng };
+
+   const customIcon = {
+     url: 'https://www.bwstays.com/assets/img/logo/pin.png'
+   };
+
+   const mainLocationIcon = {
+     url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
+  };
+ // Initialize map
+    const map1 = L.map('foodmap').setView([centerloca.lat, centerloca.lng], 10);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -11,9 +26,9 @@
       [out:json];
       (
 
-         node["amenity"="restaurant"](around:5000,11.592, 76.117 );
-        way["amenity"="restaurant"](around:5000,11.592, 76.117);
-        relation["amenity"="restaurant"](around:5000,11.592, 76.117);
+         node["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng );
+        way["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng);
+        relation["amenity"="restaurant"](around:5000,centerloca.lat, centerloca.lng);
       );
       out center;
     `;
@@ -59,7 +74,7 @@
 
 		// Add click event to marker
 		marker.on('click', () => {
-		map1.setView([11.592, 76.117], 10);
+		map1.setView([centerloca.lat, centerloca.lng], 10);
 		L.popup()
 		.setLatLng([lat, lon])
 		.setContent("Welcome to location")
