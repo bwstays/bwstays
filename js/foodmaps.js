@@ -34,9 +34,7 @@
 						const lon = el.lon || el.center?.lon;
 						const name = el.tags.name || "Unnamed";
 						const type = el.tags.amenity || "Unknown";
-
-
-						const foodPlacesContainer = document.getElementById('food-list');
+ 						const foodPlacesContainer = document.getElementById('food-list');
 
 						const marker =  L.marker([lat, lon])
 						.addTo(map1)
