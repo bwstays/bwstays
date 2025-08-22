@@ -1,10 +1,10 @@
     // Initialize map
-    const map = L.map('foodmap').setView([11.592, 76.117], 10);
+    const map1 = L.map('foodmap').setView([11.592, 76.117], 10);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+    }).addTo(map1);
 
     // Overpass API query to find restaurants within 1km radius
     const query = `
@@ -37,7 +37,7 @@
 						const foodPlacesContainer = document.getElementById('food-list');
 
 						const marker =  L.marker([lat, lon])
-						.addTo(map)
+						.addTo(map1)
 						.bindPopup(el.tags.name || "Unnamed Restaurant").openPopup();
 
 						let placeHTML = `
@@ -59,11 +59,11 @@
 
 		// Add click event to marker
 		marker.on('click', () => {
-		map.setView([11.592, 76.117], 10);
+		map1.setView([11.592, 76.117], 10);
 		L.popup()
 		.setLatLng([lat, lon])
 		.setContent("Welcome to location")
-		.openOn(map);
+		.openOn(map1);
 		});
 
 
