@@ -164,9 +164,6 @@ for (i = 0; i < bwlocations.length; i++) {
 	var origin = L.latLng('11.542442317568533', '76.02721621504702');
 	var dest = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 
-
-
-
   L.Routing.control({
     waypoints: [
       L.latLng(origin),
