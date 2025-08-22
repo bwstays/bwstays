@@ -177,3 +177,5 @@ for (i = 0; i < bwlocations.length; i++) {
       serviceUrl: 'https://router.project-osrm.org/route/v1'
     })
 }).addTo(map1);
+
+}

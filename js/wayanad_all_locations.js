@@ -129,6 +129,7 @@ let iconOptions1 = {
     draggable:true,
     icon:myIcon1
 }
+
 // Add OSM tile layer to the Leaflet map.
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -154,16 +155,7 @@ for (i = 0; i < bwlocations.length; i++) {
     })
 }).addTo(map1);
 
-/*
 
-  // Set map's center to dest with zoom 14.
-  map1.setView(origin, 10);
-  map1.setView(dest, 10);
-  // Place a marker on the same location.
-  L.marker(origin,iconOptions1).addTo(map1);
-  L.marker(dest,iconOptions1).addTo(map1);
-
-*/
 }
 
 
