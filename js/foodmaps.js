@@ -9,7 +9,6 @@ $( document ).ready(function() {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map1);
-
     // Overpass API query to find restaurants within 1km radius
     const query = `
       [out:json];
