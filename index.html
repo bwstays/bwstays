@@ -83,7 +83,7 @@
 <link rel="apple-touch-icon" sizes="152x152" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-152x152.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
 
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src cdn.cookie-script.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com wati-integration-prod-service.clare.ai bwstays.com code.jquery.com requirejs.org  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com ; style-src 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.md mc.yandex.ru bwstays.com; connect-src  api.groq.com  hn.inspectlet.com mc.yandex.ru mc.yandex.md  'self' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com  mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com  ws.inspectlet.com   ;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src   unpkg.com     cdn.cookie-script.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com wati-integration-prod-service.clare.ai bwstays.com code.jquery.com requirejs.org  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com ; style-src  unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.md mc.yandex.ru bwstays.com; connect-src  api.groq.com  hn.inspectlet.com mc.yandex.ru mc.yandex.md  'self' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com  mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com  ws.inspectlet.com   ;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
 <!--
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; require-trusted-types-for 'script'; trusted-types default;">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; frame-ancestors 'none';">-->
@@ -94,13 +94,15 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"  href="https://www.bwstays.com/blogs/feed.xml" />
 -->
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
-<link href="css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
-<link href="css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
-<link href="css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://www.bwstays.com/css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
+<link href="https://www.bwstays.com/css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
+<link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
 <!-- <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
 <link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  /> -->
 <!-- <link href="css/sidebar.css" rel="stylesheet"   type='text/css' media='all'  /> -->
+<link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+
 <noscript><link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"     type='text/css' media='all'   rel="dns-prefetch"  /></noscript>
 
 <!--
@@ -385,7 +387,7 @@ setTimeout(ldinsp, 0);
                 </p>
             </div>
 
-            <div id="discover">
+            <div >
                 <!-- Plantations //0 plantation -->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
                     <div class="col-lg-6"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"
@@ -721,105 +723,13 @@ setTimeout(ldinsp, 0);
             </div>
             <div class="col-md-6 mb-3">
                 <div class="card h-100 shadow-sm">
-                    <div class="card-body review-widget">
-                        <h5 class="card-title text-primary mb-3">Google Reviews</h5>
-                        <div class="review-header">
-                            <div class="rating-badge">
-                                <span class="rating-value">4.6</span>
-                                <span class="stars" aria-label="4.6 out of 5 stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </span>
-                            </div>
-                            <div class="review-count text-muted">Based on 128 reviews</div>
-                        </div>
-
-                        <div class="review-item">
-                            <div class="reviewer">
-                                <div class="avatar" aria-hidden="true">A</div>
-                                <div>
-                                    <div class="name">Anjali Menon</div>
-                                    <div class="rating-row">
-                                        <span class="stars" aria-label="5 out of 5 stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </span>
-                                        <span class="date">2 weeks ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review-text mb-2">Loved the peaceful location and the scenic views. Rooms were clean, staff friendly, and the morning mist was magical. Highly recommended for couples and families.</p>
-                            <a class="google-link btn btn-sm btn-outline-primary" href="#" rel="noopener noreferrer nofollow">View on Google</a>
-                        </div>
-
-                        <div class="review-item">
-                            <div class="reviewer">
-                                <div class="avatar" aria-hidden="true">R</div>
-                                <div>
-                                    <div class="name">Rahul Nair</div>
-                                    <div class="rating-row">
-                                        <span class="stars" aria-label="4 out of 5 stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="far fa-star"></i>
-                                        </span>
-                                        <span class="date">1 month ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review-text mb-2">Great value for money. The location is close to key attractions and the staff helped us plan our day trips. Parking and Wi‑Fi were reliable.</p>
-                            <a class="google-link btn btn-sm btn-outline-primary" href="#" rel="noopener noreferrer nofollow">View on Google</a>
-                        </div>
-
-                        <div class="review-item">
-                            <div class="reviewer">
-                                <div class="avatar" aria-hidden="true">P</div>
-                                <div>
-                                    <div class="name">Priya S</div>
-                                    <div class="rating-row">
-                                        <span class="stars" aria-label="5 out of 5 stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </span>
-                                        <span class="date">3 days ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review-text mb-2">Perfect weekend getaway! Neat rooms, beautiful surroundings, and a lovely breakfast. We enjoyed the sunrise view from the balcony.</p>
-                            <a class="google-link btn btn-sm btn-outline-primary" href="#" rel="noopener noreferrer nofollow">View on Google</a>
-                        </div>
-
-                        <div class="review-item">
-                            <div class="reviewer">
-                                <div class="avatar" aria-hidden="true">V</div>
-                                <div>
-                                    <div class="name">Vikram Rao</div>
-                                    <div class="rating-row">
-                                        <span class="stars" aria-label="5 out of 5 stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </span>
-                                        <span class="date">5 months ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review-text mb-2">Exceptional hospitality. The host went out of the way to arrange early check‑in. Calm neighborhood and plenty of greenery around.</p>
-                            <a class="google-link btn btn-sm btn-outline-primary" href="#" rel="noopener noreferrer nofollow">View on Google</a>
-                        </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Why Choose Us?</h5>
+                        <ul class="card-text text-muted pl-3 mb-0">
+                            <li>Serene natural surroundings</li>
+                            <li>Modern amenities for comfort</li>
+                            <li>Ideal for families, couples, and professionals</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -905,38 +815,13 @@ setTimeout(ldinsp, 0);
                 </div>
                 <div class="col-md-4 d-flex flex-column align-items-end">
 
-                    <div class="stay-highlights text-white">
-                        <h6 class="stay-subtitle text-white-50 mb-3">Stay in Wayanad</h6>
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <span class="feature-icon" aria-hidden="true"><i class="fas fa-check"></i></span>
-                                <div>
-                                    <div class="feature-title">Central & Well‑Connected</div>
-                                    <div class="feature-desc text-white-50">Minutes to Kalpetta town, markets, and top attractions.</div>
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <span class="feature-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                                <div>
-                                    <div class="feature-title">Scenic Western Ghats Views</div>
-                                    <div class="feature-desc text-white-50">Wake up to green hills, tea estates, and misty mornings.</div>
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <span class="feature-icon" aria-hidden="true"><i class="fas fa-check-square"></i></span>
-                                <div>
-                                    <div class="feature-title">Vibrant Local Life</div>
-                                    <div class="feature-desc text-white-50">Cafes, heritage spots, lakes and forest trails all close by.</div>
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <span class="feature-icon" aria-hidden="true"><i class="fas fa-clipboard-check"></i></span>
-                                <div>
-                                    <div class="feature-title">Best for</div>
-                                    <div class="feature-desc text-white-50">Families, couples and remote workers seeking calm with convenience.</div>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="mid text-white-50">
+                        <p>Experience tranquility in the heart of Wayanad.</p>
+                        <p>Modern comforts with a rural touch.</p>
+                        <p>Spacious villas surrounded by lush greenery.</p>
+                        <p>Perfect for family vacations and workations alike.</p>
+                        <p>Discover local  cuisines  and natural beauty .</p>
+
                     </div>
 
                 </div>
@@ -971,12 +856,16 @@ setTimeout(ldinsp, 0);
         <i class="fas fa-arrow-up"></i>
     </button>
 
+
+
     <!-- Jquery party plugin JS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
 
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <!-- Bootstrap core JS-->
     <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- Font Awesome icons (free version)-->
     <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"   rel="preload" crossorigin="anonymous"></script>
@@ -985,9 +874,12 @@ setTimeout(ldinsp, 0);
     <script type="text/javascript"  src="https://www.bwstays.com/data/sitedata.js"></script>
     <script type="text/javascript"  src="https://www.bwstays.com/data/villacard.js"></script>
     <script type="text/javascript"  src="https://www.bwstays.com/js/index-dynamic-content.js"></script>
-    <script
+<!--
+   <script
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbkk&sensor=false"
         type="text/javascript"></script>
+        -->
+
     <script type="text/javascript" src="https://www.bwstays.com/js/bwmaps.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/whatsapp.js"></script>
 
@@ -1102,7 +994,6 @@ setTimeout(ldinsp, 0);
   <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/61ca2eec7dff3025fb51cf16daffc31e.js"></script>
 -->
   <script src="https://www.bwstays.com/js/chat.js"></script>
-
 
  </body>
 

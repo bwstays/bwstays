@@ -1,27 +1,98 @@
+
+https://codepen.io/olivier-c/pen/wvPNGQa
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Street View Embed</title>
-    <style>
-        #pano {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
+  <title>Nearby Restaurants</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>#map { height: 100vh; }</style>
 </head>
 <body>
-    <div id="pano"></div>
-    <script>
-        function initPano() {
-            var panorama = new google.maps.StreetViewPanorama(
-                document.getElementById('pano'), {
-                    position: {lat: 11.5297, lng: 76.0154}, // Example: Los Angeles
-                    pov: {heading: 165, pitch: 0},
-                    zoom: 1
-                });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbkk&callback=initPano"></script>
+  <div id="map"></div>
+     <div id="food-list"></div>
 
- </body>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize map
+    const map = L.map('map').setView([11.592, 76.117], 10);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Overpass API query to find restaurants within 1km radius
+    const query = `
+      [out:json];
+      (
+
+         node["amenity"="restaurant"](around:5000,11.592, 76.117 );
+        way["amenity"="restaurant"](around:5000,11.592, 76.117);
+        relation["amenity"="restaurant"](around:5000,11.592, 76.117);
+      );
+      out center;
+    `;
+
+    fetch("https://overpass-api.de/api/interpreter", {
+      method: "POST",
+      body: query
+    })
+    .then(response => response.json())
+    .then(data => {
+      data.elements.forEach(el => {
+
+
+						const lat = el.lat || el.center?.lat;
+						const lon = el.lon || el.center?.lon;
+						const name = el.tags.name || "Unnamed";
+						const type = el.tags.amenity || "Unknown";
+
+
+
+						const foodPlacesContainer = document.getElementById('food-list');
+
+						const marker =  L.marker([lat, lon])
+						.addTo(map)
+						.bindPopup(el.tags.name || "Unnamed Restaurant").openPopup();
+
+						let placeHTML = `
+						<div class="mb-4 text-right">
+						<h6 class="text-white">${name}</h6>
+								<a href="https://www.google.com/maps?saddr=11.592, 76.117&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
+								  <i class="fas fa-map-marker-alt text-primary mr-2">
+
+								  </i>
+								  ${type}
+								</p>
+						</a>
+
+						</div>
+						`;
+
+	   foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
+
+
+		// Add click event to marker
+		marker.on('click', () => {
+		map.setView([11.592, 76.117], 10);
+		L.popup()
+		.setLatLng([lat, lon])
+		.setContent("Welcome to location")
+		.openOn(map);
+		});
+
+
+
+      });
+    })
+    .catch(err => console.error("Overpass API error:", err));
+  </script>
+</body>
 </html>
