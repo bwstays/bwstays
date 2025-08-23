@@ -235,7 +235,7 @@
 }
 .testimonial {
   background: #181818;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 1.2rem 1rem;
   color: #fff;
   font-size: 1.05rem;
@@ -458,7 +458,7 @@
 }
 .testimonials-section .card {
   background: rgba(255,255,255,0.95);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   border: none;
   margin-bottom: 1.5rem;
@@ -500,4 +500,4 @@ section {
     max-height: 220px;
     object-fit: cover;
   }
-} 
+}
