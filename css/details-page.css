@@ -31,7 +31,7 @@
 /* Enhanced SEO structured data styles */
 .villa-details {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 40px;
     margin: 40px 0;
 }
@@ -151,7 +151,7 @@
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
@@ -554,12 +554,12 @@
     width: 48px;
     display: grid;
     place-items: center;
-    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-color: rgba(100, 161, 157, 0.85);
     border-radius: 10px;
     color: #ffffff;
     opacity: 0.95;
     position: relative;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(100, 161, 157, 0.15); 
     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.08),
         0 6px 16px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(3px);
@@ -576,11 +576,13 @@
     pointer-events: none;
 }
 
+
 .feature-item:hover .feature-icon {
     border-color: rgba(100, 161, 157, 0.85);
     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.12),
         0 8px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-1px);
+    background: rgba(100, 161, 157, 0.15); 
 }
 
 .feature-icon i {
@@ -614,13 +616,23 @@
 }
 
 /* Ensure footer map fills its column even if maps.css limits width */
-.footer .dir-map.map {
-    min-height: 320px;
+.footer .map {
+    height: 240px; 
     width: 100%;
-    max-width: none;
+    max-width: 100%;
 }
 
+@media (max-width: 768px) {
+    .footer .map {
+        height: 220px; 
+    }
+}
 
+@media (max-width: 576px) {
+    .footer .map {
+        height: 200px;
+    }
+}
 #discover {
     border-radius: 20px;
     overflow: hidden;
@@ -712,4 +724,11 @@
 .review-widget .card-title {
     font-size: 1rem;
     margin-bottom: .5rem;
+}
+#contact-form{
+    border-radius: 20px !important;
+}
+
+#contact-form .form-control {
+    border-radius: 8px !important; 
 }
