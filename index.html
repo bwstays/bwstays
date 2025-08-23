@@ -829,7 +829,7 @@ setTimeout(ldinsp, 0);
 		 </div>
      </section>
     <!-- Signup-->
-    <section class="signup-section" id="signup">
+     <section class="signup-section" id="signup">
         <div class="container py-2">
             <div class="col-md-12 text-center">
                 <div class="text-left mb-12 text-center">
@@ -886,8 +886,207 @@ setTimeout(ldinsp, 0);
                     </div>
                 </div>
             </div>
+            
+            <!-- Enhanced Contact Form Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-lg" id="contact-form-card">
+                        <div class="card-body p-5">
+                            <h3 class="text-white font-weight-bold mb-4 text-center">
+                                <i class="fas fa-paper-plane text-primary mr-2"></i>
+                                Send us a Message
+                            </h3>
+                            <form id="contactForm" class="contact-form">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label class="text-white-50 small font-weight-bold">Full Name *</label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label class="text-white-50 small font-weight-bold">Email Address *</label>
+                                            <input type="email" class="form-control form-control-lg" placeholder="your@email.com" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label class="text-white-50 small font-weight-bold">Phone Number</label>
+                                            <input type="tel" class="form-control form-control-lg" placeholder="+91 XXXXX XXXXX">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label class="text-white-50 small font-weight-bold">Check-in Date</label>
+                                            <input type="date" class="form-control form-control-lg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="text-white-50 small font-weight-bold">Message *</label>
+                                    <textarea class="form-control" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 py-3 font-weight-bold">
+                                        <i class="fas fa-send mr-2"></i>
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials & Social Media Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <!-- Testimonials -->
+                        <div class="col-md-8 mb-4">
+                            <div class="card border-0 shadow-lg h-100" id="testimonials-card">
+                                <div class="card-body p-4">
+                                    <h4 class="text-white font-weight-bold mb-4">
+                                        <i class="fas fa-quote-left text-primary mr-2"></i>
+                                        What Our Guests Say
+                                    </h4>
+                                    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <blockquote class="blockquote text-center">
+                                                    <p class="text-white-50 mb-3">"Amazing stay in the heart of Wayanad! The villa was perfect for our family vacation. Highly recommended!"</p>
+                                                    <footer class="blockquote-footer text-primary">
+                                                        <strong>Priya Sharma</strong> <cite title="Source Title">Mumbai</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <blockquote class="blockquote text-center">
+                                                    <p class="text-white-50 mb-3">"Exceptional service and beautiful location. The staff went above and beyond to make our stay memorable."</p>
+                                                    <footer class="blockquote-footer text-primary">
+                                                        <strong>Rajesh Kumar</strong> <cite title="Source Title">Bangalore</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <blockquote class="blockquote text-center">
+                                                    <p class="text-white-50 mb-3">"Perfect blend of luxury and nature. The views from our villa were breathtaking!"</p>
+                                                    <footer class="blockquote-footer text-primary">
+                                                        <strong>Anita Menon</strong> <cite title="Source Title">Kochi</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media & Quick Links -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card border-0 shadow-lg h-100" id="social-card">
+                                <div class="card-body p-4">
+                                    <h4 class="text-white font-weight-bold mb-4">
+                                        <i class="fas fa-share-alt text-primary mr-2"></i>
+                                        Connect With Us
+                                    </h4>
+                                    <div class="social-links mb-4">
+                                        <a href="#" class="btn btn-outline-primary btn-social mb-2">
+                                            <i class="fab fa-facebook-f"></i> Facebook
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary btn-social mb-2">
+                                            <i class="fab fa-instagram"></i> Instagram
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary btn-social mb-2">
+                                            <i class="fab fa-youtube"></i> YouTube
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary btn-social mb-2">
+                                            <i class="fab fa-tripadvisor"></i> TripAdvisor
+                                        </a>
+                                    </div>
+                                    
+                                    <h5 class="text-white font-weight-bold mb-3">Quick Actions</h5>
+                                    <div class="quick-actions">
+                                        <a href="#" class="btn btn-primary btn-sm btn-block mb-2">
+                                            <i class="fas fa-calendar-check mr-2"></i>Check Availability
+                                        </a>
+                                        <a href="#" class="btn btn-outline-light btn-sm btn-block mb-2">
+                                            <i class="fas fa-download mr-2"></i>Download Brochure
+                                        </a>
+                                        <a href="#" class="btn btn-outline-light btn-sm btn-block">
+                                            <i class="fas fa-map-marked-alt mr-2"></i>View Location
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Statistics & Features Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-lg" id="stats-card">
+                        <div class="card-body p-5">
+                            <h3 class="text-white font-weight-bold text-center mb-5">
+                                <i class="fas fa-chart-line text-primary mr-2"></i>
+                                Why Choose BW Stays?
+                            </h3>
+                            <div class="row text-center">
+                                <div class="col-md-3 mb-4">
+                                    <div class="stat-item">
+                                        <div class="stat-icon mb-3">
+                                            <i class="fas fa-users fa-3x text-primary"></i>
+                                        </div>
+                                        <h2 class="text-white font-weight-bold counter" data-target="500">0</h2>
+                                        <p class="text-white-50">Happy Guests</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="stat-item">
+                                        <div class="stat-icon mb-3">
+                                            <i class="fas fa-home fa-3x text-primary"></i>
+                                        </div>
+                                        <h2 class="text-white font-weight-bold counter" data-target="25">0</h2>
+                                        <p class="text-white-50">Premium Villas</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="stat-item">
+                                        <div class="stat-icon mb-3">
+                                            <i class="fas fa-star fa-3x text-primary"></i>
+                                        </div>
+                                        <h2 class="text-white font-weight-bold">4.8<span class="h4">/5</span></h2>
+                                        <p class="text-white-50">Guest Rating</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="stat-item">
+                                        <div class="stat-icon mb-3">
+                                            <i class="fas fa-award fa-3x text-primary"></i>
+                                        </div>
+                                        <h2 class="text-white font-weight-bold counter" data-target="5">0</h2>
+                                        <p class="text-white-50">Years Experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
 
 
 
