@@ -498,7 +498,7 @@
     /* Enables flex child to shrink below content size */
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
-    touch-action: pan-y;
+    touch-action: pan-y;    
 }
 
 .chat-message {
