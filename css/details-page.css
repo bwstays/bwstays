@@ -90,11 +90,7 @@
     transition: all 0.3s ease;
 }
 
-.vertical-menu a:hover {
-    background: #64a19d;
-    color: white;
-    text-decoration: none;
-}
+
 
 .vertical-menu a:last-child {
     border-bottom: none;
@@ -129,11 +125,7 @@
     overflow: hidden;
 }
 
-#contact-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-}
+
 
 #contact-card::before {
     content: '';
@@ -146,9 +138,7 @@
     transition: left 0.6s;
 }
 
-#contact-card:hover::before {
-    left: 100%;
-}
+
 
 #contact-card-divider {
     width: 50px;
@@ -159,10 +149,7 @@
     transition: all 0.3s ease;
 }
 
-#contact-card:hover #contact-card-divider {
-    width: 70px;
-    box-shadow: 0 4px 16px rgba(0, 123, 255, 0.5);
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -381,10 +368,7 @@
     font-size: 20px;
 }
 
-#btn-chat:hover {
-    filter: brightness(1.05);
-    transform: translateY(-2px);
-}
+
 
 /* Custom checkbox styles - blue by default */
 .form-check-input,
@@ -408,10 +392,7 @@
     box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.25);
 }
 
-.custom-control-input:hover~.custom-control-label::before {
-    background-color: #64a19d !important;
-    border-color: #64a19d !important;
-}
+
 
 /* Ensure all checkbox icons are consistent */
 .custom-checkbox .custom-control-label::after {
@@ -485,9 +466,7 @@
     cursor: pointer;
 }
 
-.chat-close:hover {
-    opacity: 1;
-}
+
 
 .chat-body {
     padding: 12px;
@@ -586,9 +565,6 @@
     cursor: not-allowed;
 }
 
-#chat-send:hover:not(:disabled) {
-    opacity: 1;
-}
 
 .chat-typing {
     display: flex;
@@ -663,10 +639,7 @@
     transition: all 0.3s ease;
 }
 
-#contact-form-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
+
 
 .contact-form .form-control {
     background: rgba(255, 255, 255, 0.1);
@@ -697,10 +670,7 @@
     transition: all 0.3s ease;
 }
 
-#testimonials-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -720,10 +690,6 @@
     transition: all 0.3s ease;
 }
 
-#social-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
 
 .btn-social {
     width: 100%;
@@ -732,11 +698,7 @@
     border: 1px solid rgba(0, 123, 255, 0.5);
 }
 
-.btn-social:hover {
-    background: rgba(0, 123, 255, 0.2);
-    border-color: #007bff;
-    transform: translateX(5px);
-}
+
 
 /* Statistics Card Styling */
 #stats-card {
@@ -748,10 +710,6 @@
     transition: all 0.3s ease;
 }
 
-#stats-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
 
 .stat-item {
     padding: 20px;
@@ -761,19 +719,10 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.stat-item:hover {
-    background: rgba(0, 123, 255, 0.1);
-    transform: translateY(-5px);
-    border-color: rgba(0, 123, 255, 0.3);
-}
+
 
 .stat-icon i {
     transition: all 0.3s ease;
-}
-
-.stat-item:hover .stat-icon i {
-    transform: scale(1.1);
-    color: #17a2b8 !important;
 }
 
 .counter {
@@ -787,6 +736,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -799,6 +749,7 @@
 
 /* Mobile Responsive Styles for New Sections */
 @media (max-width: 768px) {
+
     #contact-form-card,
     #testimonials-card,
     #social-card,
@@ -806,27 +757,877 @@
         border-radius: 15px;
         margin-bottom: 20px;
     }
-    
+
     .contact-form .form-control {
         border-radius: 8px;
     }
-    
+
     .btn-social {
         border-radius: 8px;
         margin-bottom: 10px;
     }
-    
+
     .stat-item {
         border-radius: 12px;
         padding: 15px;
         margin-bottom: 15px;
     }
-    
+
     .counter {
         font-size: 2rem;
     }
-    
+
     .stat-icon i {
         font-size: 2rem !important;
     }
+}
+
+/* New styles for testimonial section */
+.testimonial-section {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    padding: 40px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reviews-content {
+    background: rgba(52, 58, 64, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reviews-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.reviews-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #64a19d;
+    margin: 10px auto 0;
+}
+
+.overall-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.rating-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #64a19d, #4e8a86);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(100, 161, 157, 0.3);
+}
+
+.rating-details .stars {
+    color: #f1c40f;
+    font-size: 1.5rem;
+}
+
+.review-count {
+    color: #a0a0a0;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.review-card {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(100, 161, 157, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #64a19d;
+    margin-right: 15px;
+}
+
+.reviewer-details .name {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #a0a0a0;
+}
+
+.stars {
+    color: #f1c40f;
+}
+
+.date {
+    font-size: 0.9rem;
+}
+
+.review-text {
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overall-rating {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Match form and reviews container heights */
+#testimonial .row {
+    align-items: stretch;
+}
+
+#testimonial .col-md-6 {
+    display: flex;
+}
+
+#testimonial #contact-form,
+#testimonial .reviews-container {
+    flex: 1;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#testimonial .reviews-content {
+    background: #343a40;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hide unnecessary elements */
+#testimonial .reviews-title,
+#testimonial .overall-rating,
+#testimonial .avatar,
+#testimonial .rating-row {
+    display: none;
+}
+
+/* Style reviews grid as a single line */
+#testimonial .reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style individual review cards */
+#testimonial .review-card {
+    display: block;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 0;
+    color: #e9ecef;
+}
+
+/* Style reviewer name and review text */
+#testimonial .reviewer-info {
+    display: inline;
+    margin: 0;
+}
+
+#testimonial .reviewer-details {
+    display: inline;
+}
+
+#testimonial .name {
+    color: #64a19d;
+    font-weight: 600;
+}
+
+#testimonial .review-text {
+    display: inline;
+    margin: 0;
+}
+
+/* Add separator between reviews */
+#testimonial .review-card:not(:last-child)::after {
+    content: "";
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #testimonial .review-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Google Reviews Styling */
+.reviews-container {
+    height: 100%;
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.reviews-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 10px;
+}
+
+.reviews-header {
+    margin-bottom: 15px;
+}
+
+.reviews-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.overall-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.overall-rating .rating-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.overall-rating .stars {
+    color: #ffd700;
+}
+
+.review-count {
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+.review-card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.profile-initial {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.reviewer-name {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 42px;
+    /* Align with the reviewer name (32px + 10px margin) */
+    margin-bottom: 5px;
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+}
+
+.review-text {
+    margin-left: 42px;
+    /* Align with the reviewer name */
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Custom scrollbar for reviews */
+.reviews-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.reviews-content::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 3px;
+}
+
+.reviews-content::-webkit-scrollbar-thumb {
+    background: #4fd1c5;
+    border-radius: 3px;
+}
+
+/* Match form and reviews container heights */
+#testimonial .row {
+    align-items: stretch;
+}
+
+#testimonial .col-md-6 {
+    display: flex;
+}
+
+#testimonial #contact-form,
+#testimonial .reviews-container {
+    flex: 1;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .review-text {
+        font-size: 0.85rem;
+    }
+
+    .profile-initial {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+    }
+
+    .rating-row,
+    .review-text {
+        margin-left: 38px;
+    }
+}
+
+/* Override any previous styles */
+#testimonial .reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Reset any previous styles */
+#testimonial .review-card {
+    max-width: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#testimonial .reviewer-info,
+#testimonial .reviewer-details,
+#testimonial .name,
+#testimonial .review-text {
+    display: block;
+    white-space: normal;
+    text-align: left;
+}
+
+#testimonial .reviews-content {
+    background: #343a40;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hide unnecessary elements */
+#testimonial .reviews-title,
+#testimonial .overall-rating,
+#testimonial .avatar,
+#testimonial .rating-row {
+    display: none;
+}
+
+/* Style reviews grid as a single line */
+#testimonial .reviews-grid {
+    display: block;
+    white-space: normal;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style individual review cards */
+#testimonial .review-card {
+    display: inline;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    color: #e9ecef;
+}
+
+/* Style reviewer name and review text */
+#testimonial .reviewer-info {
+    display: inline;
+    margin: 0;
+}
+
+#testimonial .reviewer-details {
+    display: inline;
+}
+
+#testimonial .name {
+    color: #64a19d;
+    font-weight: 600;
+}
+
+#testimonial .review-text {
+    display: inline;
+    margin: 0;
+}
+
+/* Add separator between reviews */
+#testimonial .review-card:not(:last-child)::after {
+    content: " | ";
+    color: #6c757d;
+    margin: 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #testimonial .review-text {
+        font-size: 0.9rem;
+    }
+}
+
+
+#testimonial .reviews-container {
+    background: #343a40 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 8px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #e9ecef;
+    overflow: hidden;
+}
+
+#testimonial .reviews-content {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+#testimonial .reviews-title {
+    display: block !important;
+    font-size: 0.85rem;
+    color: #64a19d;
+    font-weight: 600;
+    margin: 2px 0 6px 0;
+    text-align: left;
+}
+
+/* Header row */
+#testimonial .overall-rating {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+#testimonial .rating-circle {
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#testimonial .overall-rating .rating-value {
+    display: inline !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #e9ecef;
+}
+
+#testimonial .overall-rating .stars {
+    color: #ffd700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+#testimonial .rating-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#testimonial .review-count {
+    margin-left: auto;
+    color: #cfd3d7;
+    font-size: .8rem;
+}
+
+#testimonial .review-count .pill {
+    background: #4285f4;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+/* List layout */
+#testimonial .reviews-grid {
+    display: block !important;
+}
+
+#testimonial .review-card {
+    display: block !important;
+    padding: 6px 0 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    margin: 0;
+    color: #e5e5e5;
+}
+
+#testimonial .review-card:last-child {
+    border-bottom: none;
+}
+
+#testimonial .review-card::after {
+    content: none !important;
+}
+
+/* Top row */
+#testimonial .reviewer-info {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+#testimonial .avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    color: #555;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .85rem;
+    margin-right: 0;
+}
+
+#testimonial .reviewer-details .name,
+#testimonial .reviewer-name {
+    color: #f5f5f5;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Stars + date on same row */
+#testimonial .rating-row {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    margin-left: 36px;
+    margin-bottom: 6px;
+}
+
+#testimonial .rating-row .stars,
+#testimonial .stars {
+    color: #ffd700;
+}
+
+#testimonial .rating-row .date,
+#testimonial .review-date {
+    color: #bfc7cf;
+    font-size: .7rem;
+}
+
+/* Review text full below */
+#testimonial .review-text {
+    margin-left: 36px;
+    color: #dddddd;
+    font-size: .8rem;
+    line-height: 1.3;
+    display: block !important;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
+    overflow: visible;
+}
+
+/* Ensure heights remain matched (keep columns flexible) */
+#testimonial .row {
+    align-items: flex-start;
+}
+
+#testimonial .col-md-6 {
+    display: flex;
+}
+
+#testimonial #contact-form,
+#testimonial .reviews-container {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+    #testimonial .reviews-container {
+        max-height: none;
+    }
+
+    #testimonial .review-text {
+        font-size: .9rem;
+    }
+}
+
+/* ===============================
+   Stay in Wayanad - Feature Cards
+   =============================== */
+.stay-highlights {
+    max-width: 420px;
+    width: 100%;
+    margin-left: auto; /* right-align inside align-items-end column */
+}
+
+.stay-highlights .stay-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.stay-highlights .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stay-highlights .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 20px; /* match overall visual language */
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: saturate(110%) blur(3px);
+    -webkit-backdrop-filter: saturate(110%) blur(3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+}
+
+.stay-highlights .feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-size: 1.05rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16), 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.stay-highlights .feature-title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.stay-highlights .feature-desc {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    margin-top: 2px;
+}
+
+@media (max-width: 991px) {
+    .stay-highlights {
+        max-width: 100%;
+        margin-top: 12px;
+    }
+    .stay-highlights .feature-item {
+        padding: 12px 14px;
+    }
+}
+
+/* Stay in Wayanad – one unified card container */
+.stay-highlights {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  backdrop-filter: saturate(110%) blur(3px);
+  -webkit-backdrop-filter: saturate(110%) blur(3px);
+}
+
+/* remove individual card styling; treat items as rows inside the card */
+.stay-highlights .feature-list {
+  gap: 12px;
+}
+
+.stay-highlights .feature-item {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  padding: 10px 0;
+  border-radius: 12px; /* keep subtle rounding for focus states if any */
+}
+
+/* thin separators between rows */
+.stay-highlights .feature-item + .feature-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 12px;
+}
+
+.stay-highlights .feature-icon {
+  position: relative;
+}
+
+.stay-highlights .feature-icon i {
+  display: none !important; /* unify icon appearance across all four boxes */
+}
+
+/* subtle inner ring + glow to match screenshot */
+.stay-highlights .feature-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.15),
+    inset 0 10px 22px rgba(255, 255, 255, 0.05),
+    0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* the white tick mark */
+.stay-highlights .feature-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 8px;
+  border-left: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+}
+
+.stay-highlights .feature-title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.stay-highlights .feature-desc {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    margin-top: 2px;
+}
+
+@media (max-width: 991px) {
+    .stay-highlights {
+        max-width: 100%;
+        margin-top: 12px;
+    }
+    .stay-highlights .feature-item {
+        padding: 12px 14px;
+    }
+}
+
+/* Ensure 'Write to us' heading is white in testimonial section */
+#testimonial h2.text-black {
+  color: #ffffff !important;
+}
+
+/* Spacing for the DISCOVER block */
+#discover {
+  margin: 20px; /* 20px from all sides */
 }
