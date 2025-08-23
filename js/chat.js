@@ -190,7 +190,7 @@
     // Create chat button
     const chatBtn = document.createElement('button');
     chatBtn.type = 'button';
-    chatBtn.className = 'btn btn-primary btn-floating btn-lg';
+    chatBtn.className = 'btn btn-primary btn-floating btn-lg';
     chatBtn.id = 'btn-chat';
     chatBtn.innerHTML = '<i class="fas fa-comments"></i>';
 
