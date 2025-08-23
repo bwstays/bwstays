@@ -69,7 +69,7 @@
     });
 
     // Accommodation terms
-    const accommodation = ['villa', 'homestay', 'resort', 'stay', 'booking', 'room', 'amenities', 'check-in', 'checkout'];
+    const accommodation = ['villa', 'homestay','hotel', 'resort', 'stay', 'booking', 'room', 'amenities', 'check-in', 'checkout'];
     accommodation.forEach(acc => {
       if (cleanText.includes(acc)) terms.add(acc);
     });
