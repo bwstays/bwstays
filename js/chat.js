@@ -12,7 +12,6 @@
       if (!response.ok) throw new Error('Failed to load knowledge base');
 
       const text = await response.text();
-
       // Split into meaningful chunks based on headings and content sections
       const chunks = [];
       const sections = text.split(/(?=##\s)|(?=###\s)|(?=####\s)|(?=#####\s)/);
@@ -36,7 +35,6 @@
           }
         });
       });
-
       knowledgeBase = chunks;
       knowledgeLoaded = true;
       console.log(`Knowledge base loaded: ${chunks.length} chunks`);
