@@ -2243,13 +2243,8 @@ textarea.form-control {
 .was-validated .custom-control-input:valid ~ .custom-control-label, .custom-control-input.is-valid ~ .custom-control-label {
   color: #28a745;
 }
-
-/*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+ 
+ 
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -12794,8 +12789,9 @@ body {
 .btn-primary {
   background-color: #64a19d;
   border-color: #64a19d;
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0 ;
   transition: all 0.3s ease;
+  padding: 12px 25px;
 }
 
 .btn-primary:hover {
