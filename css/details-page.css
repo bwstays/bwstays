@@ -31,7 +31,7 @@
 /* Enhanced SEO structured data styles */
 .villa-details {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 40px;
     margin: 40px 0;
 }
@@ -201,7 +201,7 @@
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
@@ -477,7 +477,7 @@
     /* Enables flex child to shrink below content size */
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
-    touch-action: pan-y;
+    touch-action: pan-y;    
 }
 
 .chat-message {
@@ -641,12 +641,49 @@
 
 
 
+
+.feature-icon {
+    height: 48px;
+    width: 48px;
+    display: grid;
+    place-items: center;
+    border-color: rgba(100, 161, 157, 0.85);
+    border-radius: 10px;
+    color: #ffffff;
+    opacity: 0.95;
+    position: relative;
+    background: rgba(100, 161, 157, 0.15); 
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.08),
+        0 6px 16px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.feature-icon::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+}
+
+
+.feature-item:hover .feature-icon {
+    border-color: rgba(100, 161, 157, 0.85);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.12),
+        0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+    background: rgba(100, 161, 157, 0.15); 
+
 .contact-form .form-control {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
     border-radius: 10px;
     transition: all 0.3s ease;
+
 }
 
 .contact-form .form-control:focus {
@@ -671,6 +708,27 @@
 }
 
 
+
+
+/* Ensure footer map fills its column even if maps.css limits width */
+.footer .map {
+    height: 240px; 
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .footer .map {
+        height: 220px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .footer .map {
+        height: 200px;
+    }
+}
+#discover {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -745,6 +803,22 @@
 
 .counter {
     animation: countUp 0.8s ease-out;
+}
+
+
+.review-widget .google-link {
+    display: none !important;
+}
+.review-widget .card-title {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+#contact-form{
+    border-radius: 20px !important;
+}
+
+#contact-form .form-control {
+    border-radius: 8px !important; 
 }
 
 /* Mobile Responsive Styles for New Sections */
@@ -1631,3 +1705,4 @@
 #discover {
   margin: 20px; /* 20px from all sides */
 }
+

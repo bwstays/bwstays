@@ -87,7 +87,7 @@
 <link rel="manifest" href="https://www.bwstays.com/manifest.json"/>
 
 
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com ; style-src 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com;    connect-src  analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src overpass-api.de   unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com ; style-src   unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com;    connect-src overpass-api.de  analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
 
 <link rel="icon" type="image/x-icon" href="https://www.bwstays.com/assets/img/favicon.ico" />
 <!-- Google fonts -->
@@ -114,6 +114,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
 <link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
+ <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 
 
 <!-- Google Tag Manager -->
@@ -288,7 +289,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     </div>
 </section>
-<!--
+
 <section
   class="food-places py-5"
   id="food-places"
@@ -317,7 +318,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 
 
- --><!-- testimonial -->
+ <!-- testimonial -->
     <section  class=""       id="testimonial" >
  <div  class="vertical-div" >   <a href="#about" class="vertical-res btn btn-primary" >Reservation</a></div>
 
@@ -523,6 +524,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Jquery party plugin JS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
     <!-- Bootstrap core JS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -535,9 +538,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="https://www.bwstays.com/data/villacard.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/scripts.js"></script>
     <script type="text/javascript"   src="https://www.bwstays.com/js/index-dynamic-content.js"></script>
+    <!--
     <script  type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbkk&sensor=false&libraries=places"
          ></script>
+         -->
   <script type="text/javascript" src="https://www.bwstays.com/data/nearbylocationsdata.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/dynamic-nearby.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/data/sitedata.js"></script>

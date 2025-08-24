@@ -12,7 +12,6 @@
       if (!response.ok) throw new Error('Failed to load knowledge base');
 
       const text = await response.text();
-
       // Split into meaningful chunks based on headings and content sections
       const chunks = [];
       const sections = text.split(/(?=##\s)|(?=###\s)|(?=####\s)|(?=#####\s)/);
@@ -36,7 +35,6 @@
           }
         });
       });
-
       knowledgeBase = chunks;
       knowledgeLoaded = true;
       console.log(`Knowledge base loaded: ${chunks.length} chunks`);
@@ -63,13 +61,13 @@
     });
 
     // Attraction categories
-    const categories = ['waterfall', 'temple', 'dam', 'lake', 'wildlife', 'plantation', 'museum', 'heritage', 'romantic', 'trekking', 'trucking', 'cycling', 'bamboo', 'rafting', 'food', 'restaurant'];
+    const categories = ['waterfall', 'temple', 'dam', 'lake', 'wildlife', 'plantation', 'museum', 'heritage', 'romantic', 'trekking', 'trucking', 'cycling', 'bamboo', 'rafting', 'food', 'restaurant','stays'];
     categories.forEach(cat => {
       if (cleanText.includes(cat)) terms.add(cat);
     });
 
     // Accommodation terms
-    const accommodation = ['villa', 'homestay', 'resort', 'stay', 'booking', 'room', 'amenities', 'check-in', 'checkout'];
+    const accommodation = ['villa', 'homestay','hotel', 'resort', 'stay', 'booking', 'room', 'amenities', 'check-in', 'checkout'];
     accommodation.forEach(acc => {
       if (cleanText.includes(acc)) terms.add(acc);
     });
@@ -323,10 +321,8 @@
         'amenities', 'pool', 'wifi', 'breakfast', 'parking', 'pet friendly', 'ac', 'air conditioning',
         'price', 'prices', 'rate', 'rates', 'cost', 'availability', 'rooms', 'room', 'night', 'per night',
         'cancellation', 'refund', 'policy', 'policies', 'terms', 'check-in time', 'check-out time',
-        'contact', 'phone', 'whatsapp', 'email', 'support', 'customer care',
-        'location', 'address', 'map', 'directions', 'near', 'nearby', 'distance', 'airport', 'railway', 'bus',
-        'season', 'weather', 'monsoon', 'summer', 'winter'
-      ];
+        'contact', 'phone', 'whatsapp', 'email', 'support', 'customer care','location', 'address', 'map', 'directions', 'near', 'nearby', 'distance', 'airport', 'railway', 'bus','season', 'weather', 'monsoon', 'summer','winter','place','places','discover','natural','modern','greenery','location','food','resturant','valleys','kerala','hills','hill','mountain','stays','contact','tour','tourist','vacation','weekend','homestay','staycation','workation','estate','plantation','coffee','tea','kitchen','service','gourmet','romantic','swim','swimming','sports','trucking',
+        , 'dam', 'plantation', 'museum', 'heritage', 'romantic', 'trekking',  'cycling', 'bamboo', 'rafting',  'restaurant'];
       return keywords.some(k => t.includes(k));
     }
 
