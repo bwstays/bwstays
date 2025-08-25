@@ -3,7 +3,7 @@ var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title
  // Where you want to render the map.
 var element = document.getElementById('map');
 // Create Leaflet map on map element.
-var map = L.map(element);
+var map = L.map(element,{ zoomControl: false });
 let customIcon = {
     iconUrl:"https://www.bwstays.com/assets/img/logo/pin.webp",
     iconSize:[40,40]
@@ -22,8 +22,8 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 for (i = 0; i < bwlocations.length; i++) {
 // Target's GPS coordinates.
 var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
-// Set map's center to target with zoom 2.
-map.setView(target, 2);
+// Set map's center to target with zoom 14.
+map.setView(target, 14);
 // Place a marker on the same location.
 L.marker(target,iconOptions).addTo(map);
 }
