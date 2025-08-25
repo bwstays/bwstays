@@ -12667,6 +12667,7 @@ body {
 
 #contact-form {
   background: rgba(33, 37, 41, 0.85) !important;
+  border-radius: 20px;
 }
 
 #contact-divider {
@@ -12675,9 +12676,17 @@ body {
   border-radius: 10%;
 }
 
+#contact-card h3 {
+  color: black !important;
+}
 
+#contact-card p {
+  color: black !important;
+}
 
-
+#contact-card a {
+  color: black !important;
+}
 
 .sticky-image-container {
   position: relative;

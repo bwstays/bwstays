@@ -99,8 +99,11 @@
 <link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
       <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
 <!-- <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
-<link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  /> -->
-<!-- <link href="css/sidebar.css" rel="stylesheet"   type='text/css' media='all'  /> -->
+<link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
+<link href="css/sidebar.css" rel="stylesheet"   type='text/css' media='all'  />
+<link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/> -->
+
+
 <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 
 <noscript><link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"     type='text/css' media='all'   rel="dns-prefetch"  /></noscript>
@@ -719,12 +722,26 @@ setTimeout(ldinsp, 0);
                             id="inputMessage" rows="3" placeholder="Your message"></textarea>
                     </div>
                     <button class="btn btn-primary btn-block py-2 text-uppercase font-weight-bold"
-                        type="submit">Request Callback</button>
+                        type="submit">Send Message</button>
                 </form>
             </div>
             <div class="col-md-6 mb-3">
 
                 <div class="reviews-container">
+                    <div class="reviews-header">
+                        <div class="reviews-header-left">
+                            <div class="score-stars">
+                                <span class="stars" aria-label="4.6 out of 5 stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                       
+                    </div>
                     <div class="reviews-content">
 
                         <div class="overall-rating">
@@ -737,7 +754,6 @@ setTimeout(ldinsp, 0);
                         <div class="reviews-grid">
                             <div class="review-card">
                                 <div class="reviewer-info">
-                                    <div class="avatar" aria-hidden="true">A</div>
                                     <div class="reviewer-details">
                                         <div class="name">Anjali Menon (4.5)★ </div>
                                         <div class="rating-row">
@@ -757,7 +773,6 @@ setTimeout(ldinsp, 0);
 
                             <div class="review-card">
                                 <div class="reviewer-info">
-                                    <div class="avatar" aria-hidden="true">R</div>
                                     <div class="reviewer-details">
                                         <div class="name">Rahul Nair (3.7)★</div>
                                         <div class="rating-row">
@@ -774,48 +789,28 @@ setTimeout(ldinsp, 0);
                                 </div>
                                 <p class="review-text">Great value for money. The location is close to key attractions and the staff helped us plan our day trips. Parking and Wi‑Fi were reliable.</p>
                             </div>
-
+                            
                             <div class="review-card">
                                 <div class="reviewer-info">
-                                    <div class="avatar" aria-hidden="true">P</div>
                                     <div class="reviewer-details">
-                                        <div class="name">Priya S (4.2)★</div>
+                                        <div class="name">Priya Nair (3.7)★</div>
                                         <div class="rating-row">
-                                            <span class="stars" aria-label="5 out of 5 stars">
+                                            <span class="stars" aria-label="4 out of 5 stars">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
                                             </span>
 
                                         </div>
                                     </div>
                                 </div>
-                                <p class="review-text">Perfect weekend getaway! Neat rooms, beautiful surroundings, and a lovely breakfast. We enjoyed the sunrise view from the balcony.</p>
-                            </div>
-
-                            <div class="review-card">
-                                <div class="reviewer-info">
-                                    <div class="avatar" aria-hidden="true">V</div>
-                                    <div class="reviewer-details">
-                                        <div class="name">Vikram Rao (4.8)★</div>
-                                        <div class="rating-row">
-                                            <span class="stars" aria-label="5 out of 5 stars">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="review-text">Exceptional hospitality. The host went out of the way to arrange early check‑in. Calm neighborhood and plenty of greenery around.</p>
+                                <p class="review-text">Great value for money. The location is close to key attractions and the staff helped us plan our day trips. Parking and Wi‑Fi were reliable.</p>
                             </div>
                         </div>
 
+                        <!-- <button class="btn btn-primary btn-block py-2 text-uppercase font-weight-bold review-button" type="button">Leave a Review</button> -->
 
                </div>
             </div>
@@ -839,44 +834,57 @@ setTimeout(ldinsp, 0);
                         <h6 class="text-white-50 font-weight-bold mb-3" style="font-size: 1.1rem;">Stay in the heart of hill station
 						</h6>
                         <ul class="list-unstyled mb-0 text-white-50" style="font-size: 1rem;">
-                            <li class="mb-2"><i class="fa fa-map-marker-alt text-primary"></i> Go Everywhere</li>
-                            <li class="mb-2"><i class="fa fa-bed text-primary"></i> Convenience @ Fingertips</li>
-                            <li class="mb-2"><i class="fa fa-wifi text-primary"></i> Shopping and Cultural attractions</li>
-                            <li><i class="fa fa-tree text-primary"></i> Prefered For</li>
+                            <li class="mb-2">
+                                <div class="feature-content">
+                                    <span class="feature-title">Walk Everywhere</span>
+                                    <p class="feature-description">Steps from Times Square, Central Park, Broadway, and world-class dining.</p>
+                                </div>
+                            </li>
+                            <li class="mb-2">
+                                <div class="feature-content">
+                                    <span class="feature-title">Non-Stop Energy</span>
+                                    <p class="feature-description">NYC's best nightlife, shopping, and cultural attractions at your doorstep.</p>
+                                </div>
+                            </li>
+                            <li class="mb-2">
+                                <div class="feature-content">
+                                    <span class="feature-title">Unmatched Convenience</span>
+                                    <p class="feature-description">Quick access to subways, Penn Station, and Grand Central</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-content">
+                                    <span class="feature-title">Best for:</span>
+                                    <p class="feature-description">First-time visitors, business travelers, and those who want to be in the center of it all.</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-end pr-md-4 mb-3">
                     <div class="card border-0 shadow-lg w-100 ml-md-4" id="contact-card">
                         <div class="card-body p-4">
-                            <h3 class="text-white font-weight-bold mb-4">BW Stays Contact</h3>
-                            <div class="border-bottom border-primary mb-4" id="contact-card-divider"></div>
-                            <div class="mb-4">
-                                <h5 class="text-primary text-uppercase small font-weight-bold">Address <i
-                                        class="fa fa-address-card"></i>
-                                </h5>
-                                <p class="text-white mb-0">Wayanad</p>
-                                <p class="text-white-50">Kerala, India</p>
-                            </div>
-                            <div class="mb-4">
-                                <h5 class="text-primary text-uppercase small font-weight-bold">Email
-                                    <a href="mailto:me@me.com" target="_blank" rel="noopener noreferrer nofollow" class=" ml-2">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </h5>
-                                <p class="mb-0"><a href="mailto:me@me.com" rel="noopener noreferrer nofollow"   class="text-white">black at bwstays.com</a>
-                                </p>
-                            </div>
-                            <div class="mb-4">
-                                <h5 class="text-primary text-uppercase small font-weight-bold">Phone
-                                    <a href="https://wa.me/919999999999"  target="_blank" rel="noopener noreferrer nofollow" class=" ml-2">
-                                        <i class="fab fa-whatsapp"></i><span></span>
-                                    </a>
-                                </h5>
-                                <p class="text-white mb-0">
-                                    +-- --- --- ----
-                                </p>
-                            </div>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label>NAME</label>
+                                        <input type="text" class="form-control" placeholder="Your Name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label>EMAIL</label>
+                                        <input type="email" class="form-control" placeholder="your email">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>CONTACT</label>
+                                    <input type="tel" class="form-control" placeholder="+-- --- --- ----">
+                                </div>
+                                <div class="mb-4">
+                                    <label>MESSAGE</label>
+                                    <textarea class="form-control" rows="4" placeholder="Your message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-block text-white font-weight-bold">REQUEST CALLBACK</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -900,17 +908,56 @@ setTimeout(ldinsp, 0);
                     <h3 class="text-white font-weight-bold mb-3">Direction</h3>
                     <div  id="map"  class="dir-map map" ></div>
                 </div>
-                <div class="col-md-4 d-flex flex-column align-items-end">
-
-                    <div class="mid text-white-50">
-                        <p>Experience tranquility in the heart of Wayanad.</p>
-                        <p>Modern comforts with a rural touch.</p>
-                        <p>Spacious villas surrounded by lush greenery.</p>
-                        <p>Perfect for family vacations and workations alike.</p>
-                        <p>Discover local  cuisines  and natural beauty .</p>
-
+                <div class="col-md-4 d-flex flex-column align-items-start stay-card">
+                    <h2 class="text-white font-weight-bold mb-4">STAY IN WAYANAD</h2>
+                    
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="checkbox-container mr-3">
+                            <div class="custom-checkbox">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-weight-bold mb-2">Central & Well-Connected</h5>
+                            <p class="text-white-50 mb-0">Minutes to Kalpetta town, markets and top attractions.</p>
+                        </div>
                     </div>
-
+                    
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="checkbox-container mr-3">
+                            <div class="custom-checkbox">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-weight-bold mb-2">Scenic Western Ghats Views</h5>
+                            <p class="text-white-50 mb-0">Wake up to green hills, tea estates and misty mornings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="checkbox-container mr-3">
+                            <div class="custom-checkbox">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-weight-bold mb-2">Vibrant Local Life</h5>
+                            <p class="text-white-50 mb-0">Cafes, heritage spots, lakes and forest trails all close by.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="checkbox-container mr-3">
+                            <div class="custom-checkbox">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-weight-bold mb-2">Best for</h5>
+                            <p class="text-white-50 mb-0">Families, couples and remote workers seeking calm with convenience.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4">
@@ -973,34 +1020,6 @@ setTimeout(ldinsp, 0);
     <script type="text/javascript" src="https://www.bwstays.com/js/scripts.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/specrule.js"></script>
 
-    <script>
-      // Limit to 3 reviews and truncate each review to 15 words
-      document.addEventListener('DOMContentLoaded', function () {
-        const maxReviews = 3;
-        const maxWords = 15; // within requested 10-15 word range
-
-        const grid = document.querySelector('#testimonial .reviews-grid') || document.querySelector('.reviews-grid');
-        if (!grid) return;
-
-        const cards = Array.from(grid.querySelectorAll('.review-card'));
-        cards.forEach((card, idx) => {
-          // Show only the first 3 reviews
-          card.style.display = idx < maxReviews ? '' : 'none';
-
-          // Truncate review text to a maximum of 15 words
-          const textEl = card.querySelector('.review-text');
-          if (textEl) {
-            const full = textEl.textContent.trim().replace(/\s+/g, ' ');
-            const words = full.split(' ');
-            if (words.length > maxWords) {
-              const truncated = words.slice(0, maxWords).join(' ') + '…';
-              textEl.textContent = truncated;
-              textEl.setAttribute('title', full); // Preserve full text on hover
-            }
-          }
-        });
-      });
-    </script>
 
 <script type="application/ld+json">
 {

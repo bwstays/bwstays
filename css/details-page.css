@@ -28,7 +28,6 @@
     opacity: 0.9;
 }
 
-/* Enhanced SEO structured data styles */
 .villa-details {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
@@ -1696,13 +1695,375 @@
     }
 }
 
-/* Ensure 'Write to us' heading is white in testimonial section */
+
 #testimonial h2.text-black {
   color: #ffffff !important;
 }
 
-/* Spacing for the DISCOVER block */
+
 #discover {
-  margin: 20px; /* 20px from all sides */
+  margin: 20px;
+}
+#testimonial .reviews-container {
+  background: rgba(33, 37, 41, 0.85) !important;
+  border-radius: 20px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3) !important;
+  color: #e9ecef !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
 }
 
+#testimonial .reviews-content {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+
+#testimonial .review-button {
+  background-color: #17a2b8 !important; 
+  border: none !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 12px 20px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  margin-top: 15px !important;
+  width: 100% !important;
+  transition: background-color 0.3s ease !important;
+}
+
+#testimonial .review-button:hover {
+  background-color: #138496 !important;
+}
+
+/* Contact form styles */
+#contact-card {
+  background: rgba(33, 37, 41, 0.85) !important;
+  border-radius: 20px !important;
+}
+
+#contact-card .form-control {
+  background-color: #f8f9fa !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  font-size: 14px !important;
+  color: #495057 !important;
+}
+
+#contact-card .form-control:focus {
+  background-color: #ffffff !important;
+}
+
+/* Guest Experiences Title Styling */
+.overall-rating {
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+}
+
+.rating-circle {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+}
+
+.rating-value {
+
+  font-weight: bold !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  /* letter-spacing: 2px !important; */
+  text-align: center !important;
+  display: block !important;
+  margin: 0 auto !important;
+  
+}
+
+#contact-card .form-control::placeholder {
+  color: #6c757d !important;
+  opacity: 0.8 !important;
+}
+
+#contact-card textarea.form-control {
+  resize: none !important;
+  min-height: 100px !important;
+}
+
+#contact-card .btn {
+  background-color: #5cb3a3 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-weight: bold !important;
+  transition: background-color 0.3s ease !important;
+}
+
+#contact-card .btn:hover {
+  background-color: #4a9d8e !important;
+}
+
+/* Stay in Wayanad Section Styles */
+.feature-item {
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-container {
+    margin-right: 1.2rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+}
+
+.custom-checkbox {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    border: none; /* removed inner white border */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.45) 100%);
+    box-shadow: 0 0 0 2px #5cb3a3, inset 0 1px 3px rgba(0,0,0,0.6), 0 2px 10px rgba(0,0,0,0.6); /* removed inner light ring */
+    backdrop-filter: blur(2px);
+    transition: all 0.3s ease;
+}
+
+/* Remove inner border inside checkbox */
+.custom-checkbox::after {
+    display: none !important;
+}
+
+.custom-checkbox::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 10px;
+    border-left: 4px solid rgba(255,255,255,0.98);
+    border-bottom: 4px solid rgba(255,255,255,0.98);
+    transform: translate(-50%, -60%) rotate(-45deg);
+    border-radius: 1px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.35);
+    z-index: 2;
+}
+
+/* hide any icon element inside as we draw tick with CSS */
+.custom-checkbox i {
+    display: none;
+}
+
+.feature-item h5 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+#contact-card label {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+footer.footer .stay-card {
+  background: transparent !important;
+  background-color: transparent !important;
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.stay-card h2 {
+  position: relative;
+  z-index: 2;
+}
+
+
+.custom-checkbox {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    border: none; 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.45) 100%);  
+    box-shadow: 0 0 0 2px #5cb3a3, inset 0 1px 3px rgba(0,0,0,0.6), 0 2px 10px rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+
+
+/* Vertical Side Menu */
+.vertical-menu {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px 0 0 10px;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+}
+
+.vertical-menu a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+
+.vertical-menu a:last-child {
+    border-bottom: none;
+}
+
+.vertical-res {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: 30px 13px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.vertical-div {
+    position: fixed;
+    top: 30%;
+    right: 0;
+    transform: translateY(5%);
+    z-index: 1000;
+}
+
+/* Guest Experiences Title Styling */
+.overall-rating {
+    text-align: center !important;
+    margin-bottom: .5rem !important;
+}
+
+.rating-circle {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+}
+
+.rating-value {
+
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Left column styling to match the reference image */
+#signup .col-md-5 .w-100 h6 {
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  color: #ffffff !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: 0.5px !important;
+}
+
+#signup .col-md-5 .w-100 ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+#signup .col-md-5 .w-100 ul li {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-bottom: 2rem !important;
+  color: #ffffff !important;
+}
+
+#signup .col-md-5 .w-100 ul li i.fa {
+  display: none !important; /* Hide the original icons */
+}
+
+/* Create custom checkboxes to match the reference */
+#signup .col-md-5 .w-100 ul li::before {
+  content: "✓" !important;
+  display: inline-block !important;
+  width: 40px !important;
+  height: 40px !important;
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  line-height: 36px !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
+  margin-right: 15px !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+}
+
+/* Style the text content */
+#signup .col-md-5 .w-100 ul li .feature-content {
+  flex: 1 !important;
+}
+
+#signup .col-md-5 .w-100 ul li .feature-title {
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  color: #ffffff !important;
+  margin-bottom: 0.3rem !important;
+  display: block !important;
+}
+
+#signup .col-md-5 .w-100 ul li .feature-description {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+
+#signup .text-center h2 {
+  font-variant: normal !important;
+  letter-spacing: normal !important;
+  display: block !important;
+  padding: 0 !important;
+}
+#signup .text-center h2::before,
+#signup .text-center h2::after {
+  content: none !important;
+}
+
+
+#signup #contact-divider {
+  border-top: none !important; 
+  width: 22% !important;
+  margin: 0 auto !important;
+  border-radius: 10% !important;
+  height: auto !important;
+  background: none !important;
+}
