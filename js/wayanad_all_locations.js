@@ -3,7 +3,7 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 var element1 = document.getElementById('mapall');
 // Create Leaflet map on map element.
 
-var map1 = L.map(element1).setView([11.596, 76.1189], 10);
+var map1 = L.map(element1).setView([11.596, 76.1189], 9);
 
 
 // Add OSM tile layer to the Leaflet map.
@@ -153,7 +153,7 @@ for (i = 0; i < bwlocations.length; i++) {
 // Target's GPS coordinates.
 var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 // Set map's center to target with zoom 10.
-map1.setView(target, 10);
+map1.setView(target, 9);
 // Place a marker on the same location.
 L.marker(target,  {    title:bwlocations[i][5],icon:myIcon1}).addTo(map1).bindPopup( bwlocations[i][0]);
 
