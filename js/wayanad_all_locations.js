@@ -12,11 +12,11 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 }).addTo(map1);
 
 
-let customIcon = {
+let customIcon1 = {
     iconUrl:"https://www.bwstays.com/assets/img/logo/pin.webp",
     iconSize:[40,40]
 }
-let myIcon = L.icon(customIcon);
+let myIcon1 = L.icon(customIcon1);
 
    // Add main location marker
   L.marker([11.592, 76.1172], {
@@ -155,7 +155,7 @@ var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 // Set map's center to target with zoom 10.
 map1.setView(target, 10);
 // Place a marker on the same location.
-L.marker(target,  {    title:bwlocations[i][5],icon:myIcon}).addTo(map1).bindPopup( bwlocations[i][0]);
+L.marker(target,  {    title:bwlocations[i][5],icon:myIcon1}).addTo(map1).bindPopup( bwlocations[i][0]);
 
 
 
