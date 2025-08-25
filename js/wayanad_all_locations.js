@@ -3,7 +3,7 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 var element1 = document.getElementById('mapall');
 // Create Leaflet map on map element.
 
-var map1 = L.map(element1).setView([11.592, 76.1172], 13);
+var map1 = L.map(element1).setView([11.596, 76.1189], 10);
 
 
 // Add OSM tile layer to the Leaflet map.
