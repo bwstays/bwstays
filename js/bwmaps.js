@@ -11,8 +11,8 @@ let customIcon = {
 let myIcon = L.icon(customIcon);
 //let myIcon = L.divIcon();
 let iconOptions = {
-    title:"company name",
-    draggable:true,
+    title:"BW Stays",
+    //draggable:true,
     icon:myIcon
 }
 // Add OSM tile layer to the Leaflet map.
