@@ -1707,7 +1707,7 @@
   background: rgba(33, 37, 41, 0.85) !important;
   border-radius: 20px !important;
   padding: 1.5rem !important;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3) !important;
+  box-shadow: 0 0.0rem 1rem rgba(0,0,0,0.3) !important;
   color: #e9ecef !important;
   border: 1px solid rgba(255,255,255,0.0) !important;
 }
