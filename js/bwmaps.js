@@ -1,5 +1,5 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
-var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.588, 76.1167, 2, iconURLPrefix+"assets/img/logo/bw.png"]];
+var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.598, 76.1155, 2, iconURLPrefix+"assets/img/logo/bw.png"]];
  // Where you want to render the map.
 var element = document.getElementById('map');
 // Create Leaflet map on map element.
@@ -24,7 +24,7 @@ for (i = 0; i < bwlocations.length; i++) {
 var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 //map.fitBounds([[11.670, 76.090], [11.610,76.030]]);
 // Set map's center to target with zoom 14.
-map.setView(target, 12);
+map.setView(target, 9);
 // Place a marker on the same location.
 L.marker(target,iconOptions).addTo(map);
 }
