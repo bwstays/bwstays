@@ -3,7 +3,7 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 var element1 = document.getElementById('mapall');
 // Create Leaflet map on map element.
 
-var map1 = L.map(element1).setView([11.596, 76.1189], 9);
+var map1 = L.map(element1).setView([11.6057872, 76.0833109], 9);
 
 
 // Add OSM tile layer to the Leaflet map.
@@ -19,7 +19,7 @@ let customIcon1 = {
 let myIcon1 = L.icon(customIcon1);
 
    // Add main location marker
-  L.marker([11.592, 76.1172], {
+  L.marker([11.6057872, 76.0833109], {
     icon: L.icon({
       iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
       iconSize: [32, 32],

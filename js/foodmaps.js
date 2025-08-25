@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add routing from BW Stays to location
   L.Routing.control({
     waypoints: [
-      L.latLng(11.605943, 76.083429), 
+      L.latLng(11.6057872, 76.0833109),
       L.latLng(lat, lng)
     ],
     routeWhileDragging: false,
