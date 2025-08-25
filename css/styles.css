@@ -12630,6 +12630,10 @@ body {
   color: #fff;
 }
 
+.footer-social {
+  margin-left: -10px !important;
+}
+
 .footer {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("https://www.bwstays.com/assets/img/bw-stays-ghats-travel-wayanad.webp");
   background-repeat: no-repeat;
@@ -13082,9 +13086,9 @@ body {
   display: none;
   z-index: 1000;
   border-radius: 50%;
-  width: 55px;
+  width: 52px;
   background-color: #64a19d;
-  height: 55px;
+  height: 52px;
   padding: 0;
   line-height: 50px;
   text-align: center;

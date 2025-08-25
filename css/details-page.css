@@ -351,14 +351,14 @@
     /* place just left of back-to-top (which is at right:15px and width 55px) */
     z-index: 1000;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
     padding: 0;
     line-height: 50px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
-    background-color: #007bff;
+    background-color: #64a19d;
     /* bootstrap primary */
     color: #fff;
 }
@@ -2075,4 +2075,7 @@ footer.footer .stay-card {
 .my-star-icon
 {
 color: #64a1;
+}
+
+.footer-social{
 }
