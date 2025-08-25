@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }).addTo(map1);
 
   // Add routing from BW Stays to location
-  L.Routing.control({
+ /* L.Routing.control({
     waypoints: [
       L.latLng(11.6057872, 76.0833109),
       L.latLng(lat, lng)
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       styles: [{ color: '#4285F4', weight: 5, opacity: 0.6 }]
     }
   }).addTo(map1);
+  */
 
   const foodPlacesContainer = document.getElementById('food-list');
 
