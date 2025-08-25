@@ -12577,7 +12577,7 @@ body {
   border: 0;
   border-left: 0.25rem solid var(--primary);
   border-bottom: 0.25rem solid var(--primary);
-  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
