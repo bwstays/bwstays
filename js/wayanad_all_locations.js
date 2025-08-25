@@ -155,10 +155,11 @@ var target = L.latLng(bwlocations[i][1,], bwlocations[i][2]);
 // Set map's center to target with zoom 14.
 map1.setView(target, 10);
 // Place a marker on the same location.
-L.marker(target,  {    title:bwlocations[i][5],icon:myIcon}).addTo(map1);
+L.marker(target,  {    title:bwlocations[i][5],icon:myIcon}).addTo(map1).bindPopup( bwlocations[i][0]);
 
-/*
-  L.Routing.control({
+
+
+/*L.Routing.control({
     waypoints: [
       L.latLng(origin),
       L.latLng(dest)
@@ -167,8 +168,7 @@ L.marker(target,  {    title:bwlocations[i][5],icon:myIcon}).addTo(map1);
     //router: L.Routing.osrmv1({
       //serviceUrl: 'https://router.project-osrm.org/route/v1'
     //})
-}).addTo(map1);
-*/
+}).addTo(map1);*/
 
 }
 
