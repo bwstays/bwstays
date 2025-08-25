@@ -151,7 +151,7 @@ for (i = 0; i < bwlocations.length; i++) {
 
 
 // Target's GPS coordinates.
-var target = L.latLng(bwlocations[i][1,], bwlocations[i][2]);
+var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 // Set map's center to target with zoom 14.
 map1.setView(target, 10);
 // Place a marker on the same location.
