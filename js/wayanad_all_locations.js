@@ -2,11 +2,24 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 
 var element1 = document.getElementById('mapall');
 // Create Leaflet map on map element.
-var map1 = L.map(element1);
+
+var map1 = L.map(element1).setView([11.592, 76.1172], 13);
+
+
 // Add OSM tile layer to the Leaflet map.
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map1);
+
+   // Add main location marker
+  L.marker([11.592, 76.1172], {
+    icon: L.icon({
+      iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+      iconSize: [32, 32],
+      iconAnchor: [16, 32]
+    })
+  }).addTo(map1);
+
 var bwlocations = [
 
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-rippon-tea-estate-plantation-wayanad.html" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><span>10km</span><a target="_blank" href="'+iconURLPrefix+'bw-rippon-tea-estate-plantation-wayanad.html" title="Shanthinatha Swamy Jain Temple"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/heritage/bw-stays-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6788328, 76.0221398, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
@@ -123,22 +136,31 @@ var bwlocations = [
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm">Pepper Farm</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-pepper-farm-wayanad.webp" width="300" ></a>', 11.69283527987838, 76.1911296389339, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Honey Museaum">Honey Museaum</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-honey-museum-wayanad.webp" width="300" ></a>',  11.5375175, 76.0434972, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"]];
 
- var origin = L.latLng('11.592', '76.117');
+
 
 for (i = 0; i < bwlocations.length; i++) {
 
- 	var dest = L.latLng(bwlocations[i][1], bwlocations[i][2]);
 
+
+// Target's GPS coordinates.
+var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
+// Set map's center to target with zoom 14.
+map1.setView(target, 10);
+// Place a marker on the same location.
+L.marker(target,iconOptions).addTo(map1);
+
+/*
   L.Routing.control({
     waypoints: [
       L.latLng(origin),
       L.latLng(dest)
     ],
     routeWhileDragging: true,
-    /*router: L.Routing.osrmv1({
-      serviceUrl: 'https://router.project-osrm.org/route/v1'
-    })*/
+    //router: L.Routing.osrmv1({
+      //serviceUrl: 'https://router.project-osrm.org/route/v1'
+    //})
 }).addTo(map1);
+*/
 
 }
 
