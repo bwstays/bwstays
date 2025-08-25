@@ -2066,3 +2066,8 @@ footer.footer .stay-card {
   height: auto !important;
   background: none !important;
 }
+
+#project-divider {
+  border-radius: 20px !important;
+}
+
