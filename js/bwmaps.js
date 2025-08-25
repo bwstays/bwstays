@@ -5,7 +5,7 @@ var element = document.getElementById('map');
 // Create Leaflet map on map element.
 var map = L.map(element);
 let customIcon = {
-    iconUrl:"https://www.bwstays.com/assets/img/icons/ev.png",
+    iconUrl:"https://www.bwstays.com/assets/img/logo/pin.webp",
     iconSize:[40,40]
 }
 let myIcon = L.icon(customIcon);
