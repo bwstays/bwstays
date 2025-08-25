@@ -1,5 +1,5 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
-var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.601, 76.1185, 2, iconURLPrefix+"assets/img/logo/bw.png"]];
+var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.670, 76.090, 2, iconURLPrefix+"assets/img/logo/bw.png"]];
  // Where you want to render the map.
 var element = document.getElementById('map');
 // Create Leaflet map on map element.
