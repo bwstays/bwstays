@@ -12,9 +12,9 @@ const mapTilesToCache = [
 ];
 
 const BASE_CACHE_FILES = [
+    '/manifest.json',
     '/css/',
     '/js/',
-    '/manifest.json',
     '/data/',
    // '/assets/img/favicon.ico',
     '/llm-full.txt',
