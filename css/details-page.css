@@ -712,8 +712,8 @@
 
 /* Ensure footer map fills its column even if maps.css limits width */
 .footer .map {
-    height: 240px; 
-    width: 100%;
+    height: 320px; 
+    width: 75%;
     max-width: 100%;
 }
 
