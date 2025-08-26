@@ -10,7 +10,7 @@ const BASE_CACHE_FILES = [
     '/css/styles.css',
     '/js/scripts.js',
     '/manifest.json',
-    '/assets/img/favicon.png',
+    '/assets/img/favicon.ico',
     '/llm-full.txt',
 ];
 
