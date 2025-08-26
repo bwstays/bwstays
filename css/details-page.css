@@ -707,10 +707,6 @@
     transition: all 0.3s ease;
 }
 
-
-
-
-/* Ensure footer map fills its column even if maps.css limits width */
 .footer .map {
     height: 320px; 
     width: 75%;
