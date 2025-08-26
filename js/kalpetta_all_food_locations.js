@@ -133,7 +133,7 @@ for (i = 0; i < foodations.length; i++) {
 // Target's GPS coordinates.
 var target = L.latLng(foodations[i][1], foodations[i][2]);
 // Set map's center to target with zoom 10.
-map1.setView(target, 9);
+map1.setView(target, 4);
 // Place a marker on the same location.
 L.marker(target,  {    title:foodations[i][5],icon:myIcon1}).addTo(map1).bindPopup( foodations[i][0]);
 
