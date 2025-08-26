@@ -19,8 +19,8 @@ const OFFLINE_CACHE_FILES = [
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    '/css/style.css',
-    '/js/script.js',
+    '/css/styles.css',
+    '/js/scripts.js',
     '/404.html',
 ];
 
