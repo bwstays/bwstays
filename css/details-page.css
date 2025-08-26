@@ -1300,7 +1300,42 @@
     color: #e9ecef;
 }
 
-/* Style reviewer name and review text */
+
+#signup .reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#signup .review-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#signup .reviewer-details .name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+#signup .review-text {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+#signup .stars {
+    color: #64a19d;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* 
 #testimonial .reviewer-info {
     display: inline;
     margin: 0;
@@ -1318,7 +1353,7 @@
 #testimonial .review-text {
     display: inline;
     margin: 0;
-}
+} */
 
 /* Add separator between reviews */
 #testimonial .review-card:not(:last-child)::after {
