@@ -1,16 +1,12 @@
 const CACHE_VERSION = 1;
 const GHPATH = 'https://www.bwstays.com/';
 const Version = new URL(location).searchParams.get("version");
-
 const host = `${self.location.protocol}//${self.location.host}`;
 console.info(`Host: ${host}`);
-
 const ServerApiPath = "https://cloudflare.com/api";
-
 const mapTilesToCache = [
   '/mapFolder/',
 ];
-
 const BASE_CACHE_FILES = [
     '/css/styles.css',
     '/js/scripts.js',
@@ -18,21 +14,17 @@ const BASE_CACHE_FILES = [
     '/assets/img/favicon.ico',
     '/llm-full.txt',
 ];
-
 const OFFLINE_CACHE_FILES = [
 //    '/css/styles.css',
 //    '/js/scripts.js'
 ];
-
 const NOT_FOUND_CACHE_FILES = [
 //    '/css/styles.css',
 //    '/js/scripts.js',
 //    '/404.html',
 ];
-
 const OFFLINE_PAGE = '/offline/index.html';
 const NOT_FOUND_PAGE = '/404.html';
-
 const CACHE_VERSIONS = {
     assets: 'assets-v' + CACHE_VERSION,
     content: 'content-v' + CACHE_VERSION,
@@ -153,7 +145,6 @@ function installServiceWorker() {
  * @returns {Promise}
  */
 function cleanupLegacyCache() {
-
     let currentCaches = Object.keys(CACHE_VERSIONS)
         .map(
             (key) => {
@@ -163,7 +154,6 @@ function cleanupLegacyCache() {
 
     return new Promise(
         (resolve, reject) => {
-
             caches.keys()
                 .then(
                     (keys) => {
@@ -268,9 +258,7 @@ self.addEventListener(
 
 self.addEventListener(
     'fetch', event => {
-
 		const url = event.request.url;
-
         event.respondWith(
             caches.open(CACHE_VERSIONS.content)
                 .then(
