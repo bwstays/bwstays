@@ -1,7 +1,4 @@
-
 var iconURLPrefix = 'https://www.bwstays.com/';
-
-
 var foodations =
 
 [
