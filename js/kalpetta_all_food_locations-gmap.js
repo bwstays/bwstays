@@ -4,7 +4,7 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 
 var foodations = [
 
-['<h6><a target="_blank" href="https://www.bwstays.com" title="Black & White">Black & White</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"   alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.6057872, 76.0833109, 2, iconURLPrefix+"assets/img/logo/restaurant.png"],
+['<h6><a target="_blank" href="https://www.bwstays.com" title="Black & White">Black & White</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"   alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.605943, 76.083429, 2, iconURLPrefix+"assets/img/logo/restaurant.png"],
 
 ['<h6><a target="_blank" href="Muzwalla Resturant" title="Muzwalla Resturant">Muzwalla Resturant</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.6963, 76.1411, 2, iconURLPrefix+"assets/img/logo/restaurant.png"],
 
@@ -101,49 +101,79 @@ var foodations = [
 
   ];
 
-
-var element1 = document.getElementById('mapall');
-// Create Leaflet map on map element.
-
-var map1 = L.map(element1).setView([11.6057872, 76.0833109], 9);
-
-
-// Add OSM tile layer to the Leaflet map.
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map1);
-
-
-let customIcon1 = {
-    iconUrl:"https://www.bwstays.com/assets/img/logo/pin.webp",
-    iconSize:[40,40]
-}
-let myIcon1 = L.icon(customIcon1);
-
-   // Add main location marker
-  L.marker([11.6057872, 76.0833109], {
-    icon: L.icon({
-      iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
-      iconSize: [32, 32],
-      iconAnchor: [16, 32]
-    })
-  }).addTo(map1);
-
+var map = new google.maps.Map(document.getElementById('mapall'), {
+  zoom: 9.999,
+  // disable the default User Interface
+  disableDefaultUI: true,
+  // add back fullscreen, streetview, zoom
+  zoomControl: true,
+  streetViewControl: true,
+  fullscreenControl: true,
+  //panamaram center
+  center: new google.maps.LatLng(11.606592761660165, 76.08350199577485),
+  //	mapTypeId: google.maps.MapTypeId.ROADMAP,
+  mapId: 'f03033acde18bc0d'
+});
+var infowindow = new google.maps.InfoWindow();
 var  i;
+var markers = [];
+
+
+
 for (i = 0; i < foodations.length; i++) {
 
+ new google.maps.DirectionsService().route({
+      origin: new google.maps.LatLng( 11.606592761660165, 76.08350199577485), // origin is bw stay
+      destination: new google.maps.LatLng(foodations[i][1], foodations[i][2]),
+      travelMode: google.maps.TravelMode.DRIVING,
+    }, (response, status) => {
+        if (status === "OK") {
+          new google.maps.DirectionsRenderer({
+						  map: map,
+						  suppressMarkers: true,
+						  polylineOptions: {
+							strokeColor: '#4285F4',
+							strokeWeight: 4,
+							strokeOpacity: 0.8
+						  }
+						}).setDirections(response);
+        }
+  })
+
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(foodations[i][1], foodations[i][2]),
+    //zIndex: google.maps.Marker.MAX_ZINDEX + 10,
+    icon: {
+	    url: foodations[i][4],
+	    alt: 'BW Stays Utilmate Places'
+	  },
 
 
-// Target's GPS coordinates.
-var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
-// Set map's center to target with zoom 10.
-map1.setView(target, 9);
-// Place a marker on the same location.
-L.marker(target,  {    title:bwlocations[i][5],icon:myIcon1}).addTo(map1).bindPopup( bwlocations[i][0]);
+    map: map
+  });
 
+// Add alt text to Google Maps images
+google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+  var gMapControlsCheck = setInterval(function() {
+    //console.log('Checking for Google Maps controls...');
+//    var images = document.querySelectorAll('#map .gm-fullscreen-control img');
+    var images = document.querySelectorAll('#map img');
+    if( images.length > 0 ) {
+      images.forEach(function(image) {
+		   if(!image.alt || image.alt ==="")
+		        image.alt = 'Food & Dine for travelers';
+      });
+      clearInterval(gMapControlsCheck);
+    }
+  }, 250);
+});
 
-
-
+  google.maps.event.addListener(marker, 'click', (function (marker, i) {
+    return function () {
+      infowindow.setContent(foodations[i][0]);
+      infowindow.open(map, marker);
+    }
+  })(marker, i));
 
 }
 
