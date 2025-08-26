@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const centerloca = { lat, lng };
 
   // Initialize map with dynamic center
-  const map1 = L.map('foodmap').setView([lat, lng], 13);
+  const map1 = L.map('foodmap').setView([lat, lng], 12);
 
   // Add OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
