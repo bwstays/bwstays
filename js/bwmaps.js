@@ -22,7 +22,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 for (i = 0; i < bwlocations.length; i++) {
 // Target's GPS coordinates.
 var target = L.latLng(bwlocations[i][1], bwlocations[i][2]);
-//map.fitBounds([[11.670, 76.090], [11.610,76.030]]);
+map.fitBounds([[11.6057872, 76.0833109], [11.610,76.090]]);
 // Set map's center to target with zoom 14.
 map.setView(target, 14);
 // Place a marker on the same location.
