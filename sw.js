@@ -15,14 +15,14 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
-    '/css/styles.css',
-    '/js/scripts.js'
+//    '/css/styles.css',
+//    '/js/scripts.js'
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    '/css/styles.css',
-    '/js/scripts.js',
-    '/404.html',
+//    '/css/styles.css',
+//    '/js/scripts.js',
+//    '/404.html',
 ];
 
 const OFFLINE_PAGE = '/offline/index.html';
