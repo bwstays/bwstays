@@ -174,6 +174,71 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-K7RVCKPR');</script>
 <!-- End Google Tag Manager -->
 
+<!-- PWA Code starts here   -->
+
+<script  type="text/javascript" >
+    //Initialize speculation rules on page load
+    document.addEventListener('DOMContentLoaded', function() {
+	//addSpeculationRules();
+	//addHoverBasedRules();
+	if ('serviceWorker' in navigator) {
+		//  Define if link rel='next|prev|prefetch' should  be preloaded when accessing this page
+        const PREFETCH = true;
+        // Define which link-rel's should be preloaded if enabled.
+        const PREFETCH_LINK_RELS = ['index', 'prefetch'];
+         // prefetchCache
+        function prefetchCache() {
+            if(navigator.serviceWorker.controller) {
+                let links = document.querySelectorAll(
+                    PREFETCH_LINK_RELS.map((rel) => {
+                        return 'link[rel='+rel+']';
+                    }).join(',')
+                );
+                if(links.length > 0) {
+                    Array.from(links)
+                        .map((link) => {
+                            let href = link.getAttribute('href');
+                            navigator.serviceWorker.controller.postMessage({
+                                action : 'cache',
+                                url : href,
+                            });
+                        });
+                }
+            }
+        }
+
+		navigator.serviceWorker
+			.register('/sw.js', { scope: '/' })
+			.then(() => {
+				console.info('PWA Service Worker Registered');
+			}, err => console.error("Developer for Life Service Worker registration failed: ", err));
+
+		navigator.serviceWorker
+			.ready
+			.then(() => {
+				if(PREFETCH) {
+			       prefetchCache();
+                }
+				console.info('PWA Service Worker Ready');
+			});
+	}
+    // Performance monitoring
+	if ('PerformanceObserver' in window) {
+
+		const observer = new PerformanceObserver((list) => {
+			list.getEntries().forEach((entry) => {
+				if (entry.entryType === 'navigation') {
+					console.log('Navigation timing:', entry.duration + 'ms');
+				}
+			});
+		});
+		observer.observe({entryTypes: ['navigation']});
+	}
+   });
+</script>
+
+<!-- pwa end here  -->
+
 </head>
 
   <body id="page-top" class="knowmore-page">
