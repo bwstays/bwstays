@@ -1310,12 +1310,14 @@
 
 #signup .review-card {
     background: transparent;
-    padding: 0 0 24px 0;
-    margin: 0 0 24px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0 0 20px 0; /* slightly tighter */
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* thinner line like screenshot */
     border-radius: 0;
     box-shadow: none;
     backdrop-filter: none;
+    max-width: none;
+    width: 100%;
 }
 #signup .review-card:last-child {
     border-bottom: none;
@@ -1338,186 +1340,15 @@
 
 #signup .stars {
     color: #64a19d;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-
-#testimonial .reviewer-info {
-    display: inline;
-    margin: 0;
-}
-
-#testimonial .reviewer-details {
-    display: inline;
-}
-
-#testimonial .name {
-    color: #64a19d;
-    font-weight: 600;
-}
-
-#testimonial .review-text {
-    display: inline;
-    margin: 0;
-}
-
-/* Add separator between reviews */
-#testimonial .review-card:not(:last-child)::after {
-    content: " | ";
-    color: #6c757d;
-    margin: 0 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #testimonial .review-text {
-        font-size: 0.9rem;
-    }
-}
-
-
-#testimonial .reviews-container {
-    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-    border: 1px solid rgba(255, 255, 255, 0.0);
-    border-radius: 6px;
-    padding: 8px 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.0);
-    color: #e9ecef;
-    overflow: hidden;
-}
-
-#testimonial .reviews-content {
-    background: transparent !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-}
-
-#testimonial .reviews-title {
-    display: block !important;
-    font-size: 0.85rem;
-    color: #64a19d;
-    font-weight: 600;
-    margin: 2px 0 6px 0;
-    text-align: left;
-}
-
-/* Header row */
-#testimonial .overall-rating {
-    display: flex !important;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
-#testimonial .rating-circle {
-    width: auto;
-    height: auto;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    margin: 0;
-}
-
-#testimonial .overall-rating .rating-value {
-    display: inline !important;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #e9ecef;
-}
-
-#testimonial .overall-rating .stars {
-    color: #ffd700;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-}
-
-#testimonial .rating-details {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#testimonial .review-count {
-    margin-left: auto;
-    color: #cfd3d7;
-    font-size: .8rem;
-}
-
-#testimonial .review-count .pill {
-    background: #4285f4;
-    color: #fff;
-    border-radius: 4px;
-    padding: 2px 6px;
-    font-size: .7rem;
-    font-weight: 600;
-}
-
-/* List layout */
-#testimonial .reviews-grid {
-    display: block !important;
-}
-
-#testimonial .review-card {
-    display: block !important;
-    padding: 6px 0 8px;
-    /* border-bottom removed to match Contact card */
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0;
-    margin: 0;
-    color: #e5e5e5;
-}
-
-#testimonial .review-card:last-child {
-    border-bottom: none;
-}
-
-#testimonial .review-card::after {
-    content: none !important;
-}
-
-/* Top row */
-#testimonial .reviewer-info {
-    display: flex !important;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 4px;
-}
-
-#testimonial .avatar {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: #e6e6e6;
-    color: #555;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: .85rem;
-    margin-right: 0;
-}
-
-#testimonial .reviewer-details .name,
-#testimonial .reviewer-name {
-    color: #f5f5f5;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-/* Stars + date on same row */
-#testimonial .rating-row {
-    display: flex !important;
-    align-items: center;
-    gap: 8px;
-    margin-left: 36px;
+    font-size: 1.2rem; /* prominent teal stars */
     margin-bottom: 6px;
 }
+#signup .rating-row {
+    margin-left: 0 !important;
+    margin-top: 2px;
+    gap: 6px;
+}
+#signup .stars i { margin-right: 3px; }
 
 #testimonial .rating-row .stars,
 #testimonial .stars {
@@ -1800,11 +1631,12 @@
   color: #ffffff !important;
   font-size: 1.5rem !important;
   font-weight: bold !important;
-  text-align: left !important;
-  margin-bottom: 1.5rem !important;
+  text-align: center !important; /* center like the reference image */
+  margin-bottom: 1.2rem !important;
   letter-spacing: 2px !important;
   text-transform: uppercase !important;
 }
+#signup .reviews-title::after { content: none !important; }
 
 #signup .overall-rating,
 #signup .avatar {
