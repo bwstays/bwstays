@@ -1,8 +1,8 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
-var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.6067872, 76.0833109, 2, iconURLPrefix+"assets/img/logo/bw.png","Black and White Stays"]];
+var bwlocations = [['<h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.6057872, 76.0833109, 2, iconURLPrefix+"assets/img/logo/bw.png","Black and White Stays"]];
  // Where you want to render the map.
 var element = document.getElementById('map');
-// Create Leaflet map on map element.
+// Create Leaflet map on map element.
 var map = L.map(element,{ zoomControl: false });
 let customIcon = {
     iconUrl:"https://www.bwstays.com/assets/img/logo/pin.webp",
