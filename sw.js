@@ -11,6 +11,7 @@ const BASE_CACHE_FILES = [
     '/js/scripts.js',
     '/manifest.json',
     '/assets/img/favicon.png',
+    '/llm-full.txt',
 ];
 
 const OFFLINE_CACHE_FILES = [
