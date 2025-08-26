@@ -685,42 +685,45 @@ setTimeout(ldinsp, 0);
                 </div>
             </div>
          <div class="row"  id="contact-form-div">
-             <div class="col-md-6 pr-md-5">
-                 <form class="bg-dark p-4 shadow" id="contact-form">
-                     <div class="row">
-                         <div class="col-md-6">
-                             <div class="form-group mb-3">
-                                 <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
-                                 <input  type="text"
-                                     class="form-control bg-light border-0" id="inputName" placeholder="Your Name">
-                             </div>
-                         </div>
-                         <div class="col-md-6">
-                             <div class="form-group mb-3">
-                                 <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
-                                 <input  type="email"
-                                     class="form-control bg-light border-0" id="inputEmail4" placeholder="your email">
-                             </div>
-                         </div>
-                     </div>
+            <div class="col-md-6 pr-md-5">
+                <form class="bg-dark p-4 shadow" id="contact-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
+                                <input  type="text"
+                                    class="form-control bg-light border-0" id="inputName" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
+                                <input  type="email"
+                                    class="form-control bg-light border-0" id="inputEmail4" placeholder="your email">
+                            </div>
+                        </div>
+                    </div>
 
 
-                     <div class="form-group mb-3">
-                         <label for="inputAddress2" class="text-white-50 small text-uppercase">Contact</label>
-                         <input  type="text"
-                             class="form-control bg-light border-0" id="inputAddress2"
-                             placeholder="+-- --- --- ----">
-                     </div>
+                    <div class="form-group mb-3">
+                        <label for="inputAddress2" class="text-white-50 small text-uppercase">Contact</label>
+                        <input  type="text"
+                            class="form-control bg-light border-0" id="inputAddress2"
+                            placeholder="+-- --- --- ----">
+                    </div>
+
+                    <div class="row">
 
 
-                     <div class="form-group mb-3">
-                         <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
-                         <textarea  class="form-control bg-light border-0"
-                             id="inputMessage" rows="3" placeholder="Your message"></textarea>
-                     </div>
-                     <button class="btn btn-primary btn-block py-2 text-uppercase font-weight-bold"
-                         type="submit">Send Message</button>
-                 </form>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
+                        <textarea  class="form-control bg-light border-0"
+                            id="inputMessage" rows="3" placeholder="Your message"></textarea>
+                    </div>
+                    <button class="btn btn-primary btn-block py-2 text-uppercase font-weight-bold"
+                        type="submit">Send Message</button>
+                </form>
             </div>
             <div class="col-md-6 mb-3">
 
@@ -847,42 +850,29 @@ setTimeout(ldinsp, 0);
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-end pr-md-4 mb-3">
                     <div class="card border-0 shadow-lg w-100 ml-md-4" id="contact-card">
- 						                 <form class="bg-dark p-4 shadow" id="contact-form">
-						                     <div class="row">
-						                         <div class="col-md-6">
-						                             <div class="form-group mb-3">
-						                                 <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
-						                                 <input  type="text"
-						                                     class="form-control bg-light border-0" id="inputName" placeholder="Your Name">
-						                             </div>
-						                         </div>
-						                         <div class="col-md-6">
-						                             <div class="form-group mb-3">
-						                                 <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
-						                                 <input  type="email"
-						                                     class="form-control bg-light border-0" id="inputEmail4" placeholder="your email">
-						                             </div>
-						                         </div>
-						                     </div>
-
-
-						                     <div class="form-group mb-3">
-						                         <label for="inputAddress2" class="text-white-50 small text-uppercase">Contact</label>
-						                         <input  type="text"
-						                             class="form-control bg-light border-0" id="inputAddress2"
-						                             placeholder="+-- --- --- ----">
-						                     </div>
-
-
-						                     <div class="form-group mb-3">
-						                         <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
-						                         <textarea  class="form-control bg-light border-0"
-						                             id="inputMessage" rows="3" placeholder="Your message"></textarea>
-						                     </div>
-						                     <button class="btn btn-primary btn-block py-2 text-uppercase font-weight-bold"
-						                         type="submit">Send Message</button>
-						                 </form>
-
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label>NAME</label>
+                                        <input type="text" class="form-control" placeholder="Your Name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label>EMAIL</label>
+                                        <input type="email" class="form-control" placeholder="your email">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>CONTACT</label>
+                                    <input type="tel" class="form-control" placeholder="+-- --- --- ----">
+                                </div>
+                                <div class="mb-4">
+                                    <label>MESSAGE</label>
+                                    <textarea class="form-control" rows="4" placeholder="Your message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-block text-white font-weight-bold">REQUEST CALLBACK</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -901,48 +891,61 @@ setTimeout(ldinsp, 0);
 		 <p class="text-white text-center">Whispers of Forest, a stay that provides rural tranquility and urban convenience</p>
         <div class="container">
             <div class="row align-items-center">
-								<div class="col-md-8">
-									<h3 class="text-white font-weight-bold mb-3">Direction</h3>
-									<div  id="map"  class="dir-map map" ></div>
-								</div>
-
-                                <div class="col-md-5 d-flex align-items-center pl-md-4">
-				                    <div class="card border-0 shadow-lg w-100" id="contact-card">
-				                        <div class="card-body p-4">
-				                            <h3 class="text-white font-weight-bold mb-4">BW Stays Contact</h3>
-				                            <div class="border-bottom border-primary mb-4" id="contact-card-divider"></div>
-				                            <div class="mb-4">
-				                                <h5 class="text-primary text-uppercase small font-weight-bold">Address <i class="fa fa-address-card"></i>
-				                                     </h5>
-				                                <p class="text-white mb-0">Wayanad</p>
-				                                <p class="text-white-50">Kerala, India</p>
-				                            </div>
-				                            <div class="mb-4">
-				                                <h5 class="text-primary text-uppercase small font-weight-bold">Email
-				                                <a href="mailto:me@me.com" target="_blank" rel="noopener noreferrer nofollow" class=" ml-2">
-				                                        <i class="fa fa-envelope"></i>
-				                                    </a></h5>
-				                                <p class="mb-0"><a href="mailto:me@me.com" rel="noopener noreferrer nofollow"   class="text-white">black at bwstays.com</a>
-				                                </p>
-				                            </div>
-				                            <div class="mb-4">
-				                                <h5 class="text-primary text-uppercase small font-weight-bold">Phone
-				                                    <i class="fab fa-whatsapp"></i><span></span>
-				                                </h5>
-				                                <p class="text-white mb-0">
-				                                    +-- --- --- ----
-				                                    <a href="https://wa.me/919999999999"  target="_blank" rel="noopener noreferrer nofollow" class="text-white ml-2">
-				                                    </a>
-				                                </p>
-				                            </div>
-				                        </div>
-				                    </div>
+                <div class="col-md-8">
+                    <h3 class="text-white font-weight-bold mb-3">Direction</h3>
+                    <div  id="map"  class="dir-map map" ></div>
                 </div>
+                <div class="col-md-4 d-flex flex-column align-items-start stay-card">
+                    <h3 class="text-white font-weight-bold mb-4">Stay In Wayanad</h3>
 
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="checkbox-container mr-3">
+                            <div class="custom-checkbox">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-weight-bold mb-2">Central & Well-Connected</h5>
+                            <p class="text-white-50 mb-0">Minutes to Kalpetta town, markets and top attractions.</p>
+                        </div>
+                    </div>
 
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="checkbox-container mr-3">
+                            <div class="custom-checkbox">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-weight-bold mb-2">Scenic Western Ghats Views</h5>
+                            <p class="text-white-50 mb-0">Wake up to green hills, tea estates and misty mornings.</p>
+                        </div>
+                    </div>
 
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="checkbox-container mr-3">
+                            <div class="custom-checkbox">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-weight-bold mb-2">Vibrant Local Life</h5>
+                            <p class="text-white-50 mb-0"> Heritage spots, Cafes, Lakes and Forest trails all close by.</p>
+                        </div>
+                    </div>
 
-
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="checkbox-container mr-3">
+                            <div class="custom-checkbox">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-weight-bold mb-2">apt for</h5>
+                            <p class="text-white-50 mb-0">Families, couples and remote workers seeking calm with convenience.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
            <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4">
