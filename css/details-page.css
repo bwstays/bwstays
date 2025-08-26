@@ -1040,7 +1040,7 @@
 }
 
 /* Style individual review cards */
-#testimonial .review-card {
+#signup .review-card {
     display: block;
     background: transparent; /* was rgba(255, 255, 255, 0.05) */
     border-radius: 0;
@@ -1066,19 +1066,19 @@
     font-weight: 600;
 }
 
-#testimonial .review-text {
+#signup .review-text {
     display: inline;
     margin: 0;
 }
 
 /* Add separator between reviews */
-#testimonial .review-card:not(:last-child)::after {
+#signup .review-card:not(:last-child)::after {
     content: "";
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    #testimonial .review-text {
+    #signup .review-text {
         font-size: 0.9rem;
     }
 }
@@ -1246,7 +1246,7 @@
 }
 
 /* Reset any previous styles */
-#testimonial .review-card {
+#signup .review-card {
     max-width: none;
     margin: 0;
     display: flex;
@@ -1256,7 +1256,7 @@
 #testimonial .reviewer-info,
 #testimonial .reviewer-details,
 #testimonial .name,
-#testimonial .review-text {
+#signup .review-text {
     display: block;
     white-space: normal;
     text-align: left;
@@ -1291,7 +1291,7 @@
 }
 
 /* Style individual review cards */
-#testimonial .review-card {
+#signup .review-card {
     display: inline;
     background: none;
     border: none;
@@ -1357,13 +1357,13 @@
     font-weight: 600;
 }
 
-#testimonial .review-text {
+#signup .review-text {
     display: inline;
     margin: 0;
 }
 
 /* Add separator between reviews */
-#testimonial .review-card:not(:last-child)::after {
+#signup .review-card:not(:last-child)::after {
     content: " | ";
     color: #6c757d;
     margin: 0 10px;
@@ -1371,7 +1371,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    #testimonial .review-text {
+    #signup .review-text {
         font-size: 0.9rem;
     }
 }
@@ -1442,13 +1442,13 @@
     gap: 10px;
 }
 
-#testimonial .review-count {
+#signup .review-count {
     margin-left: auto;
     color: #cfd3d7;
     font-size: .8rem;
 }
 
-#testimonial .review-count .pill {
+#signup .review-count .pill {
     background: #4285f4;
     color: #fff;
     border-radius: 4px;
@@ -1462,7 +1462,7 @@
     display: block !important;
 }
 
-#testimonial .review-card {
+#signup .review-card {
     display: block !important;
     padding: 6px 0 8px;
     /* border-bottom removed to match Contact card */
@@ -1473,11 +1473,11 @@
     color: #e5e5e5;
 }
 
-#testimonial .review-card:last-child {
+#signup .review-card:last-child {
     border-bottom: none;
 }
 
-#testimonial .review-card::after {
+#signup .review-card::after {
     content: none !important;
 }
 
@@ -1525,13 +1525,13 @@
 }
 
 #testimonial .rating-row .date,
-#testimonial .review-date {
+#signup .review-date {
     color: #bfc7cf;
     font-size: .7rem;
 }
 
 /* Review text full below */
-#testimonial .review-text {
+#signup .review-text {
     margin-left: 36px;
     color: #dddddd;
     font-size: .8rem;
@@ -1562,7 +1562,7 @@
         max-height: none;
     }
 
-    #testimonial .review-text {
+    #signup .review-text {
         font-size: .9rem;
     }
 }
@@ -1757,7 +1757,7 @@
 }
 
 
-#testimonial .review-button {
+#signup .review-button {
   background-color: #17a2b8 !important; 
   border: none !important;
   border-radius: 4px !important;
@@ -1770,7 +1770,7 @@
   transition: background-color 0.3s ease !important;
 }
 
-#testimonial .review-button:hover {
+#signup .review-button:hover {
   background-color: #138496 !important;
 }
 
