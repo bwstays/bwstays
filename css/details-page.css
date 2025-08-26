@@ -1881,7 +1881,7 @@ footer.footer .stay-card {
   background: transparent !important;
   background-color: transparent !important;
   position: relative;
-  padding: 30px;
+  padding: 15px 30px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.0);
@@ -1908,54 +1908,6 @@ footer.footer .stay-card {
     cursor: pointer;
 }
 
-
-/* Vertical Side Menu */
-.vertical-menu {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px 0 0 10px;
-    padding: 10px 0;
-    backdrop-filter: blur(10px);
-}
-
-.vertical-menu a {
-    display: block;
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-weight: 600;
-    font-size: 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-
-
-.vertical-menu a:last-child {
-    border-bottom: none;
-}
-
-.vertical-res {
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    padding: 30px 13px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.vertical-div {
-    position: fixed;
-    top: 30%;
-    right: 0;
-    transform: translateY(5%);
-    z-index: 1000;
-}
 
 /* Guest Experiences Title Styling */
 .overall-rating {
@@ -2077,5 +2029,6 @@ footer.footer .stay-card {
 color: #64a19d;
 }
 
-.footer-social{
+#contact-card h3 {
+  color: #64a19d !important;
 }
