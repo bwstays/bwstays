@@ -6,11 +6,17 @@ const host = `${self.location.protocol}//${self.location.host}`;
 console.info(`Host: ${host}`);
 
 const ServerApiPath = "https://cloudflare.com/api";
+
+const mapTilesToCache = [
+  '/mapFolder/',
+];
+
 const BASE_CACHE_FILES = [
-    '/css/styles.css',
-    '/js/scripts.js',
+    '/css/',
+    '/js/',
     '/manifest.json',
-    '/assets/img/favicon.ico',
+    '/data/',
+   // '/assets/img/favicon.ico',
     '/llm-full.txt',
 ];
 
