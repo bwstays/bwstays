@@ -7,16 +7,15 @@ console.info(`Host: ${host}`);
 
 const ServerApiPath = "https://cloudflare.com/api";
 const BASE_CACHE_FILES = [
-    '/css/style.css',
-    '/js/script.js',
+    '/css/styles.css',
+    '/js/scripts.js',
     '/manifest.json',
-    '/favicon.png',
+    '/assets/img/favicon.png',
 ];
 
 const OFFLINE_CACHE_FILES = [
-    '/css/style.css',
-    '/js/script.js',
-    '/offline/index.html',
+    '/css/styles.css',
+    '/js/scripts.js'
 ];
 
 const NOT_FOUND_CACHE_FILES = [
