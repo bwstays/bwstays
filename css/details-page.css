@@ -1335,7 +1335,7 @@
     margin-bottom: 10px;
 }
 
-/* 
+
 #testimonial .reviewer-info {
     display: inline;
     margin: 0;
@@ -1353,7 +1353,7 @@
 #testimonial .review-text {
     display: inline;
     margin: 0;
-} */
+}
 
 /* Add separator between reviews */
 #testimonial .review-card:not(:last-child)::after {
