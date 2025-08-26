@@ -114,7 +114,7 @@
 
 /* Contact Card Styling */
 #contact-card {
-    background: linear-gradient(135deg, rgba(33, 37, 41, 0.9), rgba(52, 58, 64, 0.8));
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 20px;
@@ -630,7 +630,7 @@
 
 /* Enhanced Contact Form Styling */
 #contact-form-card {
-    background: linear-gradient(135deg, rgba(33, 37, 41, 0.95) 0%, rgba(52, 58, 64, 0.9) 100%);
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -699,7 +699,7 @@
 
 /* Testimonials Card Styling */
 #testimonials-card {
-    background: linear-gradient(135deg, rgba(33, 37, 41, 0.9) 0%, rgba(52, 58, 64, 0.85) 100%);
+   background: linear-gradient(45deg, #1a1a1a, #2a2a2a);;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -708,7 +708,7 @@
 }
 
 .footer .map {
-    height: 320px; 
+    height: 460px; 
     width: 75%;
     max-width: 100%;
 }
@@ -735,7 +735,7 @@
 
 /* Social Media Card Styling */
 #social-card {
-    background: linear-gradient(135deg, rgba(33, 37, 41, 0.9) 0%, rgba(52, 58, 64, 0.85) 100%);
+   background: linear-gradient(45deg, #1a1a1a, #2a2a2a);;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -755,7 +755,7 @@
 
 /* Statistics Card Styling */
 #stats-card {
-    background: linear-gradient(135deg, rgba(33, 37, 41, 0.95) 0%, rgba(52, 58, 64, 0.9) 100%);
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -1700,7 +1700,7 @@
   margin: 20px;
 }
 #testimonial .reviews-container {
-  background: rgba(33, 37, 41, 0.85) !important;
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
   border-radius: 20px !important;
   padding: 1.5rem !important;
   box-shadow: 0 0.0rem 1rem rgba(0,0,0,0.0) !important;
@@ -1734,7 +1734,7 @@
 
 /* Contact form styles */
 #contact-card {
-  background: rgba(33, 37, 41, 0.85) !important;
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
   border-radius: 20px !important;
 }
 
