@@ -12,11 +12,10 @@ const mapTilesToCache = [
 ];
 
 const BASE_CACHE_FILES = [
+    '/css/styles.css',
+    '/js/scripts.js',
     '/manifest.json',
-    '/css/',
-    '/js/',
-    '/data/',
-   // '/assets/img/favicon.ico',
+    '/assets/img/favicon.ico',
     '/llm-full.txt',
 ];
 
@@ -271,12 +270,6 @@ self.addEventListener(
     'fetch', event => {
 
 		const url = event.request.url;
-		if (url.includes('maps.googleapis.com') ||
-			  url.includes('maps.gstatic.com') ||
-			  url.includes('googleapis.com/maps') ||
-			  url.includes('google.com/maps')) {
-			//return; // Don't intercept these requests — let them go to the network
-		  }
 
         event.respondWith(
             caches.open(CACHE_VERSIONS.content)
