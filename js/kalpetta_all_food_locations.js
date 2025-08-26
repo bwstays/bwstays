@@ -101,7 +101,7 @@ var foodations =
 var element1 = document.getElementById('mapall');
 // Create Leaflet map on map element.
 
-var map1 = L.map(element1).setView([11.6057872, 76.0833109], 9);
+var map1 = L.map(element1).setView([11.6057872, 76.0833109], 12);
 
 
 // Add OSM tile layer to the Leaflet map.
@@ -133,7 +133,7 @@ for (i = 0; i < foodations.length; i++) {
 // Target's GPS coordinates.
 var target = L.latLng(foodations[i][1], foodations[i][2]);
 // Set map's center to target with zoom 10.
-map1.setView(target, 4);
+map1.setView(target,12);
 // Place a marker on the same location.
 L.marker(target,  {    title:foodations[i][5],icon:myIcon1}).addTo(map1).bindPopup( foodations[i][0]);
 
