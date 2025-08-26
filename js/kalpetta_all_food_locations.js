@@ -4,8 +4,7 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 
 var foodations = [
 
-['<h6><a target="_blank" href="https://www.bwstays.com" title="Black & White">Black & White</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"   alt="Black and White Stays Wayanad"  src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.6057872, 76.0833109, 2, iconURLPrefix+"assets/img/logo/restaurant.png","bwstays"],
-
+[
 ['<h6><a target="_blank" href="Muzwalla Resturant" title="Muzwalla Resturant">Muzwalla Resturant</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.6963, 76.1411, 2, iconURLPrefix+"assets/img/logo/restaurant.png","Muzwalla Resturant"],
 
 ['<h6><a target="_blank" href="Hotel Paradise" title="Majestic Bakes">Majestic Bakes</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.604323109796422, 76.08630892473452, 2, iconURLPrefix+"assets/img/logo/restaurant.png","Majestic Bakes"],
