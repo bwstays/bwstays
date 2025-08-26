@@ -223,11 +223,12 @@ function precacheUrl(url) {
     }
 }
 
-if ('storage' in navigator && 'estimate' in navigator.storage) {
+/*if ('storage' in navigator && 'estimate' in navigator.storage) {
   navigator.storage.estimate().then(({ usage, quota }) => {
     console.log(`Using ${usage} out of ${quota} bytes.`);
   });
 }
+*/
 
 self.addEventListener(
     'install', event => {
