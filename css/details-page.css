@@ -1741,18 +1741,19 @@
 #discover {
   margin: 20px;
 }
-#testimonial .reviews-container {
-  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+#signup .reviews-container {
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a) !important;
   border-radius: 20px !important;
   padding: 1.5rem !important;
-  box-shadow: 0 0.0rem 1rem rgba(0,0,0,0.0) !important;
-  color: #e9ecef !important;
-  border: 1px solid rgba(255,255,255,0.0) !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #e5e5e5 !important;
 }
 
-#testimonial .reviews-content {
+#signup .reviews-content {
   background: transparent !important;
   padding: 0 !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
 }
 
@@ -1794,28 +1795,20 @@
 }
 
 /* Guest Experiences Title Styling */
-.overall-rating {
-  text-align: center !important;
-  margin-bottom: 2rem !important;
-}
-
-.rating-circle {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 auto !important;
-}
-
-.rating-value {
-
-  font-weight: bold !important;
-  color: #ffffff !important;
-  text-transform: uppercase !important;
-  /* letter-spacing: 2px !important; */
-  text-align: center !important;
+#signup .reviews-title {
   display: block !important;
-  margin: 0 auto !important;
-  
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+#signup .overall-rating,
+#signup .avatar {
+  display: none !important;
 }
 
 #contact-card .form-control::placeholder {
@@ -2070,103 +2063,3 @@ color: #64a19d;
 #contact-card h3 {
   color: #64a19d !important;
 }
-
-
-#testimonial .reviews-container {
-  background: linear-gradient(45deg, #1a1a1a, #2a2a2a) !important;
-  border-radius: 20px !important;
-  padding: 1.5rem !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: #e5e5e5 !important;
-}
-
-#testimonial .reviews-content {
-  background: transparent !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Title styling */
-#testimonial .reviews-title {
-  display: block !important;
-  color: #ffffff !important;
-  font-size: 1.5rem !important;
-  font-weight: bold !important;
-  text-align: center !important;
-  margin-bottom: 1.5rem !important;
-  letter-spacing: 2px !important;
-  text-transform: uppercase !important;
-}
-
-/* Hide overall rating and avatars */
-#testimonial .overall-rating,
-#testimonial .avatar {
-  display: none !important;
-}
-
-/* Grid layout as vertical list */
-#testimonial .reviews-grid {
-  display: block !important;
-}
-
-/* Individual review cards */
-#testimonial .review-card {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-  padding: 0 0 1.5rem 0 !important;
-  margin: 0 0 1.5rem 0 !important;
-  color: #e5e5e5 !important;
-  display: block !important;
-  border-radius: 0 !important;
-}
-
-#testimonial .review-card:last-child {
-  border-bottom: none !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Reviewer name and rating */
-#testimonial .reviewer-details .name,
-#testimonial .reviewer-name {
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 1.1rem !important;
-  margin-bottom: 0.5rem !important;
-  display: block !important;
-}
-
-/* Star ratings */
-#testimonial .rating-row {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  margin-bottom: 0.8rem !important;
-}
-
-#testimonial .rating-row .stars,
-#testimonial .stars {
-  color: #64a19d !important;
-  font-size: 1rem !important;
-}
-
-/* Review text */
-#testimonial .review-text {
-  color: rgba(255, 255, 255, 0.85) !important;
-  line-height: 1.6 !important;
-  font-size: 1rem !important;
-  margin: 0 !important;
-  display: block !important;
-}
-
-/* Remove any pseudo-elements */
-#testimonial .review-card::after,
-#testimonial .review-card::before {
-  content: none !important;
-  display: none !important;
-}
-/* ==== END FINAL TESTIMONIAL OVERRIDES ====*/
