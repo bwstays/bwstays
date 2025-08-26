@@ -2,7 +2,7 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
 
 
-var foodations = [
+var foodations =
 
 [
 ['<h6><a target="_blank" href="Muzwalla Resturant" title="Muzwalla Resturant">Muzwalla Resturant</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.6963, 76.1411, 2, iconURLPrefix+"assets/img/logo/restaurant.png","Muzwalla Resturant"],
@@ -96,7 +96,7 @@ var foodations = [
 
 ['<h6><a target="_blank" href="The Coffee Shop" title="The Coffee Shop">The Coffee Shop</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.617154317507989, 76.06854264615934, 2, iconURLPrefix+"assets/img/logo/restaurant.png","The Coffee Shop"],
 
-['<h6><a target="_blank" href="Ramavilas Chundale" title="Ramavilas Chundale">Ramavilas Chundale</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.5738608278821, 76.05500967074094, 2, iconURLPrefix+"assets/img/logo/restaurant.png","Ramavilas Chundale"],
+['<h6><a target="_blank" href="Ramavilas Chundale" title="Ramavilas Chundale">Ramavilas Chundale</a></h6><a target="_blank" href="https://Muzwalla Resturantd" title="Muzwalla Resturant"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="https://www.bwstays.com/assets/img/food/bw-stay-nearby-food-restaurant.webp" width="300" ></a>', 11.5738608278821, 76.05500967074094, 2, iconURLPrefix+"assets/img/logo/restaurant.png","Ramavilas Chundale"]
 
   ];
 
