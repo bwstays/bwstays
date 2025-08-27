@@ -991,22 +991,22 @@
 }
 
 /* Match form and reviews container heights */
-#intouch .row {
+#testimonial .row {
     align-items: stretch;
 }
 
-#intouch .col-md-6 {
+#testimonial .col-md-6 {
     display: flex;
 }
 
-#intouch #contact-form,
-#intouch .reviews-container {
+#testimonial #contact-form,
+#testimonial .reviews-container {
     flex: 1;
     width: 100%;
     border-radius: 20px;
 }
 
-#intouch .reviews-content {
+#testimonial .reviews-content {
     background: transparent; /* was #343a40 */
     padding: 1.5rem;
     border-radius: 20px;
@@ -1018,15 +1018,15 @@
 }
 
 /* Hide unnecessary elements */
-#intouch .reviews-title,
-#intouch .overall-rating,
-#intouch .avatar,
-#intouch .rating-row {
+#testimonial .reviews-title,
+#testimonial .overall-rating,
+#testimonial .avatar,
+#testimonial .rating-row {
     display: none;
 }
 
 /* Style reviews grid as a single line */
-#intouch .reviews-grid {
+#testimonial .reviews-grid {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1035,7 +1035,7 @@
 }
 
 /* Style individual review cards */
-#intouch .review-card {
+#testimonial .review-card {
     display: block;
     background: transparent; /* was rgba(255, 255, 255, 0.05) */
     border-radius: 0;
@@ -1047,33 +1047,33 @@
 }
 
 /* Style reviewer name and review text */
-#intouch .reviewer-info {
+#testimonial .reviewer-info {
     display: inline;
     margin: 0;
 }
 
-#intouch .reviewer-details {
+#testimonial .reviewer-details {
     display: inline;
 }
 
-#intouch .name {
+#testimonial .name {
     color: #64a19d;
     font-weight: 600;
 }
 
-#intouch .review-text {
+#testimonial .review-text {
     display: inline;
     margin: 0;
 }
 
 /* Add separator between reviews */
-#intouch .review-card:not(:last-child)::after {
+#testimonial .review-card:not(:last-child)::after {
     content: "";
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    #intouch .review-text {
+    #testimonial .review-text {
         font-size: 0.9rem;
     }
 }
@@ -1201,16 +1201,16 @@
 }
 
 /* Match form and reviews container heights */
-#intouch .row {
+#testimonial .row {
     align-items: stretch;
 }
 
-#intouch .col-md-6 {
+#testimonial .col-md-6 {
     display: flex;
 }
 
-#intouch #contact-form,
-#intouch .reviews-container {
+#testimonial #contact-form,
+#testimonial .reviews-container {
     flex: 1;
     width: 100%;
 }
@@ -1234,30 +1234,30 @@
 }
 
 /* Override any previous styles */
-#intouch .reviews-grid {
+#testimonial .reviews-grid {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
 /* Reset any previous styles */
-#intouch .review-card {
+#testimonial .review-card {
     max-width: none;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-#intouch .reviewer-info,
-#intouch .reviewer-details,
-#intouch .name,
-#intouch .review-text {
+#testimonial .reviewer-info,
+#testimonial .reviewer-details,
+#testimonial .name,
+#testimonial .review-text {
     display: block;
     white-space: normal;
     text-align: left;
 }
 
-#intouch .reviews-content {
+#testimonial .reviews-content {
     background: #343a40;
     padding: 1.5rem;
     border-radius: 0.25rem;
@@ -1269,15 +1269,15 @@
 }
 
 /* Hide unnecessary elements */
-#intouch .reviews-title,
-#intouch .overall-rating,
-#intouch .avatar,
-#intouch .rating-row {
+#testimonial .reviews-title,
+#testimonial .overall-rating,
+#testimonial .avatar,
+#testimonial .rating-row {
     display: none;
 }
 
 /* Style reviews grid as a single line */
-#intouch .reviews-grid {
+#testimonial .reviews-grid {
     display: block;
     white-space: normal;
     text-align: center;
@@ -1286,7 +1286,7 @@
 }
 
 /* Style individual review cards */
-#intouch .review-card {
+#testimonial .review-card {
     display: inline;
     background: none;
     border: none;
@@ -1345,19 +1345,19 @@
 }
 #signup .stars i { margin-right: 3px; }
 
-#intouch .rating-row .stars,
-#intouch .stars {
+#testimonial .rating-row .stars,
+#testimonial .stars {
     color: #ffd700;
 }
 
-#intouch .rating-row .date,
-#intouch .review-date {
+#testimonial .rating-row .date,
+#testimonial .review-date {
     color: #bfc7cf;
     font-size: .7rem;
 }
 
 /* Review text full below */
-#intouch .review-text {
+#testimonial .review-text {
     margin-left: 36px;
     color: #dddddd;
     font-size: .8rem;
@@ -1369,26 +1369,26 @@
 }
 
 /* Ensure heights remain matched (keep columns flexible) */
-#intouch .row {
+#testimonial .row {
     align-items: flex-start;
 }
 
-#intouch .col-md-6 {
+#testimonial .col-md-6 {
     display: flex;
 }
 
-#intouch #contact-form,
-#intouch .reviews-container {
+#testimonial #contact-form,
+#testimonial .reviews-container {
     width: 100%;
 }
 
 /* Responsive */
 @media (max-width:768px) {
-    #intouch .reviews-container {
+    #testimonial .reviews-container {
         max-height: none;
     }
 
-    #intouch .review-text {
+    #testimonial .review-text {
         font-size: .9rem;
     }
 }
@@ -1559,7 +1559,7 @@
 }
 
 
-#intouch h2.text-black {
+#testimonial h2.text-black {
   color: #ffffff !important;
 }
 
@@ -1584,7 +1584,7 @@
 }
 
 
-#intouch .review-button {
+#testimonial .review-button {
   background-color: #17a2b8 !important; 
   border: none !important;
   border-radius: 4px !important;
@@ -1597,7 +1597,7 @@
   transition: background-color 0.3s ease !important;
 }
 
-#intouch .review-button:hover {
+#testimonial .review-button:hover {
   background-color: #138496 !important;
 }
 
