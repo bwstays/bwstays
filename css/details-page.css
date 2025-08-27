@@ -995,10 +995,7 @@
     align-items: stretch;
 }
 
-#testimonial .col-md-6 {
-    display: flex;
-}
-
+ 
 #testimonial #contact-form,
 #testimonial .reviews-container {
     flex: 1;
@@ -1200,15 +1197,7 @@
     border-radius: 3px;
 }
 
-/* Match form and reviews container heights */
-#testimonial .row {
-    align-items: stretch;
-}
-
-#testimonial .col-md-6 {
-    display: flex;
-}
-
+ 
 #testimonial #contact-form,
 #testimonial .reviews-container {
     flex: 1;
@@ -1268,13 +1257,7 @@
     justify-content: center;
 }
 
-/* Hide unnecessary elements */
-#testimonial .reviews-title,
-#testimonial .overall-rating,
-#testimonial .avatar,
-#testimonial .rating-row {
-    display: none;
-}
+ 
 
 /* Style reviews grid as a single line */
 #testimonial .reviews-grid {
