@@ -710,13 +710,11 @@
     width: 100%;
     max-width: 100%;
 }
-
 @media (max-width: 768px) {
     .footer .map {
         height: 220px; 
     }
 }
-
 @media (max-width: 576px) {
     .footer .map {
         height: 200px;
