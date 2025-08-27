@@ -1116,31 +1116,6 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
 
   trucking: [
 
- {
-      id: 87,
-      name: "Kolagapara",
-      description: "Kolagapara.",
-      image: [iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad-2.webp",iconURLPrefix+"assets/img/trucking/bw-kuruva-island-wayanad.webp"],
-      holidays: "Sun",
-      timing:[ "09:00-16:00"],
-      Contact: "+91-000 000 0000",
-	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-      distance: "33",
-      transport: "Public",
-      latlong: "11.821667, 76.092222",
-      map: "https://maps.app.goo.gl/V593gUux4rqrEqWaA",
-      rating:"4.1",
-      hrs:"2",
-      fee:"0",
-aliases: [],
-content: "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
-amenities: ["physical exertion", "hiking", "Remote Access", "Quiet Operation"],
-tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails", "RoadTrip Vibes", "Adventure Tourism"],
-       type: "Trucking",
-      knowmore: iconURLPrefix+"bw-kuruwa-deep-trucking-wayanad.html",
-
-    duration : "1-2 Hours",
-},
 
     {
       id: 15,
@@ -1648,7 +1623,7 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
 },
 
  {
-          id: 87,
+          id: 90,
           name: "Turf",
           description: "Turf.",
           image: [iconURLPrefix+"assets/img/sports/bw-green-grass-football-wayanad.webp"],
