@@ -19,6 +19,8 @@ var files = [
   './llm-full.txt'
 ];
 
+
+
 //Adding `install` event listener
 self.addEventListener('install', (event) => {
   console.info('Event: Install');
