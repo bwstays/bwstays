@@ -1,410 +1,215 @@
-const CACHE_VERSION = 1;
-const GHPATH = 'https://www.bwstays.com/';
-const Version = new URL(location).searchParams.get("version");
-const host = `${self.location.protocol}//${self.location.host}`;
-console.info(`Host: ${host}`);
-const ServerApiPath = "https://cloudflare.com/api";
-const BASE_CACHE_FILES = [
-  //'/mapFolder/',
-    '/css/styles.css',
-    '/js/scripts.js',
-    '/manifest.json',
-    '/assets/img/favicon.ico',
-    '/llm-full.txt',
-];
-const OFFLINE_CACHE_FILES = [
-//    '/css/styles.css',
-//    '/js/scripts.js'
-];
-const NOT_FOUND_CACHE_FILES = [
-//    '/css/styles.css',
-//    '/js/scripts.js',
-//    '/404.html',
-];
-const OFFLINE_PAGE = '/offline/index.html';
-const NOT_FOUND_PAGE = '/404.html';
-const CACHE_VERSIONS = {
-    assets: 'assets-v' + CACHE_VERSION,
-    content: 'content-v' + CACHE_VERSION,
-    offline: 'offline-v' + CACHE_VERSION,
-    notFound: '404-v' + CACHE_VERSION,
-};
+//Cache polyfil to support cacheAPI in all browsers
+importScripts('./cache-polyfill.js');
 
-// Define MAX_TTL's in SECONDS for specific file extensions
-const MAX_TTL = {
-    '/': 3600,
-    html: 3600,
-    json: 86400,
-    js: 86400,
-    css: 86400,
-};
+var cacheName = 'cache-v4';
 
-const CACHE_BLACKLIST = [
- 	    // str = URL of the resource
-	    // apply this rule when you do not want to cache external files
-
-     //(str) => {
-     //    return !str.startsWith('http://localhost') && !str.startsWith('https://yourwebsite.com');
-    //},
+//Files to save in cache
+var files = [
+  './',
+  './index.html', //SW treats query string as new request
+  'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap',
+  './css/styles.css',
+  './js/chat.js',
+  './js/scripts.js',
+  './js/bwmaps.js',
+  './js/whatsapp.js',
+  './manifest.json'
 ];
 
-const SUPPORTED_METHODS = [
-    'GET',
-];
+//Adding `install` event listener
+self.addEventListener('install', (event) => {
+  console.info('Event: Install');
 
-/**
-* To cache local url
+  event.waitUntil(
+    caches.open(cacheName)
+    .then((cache) => {
+      //[] of files to cache & if any of the file not present `addAll` will fail
+      return cache.addAll(files)
+      .then(() => {
+        console.info('All files are cached');
+        return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
+      })
+      .catch((error) =>  {
+        console.error('Failed to cache', error);
+      })
+    })
+  );
+});
+
+/*
+  FETCH EVENT: triggered for every request made by index page, after install.
 */
-function    canCache(url) {
-        if (url.startsWith("https://localhost")) {
-            return false;
-        }
-        const result = url.toString().startsWith(this.host);
-        return result;
-    }
 
+//Adding `fetch` event listener
+self.addEventListener('fetch', (event) => {
+  console.info('Event: Fetch');
 
-/**
- * isBlackListed
- * @param {string} url
- * @returns {boolean}
- */
-function isBlacklisted(url) {
-    return (CACHE_BLACKLIST.length > 0) ? !CACHE_BLACKLIST.filter((rule) => {
-        if(typeof rule === 'function') {
-            return !rule(url);
-        } else {
-            return false;
-        }
-    }).length : false
+  var request = event.request;
+  var url = new URL(request.url);
+  if (url.origin === location.origin) {
+    // Static files cache
+    event.respondWith(cacheFirst(request));
+  } else {
+    // Dynamic API cache
+    event.respondWith(networkFirst(request));
+  }
+
+  // // Checking for navigation preload response
+  // if (event.preloadResponse) {
+  //   console.info('Using navigation preload');
+  //   return response;
+  // }
+});
+
+async function cacheFirst(request) {
+  const cachedResponse = await caches.match(request);
+  return cachedResponse || fetch(request);
 }
 
-/**
- * getFileExtension
- * @param {string} url
- * @returns {string}
- */
-function getFileExtension(url) {
-    let extension = url.split('.').reverse()[0].split('?')[0];
-    return (extension.endsWith('/')) ? '/' : extension;
+async function networkFirst(request) {
+  const dynamicCache = await caches.open(cacheName);
+  try {
+    const networkResponse = await fetch(request);
+    // Cache the dynamic API response
+    dynamicCache.put(request, networkResponse.clone()).catch((err) => {
+      console.warn(request.url + ': ' + err.message);
+    });
+    return networkResponse;
+  } catch (err) {
+    const cachedResponse = await dynamicCache.match(request);
+    return cachedResponse;
+  }
 }
 
-/**
- * getTTL
- * @param {string} url
- */
-function getTTL(url) {
-    if (typeof url === 'string') {
-        let extension = getFileExtension(url);
-        if (typeof MAX_TTL[extension] === 'number') {
-            return MAX_TTL[extension];
-        } else {
-            return null;
-        }
-    } else {
-        return null;
-    }
-}
-/**
- * installServiceWorker
- * @returns {Promise}
- */
-function installServiceWorker() {
-//	alert(caches + " "+BASE_CACHE_FILES);
-    return Promise.all(
-        [
-            caches.open(CACHE_VERSIONS.assets)
-                .then(
-                    (cache) => {
-                        return cache.addAll(BASE_CACHE_FILES);
-                    }
-                ),
-            caches.open(CACHE_VERSIONS.offline)
-                .then(
-                    (cache) => {
-                        return cache.addAll(OFFLINE_CACHE_FILES);
-                    }
-                ),
-            caches.open(CACHE_VERSIONS.notFound)
-                .then(
-                    (cache) => {
-                        return cache.addAll(NOT_FOUND_CACHE_FILES);
-                    }
-                )
-        ]
-    )
-        .then(() => {
-            return self.skipWaiting();
-        });
-}
+/*
+  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
+*/
 
-/**
- * cleanupLegacyCache
- * @returns {Promise}
- */
-function cleanupLegacyCache() {
-    let currentCaches = Object.keys(CACHE_VERSIONS)
-        .map(
-            (key) => {
-                return CACHE_VERSIONS[key];
-            }
-        );
+//Adding `activate` event listener
+self.addEventListener('activate', (event) => {
+  console.info('Event: Activate');
 
-    return new Promise(
-        (resolve, reject) => {
-            caches.keys()
-                .then(
-                    (keys) => {
-                        return legacyKeys = keys.filter(
-                            (key) => {
-                                return !~currentCaches.indexOf(key);
-                            }
-                        );
-                    }
-                )
-                .then(
-                    (legacy) => {
-                        if (legacy.length) {
-                            Promise.all(
-                                legacy.map(
-                                    (legacyKey) => {
-                                        return caches.delete(legacyKey)
-                                    }
-                                )
-                            )
-                                .then(
-                                    () => {
-                                        resolve()
-                                    }
-                                )
-                                .catch(
-                                    (err) => {
-                                        reject(err);
-                                    }
-                                );
-                        } else {
-                            resolve();
-                        }
-                    }
-                )
-                .catch(
-                    () => {
-                        reject();
-                    }
-                );
+  //Navigation preload is help us make parallel request while service worker is booting up.
+  //Enable - chrome://flags/#enable-service-worker-navigation-preload
+  //Support - Chrome 57 beta (behing the flag)
+  //More info - https://developers.google.com/web/updates/2017/02/navigation-preload#the-problem
 
-        }
+  // Check if navigationPreload is supported or not
+  // if (self.registration.navigationPreload) {
+  //   self.registration.navigationPreload.enable();
+  // }
+  // else if (!self.registration.navigationPreload) {
+  //   console.info('Your browser does not support navigation preload.');
+  // }
+
+  //Remove old and unwanted caches
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cache) => {
+          if (cache !== cacheName) {
+            return caches.delete(cache); //Deleting the old cache (cache v1)
+          }
+        })
+      );
+    })
+    .then(function () {
+      console.info("Old caches are cleared!");
+      // To tell the service worker to activate current one
+      // instead of waiting for the old one to finish.
+      return self.clients.claim();
+    })
+  );
+});
+
+/*
+  PUSH EVENT: triggered everytime, when a push notification is received.
+*/
+
+//Adding `push` event listener
+self.addEventListener('push', (event) => {
+  console.info('Event: Push');
+
+  var title = 'Push notification demo';
+  var body = {
+    'body': 'click to return to application',
+    'tag': 'demo',
+    'icon': './images/icons/apple-touch-icon.png',
+    'badge': './images/icons/apple-touch-icon.png',
+    //Custom actions buttons
+    'actions': [
+      { 'action': 'yes', 'title': 'I ♥ this app!'},
+      { 'action': 'no', 'title': 'I don\'t like this app'}
+    ]
+  };
+
+  event.waitUntil(self.registration.showNotification(title, body));
+});
+
+/*
+  BACKGROUND SYNC EVENT: triggers after `bg sync` registration and page has network connection.
+  It will try and fetch github username, if its fulfills then sync is complete. If it fails,
+  another sync is scheduled to retry (will will also waits for network connection)
+*/
+
+self.addEventListener('sync', (event) => {
+  console.info('Event: Sync');
+
+  //Check registered sync name or emulated sync from devTools
+  if (event.tag === 'github' || event.tag === 'test-tag-from-devtools') {
+    event.waitUntil(
+      //To check all opened tabs and send postMessage to those tabs
+      self.clients.matchAll().then((all) => {
+        return all.map((client) => {
+          return client.postMessage('online'); //To make fetch request, check app.js - line no: 122
+        })
+      })
+      .catch((error) => {
+        console.error(error);
+      })
     );
-}
+  }
+});
 
-function precacheUrl(url) {
-    if(!isBlacklisted(url)) {
-        caches.open(CACHE_VERSIONS.content)
-            .then((cache) => {
-                cache.match(url)
-                    .then((response) => {
-                        if(!response) {
-                            return fetch(url)
-                        } else {
-                            // already in cache, nothing to do.
-                            return null
-                        }
-                    })
-                    .then((response) => {
-                        if(response) {
-                            return cache.put(url, response.clone());
-                        } else {
-                            return null;
-                        }
-                    });
-            })
-    }
-}
-
-/*if ('storage' in navigator && 'estimate' in navigator.storage) {
-  navigator.storage.estimate().then(({ usage, quota }) => {
-    console.log(`Using ${usage} out of ${quota} bytes.`);
-  });
-}
+/*
+  NOTIFICATION EVENT: triggered when user click the notification.
 */
 
-self.addEventListener(
-    'install', event => {
-        event.waitUntil(
-            Promise.all([
-                installServiceWorker(),
-                self.skipWaiting(),
-            ])
-        );
-    }
-);
+//Adding `notification` click event listener
+self.addEventListener('notificationclick', (event) => {
+  var url = 'https://demopwa.in/';
 
-// The activate handler takes care of cleaning up old caches.
-self.addEventListener(
-    'activate', event => {
-        event.waitUntil(
-            Promise.all(
-                [
-                    cleanupLegacyCache(),
-                    self.clients.claim(),
-                    self.skipWaiting(),
-                ]
-            )
-                .catch(
-                    (err) => {
-                        event.skipWaiting();
-                    }
-                )
-        );
-    }
-);
+  //Listen to custom action buttons in push notification
+  if (event.action === 'yes') {
+    console.log('I ♥ this app!');
+  }
+  else if (event.action === 'no') {
+    console.warn('I don\'t like this app');
+  }
 
-self.addEventListener(
-    'fetch', event => {
-		const url = event.request.url;
-        event.respondWith(
-            caches.open(CACHE_VERSIONS.content)
-                .then(
-                    (cache) => {
+  event.notification.close(); //Close the notification
 
-                        return cache.match(event.request)
-                            .then(
-                                (response) => {
-
-                                    if (response) {
-
-                                        let headers = response.headers.entries();
-                                        let date = null;
-
-                                        for (let pair of headers) {
-                                            if (pair[0] === 'date') {
-                                                date = new Date(pair[1]);
-                                            }
-                                        }
-
-                                        if (date) {
-                                            let age = parseInt((new Date().getTime() - date.getTime()) / 1000);
-                                            let ttl = getTTL(event.request.url);
-
-                                            let byPassCach = false;
-
-                                            //added this line to bypass cache for server requests
-                                            //update ServerApiPath with your own server api path
-                                            if (event.request.url.toLowerCase().includes(ServerApiPath)) {
-                                                byPassCach = true;
-                                            }
-
-                                            if (byPassCach || (ttl && age > ttl)) {
-
-                                                return new Promise(
-                                                    (resolve) => {
-
-                                                        return fetch(event.request.clone())
-                                                            .then(
-                                                                (updatedResponse) => {
-                                                                    if (updatedResponse) {
-                                                                        cache.put(event.request, updatedResponse.clone());
-                                                                        resolve(updatedResponse);
-                                                                    } else {
-                                                                        resolve(response)
-                                                                    }
-                                                                }
-                                                            )
-                                                            .catch(
-                                                                () => {
-                                                                    resolve(response);
-                                                                }
-                                                            );
-
-                                                    }
-                                                )
-                                                    .catch(
-                                                        (err) => {
-                                                            return response;
-                                                        }
-                                                    );
-                                            } else {
-                                                return response;
-                                            }
-
-                                        } else {
-                                            return response;
-                                        }
-
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            )
-                            .then(
-                                (response) => {
-                                    if (response) {
-                                        return response;
-                                    } else {
-                                        return fetch(event.request.clone())
-                                            .then(
-                                                (response) => {
-
-                                                    if(response.status < 400) {
-                                                        if (~SUPPORTED_METHODS.indexOf(event.request.method) && !isBlacklisted(event.request.url)) {
-                                                            cache.put(event.request, response.clone());
-                                                        }
-                                                        return response;
-                                                    } else {
-                                                        return caches.open(CACHE_VERSIONS.notFound).then((cache) => {
-                                                            return cache.match(NOT_FOUND_PAGE);
-                                                        })
-                                                    }
-                                                }
-                                            )
-                                            .then((response) => {
-                                                if(response) {
-                                                    return response;
-                                                }
-                                            })
-                                            .catch(
-                                                () => {
-
-                                                    return caches.open(CACHE_VERSIONS.offline)
-                                                        .then(
-                                                            (offlineCache) => {
-                                                                return offlineCache.match(OFFLINE_PAGE)
-                                                            }
-                                                        )
-
-                                                }
-                                            );
-                                    }
-                                }
-                            )
-                            .catch(
-                                (error) => {
-                                    console.error('  Error in fetch handler:', error);
-                                    throw error;
-                                }
-                            );
-                    }
-                )
-        );
-
-    }
-);
-
-
-self.addEventListener('message', (event) => {
-
-    if(
-        typeof event.data === 'object' &&
-        typeof event.data.action === 'string'
-    ) {
-        switch(event.data.action) {
-            case 'cache' :
-                precacheUrl(event.data.url);
-                break;
-            default :
-                console.log('Unknown action: ' + event.data.action);
-                break;
+  //To open the app after clicking notification
+  event.waitUntil(
+    clients.matchAll({
+      type: 'window'
+    })
+    .then((clients) => {
+      for (var i = 0; i < clients.length; i++) {
+        var client = clients[i];
+        //If site is opened, focus to the site
+        if (client.url === url && 'focus' in client) {
+          return client.focus();
         }
-    }
+      }
 
+      //If site is cannot be opened, open in new window
+      if (clients.openWindow) {
+        return clients.openWindow('/');
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+  );
 });
