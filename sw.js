@@ -1,7 +1,7 @@
 //Cache polyfil to support cacheAPI in all browsers
 importScripts('./cache-polyfill.js');
 
-const TILE_CACHE = 'osm-tile-cache-v1';
+const TILE_CACHE = 'cache-v4';
 const TILE_URL_PATTERN = /^https:\/\/[abc]\.tile\.osm\.org\/.*/;
 
 var cacheName = 'cache-v4';
