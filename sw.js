@@ -71,7 +71,7 @@ self.addEventListener('fetch', (event) => {
 
 async function cacheFirst(request) {
 
-	  const requestUrl = event.request.url;
+	  const requestUrl = request.url;
 
  if (TILE_URL_PATTERN.test(requestUrl)) {
     event.respondWith(
