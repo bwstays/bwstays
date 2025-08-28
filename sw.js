@@ -4,10 +4,8 @@ const Version = new URL(location).searchParams.get("version");
 const host = `${self.location.protocol}//${self.location.host}`;
 console.info(`Host: ${host}`);
 const ServerApiPath = "https://cloudflare.com/api";
-const mapTilesToCache = [
-  '/mapFolder/',
-];
 const BASE_CACHE_FILES = [
+  //'/mapFolder/',
     '/css/styles.css',
     '/js/scripts.js',
     '/manifest.json',
