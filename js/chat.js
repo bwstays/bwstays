@@ -37,9 +37,9 @@
       });
       knowledgeBase = chunks;
       knowledgeLoaded = true;
-      console.log(`Knowledge base loaded: ${chunks.length} chunks`);
+      //console.log(`Knowledge base loaded: ${chunks.length} chunks`);
     } catch (error) {
-      console.error('Failed to load knowledge base:', error);
+      //console.error('Failed to load knowledge base:', error);
     }
   }
 
@@ -455,15 +455,15 @@
           ...chatHistory.slice(1)
         ];
         const unrestrictedReply = await sendToGroq(unrestrictedMessages, text);
-        console.log('LLM answer WITHOUT restriction:', unrestrictedReply);
+        //console.log('LLM answer WITHOUT restriction:', unrestrictedReply);
 
         // Get LLM answer with restriction (current logic)
         const reply = await sendToGroq(chatHistory, text);
-        console.log('LLM answer WITH restriction:', reply);
+        //console.log('LLM answer WITH restriction:', reply);
         appendMessage('assistant', reply);
         chatHistory.push({ role: 'assistant', content: reply });
       }catch(err){
-        console.error(err);
+        //console.error(err);
         const fallback = localFallbackAnswer(text);
         appendMessage('assistant', fallback);
       }finally{
