@@ -14,6 +14,7 @@ var files = [
   './js/bwmaps.js',
   './js/whatsapp.js',
   './manifest.json'
+  './llm-full.txt'
 ];
 
 //Adding `install` event listener
