@@ -13,7 +13,7 @@ var files = [
   './js/scripts.js',
   './js/bwmaps.js',
   './js/whatsapp.js',
-  './manifest.json'
+  './manifest.json',
   './llm-full.txt'
 ];
 
