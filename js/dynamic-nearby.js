@@ -199,7 +199,7 @@ function createPlaceCard(place) {
     const knowmoreUrl = place.knowmore || '#';
 
     return `
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+        <a href="${knowmoreUrl}" class="text-decoration-none text-white"><div class="col-lg-3 col-md-4 col-sm-6 mb-3">
             <div class="card nearby-card h-100 border-0" style="border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
                 <div class="card-img-top">
                     <a href="${knowmoreUrl}" class="text-decoration-none text-white"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="${imageUrl}" class="img-fluid" alt="${place.name}" style="width: 100%; height: 160px; object-fit: cover;"></a>
@@ -209,7 +209,7 @@ function createPlaceCard(place) {
                         <div style="flex: 1;">
                             <div class="d-flex justify-content-between align-items-start mb-1">
                                 <h6 class="card-title mb-0" style="font-size: 0.95rem; word-wrap: break-word; max-width: calc(100% - 40px);">
-                                    <a href="${knowmoreUrl}" class="text-decoration-none text-white">${place.name}</a>
+                                    ${place.name}
                                 </h6>
                                 <a href="${place.map}" target="_new" class="ms-2" style="background: rgba(255,255,255,0.9); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); flex-shrink: 0;">
                                     <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
@@ -228,7 +228,7 @@ function createPlaceCard(place) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div></a>
     `;
 }
 
