@@ -2,7 +2,7 @@
 importScripts('./cache-polyfill.js');
 
 const TILE_CACHE = 'osm-tile-cache-v1';
-const TILE_URL_PATTERN = /^https:\/\/[abc]\.tile\.openstreetmap\.org\/.*/;
+const TILE_URL_PATTERN = /^https:\/\/[abc]\.tile\.osm\.org\/.*/;
 
 var cacheName = 'cache-v4';
 
