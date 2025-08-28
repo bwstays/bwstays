@@ -66,9 +66,9 @@
     				}
 					);
                 document.head.appendChild(script);
-                console.log('Speculation rules added dynamically');
+               // console.log('Speculation rules added dynamically');
             } else {
-                console.log('Speculation Rules API not supported');
+              //  console.log('Speculation Rules API not supported');
             }
         }
 

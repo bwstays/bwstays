@@ -96,7 +96,7 @@
             },
             error: function(xhr, status, error) {
                 // Handle error
-                console.error('Error:', error);
+               // console.error('Error:', error);
                 // Display error message
                 $('#result').html('<p>Error submitting form.</p>'+jsonString);
             }
