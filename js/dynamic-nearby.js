@@ -98,29 +98,11 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
      var loclength=Object.keys(locations.names).length;
-     //console.log("distances locations");
-     //console.log(distances);
-     //console.log(locations);
-     //console.log("loclength"+loclength);
+
 
     for (let i = 0; i < loclength; i++) {
 			var value =locations.names[i+1];
-			// Check if the current value is empty (e.g., null, undefined, empty string, empty array, empty object)
-			/* if (value === null || typeof value === 'undefined' ||
-			(typeof value === 'string' && value.trim() === '') ||
-			(Array.isArray(value) && value.length === 0) ||
-			(typeof value === 'object' && value !== null && Object.keys(value).length === 0)) {
-			// If empty, skip to the next iteration (effectively taking the "next non-empty cell")
-				console.log("continue");
-				continue;
-			}
 
-			if ( isEmpty(value))
-			{			console.log("continue");
-
-
-				continue;
-			}*/
 			//console.log("distances"+distances[i]);
            if ( distances[i]!=""  &&  distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 
@@ -131,10 +113,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 
  					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
 					var thisId=findPlaceById(i+1); //TODO
-					//console.log("555555555" );
-					//console.log(" i "+ i + "  locationId" + locationId);
-					//console.log(thisId);
-					// alert(locations.names[i]);
+
 					nearbyPlaces.push({
 						id: i,
 						name: locations.names[i+1],
@@ -196,30 +175,7 @@ function renderNearbyPlaces() {
     }
 //console.log(nearbyPlaces);
 // console.log(fullPlaceDetails);
-    // Create HTML for all nearby places
-   /* const placesHTML = nearbyPlaces.map(place => {
 
-        // Find the full place details from siteData
-        const fullPlaceDetails = findPlaceById(place.id);
-      //  alert(place.id +" " +fullPlaceDetails.place.rating)
-        if (fullPlaceDetails) {
-
-            return createPlaceCard({
-                ...place,
-                image: fullPlaceDetails.place.image[0],
-                knowmore: fullPlaceDetails.place.knowmore,
-                rating: fullPlaceDetails.place.rating,
-                timing: fullPlaceDetails.place.timing,
-                map: fullPlaceDetails.place.map,
-
-            });
-        }
-        return createPlaceCard(place);
-    }).join('');
-     //console.log(placesHTML);
-    // Update the container with the new content
-    nearbyCardsContainer.innerHTML = placesHTML;
-    */
 
     const cardHTMLArray = [];
 		for (let i = 0; i < nearbyPlaces.length; i++) {
