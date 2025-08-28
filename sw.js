@@ -100,6 +100,15 @@ async function cacheFirst(request) {
 }
 
 async function networkFirst(request) {
+
+	  const requestUrl = request.url;
+
+ if (TILE_URL_PATTERN.test(requestUrl)) {
+	 console.log("from network true");
+
+
+  }
+
   const dynamicCache = await caches.open(cacheName);
   try {
     const networkResponse = await fetch(request);
