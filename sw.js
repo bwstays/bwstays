@@ -76,6 +76,8 @@ async function cacheFirst(request) {
 	  console.log("requestUrl"+requestUrl);
 
  if (TILE_URL_PATTERN.test(requestUrl)) {
+	 console.log("from cahce true");
+
     event.respondWith(
       caches.open(TILE_CACHE).then(cache => {
         return cache.match(event.request).then(response => {
