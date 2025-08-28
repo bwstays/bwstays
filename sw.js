@@ -1,6 +1,9 @@
 //Cache polyfil to support cacheAPI in all browsers
 importScripts('./cache-polyfill.js');
 
+const TILE_CACHE = 'osm-tile-cache-v1';
+const TILE_URL_PATTERN = /^https:\/\/[abc]\.tile\.openstreetmap\.org\/.*/;
+
 var cacheName = 'cache-v4';
 
 //Files to save in cache
@@ -45,6 +48,11 @@ self.addEventListener('fetch', (event) => {
   console.info('Event: Fetch');
 
   var request = event.request;
+
+
+
+
+
   var url = new URL(request.url);
   if (url.origin === location.origin) {
     // Static files cache
@@ -62,6 +70,25 @@ self.addEventListener('fetch', (event) => {
 });
 
 async function cacheFirst(request) {
+
+	  const requestUrl = event.request.url;
+
+ if (TILE_URL_PATTERN.test(requestUrl)) {
+    event.respondWith(
+      caches.open(TILE_CACHE).then(cache => {
+        return cache.match(event.request).then(response => {
+          if (response) {
+            return response; // Serve from cache
+          }
+          return fetch(event.request).then(networkResponse => {
+            cache.put(event.request, networkResponse.clone()); // Cache it
+            return networkResponse;
+          });
+        });
+      })
+    );
+  }
+
   const cachedResponse = await caches.match(request);
   return cachedResponse || fetch(request);
 }
