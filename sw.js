@@ -73,11 +73,15 @@ async function cacheFirst(request) {
 
 	  const requestUrl = request.url;
 
+	  console.log("requestUrl"+requestUrl);
+
  if (TILE_URL_PATTERN.test(requestUrl)) {
     event.respondWith(
       caches.open(TILE_CACHE).then(cache => {
         return cache.match(event.request).then(response => {
           if (response) {
+			  	  console.log("from cahce"+requestUrl);
+
             return response; // Serve from cache
           }
           return fetch(event.request).then(networkResponse => {
