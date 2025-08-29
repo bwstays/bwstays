@@ -177,7 +177,7 @@
 -->
 
 
-<!--
+
 <script  type="text/javascript" >
 (function () {
   //If serviceWorker supports, then register it.
@@ -191,6 +191,32 @@
       console.error('Service worker failed ', error);
     });
   }
+
+
+// Handle PWA install prompt
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = 'block';
+
+  installBtn.addEventListener('click', () => {
+    installBtn.style.display = 'none';
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+});
+
 
   // To content update on service worker state change
   function checkForPageUpdate(registration) {
@@ -217,7 +243,7 @@
 })();
 
 </script>
--->
+
 
 <!-- pwa end here  -->
 <!-- Google tag (gtag.js) -->
@@ -314,7 +340,8 @@ setTimeout(ldinsp, 0);
                                 height="45" />
                         </a>
                     </li>
-                  <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" id="install" href="#install">Install</a></li> -->
+                 <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" id="install" href="#install">Install</a></li> -->
+                    <button id="installBtn" style="display: none;">Install App</button>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Discover</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#testimonial">Contact</a></li>
                 </ul>
