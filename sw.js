@@ -31,7 +31,7 @@ self.addEventListener('install', (event) => {
       //[] of files to cache & if any of the file not present `addAll` will fail
       return cache.addAll(files)
       .then(() => {
-        console.info('All files are cached');
+        //console.info('All files are cached');
         return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
       })
       .catch((error) =>  {
@@ -47,7 +47,7 @@ self.addEventListener('install', (event) => {
 
 //Adding `fetch` event listener
 self.addEventListener('fetch', (event) => {
-  console.info('Event: Fetch');
+  //console.info('Event: Fetch');
 
   var request = event.request;
 
@@ -75,16 +75,16 @@ async function cacheFirst(request) {
 
 	  const requestUrl = request.url;
 
-	  console.log("requestUrl"+requestUrl);
+	  //console.log("requestUrl"+requestUrl);
 
  if (TILE_URL_PATTERN.test(requestUrl)) {
-	 console.log("from cahce true");
+	 //console.log("from cahce true");
 
     event.respondWith(
       caches.open(TILE_CACHE).then(cache => {
         return cache.match(event.request).then(response => {
           if (response) {
-			  	  console.log("from cahce"+requestUrl);
+			  	  //console.log("from cahce"+requestUrl);
 
             return response; // Serve from cache
           }
@@ -106,13 +106,13 @@ async function networkFirst(request) {
 	  const requestUrl = request.url;
 
  if (TILE_URL_PATTERN.test(requestUrl)) {
-	 console.log("from network true" );
+	 //console.log("from network true" );
 
 
   }
 
   const dynamicCache = await caches.open(cacheName);
-   console.log("from network dynamicCache opened" );
+   //console.log("from network dynamicCache opened" );
 
   try {
     const networkResponse = await fetch(request);
@@ -120,7 +120,6 @@ async function networkFirst(request) {
     dynamicCache.put(request, networkResponse.clone()).catch((err) => {
       console.warn(request.url + ': ' + err.message);
     });
-       console.log("from network dynamicCache put over" );
 
     return networkResponse;
   } catch (err) {
@@ -135,7 +134,7 @@ async function networkFirst(request) {
 
 //Adding `activate` event listener
 self.addEventListener('activate', (event) => {
-  console.info('Event: Activate');
+  //console.info('Event: Activate');
 
   //Navigation preload is help us make parallel request while service worker is booting up.
   //Enable - chrome://flags/#enable-service-worker-navigation-preload
@@ -176,7 +175,7 @@ self.addEventListener('activate', (event) => {
 
 //Adding `push` event listener
 self.addEventListener('push', (event) => {
-  console.info('Event: Push');
+//  console.info('Event: Push');
 
   var title = 'Push notification demo';
   var body = {
