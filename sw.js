@@ -79,22 +79,26 @@ async function cacheFirst(request) {
 
  if (TILE_URL_PATTERN.test(requestUrl)) {
 	 //console.log("from cahce true");
+	try{
+		event.respondWith(
+		  caches.open(TILE_CACHE).then(cache => {
+			return cache.match(event.request).then(response => {
+			  if (response) {
+					  //console.log("from cahce"+requestUrl);
 
-    event.respondWith(
-      caches.open(TILE_CACHE).then(cache => {
-        return cache.match(event.request).then(response => {
-          if (response) {
-			  	  //console.log("from cahce"+requestUrl);
-
-            return response; // Serve from cache
-          }
-          return fetch(event.request).then(networkResponse => {
-            cache.put(event.request, networkResponse.clone()); // Cache it
-            return networkResponse;
-          });
-        });
-      })
-    );
+				return response; // Serve from cache
+			  }
+			  return fetch(event.request).then(networkResponse => {
+				cache.put(event.request, networkResponse.clone()); // Cache it
+				return networkResponse;
+			  });
+			});
+		  })
+		);
+	}
+	catch(err) {
+	   console.log("Input is " + err);
+  	}
   }
 
   const cachedResponse = await caches.match(request);
