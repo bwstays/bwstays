@@ -87,7 +87,7 @@
 
 
 
-   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src overpass-api.de   unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com ; style-src   unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com use.fontawesome.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com;    connect-src router.project-osrm.org  overpass-api.de  analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
+   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src overpass-api.de   unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com ; style-src   unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com;    connect-src router.project-osrm.org  overpass-api.de  analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
 
 
 
@@ -100,12 +100,9 @@
     <!-- <noscript><link href="//fonts.googleapis.com/css?family=Varela+Round" rel="dns-prefetch" /></noscript> -->
     <noscript><link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap&display=swap"    type='text/css' media='all'  rel="dns-prefetch" /></noscript>
     <!-- Core theme CSS (includes Bootstrap)-->
-    <!-- Core theme CSS (remote) disabled for local preview -->
-    <link href="https://www.bwstays.com/css/styles.css" rel="stylesheet"   type='text/css' media='all'  /> 
+    <link href="https://www.bwstays.com/css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="https://www.bwstays.com/css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
-     <link href="https://www.bwstays.com/css/villa.css" rel="stylesheet"   type='text/css' media='all'  /> 
-
-
+    <link href="https://www.bwstays.com/css/villa.css" rel="stylesheet"   type='text/css' media='all'  />
     <!-- <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="./css/villa.css" rel="stylesheet"   type='text/css' media='all'  /> -->
@@ -121,8 +118,11 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-76x76.png"/>
 	<link rel="apple-touch-icon" sizes="152x152" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-152x152.png"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
- 
- <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+ <link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
+ <!-- <link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
+ <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/> -->
 
 
 <!-- Google Tag Manager -->
@@ -190,62 +190,87 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
 
-  <!-- Villa Details Section with SEO enhancements -->
-        <section class="villa-section" id="gallery">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="text-white mb-2 section-title">Villa Showcase</h2>
-                        <div class="divider" id="contact-divider"></div>
-                        <p class="text-white-50 mb-4">Experience tranquility in our carefully curated spaces</p>
-                        <p class="text-white-50 mb-5">Nestled in the heart of Wayanad's Western Ghats, our premium villa offers a perfect blend of modern luxury and traditional Kerala architecture. Each space is thoughtfully designed to provide guests with an unforgettable experience amidst nature's grandeur.</p>
-                    </div>
-                </div>
+  <!-- Villa Details Section -->
+  <section class="villa-section" id="gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="text-white mb-2 section-title reveal">Villa Showcase</h2>
+          <div class="divider reveal" id="contact-divider"></div>
+          <p class="text-white-50 mb-4 reveal">Experience tranquility in our carefully curated spaces</p>
+          <p class="text-white-50 mb-5 reveal">Nestled in the heart of Wayanad's Western Ghats, our premium villa offers a perfect blend of modern luxury and traditional Kerala architecture. Each space is thoughtfully designed to provide guests with an unforgettable experience amidst nature's grandeur.</p>
+        </div>
+      </div>
 
-                <!-- Booking ribbon -->
-                <div class="booking-ribbon" id="booking">
-                    <span class="price-tag">From &#8377;3,999/night</span>
-                    <span class="badge-off">Limited-time: 25% Off</span>
-                    <a href="https://www.bwstays.com/bwstays-booking.html" class="btn btn-primary btn-sm font-weight-bold" rel="noopener" id="book-now">Check Availability</a>
-                </div>
+      <!-- Booking ribbon -->
+      <div class="booking-ribbon reveal" id="booking">
+        <span class="price-tag">From &#8377;3,999/night</span>
+        <span class="badge-off">Limited-time: 25% Off</span>
+        <a href="https://www.bwstays.com/bwstays-booking.html" class="btn btn-primary btn-sm font-weight-bold" rel="noopener" id="book-now">Check Availability</a>
+      </div>
 
-                <!-- Gallery Grid -->
-                <div class="gallery-grid mt-4">
-                    <div class="g-item g-lg">
-                        <img loading="lazy" src="assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp" alt="Wayanad ghats view from BW Stays"/>
-                        <div class="g-overlay"><div class="g-title">Misty Ghats View</div></div>
-                    </div>
-                    <div class="g-item g-md">
-                        <img loading="lazy" src="assets/img/romantic/bw-stays-neelimala-view-point-wayanad.webp" alt="Neelimala view point near BW Stays"/>
-                        <div class="g-overlay"><div class="g-title">Neelimala View Point</div></div>
-                    </div>
-                    <div class="g-item g-sm">
-                        <img loading="lazy" src="assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp" alt="Tea plantation walks near the villa"/>
-                        <div class="g-overlay"><div class="g-title">Tea Trails</div></div>
-                    </div>
-                    <div class="g-item g-sm">
-                        <img loading="lazy" src="assets/img/falls/bw-stays-meenmutty-waterfall-wayanad.webp" alt="Meenmutty waterfalls near BW Stays"/>
-                        <div class="g-overlay"><div class="g-title">Meenmutty Falls</div></div>
-                    </div>
-                    <div class="g-item g-md">
-                        <img loading="lazy" src="assets/img/romantic/bw-stays-karlad-lake-wayanad-tourism.webp" alt="Karlad Lake boating near the stay"/>
-                        <div class="g-overlay"><div class="g-title">Karlad Lake</div></div>
-                    </div>
-                    <div class="g-item g-lg">
-                        <img loading="lazy" src="assets/img/romantic/bw-stays-pookode-lake-wayanad.webp" alt="Pookode Lake scenic view"/>
-                        <div class="g-overlay"><div class="g-title">Pookode Lake</div></div>
-                    </div>
-                    <div class="g-item g-sm">
-                        <img loading="lazy" src="assets/img/romantic/bw-stays-sunrise-valley-wayanad.webp" alt="Sunrise valley view nearby"/>
-                        <div class="g-overlay"><div class="g-title">Sunrise Valley</div></div>
-                    </div>
-                    <div class="g-item g-md">
-                        <img loading="lazy" src="assets/img/plantation/bw-stays-tea-kalpetta-wayanad.webp" alt="Tea estate around Wayanad"/>
-                        <div class="g-overlay"><div class="g-title">Tea Estate</div></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Gallery Grid -->
+      <div class="gallery-grid mt-4">
+        <div class="g-item g-lg reveal">
+          <img loading="lazy" src="https://www.bwstays.com/assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp" alt="Wayanad ghats view from BW Stays"/>
+          <div class="g-overlay"><div class="g-title">Villa entrance</div></div>
+        </div>
+        <div class="g-item g-md reveal">
+          <img loading="lazy" src="https://www.bwstays.com/assets/img/romantic/bw-stays-neelimala-view-point-wayanad.webp" alt="Neelimala view point near BW Stays"/>
+          <div class="g-overlay"><div class="g-title">luxurious bedrooms</div></div>
+        </div>
+        <div class="g-item g-sm reveal">
+          <img loading="lazy" src="https://www.bwstays.com/assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp" alt="Tea plantation walks near the villa"/>
+          <div class="g-overlay"><div class="g-title">Tea trails</div></div>
+        </div>
+        <div class="g-item g-sm reveal">
+          <img loading="lazy" src="https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-waterfall-wayanad.webp" alt="Meenmutty waterfalls near BW Stays"/>
+          <div class="g-overlay"><div class="g-title"> Meenmutty Falls view</div></div>
+        </div>
+        <div class="g-item g-md reveal">
+          <img loading="lazy" src="https://www.bwstays.com/assets/img/romantic/bw-stays-karlad-lake-wayanad-tourism.webp" alt="Karlad Lake boating near the stay"/>
+          <div class="g-overlay"><div class="g-title">Boating nearby</div></div>
+        </div>
+        <div class="g-item g-lg reveal">
+          <img loading="lazy" src="https://www.bwstays.com/assets/img/romantic/bw-stays-pookode-lake-wayanad.webp" alt="Pookode Lake scenic view"/>
+          <div class="g-overlay"><div class="g-title">Pookode Lake</div></div>
+        </div>
+        <div class="g-item g-sm reveal">
+          <img loading="lazy" src="https://www.bwstays.com/assets/img/romantic/bw-stays-sunrise-valley-wayanad.webp" alt="Sunrise valley view nearby"/>
+          <div class="g-overlay"><div class="g-title">Magical balcony views</div></div>
+        </div>
+        <!-- <div class="g-item g-md reveal">
+          <img loading="lazy" src="https://www.bwstays.com/assets/img/plantation/bw-stays-tea-kalpetta-india.webp" alt="Tea estate around Wayanad"/>
+          <div class="g-overlay"><div class="g-title">Discover lush tea estates nearby</div></div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Tour Section -->
+  <section class="villa-section" id="tour">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="text-white mb-2 section-title reveal">Take a Look Around</h2>
+          <div class="divider reveal"></div>
+          <p class="text-white-50 mb-4 reveal">A quick glimpse of the surroundings and experiences awaiting you</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="video-wrap reveal">
+            <video controls preload="metadata" playsinline style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              <source src="https://www.bwstays.com/assets/TMMTrailer18.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
         <section class="villa-section" id="amenities">
 
 
@@ -335,7 +360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
 
                              <div class="detail-item">
-                                 <i class="fas fa-utensils detail-icon"></i>
+                                 <i class="fas fa-solid fa-kitchen-set"></i>
                                  <div class="detail-text">
                                      <div class="detail-value">Kitchen Set  </div>
                                  </div>
@@ -441,7 +466,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      <div class="row">
                          <div class="col-md-6 mb-4">
                              <div class="villa-image-container bg-white shadow rounded">
-                                 <img src="./assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Private Pool" class="img-fluid">
+                                 <img src="https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Private Pool" class="img-fluid">
                                  <div class="p-3">
                                      <h5 class="mb-2">Private Pool</h5>
                                      <p>Infinity pool overlooking the valley with temperature control and underwater lighting</p>
@@ -450,7 +475,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                          </div>
                          <div class="col-md-6 mb-4">
                              <div class="villa-image-container bg-white shadow rounded">
-                                 <img src="./assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Gourmet Kitchen" class="img-fluid">
+                                 <img src="https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Gourmet Kitchen" class="img-fluid">
                                  <div class="p-3">
                                      <h5 class="mb-2">Gourmet Kitchen</h5>
                                      <p>Fully equipped modern kitchen with premium appliances and Kerala spice collection</p>
@@ -459,21 +484,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                          </div>
                          <div class="col-md-6 mb-4">
                              <div class="villa-image-container bg-white shadow rounded">
-                                 <div class="policy-icons">
+   								 <div class="policy-icons">
                                        <div class="policy-icon" title="No Smoking">
                                            <i class="fas fa-smoking-ban"></i>
                                        </div>
                                 </div>
-                                <img src="./assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Wellness Zone" class="img-fluid">
-                                <div  class="image-overlay">
-                                    <h5 class="mb-2">Wellness Zone</h5>
-                                    <p>Yoga deck, meditation space, and traditional Ayurvedic treatment area</p>
-                                </div>
+  								 <img src="https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Wellness Zone" class="img-fluid">
+                                 <div  class="image-overlay">
+                                     <h5 class="mb-2">Wellness Zone</h5>
+                                     <p>Yoga deck, meditation space, and traditional Ayurvedic treatment area</p>
+                                 </div>
                              </div>
                          </div>
                          <div class="col-md-6 mb-4">
                              <div class="villa-image-container bg-white shadow rounded">
-                                 <img src="./assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Outdoor Fire Pit" class="img-fluid">
+                                 <img src="https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Outdoor Fire Pit" class="img-fluid">
                                  <div class="p-3">
                                      <h5 class="mb-2">Outdoor Fire Pit</h5>
                                      <p>Evening gathering space with seating area and stargazing deck</p>
@@ -482,7 +507,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                          </div>
                          <div class="col-md-6 mb-4">
                              <div class="villa-image-container bg-white shadow rounded">
-                                 <img src="./assets/img/villa1/black-and-white-wayanad-mist.webp" alt="24/7 Security" class="img-fluid">
+                                 <img src="https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.webp" alt="24/7 Security" class="img-fluid">
                                  <div class="p-3">
                                      <h5 class="mb-2">24/7 Security</h5>
                                      <p>Round-the-clock security and caretaker services for peace of mind</p>
@@ -491,7 +516,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                          </div>
                          <div class="col-md-6 mb-4">
                              <div class="villa-image-container bg-white shadow rounded">
-                                 <img src="./assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Adventure Tours" class="img-fluid">
+                                 <img src="https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.webp" alt="Adventure Tours" class="img-fluid">
                                  <div class="p-3">
                                      <h5 class="mb-2">Adventure Tours</h5>
                                      <p>Guided trekking, wildlife safari, and plantation tours available</p>
@@ -509,8 +534,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	                    <p class="text-white-50 text-center mb-4">Take a virtual journey through our premium villa</p>
 	                    <div class="video-container">
 	                        <div class="embed-responsive embed-responsive-16by9">
-	                            <video class="embed-responsive-item" controls poster="./assets/wayanad.webp">
-	                                <source src="./assets/TMMTrailer18.mp4" type="video/mp4">
+	                            <video class="embed-responsive-item" controls poster="https://www.bwstays.com/assets/wayanad.webp">
+	                                <source src="https://www.bwstays.com/assets/TMMTrailer18.mp4" type="video/mp4">
 	                                Your browser does not support the video tag.
 	                            </video>
 	                        </div>
@@ -852,18 +877,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Bootstrap core JS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Font Awesome icons (CSS version for reliability) -->
-     <!--   Font Awesome icons (free version)-->
-    <!--
-     <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"   rel="preload" crossorigin="anonymous"></script>
-     -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
-    <!-- Previous JS loader left for reference, but commented out for stability -->
-    <!-- <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"   rel="preload" crossorigin="anonymous"></script> -->
+    <!-- Font Awesome icons (free version)-->
+    <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"   rel="preload" crossorigin="anonymous"></script>
 
 
 
-    <!-- Core theme JS (local for preview)-->
+    <!-- Core theme JS-->
     <script type="text/javascript" src="https://www.bwstays.com/js/scripts.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/data/sitedata.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/index-dynamic-content.js"></script>
@@ -1040,13 +1059,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
  
  
- 
-<script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.js?nocache=' + Date.now();document.body.appendChild(script);</script>
-<script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
- <script type="text/javascript"  src="https://www.bwstays.com/js/email.js"></script>
-
- 
-</body>
 
 
 
@@ -1100,5 +1112,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </script>
 
+ 
+<script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.js?nocache=' + Date.now();document.body.appendChild(script);</script>
+<script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
+ <script type="text/javascript"  src="https://www.bwstays.com/js/email.js"></script>
 
+ 
+<script src="https://www.bwstays.com/js/reveal.js"></script>
+
+</body>
 </html>
