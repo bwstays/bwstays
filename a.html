@@ -1,98 +1,132 @@
-
-https://codepen.io/olivier-c/pen/wvPNGQa
-
-
-
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Nearby Restaurants</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>#map { height: 100vh; }</style>
+  <meta charset="UTF-8">
+  <title>🎤 Voice Command Demo</title>
+
+  <script>
+  const emailtag = document.querySelector('.email-hidden');
+  let observer = new IntersectionObserver((entries) => {
+    entries.map((entry) => {
+      if (entry.isIntersecting) {
+        let script = document.createElement('script');
+        script.onload = function () {
+          emaildecode(entry.target)
+        };
+        script.src = 'decode-email.js';
+        document.head.appendChild(script);
+      }
+    });
+  }).observe(emailtag);
+
+
+  const emaildecode = (e) => {
+  	let email = atob(e.dataset.email);
+  	e.href = 'mailto:'+email;
+  	e.innerHTML = email;
+}
+</script>
+
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #result {
+      font-size: 1.5em;
+      margin-top: 20px;
+      padding: 10px;
+      border: 2px dashed #ccc;
+      min-height: 60px;
+      background: white;
+    }
+
+    #start-btn {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    #start-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-  <div id="map"></div>
-     <div id="food-list"></div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <h1>🎤 Voice Command Demo</h1>
+  <a
+   class="email-hidden"
+   href="#"
+   data-email="aW5mb0BleGFtcGxlLmNvbQ==">
+   [email-hidden]
+<a>
+
+<a href="mailto:info@example.com">info@example.com</a>
+
+  <button id="start-btn">Start Listening</button>
+  <div id="result">Your speech will appear here...</div>
+
   <script>
-    // Initialize map
-    const map = L.map('map').setView([11.592, 76.117], 10);
+    const startBtn = document.getElementById('start-btn');
+    const resultDiv = document.getElementById('result');
 
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+    // Check if browser supports the Web Speech API
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-    // Overpass API query to find restaurants within 1km radius
-    const query = `
-      [out:json];
-      (
+    if (!SpeechRecognition) {
+      resultDiv.textContent = "Sorry, your browser does not support Speech Recognition.";
+      startBtn.disabled = true;
+    } else {
+      const recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
 
-         node["amenity"="restaurant"](around:5000,11.592, 76.117 );
-        way["amenity"="restaurant"](around:5000,11.592, 76.117);
-        relation["amenity"="restaurant"](around:5000,11.592, 76.117);
-      );
-      out center;
-    `;
-
-    fetch("https://overpass-api.de/api/interpreter", {
-      method: "POST",
-      body: query
-    })
-    .then(response => response.json())
-    .then(data => {
-      data.elements.forEach(el => {
-
-
-						const lat = el.lat || el.center?.lat;
-						const lon = el.lon || el.center?.lon;
-						const name = el.tags.name || "Unnamed";
-						const type = el.tags.amenity || "Unknown";
-
-
-
-						const foodPlacesContainer = document.getElementById('food-list');
-
-						const marker =  L.marker([lat, lon])
-						.addTo(map)
-						.bindPopup(el.tags.name || "Unnamed Restaurant").openPopup();
-
-						let placeHTML = `
-						<div class="mb-4 text-right">
-						<h6 class="text-white">${name}</h6>
-								<a href="https://www.google.com/maps?saddr=11.592, 76.117&daddr=${lat},${lon}" alt="location map" target="_blank" rel="noopener noreferrer nofollow" > <p class="text-white-50 small mb-1">
-								  <i class="fas fa-map-marker-alt text-primary mr-2">
-
-								  </i>
-								  ${type}
-								</p>
-						</a>
-
-						</div>
-						`;
-
-	   foodPlacesContainer.insertAdjacentHTML('beforeend', placeHTML);
-
-
-		// Add click event to marker
-		marker.on('click', () => {
-		map.setView([11.592, 76.117], 10);
-		L.popup()
-		.setLatLng([lat, lon])
-		.setContent("Welcome to location")
-		.openOn(map);
-		});
-
-
-
+      startBtn.addEventListener('click', () => {
+        recognition.start();
+        resultDiv.textContent = "Listening...";
       });
-    })
-    .catch(err => console.error("Overpass API error:", err));
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript.toLowerCase().trim();
+        resultDiv.textContent = `You said: "${transcript}"`;
+        handleCommand(transcript);
+      };
+
+      recognition.onerror = (event) => {
+        resultDiv.textContent = 'Error occurred in recognition: ' + event.error;
+      };
+
+      function handleCommand(command) {
+        if (command.includes("change background")) {
+          document.body.style.backgroundColor = getRandomColor();
+        } else if (command.includes("hello")) {
+          alert("Hello! How can I help you?");
+        } else if (command.includes("stop listening")) {
+          recognition.stop();
+          resultDiv.textContent = "Stopped listening.";
+        }
+      }
+
+      function getRandomColor() {
+        const colors = ["#FFC0CB", "#ADD8E6", "#90EE90", "#FFFACD", "#FFB6C1"];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+    }
   </script>
+
 </body>
 </html>
