@@ -1,6 +1,6 @@
 
 
-  const emailtag = document.querySelector('.email-hidden');
+  const emailtag = document.querySelector('.email-hidden.text-white');
    let observer = new IntersectionObserver((entries) => {
      entries.map((entry) => {
        if (entry.isIntersecting) {
@@ -8,7 +8,7 @@
          script.onload = function () {
            emaildecode(entry.target)
          };
-         script.src = 'js/decode-email.js';
+         script.src = 'https://www.bwstays.com/js/decode-email.js';
          document.head.appendChild(script);
        }
      });
