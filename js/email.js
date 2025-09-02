@@ -1,6 +1,6 @@
 
 
-  var emailtag = document.querySelector('.email-hidden.text-white');
+  const emailtag = document.querySelector('.email-hidden.text-white');
    let observer = new IntersectionObserver((entries) => {
      entries.map((entry) => {
        if (entry.isIntersecting) {
