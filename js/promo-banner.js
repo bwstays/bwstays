@@ -1,7 +1,9 @@
 
 (function() {
-     //const showPromo = false;
-    const showPromo = true;
+	//diable promotion
+     const showPromo = false;
+     //enable promotion
+    //const showPromo = true;
 
     if (!showPromo) return;
 
