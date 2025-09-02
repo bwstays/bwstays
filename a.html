@@ -8,19 +8,6 @@
 
 
 
-  const emailtag = document.querySelector('.email-hidden');
-  let observer = new IntersectionObserver((entries) => {
-    entries.map((entry) => {
-      if (entry.isIntersecting) {
-        let script = document.createElement('script');
-        script.onload = function () {
-          emaildecode(entry.target)
-        };
-        script.src = 'js/decode-email.js';
-        document.head.appendChild(script);
-      }
-    });
-  }).observe(emailtag);
 
 
 
@@ -66,12 +53,7 @@
 <body>
 
   <h1>🎤 Voice Command Demo</h1>
-  <a
-   class="email-hidden"
-   href="#"
-   data-email="YndzdGF5c0Bid3N0YXlzLmNvbQ==">
-   [email-hidden]
-<a>
+
 
 
   <button id="start-btn">Start Listening</button>
