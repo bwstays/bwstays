@@ -8,7 +8,7 @@
          script.onload = function () {
            emaildecode(entry.target)
          };
-         script.src = 'js/decode-email.js';
+         script.src = 'https://www.bwstays.com/js/decode-email.js';
          document.head.appendChild(script);
        }
      });
