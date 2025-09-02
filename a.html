@@ -5,6 +5,9 @@
   <title>🎤 Voice Command Demo</title>
 
   <script>
+
+
+
   const emailtag = document.querySelector('.email-hidden');
   let observer = new IntersectionObserver((entries) => {
     entries.map((entry) => {
@@ -13,18 +16,14 @@
         script.onload = function () {
           emaildecode(entry.target)
         };
-        script.src = 'decode-email.js';
+        script.src = 'js/decode-email.js';
         document.head.appendChild(script);
       }
     });
   }).observe(emailtag);
 
 
-  const emaildecode = (e) => {
-  	let email = atob(e.dataset.email);
-  	e.href = 'mailto:'+email;
-  	e.innerHTML = email;
-}
+
 </script>
 
 
