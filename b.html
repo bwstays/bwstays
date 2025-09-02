@@ -24,7 +24,7 @@
                 })
             ],
             view: new ol.View({
-                center: ol.proj.fromLonLat([11.542442317568533, 76.02721621504702]), // Example: kalpetta coordinates
+                center: ol.proj.fromLonLat([ 76.02721621504702,11.542442317568533]), // Example: kalpetta coordinates
                 zoom: 15
             })
         });
@@ -48,7 +48,7 @@
 
         // Add the KML layer to the map
         map.addLayer(kmlLayer);
-        map.getView().fit(kmlLayer.getExtent(), {constrainResolution: false});
+        //map.getView().fit(kmlLayer.getExtent(), {constrainResolution: false});
     </script>
 </body>
 </html>
