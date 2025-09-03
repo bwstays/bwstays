@@ -190,6 +190,7 @@
     chatBtn.type = 'button';
     chatBtn.className = 'btn btn-primary btn-floating btn-lg';
     chatBtn.id = 'btn-chat';
+    chatBtn.aria-label= 'Ask';
     chatBtn.innerHTML = '<i class="fas fa-comments"></i>';
 
     // Create chat modal
