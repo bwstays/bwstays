@@ -904,10 +904,11 @@
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(100, 161, 157, 0.3);
 }
-
+  
 .rating-details .stars {
     color: #f1c40f;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin: 5px 0 !important;
 }
 
 .review-count {
@@ -968,7 +969,7 @@
 }
 
 .stars {
-    color: #f1c40f;
+    color: #64a19d;
 }
 
 .date {
@@ -1136,10 +1137,9 @@
 }
 
 .reviewer-info {
-    
     display: flex;
     align-items: center;
-    margin-bottom: -36px;
+    margin-bottom: -15px;
 }
 
 .profile-initial {
@@ -1334,7 +1334,7 @@
 
 #testimonial .rating-row .stars,
 #testimonial .stars {
-    color: #ffd700;
+    color: #64a19d;
 }
 
 #testimonial .rating-row .date,
@@ -1869,9 +1869,14 @@ footer.footer .stay-card {
 }
 
 
-.my-star-icon
-{
-color: #64a19d;
+.my-star-icon {
+    color: #64a19d !important;
+    font-size: 1.2rem;
+    margin-right: 2px;
+}
+
+.my-star-icon:hover {
+    color: #7bb3b0;
 }
 
 #contact-card h3 {

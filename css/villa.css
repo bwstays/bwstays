@@ -364,6 +364,43 @@ background-color:#64a19d;
   transform: translateY(0);
 }
 
+/* Policy Icon Styles */
+.policy-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+/* Policy Icons */
+.booking-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.policy-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.policy-icon i {
+  font-size: 16px;
+}
+
+.policy-icon .fa-wine-bottle {
+  position: absolute;
+  font-size: 12px;
+  margin-left: -12px;
+  margin-top: 2px;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .gallery-grid {
