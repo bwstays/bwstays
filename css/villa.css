@@ -206,12 +206,14 @@ background-color:#64a19d;
   margin-bottom: 1rem;
 }
 
+
 .divider {
-  width: 80px;
-  height: 3px;
+  width: 44% !important;;
+  height: 1px;
   background-color: #64a19d;
   margin: 0 auto 2rem;
 }
+
 
 /* Gallery Grid */
 .gallery-grid {
