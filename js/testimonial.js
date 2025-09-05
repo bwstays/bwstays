@@ -44,14 +44,15 @@ const testCardData = {
 
 
   function createReviewCard(review) {
-     //const imageUrl = review.image || iconURLPrefix+'assets/img/villa1/demo-image-02.webp';
-     //const knowmoreUrl = review.knowmore || '#';
+      const custname = review.knowmore || '#';
+      const rating = review.knowmore || '#';
+      const comment = review.knowmore || '#';
 
      return `
                             <div class="review-card">
                                 <div class="reviewer-info">
                                     <div class="reviewer-details">
-                                        <div class="name">Jacob S (4.5)? </div>
+                                        <div class="name">${custname} (${rating} )? </div>
                                         <div class="rating-row">
                                             <span class="stars" aria-label="5 out of 5 stars">
                                                 <i class="fas fa-star my-star-icon"></i>
@@ -64,47 +65,8 @@ const testCardData = {
                                         </div>
                                     </div>
                                 </div>
-                                <p class="review-text">Loved the peaceful location and the scenic views. Rooms were clean, staff friendly, and the morning mist was magical. Highly recommended for couples and families.</p>
+                                <p class="review-text">${comment}</p>
                             </div>
-
-                            <div class="review-card">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-details">
-                                        <div class="name">Albert  (3.7)?</div>
-                                        <div class="rating-row">
-                                            <span class="stars" aria-label="4 out of 5 stars">
-                                                <i class="fas fa-star my-star-icon"></i>
-                                                <i class="fas fa-star my-star-icon"></i>
-                                                <i class="fas fa-star my-star-icon"></i>
-                                                <i class="fas fa-star my-star-icon"></i>
-                                                <i class="far fa-star my-star-icon"></i>
-                                            </span>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="review-text">Great value for money. The location is close to key attractions and the staff helped us plan our day trips. Parking and Wi-Fi were reliable.</p>
-                            </div>
-
-                            <div class="review-card">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-details">
-                                        <div class="name">Priya Nair (3.7)?</div>
-                                        <div class="rating-row">
-                                            <span class="stars" aria-label="4 out of 5 stars">
-                                                <i class="fas fa-star my-star-icon"></i>
-                                                <i class="fas fa-star my-star-icon"></i>
-                                                <i class="fas fa-star my-star-icon"></i>
-                                                <i class="fas fa-star my-star-icon"></i>
-                                                <i class="far fa-star my-star-icon"></i>
-                                            </span>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="review-text">Great value for money. The location is close to key attractions and the staff helped us plan our day trips. Parking and Wi-Fi were reliable.</p>
-                            </div>
-
      `;
  }
 
