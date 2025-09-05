@@ -30,7 +30,7 @@ const testCardData = {
 
 		for (let i = 0; i < testim.length; i++) {
 		const review = testim[i];
-		alert(review);
+	//	alert(review);
 
 		var html=createReviewCard(review);
 
