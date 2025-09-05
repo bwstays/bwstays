@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   .catch(err => {
     //console.error("Error fetching restaurants:", err);
-    foodPlacesContainer.innerHTML = '<p class="text-white-50">Unable to load restaurants.</p>';
+    foodPlacesContainer.innerHTML = '<div class="mb-4 text-right"><p class="text-white-50">Unable to load restaurants.</p></div>';
   });
 
 });
