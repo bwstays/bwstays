@@ -341,7 +341,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       id: 52,
       name: "Gandhi Museaum",
       description: "Gandhi Museaum.",
-      image: [iconURLPrefix+"assets/img/museum/bw-stays-wayanad-tea-museum.webp"],
+      image: [iconURLPrefix+"assets/img/museum/bw-stays-kalpetta-gandhi-museum.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
@@ -360,7 +360,7 @@ amenities: ["WiFi", "Villa Architecture", "museums","Central Location", "Guided 
 tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "jain temple", "kerala dishes"],
 
 		type: "Museums & Crafts",
-		knowmore: iconURLPrefix+"bw-tea-museum-wayanad.html",
+		knowmore: iconURLPrefix+"bw-stays-kalpetta-gandhi-museum.html",
 
     duration : "1-2 Hours",
 },
@@ -368,7 +368,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
       id: 89,
       name: "Kungichira Museum & Chira",
       description: "Kungichira Museum & Chira.",
-      image: [iconURLPrefix+"assets/img/museum/bw-stays-wayanad-tea-museum.webp"],
+      image: [iconURLPrefix+"assets/img/museum/bw-kunkichira-heritage-museum-at-periya-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
@@ -387,7 +387,7 @@ amenities: ["WiFi", "Villa Architecture", "museums","Central Location", "Guided 
 tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "jain temple", "kerala dishes"],
 
 		type: "Museums & Crafts",
-		knowmore: iconURLPrefix+"bw-tea-museum-wayanad.html",
+		knowmore: iconURLPrefix+"bw-kunkichira-heritage-museum-at-periya-wayanad.html",
 
     duration : "1-2 Hours",
 },
