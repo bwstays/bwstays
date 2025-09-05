@@ -42,9 +42,9 @@ const testCardData = {
 
 
   function createReviewCard(review) {
-      const custname = review.knowmore || '#';
-      const rating = review.knowmore || '#';
-      const comment = review.knowmore || '#';
+      const custname = review.custname || '#';
+      const rating = review.rating || '#';
+      const comment = review.comment || '#';
 
      return `
                             <div class="review-card">
