@@ -22,9 +22,7 @@ const testCardData = {
    function renderTestimonial( ) {
 
 		const testCardsContainer = document.getElementById('reviews-grid');
-
 		const cardHTMLArray = [];
-
 		const testim = testCardData.test;
 
  	alert(testim.length);
