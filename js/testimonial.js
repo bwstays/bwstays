@@ -1,12 +1,43 @@
 
-   function renderTestimonial( ) {
-	var review;
-	const testCardsContainer = document.getElementById('reviews-grid');
+const testCardData = {
+    test: [
+        {
+            custname: "Jacob S",
+            rating: "4.5",
+            comment: "Loved the peaceful location and the scenic views. Rooms were clean, staff friendly, and the morning mist was magical. Highly recommended for couples and families."
+        },
+        {
+            custname: "Albert",
+            rating: "3.7",
+            comment: "Great value for money. The location is close to key attractions and the staff helped us plan our day trips. Parking and WiFi were reliable."
+        },
+        {
+            custname: "Priya Nair",
+            rating: "3.7",
+            comment: "Great value for money. The location is close to key attractions and the staff helped us plan our day trips. Parking and WiFi were reliable."
+        }
+    ]
+};
 
-	const cardHTMLArray = [];
-	var html=createReviewCard(review)
-	cardHTMLArray.push(html);
-	testCardsContainer.innerHTML = cardHTMLArray.join('');
+   function renderTestimonial( ) {
+
+		const testCardsContainer = document.getElementById('reviews-grid');
+
+		const cardHTMLArray = [];
+
+		const testim = testCardData.test;
+
+
+		for (let i = 0; i < testim.length; i++) {
+		const review = testim[i];
+		alert(review);
+
+		var html=createReviewCard(review);
+
+		cardHTMLArray.push(html);
+		}
+
+	    testCardsContainer.innerHTML = cardHTMLArray.join('');
 
 
    }
