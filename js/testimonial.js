@@ -24,15 +24,10 @@ const testCardData = {
 		const testCardsContainer = document.getElementById('reviews-grid');
 		const cardHTMLArray = [];
 		const testim = testCardData.test;
-
- 	alert(testim.length);
-		for (let i = 0; i < testim.length; i++) {
-		const review = testim[i];
-	//	alert(review);
-
-		var html=createReviewCard(review);
-
-		cardHTMLArray.push(html);
+ 		for (let i = 0; i < testim.length; i++) {
+			const review = testim[i];
+			var html=createReviewCard(review);
+			cardHTMLArray.push(html);
 		}
 
 	    testCardsContainer.innerHTML = cardHTMLArray.join('');
