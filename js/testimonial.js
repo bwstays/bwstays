@@ -27,7 +27,7 @@ const testCardData = {
 
 		const testim = testCardData.test;
 
-
+ 	alert(testim.length);
 		for (let i = 0; i < testim.length; i++) {
 		const review = testim[i];
 	//	alert(review);
