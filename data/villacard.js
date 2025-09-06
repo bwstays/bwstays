@@ -2,23 +2,13 @@ var iconURLPrefix = 'https://www.bwstays.com/';
 
 const aboutCardData = {
     cards: [
-        {
-            title: "nestle with nature",
-            icon: "fas fa-mountain",
-            description: "Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep.",
-            image: iconURLPrefix+"assets/img/villa1/black-and-white-wayanad-mist.webp"
-        },
-        {
-            title: "hustle in hisspeed",
-            icon: "fas fa-home",
-            description: "Luxurious amenities and thoughtfully designed spaces for your perfect stay.",
-            image: iconURLPrefix+"assets/img/villa1/bw-destination-chembra-wayanad.webp"
-        },
+
+
         {
             title: "bustle in budget",
             icon: "fas fa-star",
             description: "Increased productivity. Group Workation without distraction (and with the motivation of their new, beautiful setting)",
-            image: iconURLPrefix+"assets/img/plantation/bw-tea-estate-kalpetta-india.webp"
+            image: https://www.bwstays.com/assets/img/plantation/bw-tea-estate-kalpetta-india.webp"
         }
     ]
 };
