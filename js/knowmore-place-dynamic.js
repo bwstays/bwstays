@@ -38,7 +38,8 @@ window.addEventListener('load', function () {
 
    var  currentPageId = getCurrentPageId();
   var  currentcatId = getCurrentCatagoryId();
-  if (currentcatId  != null && currentPageId != null )
+  if ( currentcatId !== undefined  && currentcatId  != null &&   currentPageId !== undefined && currentPageId != null
+  && currentcatId.length!=0  && currentPageId.length!=0  )
   {
 
 //alert((Object.values(siteData)[0])[0].image)
@@ -324,6 +325,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
   aboutSection.innerHTML = '';
   aboutSection.appendChild(mainContainer);
   }
+
 });
 
 // Function to update only the right column with dynamic content
