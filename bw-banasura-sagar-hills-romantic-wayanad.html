@@ -161,9 +161,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						  	<img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="https://www.bwstays.com/assets/img/logo/direction.webp" width="45" height="45"/>
 						  </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.bwstays.com/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nearby-places">Nearby Places</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.bwstays.com/index.html" id="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nearby-places" id="nearbyplaces" >Nearby Places</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup" id="signup" >Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -175,7 +175,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              <h2>Discover the mystical valleys of Wayanad</h2>
 			              <h5 class="text-white-50 mx-auto mt-2 mb-4 text-uppercase">Nearby Fun, Food & Fuel Spots</h5>
 
-             <!-- <a href="#nearby-places" class="cta-button js-scroll-trigger">Explore Nearby Places</a> -->
+             <!-- <a href="#nearby-places" id="nearbyplaces"  class="cta-button js-scroll-trigger">Explore Nearby Places</a> -->
         </div>
 	</header>
 
@@ -220,7 +220,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div>
                         <h3 class="text-white mb-3">Banasura Sagar Hills   </h3>
                         <div class="mb-3">
-                            <a href="#nearby-places"><span class="text-warning">View places within 15 Kms </span></a>
+                            <a href="#nearby-places" id="nearbyplaces" ><span class="text-warning">View places within 15 Kms </span></a>
                         </div>
                         <div class="mb-3">
                             <span class="text-warning">★ 4.3</span>
@@ -321,7 +321,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- testimonial -->
     <section class="testimonial-section" id="testimonial">
-	<div  class="vertical-div" >   <a href="#about" class="vertical-res btn btn-primary" >Reservation</a></div>
+	<div  class="vertical-div" >   <a href="#about" id="reserve" class="vertical-res btn btn-primary" >Reservation</a></div>
 
 	<div class="container py-2">
 		  <div class="col-md-12 text-center ">
@@ -397,7 +397,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	                              </div>
 	                              <div class="mb-4">
 	                                  <h5 class="text-primary text-uppercase small font-weight-bold">Phone
-	                                      <a href="https://wa.me/919999999999"   aria-label="whatsapp"   target="_blank" rel="noopener noreferrer nofollow" class=" ml-2">
+	                                      <a href="https://wa.me/919999999999"   aria-label="whatsapp"  id="whatsapp"      target="_blank" rel="noopener noreferrer nofollow" class=" ml-2">
 	                                          <i class="fab fa-whatsapp"></i><span></span>
 	                                      </a>
 	                                  </h5>
@@ -561,11 +561,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4">
 
                 <div class="footer-social social-icons">
-                      <a class="social-icon mx-2"  target="_blank" aria-label="Linkedin"      href="https://www.linkedin.com/shareArticle?url=www.bwstays.com&title=Your%20LinkedIn%20Post%20Title" rel="me"><i class="fab fa-linkedin-in"></i></a>
-                  <a class="social-icon mx-2"   target="_blank" aria-label="Twitter"   href="https://x.com/intent/tweet?url=www.bwstays.com&text=Your%20Tweet%20Text" rel="me"><i class="fab fa-twitter"></i></a>
-                    <a class="social-icon mx-2"   target="_blank" aria-label="Facebook"       href="https://www.facebook.com/sharer/sharer.php?u=www.bwstays.com" rel="me"><i class="fab fa-facebook-f"></i></a>
-                    <a class="social-icon mx-2"  target="_blank"  aria-label="Instagram"       href="https://www.instagram.com/bwstays"  rel="noopener noreferrer" ><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/919999999999"   aria-label="whatsapp"   target="_blank" rel="noopener noreferrer nofollow" class=" ml-2">
+                      <a class="social-icon mx-2"  target="_blank" aria-label="Linkedin" id="linkedin"       href="https://www.linkedin.com/shareArticle?url=www.bwstays.com&title=Your%20LinkedIn%20Post%20Title" rel="me"><i class="fab fa-linkedin-in"></i></a>
+                  <a class="social-icon mx-2"   target="_blank" aria-label="Twitter" id="twitter"    href="https://x.com/intent/tweet?url=www.bwstays.com&text=Your%20Tweet%20Text" rel="me"><i class="fab fa-twitter"></i></a>
+                    <a class="social-icon mx-2"   target="_blank" aria-label="Facebook" id="facebook"         href="https://www.facebook.com/sharer/sharer.php?u=www.bwstays.com" rel="me"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-icon mx-2"  target="_blank"  aria-label="Instagram"  id="instagram"          href="https://www.instagram.com/bwstays"  rel="noopener noreferrer" ><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919999999999"   aria-label="whatsapp"  id="whatsapp"      target="_blank" rel="noopener noreferrer nofollow" class=" ml-2">
                         <i class="fab fa-whatsapp"></i><span></span>
                     </a>
                 </div>
@@ -574,9 +574,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <!--  -->
 
                 <!-- <div class="footer-row d-flex align-items-center justify-content-between w-100 mt-4"> -->
-                    <div class="footer-copyright small"> <a href="https://www.bwstays.com/footer.html#Disclaimer">Copyright & Disclaimer</a> |
-                        <a href="https://www.bwstays.com/footer.html#Privacy">Privacy</a> | <a href="https://www.bwstays.com/footer.html#tc">Terms & Conditions </a>| <a
-                            href="https://www.bwstays.com/footer.html#Cookies">Cookies </a>
+                    <div class="footer-copyright small"> <a href="https://www.bwstays.com/footer.html#Disclaimer" id="disc">Copyright & Disclaimer</a> |
+                        <a href="https://www.bwstays.com/footer.html#Privacy"  id="privacy" >Privacy</a> | <a href="https://www.bwstays.com/footer.html#tc" id="tc" >Terms & Conditions </a>| <a
+                            href="https://www.bwstays.com/footer.html#Cookies"  id="cooki" >Cookies </a>
                     </div>
                 <!-- </div> -->
 

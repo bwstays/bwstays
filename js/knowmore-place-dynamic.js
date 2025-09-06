@@ -193,7 +193,7 @@ rightArrow.addEventListener('mouseleave', () => {
   descContainer.innerHTML = `
       <h3 class="text-white mb-3">${currentItemData.name}</h3>
       <div class="mb-3">
-          <a href="#nearby-places"><span class="text-warning">View places within 15 Kms from ${currentItemData.name}</span></a> </div>
+          <a href="#nearby-places" id="nearbyplaces" ><span class="text-warning">View places within 15 Kms from ${currentItemData.name}</span></a> </div>
       <div class="mb-3">
           <span class="text-warning">★ ${currentItemData.rating}</span>
           <span class="text-white-50 ml-2">${currentItemData.distance}km from Kalpetta</span>
@@ -304,7 +304,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
                       <i class="fas fa-phone"></i> ${item.Contact}
                   </small>
               </div>
-              <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Attractions</a>
+              <a  id="attractions"  href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Attractions</a>
           </div>
       `;
 

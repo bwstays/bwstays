@@ -49,7 +49,7 @@ function populateAboutCards() {
      					 <div class="border-bottom border-primary text-center mb-4"   id="contact-divider"></div>
                         <p class="text-white-50 mb-0">${card.description}</p>
                         <div class="mt-auto pt-4 text-center">
-                            <a href="#" class="btn btn-primary js-scroll-trigger px-4 py-2">View Amenities</a>
+                            <a id="amenities" href="#" class="btn btn-primary js-scroll-trigger px-4 py-2">View Amenities</a>
                         </div>
                     </div>
                 </div>

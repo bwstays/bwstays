@@ -49,7 +49,7 @@
             <span class="promo-desc" style="color:#fff; font-size:13px;">Where luxury meets the Mystical beauty of Wayanad's rolling hills. Festival Offer !!. 25% On Stay</span>
           </div>
           <div class="d-flex align-items-center">
-            <a href="#booking" class="js-scroll-trigger promo-link" style="color:#64a19d; text-decoration:none; font-weight:600; font-size:13px; margin-right:20px; transition:color 0.3s ease;">Reserve Your Escape</a>
+            <a id="promobooking" href="#booking" class="js-scroll-trigger promo-link" style="color:#64a19d; text-decoration:none; font-weight:600; font-size:13px; margin-right:20px; transition:color 0.3s ease;">Reserve Your Escape</a>
             <button id="close-promo" style="background:none; border:none; color:#fff; font-size:16px; cursor:pointer; padding:0; width:20px; height:20px; display:flex; align-items:center; justify-content:center; transition:color 0.3s ease;" title="Close banner">
               <i class="fas fa-times"></i>
             </button>
