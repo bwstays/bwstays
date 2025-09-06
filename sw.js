@@ -15,7 +15,7 @@ var files = [
   './js/scripts.js',
   './js/bwmaps.js',
   './manifest.json',
-  './llm-full.txt'
+  './llms-full.txt'
 ];
 
 

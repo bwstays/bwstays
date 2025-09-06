@@ -12,7 +12,7 @@ const BASE_CACHE_FILES = [
     '/js/scripts.js',
     '/manifest.json',
     '/assets/img/favicon.ico',
-    '/llm-full.txt',
+    '/llms-full.txt',
 ];
 const OFFLINE_CACHE_FILES = [
 //    '/css/styles.css',

@@ -3,12 +3,12 @@
   let knowledgeBase = [];
   let knowledgeLoaded = false;
 
-  // Load and parse knowledge base from llm-full.txt
+  // Load and parse knowledge base from llms-full.txt
   async function loadKnowledgeBase() {
     if (knowledgeLoaded) return;
 
     try {
-      const response = await fetch('/llm-full.txt');
+      const response = await fetch('/llms-full.txt');
       if (!response.ok) throw new Error('Failed to load knowledge base');
 
       const text = await response.text();

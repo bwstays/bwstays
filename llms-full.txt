@@ -1,4 +1,4 @@
-# https://www.bwstays.com llm-full.txt
+# https://www.bwstays.com llms-full.txt
 
 ## Wayanad Stays & Activities
 ## About
