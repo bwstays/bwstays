@@ -14,7 +14,6 @@ var files = [
   './js/chat.js',
   './js/scripts.js',
   './js/bwmaps.js',
-  './js/whatsapp.js',
   './manifest.json',
   './llm-full.txt'
 ];
