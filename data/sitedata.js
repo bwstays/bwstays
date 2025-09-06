@@ -1734,7 +1734,7 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
            id: 59,
            name: "Uravu",
            description: "Uravu",
-           image: [iconURLPrefix+"assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.webp",iconURLPrefix+"assets/img/tribal/bw-workation-uravu-thrikkaipetta-bamboo-wayanad-1.webp", iconURLPrefix+"assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.webp",iconURLPrefix+"assets/img/tribal/bw-service-apartment-uravu-thrikkaipetta-bamboo-wayanad.WEBP"],
+           image: [iconURLPrefix+"assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.webp",iconURLPrefix+"assets/img/tribal/bw-workation-uravu-thrikkaipetta-bamboo-wayanad-1.webp", iconURLPrefix+"assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.webp",iconURLPrefix+"assets/img/tribal/bw-service-apartment-uravu-thrikkaipetta-bamboo-wayanad.webp"],
            holidays: "Sun",
            timing:[ "09:00-17:00"],
            Contact: "+91-000 000 0000",
