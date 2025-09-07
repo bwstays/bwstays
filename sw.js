@@ -18,7 +18,7 @@ var files = [
   './css/styles.css',
   './js/chat.js',
   './js/scripts.js',
-  './js/bwmaps.js',
+  './',
   './manifest.json',
   './llms-full.txt'
 ];
@@ -28,14 +28,14 @@ async function checkStorageQuota() {
   if ('storage' in navigator && 'estimate' in navigator.storage) {
     const estimate = await navigator.storage.estimate();
     const usagePercentage = estimate.usage / estimate.quota;
-    
+
     console.log(`Storage usage: ${(estimate.usage / 1024 / 1024).toFixed(2)}MB / ${(estimate.quota / 1024 / 1024).toFixed(2)}MB (${(usagePercentage * 100).toFixed(1)}%)`);
-    
+
     if (usagePercentage > STORAGE_WARNING_THRESHOLD) {
       console.warn('Storage quota approaching limit, initiating cleanup');
       await cleanupOldCaches();
     }
-    
+
     return { usage: estimate.usage, quota: estimate.quota, percentage: usagePercentage };
   }
   return null;
@@ -45,7 +45,7 @@ async function getCacheSize(cacheName) {
   const cache = await caches.open(cacheName);
   const requests = await cache.keys();
   let totalSize = 0;
-  
+
   for (const request of requests) {
     const response = await cache.match(request);
     if (response) {
@@ -53,13 +53,13 @@ async function getCacheSize(cacheName) {
       totalSize += blob.size;
     }
   }
-  
+
   return totalSize;
 }
 
 async function cleanupOldCaches() {
   const cacheNames = await caches.keys();
-  
+
   for (const name of cacheNames) {
     if (name === TILE_CACHE) {
       await cleanupTileCache();
@@ -72,10 +72,10 @@ async function cleanupOldCaches() {
 async function cleanupTileCache() {
   const cache = await caches.open(TILE_CACHE);
   const requests = await cache.keys();
-  
+
   // Sort by last access time (stored in custom headers)
   const requestsWithTime = [];
-  
+
   for (const request of requests) {
     const response = await cache.match(request);
     if (response) {
@@ -83,19 +83,19 @@ async function cleanupTileCache() {
       requestsWithTime.push({ request, lastAccess: parseInt(lastAccess) });
     }
   }
-  
+
   // Sort by last access time (oldest first)
   requestsWithTime.sort((a, b) => a.lastAccess - b.lastAccess);
-  
+
   // Remove oldest entries if cache is too large
   const currentSize = await getCacheSize(TILE_CACHE);
   if (currentSize > MAX_TILE_CACHE_SIZE) {
     const itemsToRemove = Math.ceil(requestsWithTime.length * 0.3); // Remove 30%
-    
+
     for (let i = 0; i < itemsToRemove && i < requestsWithTime.length; i++) {
       await cache.delete(requestsWithTime[i].request);
     }
-    
+
     console.log(`Cleaned up ${itemsToRemove} old tile cache entries`);
   }
 }
@@ -104,7 +104,7 @@ async function cleanupMainCache() {
   const cache = await caches.open(cacheName);
   const requests = await cache.keys();
   const now = Date.now();
-  
+
   for (const request of requests) {
     const response = await cache.match(request);
     if (response) {
@@ -126,10 +126,10 @@ self.addEventListener('install', (event) => {
     (async () => {
       // Check storage quota before caching
       await checkStorageQuota();
-      
+
       const cache = await caches.open(cacheName);
       console.log('SW: Cache opened');
-      
+
       // Add timestamp to cached responses
       const cachePromises = files.map(async (file) => {
         try {
@@ -139,22 +139,22 @@ self.addEventListener('install', (event) => {
             const responseClone = response.clone();
             const headers = new Headers(responseClone.headers);
             headers.set('x-cache-time', Date.now().toString());
-            
+
             const modifiedResponse = new Response(responseClone.body, {
               status: responseClone.status,
               statusText: responseClone.statusText,
               headers: headers
             });
-            
+
             await cache.put(file, modifiedResponse);
           }
         } catch (error) {
           console.warn(`Failed to cache ${file}:`, error);
         }
       });
-      
+
       await Promise.all(cachePromises);
-      
+
       // Check if cache size exceeds limits
       const cacheSize = await getCacheSize(cacheName);
       if (cacheSize > MAX_CACHE_SIZE) {
@@ -202,44 +202,44 @@ async function cacheFirst(request) {
   if (TILE_URL_PATTERN.test(requestUrl)) {
     const cache = await caches.open(TILE_CACHE);
     const cachedResponse = await cache.match(request);
-    
+
     if (cachedResponse) {
       // Update last access time for LRU
       const headers = new Headers(cachedResponse.headers);
       headers.set('x-cache-time', Date.now().toString());
-      
+
       const updatedResponse = new Response(cachedResponse.body, {
         status: cachedResponse.status,
         statusText: cachedResponse.statusText,
         headers: headers
       });
-      
+
       // Re-cache with updated timestamp
       await cache.put(request, updatedResponse.clone());
       return updatedResponse;
     }
-    
+
     try {
       const response = await fetch(request);
       if (response.ok) {
         // Check cache size before adding new tile
         const currentSize = await getCacheSize(TILE_CACHE);
-        
+
         if (currentSize > MAX_TILE_CACHE_SIZE) {
           console.log('Tile cache size limit reached, cleaning up...');
           await cleanupTileCache();
         }
-        
+
         // Add timestamp to new cache entry
         const headers = new Headers(response.headers);
         headers.set('x-cache-time', Date.now().toString());
-        
+
         const responseWithTimestamp = new Response(response.body, {
           status: response.status,
           statusText: response.statusText,
           headers: headers
         });
-        
+
         await cache.put(request, responseWithTimestamp.clone());
         return responseWithTimestamp;
       }
@@ -269,7 +269,7 @@ async function networkFirst(request) {
 
   try {
     const networkResponse = await fetch(request);
-    
+
     if (networkResponse.ok) {
       // Check cache size before adding
       const currentSize = await getCacheSize(cacheName);
@@ -277,42 +277,42 @@ async function networkFirst(request) {
         console.log('Main cache size limit reached, cleaning up...');
         await cleanupMainCache();
       }
-      
+
       // Add timestamp to cached response
       const headers = new Headers(networkResponse.headers);
       headers.set('x-cache-time', Date.now().toString());
-      
+
       const responseWithTimestamp = new Response(networkResponse.body, {
         status: networkResponse.status,
         statusText: networkResponse.statusText,
         headers: headers
       });
-      
+
       // Cache the dynamic API response
       dynamicCache.put(request, responseWithTimestamp.clone()).catch((err) => {
         console.warn(request.url + ': ' + err.message);
       });
-      
+
       return responseWithTimestamp;
     }
-    
+
     return networkResponse;
   } catch (err) {
     const cachedResponse = await dynamicCache.match(request);
-    
+
     if (cachedResponse) {
       // Check if cached response is expired
       const cacheTime = cachedResponse.headers.get('x-cache-time');
       const now = Date.now();
-      
+
       if (cacheTime && (now - parseInt(cacheTime)) > CACHE_EXPIRY_TIME) {
         console.log(`Cached response expired for ${request.url}`);
         // Return expired cache but don't delete (user still gets content)
       }
-      
+
       return cachedResponse;
     }
-    
+
     throw err;
   }
 }
@@ -343,9 +343,9 @@ self.addEventListener('activate', (event) => {
     (async () => {
       // Check storage quota on activation
       await checkStorageQuota();
-      
+
       const cacheNames = await caches.keys();
-      
+
       // Clean up old caches
       const deletePromises = cacheNames.map((cache) => {
         if (cache !== cacheName && cache !== TILE_CACHE) {
@@ -353,14 +353,14 @@ self.addEventListener('activate', (event) => {
           return caches.delete(cache); //Deleting the old cache (cache v1)
         }
       });
-      
+
       await Promise.all(deletePromises);
-      
+
       // Perform initial cleanup of current caches
       await cleanupOldCaches();
-      
+
       console.info("Old caches are cleared!");
-      
+
       // Set up periodic storage monitoring (every 30 minutes)
       setInterval(async () => {
         try {
@@ -369,7 +369,7 @@ self.addEventListener('activate', (event) => {
           console.error('Periodic storage check failed:', error);
         }
       }, 30 * 60 * 1000);
-      
+
       // To tell the service worker to activate current one
       // instead of waiting for the old one to finish.
       return self.clients.claim();
