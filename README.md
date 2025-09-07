@@ -4,14 +4,14 @@
 Folder Structure
 
     │
-    ├── data                                 # data functionality for tests
+    ├── data                                 # Data functionality
     │   |
-    │   ├── sitedata.js                      # base page testing functionality
+    │   ├── sitedata.js                      
     │
-    ├── js                                   # Test suite
-    │   ├── scripts.js                      # Automated Test Script
+    ├── js                                   
+    │   ├── scripts.js                      # Script
     │
-    ├── assets                               # images
+    ├── assets                              # images
     │   ├──img		                      
   
 
