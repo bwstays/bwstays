@@ -217,6 +217,7 @@ var foodations =
 
   ];
 
+alert(mapType)
 if(mapType==1){
  loc=wayalocations;
 }else
