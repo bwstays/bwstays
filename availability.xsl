@@ -126,7 +126,7 @@
 							<xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &gt; 0">
 
 								<p>
-									Only Reserved Dates mentioned on Screen. <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> room availabile on specific dates.  								</p>
+									Only Reserved Dates mentioned on Screen. Available <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> room on specific dates.  								</p>
 
 								<table id="sitemap" cellpadding="3">
 
