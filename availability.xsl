@@ -126,7 +126,7 @@
 							<xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &gt; 0">
 
 								<p>
-									Only Reserved Dates mentioned on SCreen, Check availability on Reservation page <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> 								</p>
+									Only Reserved Dates mentioned on Screen. <strong><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong> room available.<a href="https://www.bwstays.com/bwstays-booking.html">								</p>
 
 								<table id="sitemap" cellpadding="3">
 
