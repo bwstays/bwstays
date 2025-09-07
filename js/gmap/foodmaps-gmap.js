@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     position: centerloca,
     map: map1,
     icon: mainLocationIcon,
-    title: "Food and Dine At This Location",
+    title: "Food and Dine",
     zIndex: google.maps.Marker.MAX_ZINDEX + 10
   });
 

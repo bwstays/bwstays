@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       iconAnchor: [16, 32]
     })
   }).addTo(map1)
-    .bindPopup('Food and Dine At This Location')
+    .bindPopup('Food and Dine')
     .openPopup();
 
   // Add circle to show search radius
