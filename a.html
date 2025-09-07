@@ -4,29 +4,6 @@
   <meta charset="UTF-8">
   <title>🎤 Voice Command Demo</title>
 
-  <script>
-
-
-
-  const emailtag = document.querySelector('.email-hidden');
-  let observer = new IntersectionObserver((entries) => {
-    entries.map((entry) => {
-      if (entry.isIntersecting) {
-        let script = document.createElement('script');
-        script.onload = function () {
-          emaildecode(entry.target)
-        };
-        script.src = 'js/decode-email.js';
-        document.head.appendChild(script);
-      }
-    });
-  }).observe(emailtag);
-
-
-
-</script>
-
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -66,14 +43,8 @@
 <body>
 
   <h1>🎤 Voice Command Demo</h1>
-  <a
-   class="email-hidden"
-   href="#"
-   data-email="aW5mb0BleGFtcGxlLmNvbQ==">
-   [email-hidden]
-<a>
 
-<a href="mailto:info@example.com">info@example.com</a>
+
 
   <button id="start-btn">Start Listening</button>
   <div id="result">Your speech will appear here...</div>
@@ -125,6 +96,18 @@
         return colors[Math.floor(Math.random() * colors.length)];
       }
     }
+
+    if ('speechSynthesis' in window) {
+	        // Speech synthesis is supported
+	    } else {
+	        console.warn("Speech synthesis not supported in this browser.");
+    }
+let utterance = new SpeechSynthesisUtterance('Hello, this is your browser speaking.');
+    utterance.lang = 'en-US'; // Set language
+    utterance.rate = 1.2; // Adjust speech rate
+
+        window.speechSynthesis.speak(utterance);
+
   </script>
 
 </body>
