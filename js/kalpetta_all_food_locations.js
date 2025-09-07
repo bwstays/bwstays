@@ -1,4 +1,5 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
+
 var foodations =
 
 [
@@ -127,19 +128,11 @@ let myIcon1 = L.icon(customIcon1);
 
 var  i;
 for (i = 0; i < foodations.length; i++) {
-
-
-
 // Target's GPS coordinates.
 var target = L.latLng(foodations[i][1], foodations[i][2]);
 // Set map's center to target with zoom 10.
 map1.setView(target,12);
 // Place a marker on the same location.
 L.marker(target,  {    title:foodations[i][5],icon:myIcon1}).addTo(map1).bindPopup( foodations[i][0]);
-
-
-
-
-
 }
 
