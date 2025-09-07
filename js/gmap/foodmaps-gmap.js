@@ -31,8 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
      mapId: "foodmapdata"
     });
 
-
-
   new google.maps.Marker({
     position: centerloca,
     map: map1,
