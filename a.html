@@ -102,11 +102,15 @@
 	    } else {
 	        console.warn("Speech synthesis not supported in this browser.");
     }
+
+
 let utterance = new SpeechSynthesisUtterance('Hello, this is your browser speaking.');
     utterance.lang = 'en-US'; // Set language
-    utterance.rate = 1.2; // Adjust speech rate
-
+ utterance.rate = 1.2;      // Set the speech rate (default is 1, higher for faster speech)
+utterance.pitch = 1;     // Set the pitch (default is 1, higher for higher pitch)
+utterance.volume = 1;
         window.speechSynthesis.speak(utterance);
+
 
   </script>
 
