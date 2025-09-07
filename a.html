@@ -104,12 +104,21 @@
     }
 
 
+let speechSynthesis.speak(new SpeechSynthesisUtterance('Hello!'));
+
+/*utterance.lang = 'en-US' // A string representing a BCP 47 language tag
+utterance.rate = 0.5; // Represent the speed
+utterance.pitch = 2;
+utterance.volume = 0.5; // mute=0, max=1
+let speechSynthesis.speak(new SpeechSynthesisUtterance('Hello!'));
+
 let utterance = new SpeechSynthesisUtterance('Hello, this is your browser speaking.');
     utterance.lang = 'en-US'; // Set language
  utterance.rate = 1.2;      // Set the speech rate (default is 1, higher for faster speech)
 utterance.pitch = 1;     // Set the pitch (default is 1, higher for higher pitch)
 utterance.volume = 1;
         window.speechSynthesis.speak(utterance);
+        */
 
 
   </script>
