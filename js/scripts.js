@@ -138,7 +138,7 @@ var options = {
 	"ctaText":"Chat with bw Team",
 	"borderRadius":"25",
 	"autoShow":false,
-	"phoneNumber":"9741496273"
+	"phoneNumber":"99999 99999"
 }
 };
 s.onload = function() {
