@@ -18,7 +18,6 @@ var files = [
   './css/styles.css',
   './js/chat.js',
   './js/scripts.js',
-  './',
   './manifest.json',
   './llms-full.txt'
 ];
