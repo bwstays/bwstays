@@ -365,7 +365,7 @@ function updateRightColumnOnly() {
 
     card.innerHTML = `
       <div class="card-img-container" style="height: 200px; overflow: hidden;">
-        <img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"
+        <img title="Black and White Stays Service Villa"   loading="lazy"  alt="Black and White Stays Wayanad" src="${firstImage}" class="card-img-top" alt="${item.name}"
              style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
       </div>
       <div class="card-body d-flex flex-column">
