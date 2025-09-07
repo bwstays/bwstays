@@ -9,10 +9,10 @@ Folder Structure
     │   ├── sitedata.js                      # base page testing functionality
     │
     ├── js                                   # Test suite
-    │    ├── scripts.js                      # Automated Test Script
+    │   ├── scripts.js                      # Automated Test Script
     │
     ├── assets                               # images
-    │    ├──img		                      
+    │   ├──img		                      
   
 
 <!--
