@@ -217,12 +217,11 @@ var foodations =
 
   ];
 
-alert(mapType)
-if(mapType==1){
- loc=wayalocations;
+ if(mapType==1){
+ loc=foodations ;
 }else
 {
- loc=foodations;
+ loc=wayalocations;
 }
 
 
