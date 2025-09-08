@@ -1015,7 +1015,7 @@ padding:21px;
   
 .rating-details .stars {
     color: #f1c40f;
-    font-size: 1rem;
+    font-size: .75rem;
     margin: 5px 0 !important;
 }
 
@@ -1424,13 +1424,13 @@ padding:21px;
 
 #signup .review-text {
     color: #e0e0e0;
-    line-height: 1.6;
+    line-height: 1.2;
     margin: 0;
 }
 
 #signup .stars {
     color: #64a19d;
-    font-size: 1.2rem; /* prominent teal stars */
+    font-size: 0.75rem; /* prominent teal stars */
     margin-bottom: 6px;
 }
 #signup .rating-row {
@@ -1979,7 +1979,7 @@ footer.footer .stay-card {
 
 .my-star-icon {
     color: #64a19d !important;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-right: 2px;
 }
 
@@ -1989,4 +1989,13 @@ footer.footer .stay-card {
 
 #contact-card h3 {
   color: #64a19d !important;
+}
+
+/* Custom styling for email input field */
+#inputEmail4 {
+  width: 85% !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  position: absolute;
+  right: 20px;
 }
