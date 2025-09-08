@@ -317,45 +317,6 @@ div.col-lg-6 {
 	padding: 1rem;
 }
 
-div.image-nav-arrow.image-nav-left {
-	position: absolute;
-	left: 15px;
-	top: 50%;
-	transform: translatey(-50%);
-	z-index: 2;
-	cursor: pointer;
-	color: white;
-	font-size: 20px;
-	background-color: rgba(0, 0, 0, 0.6);
-	width: 45px;
-	height: 45px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-div.image-nav-arrow.image-nav-right {
-	position: absolute;
-	right: 15px;
-	top: 50%;
-	transform: translatey(-50%);
-	z-index: 2;
-	cursor: pointer;
-	color: white;
-	font-size: 20px;
-	background-color: rgba(0, 0, 0, 0.6);
-	width: 45px;
-	height: 45px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.3s ease;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
 
 i.fas.fa-map-marker-alt {
 	color: #64a19d;
@@ -1041,57 +1002,7 @@ ul.list-unstyled.mb-0.text-white-50 {
         return 3;
       };
 
-      // Image carousel functionality for the static left column
-      document.addEventListener("DOMContentLoaded", function () {
-        const imgWrapper = document.querySelector(
-          ".col-lg-6 > div:first-child > div:first-child"
-        );
-        const leftArrow = document.querySelector(".image-nav-left");
-        const rightArrow = document.querySelector(".image-nav-right");
-        let currentImageIndex = 0;
-        const imageCount = 2; // Number of images in the carousel
 
-        function updateImage(direction) {
-          if (direction === "next") {
-            currentImageIndex = (currentImageIndex + 1) % imageCount;
-          } else {
-            currentImageIndex =
-              (currentImageIndex - 1 + imageCount) % imageCount;
-          }
-          imgWrapper.style.transform = `translateX(-${
-            currentImageIndex * 100
-          }%)`;
-        }
-
-        leftArrow.addEventListener("click", function () {
-          updateImage("prev");
-        });
-
-        rightArrow.addEventListener("click", function () {
-          updateImage("next");
-        });
-
-        // Add hover effects for arrows
-        leftArrow.addEventListener("mouseenter", function () {
-          this.style.backgroundColor = "rgba(0,0,0,0.8)";
-          this.style.transform = "translateY(-50%) scale(1.1)";
-        });
-
-        leftArrow.addEventListener("mouseleave", function () {
-          this.style.backgroundColor = "rgba(0,0,0,0.6)";
-          this.style.transform = "translateY(-50%) scale(1)";
-        });
-
-        rightArrow.addEventListener("mouseenter", function () {
-          this.style.backgroundColor = "rgba(0,0,0,0.8)";
-          this.style.transform = "translateY(-50%) scale(1.1)";
-        });
-
-        rightArrow.addEventListener("mouseleave", function () {
-          this.style.backgroundColor = "rgba(0,0,0,0.6)";
-          this.style.transform = "translateY(-50%) scale(1)";
-        });
-      });
     </script>
 
      <script       type="text/javascript"       src="https://www.bwstays.com/js/foodmaps.js"     ></script>
