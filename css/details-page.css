@@ -11,6 +11,48 @@ div.border-bottom.border-primary.text-center.mb-2 {
 	margin: 0 auto;
 }
 
+
+div.image-nav-arrow.image-nav-left {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translatey(-50%);
+	z-index: 2;
+	cursor: pointer;
+	color: white;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+div.image-nav-arrow.image-nav-right {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translatey(-50%);
+	z-index: 2;
+	cursor: pointer;
+	color: white;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 .goomgr
 {
 display:none;visibility:hidden;
