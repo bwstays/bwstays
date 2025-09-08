@@ -1,3 +1,14 @@
+
+div.col-lg-6 {
+	padding: 1rem;
+}
+
+div.border-bottom.border-primary.text-center.mb-4 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+
 div.container-fluid {
 	padding: 2rem;
 }
