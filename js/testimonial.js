@@ -66,7 +66,6 @@ const testCardData = {
 document.addEventListener('DOMContentLoaded', renderTestimonial);
 
 
-
       // Image carousel functionality for the static left column
       document.addEventListener("DOMContentLoaded", function () {
         const imgWrapper = document.querySelector(
