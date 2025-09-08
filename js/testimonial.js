@@ -1,4 +1,4 @@
-
+      // testimonial
 const testCardData = {
     test: [
         {
@@ -64,6 +64,7 @@ const testCardData = {
  }
 
 document.addEventListener('DOMContentLoaded', renderTestimonial);
+      // testimonial
 
 
       // Image carousel functionality for the static left column
@@ -117,3 +118,4 @@ document.addEventListener('DOMContentLoaded', renderTestimonial);
           this.style.transform = "translateY(-50%) scale(1)";
         });
       });
+      // Image carousel functionality for the static left column
