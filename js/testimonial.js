@@ -64,3 +64,57 @@ const testCardData = {
  }
 
 document.addEventListener('DOMContentLoaded', renderTestimonial);
+
+
+
+      // Image carousel functionality for the static left column
+      document.addEventListener("DOMContentLoaded", function () {
+        const imgWrapper = document.querySelector(
+          ".col-lg-6 > div:first-child > div:first-child"
+        );
+        const leftArrow = document.querySelector(".image-nav-left");
+        const rightArrow = document.querySelector(".image-nav-right");
+        let currentImageIndex = 0;
+        const imageCount = 2; // Number of images in the carousel
+
+        function updateImage(direction) {
+          if (direction === "next") {
+            currentImageIndex = (currentImageIndex + 1) % imageCount;
+          } else {
+            currentImageIndex =
+              (currentImageIndex - 1 + imageCount) % imageCount;
+          }
+          imgWrapper.style.transform = `translateX(-${
+            currentImageIndex * 100
+          }%)`;
+        }
+
+        leftArrow.addEventListener("click", function () {
+          updateImage("prev");
+        });
+
+        rightArrow.addEventListener("click", function () {
+          updateImage("next");
+        });
+
+        // Add hover effects for arrows
+        leftArrow.addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "rgba(0,0,0,0.8)";
+          this.style.transform = "translateY(-50%) scale(1.1)";
+        });
+
+        leftArrow.addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "rgba(0,0,0,0.6)";
+          this.style.transform = "translateY(-50%) scale(1)";
+        });
+
+        rightArrow.addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "rgba(0,0,0,0.8)";
+          this.style.transform = "translateY(-50%) scale(1.1)";
+        });
+
+        rightArrow.addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "rgba(0,0,0,0.6)";
+          this.style.transform = "translateY(-50%) scale(1)";
+        });
+      });
