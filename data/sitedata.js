@@ -1224,7 +1224,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       id: 20,
       name: "Lakkidi Ghats View Point",
       description: "Temple associated with the epic Ramayana, located in a serene setting.",
-      image: [iconURLPrefix+"assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-vacation-ghats-viewpoint-kalpetta.webp",iconURLPrefix+"assets/img/trucking/bw-villa-rooms-ghats-wayanad.webp",iconURLPrefix+"assets/img/trucking/bw-stays-ghats-wayanad.webp"],
+      image: [iconURLPrefix+"assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp",iconURLPrefix+"assets/img/romantic/bw-vacation-ghats-viewpoint-kalpetta.webp",iconURLPrefix+"assets/img/romantic/bw-villa-rooms-ghats-wayanad.webp",iconURLPrefix+"assets/img/romantic/bw-stays-ghats-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
       Contact: "+91-000 000 0000",
