@@ -64,13 +64,16 @@ const testCardData = {
  }
 
 document.addEventListener('DOMContentLoaded', renderTestimonial);
+
+
+
       // Image carousel functionality for the static left column
       document.addEventListener("DOMContentLoaded", function () {
         const imgWrapper = document.querySelector(
           ".col-lg-6 > div:first-child > div:first-child"
         );
-        const leftArrow = document.querySelector("div.image-nav-arrow.image-nav-left image-nav-arrow image-nav-left");
-        const rightArrow = document.querySelector("div.image-nav-arrow.image-nav-right image-nav-arrow image-nav-right");
+        const leftArrow = document.querySelector(".image-nav-left");
+        const rightArrow = document.querySelector(".image-nav-right");
         let currentImageIndex = 0;
         const imageCount = 2; // Number of images in the carousel
 
