@@ -203,14 +203,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
 
                         <!-- Navigation Arrows -->
-                        <div class="image-nav-arrow image-nav-left"
-                            style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); z-index: 2; cursor: pointer; color: white; font-size: 20px; background-color: rgba(0,0,0,0.6); width: 45px;height: 45px;border-radius: 50%;display: flex;align-items: center;justify-content: center; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                        <div class="image-nav-arrow image-nav-right"
-                            style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); z-index: 2; cursor: pointer; color: white; font-size: 20px; background-color: rgba(0,0,0,0.6); width: 45px;height: 45px;border-radius: 50%;display: flex;align-items: center;justify-content: center; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
+              <div
+				  class="div.image-nav-arrow.image-nav-left image-nav-arrow image-nav-left" >
+				  <i class="fas fa-chevron-left"></i>
+			  </div>
+		      <div
+				  class="div.image-nav-arrow.image-nav-right image-nav-arrow image-nav-right">
+				  <i class="fas fa-chevron-right"></i>
+              </div>
+
                     </div>
 
                     <!-- Description Container -->
@@ -630,53 +631,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             return 3;
         };
 
-        // Image carousel functionality for the static left column
-        document.addEventListener('DOMContentLoaded', function() {
-            const imgWrapper = document.querySelector('.col-lg-6 > div:first-child > div:first-child');
-            const leftArrow = document.querySelector('.image-nav-left');
-            const rightArrow = document.querySelector('.image-nav-right');
-            let currentImageIndex = 0;
-            const imageCount = 5; // Number of images in the carousel
 
-            function updateImage(direction) {
-                if (direction === 'next') {
-                    currentImageIndex = (currentImageIndex + 1) % imageCount;
-                } else {
-                    currentImageIndex = (currentImageIndex - 1 + imageCount) % imageCount;
-                }
-                imgWrapper.style.transform = `translateX(-${currentImageIndex * 100}%)`;
-            }
-
-            leftArrow.addEventListener('click', function() {
-                updateImage('prev');
-            });
-
-            rightArrow.addEventListener('click', function() {
-
-                updateImage('next');
-            });
-
-            // Add hover effects for arrows
-            leftArrow.addEventListener('mouseenter', function() {
-                this.style.backgroundColor = 'rgba(0,0,0,0.8)';
-                this.style.transform = 'translateY(-50%) scale(1.1)';
-            });
-
-            leftArrow.addEventListener('mouseleave', function() {
-                this.style.backgroundColor = 'rgba(0,0,0,0.6)';
-                this.style.transform = 'translateY(-50%) scale(1)';
-            });
-
-            rightArrow.addEventListener('mouseenter', function() {
-                this.style.backgroundColor = 'rgba(0,0,0,0.8)';
-                this.style.transform = 'translateY(-50%) scale(1.1)';
-            });
-
-            rightArrow.addEventListener('mouseleave', function() {
-                this.style.backgroundColor = 'rgba(0,0,0,0.6)';
-                this.style.transform = 'translateY(-50%) scale(1)';
-            });
-        });
     </script>
 
 <script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.js?nocache=' + Date.now();document.body.appendChild(script);</script>
