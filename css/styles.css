@@ -10885,6 +10885,14 @@ body {
   display: inline-block;
 }
 
+.price-tag {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 6px !important;
+}
+
+
 .date-range-container {
   background-color: white;
   border-radius: 10px;

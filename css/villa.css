@@ -290,12 +290,6 @@ background-color:#64a19d;
   gap: 10px;
 }
 
-.price-tag {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: white;
-  border-radius: 6px !important;
-}
 
 #book-now{
   border-radius: 6px !important;
