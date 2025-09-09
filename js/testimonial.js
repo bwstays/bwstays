@@ -45,7 +45,7 @@ const testCardData = {
                             <div class="review-card">
                                 <div class="reviewer-info">
                                     <div class="reviewer-details">
-                                        <div class="name">${custname} (${rating} )? </div>
+                                        <div class="name">${custname} (${rating} ) <i class="fas fa-star my-star-icon" id="top-star"></i> </div>
                                         <div class="rating-row">
                                             <span class="stars" aria-label="5 out of 5 stars">
                                                 <i class="fas fa-star my-star-icon"></i>

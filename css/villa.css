@@ -542,3 +542,7 @@ background-color:#64a19d;
     width: 100%;
   }
 }
+
+ .badge-off{
+  font-weight: 700 !important;
+ }

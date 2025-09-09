@@ -1015,7 +1015,7 @@ padding:21px;
   
 .rating-details .stars {
     color: #f1c40f;
-    font-size: .75rem;
+    font-size: .5rem;
     margin: 5px 0 !important;
 }
 
@@ -1430,12 +1430,12 @@ padding:21px;
 
 #signup .stars {
     color: #64a19d;
-    font-size: 0.75rem; /* prominent teal stars */
-    margin-bottom: 6px;
+    font-size: 0.5rem; 
+    margin-bottom: 16px;
 }
 #signup .rating-row {
     margin-left: 0 !important;
-    margin-top: 2px;
+    margin-top: -3px;
     gap: 6px;
 }
 #signup .stars i { margin-right: 3px; }
@@ -1998,4 +1998,13 @@ footer.footer .stay-card {
   margin-right: 0 !important;
   position: absolute;
   right: 20px;
+}
+
+#booking{
+    font-size: 80% !important;
+}
+
+#top-star{
+    font-size: .3rem !important;
+    color: #050505 !important;
 }
