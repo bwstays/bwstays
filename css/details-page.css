@@ -1465,10 +1465,6 @@ button.bg-black:focus {
   background-color: black !important;
 }
 
-.bg-white {
-  background-color: #fff !important;
-}
-
 .text-black {
   color: #000000 !important;
 }
@@ -3007,6 +3003,6 @@ footer.footer .stay-card {
 }
 
 #top-star{
-    font-size: 1.5rem !important;
-    color: #050505 !important;
+    font-size: 1.0rem !important;
+    color: #ffffff !important;
 }
