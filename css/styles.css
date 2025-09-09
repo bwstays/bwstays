@@ -10877,15 +10877,14 @@ body {
 }
 
 .price-tag {
-  background-color: #64a19d;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-weight: bold;
-  display: inline-block;
+#    padding: 5px 15px;
+#  border-radius: 20px;
+#   display: inline-block;
 }
 
 .price-tag {
+  background-color: #64a19d;
+
   font-size: 0.9rem;
   font-weight: 700;
   color: white;
