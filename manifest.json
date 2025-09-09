@@ -14,7 +14,7 @@
 			"src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
 			"type": "image/png",
 			"sizes": "41x41",
-			"purpose": "maskable"
+			"purpose": "any"
 		}
 	],
     "screenshots" : [

@@ -10878,12 +10878,13 @@ body {
 
 .price-tag {
   background-color: #64a19d;
+
+  font-size: 0.9rem;
+  font-weight: 700;
   color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-weight: bold;
-  display: inline-block;
+  border-radius: 6px !important;
 }
+
 
 .date-range-container {
   background-color: white;

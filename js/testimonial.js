@@ -89,33 +89,36 @@ document.addEventListener('DOMContentLoaded', renderTestimonial);
           }%)`;
         }
 
-        leftArrow.addEventListener("click", function () {
-          updateImage("prev");
-        });
+		if (leftArrow !== undefined && leftArrow  && rightArrow !== undefined && rightArrow)
+		{
+					leftArrow.addEventListener("click", function () {
+					  updateImage("prev");
+					});
 
-        rightArrow.addEventListener("click", function () {
-          updateImage("next");
-        });
+					rightArrow.addEventListener("click", function () {
+					  updateImage("next");
+					});
 
-        // Add hover effects for arrows
-        leftArrow.addEventListener("mouseenter", function () {
-          this.style.backgroundColor = "rgba(0,0,0,0.8)";
-          this.style.transform = "translateY(-50%) scale(1.1)";
-        });
+					// Add hover effects for arrows
+					leftArrow.addEventListener("mouseenter", function () {
+					  this.style.backgroundColor = "rgba(0,0,0,0.8)";
+					  this.style.transform = "translateY(-50%) scale(1.1)";
+					});
 
-        leftArrow.addEventListener("mouseleave", function () {
-          this.style.backgroundColor = "rgba(0,0,0,0.6)";
-          this.style.transform = "translateY(-50%) scale(1)";
-        });
+					leftArrow.addEventListener("mouseleave", function () {
+					  this.style.backgroundColor = "rgba(0,0,0,0.6)";
+					  this.style.transform = "translateY(-50%) scale(1)";
+					});
 
-        rightArrow.addEventListener("mouseenter", function () {
-          this.style.backgroundColor = "rgba(0,0,0,0.8)";
-          this.style.transform = "translateY(-50%) scale(1.1)";
-        });
+					rightArrow.addEventListener("mouseenter", function () {
+					  this.style.backgroundColor = "rgba(0,0,0,0.8)";
+					  this.style.transform = "translateY(-50%) scale(1.1)";
+					});
 
-        rightArrow.addEventListener("mouseleave", function () {
-          this.style.backgroundColor = "rgba(0,0,0,0.6)";
-          this.style.transform = "translateY(-50%) scale(1)";
-        });
+					rightArrow.addEventListener("mouseleave", function () {
+					  this.style.backgroundColor = "rgba(0,0,0,0.6)";
+					  this.style.transform = "translateY(-50%) scale(1)";
+					});
+			}
       });
       // Image carousel functionality for the static left column
