@@ -427,10 +427,6 @@ small,
   font-weight: 400;
 }
 
-.mid{
-  font-size: 90%;
-  font-weight: 600;
-}
 
 mark,
 .mark {
@@ -6835,10 +6831,6 @@ button.bg-dark:focus {
 
 .border-dark {
   border-color: #343a40 !important;
-}
-
-.border-black {
-  border-color: #000000 !important;
 }
 
 .border-white {
