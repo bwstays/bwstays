@@ -3308,7 +3308,6 @@ input[type="button"].btn-block {
     left: auto;
   }
 }
-
 @media (min-width: 992px) {
   .dropdown-menu-lg-left {
     right: auto;
@@ -3441,7 +3440,6 @@ input[type="button"].btn-block {
   background-color: transparent;
   border: 0;
 }
-
 .dropdown-item:hover, .dropdown-item:focus {
   color: #16181b;
   text-decoration: none;
