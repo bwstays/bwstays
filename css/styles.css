@@ -10877,12 +10877,6 @@ body {
 }
 
 .price-tag {
-#    padding: 5px 15px;
-#  border-radius: 20px;
-#   display: inline-block;
-}
-
-.price-tag {
   background-color: #64a19d;
 
   font-size: 0.9rem;
