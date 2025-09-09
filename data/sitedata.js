@@ -973,7 +973,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
   tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
 
          type: "Romantic Spots",
-       knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8",
+       knowmore: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
       duration : "1-2 Hours",
   },
   {
@@ -997,7 +997,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
   amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
   tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
          type: "Romantic Spots",
-       knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8",
+       knowmore: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
       duration : "1-2 Hours",
   }
 
@@ -1890,7 +1890,7 @@ amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
 tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
 
        type: "shopping",
-      knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8",
+      knowmore: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
 
     duration : "1-2 Hours",
 },
@@ -2294,7 +2294,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
         distance: "10",
          transport: "Public",
         latlong: "11.619717987953072, 76.08467260510648",
-        map: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
+        map: "https://maps.app.goo.gl/edc3dFtjEMCPZQ4v5",
        rating:"4.5",
         hrs:"2",
         fee:"0",
@@ -2304,7 +2304,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
   tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
 
          type: "stays",
-       knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8",
+       knowmore: "https://maps.app.goo.gl/edc3dFtjEMCPZQ4v5",
       duration : "1-2 Hours",
   },
     {
@@ -2319,7 +2319,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
         distance: "10",
          transport: "Public",
         latlong: "11.619717987953072, 76.08467260510648",
-        map: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
+        map: "https://maps.app.goo.gl/C1cpHFWW6ts9L3sY8",
        rating:"4.5",
         hrs:"2",
         fee:"0",
@@ -2329,7 +2329,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
   tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
 
          type: "stays",
-       knowmore: "https://maps.app.goo.gl/DW6tDRXZbJCrd3mk8",
+       knowmore: "https://maps.app.goo.gl/C1cpHFWW6ts9L3sY8",
       duration : "1-2 Hours",
   },
 
