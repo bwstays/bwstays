@@ -333,6 +333,9 @@ background-color:#64a19d;
   color: #64a19d;
 }
 
+#book-now{
+  font-weight: 700 !important;
+}
 .amenity span {
   color: white;
   font-weight: 500;
@@ -539,3 +542,7 @@ background-color:#64a19d;
     width: 100%;
   }
 }
+
+ .badge-off{
+  font-weight: 700 !important;
+ }
