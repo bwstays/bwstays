@@ -150,7 +150,7 @@
         }
 
 		navigator.serviceWorker
-			.register('/sw.js', { scope: '/' })
+			.register('./js/sw.js', { scope: '/' })
 			.then(() => {
 				console.info('PWA Service Worker Registered');
 			}, err => console.error("Developer for Life Service Worker registration failed: ", err));
@@ -211,7 +211,7 @@
             }
         }
 
-    navigator.serviceWorker.register('./sw.js', { scope: "./" }) //setting scope of sw
+    navigator.serviceWorker.register('./js/sw.js', { scope: "./" }) //setting scope of sw
     .then(function(registration) {
       console.info('Service worker is registered!');
       checkForPageUpdate(registration); // To check if new content is updated or not

@@ -1,4 +1,4 @@
-importScripts('./cache-polyfill.js');
+importScripts('./js/cache-polyfill.js');
 
 const TILE_CACHE = 'cache-v4';
 const TILE_URL_PATTERN = /^https:\/\/[abc]\.tile\.osm\.org\/.*/;
