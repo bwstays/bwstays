@@ -55,19 +55,8 @@
 
   <h1>🎤 Voice Command Demo</h1>    <script type="text/javascript"  src="https://www.bwstays.com/data/sitedata.js"></script>
 
-<script>
 
- alert(siteData[0]);
 
-fetch(siteData)
-  .then(response => response.json())
-  .then(jsonData => {
-    console.log("Loaded JSON:", jsonData);
-    console.log("Name:", jsonData.name);
-  })
-  .catch(error => console.error("Error loading JSON:", error));
-
-    </script>
 
 
   <button id="start-btn">Start Listening</button>
