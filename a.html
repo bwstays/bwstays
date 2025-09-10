@@ -13,7 +13,15 @@
       src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"
     ></script>
 
-    <script src="./js/api.js"></script>
+
+    $.ajax({
+	    url: "https://raw.githubusercontent.com/bwstays/bwstays/refs/heads/main/data/sitedata.js",
+	    dataType: "json"
+	}).done(function(result){
+	  alert( result[0][0]) ;
+	  console.log(result[0][0]);
+});
+    </script>
 
   <style>
     body {
