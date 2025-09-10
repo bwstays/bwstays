@@ -60,7 +60,7 @@ const url = 'https://raw.githubusercontent.com/bwstays/bwstays/refs/heads/main/d
 
 fetch(url)
   .then(response => {
-  	alert(response.sitedata);
+  	alert(response.siteData);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
