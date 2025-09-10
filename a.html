@@ -53,25 +53,18 @@
 </head>
 <body>
 
-  <h1>🎤 Voice Command Demo</h1>
+  <h1>🎤 Voice Command Demo</h1>    <script type="text/javascript"  src="https://www.bwstays.com/data/sitedata.js"></script>
+
 <script>
 
-const url = 'https://raw.githubusercontent.com/bwstays/bwstays/refs/heads/main/data/sitedata.js'; // Replace with your actual URL
-alert(siteData);
-fetch(url)
-  .then(response => {
-  	alert(response);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json();
+ alert(siteData);
+fetch(siteData)
+  .then(response => response.json())
+  .then(jsonData => {
+    console.log("Loaded JSON:", jsonData);
+    console.log("Name:", jsonData.name);
   })
-  .then(data => {
-    console.log("Fetched JSON:", data);
-  })
-  .catch(error => {
-    console.error("Error fetching data:", error);
-  });
+  .catch(error => console.error("Error loading JSON:", error));
 
     </script>
 
