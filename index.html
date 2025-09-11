@@ -102,10 +102,14 @@
 <link href="https://www.bwstays.com/css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
 <link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
-<!--
- <link href="./css/sidebar.css" rel="stylesheet"   type='text/css' media='all'  />
+<!-- 
+<link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
+<link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
 <link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
--->
+<link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/> -->
+
+
+
 
 
 <link  rel="preconnect"  href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
@@ -512,7 +516,7 @@ setTimeout(ldinsp, 0);
                 </p>
             </div>
 
-            <div id="project-divider">
+            <div id="wrapper-div">
                 <!-- Plantations //0 plantation -->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
                     <div class="col-lg-6"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"
@@ -786,7 +790,7 @@ setTimeout(ldinsp, 0);
 
 
                 <!-- pilgrimage Ends -->
-                </div>
+            </div>
 
 
 
@@ -841,6 +845,20 @@ setTimeout(ldinsp, 0);
                         <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
                         <textarea  class="form-control bg-light border-0"
                             id="inputMessage" rows="3" placeholder="Your message"></textarea>
+                    </div>
+                    
+                    <!-- Captcha -->
+                    <div class="form-group mb-3">
+                        <label class="text-white-50 small text-uppercase">Security Verification</label>
+                        <div class="captcha-container d-flex align-items-center">
+                            <div class="captcha-question bg-light p-2 rounded mr-3" style="min-width: 120px; text-align: center; font-weight: bold; color: #333;">
+                                <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
+                            </div>
+                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" style="max-width: 150px;" required>
+                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <button class="btn btn-primary btn-block  px-4  py-2 text-uppercase"
@@ -1209,11 +1227,15 @@ setTimeout(ldinsp, 0);
     script.src = 'https://www.bwstays.com/js/promo-banner.js?nocache=' + Date.now();
     document.body.appendChild(script);
   </script>
-<!--
+
   <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/61ca2eec7dff3025fb51cf16daffc31e.js"></script>
--->
+
 
   <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
+    
+    <!-- Contact form captcha functionality -->
+    <script type="text/javascript" src="https://www.bwstays.com/js/captcha.js"></script>
+    
     <script type="text/javascript"  src="https://www.bwstays.com/js/testimonial.js"></script>
     </body>
 
