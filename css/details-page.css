@@ -2998,3 +2998,7 @@ footer.footer .stay-card {
     font-size: 0.8rem !important;
     color: #ffffff !important;
 }
+
+#wrapper-div{
+  border-radius: 20px !important;
+}
