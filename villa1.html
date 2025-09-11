@@ -103,6 +103,7 @@
     <link href="https://www.bwstays.com/css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="https://www.bwstays.com/css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="https://www.bwstays.com/css/villa.css" rel="stylesheet"   type='text/css' media='all'  />
+
     <!-- <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="./css/villa.css" rel="stylesheet"   type='text/css' media='all'  /> -->
@@ -122,8 +123,8 @@
       <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
       <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 
-<!-- 
-    <link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <!-- <link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/> -->
 
 
@@ -535,6 +536,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <textarea  class="form-control bg-light border-0"
                             id="inputMessage" rows="3" placeholder="Your message"></textarea>
                     </div>
+                    
+                    <!-- Captcha -->
+                    <div class="form-group mb-3">
+                        <label class="text-white-50 small text-uppercase">Security Verification</label>
+                        <div class="captcha-container d-flex align-items-center">
+                            <div class="captcha-question bg-light p-2 rounded mr-3" style="min-width: 120px; text-align: center; font-weight: bold; color: #333;">
+                                <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
+                            </div>
+                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" style="max-width: 150px;" required>
+                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
                     <button class="btn btn-primary btn-block   px-4  py-2 text-uppercase"
                         type="submit" aria-label="Request Callback">Request Callback</button>
                 </form>
@@ -790,10 +806,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="https://www.bwstays.com/js/scripts.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/data/sitedata.js"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/knowmore-place-dynamic.js"></script>
-    <!--<script  type="text/javascript"
+    <script  type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&size=200x100&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbkk&sensor=false"
          ></script>
-         -->
+        
 
 
 
@@ -1024,6 +1040,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://www.bwstays.com/js/reveal.js"></script>
 <script src="./js/reveal.js"></script>
+
+<!-- Contact form captcha functionality -->
+<script type="text/javascript" src="https://www.bwstays.com/js/captcha.js"></script>
 
  <script type="text/javascript"  src="https://www.bwstays.com/js/testimonial.js"></script>
  </body>

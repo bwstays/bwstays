@@ -26,10 +26,23 @@
                 generateCaptcha();
             });
             
-            // Form submission validation
-            const form = document.getElementById('myForm');
-            if (form) {
-                form.addEventListener('submit', function(e) {
+            // Form submission validation for both booking and contact forms
+            const bookingForm = document.getElementById('myForm');
+            const contactForm = document.getElementById('contact-form');
+            
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    if (!validateCaptcha()) {
+                        e.preventDefault();
+                        alert('Please enter the correct answer for the security verification.');
+                        document.getElementById('captcha-answer').focus();
+                        return false;
+                    }
+                });
+            }
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
                     if (!validateCaptcha()) {
                         e.preventDefault();
                         alert('Please enter the correct answer for the security verification.');
