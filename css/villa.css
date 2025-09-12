@@ -546,3 +546,10 @@ background-color:#64a19d;
  .badge-off{
   font-weight: 700 !important;
  }
+
+/* Mandatory field asterisk styles */
+.required-asterisk {
+  color: #dc3545;
+  font-weight: bold;
+  margin-left: 3px;
+}

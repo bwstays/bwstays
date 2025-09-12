@@ -3001,4 +3001,164 @@ footer.footer .stay-card {
 
 #wrapper-div{
   border-radius: 20px !important;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.captcha-question{
+  min-width: 120px; 
+  text-align: center; 
+  font-weight: bold; 
+  color: #333;
+  background-color: #fff;
+
+}
+
+#booking-captcha-ques{
+  border: 1px solid #e0e0e0;
+}
+#captcha-answer{
+  max-width: 150px;
+}
+
+.required-asterisk{
+  color: red;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.faq-accordion {
+  max-width: 100%;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+
+.faq-question {
+  border-bottom: none;
+}
+
+.faq-btn {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 20px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+
+.faq-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.faq-btn[aria-expanded="true"],
+.faq-btn.active {
+  color: #64a19d;
+  background-color: #f8f9fa;
+}
+
+.faq-btn[aria-expanded="true"] .faq-icon,
+.faq-btn.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-icon {
+  font-size: 14px;
+  color: #64a19d;
+  transition: transform 0.3s ease;
+  margin-left: 15px;
+}
+
+.faq-answer {
+  border-top: 1px solid #e9ecef;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-answer.show {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in;
+}
+
+.faq-body {
+  padding: 20px 25px;
+  color: #666;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.faq-body p {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 0;
+  }
+  
+  .faq-btn {
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+  
+  .faq-body {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-btn {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .faq-body {
+    padding: 12px 15px;
+  }
+}
+
+
+/* fooding -wayanad */
+#fooding-top{
+  margin-top: 65px !important;
+}
+
+#socialIconList{
+  padding: 21px !important;
+}
+
+#BlackWhite{
+  margin-right: 1.5rem !important;
+}
+
+#mapID{
+  width: 20% !important; 
+  margin: 0 auto !important;
+}
+
+#Features{
+  font-size: 1rem !important;
 }
