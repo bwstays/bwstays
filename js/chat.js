@@ -396,7 +396,10 @@
       ];
 
       // Send request to Cloudflare Worker instead of direct API call
-      const resp = await fetch('https://your-worker-url.your-subdomain.workers.dev/chat', {
+    //  const resp = await fetch('https://your-worker-url.your-subdomain.workers.dev/chat', {
+
+      const resp = await fetch('www.bwstays/chat', {
+
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
