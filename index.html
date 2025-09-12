@@ -85,7 +85,7 @@
 <link rel="apple-touch-icon" sizes="152x152" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-152x152.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
 
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src   unpkg.com     cdn.cookie-script.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com wati-integration-prod-service.clare.ai bwstays.com code.jquery.com requirejs.org  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com ; style-src  unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.md mc.yandex.ru bwstays.com; connect-src router.project-osrm.org   api.groq.com  hn.inspectlet.com mc.yandex.ru mc.yandex.md  'self' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com  mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com  ws.inspectlet.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src   unpkg.com     cdn.cookie-script.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com wati-integration-prod-service.clare.ai bwstays.com code.jquery.com requirejs.org  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com ; style-src  unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.md mc.yandex.ru bwstays.com; connect-src api.groq.com router.project-osrm.org   api.groq.com  hn.inspectlet.com mc.yandex.ru mc.yandex.md  'self' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com  mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com  ws.inspectlet.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
 
 
 <!--
@@ -103,7 +103,10 @@
 <link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
 
-<!-- <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
+
+
+<link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
+
 <link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
 <link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/> -->
@@ -847,7 +850,7 @@ setTimeout(ldinsp, 0);
                         <textarea  class="form-control bg-light border-0"
                             id="inputMessage" rows="3" placeholder="Your message"></textarea>
                     </div>
-                    
+
                     <!-- Captcha -->
                     <div class="form-group mb-3">
                         <label class="text-white-50 small text-uppercase">Security Verification</label>
@@ -855,8 +858,13 @@ setTimeout(ldinsp, 0);
                             <div class="captcha-question  p-2 rounded mr-3" >
                                 <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
                             </div>
-                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer"  required>
-                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh">
+
+                            <!-- <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer"  required>
+                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh"> -->
+
+                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" style="max-width: 150px;" required>
+                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2 px-4  py-2 " id="refresh-captcha" title="Refresh">
+
                                 <i class="fas fa-sync-alt"></i>
                             </button>
                         </div>
@@ -1234,13 +1242,16 @@ setTimeout(ldinsp, 0);
 
 
   <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
-    
+
     <!-- Contact form captcha functionality -->
     <script type="text/javascript" src="https://www.bwstays.com/js/captcha.js"></script>
+
     
     <!-- FAQ functionality -->
     <script type="text/javascript" src="https://www.bwstays.com/js/faq.js"></script>
     
+
+
     <script type="text/javascript"  src="https://www.bwstays.com/js/testimonial.js"></script>
     </body>
 

@@ -37,7 +37,7 @@
       });
       knowledgeBase = chunks;
       knowledgeLoaded = true;
-      //console.log(`Knowledge base loaded: ${chunks.length} chunks`);
+
     } catch (error) {
       //console.error('Failed to load knowledge base:', error);
     }
@@ -374,6 +374,12 @@
     }
 
     async function sendToGroq(messages, userQuery){
+      // Expect user to set window.GROQ_API_KEY somewhere safely (e.g., injected at runtime)
+      const apiKey = window.GROQ_API_KEY || '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';
+      if(!apiKey){
+        throw new Error('Missing GROQ_API_KEY. Please set window.GROQ_API_KEY before using chat.');
+      }
+
       // Enhance system prompt with relevant context from knowledge base
       const relevantChunks = searchKnowledgeBase(userQuery, 2);
       let enhancedSystemPrompt = messages[0].content;
@@ -395,20 +401,16 @@
         ...messages.slice(1)
       ];
 
-      // Send request to Cloudflare Worker instead of direct API call
-    //  const resp = await fetch('https://your-worker-url.your-subdomain.workers.dev/chat', {
-
-      const resp = await fetch('www.bwstays/chat', {
-
+      const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
         },
         body: JSON.stringify({
           model: 'openai/gpt-oss-120b',
           messages: enhancedMessages,
-          temperature: 0.7,
-          max_tokens: 1000
+          temperature: 0.7
         })
       });
 
