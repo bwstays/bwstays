@@ -1,0 +1,15 @@
+name = "bwstays-chat-worker"
+main = "js/worker.js"
+compatibility_date = "2024-01-01"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+# To deploy:
+# 1. Install wrangler: npm install -g wrangler
+# 2. Login: wrangler login
+# 3. Set secrets:
+#    wrangler secret put GROQ_API_KEY
+#    wrangler secret put ALLOWED_ORIGINS
+# 4. Deploy: wrangler deploy
+# 5. Update chat.js with the worker URL from deployment output
