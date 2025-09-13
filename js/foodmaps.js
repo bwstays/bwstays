@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
-  }).addTo(map1);
+  }).on('tileload', function(e) {
+    e.tile.alt = 'Food joins at wayand'; // Customize your alt text here
+}).addTo(map1);
 
   // Add main location marker
   L.marker([lat, lng], {

@@ -235,6 +235,8 @@ var map1 = L.map(element1).setView([11.6057872, 76.0833109], 12);
 // Add OSM tile layer to the Leaflet map.
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).on('tileload', function(e) {
+    e.tile.alt = 'Food joins at wayand'; // Customize your alt text here
 }).addTo(map1);
 
 

@@ -169,6 +169,8 @@ let iconOptions = {
 // Add OSM tile layer to the Leaflet map.
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).on('tileload', function(e) {
+    e.tile.alt = 'Food joins at wayand'; // Customize your alt text here
 }).addTo(map);
 //for (i = 0; i < bwlocations.length; i++) {
 // Target's GPS coordinates.
