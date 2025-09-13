@@ -279,5 +279,5 @@ if (myArray[(Object.keys(myArray)[2])[0]][0]!==undefined && myArray[(Object.keys
 	    // pdf open in a new tab
 	   // const pdfDataUri = pdf.output('datauristring');
 	   // const newTab = window.open();
-	   // newTab?.document.write(`<iframe width='100%' height='100%' src='${pdfDataUri}'></iframe>`);
+	   // newTab?.document.write(`<iframe  title="GM"  width='100%' height='100%' src='${pdfDataUri}'></iframe>`);
     }
