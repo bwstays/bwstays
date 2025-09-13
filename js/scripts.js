@@ -179,7 +179,9 @@ map.fitBounds([[11.6057872, 76.0833109], [11.610,76.090]]);
 // Set map's center to target with zoom 14.
 map.setView(target, 14);
 // Place a marker on the same location.
-L.marker(target,iconOptions).addTo(map).bindPopup( bwlocations[0][5]);
+L.marker(target,iconOptions).on('tileload', function(e) {
+    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+}).addTo(map).bindPopup( bwlocations[0][5]);
 //}
 /*location map end*/
 

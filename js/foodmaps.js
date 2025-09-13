@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
       iconSize: [32, 32],
       iconAnchor: [16, 32]
     })
-  }).addTo(map1)
+  }).on('tileload', function(e) {
+    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+}).addTo(map1)
     .bindPopup('Food and Dine')
     .openPopup();
 
@@ -35,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
     fillColor: '#f03',
     fillOpacity: 0.2,
     radius: 4000
-  }).addTo(map1);
+  }).on('tileload', function(e) {
+    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+}).addTo(map1);
 
   // Add routing from BW Stays to location
  /* L.Routing.control({
@@ -88,7 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
             iconSize: [30, 30],
             iconAnchor: [15, 30]
           })
-        }).addTo(map1)
+        }).on('tileload', function(e) {
+    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+}).addTo(map1)
           .bindPopup(restaurant.tags.name);
 
         // Add to restaurant list
