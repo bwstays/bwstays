@@ -41,6 +41,13 @@ body {
   outline: none;
   background-color: transparent;
 }
+nav#mainNav.navbar-shrink,
+#mainNav.navbar-shrink {
+    background-color: #fff !important;
+    background: #fff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
@@ -64,9 +71,14 @@ body {
   #mainNav .nav-link:active {
     color: #fff;
   }
+  nav#mainNav.navbar-shrink,
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #fff !important;
+    background: #fff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
+     
   #mainNav.navbar-shrink .navbar-brand {
     color: #000000;
   }
@@ -3161,4 +3173,98 @@ footer.footer .stay-card {
 
 #Features{
   font-size: 1rem !important;
+}
+
+.date-pick{
+  background: #fff !important;
+}
+
+/* Calendar Datepicker Styles */
+.ui-datepicker {
+			background: #333;
+			border: 1px solid #555;
+			color: #EEE;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.ui-datepicker .ui-datepicker-header {
+			background: #64a19d;
+			border: none;
+			color: white;
+			border-radius: 8px 8px 0 0;
+}
+
+.ui-datepicker .ui-datepicker-title {
+			color: white;
+			font-weight: bold;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+			color: white;
+			background: #64a19d;
+			border: 1px solid #fff;
+}
+
+.ui-datepicker td {
+			border: none;
+			padding: 2px;
+}
+
+.ui-datepicker td a {
+			color: #EEE;
+			text-decoration: none;
+			padding: 8px;
+			display: block;
+			border-radius: 4px;
+			transition: all 0.2s ease;
+}
+
+.ui-datepicker td a:hover {
+			background: #64a19d;
+			color: white;
+}
+
+.blocked, .ui-datepicker .blocked span { 
+			background: #666 !important; 
+			color: #999 !important;
+			cursor: not-allowed;
+}
+
+.reserved, .ui-datepicker .reserved span {
+			background: #d9534f !important;
+			color: white !important;
+			cursor: not-allowed;
+}
+
+.ui-state-highlight {
+			background-color: orange !important;
+			color: white !important;
+}
+
+.ui-datepicker .ui-widget-content {
+			background: #444 none;
+			border: none;
+}
+
+.ui-datepicker-current-day {
+			background-color: #64a19d !important;
+}
+
+.ui-datepicker-current-day a {
+			color: white !important;
+			font-weight: bold;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+			background: #64a19d;
+			border: none;
+			color: white;
+			border-radius: 4px;
+}
+
+.ui-datepicker .ui-datepicker-prev:hover,
+.ui-datepicker .ui-datepicker-next:hover {
+			background: #5a9490;
 }

@@ -120,13 +120,15 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
     <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
 
+    <link href="https://www.bwstays.com/css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
+    <link href="https://www.bwstays.com/css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
-      <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
 
+    <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
+    <link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
-      <link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
-      <link href="./css/styles.css" rel="stylesheet" type="text/css" media="all"/>
-
+    <link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
 
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -198,7 +200,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="reservation-steps mb-5">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="step active bg-primary p-2 rounded text-white mb-3 text-center">
+                            <div class="step bg-primary p-2 rounded text-white mb-3 text-center">
                                 <h5 class="m-0"><i class="fas fa-search mr-2"></i>1. Check Availability</h5>
                             </div>
                         </div>
@@ -228,12 +230,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="date-inputs">
                                 <div class="form-group mb-2">
                                     <label class="form-label small">Check-in</label>
-                                    <input  type="text" class="form-control form-control-sm" id="checkInDate"
+                                    <input  type="text" class="form-control form-control-sm date-pick" id="checkInDate"
                                         placeholder="Select date" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label small">Check-out</label>
-                                    <input  type="text" class="form-control form-control-sm" id="checkOutDate"
+                                    <input  type="text" class="form-control form-control-sm date-pick" id="checkOutDate"
                                         placeholder="Select date" readonly>
                                 </div>
                             </div>
@@ -538,8 +540,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     </section>
 
+ 
+    <div id="faq-container"></div>
+
+ 
     <section class="testimonial-section" id="testimonial">
-	<div  class="vertical-div" >   <a href="#about" id="reserve" class="vertical-res btn btn-primary" >Reservation</a></div>
+	<div  class="vertical-div" >   <a href="#about"  id="reserve" class="vertical-res btn btn-primary" >Reservation</a></div>
 
 	<div class="container py-2">
 		  <div class="col-md-12 text-center ">
@@ -877,8 +883,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"   rel="preload" crossorigin="anonymous"></script>
 
+ 
 
         <script type="text/javascript" src="https://www.bwstays.com/data/sitedata.js"></script>
+
 
     <script type="text/javascript" src="https://www.bwstays.com/js/scripts.js"></script>
     <!--  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbkk&sensor=false"  ></script>
@@ -897,7 +905,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Captcha functionality -->
        <script type="text/javascript" src="https://www.bwstays.com/js/captcha.js"></script>
 
-<script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.js?nocache=' + Date.now();document.body.appendChild(script);</script><script type="application/ld+json">
+<script> const script = document.createElement('script'); script.src = './js/promo-banner.js?nocache=' + Date.now();document.body.appendChild(script);</script><script type="application/ld+json">
 {
         "@context": "https://schema.org",
         "@type": "TouristAttraction",
@@ -907,7 +915,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "isAccessibleForFree": true
 }
 </script>
-  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
+  <script  type="text/javascript"   src="./js/chat.js&quot; &gt;&lt;/script&gt;
+
+   <!-- FAQ functionality -->
+   <script type="text/javascript" src="./js/faq.js"></script>
 
    <script type="text/javascript"  src="https://www.bwstays.com/js/testimonial.js"></script>
    </body>
