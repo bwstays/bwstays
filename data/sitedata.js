@@ -23,7 +23,7 @@ tags: ["tea plantation", "wayanad", "mountain", "cottage", "nature", "spice proc
       type: "Plantations",
       knowmore: "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html",
       duration : "1-2 Hours",
-    www:"" ,
+    www:"https://www.periatea.com/tourism/" ,
 },
     {
       id: 61,
@@ -2420,5 +2420,4 @@ www:"" ,
 },
 
 		]
-www:"" ,
 }
