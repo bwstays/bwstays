@@ -235,6 +235,8 @@ var map1 = L.map(element1).setView([11.6057872, 76.0833109], 12);
 // Add OSM tile layer to the Leaflet map.
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).on('tileload', function(e) {
+    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
 }).addTo(map1);
 
 
@@ -251,7 +253,9 @@ let myIcon1 = L.icon(customIcon1);
       iconSize: [32, 32],
       iconAnchor: [16, 32]
     })
-  }).addTo(map1);
+  }).on('tileload', function(e) {
+    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+}).addTo(map1);
 
 var  i;
 for (i = 0; i < loc.length; i++) {
@@ -263,7 +267,9 @@ var target = L.latLng(loc[i][1], loc[i][2]);
 // Set map's center to target with zoom 10.
 map1.setView(target, 12);
 // Place a marker on the same location.
-L.marker(target,  {    title:loc[i][5],icon:myIcon1}).addTo(map1).bindPopup( loc[i][0]);
+L.marker(target,  {    title:loc[i][5],icon:myIcon1}).on('tileload', function(e) {
+    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+}).addTo(map1).bindPopup( loc[i][0]);
 
 
 

@@ -6,8 +6,8 @@ const siteData = {
       description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
       image: ["https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-stays-tea-kalpetta-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-stays-estate-green-stay-kalpetta-wayanad.webp"],
       holidays: "Sun",
-      timing:[ "09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      timing:[ "09:30-16:30"],
+      Contact: "+91-97459 47627",
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
       distance: "11",
       transport: "Public",
@@ -23,7 +23,8 @@ tags: ["tea plantation", "wayanad", "mountain", "cottage", "nature", "spice proc
       type: "Plantations",
       knowmore: "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html",
       duration : "1-2 Hours",
-    },
+    www:"https://www.periatea.com/tourism/" ,
+},
     {
       id: 61,
       name: "Rippon Tea estate",
@@ -47,7 +48,8 @@ tags: ["tea plantation", "wayanad", "mountain", "cottage", "nature", "spice proc
       type: "Plantations",
       knowmore: "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html",
       duration : "1-2 Hours",
-    },
+    www:"" ,
+},
     {
       id: 62,
       name: "Coffee Plantation",
@@ -74,6 +76,7 @@ tags: ["coffee plantation", "wayanad", "mountain", "cottage", "nature", "spice p
       knowmore: "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 
   ],
@@ -103,6 +106,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       type: "Water Falls",
       knowmore: "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 },
 
      {
@@ -128,6 +132,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       knowmore: "https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 35,
@@ -152,6 +157,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       knowmore: "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 36,
@@ -176,6 +182,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       knowmore: "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 37,
@@ -200,6 +207,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       knowmore: "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
  ,
       {
@@ -226,6 +234,7 @@ type: "Water Falls",
        knowmore: "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
 
@@ -253,6 +262,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
        knowmore: "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
       {
        id: 41,
@@ -278,6 +288,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
        knowmore: "https://www.bwstays.com/bw-Irrupu-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
       {
@@ -304,6 +315,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
        knowmore: "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 
  {
@@ -330,6 +342,7 @@ tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authe
       knowmore: "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 
  ],
@@ -361,6 +374,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
 		knowmore: "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
  {
       id: 89,
@@ -388,6 +402,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
 		knowmore: "https://www.bwstays.com/bw-kunkichira-heritage-museum-at-periya-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 26,
@@ -415,6 +430,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
 		knowmore: "https://www.bwstays.com/bw-tea-museum-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 {
       id: 78,
@@ -443,6 +459,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
       knowmore: "https://www.bwstays.com/bw-honey-museum-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
     {
@@ -471,6 +488,7 @@ tags: ["heritage", "colonial", "kalpetta", "spice markets", "art", "historic", "
       knowmore: "https://www.bwstays.com/bw-folklore-museum-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
   ],
   romantic: [
@@ -497,6 +515,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 43,
@@ -524,6 +543,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       knowmore: "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 
 {
@@ -553,6 +573,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        knowmore: "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
     {
@@ -581,6 +602,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       knowmore: "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -606,6 +628,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -633,6 +656,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       knowmore: "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -658,6 +682,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -685,6 +710,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       knowmore: "https://www.bwstays.com/bw-manjappara-romantic-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -710,6 +736,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -737,6 +764,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       knowmore: "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -762,6 +790,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -787,6 +816,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
        type: "Romantic Spots",
       knowmore: "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -814,6 +844,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       knowmore: "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -841,6 +872,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
       knowmore: "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -867,6 +899,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
 	knowmore: "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
   {
           id: 83,
@@ -893,6 +926,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
           knowmore: "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html",
 
       duration : "1-2 Hours",
+www:"" ,
 }
 ,
   {
@@ -920,6 +954,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
           knowmore: "https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html",
 
       duration : "1-2 Hours",
+www:"" ,
 }
 ,
   {
@@ -947,6 +982,7 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
           knowmore: "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html",
 
       duration : "1-2 Hours",
+www:"" ,
 },
 
   {
@@ -973,7 +1009,8 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
          type: "Romantic Spots",
        knowmore: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
       duration : "1-2 Hours",
-  },
+  www:"" ,
+},
   {
         id: 76,
         name: "Bamboo Park",
@@ -997,7 +1034,8 @@ tags: ["Ghats", "kalpetta", "Deccan Plateau", "seafood", "yoga", "cliff", "ayurv
          type: "Romantic Spots",
        knowmore: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
       duration : "1-2 Hours",
-  }
+  www:"" ,
+}
 
   ],
 
@@ -1029,6 +1067,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
       knowmore: "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
     {
@@ -1056,6 +1095,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
       knowmore: "https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
    {
       id: 25,
@@ -1082,6 +1122,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
       knowmore: "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
  {
            id: 1,
@@ -1107,6 +1148,7 @@ tags: ["heritage", "mountains", "traditional", "kerala", "cuisine", "spice", "qu
            type: "Cultural & Historical",
            knowmore: "https://www.bwstays.com/bw-santhinatha-temple-heritage-wayanad.html",
          duration : "1-2 Hours",
+www:"" ,
 },
   ],
 
@@ -1139,6 +1181,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       knowmore: "https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 17,
@@ -1164,6 +1207,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       knowmore: "https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
     {
@@ -1190,6 +1234,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       knowmore: "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
    {
@@ -1216,6 +1261,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
          knowmore: "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
     {
@@ -1242,6 +1288,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       knowmore: "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
     {
@@ -1268,6 +1315,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       knowmore: "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
 
@@ -1295,6 +1343,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       knowmore: "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
 
@@ -1322,6 +1371,7 @@ tags: ["HillStation Vibes", "OffRoad Adventure", "Camping Life", "Forest Trails"
       knowmore: "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
   ],
 
@@ -1354,6 +1404,7 @@ tags: ["Bandipur", "wildlife", "sanctuary", "elephants", "tigers", "birds", "Mut
       knowmore: "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 {
       id: 29,
@@ -1380,6 +1431,7 @@ tags: ["Nagarhole", "wildlife", "sanctuary", "elephants", "tigers", "birds", "sp
       knowmore: "https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 {
       id: 30,
@@ -1405,6 +1457,7 @@ tags: ["Pakshipathalam", "wildlife", "sanctuary", "elephants", "tigers", "birds"
       knowmore: "https://www.bwstays.com/bw-pakshipathalam-wildlife-sanctuary-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
  {
       id: 31,
@@ -1430,6 +1483,7 @@ tags: ["Tholpetty", "wildlife", "sanctuary", "elephants", "tigers", "birds", "sp
       knowmore: "https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 
 
@@ -1457,6 +1511,7 @@ tags: ["Begur", "wildlife", "sanctuary", "elephants", "tigers", "birds", "spice 
       knowmore: "https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
   ],
   farms: [
@@ -1485,6 +1540,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
 	      knowmore: "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 
     {
@@ -1510,6 +1566,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
        type: "Farm Visit",
       knowmore: "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 63,
@@ -1535,6 +1592,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
       knowmore: "https://www.bwstays.com/bw-boys-town-farm-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 ,
     {
@@ -1561,6 +1619,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
       knowmore: "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
 
 
@@ -1594,6 +1653,7 @@ tags: ["Family Farm Day", "Agri Education", "Farm Fun", "Eco Tourism", "Educatio
   			knowmore: "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html",
 
       duration : "2 Hours",
+www:"" ,
 },
   {
           id: 70,
@@ -1618,6 +1678,7 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
       	  type: "Sporting",
           knowmore: "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
       duration : "1-2 Hours",
+www:"" ,
 },
 
  {
@@ -1644,6 +1705,7 @@ tags: ["backwater", "kayaking", "adventure", "wildlife", "village", "sports", "c
 			knowmore: "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html",
 
       duration : "1-2 Hours",
+www:"" ,
 }
     ]
    ,
@@ -1672,6 +1734,7 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
  		type: "Food",
        knowmore: "https://www.bwstays.com/all-fooding-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 },
 
     {
@@ -1697,6 +1760,7 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
        type: "Food",
       knowmore: "https://www.bwstays.com/bw-restaurants-food-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 66,
@@ -1722,6 +1786,7 @@ tags: ["cooking classes", "kerala dishes", "spices", "market visits", "hands-on"
 		type: "Food",
       knowmore: "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 }
 
 
@@ -1753,6 +1818,7 @@ tags: ["Tribal Festivals", "Music", "Crafts", "Wisdom", "Ethnic Diversity", "Ora
            knowmore: "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html",
 
       duration : "1-2 Hours",
+www:"" ,
 },
  {
           id: 57,
@@ -1779,6 +1845,7 @@ tags: ["Tribal Festivals", "Music", "Crafts", "Wisdom", "Ethnic Diversity", "Ora
           knowmore: "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
 
       duration : "1-2 Hours",
+www:"" ,
 }
 
     ],
@@ -1810,6 +1877,7 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
           knowmore: "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html",
 
       duration : "1-2 Hours",
+www:"" ,
 },
         {
           id: 49,
@@ -1835,6 +1903,7 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
           knowmore: "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html",
 
       duration : "1-2 Hours",
+www:"" ,
 }
 
 
@@ -1865,6 +1934,7 @@ tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", 
        type: "shopping",
        knowmore: "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html",
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 77,
@@ -1891,6 +1961,7 @@ tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", 
       knowmore: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 
     {
@@ -1918,6 +1989,7 @@ tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", 
       knowmore: "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 67,
@@ -1935,15 +2007,16 @@ tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", 
       rating:"4.5",
       hrs:"2",
       fee:"0",
-aliases: [],
-content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
-amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
-tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
+		aliases: [],
+		content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
+		amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
+		tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
 
       type: "shopping",
       knowmore: "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
  ],
 
@@ -1972,6 +2045,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           knowmore: "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html",
 
         duration : "1-2 Hours",
+www:"" ,
 },
 
      {
@@ -1998,6 +2072,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           knowmore: "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html",
 
         duration : "1-2 Hours",
+www:"" ,
 },
     {
           id: 3,
@@ -2023,6 +2098,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           knowmore: "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html",
 
         duration : "1-2 Hours",
+www:"" ,
 },
 
      	{
@@ -2039,18 +2115,18 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           rating: "4.7",
           hrs:"2",
           fee:"0",
-aliases: [],
-          latlong: "11.911882611618777, 75.99584945767235",
-          map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
-content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
-amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
-tags: ["Church", "temple", "mosque", "yoga", "festivals"],
+			aliases: [],
+					  latlong: "11.911882611618777, 75.99584945767235",
+					  map: "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
+			content: "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+			amenities: ["Tribal Religion", "Nature Worship", "Indigenous Beliefs", "Wayanad Tribes"],
+			tags: ["Church", "temple", "mosque", "yoga", "festivals"],
           type: "Pilgrimage",
           knowmore: "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
-
 {
       id: 7,
       name: "Meenangadi Church",
@@ -2075,6 +2151,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       knowmore: "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
  	{
       id: 8,
@@ -2100,6 +2177,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       knowmore: "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
  	{
       id: 9,
@@ -2125,6 +2203,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       knowmore: "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
  	{
       id: 10,
@@ -2150,6 +2229,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       knowmore: "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
     {
       id: 11,
@@ -2175,6 +2255,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       knowmore: "https://www.bwstays.com/bw-trishileri-temple-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 
     {
@@ -2201,6 +2282,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       knowmore: "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 },
 
     {
@@ -2227,6 +2309,7 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       knowmore: "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
     ,
     {
@@ -2253,83 +2336,87 @@ tags: ["Church", "temple", "mosque", "yoga", "festivals"],
       knowmore: "https://www.bwstays.com/bw-valliyoorkavu-temple-pilgrimage-wayanad.html",
 
     duration : "1-2 Hours",
+www:"" ,
 }
   ],
   stays: [
-  		{
-  			id: 71,
-  			name: "bwstays",
-  			description: "Black and White ",
-  			image: ["https://www.bwstays.com/assets/img/stays/bw-stays-old-kalpetta-town.webp"],
-  			holidays: "Sun",
-  			timing:[ "09:00-17:00"],
-  			Contact: "+91-000 000 0000",
-  			seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-  			distance: "0",
-  			latlong: "11.535204719467869, 76.1789395934791",
-  			map: "https://maps.app.goo.gl/UQHFNVCdWwFxWRsa8",
-  			transport: "Public",
-  			rating:"4.7",
-  			hrs:"2",
-  			fee:"0",
-  			aliases: [],
-  			content: " Black and White stay   ",
-  			amenities: ["expansive tea estates", "rustic mud trails", "sensory delight", "Quiet"],
-  			tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", "adventure tour"],
-  			type: "stays",
-  			knowmore: "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html",
-  			duration : "1-2 Hours",
-  			},
-    {
-        id: 72,
-        name: "Manathavady",
-        description: "Sample",
-        image: ["https://www.bwstays.com/assets/img/stays/bw-stays-manathavady.webp"],
-        holidays: "Sun",
-        timing:[ "10:00-21:00"],
-        Contact: "+91-000 000 0000",
-  	  seasontovisit:["All Season"],
-        distance: "10",
-         transport: "Public",
-        latlong: "11.619717987953072, 76.08467260510648",
-        map: "https://maps.app.goo.gl/edc3dFtjEMCPZQ4v5",
-       rating:"4.5",
-        hrs:"2",
-        fee:"0",
-  aliases: [],
-  content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
-  amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
-  tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
+			{
+				id: 71,
+				name: "bwstays",
+				description: "Black and White ",
+				image: ["https://www.bwstays.com/assets/img/stays/bw-stays-old-kalpetta-town.webp"],
+				holidays: "Sun",
+				timing:[ "09:00-17:00"],
+				Contact: "+91-000 000 0000",
+				seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
+				distance: "0",
+				latlong: "11.535204719467869, 76.1789395934791",
+				map: "https://maps.app.goo.gl/UQHFNVCdWwFxWRsa8",
+				transport: "Public",
+				rating:"4.7",
+				hrs:"2",
+				fee:"0",
+				aliases: [],
+				content: " Black and White stay   ",
+				amenities: ["expansive tea estates", "rustic mud trails", "sensory delight", "Quiet"],
+				tags: ["Cycling", "Challenging Terrain", "Stay visible", "cyclists", "healthy", "adventure tour"],
+				type: "stays",
+				knowmore: "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html",
+				duration : "1-2 Hours",
+				www:"" ,
+	},
+		{
+			id: 72,
+			name: "Manathavady",
+			description: "Sample",
+			image: ["https://www.bwstays.com/assets/img/stays/bw-stays-manathavady.webp"],
+			holidays: "Sun",
+			timing:[ "10:00-21:00"],
+			Contact: "+91-000 000 0000",
+		  seasontovisit:["All Season"],
+			distance: "10",
+			 transport: "Public",
+			latlong: "11.619717987953072, 76.08467260510648",
+			map: "https://maps.app.goo.gl/edc3dFtjEMCPZQ4v5",
+		   rating:"4.5",
+			hrs:"2",
+			fee:"0",
+	  aliases: [],
+	  content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
+	  amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
+	  tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
 
-         type: "stays",
-       knowmore: "https://maps.app.goo.gl/edc3dFtjEMCPZQ4v5",
-      duration : "1-2 Hours",
-  },
-    {
-        id: 73,
-        name: "Sulthan Batery",
-        description: "Sample",
-        image: ["https://www.bwstays.com/assets/img/stays/bw-stays-sulthan-bathery.webp"],
-        holidays: "Sun",
-        timing:[ "10:00-21:00"],
-        Contact: "+91-000 000 0000",
-  	  seasontovisit:["All Season"],
-        distance: "10",
-         transport: "Public",
-        latlong: "11.619717987953072, 76.08467260510648",
-        map: "https://maps.app.goo.gl/C1cpHFWW6ts9L3sY8",
-       rating:"4.5",
-        hrs:"2",
-        fee:"0",
-  aliases: [],
-  content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
-  amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
-  tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
+			 type: "stays",
+		   knowmore: "https://maps.app.goo.gl/edc3dFtjEMCPZQ4v5",
+		  duration : "1-2 Hours",
+	  www:"" ,
+	},
+		{
+			id: 73,
+			name: "Sulthan Batery",
+			description: "Sample",
+			image: ["https://www.bwstays.com/assets/img/stays/bw-stays-sulthan-bathery.webp"],
+			holidays: "Sun",
+			timing:[ "10:00-21:00"],
+			Contact: "+91-000 000 0000",
+		  seasontovisit:["All Season"],
+			distance: "10",
+			 transport: "Public",
+			latlong: "11.619717987953072, 76.08467260510648",
+			map: "https://maps.app.goo.gl/C1cpHFWW6ts9L3sY8",
+		   rating:"4.5",
+			hrs:"2",
+			fee:"0",
+	  aliases: [],
+	  content: "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
+	  amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
+	  tags: ["spice shopping", "guided tours", "local markets", "cardamom", "pepper", "cinnamon", "kerala cuisine"],
 
-         type: "stays",
-       knowmore: "https://maps.app.goo.gl/C1cpHFWW6ts9L3sY8",
-      duration : "1-2 Hours",
-  },
+			 type: "stays",
+		   knowmore: "https://maps.app.goo.gl/C1cpHFWW6ts9L3sY8",
+		  duration : "1-2 Hours",
+	  www:"" ,
+	},
 
-		]
+]
 }

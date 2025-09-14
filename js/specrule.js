@@ -1,3 +1,7 @@
+<!--
+//{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/cozystay\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+
+-->
 
         // Method 2: Dynamic Speculation Rules with JavaScript
         function addSpeculationRules() {
@@ -33,7 +37,7 @@
 					      "prefetch": [
 					        {
 						 	  "source": "document",
-					          "where": { "href_matches": "/bw*.html" },
+					          "where": { "href_matches": ["/bw*.html" ]},
 					          "eagerness": "conservative"
 					        },
 						    {
@@ -41,7 +45,7 @@
 							  "where": {
 								"and": [
 								  { "href_matches": "/api/*" },
-								  { "not": { "href_matches": "*/blogs*" } }
+								  { "not": { "href_matches": ["*/blogs*"] } }
 								]
 						     },
 						     "eagerness": "conservative"
