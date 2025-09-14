@@ -1,5 +1,5 @@
 
-        document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
             const bookingForm = document.querySelector('.guest-information form');
 
             bookingForm.addEventListener('submit', function (e) {
@@ -169,7 +169,7 @@
 			      day =  day > 9 ? day : '0' + day ;
 			      var month = (d.getMonth() + 1);
 			      month = month > 9 ? month : '0' + month;
-			      var _value =  day + '/' + month  + '/' + d.getFullYear();
+			      var _value =  d.getFullYear() + '-' + month + '-' + day;
 			      return _value;
 			    })();
 			    /*
@@ -260,11 +260,15 @@
                     }
                 },
                 beforeShowDay: function (date) {
-                    var dateAsString = date.getFullYear().toString() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+                    var day = date.getDate();
+                    day = day > 9 ? day : '0' + day;
+                    var month = (date.getMonth() + 1);
+                    month = month > 9 ? month : '0' + month;
+                    var dateAsString = date.getFullYear().toString() + '-' + month + '-' + day;
                     return ($.inArray(dateAsString, closedDays) > -1 ? [false, 'blocked'] :
                         ($.inArray(dateAsString, bookedDays) > -1 ? [false, 'reserved'] : [true, '']));
                 }
-            }).datepicker("setDate", new Date(todayDate));
+            }).datepicker("setDate", new Date());
         });
 
 
