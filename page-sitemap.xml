@@ -7,7 +7,7 @@
 		<image:image>
 			<image:loc>https://www.bwstays.com/pool.png</image:loc>
 		</image:image>
-	</url>
+	 <priority>0.7</priority></url>
 
       
     	 <url>
@@ -22,7 +22,7 @@
 		<image:image>
 			<image:loc>https://www.bwstays.com/assets/img/sports/bw-homestay-rafting-wayanad.webp</image:loc>
 		</image:image>
-	  </url>
+	   <priority>0.7</priority></url>
 
     	 <url>
     	 	<loc>https://www.bwstays.com/bw-ziplines-sporting-wayanad.html</loc>
@@ -36,7 +36,7 @@
 		<image:image>
 			<image:loc>https://www.bwstays.com/assets/img/sports/bw-villa-zipline-wayanad-travel.webp</image:loc>
 		</image:image>
-	  </url>
+	   <priority>0.7</priority></url>
 	
     	 <url>
     	 	<loc>https://www.bwstays.com/bw-football-turf-sporting-wayanad.html</loc>
@@ -48,7 +48,7 @@
 			<image:loc>https://www.bwstays.com/assets/img/sports/bw-green-grass-football-wayanad.webp</image:loc>
 		</image:image>
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 
     	 <url>
     	 	<loc>https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html</loc>
@@ -66,7 +66,7 @@
 			<image:loc>https://www.bwstays.com/assets/img/tribal/bw-service-apartment-uravu-thrikkaipetta-bamboo-wayanad.webp</image:loc>
 		</image:image>
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 	  
 	      	 <url>
@@ -86,7 +86,7 @@
 	  		</image:image>
 	  		 
 	  		 
-	  </url>
+	   <priority>0.7</priority></url>
 	
 		  
 		      	 <url>
@@ -106,7 +106,7 @@
 		  		</image:image>
 		  		 
 		  		 
-			  </url>
+			   <priority>0.7</priority></url>
 	  
 	
     	 <url>
@@ -118,7 +118,7 @@
 		 
 		 
 		 
-	  </url>  
+	   <priority>0.7</priority></url>  
 	  
 	
     	 <url>
@@ -133,7 +133,7 @@
 		</image:image>
 		 
 		 
-	  </url>  
+	   <priority>0.7</priority></url>  
 
     	 <url>
     	 	<loc>https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html</loc>
@@ -151,7 +151,7 @@
 		</image:image>
 		 
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 
     	 <url>
@@ -162,7 +162,7 @@
 		</image:image>
  
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 
     	 <url>
@@ -177,7 +177,7 @@
 		</image:image>
 		 
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 	  
 	      	 <url>
@@ -189,7 +189,7 @@
 	  		 
 	  		 
 	  		 
-	  </url>
+	   <priority>0.7</priority></url>
 
 
     	 <url>
@@ -205,7 +205,7 @@
 		<image:image>
 			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-workation-trishilerry-temple-wayanad.webp</image:loc>
 		</image:image> 
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 
     	 <url>
@@ -220,7 +220,7 @@
 		</image:image>
 		 
 		 
-	  </url>	  
+	   <priority>0.7</priority></url>	  
 	  
 
     	 <url>
@@ -237,7 +237,7 @@
 		 <image:image>
 		 			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-seetha-lava-kusha-temple-wayanad.webp</image:loc>
 		</image:image>
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 
     	 <url>
@@ -264,7 +264,7 @@
 		</image:image>
 		 
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 
 
 
@@ -289,7 +289,7 @@
 		</image:image>
 		 
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 	  
 	  
@@ -309,7 +309,7 @@
 			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-thirunelli-temple-wayanad.webp</image:loc>
 		</image:image>
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 	  
 	      	 <url>
@@ -318,7 +318,7 @@
 	  		<image:image>
 	  			<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-anantha-swami-jain-temple-wayanad.webp</image:loc>
 	  		</image:image> 
-	  </url>
+	   <priority>0.7</priority></url>
 
 
     	 <url>
@@ -330,7 +330,7 @@
 		 
 		 
 		 
-	  </url>
+	   <priority>0.7</priority></url>
 	  
 	
     	 <url>
@@ -342,7 +342,7 @@
 		 
 		 
 		 
-	  </url> 
+	   <priority>0.7</priority></url> 
 	  
 <url>
 	<loc>https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html</loc>
@@ -351,7 +351,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-workation-bamboo-park-wayanad.webp</image:loc>
 	</image:image> 
 
-  </url> 	  
+   <priority>0.7</priority></url> 	  
 	  
 <url>
 	<loc>https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html</loc>
@@ -359,7 +359,7 @@
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/wildlife/bw-kerala-begur-wildlife-sanctuary-wayanad.webp</image:loc>
 	</image:image> 
-</url> 
+ <priority>0.7</priority></url> 
 
 
 <url>
@@ -368,7 +368,7 @@
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/farm/bw-stays-boys-town-farm-wayanad.webp</image:loc>
 	</image:image> 
-</url> 
+ <priority>0.7</priority></url> 
 
 
 <url>
@@ -388,7 +388,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-kerala-brahmagiri-wayanad.avif</image:loc>
 	</image:image>
 
-  </url> 
+   <priority>0.7</priority></url> 
   
 <url>
 	<loc>https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html</loc>
@@ -403,7 +403,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-hotel-rooms-cheengeri-hills-wayanad.webp</image:loc>
 	</image:image>
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html</loc>
@@ -433,7 +433,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-villa-staycation-chembra-wayanad.webp</image:loc>
 	</image:image>
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html</loc>
@@ -443,7 +443,7 @@
 	</image:image>
 	 
 
-   </url> 
+    <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -457,7 +457,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-holiday-vacation-kolagappara-wayanad.webp</image:loc>
 	</image:image>
 
-   </url> 
+    <priority>0.7</priority></url> 
   
 <url>
 	<loc>https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html</loc>
@@ -483,7 +483,7 @@
 	</image:image>
 
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html</loc>
@@ -492,7 +492,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-lakkidi-view-point-wayanad.webp</image:loc>
 	</image:image> 
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html</loc>
@@ -507,7 +507,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/heritage/bw-workation-pazhassi-tomb-wayanad.webp</image:loc>
 	</image:image> 
 
-   </url> 
+    <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -518,7 +518,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-villa-holiday-munnewaram-hill.webp</image:loc>
 	</image:image> 
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html</loc>
@@ -527,7 +527,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/wildlife/bw-homestays-nagarhole-wayanad-wildlife-sanctuary.webp</image:loc>
 	</image:image> 
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html</loc>
@@ -536,7 +536,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-staycation-neerchalu-lake.webp</image:loc>
 	</image:image> 
 
-   </url> 
+    <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -547,7 +547,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-stays-neelimala-view-point-wayanad.webp</image:loc>
 	</image:image> 
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-pakshipathalam-wildlife-sanctuary-wayanad.html</loc>
@@ -574,7 +574,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/wildlife/bw-family-service-villa-pakshipatalam-wayanad.webp</image:loc>
 	</image:image> 
 
-   </url> 
+    <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-pepper-farm-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -583,7 +583,7 @@
 	</image:image> 
 	
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html</loc>
@@ -593,7 +593,7 @@
 	</image:image> 
 	
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-santhinatha-temple-heritage-wayanad.html</loc>
@@ -613,7 +613,7 @@
 	</image:image> 
 
 
-   </url> 
+    <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -621,7 +621,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/heritage/bw-stays-valmiki-ashramam-tourist.webp</image:loc>
 	</image:image> 
 	 
-   </url> 
+    <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -630,7 +630,7 @@
 	</image:image> 
 	 
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html</loc>
@@ -643,42 +643,42 @@
 		<image:loc>https://www.bwstays.com/assets/img/wildlife/bw-team-event-tholpetty-wildlife-sanctuary-wayanad.webp</image:loc>
 	</image:image> 
 
-   </url> 
+    <priority>0.7</priority></url> 
 
    <url>
 	<loc>https://www.bwstays.com/bw-one-day-trails-kalpetta-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod> 
-   </url> 
+    <priority>0.7</priority></url> 
 
    <url>
 	<loc>https://www.bwstays.com/footer.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod> 
-   </url> 
+    <priority>0.7</priority></url> 
 
    <url>
 	<loc>https://www.bwstays.com/404.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod> 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/all-fooding-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
 	 
 
-   </url> 
+    <priority>1</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/all-locations-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
 	 
 
-   </url> 
+    <priority>1</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bwstays-booking.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
 	 
 
-   </url> 
+    <priority>1</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -686,7 +686,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.webp</image:loc>
 	</image:image>  
 
-   </url> 
+    <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -694,7 +694,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/farm/bw-stays-rars-wayanad-ambalavayal.webp</image:loc>
 	</image:image>  
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 
 <url>
@@ -704,7 +704,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/pilgrimage/bw-stays-anantha-swami-jain-temple-wayanad.webp</image:loc>
 	</image:image>  
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 
 <url>
@@ -714,7 +714,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/falls/bw-stays-arripa-falls-kalpetta.webp</image:loc>
 	</image:image>  
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html</loc>
@@ -732,7 +732,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-stays-banasura-sagar-dam-wayanad.webp</image:loc>
 	</image:image>  
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html</loc>
@@ -740,7 +740,7 @@
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-villa-home-banasura-hills.webp</image:loc>
 	</image:image> 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html</loc>
@@ -752,7 +752,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/heritage/bw-stays-chain-tree-service-apartment.webp</image:loc>
 	</image:image>   
 
-   </url> 
+    <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -761,7 +761,7 @@
 	</image:image>  
 	  
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html</loc>
@@ -775,7 +775,7 @@
 	  
 	  
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html</loc>
@@ -791,7 +791,7 @@
 	</image:image>    
 	  
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html</loc>
@@ -801,7 +801,7 @@
 	</image:image>  
 	 
 
-   </url> 
+    <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html</loc>
@@ -824,7 +824,7 @@
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp</image:loc>
 	</image:image>  
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html</loc>
@@ -833,7 +833,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-homestay-en-ooru-tribal-heritage-village-wayanad.webp</image:loc>
 	</image:image>  
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-folklore-museum-wayanad.html</loc>
@@ -852,7 +852,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/museum/bw-guesthouse-wayanad-heritage-museum-ambalavayal.webp</image:loc>
 	</image:image>  
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-honey-museum-wayanad.html</loc>
@@ -862,7 +862,7 @@
 	</image:image>  
 	 
 	 
-</url> 
+ <priority>0.7</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/bw-Irrupu-waterfall-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
@@ -871,7 +871,7 @@
 	</image:image>  
 	 
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html</loc>
@@ -887,7 +887,7 @@
 	</image:image>  
 	 
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html</loc>
@@ -895,7 +895,7 @@
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/falls/bw-homestay-kappikalam-wayanad.webp</image:loc>
 	</image:image> 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html</loc>
@@ -907,7 +907,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-service-apartment-wayanad-karappuzha-dam.webp</image:loc>
 	</image:image> 
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html</loc>
@@ -919,7 +919,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-rooms-karlad-lake-wayanad.webp</image:loc>
 	</image:image> 
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html</loc>
@@ -931,7 +931,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-weekend-kurumbalakotta-wayanad.webp</image:loc>
 	</image:image> 
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html</loc>
@@ -941,7 +941,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/black-and-white-mailadanpara-wayanad.webp</image:loc>
 	</image:image> 
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-manjappara-romantic-wayanad.html</loc>
@@ -951,7 +951,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-holiday-longstay-manjapara-viewpoint.webp</image:loc>
 	</image:image> 
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html</loc>
@@ -975,7 +975,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-homestay-wayanad.webp</image:loc>
 	</image:image> 
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html</loc>
@@ -994,7 +994,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/wildlife/bw-safari-muthanga-wildlife-wayanad.webp</image:loc>
 	</image:image> 
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html</loc>
@@ -1010,7 +1010,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-resort-phanthom-rock-wayanad.webp</image:loc>
 	</image:image>  
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html</loc>
@@ -1039,7 +1039,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp</image:loc>
 	</image:image>  
 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-restaurants-food-wayanad.html</loc>
@@ -1061,7 +1061,7 @@
 	</image:image>  
 
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
  
 
@@ -1093,7 +1093,7 @@
 		<image:loc>https://www.bwstays.com/assets/img/plantation/bw-holiday-plan-edakkal-caves.webp</image:loc>
 	</image:image>  
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html</loc>
@@ -1105,7 +1105,7 @@
 
 	 
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html</loc>
@@ -1117,7 +1117,7 @@
 
 	 
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html</loc>
@@ -1129,7 +1129,7 @@
 
 	 
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-tea-museum-wayanad.html</loc>
@@ -1141,7 +1141,7 @@
 
 	 
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
 <url>
 	<loc>https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html</loc>
@@ -1150,23 +1150,23 @@
 		<image:loc>https://www.bwstays.com/assets/img/falls/bw-stays-thusharagiri-falls-service-apartment.webp</image:loc>
 	</image:image>  
 	 
-</url> 
+ <priority>0.7</priority></url> 
 
  
 
 <url>
 	<loc>https://www.bwstays.com/index.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
-</url> 
+ <priority>1</priority></url> 
 
 
 <url>
 	<loc>https://www.bwstays.com/villa1.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
-</url> 
+ <priority>1</priority></url> 
 <url>
 	<loc>https://www.bwstays.com/villa2.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
-</url> 
+ <priority>0.7</priority></url> 
 
 </urlset>
