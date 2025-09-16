@@ -1,0 +1,142 @@
+{
+  "name": "search_properties",
+  "description": "Search for available properties by various criteria",
+  "responses": [
+    {
+      "input": {
+        "query": "all properties"
+      },
+      "output": {
+        "results": [
+          {
+            "id": "villa1",
+            "name": "Nestle with Nature Villa",
+            "type": "Premium Villa",
+            "capacity": "6-8 guests",
+            "highlights": ["Mountain views", "Nature trails", "Misty mornings"],
+            "price_range": "Premium"
+          },
+          {
+            "id": "villa2",
+            "name": "Hustle in Hisspeed Villa",
+            "type": "Luxury Workation Villa",
+            "capacity": "6-8 guests",
+            "highlights": ["High-speed WiFi", "Work spaces", "Modern amenities"],
+            "price_range": "Luxury"
+          },
+          {
+            "id": "outdoor",
+            "name": "Bustle in Budget Property",
+            "type": "Group Accommodation",
+            "capacity": "10+ guests",
+            "highlights": ["Budget-friendly", "Group spaces", "Tea estate views"],
+            "price_range": "Budget"
+          }
+        ],
+        "total": 3
+      }
+    },
+    {
+      "input": {
+        "query": "workation"
+      },
+      "output": {
+        "results": [
+          {
+            "id": "villa2",
+            "name": "Hustle in Hisspeed Villa",
+            "type": "Luxury Workation Villa",
+            "features": ["High-speed internet", "Dedicated workspaces", "Quiet environment", "24/7 power backup"],
+            "ideal_for": "Remote workers, digital nomads, business travelers"
+          }
+        ],
+        "total": 1
+      }
+    },
+    {
+      "input": {
+        "query": "group booking"
+      },
+      "output": {
+        "results": [
+          {
+            "id": "outdoor",
+            "name": "Bustle in Budget Property",
+            "type": "Group Accommodation",
+            "capacity": "10+ guests",
+            "features": ["Multiple rooms", "Large common areas", "Group activities", "Budget pricing"],
+            "ideal_for": "Corporate retreats, student groups, large families"
+          }
+        ],
+        "total": 1
+      }
+    },
+    {
+      "input": {
+        "query": "family stay"
+      },
+      "output": {
+        "results": [
+          {
+            "id": "villa1",
+            "name": "Nestle with Nature Villa",
+            "capacity": "6-8 guests",
+            "family_features": ["Safe environment", "Garden space", "Multiple bedrooms", "Kitchen facilities"]
+          },
+          {
+            "id": "villa2",
+            "name": "Hustle in Hisspeed Villa",
+            "capacity": "6-8 guests",
+            "family_features": ["Modern amenities", "Entertainment options", "Spacious living areas"]
+          }
+        ],
+        "total": 2
+      }
+    },
+    {
+      "input": {
+        "query": "budget"
+      },
+      "output": {
+        "results": [
+          {
+            "id": "outdoor",
+            "name": "Bustle in Budget Property",
+            "type": "Group Accommodation",
+            "price_advantage": "Best value for money",
+            "features": ["Affordable rates", "Group discounts", "Essential amenities included"],
+            "minimum_stay": "Flexible"
+          }
+        ],
+        "total": 1
+      }
+    },
+    {
+      "input": {
+        "query": "luxury"
+      },
+      "output": {
+        "results": [
+          {
+            "id": "villa2",
+            "name": "Hustle in Hisspeed Villa",
+            "type": "Luxury Workation Villa",
+            "luxury_features": ["Premium interiors", "High-end amenities", "Exclusive services", "Prime location"]
+          },
+          {
+            "id": "villa1",
+            "name": "Nestle with Nature Villa",
+            "type": "Premium Villa",
+            "luxury_features": ["Scenic views", "Private spaces", "Premium bedding", "Personalized service"]
+          }
+        ],
+        "total": 2
+      }
+    }
+  ],
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "tool_responses"
+  }
+}

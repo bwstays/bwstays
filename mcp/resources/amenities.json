@@ -1,0 +1,178 @@
+{
+  "name": "amenities",
+  "description": "Complete list of amenities and facilities available at Black and White Stays properties",
+  "content": {
+    "property_amenities": {
+      "accommodation": [
+        "Spacious bedrooms with premium bedding",
+        "Air conditioning in all rooms",
+        "Private bathrooms with hot water",
+        "Living areas with comfortable seating",
+        "Work desks in select rooms",
+        "Balconies with scenic views",
+        "Studio rooms available"
+      ],
+      "kitchen_dining": [
+        "Fully equipped kitchen",
+        "Refrigerator",
+        "Microwave and oven",
+        "Coffee/tea making facilities",
+        "Dining area",
+        "Cookware and utensils",
+        "Water purifier"
+      ],
+      "connectivity": [
+        "High-speed WiFi throughout property",
+        "Dedicated workspaces",
+        "Power backup",
+        "Multiple charging points",
+        "Smart TV with streaming services"
+      ],
+      "outdoor_facilities": [
+        "Private garden spaces",
+        "Outdoor seating areas",
+        "Barbecue facilities",
+        "Campfire arrangements",
+        "Swimming pool (select properties)",
+        "Children's play area",
+        "Parking space"
+      ],
+      "services": [
+        "24/7 guest support",
+        "Daily housekeeping",
+        "Laundry service",
+        "Room service",
+        "Security",
+        "Luggage storage",
+        "Travel desk"
+      ]
+    },
+    "experience_amenities": {
+      "recreation": [
+        "Indoor games",
+        "Board games and cards",
+        "Library/reading corner",
+        "Music system",
+        "Outdoor sports equipment",
+        "Cycling (bicycles available)",
+        "Trekking gear on request"
+      ],
+      "wellness": [
+        "Yoga mats available",
+        "Meditation spaces",
+        "Nature walk trails",
+        "Fresh mountain air",
+        "Peaceful environment"
+      ],
+      "special_arrangements": [
+        "Barbecue nights",
+        "Campfire evenings",
+        "Local cultural experiences",
+        "Plantation tours",
+        "Adventure activity bookings",
+        "Special celebration arrangements",
+        "Photography assistance"
+      ]
+    },
+    "workation_specific": {
+      "workspace": [
+        "Dedicated work areas",
+        "Ergonomic seating",
+        "Good lighting",
+        "Quiet zones",
+        "Video call friendly spaces",
+        "Printer access on request",
+        "Meeting spaces for groups"
+      ],
+      "productivity": [
+        "Uninterrupted power supply",
+        "High-speed internet (100+ Mbps)",
+        "Multiple WiFi access points",
+        "Backup internet connection",
+        "Coffee/tea throughout the day",
+        "Distraction-free environment"
+      ]
+    },
+    "location_amenities": {
+      "nearby_facilities": [
+        "Walking distance to restaurants",
+        "Local markets nearby",
+        "Medical facilities within reach",
+        "ATMs and banks close by",
+        "Public transport access",
+        "Taxi/cab services available"
+      ],
+      "natural_amenities": [
+        "Mountain views",
+        "Tea estate surroundings",
+        "Fresh air and climate",
+        "Bird watching opportunities",
+        "Star gazing at night",
+        "Morning mist experience",
+        "Sunset viewpoints"
+      ]
+    },
+    "safety_security": {
+      "measures": [
+        "24/7 security personnel",
+        "CCTV surveillance in common areas",
+        "Safe deposit boxes",
+        "First aid kit",
+        "Fire safety equipment",
+        "Emergency contact support",
+        "Secure parking"
+      ],
+      "health_safety": [
+        "Regular sanitization",
+        "Contactless check-in available",
+        "Social distancing measures",
+        "Hand sanitizers provided",
+        "Temperature checks on request",
+        "Medical assistance coordination"
+      ]
+    },
+    "additional_services": {
+      "concierge": [
+        "Tour planning and booking",
+        "Restaurant reservations",
+        "Transportation arrangements",
+        "Activity bookings",
+        "Local guide services",
+        "Shopping assistance",
+        "Special request fulfillment"
+      ],
+      "transfers": [
+        "Airport pickup/drop",
+        "Railway station transfers",
+        "Local sightseeing transport",
+        "Rental car arrangements",
+        "Driver services"
+      ]
+    },
+    "group_amenities": {
+      "corporate_groups": [
+        "Conference facilities",
+        "Projector and screen",
+        "Whiteboard",
+        "Team building activity areas",
+        "Break-out spaces",
+        "Catering services",
+        "Custom meal plans"
+      ],
+      "family_groups": [
+        "Extra beds/cribs",
+        "Child-friendly spaces",
+        "Family games",
+        "Large dining areas",
+        "Multiple bathrooms",
+        "Interconnected rooms available"
+      ]
+    }
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "json",
+    "source": "index.html"
+  }
+}

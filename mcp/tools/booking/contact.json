@@ -1,0 +1,198 @@
+{
+  "name": "contact_info",
+  "description": "Get contact information for reservations and inquiries",
+  "responses": [
+    {
+      "input": {
+        "query": "booking"
+      },
+      "output": {
+        "purpose": "New booking inquiries",
+        "primary_contact": {
+          "phone": "+91-999-9999-9999",
+          "whatsapp": "+919999999999",
+          "email": "bwstays@bwstays.com"
+        },
+        "best_time": "24/7 service available",
+        "response_time": "Usually within 2-4 hours",
+        "information_needed": [
+          "Check-in and check-out dates",
+          "Number of guests",
+          "Property preference",
+          "Special requirements"
+        ]
+      }
+    },
+    {
+      "input": {
+        "query": "emergency"
+      },
+      "output": {
+        "purpose": "Emergency support during stay",
+        "contact": {
+          "primary": "+91-999-9999-9999",
+          "whatsapp": "+919999999999",
+          "available": "24/7"
+        },
+        "local_emergency": {
+          "medical": "District Hospital Kalpetta",
+          "police": "100",
+          "fire": "101",
+          "ambulance": "108"
+        }
+      }
+    },
+    {
+      "input": {
+        "query": "whatsapp"
+      },
+      "output": {
+        "number": "+919999999999",
+        "link": "https://wa.me/919999999999",
+        "services": [
+          "Booking inquiries",
+          "Quick responses",
+          "Share property photos",
+          "Location sharing",
+          "During-stay support"
+        ],
+        "response_time": "Quick responses during business hours"
+      }
+    },
+    {
+      "input": {
+        "query": "email"
+      },
+      "output": {
+        "address": "bwstays@bwstays.com",
+        "use_for": [
+          "Detailed inquiries",
+          "Group bookings",
+          "Corporate queries",
+          "Special requests",
+          "Feedback and complaints"
+        ],
+        "response_time": "Within 24 hours",
+        "format": "Include dates and guest count in subject line"
+      }
+    },
+    {
+      "input": {
+        "query": "location"
+      },
+      "output": {
+        "address": {
+          "area": "Wayanad",
+          "city": "Kalpetta",
+          "state": "Kerala",
+          "country": "India",
+          "pincode": "673121"
+        },
+        "coordinates": {
+          "latitude": 11.605787,
+          "longitude": 76.083311
+        },
+        "landmark": "Near Kalpetta Town",
+        "google_maps": "Search 'Black and White Stays Wayanad'"
+      }
+    },
+    {
+      "input": {
+        "query": "social"
+      },
+      "output": {
+        "platforms": {
+          "instagram": "@bwstays",
+          "facebook": "Black and White Stays",
+          "youtube": "@bwstays",
+          "linkedin": "bwstays",
+          "twitter": "@bwstays"
+        },
+        "follow_for": [
+          "Property updates",
+          "Special offers",
+          "Wayanad travel tips",
+          "Guest experiences",
+          "Local events"
+        ]
+      }
+    },
+    {
+      "input": {
+        "query": "support"
+      },
+      "output": {
+        "pre_arrival": {
+          "services": ["Travel planning", "Local information", "Special arrangements"],
+          "contact": "Same numbers as booking"
+        },
+        "during_stay": {
+          "available": "24/7 on-call support",
+          "services": ["Maintenance", "Housekeeping", "Local assistance"]
+        },
+        "post_stay": {
+          "feedback": "bwstays@bwstays.com",
+          "lost_found": "Same email with 'Lost Item' in subject"
+        }
+      }
+    },
+    {
+      "input": {
+        "query": "group"
+      },
+      "output": {
+        "purpose": "Group and corporate bookings",
+        "contact": {
+          "phone": "+91-999-9999-9999",
+          "email": "bwstays@bwstays.com"
+        },
+        "special_services": [
+          "Bulk booking discounts",
+          "Event planning",
+          "Customized meal plans",
+          "Activity coordination",
+          "Transportation arrangements"
+        ],
+        "advance_notice": "Minimum 1-2 weeks preferred"
+      }
+    },
+    {
+      "input": {
+        "query": "directions"
+      },
+      "output": {
+        "from_airport": {
+          "name": "Calicut International Airport",
+          "distance": "95 km",
+          "time": "2.5 - 3 hours",
+          "transport": "Taxi available, or we can arrange pickup"
+        },
+        "from_railway": {
+          "name": "Kozhikode Railway Station",
+          "distance": "72 km",
+          "time": "2 - 2.5 hours",
+          "transport": "Taxi or bus available"
+        },
+        "local_navigation": {
+          "landmark": "Near Kalpetta town center",
+          "call_for": "Detailed directions once you reach Kalpetta"
+        }
+      }
+    }
+  ],
+  "default_response": {
+    "all_inquiries": {
+      "phone": "+91-999-9999-9999",
+      "whatsapp": "+919999999999",
+      "email": "bwstays@bwstays.com"
+    },
+    "business_hours": "24/7 service",
+    "languages": ["English", "Malayalam", "Hindi"],
+    "preferred_contact": "WhatsApp for quick response"
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "tool_responses"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "name": "policies",
+  "description": "Terms, conditions, privacy policy and cancellation policies for Black and White Stays",
+  "content": {
+    "terms_conditions": {
+      "booking_terms": [
+        "Bookings are subject to availability",
+        "Advance payment required to confirm reservation",
+        "Valid government ID proof mandatory at check-in",
+        "Prices are subject to change based on season and availability",
+        "Management reserves the right to admission"
+      ],
+      "guest_responsibilities": [
+        "Maintain property cleanliness and avoid damage",
+        "Respect quiet hours (10 PM - 7 AM)",
+        "No illegal activities permitted on premises",
+        "Smoking only in designated areas",
+        "Pets allowed only with prior permission",
+        "Maximum occupancy limits must be followed"
+      ],
+      "property_rules": [
+        "No parties without prior permission",
+        "Visitors must be registered at reception",
+        "Use of pool and other facilities at own risk",
+        "Children must be supervised at all times",
+        "Parking at owner's risk",
+        "Energy and water conservation encouraged"
+      ],
+      "liability": [
+        "Management not responsible for loss of personal belongings",
+        "Guests responsible for any damage to property",
+        "Travel insurance recommended",
+        "Force majeure events not covered",
+        "Medical emergencies handled on best-effort basis"
+      ]
+    },
+    "privacy_policy": {
+      "data_collection": {
+        "personal_information": [
+          "Name and contact details",
+          "Government ID information",
+          "Payment details",
+          "Stay preferences",
+          "Special requirements"
+        ],
+        "usage": [
+          "Booking confirmation and management",
+          "Guest communication",
+          "Service improvement",
+          "Legal compliance",
+          "Marketing (with consent)"
+        ]
+      },
+      "data_protection": {
+        "measures": [
+          "Secure storage of personal information",
+          "Limited access to authorized personnel",
+          "No sharing with third parties without consent",
+          "Regular security updates",
+          "Compliance with data protection laws"
+        ],
+        "guest_rights": [
+          "Access to personal data",
+          "Correction of incorrect information",
+          "Deletion upon request (subject to legal requirements)",
+          "Opt-out from marketing communications"
+        ]
+      },
+      "cookies": {
+        "usage": "Website uses cookies for better user experience",
+        "types": ["Essential cookies", "Analytics cookies", "Marketing cookies"],
+        "control": "Users can manage cookie preferences through browser settings"
+      }
+    },
+    "cancellation_policy": {
+      "standard_cancellation": {
+        "7_days_plus": {
+          "notice": "More than 7 days before check-in",
+          "refund": "100% refund minus processing fees"
+        },
+        "3_to_7_days": {
+          "notice": "3-7 days before check-in",
+          "refund": "50% refund"
+        },
+        "less_than_3_days": {
+          "notice": "Less than 3 days",
+          "refund": "No refund"
+        }
+      },
+      "special_circumstances": {
+        "medical_emergency": "Case-by-case basis with valid documentation",
+        "natural_disasters": "Full refund or rescheduling option",
+        "government_restrictions": "Full refund or date change",
+        "flight_cancellations": "Flexible rescheduling"
+      },
+      "modification_policy": {
+        "date_changes": "Subject to availability and price difference",
+        "property_changes": "Based on availability",
+        "guest_count": "Additional charges for extra guests",
+        "early_departure": "No refund for unused days"
+      },
+      "no_show": {
+        "policy": "Full charges applicable",
+        "grace_period": "6 hours from check-in time",
+        "communication": "Inform for late arrival to hold booking"
+      }
+    },
+    "payment_policies": {
+      "accepted_methods": [
+        "Bank transfers (NEFT/IMPS/RTGS)",
+        "UPI payments",
+        "Credit cards (Visa/MasterCard)",
+        "Debit cards",
+        "Cash (for balance payment only)"
+      ],
+      "payment_schedule": {
+        "advance": "50% at booking confirmation",
+        "balance": "50% at check-in",
+        "security_deposit": "May be required for certain properties"
+      },
+      "pricing": {
+        "tax_inclusion": "All prices include applicable taxes",
+        "service_charges": "Included in quoted price",
+        "extra_charges": "Additional services billed separately",
+        "seasonal_pricing": "Rates vary by season and demand"
+      }
+    },
+    "safety_security": {
+      "guest_safety": [
+        "24/7 security personnel",
+        "CCTV surveillance in common areas",
+        "Emergency contact numbers provided",
+        "First aid available",
+        "Fire safety measures in place"
+      ],
+      "covid_protocols": [
+        "Regular sanitization of premises",
+        "Contactless check-in available",
+        "Staff health monitoring",
+        "Social distancing measures",
+        "Mask usage in common areas"
+      ],
+      "emergency_procedures": {
+        "medical": "Tie-up with local hospitals",
+        "fire": "Evacuation plan and fire extinguishers",
+        "natural_disaster": "Safety protocols in place",
+        "contact": "24/7 emergency helpline"
+      }
+    },
+    "house_rules": {
+      "check_in_out": {
+        "standard_check_in": "12:00 PM",
+        "standard_check_out": "11:00 AM",
+        "early_late": "Subject to availability and charges"
+      },
+      "occupancy": {
+        "standard": "As per room/villa capacity",
+        "extra_guests": "Additional charges apply",
+        "children": "Children under 5 free (existing bedding)",
+        "visitors": "Must register, may have time restrictions"
+      },
+      "conduct": {
+        "noise": "Maintain silence during night hours",
+        "alcohol": "Permitted in moderation",
+        "smoking": "Designated areas only",
+        "damage": "Charges applicable for property damage"
+      }
+    },
+    "dispute_resolution": {
+      "complaints": {
+        "process": "Report to management immediately",
+        "resolution": "Best effort within 24 hours",
+        "escalation": "Email to management if unresolved"
+      },
+      "governing_law": "Indian law applicable",
+      "jurisdiction": "Courts of Kerala have jurisdiction"
+    },
+    "contact_compliance": {
+      "queries": "bwstays@bwstays.com",
+      "complaints": "Same email with subject 'Complaint'",
+      "feedback": "Welcome via email or during stay",
+      "legal": "Registered business in Kerala, India"
+    }
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "json",
+    "source": "index.html and standard hospitality policies"
+  }
+}

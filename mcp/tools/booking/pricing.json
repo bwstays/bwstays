@@ -1,0 +1,207 @@
+{
+  "name": "get_pricing",
+  "description": "Get pricing information for properties and services",
+  "responses": [
+    {
+      "input": {
+        "query": "villa1"
+      },
+      "output": {
+        "property": "Nestle with Nature Villa",
+        "type": "Premium Villa",
+        "capacity": "6-8 guests",
+        "pricing": {
+          "peak_season": "Contact for rates",
+          "off_season": "Attractive discounts available",
+          "includes": ["Accommodation", "Basic amenities", "WiFi", "Parking"],
+          "extras": "Meals, activities, transfers charged separately"
+        },
+        "minimum_stay": "Usually 2 nights",
+        "advance": "50% advance required"
+      }
+    },
+    {
+      "input": {
+        "query": "villa2"
+      },
+      "output": {
+        "property": "Hustle in Hisspeed Villa",
+        "type": "Luxury Workation Villa",
+        "capacity": "6-8 guests",
+        "pricing": {
+          "daily": "Premium rates",
+          "weekly": "Special weekly rates",
+          "monthly": "Best value monthly packages",
+          "workation_special": "Long-stay discounts available"
+        },
+        "includes": ["High-speed WiFi", "Workspace", "All amenities"],
+        "ideal_for": "Remote workers and business travelers"
+      }
+    },
+    {
+      "input": {
+        "query": "budget"
+      },
+      "output": {
+        "property": "Bustle in Budget Property",
+        "type": "Group Accommodation",
+        "capacity": "10+ guests",
+        "pricing": {
+          "per_person": "Most economical option",
+          "group_rates": "Discounts for 10+ people",
+          "includes": "Basic amenities and accommodation",
+          "value": "Best price-to-space ratio"
+        },
+        "perfect_for": "Student groups, large families, corporate retreats"
+      }
+    },
+    {
+      "input": {
+        "query": "weekly"
+      },
+      "output": {
+        "duration": "7 nights",
+        "benefits": [
+          "10-15% discount on daily rates",
+          "Complimentary housekeeping",
+          "Flexible check-in/out",
+          "One complimentary airport transfer"
+        ],
+        "available": "All properties",
+        "popular": "Ideal for workations and extended holidays"
+      }
+    },
+    {
+      "input": {
+        "query": "monthly"
+      },
+      "output": {
+        "duration": "28-30 nights",
+        "benefits": [
+          "25-30% discount on daily rates",
+          "All utilities included",
+          "Weekly housekeeping",
+          "Dedicated workspace (Villa2)",
+          "Laundry service discounts"
+        ],
+        "ideal": "Digital nomads and remote workers",
+        "contact": "Custom quotes available"
+      }
+    },
+    {
+      "input": {
+        "query": "group_pricing"
+      },
+      "output": {
+        "group_size": {
+          "6-10": "Standard group rates",
+          "11-15": "10% group discount",
+          "16+": "15% group discount"
+        },
+        "includes": [
+          "Accommodation",
+          "Common area access",
+          "Basic amenities"
+        ],
+        "add_ons": {
+          "meals": "Bulk meal packages available",
+          "activities": "Group activity discounts",
+          "transport": "Group transfer rates"
+        }
+      }
+    },
+    {
+      "input": {
+        "query": "extras"
+      },
+      "output": {
+        "meals": {
+          "breakfast": "₹150-250 per person",
+          "lunch": "₹200-350 per person",
+          "dinner": "₹200-350 per person",
+          "special_meal": "Customized pricing"
+        },
+        "activities": {
+          "campfire": "₹1500-2500 per session",
+          "barbecue": "₹2000-3500 per session",
+          "guide": "₹1500-2500 per day"
+        },
+        "transfers": {
+          "airport": "₹3000-4000 one way",
+          "railway": "₹2000-3000 one way",
+          "local": "₹500-1500 depending on distance"
+        }
+      }
+    },
+    {
+      "input": {
+        "query": "seasonal_rates"
+      },
+      "output": {
+        "peak_season": {
+          "months": ["December", "January", "March-May"],
+          "pricing": "Premium rates",
+          "advance_booking": "Required",
+          "minimum_stay": "2-3 nights"
+        },
+        "off_season": {
+          "months": ["June-September"],
+          "discount": "20-30% off peak rates",
+          "benefits": "Flexible booking, upgrades subject to availability",
+          "special": "Monsoon packages available"
+        },
+        "shoulder_season": {
+          "months": ["October-November", "February"],
+          "pricing": "Moderate rates",
+          "availability": "Good",
+          "benefits": "Better weather, fewer crowds"
+        }
+      }
+    },
+    {
+      "input": {
+        "query": "payment"
+      },
+      "output": {
+        "advance": {
+          "amount": "50% of total",
+          "when": "At booking confirmation",
+          "methods": ["Bank transfer", "UPI", "Card"]
+        },
+        "balance": {
+          "amount": "Remaining 50%",
+          "when": "At check-in",
+          "methods": ["Cash", "UPI", "Card"]
+        },
+        "cancellation": {
+          "7_days": "Full refund minus processing",
+          "3_7_days": "50% refund",
+          "less_3_days": "No refund"
+        }
+      }
+    }
+  ],
+  "default_response": {
+    "message": "For detailed pricing, please contact us with your specific requirements",
+    "factors": [
+      "Property type",
+      "Season and dates",
+      "Number of guests",
+      "Duration of stay",
+      "Additional services"
+    ],
+    "contact": {
+      "phone": "+91-999-9999-9999",
+      "whatsapp": "+919999999999",
+      "email": "bwstays@bwstays.com"
+    },
+    "note": "All prices include applicable taxes"
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "tool_responses",
+    "currency": "INR",
+    "note": "Prices subject to change. Contact for current rates."
+  }
+}

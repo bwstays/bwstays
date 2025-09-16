@@ -1,0 +1,345 @@
+{
+  "name": "attractions",
+  "description": "Tourist attractions and places to visit in Wayanad",
+  "content": {
+    "overview": {
+      "destination": "Wayanad, Kerala",
+      "highlights": "Rolling hills, misty mountains, and endless greenery - Discover the Wayanad Skyline",
+      "best_for": ["Nature lovers", "Adventure seekers", "Families", "Honeymooners", "Photography enthusiasts"],
+      "climate": "Pleasant year-round with monsoons June-September"
+    },
+    "categories": {
+      "plantations": {
+        "title": "Plantations",
+        "description": "Tourist places to visit - Tea, Coffee and Spice plantations",
+        "attractions": [
+          {
+            "name": "Tea Estate Tours",
+            "description": "Walk through lush green tea gardens",
+            "activities": ["Tea tasting", "Factory visits", "Photography"],
+            "best_time": "Early morning for misty views"
+          },
+          {
+            "name": "Coffee Plantations",
+            "description": "Experience coffee cultivation process",
+            "activities": ["Coffee tasting", "Plantation walks", "Learn processing"],
+            "best_time": "October to March"
+          },
+          {
+            "name": "Spice Gardens",
+            "description": "Aromatic journey through spice cultivation",
+            "activities": ["Spice identification", "Buy fresh spices", "Guided tours"],
+            "best_time": "Throughout the year"
+          }
+        ]
+      },
+      "waterfalls": {
+        "title": "Water Falls",
+        "description": "Water falls & Lakes of Wayanad",
+        "attractions": [
+          {
+            "name": "Thusharagiri Falls",
+            "description": "Three-tiered waterfall with trekking trails",
+            "activities": ["Trekking", "Swimming", "Rock climbing"],
+            "distance": "From property varies"
+          },
+          {
+            "name": "Meenmutty Falls",
+            "description": "Three-tiered waterfall, requires trek",
+            "activities": ["Trekking", "Photography", "Nature walks"],
+            "difficulty": "Moderate to difficult trek"
+          },
+          {
+            "name": "Soochipara Falls",
+            "description": "Needle rock waterfall with pool",
+            "activities": ["Swimming", "Rock climbing", "Photography"],
+            "best_season": "Post-monsoon"
+          },
+          {
+            "name": "Kanthanpara Falls",
+            "description": "Smaller, easily accessible falls",
+            "activities": ["Picnic", "Photography", "Relaxation"],
+            "accessibility": "Easy, good for families"
+          }
+        ]
+      },
+      "museums_crafts": {
+        "title": "Museums & Crafts",
+        "description": "Family Outing to visit",
+        "attractions": [
+          {
+            "name": "Wayanad Heritage Museum",
+            "description": "Artifacts from 2nd century onwards",
+            "highlights": ["Tribal artifacts", "Ancient sculptures", "Historical items"],
+            "timing": "9 AM - 5 PM (Closed Mondays)"
+          },
+          {
+            "name": "Uravu Bamboo Craft",
+            "description": "Traditional bamboo crafts center",
+            "activities": ["Workshop visits", "Buy handicrafts", "Learn craft"],
+            "specialty": "Eco-friendly bamboo products"
+          }
+        ]
+      },
+      "romantic_spots": {
+        "title": "Romantic Spots",
+        "description": "Honeymoon Spots and Villages",
+        "attractions": [
+          {
+            "name": "Neelimala View Point",
+            "description": "Panoramic valley views",
+            "best_time": "Sunrise and sunset",
+            "activities": ["Photography", "Picnic", "Trekking"]
+          },
+          {
+            "name": "Pookode Lake",
+            "description": "Serene freshwater lake",
+            "activities": ["Boating", "Walking trails", "Bird watching"],
+            "shape": "Heart-shaped lake"
+          },
+          {
+            "name": "Lakkidi View Point",
+            "description": "Gateway to Wayanad with stunning views",
+            "highlights": ["Sunset views", "Chain tree nearby", "Photography"],
+            "elevation": "700m above sea level"
+          }
+        ]
+      },
+      "cultural_historical": {
+        "title": "Cultural & Historical",
+        "description": "Leisure places to visit",
+        "attractions": [
+          {
+            "name": "Chain Tree",
+            "description": "Historical site with local legend",
+            "story": "Tribal youth's spirit chained to guide British",
+            "location": "Lakkidi"
+          },
+          {
+            "name": "Jain Temple Sulthan Bathery",
+            "description": "13th century Jain temple",
+            "highlights": ["Ancient architecture", "Historical significance"],
+            "note": "Used as ammunition store by Tipu Sultan"
+          },
+          {
+            "name": "Pazhassi Raja Tomb",
+            "description": "Memorial of Kerala freedom fighter",
+            "significance": "Lion of Kerala",
+            "location": "Mananthavady"
+          }
+        ]
+      },
+      "trekking": {
+        "title": "Trekking",
+        "description": "Adventure and Hidden Treasures",
+        "attractions": [
+          {
+            "name": "Edakkal Caves",
+            "description": "Prehistoric rock engravings",
+            "age": "Dating back to 6000 BCE",
+            "trek": "45-minute climb",
+            "timings": "9 AM - 5 PM"
+          },
+          {
+            "name": "Chembra Peak",
+            "description": "Highest peak in Wayanad",
+            "height": "2100m",
+            "highlight": "Heart-shaped lake",
+            "difficulty": "Moderate to difficult"
+          },
+          {
+            "name": "Banasura Sagar Dam",
+            "description": "Largest earthen dam in India",
+            "activities": ["Speed boating", "Trekking", "Island visit"],
+            "view": "Banasura hills backdrop"
+          }
+        ]
+      },
+      "wildlife": {
+        "title": "Wildlife",
+        "description": "Learn about places to visit",
+        "attractions": [
+          {
+            "name": "Wayanad Wildlife Sanctuary",
+            "description": "Part of Nilgiri Biosphere Reserve",
+            "animals": ["Elephants", "Tigers", "Leopards", "Deer"],
+            "area": "344 sq km",
+            "zones": ["Muthanga", "Tholpetty"]
+          },
+          {
+            "name": "Pakshipathalam Bird Sanctuary",
+            "description": "Virgin forest with rare birds",
+            "trek": "7 km through dense forest",
+            "highlights": ["Cave exploration", "Bird watching", "Jungle trek"],
+            "difficulty": "Challenging"
+          },
+          {
+            "name": "Kuruva Island",
+            "description": "River island with rare flora and fauna",
+            "area": "950 acres",
+            "activities": ["Bamboo rafting", "Nature walk", "Bird watching"],
+            "best_time": "October to May"
+          }
+        ]
+      },
+      "farm_visits": {
+        "title": "Farm Visit",
+        "description": "Gurukula Botanical Sanctuary and more",
+        "attractions": [
+          {
+            "name": "Gurukula Botanical Sanctuary",
+            "description": "Conservation center for rare plants",
+            "specialty": "Medicinal plants and orchids",
+            "tour": "Guided tours available",
+            "duration": "2-3 hours"
+          }
+        ]
+      },
+      "sporting": {
+        "title": "Sporting",
+        "description": "Adventure sports and activities",
+        "activities": [
+          {
+            "name": "Zip-lining",
+            "locations": ["Banasura", "Various resorts"],
+            "duration": "15-30 minutes",
+            "difficulty": "Easy to moderate"
+          },
+          {
+            "name": "Rock Climbing",
+            "locations": ["Soochipara", "Thusharagiri"],
+            "equipment": "Usually provided",
+            "guidance": "Professional instructors available"
+          },
+          {
+            "name": "Mountain Biking",
+            "trails": ["Tea estate roads", "Forest trails"],
+            "rental": "Bicycles available for rent",
+            "difficulty": "Various levels"
+          }
+        ]
+      },
+      "restaurants": {
+        "title": "Restaurants",
+        "description": "Village Food and local cuisine",
+        "highlights": [
+          "Traditional Kerala cuisine",
+          "Malabar specialties",
+          "Fresh local ingredients",
+          "Tribal food experiences",
+          "Tea estate restaurants"
+        ],
+        "must_try": [
+          "Malabar Biryani",
+          "Puttu and Kadala",
+          "Appam with Stew",
+          "Fresh seafood",
+          "Traditional Sadya"
+        ]
+      },
+      "tribal": {
+        "title": "Tribal",
+        "description": "Uravu and tribal experiences",
+        "experiences": [
+          {
+            "name": "Tribal Village Visits",
+            "communities": ["Paniya", "Kuruma", "Adiya"],
+            "activities": ["Cultural shows", "Craft demonstrations", "Traditional food"],
+            "respect": "Follow guidelines for respectful interaction"
+          },
+          {
+            "name": "Uravu Indigenous Science Centre",
+            "focus": "Bamboo craft and sustainable living",
+            "activities": ["Workshops", "Product purchase", "Community interaction"]
+          }
+        ]
+      },
+      "cycling": {
+        "title": "Cycling",
+        "description": "Rippon Tea estate road and scenic routes",
+        "routes": [
+          {
+            "name": "Tea Estate Circuit",
+            "distance": "10-15 km",
+            "difficulty": "Easy to moderate",
+            "highlights": ["Tea gardens", "Valley views", "Cool climate"]
+          },
+          {
+            "name": "Chundale Circuit",
+            "distance": "20 km",
+            "difficulty": "Moderate",
+            "terrain": "Mixed - hills and plains"
+          }
+        ]
+      },
+      "shopping": {
+        "title": "Shopping",
+        "description": "Organic Spices and local products",
+        "items": [
+          {
+            "category": "Spices",
+            "products": ["Cardamom", "Pepper", "Cinnamon", "Nutmeg", "Cloves"],
+            "where": "Local markets, spice gardens"
+          },
+          {
+            "category": "Tea & Coffee",
+            "products": ["Fresh tea leaves", "Coffee beans", "Instant mixes"],
+            "where": "Estate shops, local stores"
+          },
+          {
+            "category": "Honey & Handicrafts",
+            "products": ["Wild honey", "Bamboo crafts", "Tribal artifacts"],
+            "where": "Uravu, local markets"
+          }
+        ]
+      },
+      "pilgrimage": {
+        "title": "Pilgrimage",
+        "description": "Religious sites to visit",
+        "sites": [
+          {
+            "name": "Thirunelli Temple",
+            "deity": "Lord Vishnu",
+            "significance": "Ancient temple in mountains",
+            "location": "32 km from Mananthavady"
+          },
+          {
+            "name": "Valliyoorkavu Temple",
+            "deity": "Goddess Bhagavathi",
+            "festival": "Annual festival in March",
+            "specialty": "Traditional architecture"
+          },
+          {
+            "name": "St. Mary's Church Meenangadi",
+            "established": "1950s",
+            "architecture": "Gothic style",
+            "significance": "One of oldest churches in Wayanad"
+          }
+        ]
+      }
+    },
+    "seasonal_attractions": {
+      "monsoon": {
+        "months": "June to September",
+        "highlights": ["Waterfalls at full flow", "Lush greenery", "Misty mountains"],
+        "activities": ["Indoor activities", "Ayurveda treatments", "Cultural experiences"]
+      },
+      "winter": {
+        "months": "October to February",
+        "highlights": ["Pleasant weather", "Clear views", "Festival season"],
+        "activities": ["All outdoor activities", "Trekking", "Wildlife safaris"]
+      },
+      "summer": {
+        "months": "March to May",
+        "highlights": ["Moderate climate", "Less crowded", "Off-season rates"],
+        "activities": ["Early morning treks", "Water activities", "Plantation visits"]
+      }
+    }
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "json",
+    "source": "index.html"
+  }
+}

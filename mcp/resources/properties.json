@@ -1,0 +1,132 @@
+{
+  "name": "properties",
+  "description": "Available villas and property listings at Black and White Stays Wayanad",
+  "content": {
+    "overview": {
+      "total_properties": 3,
+      "property_types": ["Villa", "Service Apartment", "Studio Rooms"],
+      "location": "Wayanad, Kerala, India",
+      "service_type": "Luxury vacation rentals and workation spaces"
+    },
+    "properties": [
+      {
+        "id": "villa1",
+        "name": "Nestle with Nature Villa",
+        "type": "Premium Villa",
+        "tagline": "Experience the serene beauty of Wayanad's landscapes",
+        "description": "A luxurious villa nestled in the misty mountains of Wayanad, offering breathtaking views and complete tranquility",
+        "highlights": [
+          "Panoramic mountain views",
+          "Misty morning experiences",
+          "Direct access to nature trails",
+          "Perfect for nature lovers"
+        ],
+        "ideal_for": ["Families", "Nature enthusiasts", "Photography lovers", "Peaceful retreats"],
+        "features": {
+          "bedrooms": "Multiple",
+          "capacity": "6-8 guests",
+          "view": "Mountain and valley views",
+          "special": "Morning mist experiences"
+        },
+        "images": [
+          "black-and-white-wayanad-mist.webp"
+        ]
+      },
+      {
+        "id": "villa2",
+        "name": "Hustle in Hisspeed Villa",
+        "type": "Luxury Workation Villa",
+        "tagline": "Luxurious amenities for your perfect stay",
+        "description": "Thoughtfully designed spaces combining work and leisure, with high-speed connectivity and premium amenities",
+        "highlights": [
+          "High-speed internet connectivity",
+          "Dedicated workspace areas",
+          "Premium amenities",
+          "Modern luxury interiors"
+        ],
+        "ideal_for": ["Remote workers", "Business travelers", "Digital nomads", "Long stays"],
+        "features": {
+          "bedrooms": "Multiple",
+          "capacity": "6-8 guests",
+          "workspace": "Dedicated work areas",
+          "connectivity": "High-speed WiFi"
+        },
+        "images": [
+          "bw-destination-chembra-wayanad.webp"
+        ]
+      },
+      {
+        "id": "outdoor",
+        "name": "Bustle in Budget Property",
+        "type": "Group Accommodation",
+        "tagline": "Group workation without distraction",
+        "description": "Budget-friendly accommodation perfect for groups, with beautiful settings to boost productivity and relaxation",
+        "highlights": [
+          "Budget-friendly pricing",
+          "Group accommodation options",
+          "Tea estate views",
+          "Productivity-focused environment"
+        ],
+        "ideal_for": ["Corporate groups", "Student groups", "Budget travelers", "Team retreats"],
+        "features": {
+          "bedrooms": "Multiple rooms",
+          "capacity": "10+ guests",
+          "setting": "Tea estate surroundings",
+          "value": "Best value for groups"
+        },
+        "images": [
+          "bw-tea-estate-kalpetta-india.webp"
+        ]
+      }
+    ],
+    "common_features": {
+      "all_properties_include": [
+        "24/7 guest support",
+        "Housekeeping services",
+        "Parking facilities",
+        "Security",
+        "Garden/outdoor spaces",
+        "Kitchen facilities",
+        "WiFi connectivity"
+      ],
+      "available_services": [
+        "Airport transfers",
+        "Local sightseeing arrangements",
+        "Food delivery coordination",
+        "Laundry services",
+        "Tour planning assistance"
+      ]
+    },
+    "location_advantages": {
+      "proximity": {
+        "kalpetta_town": "Few minutes drive",
+        "tourist_spots": "Central location for all attractions",
+        "transport_hub": "Easy access to bus station and cab services",
+        "markets": "Close to local markets and shopping areas"
+      },
+      "scenic_features": [
+        "Western Ghats mountain views",
+        "Tea estate surroundings",
+        "Forest proximity",
+        "Valley views"
+      ]
+    },
+    "booking_options": {
+      "stay_types": [
+        "Daily rentals",
+        "Weekly stays",
+        "Monthly workations",
+        "Group bookings",
+        "Corporate retreats"
+      ],
+      "seasonal_availability": "Year-round availability with seasonal pricing",
+      "advance_booking": "Recommended for peak seasons and holidays"
+    }
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "json",
+    "source": "index.html"
+  }
+}

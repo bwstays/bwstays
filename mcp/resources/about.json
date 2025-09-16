@@ -1,0 +1,100 @@
+{
+  "name": "about",
+  "description": "Information about Black and White Stays company and services",
+  "content": {
+    "company": {
+      "name": "Black and White Stays",
+      "tagline": "STAY CONNECTED, STAY CLOSE, STAY RELAXED",
+      "motto": "Redefine Your Stay",
+      "description": "Black & White Workations - Home Away Home for Family and Professionals for Vacation and Workations",
+      "services": [
+        "Luxury Villa Rentals",
+        "Workation Spaces",
+        "Staycation Services",
+        "Group Accommodations",
+        "Tourism Support"
+      ],
+      "philosophy": {
+        "primary": "Colive, Cowork & Coplay",
+        "vision": "Create unforgettable memories with our curated experiences and activities",
+        "approach": "Combining rural tranquility with urban convenience"
+      }
+    },
+    "unique_selling_points": [
+      {
+        "title": "Nestle with Nature",
+        "description": "Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep",
+        "icon": "mountain"
+      },
+      {
+        "title": "Hustle in Hisspeed",
+        "description": "Luxurious amenities and thoughtfully designed spaces for your perfect stay",
+        "icon": "home"
+      },
+      {
+        "title": "Bustle in Budget",
+        "description": "Increased productivity. Group Workation without distraction (and with the motivation of their new, beautiful setting)",
+        "icon": "star"
+      }
+    ],
+    "location_benefits": {
+      "title": "Stay in the heart of hill station",
+      "features": [
+        {
+          "title": "Walk Everywhere",
+          "description": "Steps from Food Joints, City Center, and Tourist locations"
+        },
+        {
+          "title": "Stay Inspired",
+          "description": "Best nightlife, shopping, and cultural attractions at your doorstep"
+        },
+        {
+          "title": "Unmatched Connectivity",
+          "description": "Quick access to Cab Stand, Bus Station, and Transport"
+        },
+        {
+          "title": "Best for",
+          "description": "First-time visitors, business travelers, and those who want to be in the center of it all"
+        }
+      ]
+    },
+    "why_wayanad": {
+      "highlights": [
+        {
+          "title": "Central & Well-Connected",
+          "description": "Minutes to Kalpetta town, markets and top attractions"
+        },
+        {
+          "title": "Scenic Western Ghats Views",
+          "description": "Wake up to green hills, tea estates and misty mornings"
+        },
+        {
+          "title": "Vibrant Local Life",
+          "description": "Heritage spots, Cafes, Lakes and Forest trails all close by"
+        },
+        {
+          "title": "Apt for",
+          "description": "Families, couples and remote workers seeking calm with convenience"
+        }
+      ]
+    },
+    "business_hours": {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "hours": "24/7 Service",
+      "note": "Round-the-clock support for all guests"
+    },
+    "social_media": {
+      "linkedin": "https://www.linkedin.com/company/bwstays",
+      "twitter": "https://x.com/bwstays",
+      "facebook": "https://www.facebook.com/bwstays",
+      "instagram": "https://www.instagram.com/bwstays",
+      "youtube": "https://www.youtube.com/@bwstays"
+    }
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "json",
+    "source": "index.html"
+  }
+}

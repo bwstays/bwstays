@@ -1,0 +1,165 @@
+{
+  "name": "check_availability",
+  "description": "Check property availability for specific dates",
+  "responses": [
+    {
+      "input": {
+        "property": "all",
+        "month": "December"
+      },
+      "output": {
+        "status": "limited",
+        "message": "December is peak season. Limited availability.",
+        "properties": {
+          "villa1": "Contact for availability",
+          "villa2": "Contact for availability",
+          "outdoor": "Some dates available"
+        },
+        "recommendation": "Book 3-4 weeks in advance for December"
+      }
+    },
+    {
+      "input": {
+        "property": "all",
+        "month": "January"
+      },
+      "output": {
+        "status": "limited",
+        "message": "January is peak season with New Year visitors.",
+        "properties": {
+          "villa1": "Limited availability",
+          "villa2": "Limited availability",
+          "outdoor": "Better availability for groups"
+        },
+        "recommendation": "Book early for January stays"
+      }
+    },
+    {
+      "input": {
+        "property": "all",
+        "month": "July"
+      },
+      "output": {
+        "status": "good",
+        "message": "Monsoon season - Good availability with attractive rates",
+        "properties": {
+          "villa1": "Available",
+          "villa2": "Available",
+          "outdoor": "Available"
+        },
+        "special": "Monsoon discounts available",
+        "note": "Experience Wayanad's lush green monsoon beauty"
+      }
+    },
+    {
+      "input": {
+        "property": "workation",
+        "duration": "monthly"
+      },
+      "output": {
+        "status": "available",
+        "message": "Monthly workation packages available",
+        "properties": {
+          "villa2": {
+            "name": "Hustle in Hisspeed Villa",
+            "features": "High-speed WiFi, dedicated workspace",
+            "discount": "Special monthly rates available"
+          }
+        },
+        "includes": ["Housekeeping", "WiFi", "Utilities", "Workspace"],
+        "contact": "Contact for customized monthly rates"
+      }
+    },
+    {
+      "input": {
+        "property": "group",
+        "size": "15 people"
+      },
+      "output": {
+        "status": "available",
+        "message": "Group accommodation available",
+        "properties": {
+          "outdoor": {
+            "name": "Bustle in Budget Property",
+            "capacity": "Can accommodate 15+ people",
+            "features": "Multiple rooms, common areas",
+            "discount": "Group discounts available"
+          }
+        },
+        "additional": "Can arrange meals and activities for groups"
+      }
+    },
+    {
+      "input": {
+        "dates": "weekend"
+      },
+      "output": {
+        "status": "varies",
+        "message": "Weekend availability varies by season",
+        "peak_season": "Book 2 weeks in advance",
+        "off_season": "Usually available with 2-3 days notice",
+        "friday_sunday": "Most popular, books quickly",
+        "saturday_sunday": "Better availability",
+        "contact": "Call for current weekend availability"
+      }
+    },
+    {
+      "input": {
+        "dates": "long_weekend"
+      },
+      "output": {
+        "status": "limited",
+        "message": "Long weekends book quickly",
+        "recommendation": "Book at least 3 weeks in advance",
+        "all_properties": "High demand during long weekends",
+        "tip": "Consider arriving Thursday or leaving Tuesday for better rates"
+      }
+    },
+    {
+      "input": {
+        "season": "peak"
+      },
+      "output": {
+        "peak_months": ["December", "January", "March", "April", "May"],
+        "availability": "Limited - advance booking essential",
+        "rates": "Peak season rates apply",
+        "events": {
+          "december": "Christmas and New Year",
+          "april_may": "Summer holidays",
+          "festivals": "Local festival dates"
+        }
+      }
+    },
+    {
+      "input": {
+        "season": "off"
+      },
+      "output": {
+        "off_months": ["June", "July", "August", "September"],
+        "availability": "Good availability",
+        "rates": "Attractive off-season discounts",
+        "benefits": [
+          "Lower rates",
+          "Less crowded attractions",
+          "Monsoon beauty",
+          "Flexible check-in/out"
+        ]
+      }
+    }
+  ],
+  "default_response": {
+    "message": "Please contact us with your specific dates for real-time availability",
+    "contact": {
+      "phone": "+91-999-9999-9999",
+      "whatsapp": "+919999999999",
+      "email": "bwstays@bwstays.com"
+    },
+    "response_time": "Usually within 2-4 hours"
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "tool_responses",
+    "note": "Availability subject to change. Contact for real-time information."
+  }
+}

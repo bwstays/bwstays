@@ -1,0 +1,198 @@
+{
+  "name": "location",
+  "description": "Location details, directions and area information for Black and White Stays",
+  "content": {
+    "address": {
+      "area": "Wayanad",
+      "city": "Kalpetta",
+      "district": "Wayanad",
+      "state": "Kerala",
+      "country": "India",
+      "pincode": "673121",
+      "region": "Western Ghats",
+      "landmark": "Near Kalpetta Town"
+    },
+    "coordinates": {
+      "latitude": 11.605787,
+      "longitude": 76.083311,
+      "elevation": "780 meters above sea level",
+      "geo_region": "IN-KL",
+      "placename": "Kalpetta"
+    },
+    "connectivity": {
+      "nearest_airport": {
+        "name": "Calicut International Airport",
+        "distance": "95 km",
+        "travel_time": "2.5 - 3 hours",
+        "transport_options": ["Taxi", "Private cab", "Bus + auto"]
+      },
+      "nearest_railway": {
+        "name": "Kozhikode Railway Station",
+        "distance": "72 km",
+        "travel_time": "2 - 2.5 hours",
+        "transport_options": ["Taxi", "Bus", "Private vehicle"]
+      },
+      "bus_connectivity": {
+        "local_bus_stand": "Kalpetta Bus Stand",
+        "distance": "Walking distance to few minutes",
+        "interstate": "KSRTC buses available",
+        "private": "Multiple private bus operators"
+      },
+      "road_connectivity": {
+        "from_bangalore": {
+          "distance": "275 km",
+          "travel_time": "6 - 7 hours",
+          "route": "Via Mysore - Gundlupet - Sulthan Bathery"
+        },
+        "from_kochi": {
+          "distance": "250 km",
+          "travel_time": "6 hours",
+          "route": "Via Thrissur - Kozhikode"
+        },
+        "from_coimbatore": {
+          "distance": "180 km",
+          "travel_time": "4 - 5 hours",
+          "route": "Via Ooty - Gudalur"
+        },
+        "from_mysore": {
+          "distance": "125 km",
+          "travel_time": "3 hours",
+          "route": "Via Gundlupet - Sulthan Bathery"
+        }
+      }
+    },
+    "local_transport": {
+      "options": [
+        {
+          "type": "Auto rickshaw",
+          "availability": "Readily available",
+          "booking": "Direct hire or apps",
+          "cost": "Moderate"
+        },
+        {
+          "type": "Taxi",
+          "availability": "Available on call",
+          "booking": "Hotel can arrange",
+          "cost": "Higher than auto"
+        },
+        {
+          "type": "Rental vehicles",
+          "options": ["Self-drive cars", "Bikes", "Scooters"],
+          "availability": "Multiple operators",
+          "requirement": "Valid driving license"
+        },
+        {
+          "type": "Local buses",
+          "coverage": "Most tourist spots",
+          "frequency": "Regular",
+          "cost": "Most economical"
+        }
+      ]
+    },
+    "area_highlights": {
+      "description": "Whispers of Forest, a stay that provides rural tranquility and urban convenience",
+      "climate": {
+        "type": "Tropical highland climate",
+        "summer": "March to May (20°C to 36°C)",
+        "monsoon": "June to September (Heavy rainfall)",
+        "winter": "October to February (10°C to 25°C)",
+        "best_time": "October to May"
+      },
+      "terrain": {
+        "landscape": "Hill station with valleys",
+        "elevation_range": "700 - 2100 meters",
+        "vegetation": "Tropical forests, tea estates, coffee plantations",
+        "biodiversity": "Part of Western Ghats biodiversity hotspot"
+      }
+    },
+    "nearby_amenities": {
+      "essential_services": {
+        "hospitals": [
+          "District Hospital Kalpetta",
+          "Multiple private clinics",
+          "24/7 medical stores"
+        ],
+        "banks_atm": [
+          "SBI, Federal Bank, Canara Bank",
+          "Multiple ATMs in town",
+          "Most accept international cards"
+        ],
+        "petrol_pumps": [
+          "Multiple options in Kalpetta",
+          "24/7 pumps available",
+          "Both petrol and diesel"
+        ]
+      },
+      "shopping": {
+        "local_markets": [
+          "Kalpetta Main Market",
+          "Vegetable market",
+          "Spice shops"
+        ],
+        "supermarkets": [
+          "Multiple grocery stores",
+          "Department stores",
+          "Bakeries"
+        ],
+        "specialty": [
+          "Handicraft shops",
+          "Spice markets",
+          "Tea/coffee outlets"
+        ]
+      },
+      "dining": {
+        "restaurants": [
+          "Multi-cuisine restaurants",
+          "Local Kerala cuisine",
+          "Vegetarian options",
+          "Cafes and bakeries"
+        ],
+        "distance": "Walking distance to 5 minutes",
+        "delivery": "Food delivery apps operational"
+      }
+    },
+    "distances_to_attractions": {
+      "note": "Distances are approximate from Kalpetta town center",
+      "nearby": {
+        "pookode_lake": "8 km",
+        "lakkidi_viewpoint": "5 km",
+        "kanthanpara_waterfalls": "12 km"
+      },
+      "moderate": {
+        "edakkal_caves": "14 km",
+        "soochipara_falls": "22 km",
+        "banasura_dam": "21 km",
+        "muthanga_wildlife": "16 km"
+      },
+      "farther": {
+        "thirunelli_temple": "32 km",
+        "kuruva_island": "40 km",
+        "tholpetty_wildlife": "44 km",
+        "chembra_peak": "14 km"
+      }
+    },
+    "location_advantages": {
+      "central_location": "Heart of Wayanad with easy access to all attractions",
+      "urban_conveniences": "All modern amenities within reach",
+      "natural_setting": "Surrounded by hills and greenery",
+      "peaceful_environment": "Away from city noise and pollution",
+      "accessibility": "Well-connected to major towns and tourist spots"
+    },
+    "directions": {
+      "landmark_navigation": [
+        "From Kalpetta Bus Stand: Head towards main market",
+        "Look for signs to tourist areas",
+        "Properties located in prime residential areas",
+        "GPS coordinates provided for accurate navigation"
+      ],
+      "google_maps": "Search 'Black and White Stays Wayanad'",
+      "support": "Call for detailed directions and pickup arrangements"
+    }
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "json",
+    "source": "index.html and location data"
+  }
+}
