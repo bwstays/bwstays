@@ -940,6 +940,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "http://schema.org",
   "@type": "LodgingBusiness",
   "name": "BW Stays",
+        "containsPlace": {
+          "@type": "Accommodation",
+          "additionalType": "EntirePlace",
+          "bed": [{
+            "@type": "BedDetails",
+            "numberOfBeds" : 2,
+            "typeOfBed": "Queen"
+          },
+          {
+            "@type": "BedDetails",
+            "numberOfBeds" : 2,
+            "typeOfBed": "King"
+          }],
+         "occupancy": {
+            "@type": "QuantitativeValue",
+            "value" : 4
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "ac",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "airportShuttle",
+              "value": false
+            },
+            {
+             "@type": "LocationFeatureSpecification",
+              "name": "balcony",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "beachAccess",
+              "value": false
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "childFriendly",
+              "value": true
+            }
+          ],
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value" : 8,
+            "unitCode": "MTK"
+          },
+          "numberOfBathroomsTotal": 4,
+          "numberOfBedrooms": 2,
+          "numberOfRooms": 2
+        },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Kalpetta",
