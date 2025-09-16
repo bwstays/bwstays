@@ -8,10 +8,10 @@
     "orientation": "portrait",
     "start_url": "/",
     "id": "/index.html",
-    "scope": "./",
+    "scope": "https:\/\/www.bwstays.com\/",
 	"icons": [
 		{
-			"src": "./assets/img/pwa/bw.png",
+			"src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
 			"type": "image/png",
 			"sizes": "41x41",
 			"purpose": "any"
@@ -19,14 +19,14 @@
 	],
     "screenshots" : [
                   {
-                    "src": "./assets/img/pwa/bw.png",
+                    "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
                     "sizes": "41x41",
                     "type": "image/png",
                     "form_factor": "narrow",
                     "label": "Service Villa "
                   },
                   {
-                    "src": "./assets/img/pwa/bw.png",
+                    "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
                     "sizes": "41x41",
                     "type": "image/png",
                     "form_factor": "wide",
