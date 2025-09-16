@@ -1,0 +1,199 @@
+{
+  "name": "search_attractions",
+  "description": "Find tourist attractions and activities in Wayanad",
+  "responses": [
+    {
+      "input": {
+        "query": "waterfalls"
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Thusharagiri Falls",
+            "type": "Waterfall",
+            "distance": "Varies from property",
+            "activities": ["Trekking", "Swimming", "Photography"]
+          },
+          {
+            "name": "Meenmutty Falls",
+            "type": "Waterfall",
+            "trek_difficulty": "Moderate to difficult",
+            "height": "Three-tiered"
+          },
+          {
+            "name": "Soochipara Falls",
+            "type": "Waterfall",
+            "special": "Natural pool for swimming",
+            "best_time": "Post-monsoon"
+          },
+          {
+            "name": "Kanthanpara Falls",
+            "type": "Waterfall",
+            "accessibility": "Easy, family-friendly",
+            "distance": "12 km from Kalpetta"
+          }
+        ],
+        "total": 4
+      }
+    },
+    {
+      "input": {
+        "query": "trekking"
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Chembra Peak",
+            "height": "2100m",
+            "difficulty": "Moderate to difficult",
+            "highlight": "Heart-shaped lake"
+          },
+          {
+            "name": "Edakkal Caves",
+            "trek_duration": "45 minutes",
+            "attraction": "Prehistoric rock engravings",
+            "age": "6000 BCE"
+          },
+          {
+            "name": "Pakshipathalam",
+            "trek_distance": "7 km",
+            "type": "Bird sanctuary trek",
+            "difficulty": "Challenging"
+          },
+          {
+            "name": "Banasura Hills",
+            "activities": ["Trekking", "Boating", "Zip-lining"],
+            "feature": "Largest earthen dam"
+          }
+        ],
+        "total": 4
+      }
+    },
+    {
+      "input": {
+        "query": "wildlife"
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Wayanad Wildlife Sanctuary",
+            "zones": ["Muthanga", "Tholpetty"],
+            "animals": ["Elephants", "Tigers", "Leopards"],
+            "area": "344 sq km"
+          },
+          {
+            "name": "Pakshipathalam Bird Sanctuary",
+            "specialty": "Rare birds and caves",
+            "trek": "Through dense forest"
+          },
+          {
+            "name": "Kuruva Island",
+            "area": "950 acres",
+            "activities": ["Bamboo rafting", "Bird watching"],
+            "best_time": "October to May"
+          }
+        ],
+        "total": 3
+      }
+    },
+    {
+      "input": {
+        "query": "cultural"
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Wayanad Heritage Museum",
+            "timings": "9 AM - 5 PM",
+            "closed": "Mondays",
+            "exhibits": "2nd century artifacts"
+          },
+          {
+            "name": "Chain Tree",
+            "type": "Historical site",
+            "story": "Local legend",
+            "location": "Lakkidi"
+          },
+          {
+            "name": "Jain Temple",
+            "age": "13th century",
+            "location": "Sulthan Bathery",
+            "significance": "Used by Tipu Sultan"
+          },
+          {
+            "name": "Uravu Bamboo Craft",
+            "type": "Traditional craft center",
+            "activities": ["Workshops", "Shopping"]
+          }
+        ],
+        "total": 4
+      }
+    },
+    {
+      "input": {
+        "query": "family activities"
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Pookode Lake",
+            "activities": ["Boating", "Walking", "Picnic"],
+            "shape": "Heart-shaped",
+            "suitable": "All ages"
+          },
+          {
+            "name": "Tea Estate Tours",
+            "activities": ["Factory visit", "Tea tasting", "Photography"],
+            "duration": "2-3 hours"
+          },
+          {
+            "name": "Kanthanpara Falls",
+            "accessibility": "Easy for families",
+            "activities": ["Picnic", "Photography"]
+          },
+          {
+            "name": "Lakkidi View Point",
+            "attraction": "Sunset views",
+            "facilities": "Parking and viewpoints"
+          }
+        ],
+        "total": 4
+      }
+    },
+    {
+      "input": {
+        "query": "adventure"
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Zip-lining",
+            "locations": ["Banasura", "Various resorts"],
+            "duration": "15-30 minutes"
+          },
+          {
+            "name": "Rock Climbing",
+            "locations": ["Soochipara", "Thusharagiri"],
+            "equipment": "Usually provided"
+          },
+          {
+            "name": "Mountain Biking",
+            "trails": "Tea estate roads",
+            "rental": "Bicycles available"
+          },
+          {
+            "name": "Bamboo Rafting",
+            "location": "Kuruva Island",
+            "season": "October to May"
+          }
+        ],
+        "total": 4
+      }
+    }
+  ],
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "tool_responses"
+  }
+}

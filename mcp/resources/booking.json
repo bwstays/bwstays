@@ -1,0 +1,201 @@
+{
+  "name": "booking",
+  "description": "Booking process, contact information and reservation details for Black and White Stays",
+  "content": {
+    "contact_information": {
+      "primary_email": "bwstays@bwstays.com",
+      "phone": {
+        "display": "+91-999-9999-9999",
+        "whatsapp": "+919999999999",
+        "availability": "24/7 support"
+      },
+      "address": {
+        "area": "Wayanad",
+        "city": "Kalpetta",
+        "state": "Kerala",
+        "country": "India",
+        "pincode": "673121",
+        "coordinates": {
+          "latitude": 11.605787,
+          "longitude": 76.083311
+        }
+      },
+      "office_hours": "24/7 - Round the clock service",
+      "response_time": "Usually within 2-4 hours"
+    },
+    "booking_process": {
+      "steps": [
+        {
+          "step": 1,
+          "title": "Inquiry",
+          "description": "Contact us via phone, WhatsApp, or email with your requirements"
+        },
+        {
+          "step": 2,
+          "title": "Availability Check",
+          "description": "We'll confirm property availability for your preferred dates"
+        },
+        {
+          "step": 3,
+          "title": "Quotation",
+          "description": "Receive detailed pricing based on property, dates, and group size"
+        },
+        {
+          "step": 4,
+          "title": "Confirmation",
+          "description": "Confirm booking with advance payment"
+        },
+        {
+          "step": 5,
+          "title": "Check-in",
+          "description": "Arrive at property, complete formalities, and enjoy your stay"
+        }
+      ],
+      "booking_methods": [
+        "Direct phone call",
+        "WhatsApp message",
+        "Email inquiry",
+        "Website contact form",
+        "Walk-in (subject to availability)"
+      ]
+    },
+    "reservation_policies": {
+      "advance_booking": {
+        "recommended": "2-4 weeks in advance for peak season",
+        "minimum": "24 hours for off-season",
+        "peak_seasons": ["December-January", "March-May", "Local festivals", "Long weekends"]
+      },
+      "payment": {
+        "advance_required": "50% advance payment to confirm booking",
+        "balance": "Remaining 50% on check-in",
+        "methods": [
+          "Bank transfer",
+          "UPI payment",
+          "Credit/Debit card",
+          "Cash on arrival (for balance only)"
+        ]
+      },
+      "check_in_out": {
+        "check_in": "12:00 PM onwards",
+        "check_out": "11:00 AM",
+        "early_check_in": "Subject to availability",
+        "late_check_out": "Additional charges may apply",
+        "flexible_timing": "Can be arranged for groups"
+      },
+      "documentation": {
+        "required": [
+          "Government-issued photo ID",
+          "Booking confirmation",
+          "Address proof (for local bookings)"
+        ],
+        "corporate": "Company ID or letter for corporate bookings"
+      }
+    },
+    "pricing_structure": {
+      "factors": [
+        "Property type and size",
+        "Season (peak/off-peak)",
+        "Duration of stay",
+        "Number of guests",
+        "Additional services requested"
+      ],
+      "discounts": {
+        "long_stays": "Special rates for weekly/monthly stays",
+        "group_bookings": "Discounts for groups of 10+",
+        "repeat_guests": "Loyalty benefits available",
+        "corporate": "Corporate rates on request",
+        "off_season": "Attractive off-season pricing"
+      },
+      "inclusions": {
+        "standard": [
+          "Accommodation",
+          "Basic amenities",
+          "Housekeeping",
+          "WiFi",
+          "Parking",
+          "Security"
+        ],
+        "optional": [
+          "Meals",
+          "Airport/station transfers",
+          "Sightseeing arrangements",
+          "Adventure activities",
+          "Special celebrations"
+        ]
+      }
+    },
+    "group_corporate_bookings": {
+      "facilities": [
+        "Bulk booking discounts",
+        "Customized meal plans",
+        "Conference/meeting arrangements",
+        "Team building activities",
+        "Transportation coordination"
+      ],
+      "requirements": {
+        "minimum_size": "Usually 6+ people",
+        "advance_notice": "1-2 weeks preferred",
+        "special_requests": "Can be accommodated with prior notice"
+      }
+    },
+    "special_services": {
+      "celebrations": {
+        "types": ["Birthday parties", "Anniversaries", "Small weddings", "Corporate events"],
+        "arrangements": [
+          "Decoration services",
+          "Cake arrangements",
+          "Special meal preparation",
+          "Photography coordination",
+          "Event planning support"
+        ]
+      },
+      "add_ons": [
+        "Barbecue setup",
+        "Campfire arrangements",
+        "Local guide services",
+        "Vehicle rental",
+        "Adventure sport bookings",
+        "Spa services (on request)"
+      ]
+    },
+    "cancellation_refund": {
+      "notice_period": {
+        "full_refund": "7 days before check-in",
+        "partial_refund": "3-7 days before check-in (50%)",
+        "no_refund": "Less than 3 days"
+      },
+      "exceptions": [
+        "Medical emergencies (with proof)",
+        "Natural disasters",
+        "Government restrictions"
+      ],
+      "modification": "Date changes subject to availability and may incur charges"
+    },
+    "guest_support": {
+      "pre_arrival": [
+        "Travel planning assistance",
+        "Local weather updates",
+        "Packing suggestions",
+        "Direction guidance"
+      ],
+      "during_stay": [
+        "24/7 on-call support",
+        "Concierge services",
+        "Emergency assistance",
+        "Local recommendations"
+      ],
+      "post_stay": [
+        "Feedback collection",
+        "Lost and found support",
+        "Future booking assistance",
+        "Loyalty program enrollment"
+      ]
+    }
+  },
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "version": "1.0.0",
+    "type": "json",
+    "source": "index.html"
+  }
+}
