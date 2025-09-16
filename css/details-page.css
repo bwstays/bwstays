@@ -3157,7 +3157,10 @@ footer.footer .stay-card {
   font-weight: bold;
   color: #333;
   background-color: #fff;
-
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #booking-captcha-ques {
@@ -3165,7 +3168,41 @@ footer.footer .stay-card {
 }
 
 #captcha-answer {
-  max-width: 150px;
+  max-width: 120px;
+  height: 38px;
+}
+
+/* Fix captcha refresh button to match other elements */
+#refresh-captcha {
+  height: 38px !important;
+  width: 38px !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+}
+#refresh-captcha:hover{
+  background-color: #64a19d !important;
+}
+/* Ensure captcha container elements are properly aligned */
+.captcha-container {
+  gap: 0.5rem;
+}
+
+.captcha-container .form-control,
+.captcha-container .captcha-question,
+.captcha-container .btn {
+  height: 38px;
+}
+
+/* Captcha error message styling */
+.captcha-error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0;
+  font-weight: 500;
 }
 
 .required-asterisk {
@@ -3331,8 +3368,13 @@ footer.footer .stay-card {
 /* Make calendar horizontal by displaying months side by side */
 .ui-datepicker .ui-datepicker-group {
   float: left;
-  width: 48%;
-  margin-right: 2%;
+  width: 47%;
+  margin-right: 6%;
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .ui-datepicker .ui-datepicker-group:last-child {
@@ -3509,11 +3551,24 @@ footer.footer .stay-card {
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  padding: 10px;
 }
 
 #date-range-calendar .ui-datepicker {
   position: relative;
   display: inline-block;
+  background: #fff;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Clear floats after calendar groups */
+#date-range-calendar .ui-datepicker:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* inline css of bwstays-booking */
@@ -3575,7 +3630,7 @@ footer.footer .stay-card {
 }
 
 #captcha-answer{
-  max-width: 150px !important;
+  max-width: 120px !important;
 }
 #uList{
   font-size: 1rem;
