@@ -5,6 +5,26 @@
             document.getElementById('captcha-num1').textContent = num1;
             document.getElementById('captcha-num2').textContent = num2;
             document.getElementById('captcha-answer').value = '';
+            // Clear any existing error message
+            clearCaptchaError();
+        }
+
+        // Show captcha error message
+        function showCaptchaError(message) {
+            const errorElement = document.getElementById('captcha-error');
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+        }
+
+        // Clear captcha error message
+        function clearCaptchaError() {
+            const errorElement = document.getElementById('captcha-error');
+            if (errorElement) {
+                errorElement.style.display = 'none';
+                errorElement.textContent = '';
+            }
         }
 
         // Validate captcha answer
@@ -34,7 +54,7 @@
                 bookingForm.addEventListener('submit', function(e) {
                     if (!validateCaptcha()) {
                         e.preventDefault();
-                        alert('Please enter the correct answer for the security verification.');
+                        showCaptchaError('Please enter the correct answer for the security verification.');
                         document.getElementById('captcha-answer').focus();
                         return false;
                     }
@@ -45,10 +65,18 @@
                 contactForm.addEventListener('submit', function(e) {
                     if (!validateCaptcha()) {
                         e.preventDefault();
-                        alert('Please enter the correct answer for the security verification.');
+                        showCaptchaError('Please enter the correct answer for the security verification.');
                         document.getElementById('captcha-answer').focus();
                         return false;
                     }
+                });
+            }
+
+            // Clear error message when user starts typing in captcha answer
+            const captchaInput = document.getElementById('captcha-answer');
+            if (captchaInput) {
+                captchaInput.addEventListener('input', function() {
+                    clearCaptchaError();
                 });
             }
         });

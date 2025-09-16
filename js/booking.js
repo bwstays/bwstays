@@ -26,6 +26,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     return;
                 }
 
+                // Validate dates to prevent negative day bookings
+                const checkInDateObj = new Date(checkInDate);
+                const checkOutDateObj = new Date(checkOutDate);
+                const timeDiff = checkOutDateObj.getTime() - checkInDateObj.getTime();
+                const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+                
+                if (nights <= 0 || checkOutDateObj <= checkInDateObj) {
+                    alert('Invalid dates: Check-out date must be at least one day after check-in date.');
+                    return;
+                }
+                
+                if (nights < 1) {
+                    alert('Minimum stay is 1 night. Please select valid dates.');
+                    return;
+                }
+
                 if (!villa1 && !villa2) {
                     alert('Please select at least one villa');
                     return;
@@ -221,16 +237,34 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                     // If check-in is set but check-out isn't, set check-out
                     else if (!$("#checkOutDate").val()) {
-                        $("#checkOutDate").val(formattedDate);
-
-                        // Calculate nights
-                        var checkIn = new Date($("#checkInDate").val());
+                        var checkInStr = $("#checkInDate").val();
+                        var checkIn = new Date(checkInStr);
                         var checkOut = new Date(sDate);
-                        var nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
-                        if(nights<=0)
-                        {
-							  $("#checkOutDate").focus();
-						}
+                        
+                        // Calculate nights with proper validation
+                        var timeDiff = checkOut.getTime() - checkIn.getTime();
+                        var nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+                        
+                        // Strict validation: check-out must be at least 1 day after check-in
+                        if(nights <= 0 || checkOut <= checkIn) {
+                            // Reset selection and show error
+                            $("#checkInDate").val("");
+                            $("#checkOutDate").val("");
+                            $("#nights-count").text("0");
+                            alert("Check-out date must be at least one day after check-in date. Please select your dates again.");
+                            return false;
+                        }
+                        
+                        // Additional validation: ensure minimum 1 night stay
+                        if(nights < 1) {
+                            $("#checkInDate").val("");
+                            $("#checkOutDate").val("");
+                            $("#nights-count").text("0");
+                            alert("Minimum stay is 1 night. Please select valid dates.");
+                            return false;
+                        }
+                        
+                        $("#checkOutDate").val(formattedDate);
                         $("#nights-count").text(nights);
                     }
                     // If both dates are set, reset and start new selection
