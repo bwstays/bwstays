@@ -1,5 +1,5 @@
 class StaticMCPClient {
-    constructor(baseUrl = './staticmcp') {
+    constructor(baseUrl = './') {
         this.baseUrl = baseUrl;
         this.manifest = null;
     }
