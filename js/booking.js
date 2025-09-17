@@ -1,8 +1,11 @@
 
+let currentMonthOffset = 0;
+
 document.addEventListener('DOMContentLoaded', function () {
     // Generate calendar in JavaScript
     generateCalendars();
     setupDateSelection();
+    createErrorMessageContainers();
     
     const bookingForm = document.querySelector('.guest-information form');
 
@@ -24,9 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 const specialRequests = document.querySelector('textarea[placeholder="Your Address"]').value;
                 const arrivalTime = document.querySelector('select').value;
 
+                // Clear previous error messages
+                hideErrorMessage();
+
                 // Validate required fields
                 if (!fullName || !email || !phone || !checkInDate || !checkOutDate || !termsCheck) {
-                    alert('Please fill in all required fields and accept the terms and conditions');
+                    showErrorMessage('Please fill in all required fields and accept the terms and conditions', 'error');
                     return;
                 }
 
@@ -37,17 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
                 
                 if (nights <= 0 || checkOutDateObj <= checkInDateObj) {
-                    alert('Invalid dates: Check-out date must be at least one day after check-in date.');
+                    showErrorMessage('Invalid dates: Check-out date must be at least one day after check-in date.', 'error');
                     return;
                 }
                 
                 if (nights < 1) {
-                    alert('Minimum stay is 1 night. Please select valid dates.');
+                    showErrorMessage('Minimum stay is 1 night. Please select valid dates.', 'error');
                     return;
                 }
 
                 if (!villa1 && !villa2) {
-                    alert('Please select at least one villa');
+                    showErrorMessage('Please select at least one villa', 'error');
                     return;
                 }
 
@@ -100,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //                console.log('Booking Data:', myArray);
                 invokeRefBooking(myArray);
                 const jsonString = JSON.stringify(myArray);
-                alert('Booking completed successfully!');
+                showErrorMessage('Booking completed successfully!', 'success');
         // Send AJAX request
         $.ajax({
             type: "POST",
@@ -133,24 +139,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
             $("#checkavail").click(function () {
 
+                // Clear previous error messages
+                hideErrorMessage();
 
                 var checkin  = $("#checkInDate").val(); 
 				var checkout    = $("#checkOutDate").val(); 
 
                 if ($("#checkInDate").val().trim() === "" )
                 {
-						   alert("Please provide checkin  date ");
+						   showErrorMessage("Please provide checkin date", 'error');
 						   return;
 			    }
 
                 if ( $("#checkOutDate").val().trim() === ""    )
                 {
-						   alert("Please provide  checkout date ");
+						   showErrorMessage("Please provide checkout date", 'error');
 						   return;
 			    }
 
  				if (new Date(checkout)<new Date(checkin) ){
-						   alert("Check out date  should be same or greater than the  check in date ");
+						   showErrorMessage("Check out date should be same or greater than the check in date", 'error');
 						   return;
 			    }
 
@@ -227,6 +235,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     var sDate = selected;
                     var bDate;
 
+                    // Clear previous error messages
+                    hideErrorMessage();
                     
                     var formattedDate = $.datepicker.formatDate('D, M d, yy', new Date(sDate));
 
@@ -250,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             $("#checkInDate").val("");
                             $("#checkOutDate").val("");
                             $("#nights-count").text("0");
-                            alert("Check-out date must be at least one day after check-in date. Please select your dates again.");
+                            showErrorMessage("Check-out date must be at least one day after check-in date. Please select your dates again.", 'error');
                             return false;
                         }
                         
@@ -259,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             $("#checkInDate").val("");
                             $("#checkOutDate").val("");
                             $("#nights-count").text("0");
-                            alert("Minimum stay is 1 night. Please select valid dates.");
+                            showErrorMessage("Minimum stay is 1 night. Please select valid dates.", 'error');
                             return false;
                         }
                         
@@ -344,6 +354,93 @@ document.addEventListener('DOMContentLoaded', function () {
 		    }
 		}
 
+// Error message management functions
+function createErrorMessageContainers() {
+    // Create error message container if it doesn't exist
+    const dateRangeContainer = document.querySelector('.date-range-container');
+    if (dateRangeContainer && !document.getElementById('date-error-message')) {
+        const errorContainer = document.createElement('div');
+        errorContainer.id = 'date-error-message';
+        errorContainer.className = 'error-message-container';
+        errorContainer.style.display = 'none';
+        
+        // Insert after the title but before the content
+        const title = dateRangeContainer.querySelector('h5');
+        if (title && title.nextElementSibling) {
+            dateRangeContainer.insertBefore(errorContainer, title.nextElementSibling);
+        } else {
+            dateRangeContainer.insertBefore(errorContainer, dateRangeContainer.firstChild);
+        }
+    }
+}
+
+function showErrorMessage(message, type = 'error') {
+    const errorContainer = document.getElementById('date-error-message');
+    if (!errorContainer) return;
+    
+    // Clear existing content
+    errorContainer.innerHTML = '';
+    
+    // Create message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `alert ${type === 'error' ? 'alert-danger' : 'alert-success'} text-center mb-3`;
+    messageDiv.style.cssText = `
+        padding: 10px 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid;
+        ${type === 'error' ? 
+            'background-color: #f8d7da; color: #721c24; border-color: #f5c6cb;' : 
+            'background-color: #d4edda; color: #155724; border-color: #c3e6cb;'
+        }
+    `;
+    
+    // Add close button
+    const closeBtn = document.createElement('button');
+    closeBtn.innerHTML = '&times;';
+    closeBtn.className = 'close';
+    closeBtn.style.cssText = `
+        float: right;
+        background: none;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 10px;
+        opacity: 0.7;
+    `;
+    closeBtn.onclick = function() {
+        hideErrorMessage();
+    };
+    
+    messageDiv.textContent = message;
+    messageDiv.appendChild(closeBtn);
+    errorContainer.appendChild(messageDiv);
+    
+    // Show the container
+    errorContainer.style.display = 'block';
+    
+    // Auto-hide success messages after 5 seconds
+    if (type === 'success') {
+        setTimeout(() => {
+            hideErrorMessage();
+        }, 5000);
+    }
+    
+    // Scroll to error message
+    errorContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function hideErrorMessage() {
+    const errorContainer = document.getElementById('date-error-message');
+    if (errorContainer) {
+        errorContainer.style.display = 'none';
+        errorContainer.innerHTML = '';
+    }
+}
 
 function generateCalendars() {
     
@@ -357,14 +454,19 @@ function generateCalendars() {
     
     
     for (let i = 0; i < 2; i++) {
-        const monthDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + i, 1);
-        const monthCalendar = createMonthCalendar(monthDate);
+        const monthDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + currentMonthOffset + i, 1);
+        const monthCalendar = createMonthCalendar(monthDate, true); // Both calendars get navigation
         calendarContainer.appendChild(monthCalendar);
     }
 }
 
+function setupCalendarNavigation() {
+    // Navigation will be added to the first month's header in createMonthCalendar function
+    // This function is kept for compatibility but navigation is now handled in month headers
+}
 
-function createMonthCalendar(date) {
+
+function createMonthCalendar(date, isFirstMonth = false) {
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     
     
@@ -373,7 +475,42 @@ function createMonthCalendar(date) {
     
     const monthHeader = document.createElement('div');
     monthHeader.className = 'month-header';
-    monthHeader.textContent = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+    
+    // Create navigation structure matching the image design
+    const headerNav = document.createElement('div');
+    headerNav.className = 'month-header-nav';
+    
+    // Previous button (left arrow)
+    const prevButton = document.createElement('button');
+    prevButton.className = 'month-nav-btn prev-btn';
+    prevButton.innerHTML = '&laquo;';
+    prevButton.setAttribute('aria-label', 'Previous month');
+    prevButton.addEventListener('click', function() {
+        currentMonthOffset = Math.max(currentMonthOffset - 1, 0);
+        generateCalendars();
+    });
+    
+    // Month title (centered)
+    const monthTitle = document.createElement('span');
+    monthTitle.className = 'month-title';
+    monthTitle.textContent = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+    
+    // Next button (right arrow)
+    const nextButton = document.createElement('button');
+    nextButton.className = 'month-nav-btn next-btn';
+    nextButton.innerHTML = '&raquo;';
+    nextButton.setAttribute('aria-label', 'Next month');
+    nextButton.addEventListener('click', function() {
+        currentMonthOffset++;
+        generateCalendars();
+    });
+    
+    // Assemble header with proper layout
+    headerNav.appendChild(prevButton);
+    headerNav.appendChild(monthTitle);
+    headerNav.appendChild(nextButton);
+    monthHeader.appendChild(headerNav);
+    
     monthCalendar.appendChild(monthHeader);
     
     const weekdays = document.createElement('div');
@@ -425,6 +562,8 @@ function setupDateSelection() {
             const clickedDate = new Date(e.target.dataset.date);
             const formattedDate = formatDate(clickedDate);
             
+            // Clear previous error messages
+            hideErrorMessage();
     
             if (!checkInDate) {
                 checkInDate = clickedDate;
@@ -435,7 +574,7 @@ function setupDateSelection() {
             else if (!checkOutDate) {
         
                 if (clickedDate <= checkInDate) {
-                    alert('Check-out date must be after check-in date');
+                    showErrorMessage('Check-out date must be after check-in date', 'error');
                     return;
                 }
                 
