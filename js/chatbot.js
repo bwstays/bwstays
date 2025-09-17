@@ -35,7 +35,7 @@ class StaticMCPClient {
                 const query = args.query.toLowerCase();
                 let searchType = 'attractions';
 
-                if (query.includes('project')) searchType = 'projects';
+                if (query.includes('project')) searchType = 'attractions';
                 if (query.includes('about') || query.includes('me')) searchType = 'about';
 
                 const response = await fetch(`${this.baseUrl}/tools/search/${searchType}.json`);
