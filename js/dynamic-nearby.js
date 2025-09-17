@@ -201,7 +201,7 @@ function createPlaceCard(place) {
     return `
         <a  id="knowmore" href="${knowmoreUrl}" class="text-decoration-none text-white"><div class="col-lg-3 col-md-4 col-sm-6 mb-3">
             <div class="card nearby-card h-100 border-0" style="border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease;"><div class="card-img-top">
-                    <a href="${knowmoreUrl}" class="text-decoration-none text-white"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="${imageUrl}" class="img-fluid" alt="${place.name}"  loading="lazy"  style="width: 100%; height: 160px; object-fit: cover;"></a> </div>
+                    <a href="${knowmoreUrl}" class="text-decoration-none text-white"><img title="Black and White Stays Service Villa"  alt="Information about places in Wayanad" src="${imageUrl}" class="img-fluid" alt="${place.name}"  loading="lazy"  style="width: 100%; height: 160px; object-fit: cover;"></a> </div>
                 <div class="card-body p-3">
                     <div class="d-flex">
                         <div style="flex: 1;">
