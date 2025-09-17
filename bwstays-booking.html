@@ -123,10 +123,10 @@
     <link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
 
-    <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
+    <!-- <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/> -->
 
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -257,7 +257,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     id="checkavail">
                                     <i class="fas fa-search mr-2"></i> Check Availability
                                 </button>-->
-                                <div class="mt-2">
+                                <div class="mt-2" id="requestCallback">
                                     <a href="#contact-form" class="text-primary font-weight-bold">
                                         <i class="fas fa-phone-alt mr-2"></i>Request Callback
                                     </a>
@@ -463,7 +463,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="form-group mb-3">
                                     <label class="form-label">Security Verification<span class="required-asterisk">*</span></label>
                                     <div class="captcha-container d-flex align-items-center">
-                                        <div class="captcha-question p-2 rounded mr-3" id="booking-captcha-ques">
+                                        <div class="captcha-question p-2 mr-3" id="booking-captcha-ques">
                                             <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
                                         </div>
                                         <input type="text" class="form-control" id="captcha-answer" placeholder="Enter answer"required>
@@ -531,107 +531,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="faq-container" class="faq-section" style="display: none;">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="text-center mb-5">
                         <h2 class="font-weight-bold text-primary">Frequently Asked Questions</h2>
                         <div class="border-bottom border-primary mx-auto mb-4" style="width: 100px;"></div>
                     </div>
 
-                    <div class="faq-accordion">
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleAnswer(this)">
-                                <h5 class="mb-0">
-                                    <span>What is the cancellation policy?</span>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </h5>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Our cancellation policy allows free cancellation up to 24 hours before check-in. Cancellations made within 24 hours of check-in may be subject to a one-night charge. Please refer to our detailed cancellation policy for more information.</p>
+                    <!-- FAQ Carousel -->
+                    <div class="faq-carousel-container">
+                        <div class="faq-carousel-wrapper">
+                            <div class="faq-carousel" id="faq-carousel">
+                                <!-- FAQ items will be populated by JavaScript -->
                             </div>
                         </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleAnswer(this)">
-                                <h5 class="mb-0">
-                                    <span>What time is check-in and check-out?</span>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </h5>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Check-in time is 2:00 PM and check-out time is 11:00 AM. Early check-in and late check-out may be available upon request and subject to availability.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleAnswer(this)">
-                                <h5 class="mb-0">
-                                    <span>Are pets allowed?</span>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </h5>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Pet policies vary by property. Please contact us directly to inquire about pet-friendly accommodations. Additional fees may apply for pets.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleAnswer(this)">
-                                <h5 class="mb-0">
-                                    <span>What amenities are included?</span>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </h5>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Our properties include various amenities such as Wi-Fi, parking, kitchen facilities, and more. Specific amenities vary by property. Please check the property details for a complete list of included amenities.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleAnswer(this)">
-                                <h5 class="mb-0">
-                                    <span>How do I make a reservation?</span>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </h5>
-                            </div>
-                            <div class="faq-answer">
-                                <p>You can make a reservation by filling out the booking form on this page, calling us directly, or contacting us through WhatsApp. We'll confirm your booking and provide all necessary details.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleAnswer(this)">
-                                <h5 class="mb-0">
-                                    <span>What payment methods do you accept?</span>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </h5>
-                            </div>
-                            <div class="faq-answer">
-                                <p>We accept various payment methods including credit cards, debit cards, bank transfers, and digital payment platforms. Payment details will be provided upon booking confirmation.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleAnswer(this)">
-                                <h5 class="mb-0">
-                                    <span>Is there parking available?</span>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </h5>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Yes, most of our properties offer free parking for guests. Parking availability and type (covered/uncovered) may vary by location. Please confirm parking details when making your reservation.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question" onclick="toggleAnswer(this)">
-                                <h5 class="mb-0">
-                                    <span>Can I modify my booking?</span>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </h5>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Booking modifications are subject to availability and may incur additional charges. Please contact us as soon as possible if you need to modify your reservation. We'll do our best to accommodate your changes.</p>
-                            </div>
+                        
+                        <!-- Carousel Navigation -->
+                        <div class="faq-carousel-nav text-center mt-4">
+                            <button class="btn btn-outline-primary mx-2" id="faq-prev" onclick="changeFAQPage(-1)">
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </button>
+                            <span class="faq-page-info mx-3" id="faq-page-info">Page 1 of 3</span>
+                            <button class="btn btn-outline-primary mx-2" id="faq-next" onclick="changeFAQPage(1)">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1011,14 +933,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "isAccessibleForFree": true
 }
 </script>
-  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js"></script>
+  <script  type="text/javascript"   src="js/chat.js"></script>
 
 
-    <script type="text/javascript"  src="https://www.bwstays.com/js/testimonial.js"></script>
+    <script type="text/javascript"  src="js/testimonial.js"></script>
 
 
 
-   <script type="text/javascript"  src="https://www.bwstays.com/js/faq.js"></script>
+   <script type="text/javascript"  src="js/faq.js"></script>
 
 
    </body>

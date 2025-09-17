@@ -1,64 +1,73 @@
 .map {
-	filter: grayscale(100%);
-	height: 300px;
-	width: 400px;
+  filter: grayscale(100%);
+  height: 300px;
+  width: 400px;
 }
+
 .ui-datepicker {
-			background: #333;
-			border: 1px solid #555;
-			color: #EEE;
+  background: #333;
+  border: 1px solid #555;
+  color: #EEE;
 }
-.blocked, .ui-datepicker .blocked span { background:gray; }
 
-.ui-state-highlight{
-background-color:orange;
+.blocked,
+.ui-datepicker .blocked span {
+  background: gray;
 }
+
+.ui-state-highlight {
+  background-color: orange;
+}
+
 .ui-datepicker .ui-widget-content {
-background: #999 none;
+  background: #999 none;
 }
 
-.ui-datepicker-current-day{
-background-color:#64a19d;
+.ui-datepicker-current-day {
+  background-color: #64a19d;
 }
 
-.ui-datepicker .ui-datepicker-title select{color: #ffff;}
-
-
-
-.villa-section
-{
-   /* background-image: url("https://www.bwstays.com/assets/img/bw-destination-wayanad.avif");*/
-    background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: #000;
+.ui-datepicker .ui-datepicker-title select {
+  color: #ffff;
 }
 
-.villa-section, #villaSection {
-    padding-top: 1.5rem;
-    background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp);
-    min-height: 70vh;
-    padding-bottom: 1rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: #000;
+
+
+.villa-section {
+  /* background-image: url("https://www.bwstays.com/assets/img/bw-destination-wayanad.avif");*/
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #000;
 }
 
-#gallery{
+.villa-section,
+#villaSection {
+  padding-top: 1.5rem;
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp);
+  min-height: 70vh;
+  padding-bottom: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #000;
+}
+
+#galleryVilla {
   padding-top: 5rem !important;
 }
 
 .villa-content {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .villa-image-container {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
+
 .menuBtn {
   position: fixed;
   display: inline-block;
@@ -158,6 +167,7 @@ background-color:#64a19d;
   width: 28px;
   height: 7px;
 }
+
 .bars .bar {
   position: absolute;
   left: 0;
@@ -166,9 +176,11 @@ background-color:#64a19d;
   background-color: var(--white);
   transition: top 0.15s ease, transform 0.3s ease;
 }
+
 .bars .bar1 {
   top: 0;
 }
+
 .bars .bar2 {
   top: 6px;
 }
@@ -189,6 +201,7 @@ background-color:#64a19d;
 .sideBar .logo .logoCircle {
   max-width: 40px;
 }
+
 .sideBar .logo .logoTxt {
   width: 110px;
 }
@@ -213,7 +226,8 @@ background-color:#64a19d;
 
 
 .divider {
-  width: 44% !important;;
+  width: 44% !important;
+  ;
   height: 1px;
   background-color: #64a19d;
   margin: 0 auto 2rem;
@@ -233,7 +247,7 @@ background-color:#64a19d;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -254,7 +268,7 @@ background-color:#64a19d;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   padding: 15px;
   color: white;
 }
@@ -282,7 +296,7 @@ background-color:#64a19d;
 
 /* Booking Ribbon */
 .booking-ribbon {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 15px 20px;
   border-radius: 8px;
   display: flex;
@@ -294,7 +308,7 @@ background-color:#64a19d;
 }
 
 
-#book-now{
+#book-now {
   border-radius: 6px !important;
   color: #fff !important;
 }
@@ -320,14 +334,14 @@ background-color:#64a19d;
   display: flex;
   align-items: center;
   gap: 15px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 8px;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .amenity:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-5px);
 }
 
@@ -336,9 +350,12 @@ background-color:#64a19d;
   color: #64a19d;
 }
 
-#book-now{
+#book-now {
   font-weight: 700 !important;
+  text-decoration: none;
+  color: inherit;
 }
+
 .amenity span {
   color: white;
   font-weight: 500;
@@ -347,11 +364,12 @@ background-color:#64a19d;
 /* Video Section */
 .video-wrap {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
   height: 0;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   margin-bottom: 3rem;
 }
 
@@ -409,12 +427,13 @@ background-color:#64a19d;
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .g-lg, .g-md {
+
+  .g-lg,
+  .g-md {
     grid-column: span 2;
     grid-row: span 1;
   }
-  
+
   .g-sm {
     grid-column: span 1;
   }
@@ -425,12 +444,14 @@ background-color:#64a19d;
     grid-template-columns: 1fr;
     grid-auto-rows: 250px;
   }
-  
-  .g-lg, .g-md, .g-sm {
+
+  .g-lg,
+  .g-md,
+  .g-sm {
     grid-column: span 1;
     grid-row: span 1;
   }
-  
+
   .booking-ribbon {
     flex-direction: column;
     align-items: flex-start;
@@ -447,6 +468,7 @@ background-color:#64a19d;
   color: var(--textColorLight);
   transition: all 0.5s ease;
 }
+
 .sideMenu ul li a:hover {
   color: var(--secondary);
 }
@@ -518,13 +540,16 @@ background-color:#64a19d;
 }
 
 @keyframes draw {
+
   0%,
   100% {
     clip-path: inset(-2px -2px);
   }
+
   42% {
     clip-path: inset(-2px -2px -2px 100%);
   }
+
   43% {
     clip-path: inset(-2px 100% -3px -2px);
   }
@@ -546,13 +571,22 @@ background-color:#64a19d;
   }
 }
 
- .badge-off{
+.badge-off {
   font-weight: 700 !important;
- }
+}
 
 /* Mandatory field asterisk styles */
 .required-asterisk {
   color: #dc3545;
   font-weight: bold;
   margin-left: 3px;
+}
+
+
+#videoControl {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
 }
