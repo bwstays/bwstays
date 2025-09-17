@@ -35,7 +35,7 @@ class StaticMCPClient {
                 const query = args.query.toLowerCase();
                 let searchType = 'attractions';
 
-                if (query.includes('project')) searchType = 'attractions';
+                if (query.includes('attractions')) searchType = 'attractions';
                 if (query.includes('about') || query.includes('me')) searchType = 'about';
 
                 const response = await fetch(`${this.baseUrl}/tools/search/${searchType}.json`);
@@ -68,7 +68,7 @@ class GitHubPagesChatbot {
     async init() {
         await this.mcpClient.init();
         this.setupUI();
-        this.addMessage('Hello! I\'m your personal AI assistant. Ask me about projects, background, or search for information.', 'bot');
+        this.addMessage('Hello! I\'m your personal AI assistant. Ask me about attractionss, background, or search for information.', 'bot');
     }
 
     setupUI() {
@@ -100,8 +100,8 @@ class GitHubPagesChatbot {
 
         if (lowerInput.includes('about') || lowerInput.includes('who are you')) {
             response = await this.mcpClient.getResource('resource://about');
-        } else if (lowerInput.includes('project')) {
-            response = await this.mcpClient.getResource('resource://projects');
+        } else if (lowerInput.includes('attractions')) {
+            response = await this.mcpClient.getResource('resource://attractions');
         } else {
             response = await this.mcpClient.callTool('search', { query: userInput });
         }
