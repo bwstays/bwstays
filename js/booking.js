@@ -1,6 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-            const bookingForm = document.querySelector('.guest-information form');
+    // Generate calendar in JavaScript
+    generateCalendars();
+    setupDateSelection();
+    
+    const bookingForm = document.querySelector('.guest-information form');
 
             bookingForm.addEventListener('submit', function (e) {
                 e.preventDefault();
@@ -23,6 +27,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Validate required fields
                 if (!fullName || !email || !phone || !checkInDate || !checkOutDate || !termsCheck) {
                     alert('Please fill in all required fields and accept the terms and conditions');
+                    return;
+                }
+
+                // Validate dates to prevent negative day bookings
+                const checkInDateObj = new Date(checkInDate);
+                const checkOutDateObj = new Date(checkOutDate);
+                const timeDiff = checkOutDateObj.getTime() - checkInDateObj.getTime();
+                const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+                
+                if (nights <= 0 || checkOutDateObj <= checkInDateObj) {
+                    alert('Invalid dates: Check-out date must be at least one day after check-in date.');
+                    return;
+                }
+                
+                if (nights < 1) {
+                    alert('Minimum stay is 1 night. Please select valid dates.');
                     return;
                 }
 
@@ -112,11 +132,10 @@ document.addEventListener('DOMContentLoaded', function () {
         $(document).ready(function () {
 
             $("#checkavail").click(function () {
-                // Code to execute when the button is clicked
 
 
-                var checkin  = $("#checkInDate").val(); //2013-09-5
-				var checkout    = $("#checkOutDate").val(); //2013-09-10
+                var checkin  = $("#checkInDate").val(); 
+				var checkout    = $("#checkOutDate").val(); 
 
                 if ($("#checkInDate").val().trim() === "" )
                 {
@@ -162,6 +181,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 ];
             var closedDays = [];
             var bookedDays = [];
+            
+            // Define booking array if not already defined
+            var booking = booking || [];
 
              var todayDate = (function(){
 			      var d = new Date();
@@ -172,20 +194,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			      var _value =  d.getFullYear() + '-' + month + '-' + day;
 			      return _value;
 			    })();
-			    /*
-			    var tday=datepicker({
-			      format: 'dd/mm/yyyy',
-			      value: todayDate
-                 });
-                 */
 
 
             for (i = 0; i < booking.length; i++) {
 
                 if (booking[i].length == 2) {
                     bookedDays.push(booking[i][0]);
-                    // $("#villa1").prop("checked", true);
-                    // $("#villa2").prop("checked", true);
+
 
                 }
 
@@ -212,35 +227,53 @@ document.addEventListener('DOMContentLoaded', function () {
                     var sDate = selected;
                     var bDate;
 
-                    // Format the selected date for display
+                    
                     var formattedDate = $.datepicker.formatDate('D, M d, yy', new Date(sDate));
 
-                    // If no check-in date is set, set it
+                    
                     if (!$("#checkInDate").val()) {
                         $("#checkInDate").val(formattedDate);
                     }
-                    // If check-in is set but check-out isn't, set check-out
+                    
                     else if (!$("#checkOutDate").val()) {
-                        $("#checkOutDate").val(formattedDate);
-
-                        // Calculate nights
-                        var checkIn = new Date($("#checkInDate").val());
+                        var checkInStr = $("#checkInDate").val();
+                        var checkIn = new Date(checkInStr);
                         var checkOut = new Date(sDate);
-                        var nights = Math.round((checkOut - checkIn) / (1000 * 60 * 60 * 24));
-                        if(nights<=0)
-                        {
-							  $("#checkOutDate").focus();
-						}
+                        
+                        
+                        var timeDiff = checkOut.getTime() - checkIn.getTime();
+                        var nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+                        
+                        
+                        if(nights <= 0 || checkOut <= checkIn) {
+                            
+                            $("#checkInDate").val("");
+                            $("#checkOutDate").val("");
+                            $("#nights-count").text("0");
+                            alert("Check-out date must be at least one day after check-in date. Please select your dates again.");
+                            return false;
+                        }
+                        
+                        
+                        if(nights < 1) {
+                            $("#checkInDate").val("");
+                            $("#checkOutDate").val("");
+                            $("#nights-count").text("0");
+                            alert("Minimum stay is 1 night. Please select valid dates.");
+                            return false;
+                        }
+                        
+                        $("#checkOutDate").val(formattedDate);
                         $("#nights-count").text(nights);
                     }
-                    // If both dates are set, reset and start new selection
+                    
                     else {
                         $("#checkInDate").val(formattedDate);
                         $("#checkOutDate").val("");
                         $("#nights-count").text("0");
                     }
 
-                    // Check villa availability
+                    
                     for (i = 0; i < booking.length; i++) {
                         bDate = booking[i][0];
                         if (booking[i].length == 2 && (Date.parse(sDate) == Date.parse(bDate))) {
@@ -294,23 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
 
-			/*
-				// Step navigation
-				const steps = document.querySelectorAll('.step');
-
-				steps.forEach((step, index) => {
-					if (!step.classList.contains('active')) {
-						step.addEventListener('click', function () {
-							// Here you would normally navigate to the corresponding step
-							// For demo purposes, we'll just toggle the active class
-							document.querySelector('.step.active').classList.remove('active');
-							// step.classList.remove('bg-dark', 'text-white-50');
-							// step.classList.add('active', 'bg-primary', 'text-white');
-						});
-
-			}
-				});
-            */
+			
         });
 
         function getNextThreeDays(todayDate)
@@ -321,11 +338,177 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			    for (i = 0; i < booking.length; i++) {
 
-			        //if (booking[i].length == 2)
+			        
 
                  }
 		    }
 		}
+
+
+function generateCalendars() {
+    
+    const calendarContainer = document.querySelector('.calendar-container');
+    if (!calendarContainer) return;
+    
+    calendarContainer.innerHTML = '';
+    
+    
+    const currentDate = new Date();
+    
+    
+    for (let i = 0; i < 2; i++) {
+        const monthDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + i, 1);
+        const monthCalendar = createMonthCalendar(monthDate);
+        calendarContainer.appendChild(monthCalendar);
+    }
+}
+
+
+function createMonthCalendar(date) {
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    
+    const monthCalendar = document.createElement('div');
+    monthCalendar.className = 'month-calendar';
+    
+    const monthHeader = document.createElement('div');
+    monthHeader.className = 'month-header';
+    monthHeader.textContent = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+    monthCalendar.appendChild(monthHeader);
+    
+    const weekdays = document.createElement('div');
+    weekdays.className = 'weekdays';
+    const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+    
+    daysOfWeek.forEach(day => {
+        const dayElement = document.createElement('div');
+        dayElement.className = 'day';
+        dayElement.textContent = day;
+        weekdays.appendChild(dayElement);
+    });
+    
+    monthCalendar.appendChild(weekdays);
+    
+    const daysContainer = document.createElement('div');
+    daysContainer.className = 'days';
+    daysContainer.id = `${monthNames[date.getMonth()].toLowerCase()}-days`;
+    
+    const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+    const totalDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    
+    for (let i = 0; i < firstDay; i++) {
+        const emptyDay = document.createElement('div');
+        emptyDay.className = 'day';
+        daysContainer.appendChild(emptyDay);
+    }
+    
+    for (let i = 1; i <= totalDays; i++) {
+        const dayElement = document.createElement('div');
+        dayElement.className = 'day';
+        dayElement.textContent = i;
+        dayElement.dataset.date = `${date.getFullYear()}-${date.getMonth() + 1}-${i}`;
+        daysContainer.appendChild(dayElement);
+    }
+    
+    monthCalendar.appendChild(daysContainer);
+    return monthCalendar;
+}
+function setupDateSelection() {
+    const calendarContainer = document.querySelector('.calendar-container');
+    if (!calendarContainer) return;
+    
+    let checkInDate = null;
+    let checkOutDate = null;
+    
+    calendarContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('day') && e.target.textContent) {
+            const clickedDate = new Date(e.target.dataset.date);
+            const formattedDate = formatDate(clickedDate);
+            
+    
+            if (!checkInDate) {
+                checkInDate = clickedDate;
+                document.getElementById('checkInDate').value = formattedDate;
+                e.target.classList.add('selected');
+            }
+    
+            else if (!checkOutDate) {
+        
+                if (clickedDate <= checkInDate) {
+                    alert('Check-out date must be after check-in date');
+                    return;
+                }
+                
+                checkOutDate = clickedDate;
+                document.getElementById('checkOutDate').value = formattedDate;
+                e.target.classList.add('selected');
+                
+        
+                const nights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+                document.getElementById('nights-count').textContent = nights;
+                
+        
+                highlightDateRange(checkInDate, checkOutDate);
+            }
+    
+            else {
+        
+                const selectedDays = document.querySelectorAll('.day.selected, .day.in-range');
+                selectedDays.forEach(day => {
+                    day.classList.remove('selected', 'in-range');
+                });
+                
+        
+                checkInDate = clickedDate;
+                checkOutDate = null;
+                document.getElementById('checkInDate').value = formattedDate;
+                document.getElementById('checkOutDate').value = '';
+                document.getElementById('nights-count').textContent = '0';
+                e.target.classList.add('selected');
+            }
+        }
+    });
+}
+function formatDate(date) {
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    
+    return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+}
+function highlightDateRange(startDate, endDate) {
+    const days = document.querySelectorAll('.day');
+    const daysInRange = [];
+    
+    days.forEach(day => {
+        if (day.dataset.date) {
+            const dayDate = new Date(day.dataset.date);
+    
+            if (dayDate >= startDate && dayDate <= endDate) {
+                daysInRange.push({
+                    element: day,
+                    date: dayDate
+                });
+            }
+        }
+    });
+    
+    daysInRange.sort((a, b) => a.date - b.date);
+    
+    daysInRange.forEach((day, index) => {
+
+        day.element.classList.remove('in-range', 'in-range-odd', 'in-range-even', 'range-start', 'range-end');
+        
+
+        day.element.classList.add('in-range');
+        
+
+        if (index === 0) {
+            day.element.classList.add('selected', 'range-start');
+        } else if (index === daysInRange.length - 1) {
+            day.element.classList.add('selected', 'range-end');
+        }
+    });
+}
 
         function addWaterMark(doc) {
             var totalPages = doc.internal.getNumberOfPages();
@@ -334,7 +517,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var WATERMARK_HEIGHT = 75;
             for (i = 1; i <= totalPages; i++) {
                 doc.setPage(i);
-                //doc.addImage(imgData, 'avif', 40, 40, WATERMARK_WIDTH, WATERMARK_HEIGHT);
+        
                 doc.setTextColor(150);
                 doc.text(50, doc.internal.pageSize.height - 30, 'Watermark');
             }

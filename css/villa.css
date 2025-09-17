@@ -37,16 +37,19 @@ background-color:#64a19d;
 }
 
 .villa-section, #villaSection {
-  padding-top: 5rem;
-  
-  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp");
-  min-height: 100vh;
-  padding-bottom: 5rem;
-  background-position: center;
+    padding-top: 1.5rem;
+    background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp);
+    min-height: 70vh;
+    padding-bottom: 1rem;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: #000;
+}
+
+#gallery{
+  padding-top: 5rem !important;
 }
 
 .villa-content {
