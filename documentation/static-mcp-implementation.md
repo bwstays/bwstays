@@ -22,26 +22,25 @@ Static MCP is a method of serving AI model context by pre-generating all respons
 ```
 bwstays/
 ├── CLAUDE.md                   # Project documentation and plan
-├── mcp/                        # Static MCP files
-│   ├── mcp.json               # ✅ Main manifest
-│   ├── resources/             # Content resources
-│   │   ├── about.json         # ✅ Company info and services
-│   │   ├── properties.json    # ✅ Villa and property listings
-│   │   ├── amenities.json     # ✅ Complete amenities list
-│   │   ├── booking.json       # ✅ Booking process and contact
-│   │   ├── policies.json      # ✅ Terms and policies
-│   │   ├── attractions.json   # ✅ Tourist attractions in Wayanad
-│   │   └── location.json      # ✅ Location and directions
-│   └── tools/                 # Pre-computed tool responses
-│       ├── search/
-│       │   ├── properties.json    # ✅ Property search responses
-│       │   └── attractions.json   # ✅ Attraction search responses
-│       └── booking/
-│           ├── availability.json  # ✅ Availability check responses
-│           ├── pricing.json       # ✅ Pricing information
-│           └── contact.json       # ✅ Contact details
-└── documentation/
-    └── static-mcp-implementation.md  # This file
+├── mcp.json               # ✅ Main manifest
+├── resources/             # Content resources
+│   ├── about.json         # ✅ Company info and services
+│   ├── properties.json    # ✅ Villa and property listings
+│   ├── amenities.json     # ✅ Complete amenities list
+│   ├── booking.json       # ✅ Booking process and contact
+│   ├── policies.json      # ✅ Terms and policies
+│   ├── attractions.json   # ✅ Tourist attractions in Wayanad
+│   └── location.json      # ✅ Location and directions
+└── tools/                 # Pre-computed tool responses
+    ├── search/
+    │   ├── properties.json    # ✅ Property search responses
+    │   └── attractions.json   # ✅ Attraction search responses
+    └── booking/
+         ├── availability.json  # ✅ Availability check responses
+         ├── pricing.json       # ✅ Pricing information
+         └── contact.json       # ✅ Contact details
+documentation/
+└── static-mcp-implementation.md  # This file
 ```
 
 ## Data Extraction Plan
