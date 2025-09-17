@@ -33,7 +33,7 @@ class StaticMCPClient {
             if (name === 'search') {
                 // Simple search implementation
                 const query = args.query.toLowerCase();
-                let searchType = 'general';
+                let searchType = 'attractions';
 
                 if (query.includes('project')) searchType = 'projects';
                 if (query.includes('about') || query.includes('me')) searchType = 'about';
