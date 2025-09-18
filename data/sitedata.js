@@ -285,7 +285,7 @@ content: "Discover Wayand's famous majestic mountain accommodations, and traditi
 amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
 tags: ["kalpetta", "waterfalls","canals", "lakes", "lagoons", "tranquil", "authentic"],
         type: "Water Falls",
-       knowmore: "https://www.bwstays.com/bw-Irrupu-waterfall-wayanad.html",
+       knowmore: "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html",
 
     duration : "1-2 Hours",
 www:"" ,
