@@ -1,4 +1,5 @@
-## Black and White Stays  👋
+## Black and White Stays  👋 [This is an external link to https://www.bwstays.com](https://www.bwstays.com/)
+
 ## Discover comfortable and affordable short-term stays with  Black and White. 
 ## Our selection for vacation, rentals and find your perfect home away from home today at Wayanad. 
 ## Travelers looking for a quieter, more relaxed stay with quick city access.
