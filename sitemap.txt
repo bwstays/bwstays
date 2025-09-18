@@ -129,7 +129,7 @@ https://www.bwstays.com/assets/img/icons/296.webp
 https://www.bwstays.com/assets/img/icons/aami12-16-512.webp
 https://www.bwstays.com/assets/img/icons/bike.avif
 https://www.bwstays.com/assets/img/icons/birdwatching.avif
-https://www.bwstays.com/assets/img/icons/cloudy.png
+https://www.bwstays.com/assets/img/icons/cloudy.webp
 https://www.bwstays.com/assets/img/icons/heritage.avif
 https://www.bwstays.com/assets/img/icons/hiking.avif
 https://www.bwstays.com/assets/img/icons/kayaking.avif

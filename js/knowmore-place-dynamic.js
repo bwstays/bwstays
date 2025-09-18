@@ -216,7 +216,7 @@ rightArrow.addEventListener('mouseleave', () => {
             <li><i class="fas fa-bell"></i> Type: ${currentItemData.type}</li>
             <li><i class="fas fa-power-off"></i> Holiday: ${currentItemData.holidays}</li>
             <li><i class="fas fa-phone"></i> Contact: ${currentItemData.Contact}</li>
-            <li><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  width="20" height="20" src="https://www.bwstays.com/assets/img/icons/cloudy.png"  />Weather: <span id="loctemperature"></span> </li>
+            <li><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  width="20" height="20" src="https://www.bwstays.com/assets/img/icons/cloudy.webp"  />Weather: <span id="loctemperature"></span> </li>
             </ul>
         </small>
       </div>
