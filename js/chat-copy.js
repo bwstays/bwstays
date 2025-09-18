@@ -374,11 +374,6 @@
     }
 
     async function sendToGroq(messages, userQuery){
-      // Expect user to set window.GROQ_API_KEY somewhere safely (e.g., injected at runtime)
-      const apiKey = window.GROQ_API_KEY || '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';
-      if(!apiKey){
-        throw new Error('Missing GROQ_API_KEY. Please set window.GROQ_API_KEY before using chat.');
-      }
 
       // Enhance system prompt with relevant context from knowledge base
       const relevantChunks = searchKnowledgeBase(userQuery, 2);
@@ -400,6 +395,12 @@
         { role: 'system', content: enhancedSystemPrompt },
         ...messages.slice(1)
       ];
+
+      // Expect user to set window.GROQ_API_KEY somewhere safely (e.g., injected at runtime)
+      const apiKey = window.GROQ_API_KEY || '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';
+      if(!apiKey){
+        throw new Error('Missing GROQ_API_KEY. Please set window.GROQ_API_KEY before using chat.');
+      }
 
       const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
