@@ -140,8 +140,9 @@
   flex: 1;
   text-align: center;
   font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.5px;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
 }
 
 .weekdays {
@@ -3800,4 +3801,10 @@ footer.footer .stay-card {
   position: relative;
   right: 11rem;
   bottom: 79px;
+}
+
+#faq-prev,
+#faq-next{
+  padding: .5rem 1rem !important;
+  width: 9rem !important;
 }
