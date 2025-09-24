@@ -1,4 +1,4 @@
-importScripts('./js/cache-polyfill.js');
+importScripts('./jsm/cache-polyfill.js');
 
 const TILE_CACHE = 'cache-v4';
 const TILE_URL_PATTERN = /^https:\/\/[abc]\.tile\.osm\.org\/.*/;
@@ -16,8 +16,8 @@ var files = [
   './index.html', //SW treats query string as new request
   'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap',
   './css/styles.css',
-  './js/chat.js',
-  './js/scripts.js',
+  './jsm/chat.js',
+  './jsm/scripts.js',
   './manifest.json',
   './llms-full.txt'
 ];
