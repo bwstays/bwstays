@@ -10,7 +10,7 @@ class StaticMCPClient {
             this.manifest = await response.json();
             return true;
         } catch (error) {
-            console.error('Failed to load MCP manifest:', error);
+            //console.error('Failed to load MCP manifest:', error);
             return false;
         }
     }
@@ -23,7 +23,7 @@ class StaticMCPClient {
             const data = await response.json();
             return data.contents[0].text;
         } catch (error) {
-            console.error('Failed to load resource:', error);
+            //console.error('Failed to load resource:', error);
             return 'Sorry, I couldn\'t find that information.';
         }
     }
@@ -43,7 +43,7 @@ class StaticMCPClient {
                 return data.content[0].text;
             }
         } catch (error) {
-            console.error('Tool call failed:', error);
+            //console.error('Tool call failed:', error);
             return 'Sorry, I encountered an error processing your request.';
         }
     }

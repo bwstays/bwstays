@@ -28,10 +28,10 @@ async function checkStorageQuota() {
     const estimate = await navigator.storage.estimate();
     const usagePercentage = estimate.usage / estimate.quota;
 
-    console.log(`Storage usage: ${(estimate.usage / 1024 / 1024).toFixed(2)}MB / ${(estimate.quota / 1024 / 1024).toFixed(2)}MB (${(usagePercentage * 100).toFixed(1)}%)`);
+    //console.log(`Storage usage: ${(estimate.usage / 1024 / 1024).toFixed(2)}MB / ${(estimate.quota / 1024 / 1024).toFixed(2)}MB (${(usagePercentage * 100).toFixed(1)}%)`);
 
     if (usagePercentage > STORAGE_WARNING_THRESHOLD) {
-      console.warn('Storage quota approaching limit, initiating cleanup');
+      //console.warn('Storage quota approaching limit, initiating cleanup');
       await cleanupOldCaches();
     }
 
@@ -95,7 +95,7 @@ async function cleanupTileCache() {
       await cache.delete(requestsWithTime[i].request);
     }
 
-    console.log(`Cleaned up ${itemsToRemove} old tile cache entries`);
+    //console.log(`Cleaned up ${itemsToRemove} old tile cache entries`);
   }
 }
 
@@ -110,7 +110,7 @@ async function cleanupMainCache() {
       const cacheTime = response.headers.get('x-cache-time');
       if (cacheTime && (now - parseInt(cacheTime)) > CACHE_EXPIRY_TIME) {
         await cache.delete(request);
-        console.log(`Removed expired cache entry: ${request.url}`);
+        //console.log(`Removed expired cache entry: ${request.url}`);
       }
     }
   }
@@ -120,14 +120,14 @@ async function cleanupMainCache() {
 
 //Adding `install` event listener
 self.addEventListener('install', (event) => {
-  console.log('SW Installed');
+  //console.log('SW Installed');
   event.waitUntil(
     (async () => {
       // Check storage quota before caching
       await checkStorageQuota();
 
       const cache = await caches.open(cacheName);
-      console.log('SW: Cache opened');
+      //console.log('SW: Cache opened');
 
       // Add timestamp to cached responses
       const cachePromises = files.map(async (file) => {
@@ -148,7 +148,7 @@ self.addEventListener('install', (event) => {
             await cache.put(file, modifiedResponse);
           }
         } catch (error) {
-          console.warn(`Failed to cache ${file}:`, error);
+          //console.warn(`Failed to cache ${file}:`, error);
         }
       });
 
@@ -157,7 +157,7 @@ self.addEventListener('install', (event) => {
       // Check if cache size exceeds limits
       const cacheSize = await getCacheSize(cacheName);
       if (cacheSize > MAX_CACHE_SIZE) {
-        console.warn(`Cache size (${(cacheSize / 1024 / 1024).toFixed(2)}MB) exceeds limit`);
+        //console.warn(`Cache size (${(cacheSize / 1024 / 1024).toFixed(2)}MB) exceeds limit`);
         await cleanupMainCache();
       }
     })()

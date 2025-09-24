@@ -79,7 +79,7 @@ async function handleRequest(request, env) {
     // Handle API errors
     if (!groqResponse.ok) {
       const errorText = await groqResponse.text();
-      console.error('Groq API Error:', groqResponse.status, errorText);
+    //  console.error('Groq API Error:', groqResponse.status, errorText);
 
       return new Response(JSON.stringify({
         error: `LLM API error: ${groqResponse.status}`,
@@ -105,7 +105,7 @@ async function handleRequest(request, env) {
     });
 
   } catch (error) {
-    console.error('Worker Error:', error);
+    //console.error('Worker Error:', error);
 
     return new Response(JSON.stringify({
       error: 'Internal server error',
