@@ -1,5 +1,4 @@
 #    npm install -g terser
-
 #c:\Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 # Define the folder containing your JS files
