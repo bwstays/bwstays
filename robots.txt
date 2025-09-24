@@ -1,6 +1,6 @@
 User-agent: *
-Allow: /css/
-Allow: /js/
+Allow: /styles/
+Allow: /jsm/
 Disallow: /cdn-cgi/
 Sitemap: https://www.bwstays.com/sitemap.xml
 Sitemap: https://www.bwstays.com/sitemap.txt
