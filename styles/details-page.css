@@ -1378,7 +1378,7 @@ div.image-nav-arrow.image-nav-right {
 
 
 
-#contact-card-divider {
+.contact-card-divider {
   width: 45%;
   height: 0px;
   background: linear-gradient(90deg, #007bff, #0056b3);
