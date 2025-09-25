@@ -144,30 +144,5 @@
       "amount": 11000,
       "bookingDate": "2024-12-14"
     }
-  ],
-  "properties": {
-    "villa1": {
-      "name": "Nestle with Nature Villa",
-      "type": "Premium Villa",
-      "capacity": 8,
-      "basePrice": 8000
-    },
-    "villa2": {
-      "name": "Hustle in Hisspeed Villa",
-      "type": "Luxury Villa",
-      "capacity": 10,
-      "basePrice": 10000
-    },
-    "budget": {
-      "name": "Bustle in Budget Property",
-      "type": "Budget Stay",
-      "capacity": 4,
-      "basePrice": 3000
-    }
-  },
-  "metadata": {
-    "lastUpdated": "2024-12-20",
-    "totalProperties": 3,
-    "currency": "INR"
-  }
+  ]
 }
