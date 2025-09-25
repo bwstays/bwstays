@@ -28,7 +28,7 @@ async function testWorker() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Origin': 'https://bwstays.com'
+        'Origin': 'https://www.bwstays.com'
       },
       body: JSON.stringify(testMessage)
     });
@@ -65,7 +65,7 @@ setTimeout(testWorker, 3000);
 //console.log('\nAlternative: Test with curl:');
 //console.log(`curl -X POST ${WORKER_URL} \\`);
 //console.log('  -H "Content-Type: application/json" \\');
-//console.log('  -H "Origin: https://bwstays.com" \\');
+//console.log('  -H "Origin: https://www.bwstays.com" \\');
 //console.log('  -d \'{');
 //console.log('    "model": "openai/gpt-oss-120b",');
 //console.log('    "messages": [');
