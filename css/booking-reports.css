@@ -1,0 +1,189 @@
+.reports-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border-radius: 0.35rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #64a19d !important;
+    border-color: #64a19d !important;
+}
+
+.btn-primary:hover {
+    background-color: #52857f !important;
+    border-color: #52857f !important;
+}
+
+.btn-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.btn-success:hover {
+    background-color: #218838 !important;
+    border-color: #1e7e34 !important;
+}
+
+.card {
+    border: none;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.border-left-primary {
+    border-left: 0.25rem solid #64a19d !important;
+}
+
+.border-left-success {
+    border-left: 0.25rem solid #28a745 !important;
+}
+
+.border-left-info {
+    border-left: 0.25rem solid #17a2b8 !important;
+}
+
+.border-left-warning {
+    border-left: 0.25rem solid #ffc107 !important;
+}
+
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../assets/img/bg-masthead.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.text-primary {
+    color: #64a19d !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-info {
+    color: #17a2b8 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+/* Additional styles for better UI/UX */
+.filter-card {
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    transition: transform 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+}
+
+.chart-container {
+    height: 300px;
+    margin-bottom: 2rem;
+}
+
+.table-responsive {
+    border-radius: 0.35rem;
+    overflow: hidden;
+}
+
+.booking-details-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.booking-details-row:hover {
+    background-color: rgba(100, 161, 157, 0.1);
+}
+
+.pagination .page-item .page-link {
+    color: #64a19d;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #64a19d;
+    border-color: #64a19d;
+    color: #fff;
+}
+
+.filter-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.action-buttons {
+    margin-top: 1.5rem;
+}
+
+.report-header {
+    margin-bottom: 2rem;
+}
+
+.report-section {
+    margin-bottom: 3rem;
+}
+
+.report-title {
+    color: #343a40;
+    margin-bottom: 1.5rem;
+}
+
+.report-subtitle {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.report-card {
+    height: 100%;
+}
+
+.report-icon {
+    color: #e9ecef;
+}
+
+.export-options {
+    margin-top: 2rem;
+}
+
+.filter-row {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .masthead {
+        min-height: 25rem;
+        padding: 10rem 0;
+    }
+    
+    .filter-controls .col-md-3 {
+        margin-bottom: 1rem;
+    }
+    
+    .action-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .action-buttons .btn:last-child {
+        margin-right: 0;
+    }
+}

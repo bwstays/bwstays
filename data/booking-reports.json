@@ -1,0 +1,148 @@
+{
+  "bookings": [
+    {
+      "bookingId": "BW2024001",
+      "propertyId": "villa1",
+      "propertyName": "Nestle with Nature Villa",
+      "guestName": "Rajesh Kumar",
+      "checkIn": "2024-01-15",
+      "checkOut": "2024-01-18",
+      "guests": 4,
+      "status": "completed",
+      "amount": 25000,
+      "bookingDate": "2024-01-10"
+    },
+    {
+      "bookingId": "BW2024002",
+      "propertyId": "villa2",
+      "propertyName": "Hustle in Hisspeed Villa",
+      "guestName": "Priya Sharma",
+      "checkIn": "2024-02-20",
+      "checkOut": "2024-02-23",
+      "guests": 6,
+      "status": "confirmed",
+      "amount": 35000,
+      "bookingDate": "2024-02-15"
+    },
+    {
+      "bookingId": "BW2024003",
+      "propertyId": "budget",
+      "propertyName": "Bustle in Budget Property",
+      "guestName": "Amit Patel",
+      "checkIn": "2024-03-10",
+      "checkOut": "2024-03-12",
+      "guests": 2,
+      "status": "pending",
+      "amount": 8000,
+      "bookingDate": "2024-03-05"
+    },
+    {
+      "bookingId": "BW2024004",
+      "propertyId": "villa1",
+      "propertyName": "Nestle with Nature Villa",
+      "guestName": "Sunita Gupta",
+      "checkIn": "2024-04-05",
+      "checkOut": "2024-04-08",
+      "guests": 5,
+      "status": "cancelled",
+      "amount": 28000,
+      "bookingDate": "2024-03-28"
+    },
+    {
+      "bookingId": "BW2024005",
+      "propertyId": "villa2",
+      "propertyName": "Hustle in Hisspeed Villa",
+      "guestName": "Vikram Singh",
+      "checkIn": "2024-05-12",
+      "checkOut": "2024-05-16",
+      "guests": 8,
+      "status": "completed",
+      "amount": 42000,
+      "bookingDate": "2024-05-01"
+    },
+    {
+      "bookingId": "BW2024006",
+      "propertyId": "budget",
+      "propertyName": "Bustle in Budget Property",
+      "guestName": "Neha Agarwal",
+      "checkIn": "2024-06-08",
+      "checkOut": "2024-06-10",
+      "guests": 3,
+      "status": "completed",
+      "amount": 12000,
+      "bookingDate": "2024-06-01"
+    },
+    {
+      "bookingId": "BW2024007",
+      "propertyId": "villa1",
+      "propertyName": "Nestle with Nature Villa",
+      "guestName": "Rohit Mehta",
+      "checkIn": "2024-07-22",
+      "checkOut": "2024-07-25",
+      "guests": 6,
+      "status": "confirmed",
+      "amount": 32000,
+      "bookingDate": "2024-07-18"
+    },
+    {
+      "bookingId": "BW2024008",
+      "propertyId": "villa2",
+      "propertyName": "Hustle in Hisspeed Villa",
+      "guestName": "Kavya Reddy",
+      "checkIn": "2024-08-14",
+      "checkOut": "2024-08-17",
+      "guests": 4,
+      "status": "completed",
+      "amount": 38000,
+      "bookingDate": "2024-08-10"
+    },
+    {
+      "bookingId": "BW2024009",
+      "propertyId": "budget",
+      "propertyName": "Bustle in Budget Property",
+      "guestName": "Arjun Nair",
+      "checkIn": "2024-09-05",
+      "checkOut": "2024-09-07",
+      "guests": 2,
+      "status": "pending",
+      "amount": 9000,
+      "bookingDate": "2024-09-01"
+    },
+    {
+      "bookingId": "BW2024010",
+      "propertyId": "villa1",
+      "propertyName": "Nestle with Nature Villa",
+      "guestName": "Deepika Joshi",
+      "checkIn": "2024-10-12",
+      "checkOut": "2024-10-15",
+      "guests": 5,
+      "status": "confirmed",
+      "amount": 29000,
+      "bookingDate": "2024-10-08"
+    },
+    {
+      "bookingId": "BW2024011",
+      "propertyId": "villa2",
+      "propertyName": "Hustle in Hisspeed Villa",
+      "guestName": "Manish Tiwari",
+      "checkIn": "2024-11-20",
+      "checkOut": "2024-11-24",
+      "guests": 7,
+      "status": "completed",
+      "amount": 45000,
+      "bookingDate": "2024-11-15"
+    },
+    {
+      "bookingId": "BW2024012",
+      "propertyId": "budget",
+      "propertyName": "Bustle in Budget Property",
+      "guestName": "Sanjana Kapoor",
+      "checkIn": "2024-12-18",
+      "checkOut": "2024-12-20",
+      "guests": 3,
+      "status": "confirmed",
+      "amount": 11000,
+      "bookingDate": "2024-12-14"
+    }
+  ]
+}
