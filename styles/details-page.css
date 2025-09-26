@@ -92,6 +92,8 @@
    border-bottom-right-radius: 50%;
 }
 
+
+
 .month-header {
   background-color: #64a19d;
   color: white;
@@ -3918,3 +3920,38 @@ footer.footer .stay-card {
     justify-content: center;
   }
 }
+
+/* inline css from location page */
+#left-content-column {
+   padding: 1rem;
+}
+
+#right-content-column {
+   padding: 1rem;
+}
+
+#shopping-places-header {
+   width: 100%;
+   margin: 0 auto;
+}
+
+#map-marker-icon {
+   color: #64a19d;
+}
+
+#info-list {
+   list-style: none;
+}
+
+#food-list-container {
+   padding-left: 2rem;
+}
+
+#feature-list {
+   font-size: 1rem;
+}
+
+#captcha-error {
+  display: none;
+}
+
