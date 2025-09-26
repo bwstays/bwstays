@@ -144,6 +144,8 @@
         media="all"
         rel="dns-prefetch"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
     <link
       href="https://www.bwstays.com/css/styles.css"
       rel="stylesheet"
@@ -505,13 +507,13 @@ ul.list-unstyled.mb-0.text-white-50 {
                     rel="noopener noreferrer nofollow"
                     class="text-decoration-none text-white"
                   >
-                    <i class="fas fa-map-marker-alt" style="color: #64a19d"></i>
+                    <i id="map-marker-icon" class="fas fa-map-marker-alt"></i>
                   </a>
                 </span>
               </div>
               <div class="mb-3">
                 <small class="text-white-50">
-                  <ul style="list-style: none">
+                  <ul id="info-list">
                     <li>
                       <i class="fas fa-clock"></i> Timing: 9:00 am – 18:00
                       <br />
@@ -552,27 +554,23 @@ ul.list-unstyled.mb-0.text-white-50 {
                   </span>
               </div>
 
-						<div class="mb-3">
-                             <span class="text-white-50 ml-2">
-								<!-- <div class="pano"  data-lat="11.4967237" data-lng="76.1051083" data-heading="165"></div> -->
- 							</span>
-                        </div>
 
-                      <h3 class="text-white mb-3">Panoramic View of 900 Kandi</h3>
-   					    <div class="contact-card-divider border-bottom border-primary mb-4" ></div>
-						<div class="mb-3">
-                             <span class="text-white-50 ml-2">
-								<!-- <div class="pano"  data-lat="11.6182113" data-lng="76.1722152" data-heading="165"></div> -->
- 							</span>
-                        </div>
 
-						<h3 class="text-white mb-3">Fuel /EV Charging Near by  900 Kandi</h3>
-					    <div class="contact-card-divider border-bottom border-primary mb-4" ></div>
-						<div class="mb-3" id="fuel-places"  data-center="11.6182113,76.1722152"   >
-                             <span class="text-white-50 ml-2">
-								<div id="fuel"></div>
- 							</span>
-                        </div>
+				  <h3 class="text-white mb-3">Panoramic View of 900 Kandi</h3>
+					<div class="contact-card-divider border-bottom border-primary mb-4" ></div>
+					<div class="mb-3">
+						 <span class="text-white-50 ml-2">
+							<!-- <div class="pano"  data-lat="11.6182113" data-lng="76.1722152" data-heading="165"></div> -->
+						</span>
+					</div>
+
+					<h3 class="text-white mb-3">Fuel /EV Charging Near by  900 Kandi</h3>
+					<div class="contact-card-divider border-bottom border-primary mb-4" ></div>
+					<div class="mb-3" id="fuel-places"  data-center="11.6182113,76.1722152"   >
+						 <span class="text-white-50 ml-2">
+							<div id="fuel"></div>
+						</span>
+					</div>
 
             </div>
           </div>
@@ -628,7 +626,7 @@ ul.list-unstyled.mb-0.text-white-50 {
       </div>
 
 
-      <div class="col-md-4" style="padding-left: 2rem;">
+      <div id="food-list-container" class="col-md-4">
         <h5 class="text-primary mb-4 text-right">Top Restaurants in the Location</h5>
         <div id="food-list"></div>
       </div>
@@ -698,29 +696,10 @@ ul.list-unstyled.mb-0.text-white-50 {
                                 <i class="fas fa-sync-alt"></i>
                             </button>
                         </div>
-                        <!-- <div id="captcha-error" class="captcha-error-message" style="display: none;"></div> -->
+                        <div id="captcha-error" class="captcha-error-message"></div>
                     </div>
 
-
-                    <div class="form-group mb-3">
-                        <label class="text-white-50 small text-uppercase">Security Verification</label>
-                        <div class="captcha-container d-flex align-items-center">
-                            <div class="captcha-question  p-2 rounded mr-3" >
-                                <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
-                            </div>
-
-
-                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" required>
-                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2 px-4  py-2 " id="refresh-captcha" title="Refresh">
-
-                                <i class="fas fa-sync-alt"></i>
-                            </button>
-                        </div>
-                        <!-- <div id="captcha-error" class="captcha-error-message" style="display: none;"></div> -->
-                    </div>
-
-
-                    <button class="btn btn-primary btn-block   px-4  py-2 text-uppercase"
+                    <button class="btn btn-primary btn-block  px-4  py-2 text-uppercase"
                         type="submit" aria-label="Request Callback">Request Callback</button>
                 </form>
             </div>
@@ -785,7 +764,7 @@ ul.list-unstyled.mb-0.text-white-50 {
                     <div class="w-100">
                         <h4 class="text-white font-weight-bold mb-3"> Stay in the heart of hill station </h4>
 						 <div class="contact-card-divider border-bottom border-primary mb-4" ></div>
-                        <ul class="list-unstyled mb-0 text-white-50" style="font-size: 1rem;">
+                        <ul id="feature-list" class="list-unstyled mb-0 text-white-50">
                             <li class="mb-2">
                                 <div class="feature-content">
                                     <span class="feature-title">Walk Everywhere</span>
@@ -966,7 +945,7 @@ ul.list-unstyled.mb-0.text-white-50 {
 
     <script
       type="text/javascript"
-      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
       rel="preload"
       crossorigin="anonymous"
     ></script>
