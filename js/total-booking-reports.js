@@ -1,6 +1,23 @@
-// Total Booking Reports JavaScript
-// Handles booking data loading, filtering, visualization, and PDF export
 
+const brandColors = {
+    primary: '#64a19d',        
+    secondary: '#4a7c87',      
+    accent1: '#8bc4c0',        
+    accent2: '#a8d5d1',        
+    complementary: '#c4896b',  
+    analogous1: '#64a164',     
+    analogous2: '#649da1',     
+    success: '#64a164',        
+    warning: '#c4896b',        
+    danger: '#a67c7c',         
+    info: '#649da1'            
+};
+
+
+const propertyConfig = {
+    villa1: { name: 'Nestle with Nature Villa', color: brandColors.primary },
+    villa2: { name: 'Hustle in Hisspeed Villa', color: brandColors.complementary }
+};
 let allBookings = [];
 let filteredBookings = [];
 let monthlyChart = null;
@@ -215,14 +232,24 @@ function renderMonthlyChart() {
             datasets: [{
                 label: 'Bookings',
                 data: bookingCounts,
-                borderColor: 'rgb(75, 192, 192)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: brandColors.primary,
+                backgroundColor: brandColors.primary + '33', // 20% opacity
+                pointBackgroundColor: brandColors.primary,
+                pointBorderColor: brandColors.primary,
+                pointHoverBackgroundColor: brandColors.primary,
+                pointHoverBorderColor: brandColors.primary,
+                tension: 0.3,
                 yAxisID: 'y'
             }, {
                 label: 'Revenue (₹)',
                 data: revenues,
-                borderColor: 'rgb(255, 99, 132)',
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: brandColors.complementary,
+                backgroundColor: brandColors.complementary + '33', // 20% opacity
+                pointBackgroundColor: brandColors.complementary,
+                pointBorderColor: brandColors.complementary,
+                pointHoverBackgroundColor: brandColors.complementary,
+                pointHoverBorderColor: brandColors.complementary,
+                tension: 0.3,
                 yAxisID: 'y1'
             }]
         },
@@ -270,40 +297,63 @@ function renderMonthlyChart() {
 // Render property distribution chart
 function renderPropertyChart() {
     const ctx = document.getElementById('propertyChart').getContext('2d');
-    
+
     // Destroy existing chart if it exists
     if (propertyChart) {
         propertyChart.destroy();
     }
-    
-    // Group bookings by property
-    const propertyData = {};
-    const propertyNames = {
-        'villa1': 'Nestle with Nature Villa',
-        'villa2': 'Hustle in Hisspeed Villa',
-        'budget': 'Bustle in Budget Property'
+
+    // Build booking status distribution (Completed, Confirmed, Cancelled, Pending)
+    const statusDisplayNames = {
+        completed: 'Completed',
+        confirmed: 'Confirmed',
+        cancelled: 'Cancelled',
+        pending: 'Pending'
     };
-    
+    const statusColors = {
+        completed: brandColors.success,
+        confirmed: brandColors.info,
+        cancelled: brandColors.danger,
+        pending: brandColors.warning
+    };
+
+    const statusCounts = { completed: 0, confirmed: 0, cancelled: 0, pending: 0 };
+
     filteredBookings.forEach(booking => {
-        const propertyName = propertyNames[booking.propertyId] || booking.propertyName;
-        if (!propertyData[propertyName]) {
-            propertyData[propertyName] = 0;
+        const s = booking.status;
+        if (s && Object.prototype.hasOwnProperty.call(statusCounts, s)) {
+            statusCounts[s] += 1;
         }
-        propertyData[propertyName]++;
     });
-    
-    const labels = Object.keys(propertyData);
-    const data = Object.values(propertyData);
-    const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'];
-    
+
+    // Prepare chart data (only include statuses with counts > 0)
+    const labels = [];
+    const data = [];
+    const colors = [];
+
+    Object.keys(statusCounts).forEach(status => {
+        const count = statusCounts[status];
+        if (count > 0) {
+            labels.push(statusDisplayNames[status]);
+            data.push(count);
+            colors.push(statusColors[status]);
+        }
+    });
+
+    const totalCount = data.reduce((sum, v) => sum + v, 0);
+
     propertyChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
             labels: labels,
             datasets: [{
                 data: data,
-                backgroundColor: colors.slice(0, labels.length),
-                borderWidth: 2
+                backgroundColor: colors,
+                borderColor: colors.map(color => color),
+                borderWidth: 2,
+                hoverBackgroundColor: colors.map(color => color + 'CC'),
+                hoverBorderColor: colors,
+                hoverBorderWidth: 3
             }]
         },
         options: {
@@ -311,12 +361,56 @@ function renderPropertyChart() {
             maintainAspectRatio: false,
             plugins: {
                 legend: {
-                    position: 'bottom'
+                    position: 'right',
+                    align: 'center',
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        padding: 15,
+                        font: { size: 12, weight: '500' },
+                        generateLabels: function(chart) {
+                            const dataObj = chart.data;
+                            if (dataObj.labels.length && dataObj.datasets.length) {
+                                return dataObj.labels.map((label, i) => {
+                                    const dataset = dataObj.datasets[0];
+                                    const value = dataset.data[i];
+                                    const percentage = totalCount > 0 ? ((value / totalCount) * 100).toFixed(1) : 0;
+                                    return {
+                                        text: `${label} (${percentage}%)`,
+                                        fillStyle: dataset.backgroundColor[i],
+                                        strokeStyle: dataset.borderColor[i],
+                                        lineWidth: dataset.borderWidth,
+                                        pointStyle: 'circle',
+                                        hidden: false,
+                                        index: i
+                                    };
+                                });
+                            }
+                            return [];
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.parsed;
+                            const percentage = totalCount > 0 ? ((value / totalCount) * 100).toFixed(1) : 0;
+                            return [
+                                `${context.label}`,
+                                `Bookings: ${value}`,
+                                `Share: ${percentage}%`
+                            ];
+                        }
+                    }
                 }
+            },
+            layout: {
+                padding: { left: 10, right: 10, top: 10, bottom: 10 }
             }
         }
     });
 }
+
 
 // Populate the detailed booking table
 function populateBookingTable() {
@@ -335,8 +429,7 @@ function populateBookingTable() {
         const statusBadge = getStatusBadge(booking.status);
         const propertyNames = {
             'villa1': 'Nestle with Nature Villa',
-            'villa2': 'Hustle in Hisspeed Villa',
-            'budget': 'Bustle in Budget Property'
+            'villa2': 'Hustle in Hisspeed Villa'
         };
         const propertyName = propertyNames[booking.propertyId] || booking.propertyName;
         
@@ -442,18 +535,19 @@ function initializePagination() {
     });
 }
 
-// Get status badge HTML
 function getStatusBadge(status) {
-    const badges = {
-        'completed': '<span class="badge badge-info">Completed</span>',
-        'confirmed': '<span class="badge badge-info">Confirmed</span>',
-        'pending': '<span class="badge badge-info">Pending</span>',
-        'cancelled': '<span class="badge badge-info">Cancelled</span>'
+    const labels = {
+        completed: 'Completed',
+        confirmed: 'Confirmed',
+        pending: 'Pending',
+        cancelled: 'Cancelled'
     };
-    return badges[status] || `<span class="badge badge-info">${status}</span>`;
+    const text = labels[status] || status;
+    
+    return `<span class="badge" style="background-color: ${brandColors.primary}; color: #ffffff;">${text}</span>`;
 }
 
-// Format date for display
+
 function formatDate(dateString) {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-IN', {
@@ -463,7 +557,7 @@ function formatDate(dateString) {
     });
 }
 
-// Export report to PDF using jsPDF (similar to pdfgen.js approach)
+
 function exportToPDF() {
     console.log('=== exportToPDF function called ===');
     console.log('Checking jsPDF availability:', typeof window.jspdf);
@@ -531,8 +625,7 @@ function exportToPDF() {
         const tableData = filteredBookings.map(booking => {
             const propertyNames = {
                 'villa1': 'Nestle with Nature Villa',
-                'villa2': 'Hustle in Hisspeed Villa',
-                'budget': 'Bustle in Budget Property'
+                'villa2': 'Hustle in Hisspeed Villa'
             };
             const propertyName = propertyNames[booking.propertyId] || booking.propertyName;
             
@@ -615,7 +708,6 @@ function exportToPDF() {
     }
 }
 
-// Sample booking data (fallback)
 function getSampleBookingData() {
     return [
         {
@@ -642,18 +734,7 @@ function getSampleBookingData() {
             amount: 35000,
             bookingDate: "2024-02-15"
         },
-        {
-            bookingId: "BW2024003",
-            propertyId: "budget",
-            propertyName: "Bustle in Budget Property",
-            guestName: "Amit Patel",
-            checkIn: "2024-03-10",
-            checkOut: "2024-03-12",
-            guests: 2,
-            status: "pending",
-            amount: 8000,
-            bookingDate: "2024-03-05"
-        },
+
         {
             bookingId: "BW2024004",
             propertyId: "villa1",
