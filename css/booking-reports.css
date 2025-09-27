@@ -37,21 +37,21 @@
     box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
 }
 
-.border-left-primary {
+/* .border-left-primary {
     border-left: 0.25rem solid #64a19d !important;
 }
 
 .border-left-success {
-    border-left: 0.25rem solid #28a745 !important;
+    border-left: 0.25rem solid #64a164 !important;
 }
 
 .border-left-info {
-    border-left: 0.25rem solid #17a2b8 !important;
+    border-left: 0.25rem solid #649da1 !important;
 }
 
 .border-left-warning {
-    border-left: 0.25rem solid #ffc107 !important;
-}
+    border-left: 0.25rem solid #c4896b !important;
+} */
 
 .masthead {
     position: relative;
@@ -71,15 +71,15 @@
 }
 
 .text-success {
-    color: #28a745 !important;
+    color: #64a164 !important;
 }
 
 .text-info {
-    color: #17a2b8 !important;
+    color: #649da1 !important;
 }
 
 .text-warning {
-    color: #ffc107 !important;
+    color: #c4896b !important;
 }
 
 /* Additional styles for better UI/UX */

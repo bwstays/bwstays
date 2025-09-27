@@ -121,12 +121,12 @@
     <link href="https://www.bwstays.com/css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="https://www.bwstays.com/css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="https://www.bwstays.com/css/new-page.css" rel="stylesheet" type="text/css" media="all"/>
-
+<!-- 
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/maps.css">
     <link rel="stylesheet" href="./css/details-page.css">
     <link rel="stylesheet" href="./css/new-page.css">
-    <link rel="stylesheet" href="./css/booking-reports.css">
+    <link rel="stylesheet" href="./css/booking-reports.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" crossorigin="anonymous"/>
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -157,7 +157,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             Menu
             <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto" id="nav-items">
                     <li class="nav-item allloc-pad" >
 						  <a class="social-icon mx-2 allloc" href="https://www.bwstays.com/all-locations-wayanad.html"   aria-label="all locations"  >
@@ -194,7 +194,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="col-lg-12">
                 <div class="card filter-card">
                     <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0"><i class="fas fa-filter mr-2"></i>Filter Reports</h5>
+                        <h5 class="mb-0">Filter Reports</h5>
                     </div>
                     <div class="card-body">
                         <div class="row filter-row">
@@ -247,7 +247,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="row mt-3 action-buttons">
                             <div class="col-md-12 text-center">
                                 <button class="btn btn-primary btn-lg mr-3" id="generateReport">
-                                    <i class="fas fa-chart-bar mr-2"></i>Generate Report
+                                    Generate Report
                                 </button>
                                 <button class="btn btn-primary btn-lg mx-2" id="exportPdf">Export to PDF</button>
                             </div>
@@ -336,7 +336,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="col-lg-4">
                 <div class="card shadow mb-4" style="height: 400px;">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Property Distribution</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Booking Status Distribution</h6>
                     </div>
                     <div class="card-body d-flex align-items-center justify-content-center" style="height: calc(100% - 60px);">
                         <canvas id="propertyChart" style="max-height: 280px; width: 100%;"></canvas>
@@ -350,7 +350,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="col-lg-12">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 bg-primary text-white">
-                        <h6 class="m-0 font-weight-bold"><i class="fas fa-list mr-2"></i>Detailed Booking Records</h6>
+                        <h6 class="m-0 font-weight-bold">Detailed Booking Records</h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -405,7 +405,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
     <section class="testimonial-section" id="testimonial">
-	<div  class="vertical-div" >   <a href="#about"  id="reserve" class="vertical-res btn btn-primary" >Reservation</a></div>
+	<!-- <div  class="vertical-div" >   <a href="#about"  id="reserve" class="vertical-res btn btn-primary" >Reservation</a></div> -->
 
 	<div class="container py-2">
 		  <div class="col-md-12 text-center ">
@@ -710,10 +710,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
 
 <!-- Booking data -->
+<script src="https://www.bwstays.com/data/sitedata.js"></script>
 
+<!-- Leaflet Map Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 
 <!-- Custom scripts -->
-<script src="js/total-booking-reports.js?v=2"></script>
+<script src="js/total-booking-reports.js?v=1.1"></script>
+<script src="https://www.bwstays.com/js/scripts.js"></script>
+<script src="https://www.bwstays.com/js/validations.js"></script>
 
 </body>
 
