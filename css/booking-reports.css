@@ -187,3 +187,27 @@
         margin-right: 0;
     }
 }
+
+
+#monthly-chart-container,
+#property-chart-container {
+  height: 400px;
+}
+
+
+#monthly-chart-body,
+#property-chart-body {
+  height: calc(100% - 60px);
+}
+
+
+#monthlyChart {
+  max-height: 300px;
+  width: 100%;
+}
+
+
+#propertyChart {
+  max-height: 280px;
+  width: 100%;
+}
