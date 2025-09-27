@@ -1,16 +1,16 @@
 
 const brandColors = {
-    primary: '#64a19d',        
-    secondary: '#4a7c87',      
-    accent1: '#8bc4c0',        
-    accent2: '#a8d5d1',        
-    complementary: '#c4896b',  
-    analogous1: '#64a164',     
-    analogous2: '#649da1',     
-    success: '#64a164',        
-    warning: '#c4896b',        
-    danger: '#a67c7c',         
-    info: '#649da1'            
+    primary: '#64a19d',
+    secondary: '#4a7c87',
+    accent1: '#8bc4c0',
+    accent2: '#a8d5d1',
+    complementary: '#c4896b',
+    analogous1: '#64a164',
+    analogous2: '#649da1',
+    success: '#64a164',
+    warning: '#c4896b',
+    danger: '#a67c7c',
+    info: '#649da1'
 };
 
 
@@ -29,7 +29,7 @@ const recordsPerPage = 5;
 
 // Initialize the application
 $(document).ready(function() {
-    console.log('Document ready, initializing booking reports...');
+    //console.log('Document ready, initializing booking reports...');
     loadBookingData();
     setupEventListeners();
     initializePagination();
@@ -38,8 +38,8 @@ $(document).ready(function() {
 // Load booking data from booking-reports.json
 // Updated: All status badges now use blue color (badge-info)
 function loadBookingData() {
-    console.log('Loading booking data from JSON...');
-    
+    //console.log('Loading booking data from JSON...');
+
     // Try to load from booking-reports.json
     fetch('./data/booking-reports.json')
         .then(response => {
@@ -49,12 +49,12 @@ function loadBookingData() {
             return response.json();
         })
         .then(data => {
-            console.log('JSON data loaded successfully:', data);
-            
+            //console.log('JSON data loaded successfully:', data);
+
             if (data.bookings && Array.isArray(data.bookings)) {
                 allBookings = data.bookings;
-                console.log('Booking data loaded successfully:', allBookings.length, 'entries');
-                
+                //console.log('Booking data loaded successfully:', allBookings.length, 'entries');
+
                 filteredBookings = [...allBookings];
                 generateReport();
             } else {
@@ -62,9 +62,9 @@ function loadBookingData() {
             }
         })
         .catch(error => {
-            console.error('Error loading JSON data:', error);
-            console.log('Falling back to sample data');
-            
+            //console.error('Error loading JSON data:', error);
+            //console.log('Falling back to sample data');
+
             // Fallback to sample data
             allBookings = getSampleBookingData();
             filteredBookings = [...allBookings];
@@ -76,26 +76,26 @@ function loadBookingData() {
 
 // Setup event listeners
 function setupEventListeners() {
-    console.log('Setting up event listeners...');
-    
+    //console.log('Setting up event listeners...');
+
     $('#generateReport').on('click', function() {
-        console.log('Generate Report button clicked');
+        //console.log('Generate Report button clicked');
         generateReport();
     });
-    
+
     $('#exportPdf').on('click', function() {
-        console.log('Export PDF button clicked');
+        //console.log('Export PDF button clicked');
         exportToPDF();
     });
-    
+
     // Filter change listeners
     $('#yearSelect, #monthSelect, #propertySelect, #statusSelect').on('change', function() {
-        console.log('Filter changed');
+        //console.log('Filter changed');
         applyFilters();
         generateReport();
     });
-    
-    console.log('Event listeners setup complete');
+
+    //console.log('Event listeners setup complete');
 }
 
 // Apply filters to booking data
@@ -104,27 +104,27 @@ function applyFilters() {
     const month = $('#monthSelect').val();
     const property = $('#propertySelect').val();
     const status = $('#statusSelect').val();
-    
-    console.log('Applying filters:', { year, month, property, status });
-    
+
+    //console.log('Applying filters:', { year, month, property, status });
+
     filteredBookings = allBookings.filter(booking => {
         const bookingDate = new Date(booking.bookingDate);
         const bookingYear = bookingDate.getFullYear().toString();
         const bookingMonth = (bookingDate.getMonth() + 1).toString();
-        
+
         const yearMatch = (!year || bookingYear === year);
         const monthMatch = (!month || bookingMonth === month);
         const propertyMatch = (!property || booking.propertyId === property);
         const statusMatch = (!status || booking.status === status);
-        
+
         return yearMatch && monthMatch && propertyMatch && statusMatch;
     });
-    
-    console.log('Filtered bookings:', filteredBookings.length, 'of', allBookings.length);
-    
+
+    //console.log('Filtered bookings:', filteredBookings.length, 'of', allBookings.length);
+
     // Reset pagination to first page when filters are applied
     currentPage = 1;
-    
+
     // Show debug info on page
     updateDebugInfo(year, month, property, status);
 }
@@ -140,12 +140,12 @@ function updateDebugInfo(year, month, property, status) {
             container.insertBefore(debugDiv, container.firstChild);
         }
     }
-    
+
     const marchBookings = allBookings.filter(b => {
         const date = new Date(b.bookingDate);
         return date.getFullYear() === 2024 && date.getMonth() === 2; // March is month 2 (0-indexed)
     });
-    
+
     debugDiv.innerHTML = `
         <strong>🔍 FILTER DEBUG INFO:</strong><br>
         <strong>Active Filters:</strong> Year=${year || 'All'}, Month=${month || 'All'}, Property=${property || 'All'}, Status=${status || 'All'}<br>
@@ -159,8 +159,8 @@ function updateDebugInfo(year, month, property, status) {
 
 // Generate the complete report
 function generateReport() {
-    console.log('Generating report with', filteredBookings.length, 'bookings');
-    
+    //console.log('Generating report with', filteredBookings.length, 'bookings');
+
     updateSummaryCards();
     renderCharts();
     populateBookingTable();
@@ -172,7 +172,7 @@ function updateSummaryCards() {
     const totalRevenue = filteredBookings.reduce((sum, booking) => sum + booking.amount, 0);
     const totalGuests = filteredBookings.reduce((sum, booking) => sum + booking.guests, 0);
     const avgBookingValue = totalBookings > 0 ? totalRevenue / totalBookings : 0;
-    
+
     $('#totalBookings').text(totalBookings);
     $('#totalRevenue').text('₹' + totalRevenue.toLocaleString());
     $('#totalGuests').text(totalGuests);
@@ -188,26 +188,26 @@ function renderCharts() {
 // Render monthly booking trends chart
 function renderMonthlyChart() {
     const ctx = document.getElementById('monthlyChart').getContext('2d');
-    
+
     // Destroy existing chart if it exists
     if (monthlyChart) {
         monthlyChart.destroy();
     }
-    
-    console.log('Rendering monthly chart with filtered bookings:', filteredBookings.length);
-    
+
+    //console.log('Rendering monthly chart with filtered bookings:', filteredBookings.length);
+
     // Group bookings by month
     const monthlyData = {};
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
                        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    
+
     filteredBookings.forEach(booking => {
         const date = new Date(booking.bookingDate);
         const monthKey = `${date.getFullYear()}-${date.getMonth()}`;
         const monthLabel = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
-        
-        console.log(`Processing booking ${booking.bookingId}: ${booking.bookingDate} -> ${monthLabel}`);
-        
+
+        //console.log(`Processing booking ${booking.bookingId}: ${booking.bookingDate} -> ${monthLabel}`);
+
         if (!monthlyData[monthKey]) {
             monthlyData[monthKey] = {
                 label: monthLabel,
@@ -215,16 +215,16 @@ function renderMonthlyChart() {
                 revenue: 0
             };
         }
-        
+
         monthlyData[monthKey].bookings++;
         monthlyData[monthKey].revenue += booking.amount;
     });
-    
+
     const sortedMonths = Object.keys(monthlyData).sort();
     const labels = sortedMonths.map(key => monthlyData[key].label);
     const bookingCounts = sortedMonths.map(key => monthlyData[key].bookings);
     const revenues = sortedMonths.map(key => monthlyData[key].revenue);
-    
+
     monthlyChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -416,14 +416,14 @@ function renderPropertyChart() {
 function populateBookingTable() {
     const tbody = $('#bookingTableBody');
     tbody.empty();
-    
+
     // Calculate pagination
     const totalRecords = filteredBookings.length;
     const totalPages = Math.ceil(totalRecords / recordsPerPage);
     const startIndex = (currentPage - 1) * recordsPerPage;
     const endIndex = startIndex + recordsPerPage;
     const currentPageData = filteredBookings.slice(startIndex, endIndex);
-    
+
     // Populate table with current page data
     currentPageData.forEach(booking => {
         const statusBadge = getStatusBadge(booking.status);
@@ -432,7 +432,7 @@ function populateBookingTable() {
             'villa2': 'Hustle in Hisspeed Villa'
         };
         const propertyName = propertyNames[booking.propertyId] || booking.propertyName;
-        
+
         const row = `
             <tr>
                 <td>${booking.bookingId}</td>
@@ -447,7 +447,7 @@ function populateBookingTable() {
         `;
         tbody.append(row);
     });
-    
+
     // Update pagination controls
     updatePaginationControls(totalRecords, totalPages);
 }
@@ -459,13 +459,13 @@ function updatePaginationControls(totalRecords, totalPages) {
     const endRecord = Math.min(currentPage * recordsPerPage, totalRecords);
     $('#currentPageInfo').text(`${startRecord}-${endRecord}`);
     $('#totalRecords').text(totalRecords);
-    
+
     // Update pagination buttons
     const paginationControls = $('#paginationControls');
-    
+
     // Clear existing page numbers (keep prev/next buttons)
     paginationControls.find('.page-number').remove();
-    
+
     // Update prev button
     const prevButton = $('#prevPage');
     if (currentPage <= 1) {
@@ -473,7 +473,7 @@ function updatePaginationControls(totalRecords, totalPages) {
     } else {
         prevButton.removeClass('disabled');
     }
-    
+
     // Update next button
     const nextButton = $('#nextPage');
     if (currentPage >= totalPages) {
@@ -481,17 +481,17 @@ function updatePaginationControls(totalRecords, totalPages) {
     } else {
         nextButton.removeClass('disabled');
     }
-    
+
     // Add page numbers
     const maxVisiblePages = 5;
     let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
     let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-    
+
     // Adjust start page if we're near the end
     if (endPage - startPage + 1 < maxVisiblePages) {
         startPage = Math.max(1, endPage - maxVisiblePages + 1);
     }
-    
+
     // Insert page numbers before the next button
     for (let i = startPage; i <= endPage; i++) {
         const pageItem = $(`
@@ -513,7 +513,7 @@ function initializePagination() {
             populateBookingTable();
         }
     });
-    
+
     // Next button click
     $(document).on('click', '#nextPage a', function(e) {
         e.preventDefault();
@@ -523,7 +523,7 @@ function initializePagination() {
             populateBookingTable();
         }
     });
-    
+
     // Page number click
     $(document).on('click', '.page-number a', function(e) {
         e.preventDefault();
@@ -543,7 +543,7 @@ function getStatusBadge(status) {
         cancelled: 'Cancelled'
     };
     const text = labels[status] || status;
-    
+
     return `<span class="badge" style="background-color: ${brandColors.primary}; color: #ffffff;">${text}</span>`;
 }
 
@@ -559,26 +559,26 @@ function formatDate(dateString) {
 
 
 function exportToPDF() {
-    console.log('=== exportToPDF function called ===');
-    console.log('Checking jsPDF availability:', typeof window.jspdf);
-    console.log('Checking jsPDF.jsPDF:', typeof window.jspdf?.jsPDF);
-    
+    //console.log('=== exportToPDF function called ===');
+    //console.log('Checking jsPDF availability:', typeof window.jspdf);
+    //console.log('Checking jsPDF.jsPDF:', typeof window.jspdf?.jsPDF);
+
     try {
         const { jsPDF } = window.jspdf;
-        console.log('jsPDF constructor:', typeof jsPDF);
-        
+        //console.log('jsPDF constructor:', typeof jsPDF);
+
         if (!jsPDF) {
-            console.error('jsPDF is not available');
+            //console.error('jsPDF is not available');
             alert('PDF library is not loaded. Please refresh the page and try again.');
             return;
         }
-        
-        console.log('Creating new jsPDF instance...');
+
+        //console.log('Creating new jsPDF instance...');
         const doc = new jsPDF();
-        console.log('jsPDF instance created successfully');
-        
-        console.log('filteredBookings for PDF:', filteredBookings.length, 'items');
-        
+        //console.log('jsPDF instance created successfully');
+
+        //console.log('filteredBookings for PDF:', filteredBookings.length, 'items');
+
         // Set document properties (similar to pdfgen.js)
         doc.setProperties({
             title: 'BW Stays - Booking Report',
@@ -587,32 +587,32 @@ function exportToPDF() {
             keywords: 'booking, report, analytics, bwstays',
             creator: 'BW Stays Booking System'
         });
-        
-        console.log('Document properties set');
-        
+
+        //console.log('Document properties set');
+
         // Add header
         doc.setFontSize(20);
         doc.setTextColor(40, 40, 40);
         doc.text('Black and White Stays', 20, 20);
-        
+
         doc.setFontSize(16);
         doc.text('Booking Report', 20, 30);
-        
+
         // Add filter information
         doc.setFontSize(10);
         const year = $('#yearSelect').val() || 'All Years';
         const month = $('#monthSelect option:selected').text() || 'All Months';
         const property = $('#propertySelect option:selected').text() || 'All Properties';
         const status = $('#statusSelect option:selected').text() || 'All Status';
-        
+
         doc.text(`Filters: Year: ${year}, Month: ${month}, Property: ${property}, Status: ${status}`, 20, 40);
-        
+
         // Add summary data
         const totalBookings = filteredBookings.length;
         const totalRevenue = filteredBookings.reduce((sum, booking) => sum + booking.amount, 0);
         const totalGuests = filteredBookings.reduce((sum, booking) => sum + booking.guests, 0);
         const avgBookingValue = totalBookings > 0 ? totalRevenue / totalBookings : 0;
-        
+
         doc.setFontSize(12);
         doc.text('Summary:', 20, 55);
         doc.setFontSize(10);
@@ -620,7 +620,7 @@ function exportToPDF() {
         doc.text(`Total Revenue: ₹${totalRevenue.toLocaleString()}`, 20, 72);
         doc.text(`Total Guests: ${totalGuests}`, 20, 79);
         doc.text(`Average Booking Value: ₹${Math.round(avgBookingValue).toLocaleString()}`, 20, 86);
-        
+
         // Prepare table data
         const tableData = filteredBookings.map(booking => {
             const propertyNames = {
@@ -628,7 +628,7 @@ function exportToPDF() {
                 'villa2': 'Hustle in Hisspeed Villa'
             };
             const propertyName = propertyNames[booking.propertyId] || booking.propertyName;
-            
+
             return [
                 booking.bookingId,
                 propertyName,
@@ -640,16 +640,16 @@ function exportToPDF() {
                 `₹${booking.amount.toLocaleString()}`
             ];
         });
-        
-        console.log('Table data prepared, rows:', tableData.length);
-        
+
+        //console.log('Table data prepared, rows:', tableData.length);
+
         // Check if autoTable is available
         if (typeof doc.autoTable !== 'function') {
-            console.error('autoTable plugin is not available');
+            //console.error('autoTable plugin is not available');
             alert('PDF table plugin is not loaded. Please refresh the page and try again.');
             return;
         }
-        
+
         // Add table using autoTable plugin (similar to pdfgen.js table approach)
         doc.autoTable({
             head: [['Booking ID', 'Property', 'Guest Name', 'Check-in', 'Check-out', 'Guests', 'Status', 'Amount']],
@@ -678,9 +678,9 @@ function exportToPDF() {
                 7: { cellWidth: 25 }
             }
         });
-        
-        console.log('Table added to PDF');
-        
+
+        //console.log('Table added to PDF');
+
         // Add footer (similar to pdfgen.js)
         const pageCount = doc.internal.getNumberOfPages();
         for (let i = 1; i <= pageCount; i++) {
@@ -691,19 +691,19 @@ function exportToPDF() {
             doc.text(`Page ${i} of ${pageCount}`, doc.internal.pageSize.width - 30, doc.internal.pageSize.height - 10);
             doc.text('Black and White Stays - Booking Report', doc.internal.pageSize.width / 2 - 40, doc.internal.pageSize.height - 10);
         }
-        
-        console.log('Footer added to PDF');
-        
+
+        //console.log('Footer added to PDF');
+
         // Save the PDF (similar to pdfgen.js naming convention)
         const currentDate = new Date().toISOString().split('T')[0];
         const filename = `bwBookingReport_${currentDate}.pdf`;
-        console.log('Saving PDF as:', filename);
+        //console.log('Saving PDF as:', filename);
         doc.save(filename);
-        
-        console.log('=== PDF export completed successfully ===');
-        
+
+        //console.log('=== PDF export completed successfully ===');
+
     } catch (error) {
-        console.error('Error in exportToPDF:', error);
+        //console.error('Error in exportToPDF:', error);
         alert('An error occurred while generating the PDF. Please check the console for details.');
     }
 }
