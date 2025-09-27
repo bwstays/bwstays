@@ -162,8 +162,8 @@
 		navigator.serviceWorker
 			.register('./js/sw.js', { scope: '/' })
 			.then(() => {
-				console.info('PWA Service Worker Registered');
-			}, err => console.error("Developer for Life Service Worker registration failed: ", err));
+				
+			}, err => );
 
 		navigator.serviceWorker
 			.ready
@@ -171,7 +171,7 @@
 				if(PREFETCH) {
 			       prefetchCache();
                 }
-				console.info('PWA Service Worker Ready');
+				
 			});
 	}
     // Performance monitoring
@@ -180,7 +180,7 @@
 		const observer = new PerformanceObserver((list) => {
 			list.getEntries().forEach((entry) => {
 				if (entry.entryType === 'navigation') {
-					console.log('Navigation timing:', entry.duration + 'ms');
+					
 				}
 			});
 		});
@@ -223,11 +223,11 @@
 
     navigator.serviceWorker.register('./js/sw.js', { scope: "./" }) //setting scope of sw
     .then(function(registration) {
-      console.info('Service worker is registered!');
+      
       checkForPageUpdate(registration); // To check if new content is updated or not
     })
     .catch(function(error) {
-      console.error('Service worker failed ', error);
+      
     });
 
      navigator.serviceWorker
@@ -236,7 +236,7 @@
 				if(PREFETCH) {
 			       prefetchCache();
                 }
-				console.info('PWA Service Worker Ready');
+				
 			});
 
   }
@@ -257,9 +257,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
     deferredPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the install prompt');
+        
       } else {
-        console.log('User dismissed the install prompt');
+        
       }
       deferredPrompt = null;
     });
@@ -275,7 +275,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
       if (navigator.serviceWorker.controller) {
         var installingSW = registration.installing;
         installingSW.onstatechange = function() {
-          console.info("Service Worker State :", installingSW.state);
+          
           switch(installingSW.state) {
             case 'installed':
               // Now new contents will be added to cache and old contents will be remove so
@@ -445,7 +445,7 @@ setTimeout(ldinsp, 0);
 						    <i class="fas fa-mountain fa-2x text-primary"></i>
 						</div>
 						<h3 class="text-white mb-3">nestle with nature</h3>
-								 <div class="border-bottom border-primary text-center mb-4"   id="contact-divider"></div>
+								 <div class="border-bottom border-primary text-center mb-4"   id="contact-divider-1"></div>
 						<p class="text-white-50 mb-0">Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep.</p>
 						<div class="mt-auto pt-4 text-center">
 						    <a id="villa1" href="javascript:void(0)" class="btn btn-primary js-scroll-trigger px-4 py-2">View Amenities</a>
@@ -468,7 +468,7 @@ setTimeout(ldinsp, 0);
 						    <i class="fas fa-home fa-2x text-primary"></i>
 						</div>
 						<h3 class="text-white mb-3">hustle in hisspeed</h3>
-								 <div class="border-bottom border-primary text-center mb-4"   id="contact-divider"></div>
+								 <div class="border-bottom border-primary text-center mb-4"   id="contact-divider-2"></div>
 						<p class="text-white-50 mb-0">Luxurious amenities and thoughtfully designed spaces for your perfect stay.</p>
 						<div class="mt-auto pt-4 text-center">
 						    <a id="villa2" href="javascript:void(0)" class="btn btn-primary js-scroll-trigger px-4 py-2">View Amenities</a>
@@ -489,7 +489,7 @@ setTimeout(ldinsp, 0);
 						    <i class="fas fa-star fa-2x text-primary"></i>
 						</div>
 						<h3 class="text-white mb-3">bustle in budget</h3>
-								 <div class="border-bottom border-primary text-center mb-4"   id="contact-divider"></div>
+								 <div class="border-bottom border-primary text-center mb-4"   id="contact-divider-3"></div>
 						<p class="text-white-50 mb-0">Increased productivity. Group Workation without distraction (and with the motivation of their new, beautiful setting).</p>
 						<div class="mt-auto pt-4 text-center">
 						    <a id="outdoor" href="javascript:void(0)" class="btn btn-primary js-scroll-trigger px-4 py-2">View Amenities</a>
@@ -510,7 +510,7 @@ setTimeout(ldinsp, 0);
             <div class="col-lg-8 mx-auto">
                 <h2 class="text-black mb-4 text-center">DISCOVER</h2>
                 <div class="border-bottom border-primary text-center mb-4"
-                    id="contact-divider"></div>
+                    id="contact-divider-4"></div>
                 <p class="text-black text-center">
                 Rolling hills, misty mountains, and endless greenery Discover the Wayanad Skyline
                 </p>
@@ -796,7 +796,7 @@ setTimeout(ldinsp, 0);
 		  <div class="col-md-12 text-center ">
 			<div class="text-left mb-12 text-center">
 				<h2 class="text-black font-weight-bold text-center">Get in touch with us</h2>
-				<div class="border-bottom border-primary text-center mb-4" id="contact-divider"></div>
+				<div class="border-bottom border-primary text-center mb-4" id="contact-divider-5"></div>
 			</div>
 		   </div>
            <div class="row"  id="contact-form-div">
@@ -909,7 +909,7 @@ setTimeout(ldinsp, 0);
                 <div class="text-left mb-12 text-center">
                     <h2 class="text-white font-weight-bold text-center">About us</h2>
                     <div class="border-bottom border-primary text-center mb-4"
-                        id="contact-divider"></div>
+                        id="contact-divider-6"></div>
                 </div>
             </div>
 
@@ -956,7 +956,7 @@ setTimeout(ldinsp, 0);
                     <div class="reviews-content">
                         <div class="reviews-title"><h4 class="text-white font-weight-bold mb-3">
                             Guest Experiences</h4>
-							<div class="border-bottom border-primary text-center mb-4" id="contact-divider"></div>
+							<div class="border-bottom border-primary text-center mb-4" id="contact-divider-7"></div>
 
                         </div>
 
@@ -980,7 +980,7 @@ setTimeout(ldinsp, 0);
         <h3 class="text-white font-weight-bold text-center">Locate us</h3>
 
 
-        <div class="border-bottom border-primary text-center mb-4"             id="contact-divider"></div>
+        <div class="border-bottom border-primary text-center mb-4"             id="contact-divider-8"></div>
 		 <p class="text-white text-center">Whispers of Forest, a stay that provides rural tranquility and urban convenience</p>
         <div class="container">
             <div class="row">

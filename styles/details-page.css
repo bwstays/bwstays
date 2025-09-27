@@ -584,7 +584,8 @@ nav#mainNav.navbar-shrink,
   border-radius: 20px;
 }
 
-#contact-divider {
+#contact-divider,
+[id^="contact-divider"] {
   width: 22%;
   margin: 0 auto;
   border-radius: 10%;
@@ -3295,7 +3296,8 @@ footer.footer .stay-card {
 }
 
 
-#signup #contact-divider {
+#signup #contact-divider,
+#signup [id^="contact-divider"] {
   border-top: none !important;
   width: 22% !important;
   margin: 0 auto !important;

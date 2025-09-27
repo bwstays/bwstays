@@ -218,8 +218,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		navigator.serviceWorker
 			.register('/sw.js', { scope: '/' })
 			.then(() => {
-				console.info('PWA Service Worker Registered');
-			}, err => console.error("Developer for Life Service Worker registration failed: ", err));
+				
+			}, err => );
 
 		navigator.serviceWorker
 			.ready
@@ -227,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				if(PREFETCH) {
 			       prefetchCache();
                 }
-				console.info('PWA Service Worker Ready');
+				
 			});
 	}
     // Performance monitoring
@@ -236,7 +236,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		const observer = new PerformanceObserver((list) => {
 			list.getEntries().forEach((entry) => {
 				if (entry.entryType === 'navigation') {
-					console.log('Navigation timing:', entry.duration + 'ms');
+					
 				}
 			});
 		});
@@ -254,11 +254,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register('./sw.js', { scope: "./" }) //setting scope of sw
     .then(function(registration) {
-      console.info('Service worker is registered!');
+      
       checkForPageUpdate(registration); // To check if new content is updated or not
     })
     .catch(function(error) {
-      console.error('Service worker failed ', error);
+      
     });
   }
 
@@ -278,9 +278,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
     deferredPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the install prompt');
+        
       } else {
-        console.log('User dismissed the install prompt');
+        
       }
       deferredPrompt = null;
     });
@@ -296,7 +296,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
       if (navigator.serviceWorker.controller) {
         var installingSW = registration.installing;
         installingSW.onstatechange = function() {
-          console.info("Service Worker State :", installingSW.state);
+          
           switch(installingSW.state) {
             case 'installed':
               // Now new contents will be added to cache and old contents will be remove so
@@ -618,7 +618,7 @@ ul.list-unstyled.mb-0.text-white-50 {
 
     <h2 class="text-center text-white">Food & Dining</h2>
     <div class="border-bottom border-primary text-center mb-4"
-      id="contact-divider">
+      id="contact-divider-1">
     </div>
     <div class="row">
 
@@ -646,7 +646,7 @@ ul.list-unstyled.mb-0.text-white-50 {
 		  <div class="col-md-12 text-center ">
 			<div class="text-left mb-12 text-center">
 				<h2 class="text-black font-weight-bold text-center">Get in touch with us</h2>
-				<div class="border-bottom border-primary text-center mb-4" id="contact-divider"></div>
+				<div class="border-bottom border-primary text-center mb-4" id="contact-divider-2"></div>
 			</div>
 		   </div>
            <div class="row"  id="contact-form-div">
@@ -755,7 +755,7 @@ ul.list-unstyled.mb-0.text-white-50 {
                 <div class="text-left mb-12 text-center">
                     <h2 class="text-white font-weight-bold text-center">About us</h2>
                     <div class="border-bottom border-primary text-center mb-4"
-                        id="contact-divider"></div>
+                        id="contact-divider-3"></div>
                 </div>
             </div>
 
@@ -801,7 +801,7 @@ ul.list-unstyled.mb-0.text-white-50 {
                         <div class="reviews-title">
 
                         <h4 class="text-white font-weight-bold mb-3">Guest Experiences</h4>
-							<div class="border-bottom border-primary text-center mb-4" id="contact-divider"></div>
+							<div class="border-bottom border-primary text-center mb-4" id="contact-divider-4"></div>
 
                         </div>
 
@@ -822,7 +822,7 @@ ul.list-unstyled.mb-0.text-white-50 {
         <h3 class="text-white font-weight-bold text-center">Locate us</h3>
 
 
-        <div class="border-bottom border-primary text-center mb-4"             id="contact-divider"></div>
+        <div class="border-bottom border-primary text-center mb-4"             id="contact-divider-5"></div>
 		 <p class="text-white text-center">Whispers of Forest, a stay that provides rural tranquility and urban convenience</p>
         <div class="container">
             <div class="row">

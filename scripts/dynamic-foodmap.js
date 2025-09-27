@@ -1,24 +1,16 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('#food-places');
   if (!section) return;
-
   const centerAttr = section.getAttribute('data-center');
   if (!centerAttr) return;
   const [lat, lng] = centerAttr.split(',').map(Number);
   const centerloca = { lat, lng };
-
-  // Initialize map with dynamic center
   const map1 = L.map('foodmap').setView([lat, lng], 12);
-
-  // Add OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).on('tileload', function(e) {
-    e.tile.alt = 'Food joins at wayand'; // Customize your alt text here
+    e.tile.alt = 'Food joins at wayand'; 
 }).addTo(map1);
-
-  // Add main location marker
   L.marker([lat, lng], {
     icon: L.icon({
       iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
@@ -26,39 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
       iconAnchor: [16, 32]
     })
   }).on('tileload', function(e) {
-    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+    e.tile.alt = 'All Locations at wayand'; 
 }).addTo(map1)
     .bindPopup('Food and Dine')
     .openPopup();
-
-  // Add circle to show search radius
   L.circle([lat, lng], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.2,
     radius: 4000
   }).on('tileload', function(e) {
-    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+    e.tile.alt = 'All Locations at wayand'; 
 }).addTo(map1);
-
-  // Add routing from BW Stays to location
- /* L.Routing.control({
-    waypoints: [
-      L.latLng(11.6057872, 76.0833109),
-      L.latLng(lat, lng)
-    ],
-    routeWhileDragging: false,
-    addWaypoints: false,
-    createMarker: function() { return null; },
-    lineOptions: {
-      styles: [{ color: '#4285F4', weight: 5, opacity: 0.6 }]
-    }
-  }).addTo(map1);
-  */
-
   const foodPlacesContainer = document.getElementById('food-list');
-
-  // Overpass API query
   const query = `
     [out:json][timeout:25];
     (
@@ -68,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     out center meta;
   `;
-
-  // Fetch restaurants from Overpass API
   fetch("https://overpass-api.de/api/interpreter", {
     method: "POST",
     body: query
@@ -77,15 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
   .then(response => response.json())
   .then(data => {
     if (data.elements && data.elements.length > 0) {
-      // Filter and sort restaurants
       const restaurants = data.elements
         .filter(el => el.lat && el.lon && el.tags && el.tags.name)
-        .slice(0, 5); // Limit to top 5 like Google Maps version
-
+        .slice(0, 5); 
       restaurants.forEach(restaurant => {
         const cuisineType = guessCuisineFromTags(restaurant.tags);
-
-        // Add marker to map
         L.marker([restaurant.lat, restaurant.lon], {
           icon: L.icon({
             iconUrl: 'https://www.bwstays.com/assets/img/logo/pin.png',
@@ -93,11 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
             iconAnchor: [15, 30]
           })
         }).on('tileload', function(e) {
-    e.tile.alt = 'All Locations at wayand'; // Customize your alt text here
+    e.tile.alt = 'All Locations at wayand'; 
 }).addTo(map1)
           .bindPopup(restaurant.tags.name);
-
-        // Add to restaurant list
         let placeHTML = `
           <div class="mb-4 text-right">
             <h6 class="text-white">${restaurant.tags.name}</h6>
@@ -119,12 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
   .catch(err => {
-    //console.error("Error fetching restaurants:", err);
     foodPlacesContainer.innerHTML = '<div class="mb-4 text-right"><p class="text-white-50">Unable to load restaurants.</p></div>';
   });
-
 });
-
 function guessCuisineFromTags(tags) {
   if (tags.cuisine) return tags.cuisine.charAt(0).toUpperCase() + tags.cuisine.slice(1);
   if (tags.amenity === 'pub') return 'Pub';
