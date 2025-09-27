@@ -319,22 +319,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Charts Section -->
         <div class="row mb-4">
             <div class="col-lg-8">
-                <div class="card shadow mb-4" style="height: 400px;">
+                <div id="monthly-chart-container" class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Monthly Booking Trends</h6>
                     </div>
-                    <div class="card-body d-flex align-items-center justify-content-center" style="height: calc(100% - 60px);">
-                        <canvas id="monthlyChart" style="max-height: 300px; width: 100%;"></canvas>
+                    <div id="monthly-chart-body" class="card-body d-flex align-items-center justify-content-center">
+                        <canvas id="monthlyChart"></canvas>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card shadow mb-4" style="height: 400px;">
+                <div id="property-chart-container" class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Booking Status Distribution</h6>
                     </div>
-                    <div class="card-body d-flex align-items-center justify-content-center" style="height: calc(100% - 60px);">
-                        <canvas id="propertyChart" style="max-height: 280px; width: 100%;"></canvas>
+                    <div id="property-chart-body" class="card-body d-flex align-items-center justify-content-center">
+                        <canvas id="propertyChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -464,7 +464,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <i class="fas fa-sync-alt"></i>
                             </button>
                         </div>
-                        <div id="captcha-error" class="captcha-error-message" style="display: none;"></div>
+                        <div id="captcha-error" class="captcha-error-message"></div>
                     </div>
 
                     <button class="btn btn-primary btn-block  px-4  py-2 text-uppercase"
