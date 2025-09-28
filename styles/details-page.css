@@ -592,7 +592,9 @@ nav#mainNav.navbar-shrink,
   margin-bottom: 15px !important ;
 }
 
-
+#monthlyChart{
+  height: 300px !important;
+}
 
 .sticky-image-container {
   position: relative;
