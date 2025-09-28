@@ -1,5 +1,4 @@
-<!--
--->
+
         function addSpeculationRules() {
             if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
                 const script = document.createElement('script');
@@ -38,7 +37,7 @@
 						  	  "source": "document",
 							  "where": {
 								"and": [
-								  { "href_matches": "/apiblogs*"] } }
+								  { "href_matches": "/apiblogs*" } 
 								]
 						     },
 						     "eagerness": "conservative"
