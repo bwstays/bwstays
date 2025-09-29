@@ -1,53 +1,24 @@
 function getCurrentPageId() {
     const urlParams = new URLSearchParams(window.location.search);
-
-    //61 is the first catagory code in the sitedata
     var currId = urlParams.get('id');
     if (currId === null || typeof currId == "undefined" || currId === '')
         currId = 61;
     return currId;
-
 }
-
 function getCurrentCatagoryId() {
     const urlParams = new URLSearchParams(window.location.search);
-
     var catId = urlParams.get('cat');
     if (catId === null || typeof catId == "undefined" || catId === '')
         catId = 0;
     return catId;
-
 }
 function findPlaceById(id) {
-
-    //0, plantation
-    //1, waterfalls
-    //2, museums
-    //3, romantic
-    //4, culthist
-    //5, trucking
-    //6, wildlife
-    //7, farms
-    //8, sporting
-    //9, food
-    //10,tribal
-    //11,cycling
-    //12,shopping
-    //13,pilgrimage
-    //14,stays
-
     const categories = ['plantation', 'waterfalls', 'museums', 'romantic', 'culthist', 'trucking', 'wildlife', 'farms', 'sporting', 'food', 'tribal', 'cycling', 'shopping','pilgrimage','stays'];
      for (const category of categories) {
-		    //console.log("4444444444" +category );
-
         if (siteData[category]) {
-			//console.log("66666666" + id + " check id "  + " category" +category);
             const place = siteData[category].find(p => p.id === id);
-            //console.log("place" +place);
-
             if (place)
             {
-				//console.log("findPlaceById place" +place);
 				return { place, category };
 			}
         }
@@ -57,8 +28,6 @@ function findPlaceById(id) {
 function getLocationNameById(id) {
     return locations.names[id] || null;
 }
-
-
 function getLocationIdByName(name) {
     for (const [id, locationName] of Object.entries(locations.names)) {
         if (locationName === name) {
@@ -67,53 +36,16 @@ function getLocationIdByName(name) {
     }
     return null;
 }
-
-
-/**
- * Function to get nearby places within a certain distance
- *
- * @param {number} locationId - The ID of the current location (1-30)
- * @param {number} maxDistance - Maximum distance in kilometers (default: 25)
- * @returns {Array} Array of nearby places sorted by distance, each containing:
- *                  - id: Location ID (1-30)
- *                  - name: Full name of the location
- *                  - distance: Distance in kilometers
- *
- * Example Usage:
- * -------------
- * 1. Get all places within 25km of Santhi natha Temple (ID: 1):
- *    const nearby = getNearbyPlaces(1);
- *    // Returns: [
- *    //   { id: 26, name: "Vantha Mess", distance: 1 },
- *    //   { id: 27, name: "Ramvilla Kalpetta", distance: 1 },
- *    //   { id: 23, name: "Puliyarmala", distance: 3 },
- *    //   ...
- *    // ]
- *
- * 2. Get all places within 10km of Thirunelly (ID: 4):
- *    const nearby = getNearbyPlaces(4, 10);
- *    // Returns places within 10km of Thirunelly
- */
 function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
      var loclength=Object.keys(locations.names).length;
-
-
     for (let i = 0; i < loclength; i++) {
 			var value =locations.names[i+1];
-
-			//console.log("distances"+distances[i]);
            if ( distances[i]!=""  &&  distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
-
 			if( distances[i]!="0")
 			{
-				//if(!locations.names[i+1].startsWith("bwstays") || )
-
-
- 					//NEED TO POPLULATE IMAGE ,RATING, IMAGE MAP,TIMING
-					var thisId=findPlaceById(i+1); //TODO
-
+					var thisId=findPlaceById(i+1); 
 					nearbyPlaces.push({
 						id: i,
 						name: locations.names[i+1],
@@ -129,75 +61,42 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     }
     return nearbyPlaces.sort((a, b) => a.distance - b.distance);
 }
-
-// Speed up calls to hasOwnProperty
 var hasOwnProperty = Object.prototype.hasOwnProperty;
-
 function isEmpty(obj) {
-
-    // null and undefined are "empty"
     if (obj == null) return true;
-
-    // Assume if it has a length property with a non-zero value
-    // that that property is correct.
     if (obj.length > 0)    return false;
     if (obj.length === 0)  return true;
-
-    // If it isn't an object at this point
-    // it is empty, but it can't be anything *but* empty
-    // Is it empty?  Depends on your application.
     if (typeof obj !== "object") return true;
-
-    // Otherwise, does it have any properties of its own?
-    // Note that this doesn't handle
-    // toString and valueOf enumeration bugs in IE < 9
     for (var key in obj) {
         if (hasOwnProperty.call(obj, key)) return false;
     }
-
     return true;
 }
-// Function to get nearby places within 25km of Santhi natha Temple
 function renderNearbyPlaces() {
     const nearbyCardsContainer = document.getElementById('nearby-cards');
     if (!nearbyCardsContainer) {
-//        console.error('Could not find nearby-cards container');
         return;
     }
     const locId = getCurrentPageId();
     const maxDistance = 20;
     const locCat = getCurrentCatagoryId();
-    // id we can pass dynamically
     const nearbyPlaces = getNearbyPlaces(locId, maxDistance);
      if (nearbyPlaces.length === 0) {
         nearbyCardsContainer.innerHTML = '<div class="col-12"><p class="text-center">No nearby places found.</p></div>';
         return;
     }
-//console.log(nearbyPlaces);
-// console.log(fullPlaceDetails);
-
-
     const cardHTMLArray = [];
 		for (let i = 0; i < nearbyPlaces.length; i++) {
 		const place = nearbyPlaces[i];
-
 		var html=createPlaceCard(place);
-
 		cardHTMLArray.push(html);
 		}
-
-
 	nearbyCardsContainer.innerHTML = cardHTMLArray.join('');
-
 }
-
 var iconURLPrefix = 'https://www.bwstays.com/';
-
-// Function to create a card for each nearby place
 function createPlaceCard(place) {
     const imageUrl = place.image || iconURLPrefix+'assets/img/villa1/demo-image-02.webp';
     const knowmoreUrl = place.knowmore || '#';
-
     return `
         <a  id="knowmore" href="${knowmoreUrl}" class="text-decoration-none text-white"><div class="col-lg-3 col-md-4 col-sm-6 mb-3">
             <div class="card nearby-card h-100 border-0" style="border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease;"><div class="card-img-top">
@@ -229,9 +128,5 @@ function createPlaceCard(place) {
         </div></a>
     `;
 }
-
-{/* <div class="icon-container me-2">
-    <a href="${place.map}" class="text-decoration-none"><i class="fas fa-map-marker-alt" style="color: #64a19d; font-size: 1.1rem;"></i></a>
-</div> */}
-
+{}
 document.addEventListener('DOMContentLoaded', renderNearbyPlaces);

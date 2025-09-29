@@ -1,4 +1,3 @@
-// FAQ Data
 const faqData = [
     {
         question: "Who owns Black & White Workations Wayanad?",
@@ -81,26 +80,18 @@ const faqData = [
         answer: "Yes, our Wayanad rental villas feature luxurious amenities including private pools, spa facilities, gourmet kitchens, premium bedding, air conditioning, high-speed internet, entertainment systems, landscaped gardens, and 24/7 concierge services to ensure a comfortable and productive stay."
     }
 ];
-
-// Carousel variables
 let currentPage = 0;
 const itemsPerPage = 5;
 const totalPages = Math.ceil(faqData.length / itemsPerPage);
-
 function toggleFAQ() {
     const faqContainer = document.getElementById('faq-container');
     const faqToggle = document.getElementById('faq-toggle');
-
     if (faqContainer.style.display === 'none' || faqContainer.style.display === '') {
         faqContainer.style.display = 'block';
         faqToggle.innerHTML = 'Hide FAQ';
-
-        // Always initialize FAQ carousel when opening
         setTimeout(() => {
             initializeFAQCarousel();
         }, 100);
-
-        // Smooth scroll to FAQ section
         setTimeout(() => {
             faqContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 200);
@@ -109,41 +100,26 @@ function toggleFAQ() {
         faqToggle.innerHTML = 'Frequently Asked Questions';
     }
 }
-
 function initializeFAQCarousel() {
     const carousel = document.getElementById('faq-carousel');
     if (!carousel) {
-        //console.error('FAQ carousel element not found');
         return;
     }
-
-    // Reset current page
     currentPage = 0;
-
-    // Clear existing content completely
     carousel.innerHTML = '';
-
-    // Remove any existing FAQ items that might be outside the carousel
     const faqContainer = document.getElementById('faq-container');
     if (faqContainer) {
         const existingFaqItems = faqContainer.querySelectorAll('.faq-item:not(#faq-carousel .faq-item)');
         existingFaqItems.forEach(item => item.remove());
     }
-
-    // Render current page
     renderFAQPage();
     updateNavigationButtons();
-
-    //console.log('FAQ carousel initialized with', faqData.length, 'questions,', totalPages, 'pages');
 }
-
 function renderFAQPage() {
     const carousel = document.getElementById('faq-carousel');
     const startIndex = currentPage * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, faqData.length);
-
     carousel.innerHTML = '';
-
     for (let i = startIndex; i < endIndex; i++) {
         const faq = faqData[i];
         const faqItem = document.createElement('div');
@@ -162,35 +138,27 @@ function renderFAQPage() {
         carousel.appendChild(faqItem);
     }
 }
-
 function changeFAQPage(direction) {
     const newPage = currentPage + direction;
-
     if (newPage >= 0 && newPage < totalPages) {
         currentPage = newPage;
         renderFAQPage();
         updateNavigationButtons();
     }
 }
-
 function updateNavigationButtons() {
     const prevBtn = document.getElementById('faq-prev');
     const nextBtn = document.getElementById('faq-next');
     const pageInfo = document.getElementById('faq-page-info');
-
     if (prevBtn) prevBtn.disabled = currentPage === 0;
     if (nextBtn) nextBtn.disabled = currentPage === totalPages - 1;
     if (pageInfo) pageInfo.textContent = `Page ${currentPage + 1} of ${totalPages}`;
 }
-
 function toggleAnswer(questionElement) {
     const answer = questionElement.nextElementSibling;
     const icon = questionElement.querySelector('.faq-icon');
-
-    // Close all other open answers in current page
     const allQuestions = document.querySelectorAll('.faq-question');
     const allAnswers = document.querySelectorAll('.faq-answer');
-
     allQuestions.forEach(q => {
         if (q !== questionElement) {
             q.classList.remove('active');
@@ -199,14 +167,11 @@ function toggleAnswer(questionElement) {
             if (qIcon) qIcon.classList.add('fa-chevron-down');
         }
     });
-
     allAnswers.forEach(a => {
         if (a !== answer) {
             a.classList.remove('show');
         }
     });
-
-    // Toggle current answer
     if (!answer.classList.contains('show')) {
         answer.classList.add('show');
         questionElement.classList.add('active');
@@ -223,14 +188,8 @@ function toggleAnswer(questionElement) {
         }
     }
 }
-
-// Ensure FAQ is ready when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    //console.log('FAQ script loaded and ready');
-
-    // Pre-initialize carousel elements if FAQ container exists
     const faqContainer = document.getElementById('faq-container');
     if (faqContainer) {
-        //console.log('FAQ container found, ready for initialization');
     }
 });

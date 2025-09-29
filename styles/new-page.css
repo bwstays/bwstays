@@ -1,4 +1,5 @@
-#contact-divider{
+#contact-divider,
+[id^="contact-divider"]{
     width: 22% !important;
     margin: 0 auto !important;
     border-radius: 10% !important;

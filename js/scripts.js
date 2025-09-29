@@ -184,4 +184,3 @@ L.marker(target,iconOptions).on('tileload', function(e) {
 }).addTo(map).bindPopup( bwlocations[0][5]);
 //}
 /*location map end*/
-

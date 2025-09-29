@@ -1,16 +1,11 @@
-
-      // Generate random captcha numbers
 	          function generateCaptcha() {
 	              const num1 = Math.floor(Math.random() * 10) + 1;
 	              const num2 = Math.floor(Math.random() * 10) + 1;
 	              document.getElementById('captcha-num1').textContent = num1;
 	              document.getElementById('captcha-num2').textContent = num2;
 	              document.getElementById('captcha-answer').value = '';
-	              // Clear any existing error message
 	              clearCaptchaError();
 	          }
-
-	          // Show captcha error message
 	          function showCaptchaError(message) {
 	              const errorElement = document.getElementById('captcha-error');
 	              if (errorElement) {
@@ -18,8 +13,6 @@
 	                  errorElement.style.display = 'block';
 	              }
 	          }
-
-	          // Clear captcha error message
 	          function clearCaptchaError() {
 	              const errorElement = document.getElementById('captcha-error');
 	              if (errorElement) {
@@ -27,18 +20,13 @@
 	                  errorElement.textContent = '';
 	              }
 	          }
-
-	          // Validate captcha answer
 	          function validateCaptcha() {
 	              const num1 = parseInt(document.getElementById('captcha-num1').textContent);
 	              const num2 = parseInt(document.getElementById('captcha-num2').textContent);
 	              const userAnswer = parseInt(document.getElementById('captcha-answer').value);
 	              const correctAnswer = num1 + num2;
-
 	              return userAnswer === correctAnswer;
 	          }
-
-      // testimonial
 const testCardData = {
     test: [
         {
@@ -58,9 +46,7 @@ const testCardData = {
         }
     ]
 };
-
    function renderTestimonial( ) {
-
 		const testCardsContainer = document.getElementById('reviews-grid');
 		const cardHTMLArray = [];
 		const testim = testCardData.test;
@@ -69,18 +55,12 @@ const testCardData = {
 			var html=createReviewCard(review);
 			cardHTMLArray.push(html);
 		}
-
 	    testCardsContainer.innerHTML = cardHTMLArray.join('');
-
-
    }
-
-
   function createReviewCard(review) {
       const custname = review.custname || '#';
       const rating = review.rating || '#';
       const comment = review.comment || '#';
-
      return `
                             <div class="review-card">
                                 <div class="reviewer-info">
@@ -94,7 +74,6 @@ const testCardData = {
                                                 <i class="fas fa-star my-star-icon"></i>
                                                 <i class="fas fa-star my-star-icon"></i>
                                             </span>
-
                                         </div>
                                     </div>
                                 </div>
@@ -102,12 +81,7 @@ const testCardData = {
                             </div>
      `;
  }
-
 document.addEventListener('DOMContentLoaded', renderTestimonial);
-      // testimonial
-
-
-      // Image carousel functionality for the static left column
       document.addEventListener("DOMContentLoaded", function () {
         const imgWrapper = document.querySelector(
           ".col-lg-6 > div:first-child > div:first-child"
@@ -115,8 +89,7 @@ document.addEventListener('DOMContentLoaded', renderTestimonial);
         const leftArrow = document.querySelector(".image-nav-left");
         const rightArrow = document.querySelector(".image-nav-right");
         let currentImageIndex = 0;
-        const imageCount = 2; // Number of images in the carousel
-
+        const imageCount = 2; 
         function updateImage(direction) {
           if (direction === "next") {
             currentImageIndex = (currentImageIndex + 1) % imageCount;
@@ -128,56 +101,39 @@ document.addEventListener('DOMContentLoaded', renderTestimonial);
             currentImageIndex * 100
           }%)`;
         }
-
 		if (leftArrow !== undefined && leftArrow  && rightArrow !== undefined && rightArrow)
 		{
 					leftArrow.addEventListener("click", function () {
 					  updateImage("prev");
 					});
-
 					rightArrow.addEventListener("click", function () {
 					  updateImage("next");
 					});
-
-					// Add hover effects for arrows
 					leftArrow.addEventListener("mouseenter", function () {
 					  this.style.backgroundColor = "rgba(0,0,0,0.8)";
 					  this.style.transform = "translateY(-50%) scale(1.1)";
 					});
-
 					leftArrow.addEventListener("mouseleave", function () {
 					  this.style.backgroundColor = "rgba(0,0,0,0.6)";
 					  this.style.transform = "translateY(-50%) scale(1)";
 					});
-
 					rightArrow.addEventListener("mouseenter", function () {
 					  this.style.backgroundColor = "rgba(0,0,0,0.8)";
 					  this.style.transform = "translateY(-50%) scale(1.1)";
 					});
-
 					rightArrow.addEventListener("mouseleave", function () {
 					  this.style.backgroundColor = "rgba(0,0,0,0.6)";
 					  this.style.transform = "translateY(-50%) scale(1)";
 					});
 			}
       });
-      // Image carousel functionality for the static left column
-
-
-
-	          // Initialize captcha on page load
 	          document.addEventListener('DOMContentLoaded', function() {
 	              generateCaptcha();
-
-	              // Refresh captcha button
 	              document.getElementById('refresh-captcha').addEventListener('click', function() {
 	                  generateCaptcha();
 	              });
-
-	              // Form submission validation for both booking and contact forms
 	              const bookingForm = document.getElementById('myForm');
 	              const contactForm = document.getElementById('contact-form');
-
 	              if (bookingForm) {
 	                  bookingForm.addEventListener('submit', function(e) {
 	                      if (!validateCaptcha()) {
@@ -188,7 +144,6 @@ document.addEventListener('DOMContentLoaded', renderTestimonial);
 	                      }
 	                  });
 	              }
-
 	              if (contactForm) {
 	                  contactForm.addEventListener('submit', function(e) {
 	                      if (!validateCaptcha()) {
@@ -199,8 +154,6 @@ document.addEventListener('DOMContentLoaded', renderTestimonial);
 	                      }
 	                  });
 	              }
-
-	              // Clear error message when user starts typing in captcha answer
 	              const captchaInput = document.getElementById('captcha-answer');
 	              if (captchaInput) {
 	                  captchaInput.addEventListener('input', function() {

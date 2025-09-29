@@ -1,11 +1,5 @@
-<!--
-//{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/cozystay\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 
--->
-
-        // Method 2: Dynamic Speculation Rules with JavaScript
         function addSpeculationRules() {
-            // Check if Speculation Rules API is supported
             if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
                 const script = document.createElement('script');
                 script.type = 'speculationrules';
@@ -26,7 +20,6 @@
 							  "source": "document",
 					          "where": { "href_matches": "/all-locations-wayanad.html" },
 					          "eagerness": "conservative"
-
 					        },
 					        {
 							  "source": "document",
@@ -44,8 +37,7 @@
 						  	  "source": "document",
 							  "where": {
 								"and": [
-								  { "href_matches": "/api/*" },
-								  { "not": { "href_matches": ["*/blogs*"] } }
+								  { "href_matches": "/apiblogs*" } 
 								]
 						     },
 						     "eagerness": "conservative"
@@ -70,13 +62,9 @@
     				}
 					);
                 document.head.appendChild(script);
-               // console.log('Speculation rules added dynamically');
             } else {
-              //  console.log('Speculation Rules API not supported');
             }
         }
-
-        // Method 3: Hover-based speculation rules
         function addHoverBasedRules() {
             if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
                 const hoverScript = document.createElement('script');
