@@ -586,12 +586,15 @@ nav#mainNav.navbar-shrink,
 
 #contact-divider,
 [id^="contact-divider"] {
-  width: 22%;
-  margin: 0 auto;
-  border-radius: 10%;
+  width: 22% !important;
+  margin: 0 auto !important;
+  border-radius: 10% !important;
+  margin-bottom: 15px !important ;
 }
 
-
+#monthlyChart{
+  height: 300px !important;
+}
 
 .sticky-image-container {
   position: relative;
@@ -3973,9 +3976,11 @@ footer.footer .stay-card {
 }
 
 #faq-container {
-  display: none;
+  display: none !important;
 }
-
+.faq-container{
+  display: none !important;
+}
 
 #faq-title-divider {
   width: 100px;
