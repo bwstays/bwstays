@@ -1958,6 +1958,68 @@ a.text-black:focus {
   color: #aaa;
 }
 
+/* Voice control buttons */
+.voice-btn {
+  background: #2b2b2b;
+  color: #64a19d;
+  border: 1px solid rgba(100, 161, 157, 0.3);
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.voice-btn:hover {
+  background: #3a3a3a;
+  border-color: rgba(100, 161, 157, 0.5);
+}
+
+.voice-btn.active {
+  background: #64a19d;
+  color: #0f2625;
+  border-color: #64a19d;
+}
+
+.voice-btn.listening {
+  background: #e74c3c;
+  color: #fff;
+  border-color: #e74c3c;
+  animation: pulse 1.5s infinite;
+}
+
+.voice-btn.speaking {
+  background: #f39c12;
+  color: #fff;
+  border-color: #f39c12;
+  animation: pulse 1.5s infinite;
+}
+
+.voice-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #2b2b2b;
+  color: #666;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 #chat-send {
   background: #64a19d;
   color: #0f2625;
@@ -1974,6 +2036,62 @@ a.text-black:focus {
 #chat-send:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* Voice status indicator */
+.voice-status {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #9cc4c1;
+}
+
+.voice-status.show {
+  display: flex;
+}
+
+.voice-status-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #64a19d;
+}
+
+.voice-status.listening .voice-status-icon {
+  background: #e74c3c;
+  animation: pulse 1s infinite;
+}
+
+.voice-status.speaking .voice-status-icon {
+  background: #f39c12;
+  animation: pulse 1s infinite;
+}
+
+/* Message speaker button */
+.message-speaker-btn {
+  background: transparent;
+  border: none;
+  color: #64a19d;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.message-speaker-btn:hover {
+  opacity: 1;
+  background: rgba(100, 161, 157, 0.1);
+}
+
+.message-speaker-btn.speaking {
+  color: #f39c12;
+  opacity: 1;
+  animation: pulse 1s infinite;
 }
 
 
