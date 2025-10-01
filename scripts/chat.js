@@ -175,7 +175,13 @@
         </div>
         <div class="chat-footer">
           <div class="chat-input-container">
-            <input type="text" id="chat-input" placeholder="Type your message..." maxlength="500">
+            <input type="text" id="chat-input" placeholder="Type your message or click mic to speak..." maxlength="500">
+            <button type="button" id="voice-mic" class="voice-btn" title="Click to speak">
+              <i class="fas fa-microphone"></i>
+            </button>
+            <button type="button" id="voice-speaker" class="voice-btn" title="Listen to responses">
+              <i class="fas fa-volume-up"></i>
+            </button>
             <button type="button" id="chat-send" disabled>
               <i class="fas fa-paper-plane"></i>
             </button>
@@ -187,6 +193,14 @@
               <span></span>
             </div>
             <span>Assistant is typing...</span>
+          </div>
+          <div class="voice-status" id="voice-status" style="display: none;">
+            <div class="voice-indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span id="voice-status-text">Listening...</span>
           </div>
         </div>
       </div>
@@ -200,7 +214,11 @@
       chatBody: document.getElementById('chat-body'),
       chatInput: document.getElementById('chat-input'),
       chatSend: document.getElementById('chat-send'),
-      typingEl: document.getElementById('chat-typing')
+      typingEl: document.getElementById('chat-typing'),
+      voiceMic: document.getElementById('voice-mic'),
+      voiceSpeaker: document.getElementById('voice-speaker'),
+      voiceStatus: document.getElementById('voice-status'),
+      voiceStatusText: document.getElementById('voice-status-text')
     };
   }
   if (document.readyState === 'loading') {
@@ -210,9 +228,152 @@
   }
   function initChat() {
     const elements = createChatWidget();
-    const { chatBtn, chatModal, chatClose, chatBody, chatInput, chatSend, typingEl } = elements;
+    const { chatBtn, chatModal, chatClose, chatBody, chatInput, chatSend, typingEl, voiceMic, voiceSpeaker, voiceStatus, voiceStatusText } = elements;
     if(!chatBtn || !chatModal) return;
     loadKnowledgeBase();
+
+    // Voice recognition setup
+    let recognition = null;
+    let isListening = false;
+    let speechSynthesis = window.speechSynthesis;
+    let isSpeaking = false;
+    let autoSpeakEnabled = false;
+
+    // Initialize speech recognition if available
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+      
+      recognition.onstart = function() {
+        isListening = true;
+        voiceMic.classList.add('listening');
+        voiceStatus.style.display = 'flex';
+        voiceStatusText.textContent = 'Listening...';
+        voiceMic.innerHTML = '<i class="fas fa-microphone-slash"></i>';
+        voiceMic.title = 'Click to stop listening';
+      };
+      
+      recognition.onresult = function(event) {
+        const transcript = event.results[0][0].transcript;
+        chatInput.value = transcript;
+        chatInput.dispatchEvent(new Event('input'));
+        if (transcript.trim()) {
+          setTimeout(() => handleSend(), 500);
+        }
+      };
+      
+      recognition.onerror = function(event) {
+        console.error('Speech recognition error:', event.error);
+        stopListening();
+        if (event.error === 'not-allowed') {
+          alert('Microphone access denied. Please allow microphone access to use voice input.');
+        }
+      };
+      
+      recognition.onend = function() {
+        stopListening();
+      };
+    } else {
+      voiceMic.style.display = 'none';
+      console.warn('Speech recognition not supported in this browser');
+    }
+
+    function startListening() {
+      if (recognition && !isListening) {
+        try {
+          recognition.start();
+        } catch (error) {
+          console.error('Error starting speech recognition:', error);
+        }
+      }
+    }
+
+    function stopListening() {
+      isListening = false;
+      voiceMic.classList.remove('listening');
+      voiceStatus.style.display = 'none';
+      voiceMic.innerHTML = '<i class="fas fa-microphone"></i>';
+      voiceMic.title = 'Click to speak';
+      if (recognition) {
+        recognition.stop();
+      }
+    }
+
+    function speakText(text) {
+      if (!speechSynthesis) return;
+      
+      // Stop any ongoing speech
+      speechSynthesis.cancel();
+      
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.9;
+      utterance.pitch = 1;
+      utterance.volume = 0.8;
+      
+      utterance.onstart = function() {
+        isSpeaking = true;
+        voiceSpeaker.classList.add('speaking');
+        voiceSpeaker.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        voiceSpeaker.title = 'Click to stop speaking';
+      };
+      
+      utterance.onend = function() {
+        isSpeaking = false;
+        voiceSpeaker.classList.remove('speaking');
+        voiceSpeaker.innerHTML = '<i class="fas fa-volume-up"></i>';
+        voiceSpeaker.title = 'Listen to responses';
+      };
+      
+      utterance.onerror = function(event) {
+        console.error('Speech synthesis error:', event.error);
+        isSpeaking = false;
+        voiceSpeaker.classList.remove('speaking');
+        voiceSpeaker.innerHTML = '<i class="fas fa-volume-up"></i>';
+        voiceSpeaker.title = 'Listen to responses';
+      };
+      
+      speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeaking() {
+      if (speechSynthesis) {
+        speechSynthesis.cancel();
+        isSpeaking = false;
+        voiceSpeaker.classList.remove('speaking');
+        voiceSpeaker.innerHTML = '<i class="fas fa-volume-up"></i>';
+        voiceSpeaker.title = 'Listen to responses';
+      }
+    }
+
+    // Voice control event listeners
+    if (voiceMic) {
+      voiceMic.addEventListener('click', function() {
+        if (isListening) {
+          stopListening();
+        } else {
+          startListening();
+        }
+      });
+    }
+
+    if (voiceSpeaker) {
+      voiceSpeaker.addEventListener('click', function() {
+        if (isSpeaking) {
+          stopSpeaking();
+        } else {
+          autoSpeakEnabled = !autoSpeakEnabled;
+          voiceSpeaker.classList.toggle('auto-speak', autoSpeakEnabled);
+          if (autoSpeakEnabled) {
+            voiceSpeaker.title = 'Auto-speak enabled (click to disable)';
+          } else {
+            voiceSpeaker.title = 'Listen to responses';
+          }
+        }
+      });
+    }
     function toggleModal(forceOpen){
       const shouldOpen = forceOpen !== undefined ? forceOpen : !chatModal.classList.contains('open');
       if(shouldOpen){
@@ -241,6 +402,28 @@
       const content = document.createElement('div');
       content.className = 'message-content';
       content.textContent = text;
+      
+      // Add speaker button for bot messages
+      if (role === 'assistant' || role === 'bot') {
+        const speakBtn = document.createElement('button');
+        speakBtn.className = 'message-speak-btn';
+        speakBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+        speakBtn.title = 'Listen to this message';
+        speakBtn.addEventListener('click', function() {
+          if (isSpeaking) {
+            stopSpeaking();
+          } else {
+            speakText(text);
+          }
+        });
+        content.appendChild(speakBtn);
+        
+        // Auto-speak if enabled
+        if (autoSpeakEnabled && !isSpeaking) {
+          setTimeout(() => speakText(text), 500);
+        }
+      }
+      
       msg.appendChild(avatar);
       msg.appendChild(content);
       chatBody.appendChild(msg);
