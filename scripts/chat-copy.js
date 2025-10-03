@@ -10,11 +10,11 @@
       const chunks = [];
       const sections = text.split(/(?=##\s)|(?=###\s)|(?=####\s)|(?=#####\s)/);
       sections.forEach((section, index) => {
-        if (section.trim().length < 50) return; 
+        if (section.trim().length < 50) return;
         const paragraphs = section.split(/\n\s*\n/);
         paragraphs.forEach(paragraph => {
           const cleanParagraph = paragraph.trim();
-          if (cleanParagraph.length > 30) { 
+          if (cleanParagraph.length > 30) {
             const keyTerms = extractKeyTerms(cleanParagraph);
             chunks.push({
               content: cleanParagraph,
@@ -278,7 +278,7 @@
       }
       if(wantsStay){
         parts.push('For comfortable stays in Wayanad, explore our handpicked villas and homestays. Each offers the perfect base for your Wayanad adventures.');
-        parts.push('- Villa options: villa1.html, villa2.html');
+        parts.push('- Villa options: villa1.html, villa1.html');
       }
       if(wantsAvail || wantsPrice){
         parts.push('For real-time prices and availability, visit our booking page: https://www.bwstays.com/bwstays-booking.html');

@@ -135,7 +135,7 @@
 											 
 											<th width="25%">Date</th>
 											<th width="25%"><a href="https://www.bwstays.com/villa1.html">Villa 1</a></th>
-											<th width="25%"><a href="https://www.bwstays.com/villa2.html">Villa 2</a></th>
+											<th width="25%"><a href="https://www.bwstays.com/villa1.html">Villa 2</a></th>
 										</tr>
 									</thead>
 

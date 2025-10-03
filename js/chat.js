@@ -10,11 +10,11 @@
       const chunks = [];
       const sections = text.split(/(?=##\s)|(?=###\s)|(?=####\s)|(?=#####\s)/);
       sections.forEach((section, index) => {
-        if (section.trim().length < 50) return; 
+        if (section.trim().length < 50) return;
         const paragraphs = section.split(/\n\s*\n/);
         paragraphs.forEach(paragraph => {
           const cleanParagraph = paragraph.trim();
-          if (cleanParagraph.length > 30) { 
+          if (cleanParagraph.length > 30) {
             const keyTerms = extractKeyTerms(cleanParagraph);
             chunks.push({
               content: cleanParagraph,
@@ -243,13 +243,13 @@
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognition = new SpeechRecognition();
-      recognition.continuous = true;  
-      recognition.interimResults = true;  
+      recognition.continuous = true;
+      recognition.interimResults = true;
       recognition.lang = 'en-US';
-      
+
       let finalTranscript = '';
       let interimTranscript = '';
-      
+
       recognition.onstart = function() {
         isListening = true;
         voiceMic.classList.add('listening');
@@ -260,10 +260,10 @@
         finalTranscript = '';
         interimTranscript = '';
       };
-      
+
       recognition.onresult = function(event) {
         interimTranscript = '';
-        
+
         for (let i = event.resultIndex; i < event.results.length; i++) {
           const transcript = event.results[i][0].transcript;
           if (event.results[i].isFinal) {
@@ -272,17 +272,17 @@
             interimTranscript += transcript;
           }
         }
-        
+
         // Update input field with final + interim results
         chatInput.value = (finalTranscript + interimTranscript).trim();
         chatInput.dispatchEvent(new Event('input'));
-        
+
         // Update status to show we're getting speech
         if (finalTranscript || interimTranscript) {
           voiceStatusText.textContent = 'Got it! Keep speaking or click mic to finish...';
         }
       };
-      
+
       recognition.onerror = function(event) {
         console.error('Speech recognition error:', event.error);
         if (event.error === 'not-allowed') {
@@ -294,7 +294,7 @@
           stopListening();
         }
       };
-      
+
       recognition.onend = function() {
         if (isListening) {
           setTimeout(() => {
@@ -337,7 +337,7 @@
           console.error('Error stopping recognition:', error);
         }
       }
-      
+
       // Clear any pending restart timeouts
       setTimeout(() => {
         if (!isListening && recognition) {
@@ -348,29 +348,29 @@
 
     function speakText(text) {
       if (!speechSynthesis) return;
-      
+
       // Stop any ongoing speech
       speechSynthesis.cancel();
-      
+
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.rate = 0.9;
       utterance.pitch = 1;
       utterance.volume = 0.8;
-      
+
       utterance.onstart = function() {
         isSpeaking = true;
         voiceSpeaker.classList.add('speaking');
         voiceSpeaker.innerHTML = '<i class="fas fa-volume-mute"></i>';
         voiceSpeaker.title = 'Click to stop speaking';
       };
-      
+
       utterance.onend = function() {
         isSpeaking = false;
         voiceSpeaker.classList.remove('speaking');
         voiceSpeaker.innerHTML = '<i class="fas fa-volume-up"></i>';
         voiceSpeaker.title = 'Listen to responses';
       };
-      
+
       utterance.onerror = function(event) {
         console.error('Speech synthesis error:', event.error);
         isSpeaking = false;
@@ -378,7 +378,7 @@
         voiceSpeaker.innerHTML = '<i class="fas fa-volume-up"></i>';
         voiceSpeaker.title = 'Listen to responses';
       };
-      
+
       speechSynthesis.speak(utterance);
     }
 
@@ -446,7 +446,7 @@
       const content = document.createElement('div');
       content.className = 'message-content';
       content.textContent = text;
-      
+
       // Add speaker button for bot messages
       if (role === 'assistant' || role === 'bot') {
         const speakBtn = document.createElement('button');
@@ -461,13 +461,13 @@
           }
         });
         content.appendChild(speakBtn);
-        
+
         // Auto-speak if enabled
         if (autoSpeakEnabled && !isSpeaking) {
           setTimeout(() => speakText(text), 500);
         }
       }
-      
+
       msg.appendChild(avatar);
       msg.appendChild(content);
       chatBody.appendChild(msg);
@@ -505,7 +505,7 @@
       }
       if(wantsStay){
         parts.push('For comfortable stays in Wayanad, explore our handpicked villas and homestays. Each offers the perfect base for your Wayanad adventures.');
-        parts.push('- Villa options: villa1.html, villa2.html');
+        parts.push('- Villa options: villa1.html, villa1.html');
       }
       if(wantsAvail || wantsPrice){
         parts.push('For real-time prices and availability, visit our booking page: https://www.bwstays.com/bwstays-booking.html');
