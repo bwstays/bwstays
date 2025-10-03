@@ -90,7 +90,7 @@
 
 
 
-   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src cdnjs.cloudflare.com  overpass-api.de   unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org cdn.jsdelivr.net  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com code.jquery.com cdnjs.cloudflare.com tally.so; style-src cdnjs.cloudflare.com    unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com tally.so;    connect-src cdnjs.cloudflare.com  api.groq.com router.project-osrm.org  overpass-api.de  analytics.ahrefs.com  ws.inspectlet.com  formsubmit.co mc.yandex.ru  'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com  use.fontawesome.com;"/>
+   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src cdnjs.cloudflare.com  overpass-api.de   unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org cdn.jsdelivr.net  maps.googleapis.com www.google-analytics.com cdn.jsdelivr.net use.fontawesome.com code.jquery.com cdnjs.cloudflare.com tally.so; style-src cdn.jsdelivr.net  cdnjs.cloudflare.com    unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com tally.so;    connect-src cdnjs.cloudflare.com  api.groq.com router.project-osrm.org  overpass-api.de  analytics.ahrefs.com  ws.inspectlet.com  formsubmit.co mc.yandex.ru  'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com  use.fontawesome.com;"/>
 
     <link rel="icon" type="image/x-icon" href="https://www.bwstays.com/favicon.ico" />
 
@@ -129,7 +129,7 @@
 
     <!-- <link href="./css/styles.css" rel="stylesheet"   type='text/css' media='all'  />
     <link href="./css/maps.css" rel="stylesheet"   type='text/css' media='all'  />
-    <link href="./css/details-page.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./styles/details-page.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="./css/new-page.css" rel="stylesheet" type="text/css" media="all"/> -->
 
 
@@ -559,7 +559,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		   </div>
            <div class="row"  id="contact-form-div">
               <div class="col-md-6 pr-md-5">
-                <iframe data-tally-src="https://tally.so/r/woJ4px?transparentBackground=1" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe>
+                <!-- <iframe data-tally-src="https://tally.so/r/woJ4px?transparentBackground=1" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe> -->
+            <form class="bg-dark p-4 shadow" id="contact-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
+                                <input  type="text"
+                                    class="form-control bg-light border-0" id="inputName" required placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
+                                <input  type="email"
+                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="your email">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label for="inputAddress2" class="text-white-50 small text-uppercase">Contact</label>
+                        <input  type="text"
+                            class="form-control bg-light border-0" id="inputAddress2"
+                              required placeholder="+-- --- --- ----">
+                    </div>
+
+                    <div class="row">
+
+
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
+                        <textarea  class="form-control bg-light border-0"
+                            id="inputMessage" rows="3" required placeholder="Your message"></textarea>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label class="text-white-50 small text-uppercase">Security Verification</label>
+                        <div class="captcha-container d-flex align-items-center">
+                            <div class="captcha-question p-2 rounded mr-3" >
+                                <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
+                            </div>
+                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" required>
+                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2 px-4  py-2 " id="refresh-captcha" title="Refresh">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                        <div id="captcha-error" class="captcha-error-message" style="display: none;"></div>
+                    </div>
+
+                    <button class="btn btn-primary btn-block  px-4  py-2 text-uppercase"
+                        type="submit" aria-label="Request Callback">Request Callback</button>
+                </form>
             </div>
 
 
