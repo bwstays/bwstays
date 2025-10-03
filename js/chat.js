@@ -243,8 +243,8 @@
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognition = new SpeechRecognition();
-      recognition.continuous = true;  // Keep listening continuously
-      recognition.interimResults = true;  // Show interim results
+      recognition.continuous = true;  
+      recognition.interimResults = true;  
       recognition.lang = 'en-US';
       
       let finalTranscript = '';
@@ -296,9 +296,7 @@
       };
       
       recognition.onend = function() {
-        // Only stop if user manually stopped or there was an error
         if (isListening) {
-          // If we were still supposed to be listening, restart (unless manually stopped)
           setTimeout(() => {
             if (isListening) {
               try {
