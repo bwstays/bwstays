@@ -175,7 +175,7 @@
         </div>
         <div class="chat-footer">
           <div class="chat-input-container">
-            <input type="text" id="chat-input" placeholder="Type your message or click mic to speak..." maxlength="500">
+            <input type="text" id="chat-input" placeholder="Type your message or use mic to speak (click mic again to stop)..." maxlength="500">
             <button type="button" id="voice-mic" class="voice-btn" title="Click to speak">
               <i class="fas fa-microphone"></i>
             </button>
@@ -243,38 +243,73 @@
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognition = new SpeechRecognition();
-      recognition.continuous = false;
-      recognition.interimResults = false;
+      recognition.continuous = true;  // Keep listening continuously
+      recognition.interimResults = true;  // Show interim results
       recognition.lang = 'en-US';
+      
+      let finalTranscript = '';
+      let interimTranscript = '';
       
       recognition.onstart = function() {
         isListening = true;
         voiceMic.classList.add('listening');
         voiceStatus.style.display = 'flex';
-        voiceStatusText.textContent = 'Listening...';
+        voiceStatusText.textContent = 'Listening... (click mic to stop)';
         voiceMic.innerHTML = '<i class="fas fa-microphone-slash"></i>';
         voiceMic.title = 'Click to stop listening';
+        finalTranscript = '';
+        interimTranscript = '';
       };
       
       recognition.onresult = function(event) {
-        const transcript = event.results[0][0].transcript;
-        chatInput.value = transcript;
+        interimTranscript = '';
+        
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          const transcript = event.results[i][0].transcript;
+          if (event.results[i].isFinal) {
+            finalTranscript += transcript + ' ';
+          } else {
+            interimTranscript += transcript;
+          }
+        }
+        
+        // Update input field with final + interim results
+        chatInput.value = (finalTranscript + interimTranscript).trim();
         chatInput.dispatchEvent(new Event('input'));
-        if (transcript.trim()) {
-          setTimeout(() => handleSend(), 500);
+        
+        // Update status to show we're getting speech
+        if (finalTranscript || interimTranscript) {
+          voiceStatusText.textContent = 'Got it! Keep speaking or click mic to finish...';
         }
       };
       
       recognition.onerror = function(event) {
         console.error('Speech recognition error:', event.error);
-        stopListening();
         if (event.error === 'not-allowed') {
           alert('Microphone access denied. Please allow microphone access to use voice input.');
+          stopListening();
+        } else if (event.error === 'no-speech') {
+          voiceStatusText.textContent = 'No speech detected. Keep speaking or click mic to stop...';
+        } else {
+          stopListening();
         }
       };
       
       recognition.onend = function() {
-        stopListening();
+        // Only stop if user manually stopped or there was an error
+        if (isListening) {
+          // If we were still supposed to be listening, restart (unless manually stopped)
+          setTimeout(() => {
+            if (isListening) {
+              try {
+                recognition.start();
+              } catch (error) {
+                console.error('Error restarting recognition:', error);
+                stopListening();
+              }
+            }
+          }, 100);
+        }
       };
     } else {
       voiceMic.style.display = 'none';
@@ -298,8 +333,19 @@
       voiceMic.innerHTML = '<i class="fas fa-microphone"></i>';
       voiceMic.title = 'Click to speak';
       if (recognition) {
-        recognition.stop();
+        try {
+          recognition.stop();
+        } catch (error) {
+          console.error('Error stopping recognition:', error);
+        }
       }
+      
+      // Clear any pending restart timeouts
+      setTimeout(() => {
+        if (!isListening && recognition) {
+          recognition.abort();
+        }
+      }, 200);
     }
 
     function speakText(text) {
