@@ -3,7 +3,7 @@ const siteData = {
 {
       id: 80,
       name: "Peria tea plantation",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      description: "lush greenery and tea plantations..",
       image: ["https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:30-16:30"],
@@ -28,7 +28,7 @@ tags: ["tea plantation", "wayanad", "mountain", "cottage", "nature", "spice proc
     {
       id: 61,
       name: "Rippon Tea estate",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      description: "lush greenery and tea plantations near meppady.",
       image: ["https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-stays-tea-kalpetta-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-stays-estate-green-stay-kalpetta-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
@@ -435,7 +435,7 @@ www:"" ,
 {
       id: 78,
       name: "Honey Museum",
-      description: "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+      description: "Varities of honey displayed to taste and purchase.",
       image: ["https://www.bwstays.com/assets/img/museum/bw-stays-honey-museum-wayanad.webp"],
       holidays: "Sun",
       timing:[ "09:00-17:00"],
