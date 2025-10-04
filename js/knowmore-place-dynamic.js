@@ -41,7 +41,6 @@ window.addEventListener('load', function () {
   imgWrapper.style.width = '100%';
   imgWrapper.style.height = '100%';
   imgWrapper.style.transition = 'transform 0.5s ease';
-  imgWrapper.style.display = 'flex';
   const leftArrow = document.createElement('div');
 leftArrow.className = 'image-nav-arrow image-nav-left';
 leftArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
@@ -60,7 +59,6 @@ leftArrow.style.borderRadius = '40px';
 leftArrow.style.display = 'none';
 leftArrow.style.transition = 'all 0.3s ease';
 leftArrow.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
-leftArrow.style.display = 'flex';
 leftArrow.style.alignItems = 'center';
 leftArrow.style.justifyContent = 'center';
 leftArrow.style.padding = '0';
@@ -82,7 +80,6 @@ rightArrow.style.borderRadius = '50%';
 rightArrow.style.display = 'none';
 rightArrow.style.transition = 'all 0.3s ease';
 rightArrow.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
-rightArrow.style.display = 'flex';
 rightArrow.style.alignItems = 'center';
 rightArrow.style.justifyContent = 'center';
 rightArrow.style.padding = '0';
@@ -122,9 +119,15 @@ rightArrow.addEventListener('mouseleave', () => {
     img.style.minWidth = '100%';
     imgWrapper.appendChild(img);
   });
+  
+  // Set initial transform to show the first image
+  imgWrapper.style.transform = 'translateX(0%)';
     if (imageArray.length > 1) {
-      leftArrow.style.display = 'block';
-      rightArrow.style.display = 'block';
+      leftArrow.style.display = 'flex';
+      rightArrow.style.display = 'flex';
+    } else {
+      leftArrow.style.display = 'none';
+      rightArrow.style.display = 'none';
     }
   function updateImage(direction) {
     if (imageArray.length <= 1) return;
