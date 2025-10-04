@@ -4,7 +4,7 @@ const siteData = {
       id: 80,
       name: "Peria tea plantation",
       description: "lush greenery and tea plantations..",
-      image: ["https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp","https://www.bwstays.com/assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp"],
+      image: ["https://www.bwstays.com/assets/img/plantation/bw-periya-estate-wyanad.webp"],
       holidays: "Sun",
       timing:[ "09:30-16:30"],
       Contact: "+91-97459 47627",
