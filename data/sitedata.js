@@ -9,7 +9,7 @@ const siteData = {
       timing:[ "09:30-16:30"],
       Contact: "+91-97459 47627",
 	  seasontovisit:["Summer (March-May)","Monsoon (June-September)","Winter (October-February)"],
-      distance: "11",
+      distance: "38",
       transport: "Public",
 	  latlong: "11.534836134024715, 76.17498437471619",
       map: "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
