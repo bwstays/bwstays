@@ -1,7 +1,7 @@
 /* data info icons */
 .da-icon {
   #background: #2b2b2b;
-  border: 0px solid rgba(255, 0, 0, 0);
+  border: 0px solid rgba(0, 0, 0, 0.1);
   color: #64a19d;
   place-items: center;
   cursor: pointer;
