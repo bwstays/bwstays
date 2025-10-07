@@ -1,9 +1,9 @@
 (function ($) {
-    "use strict"; 
+    "use strict";
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
             location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "")
+                this.pathname.replace(/^\//, "")  &&
            ( location.hostname == this.hostname)
         ) {
             var target = $(this.hash);
@@ -38,7 +38,7 @@
     };
     navbarCollapse();
     $(window).scroll(navbarCollapse);
-})(jQuery); 
+})(jQuery);
  let mybutton = document.getElementById("btn-back-to-top");
  window.onscroll = function() {
      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -122,11 +122,11 @@ let iconOptions = {
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).on('tileload', function(e) {
-    e.tile.alt = 'BW Stays Kalpetta'; 
+    e.tile.alt = 'BW Stays Kalpetta';
 }).addTo(map);
 var target = L.latLng(bwlocations[0][1], bwlocations[0][2]);
 map.fitBounds([[11.6057872, 76.0833109], [11.610,76.090]]);
 map.setView(target, 14);
 L.marker(target,iconOptions).on('tileload', function(e) {
-    e.tile.alt = 'All Locations at wayand'; 
+    e.tile.alt = 'All Locations at wayand';
 }).addTo(map).bindPopup( bwlocations[0][5]);
