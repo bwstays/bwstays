@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-  const sections = document.querySelectorAll('#projects .container .row.justify-content-center');
+  const sections = document.querySelectorAll('#loc .container .row.justify-content-center');
   let sectionIndex = 1;
   Object.keys(siteData).forEach((sectionType) => {
     if (siteData[sectionType]) {
@@ -301,7 +301,7 @@ function updateRightColumnOnly() {
 function initializeSection(sectionType, data, sectionIndex) {
   let sectionContainer;
   let sectionTitle;
-  const allSections = document.querySelectorAll('#projects .container .row.justify-content-center');
+  const allSections = document.querySelectorAll('#loc .container .row.justify-content-center');
   const isOdd = sectionIndex % 2 === 1;
   if (sectionIndex - 1 < allSections.length) {
     sectionContainer = allSections[sectionIndex - 1];

@@ -5,7 +5,7 @@ Accommodation Options
 - [Black & White](https://www.bwstays.com/index.html): A premier choice for travelers seeking a unique stay experience in Wayanad, offering various types of accommodations.
 - [No Title](https://www.bwstays.com/all-locations-wayanad.html): Additional information about the accommodations available.
 Attractions and Activities
-- [Discover](https://www.bwstays.com/#projects): Explore the various attractions and activities available in Wayanad.
+- [Discover](https://www.bwstays.com/#loc): Explore the various attractions and activities available in Wayanad.
 - [Contact](https://www.bwstays.com/#signup): Get in touch for inquiries or bookings.
 - [About Us](https://www.bwstays.com/#about): Learn more about Black and White Stays and its mission.
 - [No Title](https://www.bwstays.com/cdn-cgi/l/email-protection#a3cec6e3cec68dc0ccce): Further details about the services offered.
