@@ -1012,11 +1012,28 @@ ul.list-unstyled.mb-0.text-white-50 {
 <script type="application/ld+json">
 {
         "@context": "https://schema.org",
-        "@type": "TouristAttraction",
+        "@type": ["VacationRental", "TouristAttraction","Product"],
         "name": "900 Kandi Glass Bridge ",
         "description": "It's one of best Glass Bridge in wayanad.",
         "url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html",
-        "isAccessibleForFree": true
+        "isAccessibleForFree": true,
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "",
+			"addressLocality": "Kalpetta",
+			"addressRegion": "KL",
+			"postalCode": "673121",
+			"addressCountry": "IN"
+		  },
+		  "touristType": "Families with an interest in hill station and city life",
+		  "availableLanguage": "en",
+		  "containsPlace": {
+			"@type": "Accommodation",
+			"occupancy": {
+			  "@type": "QuantitativeValue",
+			  "value": 8
+			}
+		  }
 }
 </script>
 

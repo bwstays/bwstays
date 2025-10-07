@@ -808,14 +808,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "VacationRental",
+        "@type":  ["HotelRoom", "Product","VacationRent","Accommodation"],
         "additionalType": "HolidayVillageRental",
         "brand": {
           "@type": "Brand",
           "name": "brandIdName"
         },
         "containsPlace": {
-          "@type": "Accommodation",
+          "@type": ["HotelRoom", "Product","VacationRent","Accommodation"],
           "additionalType": "EntirePlace",
           "bed": {
             "@type": "BedDetails",
@@ -927,7 +927,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@type": "LodgingBusiness",
   "name": "BW Stays",
         "containsPlace": {
-          "@type": "Accommodation",
+          "@type": ["HotelRoom", "Product","VacationRent","Accommodation"],
           "additionalType": "EntirePlace",
           "bed": {
             "@type": "BedDetails",
@@ -1021,7 +1021,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
-  "@type": "LocalBusiness",
+  "@type": ["VacationRental", "TouristAttraction","Product","LocalBusiness"],
   "name": "Black And White Stays",
   "@id": "https://www.bwstays.com/villa1.html",
   "logo": "https://www.bwstays.com/assets/img/icons/bw.svg",

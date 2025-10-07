@@ -653,11 +653,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
         "@context": "https://schema.org",
-        "@type": "TouristAttraction",
+        "@type": ["VacationRental", "TouristAttraction","Product"],
         "name": "900 Kandi Glass Bridge ",
         "description": "It's one of best Glass Bridge in wayanad.",
         "url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad",
-        "isAccessibleForFree": true
+        "isAccessibleForFree": true,   "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "",
+		    "addressLocality": "Kalpetta",
+		    "addressRegion": "KL",
+		    "postalCode": "673121",
+		    "addressCountry": "IN"
+		  },
+		  "touristType": "Families with an interest in hill station and city life",
+		  "availableLanguage": "en",
+		  "containsPlace": {
+		    "@type": "Accommodation",
+		    "occupancy": {
+		      "@type": "QuantitativeValue",
+		      "value": 8
+		    }
+  }
 }
 </script>
   <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
