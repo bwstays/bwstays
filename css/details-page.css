@@ -11,7 +11,11 @@
             border-radius: 5px;
             font-weight: 300;
         }
-        
+
+.content {
+                font-size: 1em;
+            }
+            
 .footer-author {
     text-align: center;
     padding: 1rem 0;
