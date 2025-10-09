@@ -45,7 +45,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
            if ( distances[i]!=""  &&  distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
 			if( distances[i]!="0")
 			{
-					var thisId=findPlaceById(i+1); 
+					var thisId=findPlaceById(i+1);
 					nearbyPlaces.push({
 						id: i,
 						name: locations.names[i+1],
@@ -105,9 +105,9 @@ function createPlaceCard(place) {
                     <div class="d-flex">
                         <div style="flex: 1;">
                             <div class="d-flex justify-content-between align-items-start mb-1">
-                                <h6 class="card-title mb-0" style="font-size: 0.95rem; word-wrap: break-word; max-width: calc(100% - 40px);">
-                                    ${place.name}
-                                </h6>
+                                <a href="${knowmoreUrl}" class="text-decoration-none text-white"><h6 class="card-title mb-0" style="font-size: 0.95rem; word-wrap: break-word; max-width: calc(100% - 40px);">
+                                     ${place.name}
+                                </h6></a>
                                 <a href="${place.map}" target="_new" class="ms-2" style="background: rgba(255,255,255,0.9); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); flex-shrink: 0;">
                                     <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
                                 </a>
