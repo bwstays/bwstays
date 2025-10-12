@@ -167,7 +167,7 @@ rightArrow.addEventListener('mouseleave', () => {
         </small>
       </div>
       <div class="mb-3">
-                 <span class="text-white-50 ml-2">${currentItemData.description}</span>
+                 <span class="text-white-50 ml-2"><p class="content">${currentItemData.description}</p>  <p class="content"></p></span>
        </div>
  `;
 $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
