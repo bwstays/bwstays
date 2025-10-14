@@ -1,22 +1,7 @@
 var iconURLPrefix = 'https://www.bwstays.com/';
 var loc = [];
-/*
-st
-pi
-sh
-cy
-tr
-fo
-sp
-fa
-wi
-tr
-cu
-ro
-mu
-wa
-pl
-*/
+var loct=["st","pi","sh","cy","tr","fo","sp","fa","wi","tr","cu","ro","mu","wa","pl"]
+
 var wayalocations = [
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-rippon-tea-estate-plantation-wayanad.html" title="Shanthinatha Swamy Jain Temple">Shanthinatha Swamy Jain Temple</a></h6><span>10km</span><a target="_blank" href="'+iconURLPrefix+'bw-rippon-tea-estate-plantation-wayanad.html" title="Shanthinatha Swamy Jain Temple"><img title="Black and White Stays Service Villa"  alt="Places to watch in Wayanad"   src="'+iconURLPrefix+'assets/img/heritage/bw-stays-jain-temple-shanthi-wayanad.webp" width="300" ></a>', 11.6788328, 76.0221398, 2, iconURLPrefix+"assets/img/logo/pin-drop.png","Shanthinatha Swamy Jain Temple","pi"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-puliyarmala-trucking-wayanad.html" title="Puliyarmala">Puliyarmala</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-puliyarmala-trucking-wayanad.html" title="Puliyarmala"><img title="Black and White Stays Service Villa"   alt="Places to watch in Wayanad"  src="'+iconURLPrefix+'assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp" width="300" ></a>', 11.6268407, 76.08420612038587, 2, iconURLPrefix+"assets/img/logo/pin-drop.png","Puliyarmala","tr"],
@@ -153,7 +138,8 @@ let myIcon1 = L.icon(customIcon1);
 }).addTo(map1);
 var  i;
 for (i = 0; i < loc.length; i++) {
-	if(loc[i][6]=="ro")
+	//if(loc[i][6]=="ro")
+	 //if ( locchoice.includes(loc[i][6]))
 		{
 			var target = L.latLng(loc[i][1], loc[i][2]);
 
