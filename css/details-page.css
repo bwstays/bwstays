@@ -4,6 +4,7 @@
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             background-color: white;
+            margin-left:15px;
         }
 
         .top-section {
@@ -75,7 +76,7 @@
             color: #ecf0f1;
         }
 
-        .location {
+        .location-wth {
             font-size: 11px;
             margin: 0;
             color: #95a5a6;
