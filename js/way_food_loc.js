@@ -153,7 +153,7 @@ let myIcon1 = L.icon(customIcon1);
 }).addTo(map1);
 var  i;
 for (i = 0; i < loc.length; i++) {
-	if(loc[i][6]=='wa')
+	if(loc[i][6]=="ro")
 		{
 			var target = L.latLng(loc[i][1], loc[i][2]);
 
