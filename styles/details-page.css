@@ -1,84 +1,84 @@
-        .weather-widget {
-            width: 70%;
-            max-width: 180px;
-            max-height: 190px;
-            border-radius: 8px;
+.weather-widget {
+            width: 143px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-left:15px;
         }
+
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #64a19d 0%, #64a19d 100%);
+            padding: 3px;
+        }
+
         .weather-icon-section {
-            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
-            padding: 0px 0px;
-            text-align: center;
+            flex: 1;
+            text-align: left;
         }
 
         .weather-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto;
+            width: 50px;
+            height: 50px;
         }
 
         .cloud-icon {
             fill: none;
-            stroke: #e8e8e8;
+            stroke: white;
             stroke-width: 8;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
 
-        .weather-info-section {
-            background-color: #000000;
-            padding: 0px 0px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .temperature {
-            color: #ffffff;
-            font-size: 48px;
-            font-weight: 300;
-            margin: 0;
-            line-height: 1;
-        }
-
-        .temp-unit {
-            font-size: 28px;
-            vertical-align: top;
-        }
-
-        .weather-details {
-            color: #a0a0a0;
-            margin: 0;
-        }
-
-        .condition {
-            font-size: 16px;
-            margin-bottom: 2px;
-        }
-
-        .location {
-            font-size: 14px;
-        }
-
         .date-section {
-            background-color: #64a19d;
-            padding: 20px;
-            text-align: center;
+            text-align: right;
             color: white;
         }
 
         .month {
-            font-size: 12px;
+            font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
+            font-weight: 600;
         }
 
         .day {
-            font-size: 42px;
+            font-size: 28px;
             font-weight: 300;
             line-height: 1;
+        }
+
+        .weather-info-section {
+            background-color: #000000;
+            padding: 15px;
+            color: white;
+        }
+
+        .temperature {
+            font-size: 22px;
+            font-weight: 300;
+            margin: 0 0 8px -95px;
+            line-height: 1;
+        }
+
+        .temp-unit {
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        .condition {
+            font-size: 13px;
+            margin: 0 0 4px 0;
+            color: #ecf0f1;
+        }
+
+        .location-wth {
+            font-size: 11px;
+            margin: 0;
+            color: #95a5a6;
         }
 
 .highlight {
