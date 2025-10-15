@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const request = {
     location: centerloca,
-    radius: 30000, // Search within a 40km radius
+    radius: 20000, // Search within a 40km radius
    // types: ['electric_charging_station','gas_station']
     types: ["electric_vehicle_charging_station","electric_charging_station"],
   };
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fillColor: "#FF0000", // Red fill
         fillOpacity: 0.35,
         center: centerloca, // Same center as the map for this example
-        radius: 30000
+        radius: 20000
       });
   cityCircle.setMap(map1);
 
