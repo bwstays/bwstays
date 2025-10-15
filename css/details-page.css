@@ -1551,7 +1551,7 @@ div.image-nav-arrow.image-nav-right {
 
   .food-map,
   .pano,
-  #fuel {
+  #fuel,gasfuel {
     height: 180px;
     max-width: 85%;
     border-radius: 15px;
@@ -1562,7 +1562,7 @@ div.image-nav-arrow.image-nav-right {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   }
 
-  #fuel-places {
+  #fuel-places,#gasfuel-places {
     padding: 20px 15px;
     margin: 15px 0;
   }
