@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fillColor: "#FF0000", // Red fill
         fillOpacity: 0.35,
         center: centerloca, // Same center as the map for this example
-        radius: 40000 // 50 kilometers in meters
+        radius: 30000
       });
   cityCircle.setMap(map1);
 
