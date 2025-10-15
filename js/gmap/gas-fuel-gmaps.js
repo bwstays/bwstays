@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
-  var map1 = new google.maps.Map(document.getElementById('fuel'), {
+  var map1 = new google.maps.Map(document.getElementById('gasfuel'), {
     zoom: 11,
     disableDefaultUI: true,
     zoomControl: true,
