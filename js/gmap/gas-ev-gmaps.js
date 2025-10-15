@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
    // types: ['electric_charging_station','gas_station']
     types: ["electric_charging_station"],
   };
-/* const cityCircle = new google.maps.Circle({
+ const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
         strokeOpacity: 0.8,
         strokeWeight: 2,
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         radius: 40000 // 50 kilometers in meters
       });
   cityCircle.setMap(map1);
-  */
+
 
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
