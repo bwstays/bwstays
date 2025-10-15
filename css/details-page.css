@@ -1551,7 +1551,7 @@ div.image-nav-arrow.image-nav-right {
 
   .food-map,
   .pano,
-  #fuel,gasfuel {
+  #fuel {
     height: 180px;
     max-width: 85%;
     border-radius: 15px;
@@ -1562,10 +1562,27 @@ div.image-nav-arrow.image-nav-right {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   }
 
-  #fuel-places,#gasfuel-places {
+  #fuel-places {
     padding: 20px 15px;
     margin: 15px 0;
   }
+  #gasfuel {
+    height: 180px;
+    max-width: 85%;
+    border-radius: 15px;
+  }
+
+  #gasfuel {
+    border: 1px solid rgba(100, 161, 157, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  #gas-places {
+    padding: 20px 15px;
+    margin: 15px 0;
+  }
+
+
 }
 
 /* Video Section Styling */
@@ -1684,6 +1701,21 @@ div.image-nav-arrow.image-nav-right {
 }
 
 
+#gasfuel {
+  height: 220px;
+  max-width: 70%;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  border: 2px solid rgba(100, 161, 157, 0.3);
+  background: linear-gradient(135deg, rgba(100, 161, 157, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
 
 #fuel::before {
   content: '';
@@ -1719,6 +1751,22 @@ div.image-nav-arrow.image-nav-right {
 }
 
 
+/* Fuel Places Section Styling */
+#gasfuel-places {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 25px 20px;
+  margin: 20px 0;
+  border: 1px solid rgba(100, 161, 157, 0.2);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+
+#gasfuel-places .text-white-50 {
+  display: block;
+  margin: 0;
+}
 
 
 
