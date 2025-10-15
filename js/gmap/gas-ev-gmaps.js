@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     location: centerloca,
     radius: 20000, // Search within a 40km radius
    // types: ['electric_charging_station','gas_station']
-    types: ["electric_vehicle_charging_station"],
+    types: ['electric_vehicle_charging_station','electric_charging_station','gas_station'],
   };
  const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         center: centerloca, // Same center as the map for this example
         radius: 20000
       });
-  cityCircle.setMap(map1);
+ // cityCircle.setMap(map1);
 
 
   service.nearbySearch(request, (results, status) => {
