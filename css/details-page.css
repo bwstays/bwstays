@@ -1737,7 +1737,7 @@ div.image-nav-arrow.image-nav-right {
 #fuel-places {
   border-radius: 20px;
   padding: 25px 20px;
-  margin: 20px 0;
+  margin: 5px 0;
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
@@ -1753,7 +1753,7 @@ div.image-nav-arrow.image-nav-right {
 #gasfuel-places {
   border-radius: 20px;
   padding: 25px 20px;
-  margin: 20px 0;
+  margin: 5px 0;
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
