@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
+      const { Map } = await google.maps.importLibrary("maps");
+
   const map2 = new google.maps.Map(document.getElementById('gasfuel'), {
     zoom: 11,
     disableDefaultUI: true,
