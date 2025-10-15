@@ -1735,11 +1735,9 @@ div.image-nav-arrow.image-nav-right {
 
 /* Fuel Places Section Styling */
 #fuel-places {
-  background: rgba(255, 255, 255, 0.03);
   border-radius: 20px;
   padding: 25px 20px;
   margin: 20px 0;
-  border: 1px solid rgba(100, 161, 157, 0.2);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
@@ -1753,11 +1751,9 @@ div.image-nav-arrow.image-nav-right {
 
 /* Fuel Places Section Styling */
 #gasfuel-places {
-  background: rgba(255, 255, 255, 0.03);
   border-radius: 20px;
   padding: 25px 20px;
   margin: 20px 0;
-  border: 1px solid rgba(100, 161, 157, 0.2);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
