@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     location: centerloca,
     radius: 20000, // Search within a 40km radius
    // types: ['electric_charging_station','gas_station']
-    types: ["electric_vehicle_charging_station","electric_charging_station"],
+    types: ["electric_vehicle_charging_station"],
   };
  const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						{
 						const latitude = place.geometry.location.lat();
 						const longitude = place.geometry.location.lng();
-				  }
+						  }
 			      }
         		});
 			}
