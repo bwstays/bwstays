@@ -181,7 +181,229 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K7RVCKPR');</script>
 
+<!-- PWA Code starts here   -->
 
+<!--
+
+<script  type="text/javascript" >
+    //Initialize speculation rules on page load
+    document.addEventListener('DOMContentLoaded', function() {
+	//addSpeculationRules();
+	//addHoverBasedRules();
+	if ('serviceWorker' in navigator) {
+		//  Define if link rel='next|prev|prefetch' should  be preloaded when accessing this page
+        const PREFETCH = true;
+        // Define which link-rel's should be preloaded if enabled.
+        const PREFETCH_LINK_RELS = ['index', 'prefetch'];
+         // prefetchCache
+        function prefetchCache() {
+            if(navigator.serviceWorker.controller) {
+                let links = document.querySelectorAll(
+                    PREFETCH_LINK_RELS.map((rel) => {
+                        return 'link[rel='+rel+']';
+                    }).join(',')
+                );
+                if(links.length > 0) {
+                    Array.from(links)
+                        .map((link) => {
+                            let href = link.getAttribute('href');
+                            navigator.serviceWorker.controller.postMessage({
+                                action : 'cache',
+                                url : href,
+                            });
+                        });
+                }
+            }
+        }
+
+		navigator.serviceWorker
+			.register('/sw.js', { scope: '/' })
+			.then(() => {
+
+			}, err => );
+
+		navigator.serviceWorker
+			.ready
+			.then(() => {
+				if(PREFETCH) {
+			       prefetchCache();
+                }
+
+			});
+	}
+    // Performance monitoring
+	if ('PerformanceObserver' in window) {
+
+		const observer = new PerformanceObserver((list) => {
+			list.getEntries().forEach((entry) => {
+				if (entry.entryType === 'navigation') {
+
+				}
+			});
+		});
+		observer.observe({entryTypes: ['navigation']});
+	}
+   });
+</script>
+-->
+
+<!--
+
+<script  type="text/javascript" >
+(function () {
+  //If serviceWorker supports, then register it.
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register('./sw.js', { scope: "./" }) //setting scope of sw
+    .then(function(registration) {
+
+      checkForPageUpdate(registration); // To check if new content is updated or not
+    })
+    .catch(function(error) {
+
+    });
+  }
+
+
+// Handle PWA install prompt
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = 'block';
+
+  installBtn.addEventListener('click', () => {
+    installBtn.style.display = 'none';
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+
+      } else {
+
+      }
+      deferredPrompt = null;
+    });
+  });
+});
+
+
+  // To content update on service worker state change
+  function checkForPageUpdate(registration) {
+    // onupdatefound will fire on first time install and when serviceWorker.js file changes
+    registration.addEventListener("updatefound", function() {
+      // To check if service worker is already installed and controlling the page or not
+      if (navigator.serviceWorker.controller) {
+        var installingSW = registration.installing;
+        installingSW.onstatechange = function() {
+
+          switch(installingSW.state) {
+            case 'installed':
+              // Now new contents will be added to cache and old contents will be remove so
+              // this is perfect time to show user that page content is updated.
+              toast('Site is updated. Refresh the page.', 5000);
+              break;
+            case 'redundant':
+              throw new Error('The installing service worker became redundant.');
+          }
+        }
+      }
+    });
+  }
+})();
+
+</script>
+
+
+-->
+
+<style>
+/* Start Project Wallace extracted inline styles */
+
+
+i.fas.fa-map-marker-alt {
+	color: #64a19d;
+}
+
+ul {
+	list-style: none;
+}
+
+div.col-md-4 {
+	padding-left: 2rem;
+}
+
+ul.list-unstyled.mb-0.text-white-50 {
+	font-size: 1rem;
+}
+/** End Project Wallace extracted inline styles */
+
+</style>
+
+
+
+<!-- pwa end here  -->
+
+<script type="application/ld+json">
+ {
+   "@context": "https://schema.org",
+   "@type": "TouristAttraction",
+   "name": "900 Kandi Glass Bridge",
+   "description": "A thrilling glass bridge located in Wayanad, Kerala, offering one of the best panoramic views of the hill station. A must-visit landmark for nature lovers and adventurers.",
+   "url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html",
+   "isAccessibleForFree": false,
+   "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "900 Kandi, Kalpetta, Wayanad, Kerala",
+     "addressLocality": "Kalpetta",
+     "addressRegion": "Kerala",
+     "postalCode": "673121",
+     "addressCountry": "IN"
+   },
+   "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": "11.6182113",
+     "longitude": "76.1722152"
+   },
+   "aggregateRating": {
+     "@type": "AggregateRating",
+     "ratingValue": "5",
+     "ratingCount": "1",
+     "reviewCount": "1",
+     "bestRating": "5"
+   },
+   "image": "https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp",
+   "openingHoursSpecification": [
+     {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+         "Monday",
+         "Tuesday",
+         "Wednesday",
+         "Thursday",
+         "Friday",
+         "Saturday",
+         "Sunday"
+       ],
+       "opens": "08:00",
+       "closes": "18:00"
+     }
+   ],
+   "availableLanguage": "en",
+   "keywords": "glass bridge, Wayanad, Kerala, tourist spot, adventure tourism, sightseeing, Kalpetta",
+   "touristType": [
+     "http://schema.org/NatureActivity",
+     "http://schema.org/AdventureActivity",
+     "Families with an interest in hill stations",
+     "Adventure Tourists"
+   ],
+   "containedInPlace": {
+     "@type": "AdministrativeArea",
+     "name": "Wayanad District, Kerala"
+   }
+}
+</script>
 </head>
   <body id="page-top" class="knowmore-page">
 
@@ -197,11 +419,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
       <div class="container-fluid div.container-fluid">
+  		   <div class="text-center mb-4 div.text-center.mb-4">
+               <h4 class="text-white mx-auto mt-2">Discover your Leisure</h4>
+              <div
+                class="div.border-bottom.border-primary.text-center.mb-2 border-bottom border-primary text-center mb-2">
+              </div>
+            </div>
 
 
         <div class="row">
 
+          <div class="div.col-lg-6 col-lg-6" >
 
+            <div
+               class="det-marg-f"
+            >
+              <div
+                 class="det-pos-f"
+              >
+                <img
+                  title="preparing your home for seasonal temperature shifts wayanad"
+                  src="https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp"
+                  alt="900 Kandi Glass Bridge  visit"
+                   class="det-img-f img-fluid" width="25" height="50"
+
+                />
+
+                <img
+                  title="Black and White Stays Service Villa"
+                  src="https://www.bwstays.com/assets/img/romantic/bw-weekend-destination-glassbridge-wayanad.webp"
+                  alt="900 Kandi Glass Bridge adventure"
+                   class="det-img-f img-fluid" width="25" height="50"
+
+                />
+              </div>
+
+
+              <div
+                class="div.image-nav-arrow.image-nav-left image-nav-arrow image-nav-left" >
+                <i class="fas fa-chevron-left"></i>
+              </div>
+              <div
+                class="div.image-nav-arrow.image-nav-right image-nav-arrow image-nav-right"
+                 >
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
 
 
             <div>
@@ -263,7 +526,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  					</div>
 
 
-           </div>
+            </div>
+          </div>
 
 
 
