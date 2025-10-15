@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     streetViewControl: true,
     fullscreenControl: true,
     center: centerloca ,
-     mapId: "fuelmapdata"
+     mapId: "gasfuelmapdata"
     });
 
 
