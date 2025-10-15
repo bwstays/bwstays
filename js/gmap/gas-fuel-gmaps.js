@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
-  var map1 = new google.maps.Map(document.getElementById('gasfuel'), {
+  var map2 = new google.maps.Map(document.getElementById('gasfuel'), {
     zoom: 11,
     disableDefaultUI: true,
     zoomControl: true,
@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   new google.maps.Marker({
     position: centerloca,
-    map: map1,
+    map: map2,
     icon: mainLocationIcon,
     title: "Kalpetta Center",
     zIndex: google.maps.Marker.MAX_ZINDEX + 10
   });
 
   var infowindow = new google.maps.InfoWindow();
-  const service = new google.maps.places.PlacesService(map1);
+  const service = new google.maps.places.PlacesService(map2);
 
   const request = {
     location: centerloca,
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         center: centerloca, // Same center as the map for this example
         radius: 20000
       });
- // cityCircle.setMap(map1);
+ // cityCircle.setMap(map2);
 
 
   service.nearbySearch(request, (results, status) => {
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
 		   //alert(results[i].types)
 		  let marker = new google.maps.Marker({
-			  map: map1,
+			  map: map2,
 			  icon:customIconEv,
 			  position: results[i].geometry.location,
 			  title: results[i].name
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			google.maps.event.addListener(marker, 'click', () => {
 //			  infowindow.setContent( {content: `<strong>${results[i].name || "" }</strong><br>}`, });
 			  infowindow.setContent(  results[i].name  );
-			  infowindow.open(map1, marker);
+			  infowindow.open(map2, marker);
 
 			});
 	   };
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, (response, status) => {
           if (status === "OK") {
 			  var directionsRenderer = new google.maps.DirectionsRenderer();
-					directionsRenderer.setMap(map1);
+					directionsRenderer.setMap(map2);
 					directionsRenderer.setDirections(response);
 
 					//	const distanceInMeters = response.routes[0].legs[0].distance.value;
