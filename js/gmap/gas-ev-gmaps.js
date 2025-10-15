@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     location: centerloca,
     radius: 30000, // Search within a 40km radius
    // types: ['electric_charging_station','gas_station']
-    types: ["EV charging station","electric_charging_station","Electric vehicle charging station"],
+    types: ["electric_vehicle_charging_station","electric_charging_station"],
   };
  const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
