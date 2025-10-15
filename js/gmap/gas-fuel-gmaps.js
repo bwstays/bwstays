@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const map2 = new google.maps.Map(document.getElementById('gasfuel'), {
     zoom: 11,
+     styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }],
+
     disableDefaultUI: true,
     zoomControl: true,
     streetViewControl: true,
@@ -43,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
      mapId: "gasfuelmapdata"
     });
 
+
+ styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] },]
 
 
   new google.maps.Marker({
