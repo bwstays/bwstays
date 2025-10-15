@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(20, 40)
   };
-      const { Map } = await google.maps.importLibrary("maps");
+      const { Map } =   google.maps.importLibrary("maps");
 
   const map1 = new google.maps.Map(document.getElementById('fuel'), {
     zoom: 11,
