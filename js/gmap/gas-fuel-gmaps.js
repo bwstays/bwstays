@@ -81,8 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Sort the filtered results by rating in descending order
     //const topResults =filteredResults.sort((a, b) => b.rating - a.rating).slice(0, 5);
-
-
 		 for (let i = 0; i < results.length; i++)
 			{
 				//alert("rating:"+results[i].rating );
