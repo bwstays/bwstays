@@ -5,13 +5,13 @@
   padding: 25px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 100%;
 }
-
- 
 
 .currency-icon-section {
   width: 80px;
   height: 80px;
+  flex-shrink: 0;
 }
 
 .currency-icon {
@@ -27,6 +27,8 @@
 
 .info-section {
   text-align: right;
+  flex: 1;
+  min-width: 0;
 }
 
 .currency-code {
@@ -39,6 +41,85 @@
 .currency-name {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
+  word-wrap: break-word;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .currency-widget {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .currency-icon-section {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .currency-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .currency-code {
+    font-size: 16px;
+  }
+  
+  .currency-name {
+    font-size: 13px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .currency-widget {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .currency-icon-section {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .currency-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .currency-code {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  
+  .currency-name {
+    font-size: 12px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 360px) {
+  .currency-widget {
+    padding: 12px;
+  }
+  
+  .currency-icon-section {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .currency-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .currency-code {
+    font-size: 14px;
+  }
+  
+  .currency-name {
+    font-size: 11px;
+  }
 }
 
 
