@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('#gasfuel-places');
   if (!section) return;
 
-
  const centerAttr = section.getAttribute('data-center');
   if (!centerAttr) return;
   const [lat, lng] = centerAttr.split(',').map(Number);
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(20, 40)
   };
-      const { Map } =   google.maps.importLibrary("maps");
+  const { Map } =   google.maps.importLibrary("maps");
 
   const map1 = new google.maps.Map(document.getElementById('gasfuel'), {
     zoom: 11,
