@@ -531,21 +531,28 @@ ul.list-unstyled.mb-0.text-white-50 {
 				<div class="weather-widget">
 					<div class="top-section">
 						<div class="weather-icon-section">
-							<svg class="weather-icon" viewBox="0 0 200 200">
-								<!-- Sun rays -->
-								<line class="cloud-icon" x1="100" y1="30" x2="100" y2="45" stroke-width="6"/>
-								<line class="cloud-icon" x1="145" y1="55" x2="135" y2="65" stroke-width="6"/>
-								<line class="cloud-icon" x1="170" y1="100" x2="155" y2="100" stroke-width="6"/>
-								<line class="cloud-icon" x1="145" y1="145" x2="135" y2="135" stroke-width="6"/>
-								<line class="cloud-icon" x1="55" y1="55" x2="65" y2="65" stroke-width="6"/>
-								<line class="cloud-icon" x1="30" y1="100" x2="45" y2="100" stroke-width="6"/>
+							<svg class="rupee-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+							  <!-- Circle background (optional) -->
+							  <circle cx="100" cy="100" r="80" fill="none" stroke="#2c3e50" stroke-width="4"/>
 
-								<!-- Sun circle -->
-								<circle class="cloud-icon" cx="100" cy="85" r="20" fill="white" stroke="white" stroke-width="3"/>
+							  <!-- Rupee symbol -->
+							  <g transform="translate(100, 100)">
+							    <!-- Top horizontal line -->
+							    <line x1="-35" y1="-40" x2="25" y2="-40" stroke="#2c3e50" stroke-width="6" stroke-linecap="round"/>
 
-								<!-- Cloud -->
-								<path d="M 60 120 Q 60 105 72 102 Q 75 95 85 95 Q 92 88 105 92 Q 118 92 122 102 Q 132 102 136 112 Q 136 122 126 122 L 70 122 Q 60 122 60 120 Z" fill="white" stroke="none"/>
-							</svg>
+							    <!-- Middle horizontal line -->
+							    <line x1="-35" y1="-20" x2="25" y2="-20" stroke="#2c3e50" stroke-width="6" stroke-linecap="round"/>
+
+							    <!-- Vertical stroke -->
+							    <line x1="-25" y1="-40" x2="-25" y2="-5" stroke="#2c3e50" stroke-width="6" stroke-linecap="round"/>
+
+							    <!-- Diagonal stroke (main part of ₹) -->
+							    <path d="M -25 -5 Q 0 10 20 45" stroke="#2c3e50" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+							    <!-- Curve at top right -->
+							    <path d="M -25 -20 Q 5 -20 15 -5 Q 20 5 10 15" stroke="#2c3e50" stroke-width="6" stroke-linecap="round" fill="none"/>
+							  </g>
+</svg>
 						</div>
 
 
