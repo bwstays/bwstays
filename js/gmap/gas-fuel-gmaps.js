@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const { Map } =   google.maps.importLibrary("maps");
 
   const map1 = new google.maps.Map(document.getElementById('gasfuel'), {
-    zoom: 10,
+    zoom: 12,
          styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }],
 
     disableDefaultUI: true,
