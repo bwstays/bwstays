@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 30)
   };
 
+
   const customIconEv = {
  url: 'https://www.bwstays.com/assets/img/logo/pin.png',
     size: new google.maps.Size(40, 40),
