@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const map1 = new google.maps.Map(document.getElementById('gasfuel'), {
     zoom: 11.3,
          styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }],
-
     disableDefaultUI: true,
     zoomControl: false,
     streetViewControl: false,
