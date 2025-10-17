@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('#gasfuel-places');
   if (!section) return;
 
+
  const centerAttr = section.getAttribute('data-center');
   if (!centerAttr) return;
   const [lat, lng] = centerAttr.split(',').map(Number);
@@ -15,9 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 30)
   };
 
-
   const customIconEv = {
- url: 'https://www.bwstays.com/assets/img/logo/pin.png',
+ url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
     size: new google.maps.Size(40, 40),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(20, 40)
@@ -30,12 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(20, 40)
   };
-
       const { Map } =   google.maps.importLibrary("maps");
 
-  const map2 = new google.maps.Map(document.getElementById('gasfuel'), {
+  const map1 = new google.maps.Map(document.getElementById('gasfuel'), {
     zoom: 11,
-     styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }],
+         styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }],
 
     disableDefaultUI: true,
     zoomControl: true,
@@ -46,26 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
- styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] },]
-
 
   new google.maps.Marker({
     position: centerloca,
-    map: map2,
+    map: map1,
     icon: mainLocationIcon,
     title: "Kalpetta Center",
     zIndex: google.maps.Marker.MAX_ZINDEX + 10
   });
 
   var infowindow = new google.maps.InfoWindow();
-  const service = new google.maps.places.PlacesService(map2);
+  const service = new google.maps.places.PlacesService(map1);
 
   const request = {
     location: centerloca,
     radius: 20000, // Search within a 40km radius
-   // types: ['electric_charging_station','gas_station']
-  //  types: ['electric_vehicle_charging_station','electric_charging_station','gas_station'],
-     types: [ 'gas_station'],
+     //types: ['electric_vehicle_charging_station','electric_charging_station' ],
+          types: [ 'gas_station'],
+
+
   };
  const cityCircle = new google.maps.Circle({
         strokeColor: "#FF0000", // Red outline
@@ -76,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         center: centerloca, // Same center as the map for this example
         radius: 20000
       });
- // cityCircle.setMap(map2);
+ // cityCircle.setMap(map1);
 
 
   service.nearbySearch(request, (results, status) => {
@@ -99,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				};
 				service.getDetails(detailsRequest, function (place, status) {
-				  if (status === google.maps.places.PlacesServiceStatus.OK && place)
+				 if (status === google.maps.places.PlacesServiceStatus.OK && place)
 				  {
 					   if (place.geometry && place.geometry.location)
 						{
@@ -114,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
 		   //alert(results[i].types)
 		  let marker = new google.maps.Marker({
-			  map: map2,
+			  map: map1,
 			  icon:customIconEv,
 			  position: results[i].geometry.location,
 			  title: results[i].name
@@ -122,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			google.maps.event.addListener(marker, 'click', () => {
 //			  infowindow.setContent( {content: `<strong>${results[i].name || "" }</strong><br>}`, });
 			  infowindow.setContent(  results[i].name  );
-			  infowindow.open(map2, marker);
+			  infowindow.open(map1, marker);
 
 			});
 	   };
@@ -130,30 +128,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
- /*  new google.maps.DirectionsService().route({
-        origin: new google.maps.LatLng( 11.605943, 76.083429), // origin is bw stay
-        destination: new google.maps.LatLng(centerloca.lat, centerloca.lng), // destination location driving from bw stay
-        travelMode: google.maps.TravelMode.DRIVING,
-        unitSystem: google.maps.UnitSystem.METRIC,
-      }, (response, status) => {
-          if (status === "OK") {
-			  var directionsRenderer = new google.maps.DirectionsRenderer();
-					directionsRenderer.setMap(map2);
-					directionsRenderer.setDirections(response);
 
-					//	const distanceInMeters = response.routes[0].legs[0].distance.value;
-					//	const distanceText = response.routes[0].legs[0].distance.text;
- 					directionsRenderer.setOptions({
-					  draggable: true, // Allows users to drag and modify the route path
-					  suppressMarkers: true, // Hides the default A/B markers
-					  polylineOptions: {
-						strokeColor: '#4285F4', // Changes the route line color to red
-						strokeWeight: 5, // Sets the route line thickness
-						strokeOpacity: 0.6
-					  }
-					});
-  				   // directionsRenderer.setPanel(document.getElementById('directions-panel'));
-         }
-    });
-    */
 });
