@@ -4413,13 +4413,6 @@ footer.footer .stay-card {
   min-width: 100%;
 }
 
-#faq-container {
-  display: none !important;
-}
-.faq-container{
-  display: none !important;
-}
-
 #faq-title-divider {
   width: 100px;
 }

@@ -90,9 +90,7 @@ function toggleFAQ() {
     const faqContainer = document.getElementById('faq-container');
     const faqToggle = document.getElementById('faq-toggle');
     
-    // Check if FAQ is currently hidden
     if (faqSectionWrapper.style.display === 'none') {
-        // Show the entire FAQ section
         faqSectionWrapper.style.display = 'block';
         faqContainer.style.display = 'block';
         faqToggle.innerHTML = 'Hide FAQ';
@@ -103,7 +101,6 @@ function toggleFAQ() {
             faqSectionWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 200);
     } else {
-        // Hide the entire FAQ section
         faqSectionWrapper.style.display = 'none';
         faqToggle.innerHTML = 'Frequently Asked Questions';
     }
@@ -148,7 +145,6 @@ function renderFAQPage() {
         carousel.appendChild(faqItem);
     }
     
-    // Add event listeners to FAQ questions
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {
@@ -210,9 +206,7 @@ function toggleAnswer(questionElement) {
     }
 }
 
-// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Hide FAQ section by default when page loads
     const faqSectionWrapper = document.querySelector('.faq-section-wrapper');
     if (faqSectionWrapper) {
         faqSectionWrapper.style.display = 'none';
@@ -221,7 +215,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const faqContainer = document.getElementById('faq-container');
     
     if (faqContainer) {
-        // Add event listeners for FAQ navigation buttons
         const prevBtn = document.getElementById('faq-prev');
         const nextBtn = document.getElementById('faq-next');
         
@@ -238,7 +231,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Initialize FAQ carousel if it's already visible
     if (faqSectionWrapper && faqSectionWrapper.style.display !== 'none') {
         initializeFAQCarousel();
     }
