@@ -1,3 +1,53 @@
+.currency-widget {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.currency-icon-section {
+  width: 80px;
+  height: 80px;
+}
+
+.currency-icon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.currency-symbol {
+  stroke: white;
+  fill: white;
+}
+
+.info-section {
+  text-align: right;
+}
+
+.currency-code {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.currency-name {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+
+
  .weather-widget {
             width: 143px;
             border-radius: 12px;
@@ -5,6 +55,20 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             margin-left:1042px;
             margin-top:3px;
+        }
+        .weather-icon-section {
+            flex: 1;
+            text-align: left;
+        }
+
+        .weather-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .weather-info-section {
+            background-color: #000000;
+            padding: 15px;
+            color: white;
         }
 
         .top-section {
@@ -15,15 +79,7 @@
             padding: 3px;
         }
 
-        .weather-icon-section {
-            flex: 1;
-            text-align: left;
-        }
 
-        .weather-icon {
-            width: 50px;
-            height: 50px;
-        }
 
         .cloud-icon {
             fill: none;
@@ -52,11 +108,6 @@
             line-height: 1;
         }
 
-        .weather-info-section {
-            background-color: #000000;
-            padding: 15px;
-            color: white;
-        }
 
         .temperature {
             font-size: 22px;

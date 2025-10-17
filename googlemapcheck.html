@@ -528,38 +528,29 @@ ul.list-unstyled.mb-0.text-white-50 {
 				</div>
 
 
-				<div class="weather-widget">
-					<div class="top-section">
-						<div class="weather-icon-section">
-							<svg class="rupee-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-							  <!-- Circle background (optional) -->
-							  <circle cx="100" cy="100" r="80" fill="none" stroke="#2c3e50" stroke-width="4"/>
-
-							  <!-- Rupee symbol -->
-							  <g transform="translate(100, 100)">
-							    <!-- Top horizontal line -->
-							    <line x1="-35" y1="-40" x2="25" y2="-40" stroke="#2c3e50" stroke-width="6" stroke-linecap="round"/>
-
-							    <!-- Middle horizontal line -->
-							    <line x1="-35" y1="-20" x2="25" y2="-20" stroke="#2c3e50" stroke-width="6" stroke-linecap="round"/>
-
-							    <!-- Vertical stroke -->
-							    <line x1="-25" y1="-40" x2="-25" y2="-5" stroke="#2c3e50" stroke-width="6" stroke-linecap="round"/>
-
-							    <!-- Diagonal stroke (main part of ₹) -->
-							    <path d="M -25 -5 Q 0 10 20 45" stroke="#2c3e50" stroke-width="8" stroke-linecap="round" fill="none"/>
-
-							    <!-- Curve at top right -->
-							    <path d="M -25 -20 Q 5 -20 15 -5 Q 20 5 10 15" stroke="#2c3e50" stroke-width="6" stroke-linecap="round" fill="none"/>
-							  </g>
-</svg>
-						</div>
-
-
-					</div>
-
-
-				</div>
+				   <div class="currency-widget">
+				     <div class="top-section">
+				       <div class="currency-icon-section">
+				         <svg class="currency-icon" viewBox="0 0 200 200">
+				           <g transform="translate(100, 100)">
+				             <line class="currency-symbol" x1="-40" y1="-45" x2="30" y2="-45" stroke-width="8" stroke-linecap="round"/>
+				             <line class="currency-symbol" x1="-40" y1="-20" x2="30" y2="-20" stroke-width="8" stroke-linecap="round"/>
+				             <line class="currency-symbol" x1="-30" y1="-45" x2="-30" y2="-5" stroke-width="8" stroke-linecap="round"/>
+				             <path class="currency-symbol" d="M -30 -5 Q 0 15 25 55" stroke-width="10" stroke-linecap="round" fill="none"/>
+				             <path class="currency-symbol" d="M -30 -20 Q 5 -20 18 -5 Q 23 8 12 20" stroke-width="8" stroke-linecap="round" fill="none"/>
+				           </g>
+				         </svg>
+				       </div>
+				       <div class="info-section">
+				         <div class="currency-code">INR</div>
+				         <div class="currency-name">Indian Rupee</div>
+				       </div>
+				     </div>
+				     <div class="rate-section">
+				       <div class="rate">83.25<span class="rate-unit">/$</span></div>
+				       <div class="conversion">1 USD = ₹83.25</div>
+				     </div>
+ 				 </div>
 
         </div>
 
