@@ -86,8 +86,8 @@ const totalPages = Math.ceil(faqData.length / itemsPerPage);
 function toggleFAQ() {
     const faqContainer = document.getElementById('faq-container');
     const faqToggle = document.getElementById('faq-toggle');
-    if (faqContainer.style.display === 'none' || faqContainer.style.display === '') {
-        faqContainer.style.display = 'block';
+    if (faqContainer.classList.contains('d-none')) {
+        faqContainer.classList.remove('d-none');
         faqToggle.innerHTML = 'Hide FAQ';
         setTimeout(() => {
             initializeFAQCarousel();
@@ -96,7 +96,7 @@ function toggleFAQ() {
             faqContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 200);
     } else {
-        faqContainer.style.display = 'none';
+        faqContainer.classList.add('d-none');
         faqToggle.innerHTML = 'Frequently Asked Questions';
     }
 }
@@ -125,7 +125,7 @@ function renderFAQPage() {
         const faqItem = document.createElement('div');
         faqItem.className = 'faq-item mb-3';
         faqItem.innerHTML = `
-            <div class="faq-question bg-dark text-white p-3 rounded cursor-pointer" onclick="toggleAnswer(this)">
+            <div class="faq-question bg-dark text-white p-3 rounded cursor-pointer">
                 <div class="d-flex justify-content-between align-items-center">
                     <h6 class="mb-0 font-weight-bold">${faq.question}</h6>
                     <i class="fas fa-chevron-down faq-icon"></i>
@@ -137,6 +137,14 @@ function renderFAQPage() {
         `;
         carousel.appendChild(faqItem);
     }
+    
+    // Add event listeners to FAQ questions
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            toggleAnswer(this);
+        });
+    });
 }
 function changeFAQPage(direction) {
     const newPage = currentPage + direction;
@@ -191,5 +199,25 @@ function toggleAnswer(questionElement) {
 document.addEventListener('DOMContentLoaded', function() {
     const faqContainer = document.getElementById('faq-container');
     if (faqContainer) {
+        // Add event listeners for FAQ navigation buttons
+        const prevBtn = document.getElementById('faq-prev');
+        const nextBtn = document.getElementById('faq-next');
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                changeFAQPage(-1);
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                changeFAQPage(1);
+            });
+        }
+    }
+    
+    // Initialize FAQ carousel if it's already visible
+    if (faqContainer && faqContainer.style.display !== 'none') {
+        initializeFAQCarousel();
     }
 });
