@@ -1716,9 +1716,33 @@ div.image-nav-arrow.image-nav-right {
 .video-section {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
+}
+
+#faq-container {
+  display: none;
+}
+
+#faq-container.d-none {
+  display: none;
+}
+
+.faq-container{
+  display: none;
+}
+
+.faq-section-wrapper {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+}
+
+.faq-section {
   padding: 50px 20px;
   margin: 50px 0;
   text-align: center;
+}
+
+#faq-title-divider {
+  width: 100px;
 }
 
 .video-container {
