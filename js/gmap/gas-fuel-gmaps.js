@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('#gasfuel-places');
   if (!section) return;
 
-
  const centerAttr = section.getAttribute('data-center');
   if (!centerAttr) return;
   const [lat, lng] = centerAttr.split(',').map(Number);
