@@ -1679,7 +1679,7 @@ div.image-nav-arrow.image-nav-right {
   .food-map,
   .pano,
   #fuel {
-    height: 180px;
+    height: 380px;
     max-width: 85%;
     border-radius: 15px;
   }
@@ -1694,7 +1694,7 @@ div.image-nav-arrow.image-nav-right {
     margin: 15px 0;
   }
   #gasfuel {
-    height: 180px;
+    height: 280px;
     max-width: 85%;
     border-radius: 15px;
   }
