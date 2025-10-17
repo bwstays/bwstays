@@ -41,9 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     center: centerloca ,
      mapId: "gasfuelmapdata"
     });
-
-
-
   new google.maps.Marker({
     position: centerloca,
     map: map1,
