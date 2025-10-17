@@ -95,9 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				};
 				service.getDetails(detailsRequest, function (place, status) {
-				  //if (status === google.maps.places.PlacesServiceStatus.OK && place)
+				 if (status === google.maps.places.PlacesServiceStatus.OK && place)
 				  {
-					   // if (place.geometry && place.geometry.location)
+					   if (place.geometry && place.geometry.location)
 						{
 						const latitude = place.geometry.location.lat();
 						const longitude = place.geometry.location.lng();
