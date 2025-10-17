@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
          styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }],
 
     disableDefaultUI: true,
-    zoomControl: true,
-    streetViewControl: true,
+    #zoomControl: true,
+    streetViewControl: false,
     fullscreenControl: true,
     center: centerloca ,
      mapId: "fuelmapdata"
