@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor: new google.maps.Point(20, 40)
   };
 
-
   const mainLocationIcon = {
     url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
     size: new google.maps.Size(40, 40),
