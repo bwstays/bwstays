@@ -127,6 +127,4 @@ document.addEventListener('DOMContentLoaded', () => {
      // });
     }
   });
-
-
 });
