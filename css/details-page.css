@@ -1,3 +1,265 @@
+.currency-widget {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 100%;
+}
+
+.currency-icon-section {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.currency-icon {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.currency-symbol {
+  stroke: white;
+  fill: white;
+}
+
+.info-section {
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+}
+
+.currency-code {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.currency-name {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .currency-widget {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .currency-icon-section {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .currency-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .currency-code {
+    font-size: 16px;
+  }
+  
+  .currency-name {
+    font-size: 13px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .currency-widget {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .currency-icon-section {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .currency-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .currency-code {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  
+  .currency-name {
+    font-size: 12px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 360px) {
+  .currency-widget {
+    padding: 12px;
+  }
+  
+  .currency-icon-section {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .currency-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .currency-code {
+    font-size: 14px;
+  }
+  
+  .currency-name {
+    font-size: 11px;
+  }
+}
+
+
+
+ .weather-widget {
+            width: 143px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-left:1042px;
+            margin-top:3px;
+        }
+        .weather-icon-section {
+            flex: 1;
+            text-align: left;
+        }
+
+        .weather-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .weather-info-section {
+            background-color: #000000;
+            padding: 15px;
+            color: white;
+        }
+
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #64a19d 0%, #64a19d 100%);
+            padding: 3px;
+        }
+
+
+
+        .cloud-icon {
+            fill: none;
+            stroke: white;
+            stroke-width: 8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .date-section {
+            text-align: right;
+            color: white;
+        }
+
+        .month {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+
+        .day {
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+
+        .temperature {
+            font-size: 22px;
+            font-weight: 300;
+            margin: 0 0 8px -95px;
+            line-height: 1;
+        }
+
+        .temp-unit {
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        .condition {
+            font-size: 13px;
+            margin: 0 0 4px 0;
+            color: #ecf0f1;
+        }
+
+        .location-wth {
+            font-size: 11px;
+            margin: 0;
+            color: #95a5a6;
+        }
+        
+.highlight {
+            color: #d4601f;
+            font-weight: 600;
+        }
+
+ .location {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #64a19d 100%);
+            color: white;
+            padding: 0px 3px;
+            border-radius: 5px;
+            font-weight: 300;
+        }
+
+.content {
+                font-size: 1em;
+                text-align: justify
+            }
+            
+.footer-author {			     
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-author p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-author a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-author a:hover {
+    color: #64a19d;
+}
+
+/* data info icons */
+.da-icon {
+  #background: #2b2b2b;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  color: #64a19d;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1417,7 +1679,7 @@ div.image-nav-arrow.image-nav-right {
   .food-map,
   .pano,
   #fuel {
-    height: 180px;
+    height: 380px;
     max-width: 85%;
     border-radius: 15px;
   }
@@ -1431,6 +1693,23 @@ div.image-nav-arrow.image-nav-right {
     padding: 20px 15px;
     margin: 15px 0;
   }
+  #gasfuel {
+    height: 280px;
+    max-width: 85%;
+    border-radius: 15px;
+  }
+
+  #gasfuel {
+    border: 1px solid rgba(100, 161, 157, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  #gasfuel-places {
+    padding: 20px 15px;
+    margin: 15px 0;
+  }
+
+
 }
 
 /* Video Section Styling */
@@ -1558,8 +1837,8 @@ div.image-nav-arrow.image-nav-right {
 }
 
 #fuel {
-  height: 220px;
-  max-width: 70%;
+  height: 420px;
+  max-width: 90%;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -1572,6 +1851,21 @@ div.image-nav-arrow.image-nav-right {
   position: relative;
 }
 
+
+#gasfuel {
+  height: 420px;
+  max-width: 70%;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  border: 2px solid rgba(100, 161, 157, 0.3);
+  background: linear-gradient(135deg, rgba(100, 161, 157, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+}
 
 
 #fuel::before {
@@ -1592,11 +1886,9 @@ div.image-nav-arrow.image-nav-right {
 
 /* Fuel Places Section Styling */
 #fuel-places {
-  background: rgba(255, 255, 255, 0.03);
   border-radius: 20px;
   padding: 25px 20px;
-  margin: 20px 0;
-  border: 1px solid rgba(100, 161, 157, 0.2);
+  margin: 5px 0;
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
@@ -1608,6 +1900,20 @@ div.image-nav-arrow.image-nav-right {
 }
 
 
+/* Fuel Places Section Styling */
+#gasfuel-places {
+  border-radius: 20px;
+  padding: 25px 20px;
+  margin: 5px 0;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+
+#gasfuel-places .text-white-50 {
+  display: block;
+  margin: 0;
+}
 
 
 

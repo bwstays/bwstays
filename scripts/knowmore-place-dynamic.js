@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-  const sections = document.querySelectorAll('#projects .container .row.justify-content-center');
+  const sections = document.querySelectorAll('#loc .container .row.justify-content-center');
   let sectionIndex = 1;
   Object.keys(siteData).forEach((sectionType) => {
     if (siteData[sectionType]) {
@@ -167,7 +167,7 @@ rightArrow.addEventListener('mouseleave', () => {
         </small>
       </div>
       <div class="mb-3">
-                 <span class="text-white-50 ml-2">${currentItemData.description}</span>
+                 <span class="text-white-50 ml-2"><p class="content">${currentItemData.description}</p>  <p class="content"></p></span>
        </div>
  `;
 $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
@@ -284,7 +284,7 @@ function updateRightColumnOnly() {
             <i class="fas fa-phone"></i> ${item.Contact}
           </small>
         </div>
-        <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Know More</a>
+        <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto" rel="dofollow">Know More</a>
       </div>
     `;
     cardCol.appendChild(card);
@@ -301,7 +301,7 @@ function updateRightColumnOnly() {
 function initializeSection(sectionType, data, sectionIndex) {
   let sectionContainer;
   let sectionTitle;
-  const allSections = document.querySelectorAll('#projects .container .row.justify-content-center');
+  const allSections = document.querySelectorAll('#loc .container .row.justify-content-center');
   const isOdd = sectionIndex % 2 === 1;
   if (sectionIndex - 1 < allSections.length) {
     sectionContainer = allSections[sectionIndex - 1];

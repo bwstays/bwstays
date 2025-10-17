@@ -1,0 +1,75 @@
+{
+  "name": "bwstays",
+  "version": "1.0.0",
+  "description": "AI context for Black and White Stays - Luxury vacation rental and workation platform in Wayanad, Kerala",
+  "metadata": {
+    "generated": "2025-01-16T00:00:00Z",
+    "generator": "bwstays-mcp-generator",
+    "source": "https://www.bwstays.com",
+    "contact": "bwstays@bwstays.com"
+  },
+  "resources": [
+    {
+      "name": "about",
+      "description": "Information about Black and White Stays company and services",
+      "path": "/resources/about.json"
+    },
+    {
+      "name": "properties",
+      "description": "Available villas and property listings in Wayanad",
+      "path": "/resources/properties.json"
+    },
+    {
+      "name": "amenities",
+      "description": "Complete list of amenities and facilities available",
+      "path": "/resources/amenities.json"
+    },
+    {
+      "name": "booking",
+      "description": "Booking process, contact information and reservation details",
+      "path": "/resources/booking.json"
+    },
+    {
+      "name": "policies",
+      "description": "Terms, conditions, privacy policy and cancellation policies",
+      "path": "/resources/policies.json"
+    },
+    {
+      "name": "attractions",
+      "description": "Tourist attractions and places to visit in Wayanad",
+      "path": "/resources/attractions.json"
+    },
+    {
+      "name": "location",
+      "description": "Location details, directions and area information",
+      "path": "/resources/location.json"
+    }
+  ],
+  "tools": [
+    {
+      "name": "search_properties",
+      "description": "Search for available properties by various criteria",
+      "path": "/tools/search/properties.json"
+    },
+    {
+      "name": "search_attractions",
+      "description": "Find tourist attractions and activities in Wayanad",
+      "path": "/tools/search/attractions.json"
+    },
+    {
+      "name": "check_availability",
+      "description": "Check property availability for specific dates",
+      "path": "/tools/booking/availability.json"
+    },
+    {
+      "name": "get_pricing",
+      "description": "Get pricing information for properties and services",
+      "path": "/tools/booking/pricing.json"
+    },
+    {
+      "name": "contact_info",
+      "description": "Get contact information for reservations and inquiries",
+      "path": "/tools/booking/contact.json"
+    }
+  ]
+}

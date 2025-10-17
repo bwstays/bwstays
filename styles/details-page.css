@@ -1,3 +1,138 @@
+.weather-widget {
+            width: 143px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-top:3px;
+            margin-left:15px;
+        }
+
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #64a19d 0%, #64a19d 100%);
+            padding: 3px;
+        }
+
+        .weather-icon-section {
+            flex: 1;
+            text-align: left;
+        }
+
+        .weather-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .cloud-icon {
+            fill: none;
+            stroke: white;
+            stroke-width: 8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .date-section {
+            text-align: right;
+            color: white;
+        }
+
+        .month {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+
+        .day {
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .weather-info-section {
+            background-color: #000000;
+            padding: 15px;
+            color: white;
+        }
+
+        .temperature {
+            font-size: 22px;
+            font-weight: 300;
+            margin: 0 0 8px -95px;
+            line-height: 1;
+        }
+
+        .temp-unit {
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        .condition {
+            font-size: 13px;
+            margin: 0 0 4px 0;
+            color: #ecf0f1;
+        }
+
+        .location-wth {
+            font-size: 11px;
+            margin: 0;
+            color: #95a5a6;
+        }
+
+.highlight {
+            color: #d4601f;
+            font-weight: 600;
+        }
+
+ .location {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #64a19d 100%);
+            color: white;
+            padding: 0px 3px;
+            border-radius: 5px;
+            font-weight: 300;
+        }
+
+.content {
+                font-size: 1em;
+                text-align: justify
+            }
+            
+.footer-author {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-author p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-author a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-author a:hover {
+    color: #64a19d;
+}
+
+/* data info icons */
+.da-icon {
+  #background: #2b2b2b;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  color: #64a19d;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 .sr-only {
   position: absolute;
   width: 1px;
