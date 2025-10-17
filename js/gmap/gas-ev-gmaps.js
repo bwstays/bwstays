@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
          styles: [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }],
 
     disableDefaultUI: true,
-    #zoomControl: true,
+    zoomControl: false,
     streetViewControl: false,
     fullscreenControl: true,
     center: centerloca ,
