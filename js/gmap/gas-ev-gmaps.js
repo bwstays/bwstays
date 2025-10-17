@@ -44,8 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
      mapId: "fuelmapdata"
     });
 
-
-
   new google.maps.Marker({
     position: centerloca,
     map: map1,
