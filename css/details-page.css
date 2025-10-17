@@ -253,7 +253,7 @@
 
 /* data info icons */
 .da-icon {
-  #background: #2b2b2b;
+  background: #2b2b2b;
   border: 0px solid rgba(0, 0, 0, 0.1);
   color: #64a19d;
   place-items: center;
@@ -1718,17 +1718,7 @@ div.image-nav-arrow.image-nav-right {
   border-radius: 20px;
 }
 
-#faq-container {
-  display: none;
-}
 
-#faq-container.d-none {
-  display: none;
-}
-
-.faq-container{
-  display: none;
-}
 
 .faq-section-wrapper {
   background-color: #f8f9fa;

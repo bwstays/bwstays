@@ -84,19 +84,19 @@ let currentPage = 0;
 const itemsPerPage = 5;
 const totalPages = Math.ceil(faqData.length / itemsPerPage);
 function toggleFAQ() {
-    const faqContainer = document.getElementById('faq-container');
+    const faqSectionWrapper = document.querySelector('.faq-section-wrapper');
     const faqToggle = document.getElementById('faq-toggle');
-    if (faqContainer.classList.contains('d-none')) {
-        faqContainer.classList.remove('d-none');
+    if (faqSectionWrapper.style.display === 'none') {
+        faqSectionWrapper.style.display = 'block';
         faqToggle.innerHTML = 'Hide FAQ';
         setTimeout(() => {
             initializeFAQCarousel();
         }, 100);
         setTimeout(() => {
-            faqContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            faqSectionWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 200);
     } else {
-        faqContainer.classList.add('d-none');
+        faqSectionWrapper.style.display = 'none';
         faqToggle.innerHTML = 'Frequently Asked Questions';
     }
 }
@@ -107,9 +107,9 @@ function initializeFAQCarousel() {
     }
     currentPage = 0;
     carousel.innerHTML = '';
-    const faqContainer = document.getElementById('faq-container');
-    if (faqContainer) {
-        const existingFaqItems = faqContainer.querySelectorAll('.faq-item:not(#faq-carousel .faq-item)');
+    const faqSectionWrapper = document.querySelector('.faq-section-wrapper');
+    if (faqSectionWrapper) {
+        const existingFaqItems = faqSectionWrapper.querySelectorAll('.faq-item:not(#faq-carousel .faq-item)');
         existingFaqItems.forEach(item => item.remove());
     }
     renderFAQPage();
@@ -197,8 +197,8 @@ function toggleAnswer(questionElement) {
     }
 }
 document.addEventListener('DOMContentLoaded', function() {
-    const faqContainer = document.getElementById('faq-container');
-    if (faqContainer) {
+    const faqSectionWrapper = document.querySelector('.faq-section-wrapper');
+    if (faqSectionWrapper) {
         // Add event listeners for FAQ navigation buttons
         const prevBtn = document.getElementById('faq-prev');
         const nextBtn = document.getElementById('faq-next');
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Initialize FAQ carousel if it's already visible
-    if (faqContainer && faqContainer.style.display !== 'none') {
+    if (faqSectionWrapper && faqSectionWrapper.style.display !== 'none') {
         initializeFAQCarousel();
     }
 });
