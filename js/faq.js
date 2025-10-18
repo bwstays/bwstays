@@ -80,26 +80,32 @@ const faqData = [
         answer: "Yes, our Wayanad rental villas feature luxurious amenities including private pools, spa facilities, gourmet kitchens, premium bedding, air conditioning, high-speed internet, entertainment systems, landscaped gardens, and 24/7 concierge services to ensure a comfortable and productive stay."
     }
 ];
+
 let currentPage = 0;
 const itemsPerPage = 5;
 const totalPages = Math.ceil(faqData.length / itemsPerPage);
+
 function toggleFAQ() {
+    const faqSectionWrapper = document.querySelector('.faq-section-wrapper');
     const faqContainer = document.getElementById('faq-container');
     const faqToggle = document.getElementById('faq-toggle');
-    if (faqContainer.classList.contains('d-none')) {
-        faqContainer.classList.remove('d-none');
+    
+    if (faqSectionWrapper.style.display === 'none') {
+        faqSectionWrapper.style.display = 'block';
+        faqContainer.style.display = 'block';
         faqToggle.innerHTML = 'Hide FAQ';
         setTimeout(() => {
             initializeFAQCarousel();
         }, 100);
         setTimeout(() => {
-            faqContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            faqSectionWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 200);
     } else {
-        faqContainer.classList.add('d-none');
+        faqSectionWrapper.style.display = 'none';
         faqToggle.innerHTML = 'Frequently Asked Questions';
     }
 }
+
 function initializeFAQCarousel() {
     const carousel = document.getElementById('faq-carousel');
     if (!carousel) {
@@ -115,6 +121,7 @@ function initializeFAQCarousel() {
     renderFAQPage();
     updateNavigationButtons();
 }
+
 function renderFAQPage() {
     const carousel = document.getElementById('faq-carousel');
     const startIndex = currentPage * itemsPerPage;
@@ -138,7 +145,6 @@ function renderFAQPage() {
         carousel.appendChild(faqItem);
     }
     
-    // Add event listeners to FAQ questions
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {
@@ -146,6 +152,7 @@ function renderFAQPage() {
         });
     });
 }
+
 function changeFAQPage(direction) {
     const newPage = currentPage + direction;
     if (newPage >= 0 && newPage < totalPages) {
@@ -154,6 +161,7 @@ function changeFAQPage(direction) {
         updateNavigationButtons();
     }
 }
+
 function updateNavigationButtons() {
     const prevBtn = document.getElementById('faq-prev');
     const nextBtn = document.getElementById('faq-next');
@@ -162,6 +170,7 @@ function updateNavigationButtons() {
     if (nextBtn) nextBtn.disabled = currentPage === totalPages - 1;
     if (pageInfo) pageInfo.textContent = `Page ${currentPage + 1} of ${totalPages}`;
 }
+
 function toggleAnswer(questionElement) {
     const answer = questionElement.nextElementSibling;
     const icon = questionElement.querySelector('.faq-icon');
@@ -196,10 +205,16 @@ function toggleAnswer(questionElement) {
         }
     }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
+    const faqSectionWrapper = document.querySelector('.faq-section-wrapper');
+    if (faqSectionWrapper) {
+        faqSectionWrapper.style.display = 'none';
+    }
+    
     const faqContainer = document.getElementById('faq-container');
+    
     if (faqContainer) {
-        // Add event listeners for FAQ navigation buttons
         const prevBtn = document.getElementById('faq-prev');
         const nextBtn = document.getElementById('faq-next');
         
@@ -216,8 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Initialize FAQ carousel if it's already visible
-    if (faqContainer && faqContainer.style.display !== 'none') {
+    if (faqSectionWrapper && faqSectionWrapper.style.display !== 'none') {
         initializeFAQCarousel();
     }
 });
