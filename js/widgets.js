@@ -64,9 +64,10 @@ async function fetchWeatherData() {
 }
 
 function updateWeatherDisplay(weatherData, cityName) {
-    const temperatureElement = document.querySelector('.temperature');
-    const conditionElement = document.querySelector('.condition');
-    const locationElement = document.querySelector('.location-wth');
+    const temperatureElement = document.querySelector('.weather-temp');
+    const conditionElement = document.querySelector('.weather-condition');
+    const locationElement = document.querySelector('.weather-location');
+    const highLowElement = document.querySelector('.weather-high-low');
     
     if (weatherData && weatherData.current_weather) {
         const temp = weatherData.current_weather.temperature;
@@ -81,17 +82,26 @@ function updateWeatherDisplay(weatherData, cityName) {
         }
         
         if (locationElement) {
-            locationElement.textContent = `${cityName}, Wayanad`;
+            locationElement.textContent = cityName || 'New Delhi';
+        }
+        
+        if (highLowElement) {
+            const high = Math.round(temp + 2);
+            const low = Math.round(temp - 9);
+            highLowElement.textContent = `H:${high}° L:${low}°`;
         }
     } else {
         if (temperatureElement) {
-            temperatureElement.innerHTML = `25<span class="temp-unit">°</span>`;
+            temperatureElement.innerHTML = `29<span class="temp-unit">°</span>`;
         }
         if (conditionElement) {
-            conditionElement.textContent = 'Partly Cloudy';
+            conditionElement.textContent = 'Sunny';
         }
         if (locationElement) {
-            locationElement.textContent = `${cityName || 'Kalpetta'}, Wayanad`;
+            locationElement.textContent = cityName || 'New Delhi';
+        }
+        if (highLowElement) {
+            highLowElement.textContent = 'H:31° L:20°';
         }
     }
 }
@@ -140,18 +150,15 @@ function initCurrencyConverter() {
         return;
     }
     
-    // Update the currency code display when selection changes
     function updateCurrencyCodeDisplay() {
         if (fromCurrencyCodeElement) {
             fromCurrencyCodeElement.textContent = fromCurrencySelect.value;
         }
-        // Update the currency icon
         updateCurrencyIcon(fromCurrencySelect.value);
-        // Also update the conversion immediately when currency changes
         convertCurrency(fromCurrencySelect, convertedAmountElement);
     }
     
-    // Function to update currency icon based on selection
+
     function updateCurrencyIcon(currency) {
         const currencyIcon = document.querySelector('.currency-icon text');
         if (currencyIcon) {
@@ -171,10 +178,10 @@ function initCurrencyConverter() {
         }
     }
     
-    // Add event listener for currency selection changes
+
     fromCurrencySelect.addEventListener('change', updateCurrencyCodeDisplay);
     
-    // Also need to populate the select options directly since we're not using populateCurrencyOptions anymore
+    
     const currencyOptions = [
         { code: 'USD', name: 'USD - US Dollar' },
         { code: 'EUR', name: 'EUR - Euro' },
@@ -188,7 +195,6 @@ function initCurrencyConverter() {
         { code: 'AED', name: 'AED - UAE Dirham' }
     ];
     
-    // Clear and repopulate the select
     fromCurrencySelect.innerHTML = '';
     currencyOptions.forEach(currency => {
         const option = document.createElement('option');
@@ -197,7 +203,7 @@ function initCurrencyConverter() {
         fromCurrencySelect.appendChild(option);
     });
     
-    updateCurrencyCodeDisplay(); // Initialize the display
+    updateCurrencyCodeDisplay(); 
 }
 
 function populateCurrencyOptions(selectElement, currencyOptions) {
@@ -215,24 +221,22 @@ function populateCurrencyOptions(selectElement, currencyOptions) {
 async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
     const fromCurrency = fromCurrencySelect.value;
     
-    // Use static rates as primary method to avoid CSP issues
-    // Updated with approximate rates as of 2025
+
     const staticRates = {
-        'USD': 83.0,   // US Dollar to INR
-        'EUR': 89.0,   // Euro to INR
-        'GBP': 105.0,  // British Pound to INR
-        'JPY': 0.55,   // Japanese Yen to INR
-        'CHF': 92.0,   // Swiss Franc to INR
-        'CAD': 61.0,   // Canadian Dollar to INR
-        'AUD': 55.0,   // Australian Dollar to INR
-        'SGD': 62.0,   // Singapore Dollar to INR
-        'CNY': 11.5,   // Chinese Yuan to INR
-        'AED': 22.5    // UAE Dirham to INR
+        'USD': 83.0,   
+        'EUR': 89.0,  
+        'GBP': 105.0,  
+        'JPY': 0.55,   
+        'CHF': 92.0,   
+        'CAD': 61.0,   
+        'AUD': 55.0,   
+        'SGD': 62.0,   
+        'CNY': 11.5,   
+        'AED': 22.5    
     };
     
     const rate = staticRates[fromCurrency];
     if (rate) {
-        // Show the 1:1 conversion rate
         convertedAmountElement.textContent = rate.toFixed(2);
         return;
     } else {

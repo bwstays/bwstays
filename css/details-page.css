@@ -1032,6 +1032,7 @@ nav#mainNav.navbar-shrink,
 
 html {
   scroll-behavior: smooth;
+  position: relative;
 }
 
 .reservation-blue-box {
@@ -6540,17 +6541,14 @@ select#fromCurrency {
   flex-wrap: wrap;
   gap: 15px;
   padding: 15px;
-  max-width: 1200px;
-  margin: 0 auto 20px auto;
-  position: relative;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  max-width: 300px;
 }
 
-/* Large screen adjustments */
-@media (min-width: 1200px) {
-  .widgets-container {
-    right: 50px;
-  }
-}
+
 
 /* Weather Widget and Currency Converter Widget - Solid Style */
 .weather-widget,
@@ -6595,25 +6593,50 @@ select#fromCurrency {
   background: #2c2c2e;
 }
 
-/* Modern Weather Widget - Single Section */
+/* Weather Widget - Exact Design Match */
 .weather-widget {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(180deg, #4A90E2 0%, #357ABD 100%);
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px;
   color: white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .weather-widget:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.weather-content {
+.weather-location {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.weather-main {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.weather-temp {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  color: white;
+}
+
+.temp-unit {
+  font-size: 36px;
+  vertical-align: top;
+  font-weight: 700;
 }
 
 .weather-icon-section {
@@ -6621,8 +6644,8 @@ select#fromCurrency {
 }
 
 .weather-icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   transition: transform 0.3s ease;
 }
 
@@ -6630,45 +6653,28 @@ select#fromCurrency {
   transform: scale(1.1);
 }
 
-.cloud-icon {
-  fill: none;
-  stroke: white;
-  stroke-width: 6;
+.sun-ray {
+  stroke: #FFD700;
+  stroke-width: 4;
   stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
-.weather-info {
-  flex: 1;
+.sun-circle {
+  fill: #FFD700;
 }
 
-.temperature {
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-  line-height: 1;
-}
-
-.temp-unit {
-  font-size: 24px;
-  vertical-align: top;
-}
-
-.weather-details {
-  margin: 0;
-}
-
-.condition {
+.weather-condition {
   font-size: 16px;
-  margin: 0 0 4px 0;
-  opacity: 0.9;
   font-weight: 500;
+  margin-bottom: 8px;
+  color: white;
 }
 
-.location-wth {
+.weather-high-low {
   font-size: 14px;
-  margin: 0;
-  opacity: 0.8;
+  font-weight: 400;
+  color: white;
+  opacity: 0.9;
 }
 
 .date-section {
@@ -6728,15 +6734,15 @@ select#fromCurrency {
 /* Responsive adjustments for widgets */
 @media (max-width: 768px) {
   .widgets-container {
-    position: relative;
-    top: auto;
-    right: auto;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 10px;
     gap: 10px;
-    margin: 0 auto 20px auto;
-    max-width: 100%;
+    max-width: 250px;
+    z-index: 1000;
   }
   
   .weather-widget, 
@@ -6751,17 +6757,21 @@ select#fromCurrency {
 /* Mobile specific adjustments */
 @media (max-width: 576px) {
   .widgets-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     gap: 15px;
-    top: 100px;
+    max-width: 150px;
+    z-index: 1000;
   }
   
   .weather-widget, 
   .currency-converter-widget {
-    width: 90%;
-    max-width: 250px;
-    min-width: 200px;
+    width: 100%;
+    max-width: 143px;
+    min-width: 143px;
   }
   
   .currency-rate {
@@ -6941,13 +6951,16 @@ select#fromCurrency {
 }
 }
 
-/* Modern Currency Converter Widget */
+/* Currency Converter Widget - Two Section Design */
 .currency-converter-widget {
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
 .currency-converter-widget:hover {
@@ -6957,14 +6970,18 @@ select#fromCurrency {
 
 .currency-top-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px 24px;
+  padding: 20px;
   color: white;
-}
-
-.currency-header {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 16px;
+}
+
+.currency-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .currency-icon-section {
@@ -6982,15 +6999,17 @@ select#fromCurrency {
 }
 
 .currency-selection {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
 }
 
 .currency-label {
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 8px;
-  opacity: 0.9;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
 }
 
 .currency-select {
@@ -6998,19 +7017,19 @@ select#fromCurrency {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   color: white;
-  padding: 10px 14px;
-  font-size: 14px;
+  padding: 8px 12px;
+  font-size: 12px;
   font-weight: 500;
-  width: 100%;
+  width: 120px;
   transition: all 0.3s ease;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px;
-  padding-right: 40px;
+  background-position: right 8px center;
+  background-size: 12px;
+  padding-right: 25px;
 }
 
 .currency-select:focus {
@@ -7028,7 +7047,11 @@ select#fromCurrency {
 
 .currency-bottom-section {
   background: #f8f9fa;
-  padding: 24px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .conversion-result {
@@ -7036,9 +7059,10 @@ select#fromCurrency {
 }
 
 .conversion-text {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #2d3748;
+  margin: 0;
 }
 
 .currency-rate {
