@@ -126,7 +126,7 @@
 
 /* data info icons */
 .da-icon {
-  #background: #2b2b2b;
+  background: #2b2b2b;
   border: 0px solid rgba(0, 0, 0, 0.1);
   color: #64a19d;
   place-items: center;
@@ -737,7 +737,8 @@ nav#mainNav.navbar-shrink,
 }
 
 .sticky-image {
-  position: sticky;
+  /* Changed from position: sticky to position: static to prevent sticky behavior */
+  position: static;
   top: 100px;
   padding: 20px;
 }
