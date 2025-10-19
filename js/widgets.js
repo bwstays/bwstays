@@ -132,13 +132,11 @@ function getWeatherDescription(weatherCode) {
 }
 
 function initCurrencyConverter() {
-    const amountInput = document.getElementById('amount');
     const fromCurrencySelect = document.getElementById('fromCurrency');
     const convertedAmountElement = document.getElementById('result');
-    const convertButton = document.getElementById('convertBtn');
     const fromCurrencyCodeElement = document.getElementById('fromCurrencyCode');
 
-    if (!amountInput || !fromCurrencySelect || !convertedAmountElement || !convertButton) {
+    if (!fromCurrencySelect || !convertedAmountElement) {
         return;
     }
     
@@ -147,8 +145,30 @@ function initCurrencyConverter() {
         if (fromCurrencyCodeElement) {
             fromCurrencyCodeElement.textContent = fromCurrencySelect.value;
         }
+        // Update the currency icon
+        updateCurrencyIcon(fromCurrencySelect.value);
         // Also update the conversion immediately when currency changes
-        convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement);
+        convertCurrency(fromCurrencySelect, convertedAmountElement);
+    }
+    
+    // Function to update currency icon based on selection
+    function updateCurrencyIcon(currency) {
+        const currencyIcon = document.querySelector('.currency-icon text');
+        if (currencyIcon) {
+            const currencySymbols = {
+                'USD': '$',
+                'EUR': '€',
+                'GBP': '£',
+                'JPY': '¥',
+                'CHF': 'CHF',
+                'CAD': 'C$',
+                'AUD': 'A$',
+                'SGD': 'S$',
+                'CNY': '¥',
+                'AED': 'د.إ'
+            };
+            currencyIcon.textContent = currencySymbols[currency] || '$';
+        }
     }
     
     // Add event listener for currency selection changes
@@ -177,7 +197,6 @@ function initCurrencyConverter() {
         fromCurrencySelect.appendChild(option);
     });
     
-    setupEventListeners(amountInput, fromCurrencySelect, convertedAmountElement, convertButton);
     updateCurrencyCodeDisplay(); // Initialize the display
 }
 
@@ -192,19 +211,9 @@ function populateCurrencyOptions(selectElement, currencyOptions) {
     });
 }
 
-function setupEventListeners(amountInput, fromCurrencySelect, convertedAmountElement, convertButton) {
-    amountInput.addEventListener('input', () => convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement));
-    fromCurrencySelect.addEventListener('change', () => convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement));
-    convertButton.addEventListener('click', () => convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement));
-    
-    // Also update when the page loads
-    convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement);
-}
 
-async function convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement) {
-    const amount = parseFloat(amountInput.value) || 1; // Default to 1 if invalid
+async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
     const fromCurrency = fromCurrencySelect.value;
-    const toCurrency = 'INR';
     
     // Use static rates as primary method to avoid CSP issues
     // Updated with approximate rates as of 2025
@@ -223,43 +232,12 @@ async function convertCurrency(amountInput, fromCurrencySelect, convertedAmountE
     
     const rate = staticRates[fromCurrency];
     if (rate) {
-        // For the 1:1 conversion display (top part)
-        if (amount === 1) {
-            convertedAmountElement.textContent = rate.toFixed(2);
-        } else {
-            // For the amount conversion (bottom part)
-            const convertedAmount = (amount * rate).toFixed(2);
-            convertedAmountElement.textContent = `${convertedAmount} INR (est.)`;
-        }
+        // Show the 1:1 conversion rate
+        convertedAmountElement.textContent = rate.toFixed(2);
         return;
     } else {
-        convertedAmountElement.textContent = 'Currency not supported';
+        convertedAmountElement.textContent = '--';
     }
-    
-    // Only try external APIs if static rates don't work
-    // This is commented out to avoid CSP issues
-    /*
-    try {
-        const response = await fetch(`https://api.exchangerate.host/latest?base=${fromCurrency}&symbols=${toCurrency}`);
-        
-        if (!response.ok) {
-            throw new Error(`Currency API error: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        const rate = data.rates[toCurrency];
-        
-        if (rate) {
-            const convertedAmount = (amount * rate).toFixed(2);
-            convertedAmountElement.textContent = `${convertedAmount} INR`;
-        } else {
-            convertedAmountElement.textContent = 'Conversion rate not available';
-        }
-    } catch (error) {
-        console.error('Error converting currency:', error);
-        convertedAmountElement.textContent = 'Error fetching rates';
-    }
-    */
 }
 
 function initWidgets() {
