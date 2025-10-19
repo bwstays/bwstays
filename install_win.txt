@@ -1,31 +1,33 @@
 
-Step 1: Download and Install Apache
-	Download Apache for Windows:
-	Go to https://www.apachelounge.com/download/
+Step 1: Software setup
 
-	Download the latest Apache version (e.g., httpd-2.4.x-win64-VS17.zip)
-	Extract Apache:
-	Extract the zip file to C:\Apache24
-	Your Apache installation should be at C:\Apache24
+	a) Download and Install Apache
+		Download Apache for Windows:
+		Go to https://www.apachelounge.com/download/
 
-	Install Visual C++ Redistributable:
-	Download and install the VC++ redistributable from Microsoft (required for Apache to run)
-	Usually linked on the Apache Lounge download page
+		Download the latest Apache version (e.g., httpd-2.4.x-win64-VS17.zip)
+		Extract Apache:
+		Extract the zip file to C:\Apache24
+		Your Apache installation should be at C:\Apache24
+
+		Install Visual C++ Redistributable:
+		Download and install the VC++ redistributable from Microsoft (required for Apache to run)
+		Usually linked on the Apache Lounge download page
 	
 	
 
-	Install git client in windows 
+	b) Install git client in windows 
 		
-	Go to the official Git website: 
-	Visit git-scm.com
-	The download should start automatically. If not, click on the appropriate version (64-bit or 32-bit) for your system.
-	Installation Steps
-	Run the installer: Double-click the downloaded .exe file
-	
-	Open Command Prompt or PowerShell and run:
-	git --version
-	git config --global user.name "Your Name"
-	git config --global user.email "your.email@example.com"
+		Go to the official Git website: 
+		Visit git-scm.com
+		The download should start automatically. If not, click on the appropriate version (64-bit or 32-bit) for your system.
+		Installation Steps
+		Run the installer: Double-click the downloaded .exe file
+
+		Open Command Prompt or PowerShell and run:
+		git --version
+		git config --global user.name "Your Name"
+		git config --global user.email "your.email@example.com"
 
 Step 2: Configure Apache
 	Edit Apache Configuration:
@@ -59,7 +61,6 @@ Step 4: Download Your GitHub Pages Website
 	cmd
 	   cd C:\Apache24\htdocs
 	   git clone https://github.com/bwstays/bwstays.git bwstays
-	```
 
 	   Or manually download the ZIP and extract to `C:\Apache24\htdocs\bwstays`
 
@@ -116,7 +117,7 @@ Troubleshooting Commands
 	  httpd.exe -k stop
 	Check if Apache is running:
 	Open Task Manager and look for httpd.exe processes
-	Or visit http://localhost in your browser
+	Or visit http://bwstays.com in your browser
 	View error logs:
 	Check C:\Apache24\logs\error.log
 
@@ -128,3 +129,108 @@ Common Issues
 	Your static website should now be accessible at your custom domain on your local machine!
 
 
+setup https self signed certifcate
+
+
+Step 1: Ensure OpenSSL is Available
+
+	Navigate to your Apache installation directory (usually C:\Apache24
+	Look for bin\openssl.exe
+
+
+Step 2: Create Directory for Certificates
+	Create a folder to store your certificates:
+	cmdmkdir C:\Apache24\conf\ssl
+	cd C:\Apache24\conf\ssl
+
+Step 3: Generate Private Key and Certificate
+	Open Command Prompt as Administrator and navigate to your Apache bin directory:
+	cmdcd C:\Apache24\bin
+	
+	
+	Generate the private key and certificate (valid for 365 days):
+	cmdopenssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ..\conf\ssl\server.key -out ..\conf\ssl\server.crt
+	You'll be prompted to enter information:
+	
+	Country Name: IN
+	State/Province: KA
+	Locality: Bangalore
+	Organization Name: bwstays 
+	Organizational Unit: IT
+	Common Name: www.bwstays.com
+	Email Address: bwstays@bwstays.com
+
+Step 4: Enable SSL Module in Apache
+	Edit C:\Apache24\conf\httpd.conf:
+
+	Uncomment (remove the #) from these lines:
+
+	apacheLoadModule ssl_module modules/mod_ssl.so
+	LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
+	Include conf/extra/httpd-ssl.conf
+	
+Step 5: Configure SSL Virtual Host
+	Edit C:\Apache24\conf\extra\httpd-ssl.conf:
+	Find and update these sections:
+	Listen 443
+	
+	<VirtualHost _default_:443>
+	    DocumentRoot "C:/Apache24/htdocs/bwstays"
+	    ServerName bwstays:443
+	    ServerAdmin admin@localhost
+	    ErrorLog "logs/ssl_error.log"
+	    TransferLog "logs/ssl_access.log"
+	
+	    SSLEngine on
+	    SSLCertificateFile "C:/Apache24/conf/ssl/server.crt"
+	    SSLCertificateKeyFile "C:/Apache24/conf/ssl/server.key"
+	
+	    <FilesMatch "\.(cgi|shtml|phtml|php)$">
+	        SSLOptions +StdEnvVars
+	    </FilesMatch>
+	    
+	    <Directory "C:/Apache24/htdocs">
+	        Options Indexes FollowSymLinks
+	        AllowOverride All
+	        Require all granted
+	    </Directory>
+	
+	    BrowserMatch "MSIE [2-5]" \
+	         nokeepalive ssl-unclean-shutdown \
+	         downgrade-1.0 force-response-1.0
+	
+	    CustomLog "logs/ssl_request.log" \
+	          "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+	</VirtualHost>
+	
+Step 6 Restart Apache:
+
+	Open Services (press Win + R, type services.msc)
+	Find "Apache2.4" service
+	Right-click and select "Restart"
+
+	Or use Command Prompt as Administrator:
+
+	cmdnet stop Apache2.4
+	net start Apache2.4
+	```
+
+	## Step 7: Access Your Site
+
+	Open your browser and go to:
+	```
+	https://www.bwstays.com
+
+Step 7   To avoid the warning on your local machine:
+
+
+	You'll see a security warning because it's a self-signed certificate. This is normal. Click "Advanced" and proceed to the site.
+	Optional: Trust the Certificate (Remove Browser Warning)
+
+	Press Win + R, type certmgr.msc, press Enter
+	Navigate to: Trusted Root Certification Authorities ? Certificates
+	Right-click Certificates ? All Tasks ? Import
+	Browse to C:\Apache24\conf\ssl\server.crt
+	Complete the wizard
+
+	Your self-signed SSL certificate is now set up! Remember, this is only for development/testing purposes. For production, use a proper certificate from a trusted Certificate Authority like Let's Encrypt.RetryClaude does not have the ability to run the code it generates yet. 
