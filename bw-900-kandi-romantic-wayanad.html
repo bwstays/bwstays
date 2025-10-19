@@ -498,7 +498,7 @@ ul.list-unstyled.mb-0.text-white-50 {
       <!-- Widgets Container -->
       <div class="widgets-container">
         <div class="weather-widget">
-          <div class="top-section">
+          <div class="weather-content">
             <div class="weather-icon-section">
               <svg class="weather-icon" viewBox="0 0 200 200">
                 <!-- Sun rays -->
@@ -517,40 +517,27 @@ ul.list-unstyled.mb-0.text-white-50 {
               </svg>
             </div>
 
-            <div class="date-section">
-              <div class="month">January</div>
-              <div class="day">12</div>
-            </div>
-          </div>
-
-          <div class="weather-info-section">
-            <div class="temperature">25<span class="temp-unit">°</span>
-            <div class="weather-details">
-              <p class="condition">Partly Cloudy</p>
-              <p class="location-wth">Kalpetta, Wayanad</p>
-            </div>
+            <div class="weather-info">
+              <div class="temperature">25<span class="temp-unit">°</span></div>
+              <div class="weather-details">
+                <p class="condition">Partly Cloudy</p>
+                <p class="location-wth">Kalpetta, Wayanad</p>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="currency-converter-widget">
-          <div class="top-section">
-            <div class="currency-icon-section">
-              <svg class="currency-icon" viewBox="0 0 200 200">
-                <!-- Currency symbol -->
-                <circle cx="100" cy="100" r="70" fill="white" stroke="#64a19d" stroke-width="5"/>
-                <text x="100" y="125" text-anchor="middle" font-size="80" font-weight="bold" fill="#64a19d">$</text>
-              </svg>
-            </div>
-            <div class="date-section">
-              <div class="month">Currency</div>
-              <div class="day">Converter</div>
-            </div>
-          </div>
-          <div class="currency-info-section">
-            <div class="currency-rate">1 <span id="fromCurrencyCode">USD</span> = <span id="result">--</span> INR
-              <div class="currency-details">
-                <p class="condition">Select Currency</p>
+          <div class="currency-top-section">
+            <div class="currency-header">
+              <div class="currency-icon-section">
+                <svg class="currency-icon" viewBox="0 0 200 200">
+                  <circle cx="100" cy="100" r="70" fill="white" stroke="#64a19d" stroke-width="5"/>
+                  <text x="100" y="125" text-anchor="middle" font-size="80" font-weight="bold" fill="#64a19d">$</text>
+                </svg>
+              </div>
+              <div class="currency-selection">
+                <label class="currency-label">Select Currency</label>
                 <select id="fromCurrency" class="currency-select">
                   <option value="USD">USD - US Dollar</option>
                   <option value="EUR">EUR - Euro</option>
@@ -564,6 +551,11 @@ ul.list-unstyled.mb-0.text-white-50 {
                   <option value="AED">AED - UAE Dirham</option>
                 </select>
               </div>
+            </div>
+          </div>
+          <div class="currency-bottom-section">
+            <div class="conversion-result">
+              <div class="conversion-text">1 <span id="fromCurrencyCode">USD</span> = <span id="result">--</span> INR</div>
             </div>
           </div>
         </div>
