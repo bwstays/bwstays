@@ -6423,19 +6423,21 @@ footer.footer .stay-card {
 }
 
 .currency-info-section {
-  background: rgba(255, 255, 255, 0.05);
+  background: #2c2c2e;
   padding: 20px;
   color: white;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 12px 12px;
+  position: relative;
 }
 
 .top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #64a19d 0%, #4a7a77 100%);
-  padding: 15px;
-  border-radius: 20px 20px 0 0;
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  padding: 16px 20px;
+  border-radius: 12px 12px 0 0;
+  position: relative;
 }
 
 .currency-symbol {
@@ -6449,20 +6451,21 @@ footer.footer .stay-card {
 .date-section {
   text-align: right;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .month {
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin-bottom: 2px;
   font-weight: 600;
 }
 
 .day {
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 1;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .currency-rate {
@@ -6552,26 +6555,26 @@ select#fromCurrency {
   }
 }
 
-/* Weather Widget and Currency Converter Widget - Unified Styles */
+/* Weather Widget and Currency Converter Widget - Solid Style */
 .weather-widget,
 .currency-converter-widget {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
+  background: #2c2c2e;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   flex: 1;
-  min-width: 200px;
-  max-width: 200px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 180px;
+  max-width: 180px;
+  border: none;
+  transition: transform 0.2s ease;
   margin: 0;
+  position: relative;
 }
 
 .weather-widget:hover,
 .currency-converter-widget:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Widget Headers */
@@ -6586,29 +6589,38 @@ select#fromCurrency {
   font-size: 0.9rem;
 }
 
-/* Widget Content */
+/* Widget Content - Solid Style */
 .weather-info-section,
 .converter-body {
-  padding: 12px;
+  padding: 20px;
   color: white;
+  position: relative;
+  background: #2c2c2e;
 }
 
-/* Weather Widget Specific Styles */
+/* Weather Widget Specific Styles - Solid */
 .weather-icon-section {
   text-align: center;
-  padding: 10px 0;
+  padding: 12px 0;
+  position: relative;
+  z-index: 2;
 }
 
 .weather-icon {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+
+.weather-widget:hover .weather-icon {
+  transform: scale(1.05);
 }
 
 .cloud-icon {
   fill: none;
   stroke: white;
-  stroke-width: 8;
+  stroke-width: 6;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -6633,29 +6645,35 @@ select#fromCurrency {
 }
 
 .temperature {
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 600;
   line-height: 1;
   text-align: center;
   margin: 15px 0;
+  letter-spacing: -0.02em;
 }
 
 .temp-unit {
-  font-size: 24px;
+  font-size: 18px;
   vertical-align: top;
+  font-weight: 500;
 }
 
 .condition {
-  font-size: 16px;
-  margin: 10px 0;
-  color: #ecf0f1;
+  font-size: 13px;
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .location-wth {
-  font-size: 14px;
+  font-size: 12px;
   margin: 0;
-  color: #95a5a6;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  letter-spacing: 0.01em;
   text-align: center;
 }
 
@@ -6875,63 +6893,71 @@ select#fromCurrency {
 .currency-name {
   font-size: 11px;
 }
+}
 
-/* Currency Select Styling */
+/* Currency Select Styling - Solid Style */
 .currency-select {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #3a3a3c;
+  border: 1px solid #48484a;
   border-radius: 8px;
   color: white;
-  padding: 8px 12px;
+  padding: 10px 14px;
   font-size: 14px;
+  font-weight: 500;
   width: 100%;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
 }
 
 .currency-select:focus {
   outline: none;
-  border-color: #64a19d;
-  box-shadow: 0 0 0 2px rgba(100, 161, 157, 0.2);
+  border-color: #4A90E2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+}
+
+.currency-select:hover {
+  border-color: #5a5a5c;
 }
 
 .currency-select option {
-  background: rgba(0, 0, 0, 0.8);
+  background: #2c2c2e;
   color: white;
+  padding: 8px 12px;
+  font-weight: 500;
 }
 
 .currency-rate {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   text-align: center;
+  letter-spacing: -0.01em;
 }
 
 .currency-details {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .currency-details .condition {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
   text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
-/* Enhanced Mac Widget Styling */
+/* Enhanced Widget Styling - Solid */
 .currency-converter-widget {
   position: relative;
   overflow: hidden;
-}
-
-.currency-converter-widget::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
 .currency-icon-section {
@@ -6940,8 +6966,7 @@ select#fromCurrency {
 }
 
 .currency-icon {
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .currency-converter-widget:hover .currency-icon {
