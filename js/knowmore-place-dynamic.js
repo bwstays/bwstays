@@ -13,6 +13,7 @@ window.addEventListener('load', function () {
   }
   const isStaticLeftColumnPage = document.body.classList.contains('knowmore-page');
   if (isStaticLeftColumnPage) {
+    updateLeftColumnContentForKnowMore();
     updateRightColumnOnly();
     return;
   }
@@ -301,6 +302,110 @@ function updateRightColumnOnly() {
     }
   }
 }
+
+function updateLeftColumnContentForKnowMore() {
+  var currentPageId = getCurrentPageId();
+  var currentcatId = getCurrentCatagoryId();
+  
+  const leftColumnContainer = document.querySelector('#left-content-column .det-marg-f');
+  if (!leftColumnContainer) {
+    return;
+  }
+  
+  // Clear existing content
+  leftColumnContainer.innerHTML = '';
+  
+  // Get current item data
+  const currentItem = Object.values(siteData)[currentcatId].filter(item => item.id === eval(currentPageId));
+  if (!currentItem || currentItem.length === 0) {
+    return;
+  }
+  
+  const currentItemData = currentItem[0];
+  const images = currentItemData.image;
+  const imageArray = Array.isArray(images) ? images : [images];
+  
+  // Create image container
+  const imgContainer = document.createElement('div');
+  imgContainer.style.marginBottom = '2rem';
+  imgContainer.style.position = 'relative';
+  imgContainer.style.overflow = 'hidden';
+  imgContainer.style.width = '100%';
+  imgContainer.style.height = '400px';
+  
+  const imgWrapper = document.createElement('div');
+  imgWrapper.style.position = 'relative';
+  imgWrapper.style.width = '100%';
+  imgWrapper.style.height = '100%';
+  imgWrapper.style.transition = 'transform 0.5s ease';
+  
+  // Create images
+  let currentImageIndex = 0;
+  imageArray.forEach((src, index) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = currentItemData.name;
+    img.className = 'img-fluid';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+    img.style.borderRadius = '10px';
+    img.style.position = 'absolute';
+    img.style.top = '0';
+    img.style.left = `${index * 100}%`;
+    img.style.transition = 'transform 0.5s ease';
+    img.style.minWidth = '100%';
+    imgWrapper.appendChild(img);
+  });
+  
+  // Set initial transform to show the first image
+  imgWrapper.style.transform = 'translateX(0%)';
+  
+  // Get existing arrows
+  const leftArrow = document.querySelector('.image-nav-arrow.image-nav-left');
+  const rightArrow = document.querySelector('.image-nav-arrow.image-nav-right');
+  
+  // Show/hide arrows based on image count
+  if (imageArray.length > 1) {
+    if (leftArrow) leftArrow.style.display = 'flex';
+    if (rightArrow) rightArrow.style.display = 'flex';
+  } else {
+    if (leftArrow) leftArrow.style.display = 'none';
+    if (rightArrow) rightArrow.style.display = 'none';
+  }
+  
+  // Image navigation function
+  function updateImage(direction) {
+    if (imageArray.length <= 1) return;
+    const newIndex = direction === 'next'
+      ? (currentImageIndex + 1) % imageArray.length
+      : (currentImageIndex - 1 + imageArray.length) % imageArray.length;
+    imgWrapper.style.transform = `translateX(-${newIndex * 100}%)`;
+    currentImageIndex = newIndex;
+  }
+  
+  // Add event listeners to arrows if they exist
+  if (leftArrow) {
+    // Remove any existing event listeners to avoid duplicates
+    const newLeftArrow = leftArrow.cloneNode(true);
+    leftArrow.parentNode.replaceChild(newLeftArrow, leftArrow);
+    newLeftArrow.addEventListener('click', () => updateImage('prev'));
+  }
+  
+  if (rightArrow) {
+    // Remove any existing event listeners to avoid duplicates
+    const newRightArrow = rightArrow.cloneNode(true);
+    rightArrow.parentNode.replaceChild(newRightArrow, rightArrow);
+    newRightArrow.addEventListener('click', () => updateImage('next'));
+  }
+  
+  // Append image wrapper to container
+  imgContainer.appendChild(imgWrapper);
+  
+  // Add the carousel to the left column
+  leftColumnContainer.appendChild(imgContainer);
+}
+
 function initializeSection(sectionType, data, sectionIndex) {
   let sectionContainer;
   let sectionTitle;
