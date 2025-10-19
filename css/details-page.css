@@ -6527,14 +6527,94 @@ footer.footer .stay-card {
 }
 
 /* Currency Converter Widget Styles */
-.converter-header {
-  background: linear-gradient(135deg, #64a19d 0%, #4a7a77 100%);
-  color: white;
+.currency-converter-widget {
+  width: 143px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.currency-icon-section {
+  flex: 1;
+  text-align: left;
+}
+
+.currency-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.currency-info-section {
+  background-color: #000000;
   padding: 15px;
-  text-align: center;
+  color: white;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #64a19d 0%, #64a19d 100%);
+  padding: 3px;
+}
+
+.currency-symbol {
+  fill: none;
+  stroke: white;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.date-section {
+  text-align: right;
+  color: white;
+}
+
+.month {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
   font-weight: 600;
-  margin: 0;
-  font-size: 1.2rem;
+}
+
+.day {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.currency-rate {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 5px 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.currency-unit {
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.condition {
+  font-size: 12px;
+  margin: 0 0 3px 0;
+  color: #ecf0f1;
+}
+
+select#fromCurrency {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #64a19d;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  color: #64a19d;
+  font-weight: bold;
 }
 
 .converter-input input {
@@ -6542,58 +6622,11 @@ footer.footer .stay-card {
   padding: 8px;
   border-radius: 6px;
   border: 1px solid #64a19d;
-  margin-bottom: 10px;
+  margin: 10px 0;
   background: rgba(255, 255, 255, 0.9);
   font-size: 14px;
   box-sizing: border-box;
-}
-
-.converter-select {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.converter-select select {
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #64a19d;
-  background: rgba(255, 255, 255, 0.9);
-  width: 45%;
-  font-size: 12px;
-  box-sizing: border-box;
-}
-
-.to-fixed {
-  margin: 0 10px;
-  font-weight: bold;
-  color: #64a19d;
-  font-size: 18px;
-}
-
-.fixed-currency {
-  font-weight: bold;
-  color: #64a19d;
-  font-size: 1em;
-  padding: 8px;
-  background: rgba(100, 161, 157, 0.1);
-  border-radius: 6px;
-  border: 1px solid rgba(100, 161, 157, 0.3);
-  min-width: 60px;
   text-align: center;
-}
-
-.converter-result {
-  text-align: center;
-  margin: 15px 0;
-  font-weight: bold;
-  font-size: 14px;
-  color: #64a19d;
-  padding: 10px;
-  background: rgba(100, 161, 157, 0.1);
-  border-radius: 6px;
-  border: 1px solid rgba(100, 161, 157, 0.3);
 }
 
 #convertBtn {
@@ -6608,6 +6641,7 @@ footer.footer .stay-card {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.5px;
+  margin-top: 10px;
 }
 
 #convertBtn:hover {
@@ -6646,8 +6680,8 @@ footer.footer .stay-card {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   flex: 1;
-  min-width: 160px;
-  max-width: 180px;
+  min-width: 143px;
+  max-width: 143px;
   border: 1px solid rgba(100, 161, 157, 0.5);
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -6764,25 +6798,9 @@ footer.footer .stay-card {
   .weather-widget, 
   .currency-converter-widget {
     width: 45%;
-    max-width: 160px;
+    max-width: 143px;
     margin-bottom: 0;
-    min-width: 140px;
-  }
-  
-  .converter-select {
-    flex-direction: column;
-    gap: 10px;
-    align-items: stretch;
-  }
-  
-  .converter-select select,
-  .fixed-currency {
-    width: 100%;
-  }
-  
-  .to-fixed {
-    text-align: center;
-    margin: 5px 0;
+    min-width: 143px;
   }
 }
 
@@ -6798,8 +6816,8 @@ footer.footer .stay-card {
   .weather-widget, 
   .currency-converter-widget {
     width: 80%;
-    max-width: 200px;
-    min-width: 160px;
+    max-width: 143px;
+    min-width: 143px;
   }
 }
 

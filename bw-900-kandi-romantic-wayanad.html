@@ -534,28 +534,41 @@ ul.list-unstyled.mb-0.text-white-50 {
         </div>
 
         <div class="currency-converter-widget">
-          <div class="converter-header">
-            <h4>Currency Converter</h4>
+          <div class="top-section">
+            <div class="currency-icon-section">
+              <svg class="currency-icon" viewBox="0 0 200 200">
+                <!-- Currency symbol -->
+                <circle cx="100" cy="100" r="70" fill="white" stroke="#64a19d" stroke-width="5"/>
+                <text x="100" y="125" text-anchor="middle" font-size="80" font-weight="bold" fill="#64a19d">₹</text>
+              </svg>
+            </div>
+            <div class="date-section">
+              <div class="month">INR</div>
+              <div class="day">Rate</div>
+            </div>
           </div>
-          <div class="converter-body">
-            <div class="converter-input">
-              <input type="number" id="amount" placeholder="Enter amount" value="1000">
+          <div class="currency-info-section">
+            <div class="currency-rate">1 <span id="fromCurrencyCode">USD</span> = <span id="result">--</span> INR
+              <div class="currency-details">
+                <p class="condition">Currency Converter</p>
+                <select id="fromCurrency">
+                  <option value="USD">USD - US Dollar</option>
+                  <option value="EUR">EUR - Euro</option>
+                  <option value="GBP">GBP - British Pound</option>
+                  <option value="JPY">JPY - Japanese Yen</option>
+                  <option value="CHF">CHF - Swiss Franc</option>
+                  <option value="CAD">CAD - Canadian Dollar</option>
+                  <option value="AUD">AUD - Australian Dollar</option>
+                  <option value="SGD">SGD - Singapore Dollar</option>
+                  <option value="CNY">CNY - Chinese Yuan</option>
+                  <option value="AED">AED - UAE Dirham</option>
+                </select>
+                <div class="converter-input">
+                  <input type="number" id="amount" placeholder="Enter amount" value="1">
+                </div>
+                <button id="convertBtn" class="btn btn-primary">Convert</button>
+              </div>
             </div>
-            <div class="converter-select">
-              <select id="fromCurrency">
-                <option value="USD">USD - US Dollar</option>
-                <option value="EUR">EUR - Euro</option>
-                <option value="GBP">GBP - British Pound</option>
-                <option value="JPY">JPY - Japanese Yen</option>
-                <option value="CHF">CHF - Swiss Franc</option>
-              </select>
-              <div class="to-fixed">to</div>
-              <div class="fixed-currency">INR</div>
-            </div>
-            <div class="converter-result">
-              <div id="convertedAmount">Converted Amount: <span id="result">--</span></div>
-            </div>
-            <button id="convertBtn" class="btn btn-primary">Convert</button>
           </div>
         </div>
       </div>

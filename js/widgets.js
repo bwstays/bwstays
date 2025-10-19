@@ -136,27 +136,49 @@ function initCurrencyConverter() {
     const fromCurrencySelect = document.getElementById('fromCurrency');
     const convertedAmountElement = document.getElementById('result');
     const convertButton = document.getElementById('convertBtn');
+    const fromCurrencyCodeElement = document.getElementById('fromCurrencyCode');
 
     if (!amountInput || !fromCurrencySelect || !convertedAmountElement || !convertButton) {
         return;
     }
     
+    // Update the currency code display when selection changes
+    function updateCurrencyCodeDisplay() {
+        if (fromCurrencyCodeElement) {
+            fromCurrencyCodeElement.textContent = fromCurrencySelect.value;
+        }
+        // Also update the conversion immediately when currency changes
+        convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement);
+    }
+    
+    // Add event listener for currency selection changes
+    fromCurrencySelect.addEventListener('change', updateCurrencyCodeDisplay);
+    
+    // Also need to populate the select options directly since we're not using populateCurrencyOptions anymore
     const currencyOptions = [
-        { code: 'USD', name: 'US Dollar' },
-        { code: 'EUR', name: 'Euro' },
-        { code: 'GBP', name: 'British Pound' },
-        { code: 'JPY', name: 'Japanese Yen' },
-        { code: 'CHF', name: 'Swiss Franc' },
-        { code: 'CAD', name: 'Canadian Dollar' },
-        { code: 'AUD', name: 'Australian Dollar' },
-        { code: 'SGD', name: 'Singapore Dollar' },
-        { code: 'CNY', name: 'Chinese Yuan' },
-        { code: 'AED', name: 'UAE Dirham' }
+        { code: 'USD', name: 'USD - US Dollar' },
+        { code: 'EUR', name: 'EUR - Euro' },
+        { code: 'GBP', name: 'GBP - British Pound' },
+        { code: 'JPY', name: 'JPY - Japanese Yen' },
+        { code: 'CHF', name: 'CHF - Swiss Franc' },
+        { code: 'CAD', name: 'CAD - Canadian Dollar' },
+        { code: 'AUD', name: 'AUD - Australian Dollar' },
+        { code: 'SGD', name: 'SGD - Singapore Dollar' },
+        { code: 'CNY', name: 'CNY - Chinese Yuan' },
+        { code: 'AED', name: 'AED - UAE Dirham' }
     ];
     
-    populateCurrencyOptions(fromCurrencySelect, currencyOptions);
+    // Clear and repopulate the select
+    fromCurrencySelect.innerHTML = '';
+    currencyOptions.forEach(currency => {
+        const option = document.createElement('option');
+        option.value = currency.code;
+        option.textContent = currency.name;
+        fromCurrencySelect.appendChild(option);
+    });
+    
     setupEventListeners(amountInput, fromCurrencySelect, convertedAmountElement, convertButton);
-    convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement);
+    updateCurrencyCodeDisplay(); // Initialize the display
 }
 
 function populateCurrencyOptions(selectElement, currencyOptions) {
@@ -165,7 +187,7 @@ function populateCurrencyOptions(selectElement, currencyOptions) {
     currencyOptions.forEach(currency => {
         const option = document.createElement('option');
         option.value = currency.code;
-        option.textContent = `${currency.code} - ${currency.name}`;
+        option.textContent = currency.name;
         selectElement.appendChild(option);
     });
 }
@@ -174,20 +196,51 @@ function setupEventListeners(amountInput, fromCurrencySelect, convertedAmountEle
     amountInput.addEventListener('input', () => convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement));
     fromCurrencySelect.addEventListener('change', () => convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement));
     convertButton.addEventListener('click', () => convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement));
+    
+    // Also update when the page loads
+    convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement);
 }
 
 async function convertCurrency(amountInput, fromCurrencySelect, convertedAmountElement) {
-    const amount = parseFloat(amountInput.value) || 0;
+    const amount = parseFloat(amountInput.value) || 1; // Default to 1 if invalid
     const fromCurrency = fromCurrencySelect.value;
     const toCurrency = 'INR';
     
-    if (amount <= 0) {
-        convertedAmountElement.textContent = '--';
+    // Use static rates as primary method to avoid CSP issues
+    // Updated with approximate rates as of 2025
+    const staticRates = {
+        'USD': 83.0,   // US Dollar to INR
+        'EUR': 89.0,   // Euro to INR
+        'GBP': 105.0,  // British Pound to INR
+        'JPY': 0.55,   // Japanese Yen to INR
+        'CHF': 92.0,   // Swiss Franc to INR
+        'CAD': 61.0,   // Canadian Dollar to INR
+        'AUD': 55.0,   // Australian Dollar to INR
+        'SGD': 62.0,   // Singapore Dollar to INR
+        'CNY': 11.5,   // Chinese Yuan to INR
+        'AED': 22.5    // UAE Dirham to INR
+    };
+    
+    const rate = staticRates[fromCurrency];
+    if (rate) {
+        // For the 1:1 conversion display (top part)
+        if (amount === 1) {
+            convertedAmountElement.textContent = rate.toFixed(2);
+        } else {
+            // For the amount conversion (bottom part)
+            const convertedAmount = (amount * rate).toFixed(2);
+            convertedAmountElement.textContent = `${convertedAmount} INR (est.)`;
+        }
         return;
+    } else {
+        convertedAmountElement.textContent = 'Currency not supported';
     }
     
+    // Only try external APIs if static rates don't work
+    // This is commented out to avoid CSP issues
+    /*
     try {
-        const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`);
+        const response = await fetch(`https://api.exchangerate.host/latest?base=${fromCurrency}&symbols=${toCurrency}`);
         
         if (!response.ok) {
             throw new Error(`Currency API error: ${response.status}`);
@@ -206,6 +259,7 @@ async function convertCurrency(amountInput, fromCurrencySelect, convertedAmountE
         console.error('Error converting currency:', error);
         convertedAmountElement.textContent = 'Error fetching rates';
     }
+    */
 }
 
 function initWidgets() {
