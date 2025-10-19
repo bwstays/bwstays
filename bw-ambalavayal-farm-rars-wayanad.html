@@ -257,6 +257,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
     <main class="about-section" id="about">
+      <!-- Widgets Container -->
+      <div class="widgets-container">
+        <div class="weather-widget">
+          <div class="weather-content">
+            <div class="weather-icon-section">
+              <svg class="weather-icon" viewBox="0 0 200 200">
+                <!-- Sun rays -->
+                <line class="cloud-icon" x1="100" y1="30" x2="100" y2="45" stroke-width="6"/>
+                <line class="cloud-icon" x1="145" y1="55" x2="135" y2="65" stroke-width="6"/>
+                <line class="cloud-icon" x1="170" y1="100" x2="155" y2="100" stroke-width="6"/>
+                <line class="cloud-icon" x1="145" y1="145" x2="135" y2="135" stroke-width="6"/>
+                <line class="cloud-icon" x1="55" y1="55" x2="65" y2="65" stroke-width="6"/>
+                <line class="cloud-icon" x1="30" y1="100" x2="45" y2="100" stroke-width="6"/>
+
+                <!-- Sun circle -->
+                <circle class="cloud-icon" cx="100" cy="85" r="20" fill="white" stroke="white" stroke-width="3"/>
+
+                <!-- Cloud -->
+                <path d="M 60 120 Q 60 105 72 102 Q 75 95 85 95 Q 92 88 105 92 Q 118 92 122 102 Q 132 102 136 112 Q 136 122 126 122 L 70 122 Q 60 122 60 120 Z" fill="white" stroke="none"/>
+              </svg>
+            </div>
+
+            <div class="weather-info">
+              <div class="temperature">25<span class="temp-unit">°</span></div>
+              <div class="weather-details">
+                <p class="condition">Partly Cloudy</p>
+                <p class="location-wth">Kalpetta, Wayanad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="currency-converter-widget">
+          <div class="currency-top-section">
+            <div class="currency-header">
+              <div class="currency-icon-section">
+                <svg class="currency-icon" viewBox="0 0 200 200">
+                  <circle cx="100" cy="100" r="70" fill="white" stroke="#64a19d" stroke-width="5"/>
+                  <text x="100" y="125" text-anchor="middle" font-size="80" font-weight="bold" fill="#64a19d">$</text>
+                </svg>
+              </div>
+              <div class="currency-selection">
+                <label class="currency-label">Select Currency</label>
+                <select id="fromCurrency" class="currency-select">
+                  <option value="USD">USD - US Dollar</option>
+                  <option value="EUR">EUR - Euro</option>
+                  <option value="GBP">GBP - British Pound</option>
+                  <option value="JPY">JPY - Japanese Yen</option>
+                  <option value="CHF">CHF - Swiss Franc</option>
+                  <option value="CAD">CAD - Canadian Dollar</option>
+                  <option value="AUD">AUD - Australian Dollar</option>
+                  <option value="SGD">SGD - Singapore Dollar</option>
+                  <option value="CNY">CNY - Chinese Yuan</option>
+                  <option value="AED">AED - UAE Dirham</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="currency-bottom-section">
+            <div class="conversion-result">
+              <div class="conversion-text">1 <span id="fromCurrencyCode">USD</span> = <span id="result">--</span> INR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="container-fluid div.container-fluid">
   		   <div class="text-center mb-4 div.text-center.mb-4">
                <h4 class="text-white mx-auto mt-2">Discover your Leisure</h4>
@@ -340,7 +407,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
                 <div id="right-content-column" class="col-lg-6">
-                    <div id="shopping-places-header" class="border-bottom border-primary text-center mb-4">
+                    <div id="header-container" class="border-bottom border-primary text-center mb-4">
                         <h5 class="text-white">Farm Places</h5>
                     </div>
 
