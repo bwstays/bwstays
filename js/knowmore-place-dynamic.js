@@ -316,7 +316,14 @@ function updateLeftColumnContentForKnowMore() {
   leftColumnContainer.innerHTML = '';
   
   // Get current item data
-  const currentItem = Object.values(siteData)[currentcatId].filter(item => item.id === eval(currentPageId));
+  const siteDataArray = Object.values(siteData);
+  if (currentcatId >= siteDataArray.length) {
+    return;
+  }
+  
+  const categoryData = siteDataArray[currentcatId];
+  const currentItem = categoryData.filter(item => item.id === currentPageId);
+  
   if (!currentItem || currentItem.length === 0) {
     return;
   }
@@ -361,18 +368,50 @@ function updateLeftColumnContentForKnowMore() {
   // Set initial transform to show the first image
   imgWrapper.style.transform = 'translateX(0%)';
   
-  // Get existing arrows
-  const leftArrow = document.querySelector('.image-nav-arrow.image-nav-left');
-  const rightArrow = document.querySelector('.image-nav-arrow.image-nav-right');
+  // Create navigation arrows
+  const leftArrow = document.createElement('div');
+  leftArrow.className = 'image-nav-arrow image-nav-left';
+  leftArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
+  leftArrow.style.position = 'absolute';
+  leftArrow.style.left = '15px';
+  leftArrow.style.top = '50%';
+  leftArrow.style.transform = 'translateY(-50%)';
+  leftArrow.style.zIndex = '2';
+  leftArrow.style.cursor = 'pointer';
+  leftArrow.style.color = 'white';
+  leftArrow.style.fontSize = '20px';
+  leftArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+  leftArrow.style.width = '40px';
+  leftArrow.style.height = '40px';
+  leftArrow.style.borderRadius = '40px';
+  leftArrow.style.display = 'none';
+  leftArrow.style.transition = 'all 0.3s ease';
+  leftArrow.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+  leftArrow.style.alignItems = 'center';
+  leftArrow.style.justifyContent = 'center';
+  leftArrow.style.padding = '0';
   
-  // Show/hide arrows based on image count
-  if (imageArray.length > 1) {
-    if (leftArrow) leftArrow.style.display = 'flex';
-    if (rightArrow) rightArrow.style.display = 'flex';
-  } else {
-    if (leftArrow) leftArrow.style.display = 'none';
-    if (rightArrow) rightArrow.style.display = 'none';
-  }
+  const rightArrow = document.createElement('div');
+  rightArrow.className = 'image-nav-arrow image-nav-right';
+  rightArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
+  rightArrow.style.position = 'absolute';
+  rightArrow.style.right = '15px';
+  rightArrow.style.top = '50%';
+  rightArrow.style.transform = 'translateY(-50%)';
+  rightArrow.style.zIndex = '2';
+  rightArrow.style.cursor = 'pointer';
+  rightArrow.style.color = 'white';
+  rightArrow.style.fontSize = '20px';
+  rightArrow.style.backgroundColor = 'rgba(0,0,0,0.6)';
+  rightArrow.style.width = '40px';
+  rightArrow.style.height = '40px';
+  rightArrow.style.borderRadius = '50%';
+  rightArrow.style.display = 'none';
+  rightArrow.style.transition = 'all 0.3s ease';
+  rightArrow.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+  rightArrow.style.alignItems = 'center';
+  rightArrow.style.justifyContent = 'center';
+  rightArrow.style.padding = '0';
   
   // Image navigation function
   function updateImage(direction) {
@@ -384,23 +423,20 @@ function updateLeftColumnContentForKnowMore() {
     currentImageIndex = newIndex;
   }
   
-  // Add event listeners to arrows if they exist
-  if (leftArrow) {
-    // Remove any existing event listeners to avoid duplicates
-    const newLeftArrow = leftArrow.cloneNode(true);
-    leftArrow.parentNode.replaceChild(newLeftArrow, leftArrow);
-    newLeftArrow.addEventListener('click', () => updateImage('prev'));
-  }
+  // Add event listeners to arrows
+  leftArrow.addEventListener('click', () => updateImage('prev'));
+  rightArrow.addEventListener('click', () => updateImage('next'));
   
-  if (rightArrow) {
-    // Remove any existing event listeners to avoid duplicates
-    const newRightArrow = rightArrow.cloneNode(true);
-    rightArrow.parentNode.replaceChild(newRightArrow, rightArrow);
-    newRightArrow.addEventListener('click', () => updateImage('next'));
-  }
-  
-  // Append image wrapper to container
+  // Append elements to container
   imgContainer.appendChild(imgWrapper);
+  imgContainer.appendChild(leftArrow);
+  imgContainer.appendChild(rightArrow);
+  
+  // Show arrows if there are multiple images
+  if (imageArray.length > 1) {
+    leftArrow.style.display = 'flex';
+    rightArrow.style.display = 'flex';
+  }
   
   // Add the carousel to the left column
   leftColumnContainer.appendChild(imgContainer);
