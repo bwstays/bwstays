@@ -1,0 +1,130 @@
+
+Step 1: Download and Install Apache
+	Download Apache for Windows:
+	Go to https://www.apachelounge.com/download/
+
+	Download the latest Apache version (e.g., httpd-2.4.x-win64-VS17.zip)
+	Extract Apache:
+	Extract the zip file to C:\Apache24
+	Your Apache installation should be at C:\Apache24
+
+	Install Visual C++ Redistributable:
+	Download and install the VC++ redistributable from Microsoft (required for Apache to run)
+	Usually linked on the Apache Lounge download page
+	
+	
+
+	Install git client in windows 
+		
+	Go to the official Git website: 
+	Visit git-scm.com
+	The download should start automatically. If not, click on the appropriate version (64-bit or 32-bit) for your system.
+	Installation Steps
+	Run the installer: Double-click the downloaded .exe file
+	
+	Open Command Prompt or PowerShell and run:
+	git --version
+	git config --global user.name "Your Name"
+	git config --global user.email "your.email@example.com"
+
+Step 2: Configure Apache
+	Edit Apache Configuration:
+	Open C:\Apache24\conf\httpd.conf in a text editor (as Administrator)
+	Verify/Update these settings:
+	apache
+	   Define SRVROOT "C:/Apache24"
+	   ServerRoot "${SRVROOT}"
+	   Listen 80
+	Set your document root (where your website files will be):
+	apache
+	   DocumentRoot "C:/Apache24/htdocs/bwstays"
+	   <Directory "C:/Apache24/htdocs/bwstays">
+	       Options Indexes FollowSymLinks
+	       AllowOverride All
+	       Require all granted
+	   </Directory>
+Step 3: Install Apache as a Windows Service
+	Open Command Prompt as Administrator
+	Navigate to Apache bin directory:
+	cmd
+	   cd C:\Apache24\bin
+	Install the service:
+	cmd
+	   httpd.exe -k install
+	Start Apache:
+	cmd
+	   httpd.exe -k start
+Step 4: Download Your GitHub Pages Website
+	Clone or download your GitHub repository:
+	cmd
+	   cd C:\Apache24\htdocs
+	   git clone https://github.com/bwstays/bwstays.git bwstays
+	```
+
+	   Or manually download the ZIP and extract to `C:\Apache24\htdocs\bwstays`
+
+Step 5: Configure Windows Hosts File
+
+	1. **Open Notepad as Administrator**
+
+	2. **Open the hosts file:**
+	   - Navigate to: `C:\Windows\System32\drivers\etc\hosts`
+
+	3. **Add your custom domain entry:**
+	```
+	   127.0.0.1    bwstays.local
+	   127.0.0.1    www.bwstays.com
+	Save the file
+Step 6: Configure Virtual Host (Optional but Recommended)
+	Enable Virtual Hosts in httpd.conf:
+	Open C:\Apache24\conf\httpd.conf
+	Uncomment this line:
+	apache
+	   Include conf/extra/httpd-vhosts.conf
+	Edit Virtual Hosts file:
+	Open C:\Apache24\conf\extra\httpd-vhosts.conf
+	Add your virtual host configuration:
+	apache
+   <VirtualHost *:80>
+       ServerName bwstays.com
+       ServerAlias www.bwstays.com
+       DocumentRoot "C:/Apache24/htdocs/bwstays"
+       <Directory "C:/Apache24/htdocs/bwstays">
+           Options Indexes FollowSymLinks
+           AllowOverride All
+           Require all granted
+       </Directory>
+       ErrorLog "logs/bwstays-error.log"
+       CustomLog "logs/bwstays-access.log" common
+   </VirtualHost>
+Step 7: Restart Apache
+	cmd
+	cd C:\Apache24\bin
+	httpd.exe -k restart
+Step 8: Test Your Website
+
+	Open your browser
+	Navigate to: http://bwstays.com
+	Your GitHub Pages website should now be served locally!
+
+Troubleshooting Commands
+	Test Apache configuration:
+	cmd
+	  httpd.exe -t
+	Stop Apache:
+	cmd
+	  httpd.exe -k stop
+	Check if Apache is running:
+	Open Task Manager and look for httpd.exe processes
+	Or visit http://localhost in your browser
+	View error logs:
+	Check C:\Apache24\logs\error.log
+
+
+Common Issues
+	Port 80 already in use: IIS or Skype might be using it. Stop those services or change Apache to use a different port (e.g., 8080)
+	Permission denied: Run Command Prompt as Administrator
+	Hosts file not saving: Ensure you opened Notepad as Administrator
+	Your static website should now be accessible at your custom domain on your local machine!
+
+
