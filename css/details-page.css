@@ -6769,8 +6769,8 @@ select#fromCurrency {
   .weather-widget, 
   .currency-converter-widget {
     width: 100%;
-    max-width: 143px;
-    min-width: 143px;
+    max-width: 103px;
+    min-width: 103px;
   }
   
   .currency-rate {
@@ -6957,7 +6957,7 @@ select#fromCurrency {
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  min-height: 180px;
+  min-height: 105px;
   display: flex;
   flex-direction: column;
 }
