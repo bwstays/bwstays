@@ -6838,7 +6838,7 @@ select#fromCurrency {
 
 .currency-icon-section {
   width: 80px;
-  height: 80px;
+  height: 50px;
   flex-shrink: 0;
 }
 
