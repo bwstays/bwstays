@@ -499,7 +499,66 @@ setTimeout(ldinsp, 0);
 
     <!-- DISCOVER -->
 
-    <section class="about-section text-center" id="about">
+    <main class="about-section text-center" id="about">
+      <!-- Widgets Container -->
+      <div class="widgets-container">
+        <div class="weather-widget">
+          <div class="weather-location">Kalpetta</div>
+          <div class="weather-main">
+            <div class="weather-temp">29<span class="temp-unit">°</span></div>
+            <div class="weather-icon-section">
+              <svg class="weather-icon" viewBox="0 0 200 200">
+                <!-- Sun rays -->
+                <line class="sun-ray" x1="100" y1="30" x2="100" y2="45" stroke-width="6"/>
+                <line class="sun-ray" x1="145" y1="55" x2="135" y2="65" stroke-width="6"/>
+                <line class="sun-ray" x1="170" y1="100" x2="155" y2="100" stroke-width="6"/>
+                <line class="sun-ray" x1="145" y1="145" x2="135" y2="135" stroke-width="6"/>
+                <line class="sun-ray" x1="55" y1="55" x2="65" y2="65" stroke-width="6"/>
+                <line class="sun-ray" x1="30" y1="100" x2="45" y2="100" stroke-width="6"/>
+
+                <!-- Sun circle -->
+                <circle class="sun-circle" cx="100" cy="100" r="25" fill="#FFD700"/>
+              </svg>
+            </div>
+          </div>
+          <div class="weather-condition">Sunny</div>
+          <div class="weather-high-low">H:31° L:20°</div>
+        </div>
+
+        <div class="currency-converter-widget">
+          <div class="currency-top-section">
+            <div class="currency-main">
+              <div class="currency-icon-section">
+                <svg class="currency-icon" viewBox="0 0 200 200">
+                  <circle cx="100" cy="100" r="70" fill="white" stroke="#64a19d" stroke-width="5"/>
+                  <text x="100" y="125" text-anchor="middle" font-size="80" font-weight="bold" fill="#64a19d">$</text>
+                </svg>
+              </div>
+              <div class="currency-selection">
+                <select id="fromCurrency" class="currency-select">
+                  <option value="USD">USD - US Dollar</option>
+                  <option value="EUR">EUR - Euro</option>
+                  <option value="GBP">GBP - British Pound</option>
+                  <option value="JPY">JPY - Japanese Yen</option>
+                  <option value="CHF">CHF - Swiss Franc</option>
+                  <option value="CAD">CAD - Canadian Dollar</option>
+                  <option value="AUD">AUD - Australian Dollar</option>
+                  <option value="SGD">SGD - Singapore Dollar</option>
+                  <option value="CNY">CNY - Chinese Yuan</option>
+                  <option value="AED">AED - UAE Dirham</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="currency-bottom-section">
+            <div class="conversion-result">
+              <div class="conversion-text">1 <span id="fromCurrencyCode">USD</span> = <span id="result">83.00</span> INR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
@@ -586,7 +645,7 @@ setTimeout(ldinsp, 0);
             </div>
 
         </div>
-    </section>
+    </main>
 
     <section class="projects-section bg-light" id="loc">
         <div class="container">
@@ -1214,6 +1273,7 @@ setTimeout(ldinsp, 0);
 
 
   <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
+  <script  type="text/javascript"   src="https://www.bwstays.com/js/widgets.js" ></script>
 
 
 
