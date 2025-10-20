@@ -6627,7 +6627,7 @@ select#fromCurrency {
 }
 
 .weather-temp {
-  font-size: 48px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1;
   color: white;
@@ -7006,7 +7006,7 @@ select#fromCurrency {
 }
 
 .currency-label {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   color: white;
   margin: 0;
@@ -7059,7 +7059,7 @@ select#fromCurrency {
 }
 
 .conversion-text {
-  font-size: 18px;
+  font-size: 11px;
   font-weight: 600;
   color: #2d3748;
   margin: 0;
