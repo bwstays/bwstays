@@ -6557,7 +6557,7 @@ select#fromCurrency {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   flex: 1;
-  min-width: 1020px;
+  min-width: 102px;
   max-width: 100px;
   border: none;
   transition: transform 0.2s ease;
@@ -6600,7 +6600,7 @@ select#fromCurrency {
   color: white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  min-height: 180px;
+  min-height: 105px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -6747,9 +6747,9 @@ select#fromCurrency {
   .weather-widget, 
   .currency-converter-widget {
     width: 45%;
-    max-width: 143px;
+    max-width: 105px;
     margin-bottom: 0;
-    min-width: 143px;
+    min-width: 105px;
   }
 }
 
