@@ -6323,7 +6323,7 @@ footer.footer .stay-card {
 
 /* Weather Widget Styles */
 .weather-widget {
-    width: 143px;
+    width: 103px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -6557,8 +6557,8 @@ select#fromCurrency {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   flex: 1;
-  min-width: 160px;
-  max-width: 180px;
+  min-width: 1020px;
+  max-width: 100px;
   border: none;
   transition: transform 0.2s ease;
   margin: 0;
