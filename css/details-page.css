@@ -6538,10 +6538,10 @@ select#fromCurrency {
 .widgets-container {
   display: flex;
   justify-content: flex-end;
-   gap: 15px;
+  gap: 15px;
   padding: 15px;
   position: absolute;
-  top: 20px;
+  top: 400px;
   right: 20px;
   z-index: 1000;
   max-width: 300px;
