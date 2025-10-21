@@ -6595,7 +6595,7 @@ select#fromCurrency {
 /* Weather Widget - Exact Design Match */
 .weather-widget {
   background: linear-gradient(180deg, #64a19d 0%, #64a19d 100%);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 3px;
   color: white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -6829,7 +6829,7 @@ select#fromCurrency {
 .currency-widget {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 25px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -6953,7 +6953,7 @@ select#fromCurrency {
 /* Currency Converter Widget - Two Section Design */
 .currency-converter-widget {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
