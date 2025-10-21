@@ -2,7 +2,7 @@
 // Works with both embedded translations (translations.js) and external JSON files
 
 class LanguageManager {
-  constructor(defaultLang = 'en', useEmbedded = false) {
+  constructor(defaultLang = 'en', useEmbedded = true) {
     this.currentLang = this.getSavedLanguage() || defaultLang;
     this.translations = {};
     this.availableLanguages = ['en', 'es', 'fr', 'de'];
@@ -67,7 +67,7 @@ class LanguageManager {
       const $el = $(element);
       const key = $el.attr('data-i18n');
       const translation = this.translate(key);
-
+      
       // Check if it's a placeholder, value, or text content
       if ($el.attr('placeholder') !== undefined) {
         $el.attr('placeholder', translation);
@@ -86,10 +86,10 @@ class LanguageManager {
 
     // Update lang attribute
     $('html').attr('lang', this.currentLang);
-
+    
     // Update dropdown value
     $('#language-selector').val(this.currentLang);
-
+    
     // Handle RTL languages
     if (this.isRTL()) {
       $('body').attr('dir', 'rtl');
@@ -117,35 +117,35 @@ class LanguageManager {
   // Setup language switcher event handlers
   setupLanguageSwitcher() {
     const self = this;
-
-  // Handle dropdown change
+    
+    // Handle dropdown change
     $('#language-selector').on('change', async function(e) {
-     const lang = $(this).val();
-
+      const lang = $(this).val();
+      
       if (lang !== self.currentLang) {
         // Add loading state
         $('body').addClass('loading-language');
-
+        
         const success = await self.loadLanguage(lang);
         if (success) {
           self.applyTranslations();
-
+          
           // Optional: Fade effect during language change
           $('[data-i18n]').addClass('lang-transition');
           setTimeout(() => {
             $('[data-i18n]').removeClass('lang-transition');
           }, 300);
-
+          
           // Trigger custom event for language change
           $(document).trigger('languageChanged', [lang]);
         }
-
+        
         $('body').removeClass('loading-language');
       }
     });
+    
     // Set initial dropdown value
     $('#language-selector').val(this.currentLang);
-
   }
 
   // Get current language
@@ -165,7 +165,7 @@ class LanguageManager {
       translations[lang] = {};
     }
     translations[lang][key] = value;
-
+    
     // Refresh if it's the current language
     if (lang === this.currentLang) {
       this.applyTranslations();
@@ -177,21 +177,20 @@ class LanguageManager {
 $(document).ready(function() {
   // Detect browser language as default
   const browserLang = navigator.language.split('-')[0];
-
+  
   // Create language manager instance
   // Set useEmbedded to true to use translations.js, false to use JSON files
-  const langManager = new LanguageManager(browserLang, false);
-
+  const langManager = new LanguageManager(browserLang, true);
+  
   // Make it globally accessible
   window.langManager = langManager;
-
+  
   // Initialize
   langManager.init();
-
+  
   // Optional: Listen for language change events
-  /*$(document).on('languageChanged', function(e, lang) {
+  $(document).on('languageChanged', function(e, lang) {
     console.log('Language changed to:', lang);
     // You can add custom logic here when language changes
   });
-  */
 });

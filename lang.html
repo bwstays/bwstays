@@ -4,70 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="page.title">My Website</title>
-
     <style>
-    .lang-transition {
-	    animation: fadeContent 0.3s ease-in-out;
-	}
+        /* Language Dropdown Styles */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
 
-	@keyframes fadeContent {
-	    0%, 100% { opacity: 1; }
-	    50% { opacity: 0.5; }
-	}
+        #language-selector {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
 
-	.language-switcher {
-	    position: fixed;
-	    top: 20px;
-	    right: 20px;
-	    z-index: 1000;
-	}
+        #language-selector:hover {
+            border-color: #007bff;
+            box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+        }
 
-	.lang-option {
-	    margin: 0 5px;
-	    padding: 8px 15px;
-	    border: 2px solid #333;
-	    background: white;
-	    cursor: pointer;
-	}
+        #language-selector:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
 
-	.lang-option.active {
-	    background: #333;
-	    color: white;
-}
+        /* Loading state */
+        body.loading-language {
+            cursor: wait;
+            pointer-events: none;
+        }
+
+        /* Fade transition */
+        .lang-transition {
+            animation: fadeContent 0.3s ease-in-out;
+        }
+
+        @keyframes fadeContent {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Optional: Flag emojis in dropdown */
+        option {
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
-    <!-- Language Switcher -->
+    <!-- Language Dropdown -->
     <div class="language-switcher">
-        <button class="lang-option active" data-lang="en">EN</button>
-        <button class="lang-option" data-lang="es">ES</button>
-        <button class="lang-option" data-lang="fr">FR</button>
-        <button class="lang-option" data-lang="de">DE</button>
+        <select id="language-selector" aria-label="Select Language">
+            <option value="en">🇬🇧 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="de">🇩🇪 Deutsch</option>
+        </select>
     </div>
 
-    <!-- Content with data-i18n attributes -->
+    <!-- Navigation -->
     <nav>
         <a href="#" data-i18n="nav.home">Home</a>
         <a href="#" data-i18n="nav.about">About</a>
+        <a href="#" data-i18n="nav.services">Services</a>
         <a href="#" data-i18n="nav.contact">Contact</a>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1 data-i18n="hero.title">Welcome</h1>
-        <p data-i18n="hero.discover">Your success is our mission</p>
+        <h1 data-i18n="hero.title">Welcome to Our Website</h1>
+        <p data-i18n="hero.subtitle">Your success is our mission</p>
+        <button data-i18n="hero.cta">Get Started</button>
     </section>
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
-    ></script>
+    <!-- About Section -->
+    <section class="about">
+        <h2 data-i18n="about.title">About Us</h2>
+        <p data-i18n="about.description">We are a team of passionate professionals.</p>
+    </section>
 
+    <!-- Services Section -->
+    <section class="services">
+        <h2 data-i18n="services.title">Our Services</h2>
+        <div class="service-card">
+            <h3 data-i18n="services.web_dev">Web Development</h3>
+            <p data-i18n="services.web_dev_desc">Creating modern websites</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact">
+        <h2 data-i18n="contact.title">Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name" data-i18n="contact.name">
+            <input type="email" placeholder="Email" data-i18n="contact.email">
+            <textarea placeholder="Message" data-i18n="contact.message"></textarea>
+            <button type="submit" data-i18n="contact.send">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p data-i18n="footer.copyright">© 2024 All rights reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/language.js"></script>
-
-
 </body>
 </html>
