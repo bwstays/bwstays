@@ -1270,22 +1270,22 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 
         // Close dropdown when mouse leaves the dropdown area
-	           document.addEventListener('mouseleave', function() {
+	           languageBtn.addEventListener('mouseleave', function() {
 	               languageMenu.classList.remove('show');
 	           });
 
 	           // Open dropdown on hover
-	           document.addEventListener('mouseenter', function() {
+	           languageBtn.addEventListener('mouseenter', function() {
 	               languageMenu.classList.add('show');
 	           });
 
 	           // Keep dropdown open when hovering over the menu
-	           document.addEventListener('mouseenter', function() {
+	           languageBtn.addEventListener('mouseenter', function() {
 	               languageMenu.classList.add('show');
 	           });
 
  // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
+        languageBtn.addEventListener('click', function(e) {
             if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
                 languageMenu.classList.remove('show');
             }
