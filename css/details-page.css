@@ -6324,7 +6324,7 @@ footer.footer .stay-card {
 /* Weather Widget Styles */
 .weather-widget {
     width: 103px;
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -6408,7 +6408,7 @@ footer.footer .stay-card {
 /* Currency Converter Widget Styles */
 .currency-converter-widget {
   width: 143px;
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -6553,7 +6553,7 @@ select#fromCurrency {
 .weather-widget,
 .currency-converter-widget {
   background: #2c2c2e;
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   flex: 1;
@@ -6595,7 +6595,7 @@ select#fromCurrency {
 /* Weather Widget - Exact Design Match */
 .weather-widget {
   background: linear-gradient(180deg, #64a19d 0%, #64a19d 100%);
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 3px;
   color: white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -6953,7 +6953,7 @@ select#fromCurrency {
 /* Currency Converter Widget - Two Section Design */
 .currency-converter-widget {
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
