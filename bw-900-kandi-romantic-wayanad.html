@@ -338,6 +338,23 @@ ul.list-unstyled.mb-0.text-white-50 {
 }
 /** End Project Wallace extracted inline styles */
 
+.language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #language-selector {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
 
         .language-dropdown {
             position: relative;
@@ -513,7 +530,7 @@ ul.list-unstyled.mb-0.text-white-50 {
 			<li class="nav-item">
 
 				<!-- Language Dropdown -->
-				<div class="language-dropdown nav-link" id="languageBtn">
+				<div class="language-dropdown nav-link language-switcher"  >
 					<select id="language-selector" aria-label="Select Language">
 						<option value="en">🇬🇧 English</option>
 						<option value="es">🇪🇸 Español</option>
