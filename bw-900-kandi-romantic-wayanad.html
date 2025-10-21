@@ -1269,7 +1269,7 @@ ul.list-unstyled.mb-0.text-white-50 {
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
-               // languageMenu.classList.remove('show');
+                languageMenu.classList.remove('show');
             }
         });
 
@@ -1290,13 +1290,13 @@ ul.list-unstyled.mb-0.text-white-50 {
                 currentLanguage.textContent = langName.split(' ')[0];
 
                 // Display selected language
-                selectedLangDisplay.textContent = `Selected Language: ${langName}`;
+              //  selectedLangDisplay.textContent = `Selected Language: ${langName}`;
 
                 // Close dropdown
                 languageMenu.classList.remove('show');
 
                 // Store selection in memory (you can also use localStorage if needed)
-                console.log('Selected language:', langCode);
+             //   console.log('Selected language:', langCode);
 
                 // Here you would typically:
                 // 1. Update the page language
