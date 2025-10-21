@@ -588,6 +588,18 @@ ul.list-unstyled.mb-0.text-white-50 {
 			<li class="nav-item">
 				<!-- Language Dropdown -->
 				<div class="language-dropdown nav-link">
+
+    <!-- Language Dropdown -->
+    <div class="language-btn" id="languageBtn">
+        <select id="language-selector" aria-label="Select Language">
+            <option value="en">🇬🇧 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="ar">🇩🇪 Arabic</option>
+        </select>
+    </div>
+
 					<button class="language-btn" id="languageBtn">
 						<i class="fas fa-globe"></i>
 						<span id="currentLanguage">English</span>
@@ -1332,10 +1344,13 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 
   // Optional: Listen for language change events
-  /* $(document).on('languageChanged', function(e, lang) {
+  /*
+  $(document).on('languageChanged', function(e, lang) {
      console.log('Language changed to:', lang);
      // You can add custom logic here when language changes
-  });*/
+  });
+
+  */
 
     </script>
 
