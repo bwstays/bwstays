@@ -80,44 +80,51 @@ Step 6: Configure Virtual Host (Optional but Recommended)
 	Enable Virtual Hosts in httpd.conf:
 	Open C:\Apache24\conf\httpd.conf
 	Uncomment this line:
-	apache
+
 	   Include conf/extra/httpd-vhosts.conf
+
 	Edit Virtual Hosts file:
+
 	Open C:\Apache24\conf\extra\httpd-vhosts.conf
 	Add your virtual host configuration:
-	apache
-   <VirtualHost *:80>
-       ServerName bwstays.com
-       ServerAlias www.bwstays.com
-       DocumentRoot "C:/Apache24/htdocs/bwstays"
-       <Directory "C:/Apache24/htdocs/bwstays">
-           Options Indexes FollowSymLinks
-           AllowOverride All
-           Require all granted
-       </Directory>
-       ErrorLog "logs/bwstays-error.log"
-       CustomLog "logs/bwstays-access.log" common
-   </VirtualHost>
+
+		<VirtualHost *:80>
+		ServerName bwstays.com
+		ServerAlias www.bwstays.com
+		DocumentRoot "C:/Apache24/htdocs/bwstays"
+		<Directory "C:/Apache24/htdocs/bwstays">
+		   Options Indexes FollowSymLinks
+		   AllowOverride All
+		   Require all granted
+		</Directory>
+		ErrorLog "logs/bwstays-error.log"
+		CustomLog "logs/bwstays-access.log" common
+		</VirtualHost>
+		
 Step 7: Restart Apache
-	cmd
+	cmd or command
 	cd C:\Apache24\bin
 	httpd.exe -k restart
+	
 Step 8: Test Your Website
 
 	Open your browser
-	Navigate to: http://bwstays.com
+	Navigate to: https://www.bwstays.com
 	Your GitHub Pages website should now be served locally!
 
 Troubleshooting Commands
+
 	Test Apache configuration:
-	cmd
-	  httpd.exe -t
+	cmd or command
+		httpd.exe -t
+		
 	Stop Apache:
-	cmd
+	cmd or command
 	  httpd.exe -k stop
+	  
 	Check if Apache is running:
 	Open Task Manager and look for httpd.exe processes
-	Or visit http://bwstays.com in your browser
+	Or visit https://www.bwstays.com in your browser
 	View error logs:
 	Check C:\Apache24\logs\error.log
 
@@ -139,17 +146,21 @@ Step 1: Ensure OpenSSL is Available
 
 
 Step 2: Create Directory for Certificates
+
 	Create a folder to store your certificates:
-	cmdmkdir C:\Apache24\conf\ssl
+	cmd or command
+	mkdir C:\Apache24\conf\ssl
 	cd C:\Apache24\conf\ssl
 
 Step 3: Generate Private Key and Certificate
 	Open Command Prompt as Administrator and navigate to your Apache bin directory:
-	cmdcd C:\Apache24\bin
+	cmd or command 
+	cd C:\Apache24\bin
 	
 	
 	Generate the private key and certificate (valid for 365 days):
-	cmdopenssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ..\conf\ssl\server.key -out ..\conf\ssl\server.crt
+	cmd or command
+	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ..\conf\ssl\server.key -out ..\conf\ssl\server.crt
 	You'll be prompted to enter information:
 	
 	Country Name: IN
@@ -211,7 +222,8 @@ Step 6 Restart Apache:
 
 	Or use Command Prompt as Administrator:
 
-	cmdnet stop Apache2.4
+	cmd or command
+	net stop Apache2.4
 	net start Apache2.4
 	```
 
