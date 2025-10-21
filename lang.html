@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="page.title">My Website</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    .lang-transition {
+	    animation: fadeContent 0.3s ease-in-out;
+	}
+
+	@keyframes fadeContent {
+	    0%, 100% { opacity: 1; }
+	    50% { opacity: 0.5; }
+	}
+
+	.language-switcher {
+	    position: fixed;
+	    top: 20px;
+	    right: 20px;
+	    z-index: 1000;
+	}
+
+	.lang-option {
+	    margin: 0 5px;
+	    padding: 8px 15px;
+	    border: 2px solid #333;
+	    background: white;
+	    cursor: pointer;
+	}
+
+	.lang-option.active {
+	    background: #333;
+	    color: white;
+}
+    </style>
 </head>
 <body>
     <!-- Language Switcher -->
