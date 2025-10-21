@@ -186,5 +186,10 @@ $(document).ready(function() {
   // Initialize
   langManager.init();
 
-
+  // Optional: Listen for language change events
+  /*$(document).on('languageChanged', function(e, lang) {
+    console.log('Language changed to:', lang);
+    // You can add custom logic here when language changes
+  });
+  */
 });
