@@ -1263,18 +1263,18 @@ ul.list-unstyled.mb-0.text-white-50 {
         // Toggle dropdown
         languageBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-           // languageMenu.classList.toggle('show');
+            languageMenu.classList.toggle('show');
         });
 
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
-                languageMenu.classList.remove('show');
+               // languageMenu.classList.remove('show');
             }
         });
 
         // Handle language selection
-        languageItems.forEach(item => {
+       languageItems.forEach(item => {
             item.addEventListener('click', function(e) {
                 e.preventDefault();
 
@@ -1296,6 +1296,7 @@ ul.list-unstyled.mb-0.text-white-50 {
                 languageMenu.classList.remove('show');
 
                 // Store selection in memory (you can also use localStorage if needed)
+                console.log('Selected language:', langCode);
 
                 // Here you would typically:
                 // 1. Update the page language
