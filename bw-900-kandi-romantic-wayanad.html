@@ -338,6 +338,116 @@ ul.list-unstyled.mb-0.text-white-50 {
 }
 /** End Project Wallace extracted inline styles */
 
+
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-btn {
+            background: transparent;
+            border: 2px solid #64a19d;
+            color: #64a19d;
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: #64a19d;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(100, 161, 157, 0.4);
+        }
+
+        .language-btn i {
+            font-size: 16px;
+        }
+
+        .language-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: rgba(0, 0, 0, 0.95);
+            border: 2px solid #64a19d;
+            border-radius: 12px;
+            min-width: 200px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .language-menu.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(100, 161, 157, 0.2);
+        }
+
+        .language-item:last-child {
+            border-bottom: none;
+        }
+
+        .language-item:hover {
+            background: rgba(100, 161, 157, 0.2);
+            color: #64a19d;
+            padding-left: 30px;
+        }
+
+        .language-item.active {
+            background: rgba(100, 161, 157, 0.3);
+            color: #64a19d;
+        }
+
+        .language-item .flag {
+            font-size: 20px;
+        }
+
+        .language-item .name {
+            flex: 1;
+        }
+
+        .language-item .check {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .language-item.active .check {
+            opacity: 1;
+            color: #64a19d;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 991px) {
+            .language-dropdown {
+                margin-top: 10px;
+            }
+
+            .language-menu {
+                right: auto;
+                left: 0;
+            }
+        }
+
 </style>
 
 
