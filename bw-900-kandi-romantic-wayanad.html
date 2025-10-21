@@ -343,9 +343,7 @@ ul.list-unstyled.mb-0.text-white-50 {
             position: relative;
             display: inline-block;
             align-items: left;
-        }
 
-        .language-btn {
 			background: transparent;
 			gap: 2px;
 			color: #64a19d;
@@ -357,38 +355,9 @@ ul.list-unstyled.mb-0.text-white-50 {
 			transition: all 0.3s ease;
         }
 
-        .language-btn:hover {
-            background: #64a19d;
-            transform: translateY(-2px);
-            color:white;
 
-         }
 
-        .language-btn i {
-            font-size: 16px;
-        }
 
-        .language-menu {
-			position: absolute;
-			right: 23px;
-			margin-top: 0px;
-			align-items: left;
-			background: rgba(0, 0, 0, 0.95);
-			gap: 2px;
-			border-radius: 8px;
-			min-width: 60px;
-			opacity: 0;
-			visibility: hidden;
-			transform: translateY(-10px);
-			transition: all 0.3s ease;
-			z-index: 1000;
-        }
-
-        .language-menu.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
 
         .language-item {
             display: flex;
@@ -437,10 +406,7 @@ ul.list-unstyled.mb-0.text-white-50 {
                 margin-top: 10px;
             }
 
-            .language-menu {
-                right: auto;
-                left: 0;
-            }
+
         }
 
 </style>
@@ -587,56 +553,16 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 			<li class="nav-item">
 
-    <!-- Language Dropdown -->
-    <div class="language-dropdown nav-link" id="languageBtn">
-        <select id="language-selector" aria-label="Select Language">
-            <option value="en">🇬🇧 English</option>
-            <option value="es">🇪🇸 Español</option>
-            <option value="fr">🇫🇷 Français</option>
-            <option value="de">🇩🇪 Deutsch</option>
-            <option value="ar">🇩🇪 Arabic</option>
-        </select>
-    </div>
-<!--
- 				<div class="language-dropdown nav-link">
-
-					<button class="language-btn" id="languageBtn">
-						<i class="fas fa-globe"></i>
-						<span id="currentLanguage">English</span>
-						<i class="fas fa-chevron-down" style="font-size: 10px;"></i>
-					</button>
-					<div class="language-menu" id="languageMenu">
-						<a href="#" class="language-item active" data-lang="en">
-							<span class="name">English</span>
-							<i class="fas fa-check check"></i>
-						</a>
-						<a href="#" class="language-item" data-lang="es">
-							<span class="name">Español</span>
-							<i class="fas fa-check check"></i>
-						</a>
-
-						<a href="#" class="language-item" data-lang="fr">
-							<span class="name">Français</span>
-							<i class="fas fa-check check"></i>
-						</a>
-						<a href="#" class="language-item" data-lang="hi">
-								<span class="name">हिन्दी </span>
- 							<i class="fas fa-check check"></i>
-						</a>
-						<a href="#" class="language-item" data-lang="ar">
-								<span class="name">اَلْعَرَبِيَّةُ </span>
- 							<i class="fas fa-check check"></i>
-						</a>
-						<a href="#" class="language-item" data-lang="ml">
-							<span class="name">മലയാളം</span>
-							<i class="fas fa-check check"></i>
-						</a>
-
-
-
-					</div>
+				<!-- Language Dropdown -->
+				<div class="language-dropdown nav-link" id="languageBtn">
+					<select id="language-selector" aria-label="Select Language">
+						<option value="en">🇬🇧 English</option>
+						<option value="es">🇪🇸 Español</option>
+						<option value="fr">🇫🇷 Français</option>
+						<option value="de">🇩🇪 Deutsch</option>
+						<option value="ar">🇩🇪 Arabic</option>
+					</select>
 				</div>
-				-->
 			</li>
 
           </ul>
