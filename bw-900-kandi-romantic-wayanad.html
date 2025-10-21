@@ -1273,6 +1273,14 @@ ul.list-unstyled.mb-0.text-white-50 {
             }
         });
 
+      // Close dropdown when mouse leaves the dropdown area
+        document.addEventListener('mouseleave', function(e) {
+         if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
+            languageMenu.classList.remove('show');
+            }
+        });
+
+
         // Handle language selection
        languageItems.forEach(item => {
             item.addEventListener('click', function(e) {
