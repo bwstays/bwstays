@@ -47,12 +47,16 @@ Step 2: Configure Apache
 	   </Directory>
 Step 3: Install Apache as a Windows Service
 	Open Command Prompt as Administrator
+	
 	Navigate to Apache bin directory:
+	
 	cmd
 	   cd C:\Apache24\bin
+	   
 	Install the service:
 	cmd
 	   httpd.exe -k install
+	   
 	Start Apache:
 	cmd
 	   httpd.exe -k start
@@ -102,6 +106,7 @@ Step 6: Configure Virtual Host (Optional but Recommended)
 		</VirtualHost>
 		
 Step 7: Restart Apache
+
 	cmd or command
 	cd C:\Apache24\bin
 	httpd.exe -k restart
@@ -115,6 +120,7 @@ Step 8: Test Your Website
 Troubleshooting Commands
 
 	Test Apache configuration:
+	
 	cmd or command
 		httpd.exe -t
 		
@@ -148,17 +154,20 @@ Step 1: Ensure OpenSSL is Available
 Step 2: Create Directory for Certificates
 
 	Create a folder to store your certificates:
+	
 	cmd or command
 	mkdir C:\Apache24\conf\ssl
 	cd C:\Apache24\conf\ssl
 
 Step 3: Generate Private Key and Certificate
 	Open Command Prompt as Administrator and navigate to your Apache bin directory:
+	
 	cmd or command 
 	cd C:\Apache24\bin
 	
 	
 	Generate the private key and certificate (valid for 365 days):
+	
 	cmd or command
 	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ..\conf\ssl\server.key -out ..\conf\ssl\server.crt
 	You'll be prompted to enter information:
@@ -225,13 +234,11 @@ Step 6 Restart Apache:
 	cmd or command
 	net stop Apache2.4
 	net start Apache2.4
-	```
-
-	## Step 7: Access Your Site
+ 
+	Access Your Site
 
 	Open your browser and go to:
-	```
-	https://www.bwstays.com
+ 	https://www.bwstays.com
 
 Step 7   To avoid the warning on your local machine:
 
