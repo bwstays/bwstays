@@ -1255,7 +1255,59 @@ ul.list-unstyled.mb-0.text-white-50 {
     </script>
 
 
+ <script>
+        const languageBtn = document.getElementById('languageBtn');
+        const languageMenu = document.getElementById('languageMenu');
+        const currentLanguage = document.getElementById('currentLanguage');
+        const languageItems = document.querySelectorAll('.language-item');
+        const selectedLangDisplay = document.getElementById('selectedLang');
 
+        // Toggle dropdown
+        languageBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
+                languageMenu.classList.remove('show');
+            }
+        });
+
+        // Handle language selection
+        languageItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Remove active class from all items
+                languageItems.forEach(i => i.classList.remove('active'));
+
+                // Add active class to selected item
+                this.classList.add('active');
+
+                // Update button text
+                const langName = this.querySelector('.name').textContent;
+                const langCode = this.getAttribute('data-lang');
+                currentLanguage.textContent = langName.split(' ')[0];
+
+                // Display selected language
+                selectedLangDisplay.textContent = `Selected Language: ${langName}`;
+
+                // Close dropdown
+                languageMenu.classList.remove('show');
+
+                // Store selection in memory (you can also use localStorage if needed)
+                console.log('Selected language:', langCode);
+
+                // Here you would typically:
+                // 1. Update the page language
+                // 2. Load translations
+                // 3. Update URL parameter
+                // Example: window.location.href = `?lang=${langCode}`;
+            });
+        });
+    </script>
 
   <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
 
