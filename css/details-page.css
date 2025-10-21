@@ -6612,7 +6612,7 @@ select#fromCurrency {
 }
 
 .weather-location {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   margin-bottom: 8px;
   color: white;
@@ -6626,7 +6626,7 @@ select#fromCurrency {
 }
 
 .weather-temp {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1;
   color: white;
@@ -6663,14 +6663,14 @@ select#fromCurrency {
 }
 
 .weather-condition {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   margin-bottom: 8px;
   color: white;
 }
 
 .weather-high-low {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: white;
   opacity: 0.9;
