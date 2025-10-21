@@ -1269,27 +1269,27 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 
 
-        // Close dropdown when mouse leaves the dropdown area
-	           languageMenu.addEventListener('mouseleave', function() {
-	               languageMenu.classList.remove('show');
-	           });
+		// Close dropdown when mouse leaves the dropdown area
+	   languageMenu.addEventListener('mouseleave', function() {
+		   languageMenu.classList.remove('show');
+	   });
 
-	           // Open dropdown on hover
-	           languageMenu.addEventListener('mouseenter', function() {
-	               languageMenu.classList.add('show');
-	           });
+	   // Open dropdown on hover
+	   languageMenu.addEventListener('mouseenter', function() {
+		   languageMenu.classList.add('show');
+	   });
 
-	           // Keep dropdown open when hovering over the menu
-	           languageMenu.addEventListener('mouseenter', function() {
-	               languageMenu.classList.add('show');
-	           });
+	   // Keep dropdown open when hovering over the menu
+	   languageMenu.addEventListener('mouseenter', function() {
+		   languageMenu.classList.add('show');
+	   });
 
- // Close dropdown when clicking outside
-        languageBtn.addEventListener('click', function(e) {
-            if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
-                languageMenu.classList.remove('show');
-            }
-        });
+		// Close dropdown when clicking outside
+		languageBtn.addEventListener('click', function(e) {
+		if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
+			languageMenu.classList.remove('show');
+		}
+		});
 
         // Handle language selection
        languageItems.forEach(item => {
