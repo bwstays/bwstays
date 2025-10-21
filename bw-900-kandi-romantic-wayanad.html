@@ -359,46 +359,6 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 
 
-        .language-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-             color: #fffff;
-            text-decoration: none;
-          }
-
-        .language-item:last-child {
-            border-bottom: none;
-        }
-
-        .language-item:hover {
-            background: rgba(100, 161, 157, -0.05);
-            color: #64a19d;
-              align-items: left;
-        }
-
-        .language-item.active {
-            background: rgba(100, 161, 157, -0.05);
-            color: #64a19d;
-        }
-
-        .language-item .flag {
-            font-size: 14px;
-        }
-
-        .language-item .name {
-            flex: 1;
-        }
-
-        .language-item .check {
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-
-        .language-item.active .check {
-            opacity: 1;
-            color: #64a19d;
-        }
 
         /* Mobile responsive */
         @media (max-width: 991px) {
@@ -1199,76 +1159,7 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 
  <script>
-  /*
-        const languageBtn = document.getElementById('languageBtn');
-        const languageMenu = document.getElementById('languageMenu');
-        const currentLanguage = document.getElementById('currentLanguage');
-        const languageItems = document.querySelectorAll('.language-item');
-        const selectedLangDisplay = document.getElementById('selectedLang');
 
-        // Toggle dropdown
-        languageBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            languageMenu.classList.toggle('show');
-        });
-
-
-
-
-		// Close dropdown when mouse leaves the dropdown area
-	   languageMenu.addEventListener('mouseleave', function() {
-		   languageMenu.classList.remove('show');
-	   });
-
-	   // Open dropdown on hover
-	   languageMenu.addEventListener('mouseenter', function() {
-		   languageMenu.classList.add('show');
-	   });
-
-	   // Keep dropdown open when hovering over the menu
-	   languageMenu.addEventListener('mouseenter', function() {
-		   languageMenu.classList.add('show');
-	   });
-
-		// Close dropdown when clicking outside
-		languageBtn.addEventListener('click', function(e) {
-		if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
-			languageMenu.classList.remove('show');
-		}
-		});
-
-        // Handle language selection
-       languageItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                // Remove active class from all items
-                languageItems.forEach(i => i.classList.remove('active'));
-
-                // Add active class to selected item
-                this.classList.add('active');
-
-                // Update button text
-                const langName = this.querySelector('.name').textContent;
-                const langCode = this.getAttribute('data-lang');
-                currentLanguage.textContent = langName.split(' ')[0];
-
-                // Display selected language
-              //  selectedLangDisplay.textContent = `Selected Language: ${langName}`;
-
-                // Close dropdown
-                languageMenu.classList.remove('show');
-
-                // Store selection in memory (you can also use localStorage if needed)
-                console.log('Selected language:', langCode);
-
-                // Here you would typically:
-                // 1. Update the page language
-                // 2. Load translations
-                // 3. Update URL parameter
-                // Example: window.location.href = `?lang=${langCode}`;
-            });
-        });*/
 
 
   // Optional: Listen for language change events
