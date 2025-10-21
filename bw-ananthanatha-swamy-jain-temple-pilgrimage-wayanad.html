@@ -227,9 +227,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						  	<img title="Black and White Stays Service Villa"  alt="Tourist location near your stay" src="https://www.bwstays.com/assets/img/logo/direction.webp"    width="45" height="45"/>
 						  </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.bwstays.com/index.html" id="home"  rel="dofollow"  >Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nearby-places"    rel="dofollow"   >Nearby Places</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#testimonial"   rel="dofollow"  >Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.bwstays.com/index.html" id="home"  rel="dofollow" data-i18n="nav.home" >Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nearby-places"    rel="dofollow"    data-i18n="nav.nby" >Nearby Places</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#testimonial"   rel="dofollow"  data-i18n="nav.contact" >Contact</a></li>
                     <li class="nav-item">
 
 				<!-- Language Dropdown -->
@@ -379,7 +379,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <section class="nearby-places py-5" id="nearby-places">
     <div class="container">
-        <h2 class="text-center">Nearby Places</h2>
+        <h2 class="text-center" data-i18n="nav.nby" >Nearby Places</h2>
 	    <div class="border-bottom border-primary text-center mb-4"  id="contact-divider"></div>
         <div class="row" id="nearby-cards">
 
@@ -449,7 +449,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
                     <div class="form-group mb-3">
-                        <label for="inputAddress2" class="text-white-50 small text-uppercase">Contact</label>
+                        <label for="inputAddress2" class="text-white-50 small text-uppercase"data-i18n="nav.contact" >Contact</label>
                         <input  type="text"
                             class="form-control bg-light border-0" id="inputAddress2"  autocomplete="street-address"
                               required placeholder="+-- --- --- ----">
