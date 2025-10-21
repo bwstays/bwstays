@@ -1273,6 +1273,24 @@ ul.list-unstyled.mb-0.text-white-50 {
             }
         });
 
+
+        // Close dropdown when mouse leaves the dropdown area
+	           document.addEventListener('mouseleave', function() {
+	               languageMenu.classList.remove('show');
+	           });
+
+	           // Open dropdown on hover
+	           languageBtn.addEventListener('mouseenter', function() {
+	               languageMenu.classList.add('show');
+	           });
+
+	           // Keep dropdown open when hovering over the menu
+	           languageMenu.addEventListener('mouseenter', function() {
+	               languageMenu.classList.add('show');
+	           });
+
+
+
         // Handle language selection
        languageItems.forEach(item => {
             item.addEventListener('click', function(e) {
