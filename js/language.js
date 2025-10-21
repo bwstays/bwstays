@@ -2,7 +2,7 @@
 // Works with both embedded translations (translations.js) and external JSON files
 
 class LanguageManager {
-  constructor(defaultLang = 'en', useEmbedded = true) {
+  constructor(defaultLang = 'en', useEmbedded = false) {
     this.currentLang = this.getSavedLanguage() || defaultLang;
     this.translations = {};
     this.availableLanguages = ['en', 'es', 'fr', 'de'];
@@ -178,7 +178,7 @@ $(document).ready(function() {
 
   // Create language manager instance
   // Set useEmbedded to true to use translations.js, false to use JSON files
-  const langManager = new LanguageManager(browserLang, true);
+  const langManager = new LanguageManager(browserLang, false);
 
   // Make it globally accessible
   window.langManager = langManager;
