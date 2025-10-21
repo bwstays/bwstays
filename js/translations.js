@@ -14,7 +14,7 @@ const translations = {
 
     // Hero Section
     "hero.title": "Welcome to Our Website",
-    "hero.subtitle": "Your success is our mission",
+    "hero.discover": "Your success is our mission",
     "hero.cta": "Get Started",
     "hero.learn_more": "Learn More",
 
@@ -59,7 +59,7 @@ const translations = {
 
     // Sección Hero
     "hero.title": "Bienvenido a Nuestro Sitio Web",
-    "hero.subtitle": "Tu éxito es nuestra misión",
+    "hero.discover": "Tu éxito es nuestra misión",
     "hero.cta": "Comenzar",
     "hero.learn_more": "Saber Más",
 
@@ -104,7 +104,7 @@ const translations = {
 
     // Section Hero
     "hero.title": "Bienvenue sur Notre Site Web",
-    "hero.subtitle": "Votre succès est notre mission",
+    "hero.discover": "Votre succès est notre mission",
     "hero.cta": "Commencer",
     "hero.learn_more": "En Savoir Plus",
 
@@ -149,7 +149,7 @@ const translations = {
 
     // Hero-Bereich
     "hero.title": "Willkommen auf Unserer Website",
-    "hero.subtitle": "Ihr Erfolg ist unsere Mission",
+    "hero.discover": "Ihr Erfolg ist unsere Mission",
     "hero.cta": "Loslegen",
     "hero.learn_more": "Mehr Erfahren",
 
