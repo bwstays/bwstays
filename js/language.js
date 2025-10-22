@@ -148,7 +148,6 @@ updateOGLocale(lang) {
      $('meta[property="og:locale"]').attr('content',  lan || 'en_US');
 }
 
-
   // Initialize language system
   async init() {
     const success = await this.loadLanguage(this.currentLang);
