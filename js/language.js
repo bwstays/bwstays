@@ -7,8 +7,10 @@ class LanguageManager {
 	    'en': 'en_US',
 	    'es': 'es_ES',
 	    'fr': 'fr_FR',
-	    'de': 'de_DE'
-};
+	    'ml': 'ml_IN',
+	    'hi': 'hi_IN',
+	    'ar': 'ar_AE'
+   };
 
   constructor(defaultLang = 'en', useEmbedded = false) {
     this.currentLang = this.getSavedLanguage() || defaultLang;
@@ -143,7 +145,8 @@ updateMetaTags(lang) {
 }
 
 updateOGLocale(lang) {
-     $('meta[property="og:locale"]').attr('content',  lang || 'en_US');
+	  lan=localeMap[lang];
+     $('meta[property="og:locale"]').attr('content',  lan || 'en_US');
 }
 
 
