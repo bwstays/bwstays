@@ -144,7 +144,7 @@ updateMetaTags(lang) {
 }
 
 updateOGLocale(lang) {
-	  lan=localeMap[lang];
+	  lan=this.localeMap[lang];
      $('meta[property="og:locale"]').attr('content',  lan || 'en_US');
 }
 
