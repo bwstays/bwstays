@@ -2,10 +2,18 @@
 // Works with both embedded translations (translations.js) and external JSON files
 
 class LanguageManager {
+
+	const localeMap = {
+	    'en': 'en_US',
+	    'es': 'es_ES',
+	    'fr': 'fr_FR',
+	    'de': 'de_DE'
+};
+
   constructor(defaultLang = 'en', useEmbedded = false) {
     this.currentLang = this.getSavedLanguage() || defaultLang;
     this.translations = {};
-    this.availableLanguages = ['en', 'es', 'fr', 'de'];
+    this.availableLanguages = ['en', 'es', 'fr', 'hi','ar','ml'];
     this.useEmbedded = useEmbedded; // Toggle between embedded and JSON files
   }
 
@@ -84,6 +92,11 @@ class LanguageManager {
       document.title = this.translate(titleKey);
     }
 
+    updateMetaTags(this.currentLang);
+    updateOGLocale(this.currentLang);
+    updateStructuredData(this.currentLang);
+
+
     // Update lang attribute
     $('html').attr('lang', this.currentLang);
 
@@ -97,6 +110,42 @@ class LanguageManager {
       $('body').attr('dir', 'ltr');
     }
   }
+
+
+updateStructuredData(lang) {
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "BWStays",
+        "description": this.translate('page.description'),
+        "url": "https://www.bwstays.com",
+        "inLanguage": lang,
+        "publisher": {
+            "@type": "Organization",
+            "name": "BWStays",
+            "url": "https://www.bwstays.com",
+            "logo": "https://www.bwstays.com/assets/img/icons/bw.svg"
+        }
+    };
+
+    $('script[type="application/ld+json"]').text(JSON.stringify(structuredData, null, 2));
+}
+
+
+updateMetaTags(lang) {
+    document.title = this.translate('page.title');
+    $('meta[name="description"]').attr('content', this.translate('page.description'));
+    $('meta[name="keywords"]').attr('content', this.translate('page.keywords'));
+    $('meta[property="og:title"]').attr('content', this.translate('page.title'));
+    $('meta[property="og:description"]').attr('content', this.translate('page.description'));
+    $('meta[name="twitter:title"]').attr('content', this.translate('page.title'));
+    $('meta[name="twitter:description"]').attr('content', this.translate('page.description'));
+}
+
+updateOGLocale(lang) {
+     $('meta[property="og:locale"]').attr('content',  lang || 'en_US');
+}
+
 
   // Initialize language system
   async init() {
