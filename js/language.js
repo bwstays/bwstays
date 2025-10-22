@@ -112,7 +112,6 @@ class LanguageManager {
     }
   }
 
-
 updateStructuredData(lang) {
     const structuredData = {
         "@context": "https://schema.org",
@@ -206,7 +205,6 @@ updateOGLocale(lang) {
     const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
     return rtlLanguages.includes(this.currentLang);
   }
-
   // Add new translation at runtime
   addTranslation(lang, key, value) {
     if (!translations[lang]) {
