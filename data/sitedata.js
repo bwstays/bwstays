@@ -17,7 +17,7 @@ const siteData = {
       ],
       distance: "38",
       transport: "Public",
-      latlong: "11.534836134024715, 76.17498437471619",
+      latlong: "11.840044094937126, 75.89842935307782",
       map: "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
       rating: "4.5",
       hrs: "2",
