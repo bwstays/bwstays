@@ -93,9 +93,10 @@ class LanguageManager {
       document.title = this.translate(titleKey);
     }
 
-    this.updateMetaTags(this.currentLang);
+   /* this.updateMetaTags(this.currentLang);
     this.updateOGLocale(this.currentLang);
     this.updateStructuredData(this.currentLang);
+    */
 
     // Update lang attribute
     $('html').attr('lang', this.currentLang);
