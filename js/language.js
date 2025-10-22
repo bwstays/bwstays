@@ -2,7 +2,6 @@
 // Works with both embedded translations (translations.js) and external JSON files
 
 class LanguageManager {
-
 	static localeMap = {
 	    'en': 'en_US',
 	    'es': 'es_ES',
