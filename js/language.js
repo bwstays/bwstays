@@ -3,7 +3,7 @@
 
 class LanguageManager {
 
-	const localeMap = {
+	static localeMap = {
 	    'en': 'en_US',
 	    'es': 'es_ES',
 	    'fr': 'fr_FR',
