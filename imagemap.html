@@ -1,3 +1,5 @@
+<!-- create a responsive image map with clickable areas for all the location markers in your map. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,10 +216,63 @@
             wrapper.appendChild(marker);
         });
 
-        // Update marker positions on window resize
+ 		 // Update marker positions on window resize
+ 		/*
+        let resizeTimeout;
         window.addEventListener('resize', () => {
-            // Markers automatically adjust due to percentage-based positioning
-        });
+            // Clear previous timeout to avoid multiple calls
+            clearTimeout(resizeTimeout);
+
+            // Debounce the resize event (wait 250ms after user stops resizing)
+            resizeTimeout = setTimeout(() => {
+                const imgWidth = img.offsetWidth;
+                const imgHeight = img.offsetHeight;
+
+                console.log('Window resized!');
+                console.log('Image dimensions:', imgWidth, 'x', imgHeight);
+
+                // Get all markers
+                const markers = document.querySelectorAll('.clickable-marker');
+
+                // Update each marker if needed
+                markers.forEach((marker, index) => {
+                    const loc = locations[index];
+
+                    // Calculate actual pixel positions
+                    const actualX = (imgWidth * loc.x) / 100;
+                    const actualY = (imgHeight * loc.y) / 100;
+
+                    console.log(`Marker ${index} (${loc.name}):`, {
+                        percentX: loc.x,
+                        percentY: loc.y,
+                        pixelX: actualX,
+                        pixelY: actualY
+                    });
+
+                    // Example: Add pulsing animation on resize
+                    marker.style.animation = 'none';
+                    setTimeout(() => {
+                        marker.style.animation = 'pulse 0.5s ease-in-out';
+                    }, 10);
+
+                    // Example: Adjust marker size based on screen width
+                    if (window.innerWidth < 768) {
+                        marker.style.width = '25px';
+                        marker.style.height = '25px';
+                    } else {
+                        marker.style.width = '30px';
+                        marker.style.height = '30px';
+                    }
+                });
+
+                // Example: Show notification
+                console.log('All markers repositioned successfully!');
+
+            }, 250);
+        });*/
+
+
+
     </script>
 </body>
 </html>
