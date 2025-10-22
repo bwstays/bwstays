@@ -97,7 +97,6 @@ class LanguageManager {
     this.updateOGLocale(this.currentLang);
     this.updateStructuredData(this.currentLang);
 
-
     // Update lang attribute
     $('html').attr('lang', this.currentLang);
 
@@ -131,7 +130,6 @@ updateStructuredData(lang) {
 
     $('script[type="application/ld+json"]').text(JSON.stringify(structuredData, null, 2));
 }
-
 
 updateMetaTags(lang) {
     document.title = this.translate('page.title');
@@ -168,7 +166,7 @@ updateOGLocale(lang) {
   setupLanguageSwitcher() {
     const self = this;
 
-  // Handle dropdown change
+    // Handle dropdown change
     $('#language-selector').on('change', async function(e) {
      const lang = $(this).val();
 
