@@ -122,7 +122,7 @@
 
     <meta
       http-equiv="Content-Security-Policy"
-      content="upgrade-insecure-requests; block-all-mixed-content;default-src 'self'; script-src cdnjs.cloudflare.com  overpass-api.de  unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com  use.fontawesome.com ; style-src   cdnjs.cloudflare.com    unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com;    connect-src cdnjs.cloudflare.com  api.groq.com router.project-osrm.org  overpass-api.de analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"
+      content="upgrade-insecure-requests; block-all-mixed-content;default-src 'self'; script-src cdnjs.cloudflare.com  overpass-api.de  unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com  use.fontawesome.com ; style-src   cdnjs.cloudflare.com    unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com;    connect-src api.freecurrencyapi.com cdnjs.cloudflare.com  api.groq.com router.project-osrm.org  overpass-api.de analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"
     />
 
 <link rel="profile" href="http://gmpg.org/xfn/11"/>
@@ -336,7 +336,9 @@ div.col-md-4 {
 ul.list-unstyled.mb-0.text-white-50 {
 	font-size: 1rem;
 }
-/** End Project Wallace extracted inline styles */
+
+
+
 
 /* Currency Converter Widget Styles */
 .currency-converter-widget {
@@ -551,20 +553,36 @@ ul.list-unstyled.mb-0.text-white-50 {
               </a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
+              <a class="nav-link js-scroll-trigger"
                 href="https://www.bwstays.com/index.html" id="home"  rel="dofollow"
-                >Home</a
+               data-i18n="nav.home" >Home</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#nearby-places"    rel="dofollow"
-                >Nearby Places</a
+                 data-i18n="nav.nby" >Nearby Places</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#testimonial"   rel="dofollow"    >Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#testimonial"   rel="dofollow"    data-i18n="nav.contact" >Contact</a>
             </li>
+
+
+			<li class="nav-item">
+
+				<!-- Language Dropdown -->
+				<div class="nav-link language-switcher"  >
+					<select id="language-selector" aria-label="Select Language">
+						<option value="en" selected>🇬🇧 English</option>
+						<option value="es">🇪🇸 Español</option>
+						<option value="fr">🇫🇷 Français</option>
+						<option value="hi">IN हिन्दी </option>
+						<option value="ar">AE اَلْعَرَب</option>
+						<option value="ml">IN മലയാളം</option>
+					</select>
+				</div>
+			</li>
+
           </ul>
         </div>
       </div>
@@ -582,75 +600,65 @@ ul.list-unstyled.mb-0.text-white-50 {
         </div>
 
 
-		<div class="weather-widget">
-			<div class="top-section">
-				<div class="weather-icon-section">
-					<svg class="weather-icon" viewBox="0 0 200 200">
-						<!-- Sun rays -->
-						<line class="cloud-icon" x1="100" y1="30" x2="100" y2="45" stroke-width="6"/>
-						<line class="cloud-icon" x1="145" y1="55" x2="135" y2="65" stroke-width="6"/>
-						<line class="cloud-icon" x1="170" y1="100" x2="155" y2="100" stroke-width="6"/>
-						<line class="cloud-icon" x1="145" y1="145" x2="135" y2="135" stroke-width="6"/>
-						<line class="cloud-icon" x1="55" y1="55" x2="65" y2="65" stroke-width="6"/>
-						<line class="cloud-icon" x1="30" y1="100" x2="45" y2="100" stroke-width="6"/>
-
-						<!-- Sun circle -->
-						<circle class="cloud-icon" cx="100" cy="85" r="20" fill="white" stroke="white" stroke-width="3"/>
-
-						<!-- Cloud -->
-						<path d="M 60 120 Q 60 105 72 102 Q 75 95 85 95 Q 92 88 105 92 Q 118 92 122 102 Q 132 102 136 112 Q 136 122 126 122 L 70 122 Q 60 122 60 120 Z" fill="white" stroke="none"/>
-					</svg>
-				</div>
-
-				<div class="date-section">
-					<div class="month">January</div>
-					<div class="day">12</div>
-				</div>
-			</div>
-
-			<div class="weather-info-section">
-				<div class="temperature">25<span class="temp-unit">°</span>
-				<div  style="margin:-24px 0px -10px 0;text-align:right">
-				<p class="condition">Partly Cloudy</p>
-				<p class="location-wth">Kalpetta, Wayanad</p> </div>
-				</div>
-			</div>
-		</div>
-
-		<div class="currency-converter-widget">
-			<div class="converter-header">
-				<h4>Currency Converter</h4>
-			</div>
-			<div class="converter-body">
-				<div class="converter-input">
-					<input type="number" id="amount" placeholder="Enter amount" value="1000">
-				</div>
-				<div class="converter-select">
-					<select id="fromCurrency">
-						<option value="INR">INR</option>
-						<option value="USD">USD</option>
-						<option value="EUR">EUR</option>
-						<option value="GBP">GBP</option>
-					</select>
-					<span>to</span>
-					<select id="toCurrency">
-						<option value="USD">USD</option>
-						<option value="INR">INR</option>
-						<option value="EUR">EUR</option>
-						<option value="GBP">GBP</option>
-					</select>
-				</div>
-				<div class="converter-result">
-					<div id="convertedAmount">Converted Amount: <span id="result">--</span></div>
-				</div>
-				<button id="convertBtn" class="btn btn-primary">Convert</button>
-			</div>
-		</div>
-	</header>
-
-
     <main class="about-section" id="about">
+      <!-- Widgets Container -->
+      <div class="widgets-container">
+        <div class="weather-widget">
+          <div class="weather-location">New Delhi</div>
+          <div class="weather-main">
+            <div class="weather-temp">29<span class="temp-unit">°</span></div>
+            <div class="weather-icon-section">
+              <svg class="weather-icon" viewBox="0 0 200 200">
+                <!-- Sun rays -->
+                <line class="sun-ray" x1="100" y1="30" x2="100" y2="45" stroke-width="6"/>
+                <line class="sun-ray" x1="145" y1="55" x2="135" y2="65" stroke-width="6"/>
+                <line class="sun-ray" x1="170" y1="100" x2="155" y2="100" stroke-width="6"/>
+                <line class="sun-ray" x1="145" y1="145" x2="135" y2="135" stroke-width="6"/>
+                <line class="sun-ray" x1="55" y1="55" x2="65" y2="65" stroke-width="6"/>
+                <line class="sun-ray" x1="30" y1="100" x2="45" y2="100" stroke-width="6"/>
 
+                <!-- Sun circle -->
+                <circle class="sun-circle" cx="100" cy="100" r="25" fill="#FFD700"/>
+              </svg>
+            </div>
+          </div>
+          <div class="weather-condition">Sunny</div>
+          <div class="weather-high-low">H:31° L:20°</div>
+        </div>
+
+        <div class="currency-converter-widget">
+          <div class="currency-top-section">
+            <div class="currency-main">
+              <div class="currency-icon-section">
+                <svg class="currency-icon" viewBox="0 0 200 200">
+                  <circle cx="100" cy="100" r="70" fill="white" stroke="#64a19d" stroke-width="5"/>
+                  <text x="100" y="125" text-anchor="middle" font-size="80" font-weight="bold" fill="#64a19d">$</text>
+                </svg>
+              </div>
+              <div class="currency-selection">
+                <div class="currency-label">USD</div>
+                <select id="fromCurrency" class="currency-select">
+                  <option value="USD">USD - US Dollar</option>
+                  <option value="EUR">EUR - Euro</option>
+                  <option value="GBP">GBP - British Pound</option>
+                  <option value="JPY">JPY - Japanese Yen</option>
+                  <option value="CHF">CHF - Swiss Franc</option>
+                  <option value="CAD">CAD - Canadian Dollar</option>
+                  <option value="AUD">AUD - Australian Dollar</option>
+                  <option value="SGD">SGD - Singapore Dollar</option>
+                  <option value="CNY">CNY - Chinese Yuan</option>
+                  <option value="AED">AED - UAE Dirham</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="currency-bottom-section">
+            <div class="conversion-result">
+              <div class="conversion-text">1 <span id="fromCurrencyCode">USD</span> = <span id="result">83.00</span> INR</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="container-fluid div.container-fluid">
   		   <div class="text-center mb-4 div.text-center.mb-4">
@@ -773,21 +781,24 @@ ul.list-unstyled.mb-0.text-white-50 {
 							 <div class="pano"  data-lat="11.4967237" data-lng="76.1051083" data-heading="165"></div>
 						</span>
 					</div>
+					-->
 
 					<h3 class="text-white mb-3">Nearyby Public/Private EV Charging Station </h3>
 					<div class="contact-card-divider border-bottom border-primary mb-4" ></div>
 					<div   id="fuel-places"  data-center="11.4967237, 76.1051083"   >
- 							<div id="fuel"></div>
+ 							<div id="fuel">
+ 							 <img title="Electric Charging in wayanad" src="https://www.bwstays.com/assets/img/ev_fuel/900-kandi-ev.png" alt="Fuel"   usemap="#locationmapev" id="mapevimage" class="det-img-f img-fluid"/>
+ 							</div>
  					</div>
 
 					<h3 class="text-white mb-3">Gas Filling Near by this location </h3>
 					<div class="contact-card-divider border-bottom border-primary mb-4" ></div>
 					<div   id="gasfuel-places"  data-center="11.4967237, 76.1051083"   >
  							<div id="gasfuel" >
- 							 <img title="Gas Filling in wayanad" src="https://www.bwstays.com/assets/img/ev_fuel/1.JPG" alt="Fuel"   usemap="#locationmap" id="mapImage" class="det-img-f img-fluid"/>
+ 							 <img title="Gas Filling in wayanad" src="https://www.bwstays.com/assets/img/ev_fuel/900-kandi-gas.png" alt="Fuel"   usemap="#locationmapgas" id="mapgasimage" class="det-img-f img-fluid"/>
   							</div>
  					</div>
- 					-->
+
 
 
             </div>
@@ -815,7 +826,7 @@ ul.list-unstyled.mb-0.text-white-50 {
       <!-- nearby places -->
     <section class="nearby-places py-5" id="nearby-places">
       <div class="container">
-        <h2 class="text-center">Nearby Places</h2>
+        <h2 class="text-center" data-i18n="nav.nby" >Nearby Places</h2>
         <div
           class="border-bottom border-primary text-center mb-4"
           id="contact-divider"
@@ -888,7 +899,7 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 
                     <div class="form-group mb-3">
-                        <label for="inputAddress2" class="text-white-50 small text-uppercase">Contact</label>
+                        <label for="inputAddress2" class="text-white-50 small text-uppercase"data-i18n="nav.contact" >Contact</label>
                         <input  type="text"
                             class="form-control bg-light border-0" id="inputAddress2"  autocomplete="street-address"
                               required placeholder="+-- --- --- ----">
@@ -1231,6 +1242,9 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 
   <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
+  <script  type="text/javascript"   src="https://www.bwstays.com/js/language.js" ></script>
+
+
 
  <script type="text/javascript"  src="https://www.bwstays.com/js/validations.js"></script>
     </body>

@@ -94,7 +94,7 @@
 <link rel="apple-touch-icon" sizes="152x152" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-152x152.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
 
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src cdnjs.cloudflare.com    unpkg.com     cdn.cookie-script.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com wati-integration-prod-service.clare.ai bwstays.com code.jquery.com requirejs.org  maps.googleapis.com www.google-analytics.com  use.fontawesome.com ; style-src  cdnjs.cloudflare.com   unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.md mc.yandex.ru bwstays.com; connect-src cdnjs.cloudflare.com  api.groq.com router.project-osrm.org   api.groq.com  hn.inspectlet.com mc.yandex.ru mc.yandex.md  'self' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com  mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com  ws.inspectlet.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src cdnjs.cloudflare.com    unpkg.com     cdn.cookie-script.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com wati-integration-prod-service.clare.ai bwstays.com code.jquery.com requirejs.org  maps.googleapis.com www.google-analytics.com  use.fontawesome.com ; style-src  cdnjs.cloudflare.com   unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.md mc.yandex.ru bwstays.com; connect-src api.freecurrencyapi.com cdnjs.cloudflare.com  api.groq.com router.project-osrm.org   api.groq.com  hn.inspectlet.com mc.yandex.ru mc.yandex.md  'self' www.googletagmanager.com *.google-analytics.com  analytics.ahrefs.com  mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com  ws.inspectlet.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
 
 
 <!--
@@ -476,8 +476,22 @@ setTimeout(ldinsp, 0);
                     </li>
                  <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" id="install" href="#install">Install</a></li> -->
                     <!-- <button id="installBtn" style="display: none;">Install App</button> -->
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#loc"   rel="dofollow"  id="discovered">Discover</a></li>
-                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#testimonial"   rel="dofollow"  >Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#loc"   rel="dofollow"  id="discovered"   data-i18n="hero.discover" >Discover</a></li>
+                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#testimonial"   rel="dofollow"       data-i18n="nav.contact"    >Contact</a></li>
+                    <li class="nav-item">
+
+				<!-- Language Dropdown -->
+				<div class="nav-link language-switcher"  >
+					<select id="language-selector" aria-label="Select Language">
+						<option value="en" selected>🇬🇧 English</option>
+						<option value="es">🇪🇸 Español</option>
+						<option value="fr">🇫🇷 Français</option>
+						<option value="hi">hi हिन्दी </option>
+						<option value="ar">ar اَلْعَرَب</option>
+						<option value="ml">ml മലയാളം</option>
+					</select>
+				</div>
+			</li>
                 </ul>
             </div>
         </div>
@@ -499,7 +513,7 @@ setTimeout(ldinsp, 0);
 
     <!-- DISCOVER -->
 
-    <section class="about-section text-center" id="about">
+    <main class="about-section text-center" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
@@ -586,7 +600,7 @@ setTimeout(ldinsp, 0);
             </div>
 
         </div>
-    </section>
+    </main>
 
     <section class="projects-section bg-light" id="loc">
         <div class="container">
@@ -1214,6 +1228,8 @@ setTimeout(ldinsp, 0);
 
 
   <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
+  <script  type="text/javascript"   src="https://www.bwstays.com/js/language.js" ></script>
+
 
 
 

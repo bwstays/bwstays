@@ -89,7 +89,7 @@ gtag('config', 'G-VZWJNHM47Z');
 <link rel="manifest" href="https://www.bwstays.com/manifest.json"/>
 
 
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src cdnjs.cloudflare.com  overpass-api.de   unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com  use.fontawesome.com ; style-src   cdnjs.cloudflare.com    unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com;    connect-src cdnjs.cloudflare.com  api.groq.com router.project-osrm.org  overpass-api.de  analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; script-src cdnjs.cloudflare.com  overpass-api.de   unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com  use.fontawesome.com ; style-src   cdnjs.cloudflare.com    unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src mc.yandex.ru mc.yandex.md bwstays.com;    connect-src api.freecurrencyapi.com cdnjs.cloudflare.com  api.groq.com router.project-osrm.org  overpass-api.de  analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"/>
 
 <link rel="icon" type="image/x-icon" href="https://www.bwstays.com/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -162,8 +162,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						  	<img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad" src="https://www.bwstays.com/assets/img/logo/direction.webp"    width="45" height="45"/>
 						  </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.bwstays.com/index.html" id="home"  rel="dofollow"  >Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#testimonial"   rel="dofollow"  id="signup" >Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.bwstays.com/index.html" id="home"  rel="dofollow" data-i18n="nav.home" >Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#testimonial"   rel="dofollow"  id="signup"       data-i18n="nav.contact" >Contact</a></li>
+                    <li class="nav-item">
+
+				<!-- Language Dropdown -->
+				<div class="nav-link language-switcher"  >
+					<select id="language-selector" aria-label="Select Language">
+						<option value="en" selected>🇬🇧 English</option>
+						<option value="es">🇪🇸 Español</option>
+						<option value="fr">🇫🇷 Français</option>
+						<option value="hi">hi हिन्दी </option>
+						<option value="ar">ar اَلْعَرَب</option>
+						<option value="ml">ml മലയാളം</option>
+					</select>
+				</div>
+			</li>
                 </ul>
             </div>
     </div>
@@ -427,7 +441,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
                     <div class="form-group mb-3">
-                        <label for="inputAddress2" class="text-white-50 small text-uppercase">Contact</label>
+                        <label for="inputAddress2" class="text-white-50 small text-uppercase"data-i18n="nav.contact" >Contact</label>
                         <input  type="text"
                             class="form-control bg-light border-0" id="inputAddress2"  autocomplete="street-address"
                               required placeholder="+-- --- --- ----">
@@ -693,29 +707,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet-src.min.js"></script>
 
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"   rel="preload" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"   rel="preload" crossorigin="anonymous"></script>
 
 
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
 
- <script src="https://www.bwstays.com/data/sitedata.js"></script>
+<script src="https://www.bwstays.com/data/sitedata.js"></script>
 
 
- <script src="https://www.bwstays.com/js/total-booking-reports.js?v=1.1"></script>
-  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
+<script src="https://www.bwstays.com/js/total-booking-reports.js?v=1.1"></script>
+<script  type="text/javascript"   src="https://www.bwstays.com/js/chat.js" ></script>
+<script  type="text/javascript"   src="https://www.bwstays.com/js/language.js" ></script>
 
 <script src="https://www.bwstays.com/js/scripts.js"></script>
 <script src="https://www.bwstays.com/js/validations.js"></script>
