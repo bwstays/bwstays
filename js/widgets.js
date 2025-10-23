@@ -241,7 +241,7 @@ async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
     } catch (error) {
        const staticRates = {
             'USD': 88.0,
-            'EUR': 103.0,
+            'EUR': 105.0,
             'GBP': 118.0,
             'JPY': 0.585,
             'CHF': 111.0,
