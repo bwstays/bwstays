@@ -167,7 +167,7 @@ function initCurrencyConverter() {
                 'EUR': '€',
                 'GBP': '£',
                 'JPY': '¥',
-                'CHF': 'CHF',
+                'CHF': '&#8355;',
                 'CAD': 'C$',
                 'AUD': 'A$',
                 'SGD': 'S$',
