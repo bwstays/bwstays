@@ -199,7 +199,7 @@ function initCurrencyConverter() {
     currencyOptions.forEach(currency => {
         const option = document.createElement('option');
         option.value = currency.code;
-        option.textContent = currency.name;
+        option.textContent = currency.code;
         fromCurrencySelect.appendChild(option);
     });
     
