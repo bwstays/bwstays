@@ -6662,7 +6662,7 @@ select#fromCurrency {
   font-size: 12px;
   font-weight: 400;
   color: white;
-    margin-left: 2px;
+    margin-left: 3px;
 
   opacity: 0.9;
 }
@@ -7104,7 +7104,6 @@ select#fromCurrency {
   border: 0;
 }
 
- 
 #language-selector {
 	padding: 1px 1px;
 	font-size: 14px;
@@ -7119,7 +7118,7 @@ select#fromCurrency {
 
 #language-selector:hover {
     border-color: #64a19d;
-    	color:#64a19d
+    	color:#565645
 
  }
 
@@ -7217,10 +7216,10 @@ select#fromCurrency {
 
 
 #language-selector {
-    background-color: #64a19d;
+    background-color: #528582;
     color: white;
     border-radius: 5px;
-    border: 1px solid #64a19d;
+    border: 1px solid #528582;
     padding: 5px 10px;
 }
 
