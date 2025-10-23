@@ -356,21 +356,21 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 .converter-input input {
     width: 100%;
-    padding: 8px;
+    padding: 5px;
     border-radius: 5px;
     border: 1px solid #64a19d;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .converter-select {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .converter-select select {
-    padding: 8px;
+    padding: 5px;
     border-radius: 5px;
     border: 1px solid #64a19d;
     background: white;
@@ -383,7 +383,7 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 .converter-result {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -398,9 +398,13 @@ ul.list-unstyled.mb-0.text-white-50 {
     border-color: #528582;
 }
 
-/* Weather Widget Adjustments */
 .weather-widget {
-  padding: 17px;
+  border-radius: 10px;
+  padding: 8px;
+  color: white;
+  max-width: 300px;
+  max-height: 160px;
+  margin-bottom: 12px;
 }
 
 
@@ -653,7 +657,7 @@ ul.list-unstyled.mb-0.text-white-50 {
                 </svg>
               </div>
               <div class="currency-selection">
-                <div class="currency-label">USD</div>
+                <div class="currency-label"></div>
                 <select id="fromCurrency" class="currency-select">
                   <option value="USD">USD - US Dollar</option>
                   <option value="EUR">EUR - Euro</option>
@@ -671,7 +675,7 @@ ul.list-unstyled.mb-0.text-white-50 {
           </div>
           <div class="currency-bottom-section">
             <div class="conversion-result">
-              <div class="conversion-text">1 <span id="fromCurrencyCode">USD</span> = <span id="result">83.00</span> INR</div>
+              <div class="conversion-text">1 <span id="fromCurrencyCode">USD</span> = <span id="result"></span> INR</div>
             </div>
           </div>
         </div>
@@ -1243,6 +1247,7 @@ ul.list-unstyled.mb-0.text-white-50 {
     </script>
 
      <script       type="text/javascript"       src="https://www.bwstays.com/js/dynamic-foodmap.js"     ></script>
+     <script type="text/javascript" src="https://www.bwstays.com/js/widgets.js"></script>
      <script>
       const script = document.createElement('script');
       script.src = 'https://www.bwstays.com/js/promo-banner.js?nocache=' + Date.now();
