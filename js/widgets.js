@@ -220,27 +220,45 @@ function populateCurrencyOptions(selectElement, currencyOptions) {
 
 async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
     const fromCurrency = fromCurrencySelect.value;
-    
+    const toCurrency = 'INR'; 
+    const amount = 1; 
 
-    const staticRates = {
-        'USD': 83.0,   
-        'EUR': 89.0,  
-        'GBP': 105.0,  
-        'JPY': 0.55,   
-        'CHF': 92.0,   
-        'CAD': 61.0,   
-        'AUD': 55.0,   
-        'SGD': 62.0,   
-        'CNY': 11.5,   
-        'AED': 22.5    
-    };
-    
-    const rate = staticRates[fromCurrency];
-    if (rate) {
-        convertedAmountElement.textContent = rate.toFixed(2);
-        return;
-    } else {
-        convertedAmountElement.textContent = '--';
+    try {
+        const response = await fetch(`https://api.frankfurter.dev/v1/latest?amount=${amount}&base=${fromCurrency}&symbols=${toCurrency}`);
+        
+        if (!response.ok) {
+            throw new Error(`Currency API error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        const rate = data.rates[toCurrency];
+        
+        if (rate) {
+            convertedAmountElement.textContent = rate.toFixed(2);
+        } else {
+            convertedAmountElement.textContent = '--';
+        }
+    } catch (error) {
+       const staticRates = {
+            'USD': 88.0,
+            'EUR': 103.0,
+            'GBP': 118.0,
+            'JPY': 0.585,
+            'CHF': 111.0,
+            'CAD': 63.3,
+            'AUD': 57.0,
+            'SGD': 68.6,
+            'CNY': 12.34,
+            'AED': 23.9
+        };
+
+        
+        const rate = staticRates[fromCurrency];
+        if (rate) {
+            convertedAmountElement.textContent = rate.toFixed(2);
+        } else {
+            convertedAmountElement.textContent = '--';
+        }
     }
 }
 
