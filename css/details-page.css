@@ -6565,12 +6565,6 @@ select#fromCurrency {
   position: relative;
 }
 
-.weather-widget:hover,
-.currency-converter-widget:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
 /* Widget Headers */
 .converter-header h4,
 .weather-widget .top-section {
@@ -6606,10 +6600,7 @@ select#fromCurrency {
   justify-content: space-between;
 }
 
-.weather-widget:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
+
 
 .weather-location {
   font-size: 12px;
