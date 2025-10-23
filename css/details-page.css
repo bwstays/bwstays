@@ -6648,9 +6648,7 @@ select#fromCurrency {
   transition: transform 0.3s ease;
 }
 
-.weather-widget:hover .weather-icon {
-  transform: scale(1.1);
-}
+
 
 .sun-ray {
   stroke: #FFD700;
@@ -6962,10 +6960,6 @@ select#fromCurrency {
   flex-direction: column;
 }
 
-.currency-converter-widget:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
 
 .currency-top-section {
   background: linear-gradient(135deg, #64a19d 0%, #64a19d 100%);
@@ -6993,9 +6987,7 @@ select#fromCurrency {
   transition: transform 0.3s ease;
 }
 
-.currency-converter-widget:hover .currency-icon {
-  transform: scale(1.1);
-}
+
 
 .currency-selection {
   display: flex;
@@ -7099,9 +7091,6 @@ select#fromCurrency {
   transition: transform 0.2s ease;
 }
 
-.currency-converter-widget:hover .currency-icon {
-  transform: scale(1.05);
-}
 
 /* data info icons */
 .da-icon {
@@ -7130,7 +7119,7 @@ select#fromCurrency {
 	border-radius: 5px;
 	background-color: #ffffff	;
 	cursor: pointer;
-	color:#000000
+	color:#000000;
 	outline: none;
 	transition: all 0.3s ease;
 }
