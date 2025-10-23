@@ -225,7 +225,7 @@ async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
     // Use updated static rates as the primary source
     const staticRates = {
         'USD': 87.83,
-        'EUR': 101.98,
+        'EUR': 105.98,
         'GBP': 117.27,
         'JPY': 0.5756,
         'CHF': 69.98,
