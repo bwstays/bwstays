@@ -6954,7 +6954,7 @@ select#fromCurrency {
 
 .currency-top-section {
   background: linear-gradient(135deg, #64a19d 0%, #64a19d 100%);
-  padding: 20px;
+  padding: 5px;
   color: white;
   flex: 1;
   display: flex;
