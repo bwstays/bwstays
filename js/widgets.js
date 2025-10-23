@@ -244,14 +244,15 @@ async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
     }
 
     try {
-        const response = await fetch(`https://api.freecurrencyapi.com/v1/latest?base_currency=${fromCurrency}&currencies=${toCurrency}`);
+        const response = await fetch(`https://api.frankfurter.dev/v1/latest?amount=1&base=${fromCurrency}&symbols=${toCurrency}`);
         
         if (!response.ok) {
             return; 
         }
         
         const data = await response.json();
-        const liveRate = data.data ? data.data[toCurrency] : null;
+        // Frankfurter API returns rates in data.rates object
+        const liveRate = data.rates ? data.rates[toCurrency] : null;
         
         if (liveRate) {
             convertedAmountElement.textContent = liveRate.toFixed(2);
