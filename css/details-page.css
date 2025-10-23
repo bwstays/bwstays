@@ -6662,6 +6662,8 @@ select#fromCurrency {
   font-size: 12px;
   font-weight: 400;
   color: white;
+    margin-left: 2px;
+
   opacity: 0.9;
 }
 
