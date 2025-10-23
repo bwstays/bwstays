@@ -513,7 +513,6 @@ ul.list-unstyled.mb-0.text-white-50 {
         <div class="weather-widget">
           <div class="weather-location">New Delhi</div>
           <div class="weather-main">
-            <div class="weather-temp">29<span class="temp-unit">°</span></div>
             <div class="weather-icon-section">
               <svg class="weather-icon" viewBox="0 0 200 200">
 			                  <!-- Sun rays -->
@@ -531,6 +530,8 @@ ul.list-unstyled.mb-0.text-white-50 {
 			                  <path d="M 60 120 Q 60 105 72 102 Q 75 95 85 95 Q 92 88 105 92 Q 118 92 122 102 Q 132 102 136 112 Q 136 122 126 122 L 70 122 Q 60 122 60 120 Z" fill="white" stroke="none"/>
               </svg>
             </div>
+            <div class="weather-temp">29<span class="temp-unit">°</span></div>
+
           </div>
           <div class="weather-condition">Sunny</div>
           <div class="weather-high-low">H:31° L:20°</div>
@@ -547,7 +548,7 @@ ul.list-unstyled.mb-0.text-white-50 {
               </div>
               <div class="currency-selection">
                 <div class="currency-label"></div>
-                <select id="fromCurrency" class="currency-select">
+                <select id="fromCurrency" class="currency-select" aria-label="Select Currency" >
                   <option value="USD">USD - US Dollar</option>
                   <option value="EUR">EUR - Euro</option>
                   <option value="GBP">GBP - British Pound</option>
