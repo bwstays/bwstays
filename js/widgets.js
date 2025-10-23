@@ -212,7 +212,7 @@ function populateCurrencyOptions(selectElement, currencyOptions) {
     currencyOptions.forEach(currency => {
         const option = document.createElement('option');
         option.value = currency.code;
-        option.textContent = currency.name;
+        option.textContent = currency.code;
         selectElement.appendChild(option);
     });
 }
