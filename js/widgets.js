@@ -221,44 +221,44 @@ function populateCurrencyOptions(selectElement, currencyOptions) {
 async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
     const fromCurrency = fromCurrencySelect.value;
     const toCurrency = 'INR'; 
-    const amount = 1; 
+
+    // Use updated static rates as the primary source
+    const staticRates = {
+        'USD': 87.83,
+        'EUR': 101.98,
+        'GBP': 117.27,
+        'JPY': 0.5756,
+        'CHF': 69.98,
+        'CAD': 122.86,
+        'AUD': 57.19,
+        'SGD': 66.17,
+        'CNY': 12.33,
+        'AED': 23.92
+    };
+
+    const rate = staticRates[fromCurrency];
+    if (rate) {
+        convertedAmountElement.textContent = rate.toFixed(2);
+    } else {
+        convertedAmountElement.textContent = '--';
+    }
 
     try {
-        const response = await fetch(`https://api.frankfurter.dev/v1/latest?amount=${amount}&base=${fromCurrency}&symbols=${toCurrency}`);
+        const response = await fetch(`https://api.freecurrencyapi.com/v1/latest?base_currency=${fromCurrency}&currencies=${toCurrency}`);
         
         if (!response.ok) {
-            throw new Error(`Currency API error: ${response.status}`);
+            return; 
         }
         
         const data = await response.json();
-        const rate = data.rates[toCurrency];
+        const liveRate = data.data ? data.data[toCurrency] : null;
         
-        if (rate) {
-            convertedAmountElement.textContent = rate.toFixed(2);
-        } else {
-            convertedAmountElement.textContent = '--';
+        if (liveRate) {
+            convertedAmountElement.textContent = liveRate.toFixed(2);
         }
     } catch (error) {
-       const staticRates = {
-            'USD': 88.0,
-            'EUR': 105.0,
-            'GBP': 118.0,
-            'JPY': 0.585,
-            'CHF': 111.0,
-            'CAD': 63.3,
-            'AUD': 57.0,
-            'SGD': 68.6,
-            'CNY': 12.34,
-            'AED': 23.9
-        };
-
-        
-        const rate = staticRates[fromCurrency];
-        if (rate) {
-            convertedAmountElement.textContent = rate.toFixed(2);
-        } else {
-            convertedAmountElement.textContent = '--';
-        }
+        console.error('Error fetching currency rates:', error);
+        return;
     }
 }
 
