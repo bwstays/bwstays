@@ -251,7 +251,6 @@ async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
         }
         
         const data = await response.json();
-        // Frankfurter API returns rates in data.rates object
         const liveRate = data.rates ? data.rates[toCurrency] : null;
         
         if (liveRate) {
