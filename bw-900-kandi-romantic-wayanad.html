@@ -411,14 +411,21 @@ ul.list-unstyled.mb-0.text-white-50 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 650px;
-    margin: 0 auto;
+    max-width: 320px;
+    margin: 0;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 @media (max-width: 768px) {
     .widgets-container {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
+        top: 80px;
+        right: 10px;
+        max-width: 300px;
     }
 
     .currency-converter-widget, .weather-widget {
@@ -671,7 +678,7 @@ ul.list-unstyled.mb-0.text-white-50 {
 
         <div class="row">
 
-          <div class="div.col-lg-6 col-lg-6" >
+          <div class="col-lg-6" id="left-content-column">
 
             <div
                class="det-marg-f"
@@ -680,18 +687,10 @@ ul.list-unstyled.mb-0.text-white-50 {
                  class="det-pos-f"
               >
                 <img
-                  title="preparing your home for seasonal temperature shifts wayanad"
-                  src="https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp"
-                  alt="900 Kandi Glass Bridge  visit"
-                   class="det-img-f img-fluid" width="25" height="50"
-
-                />
-
-                <img
-                  title="Black and White Stays Service Villa"
-                  src="https://www.bwstays.com/assets/img/romantic/bw-weekend-destination-glassbridge-wayanad.webp"
-                  alt="900 Kandi Glass Bridge adventure"
-                   class="det-img-f img-fluid" width="25" height="50"
+                  title="900 Kandi Glass Bridge"
+                  src="https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp"  loading="lazy"
+                  alt="900 Kandi Glass Bridge"
+                   class="det-img-f img-fluid"
 
                 />
               </div>
@@ -702,14 +701,13 @@ ul.list-unstyled.mb-0.text-white-50 {
                 <i class="fas fa-chevron-left"></i>
               </div>
               <div
-                class="div.image-nav-arrow.image-nav-right image-nav-arrow image-nav-right"
-                 >
+                class="div.image-nav-arrow.image-nav-right image-nav-arrow image-nav-right">
                 <i class="fas fa-chevron-right"></i>
               </div>
             </div>
 
 
-            <div>
+            <div class="text-left">
               <h3 class="text-white mb-3">900 Kandi Glass Bridge</h3>
               <div class="mb-3">
                 <a href="#nearby-places" id="nearbyplaces"
@@ -761,11 +759,11 @@ ul.list-unstyled.mb-0.text-white-50 {
               </div>
               <div class="mb-3">
                 <span class="text-white-50 ml-2">
-                <p class="content">
+                <p class="content" style="text-align: left;">
                   The Wayanad <span class="highlight">Glass bridge </span>is spotted at a distance of 900m from
                   Thollayiram Kandi and is approximately 13km from <span class="location">Meppadi</span>.
 				 </p>
-				 <p class="content">
+				 <p class="content" style="text-align: left;">
                   The 900 Kandi Glass Bridge delivers a captivating experience, blending heart-pounding adventure with breathtaking views of nature. Suspended high above lush valleys and green landscapes, this glass bridge offers a one-of-a-kind journey that will leave you in awe.
 					</p>
                    </span>
@@ -791,12 +789,12 @@ ul.list-unstyled.mb-0.text-white-50 {
  							</div>
  					</div>
 
-					<h3 class="text-white mb-3">Nearby Gas Filling Station </h3>
+					<h3 class="text-white mb-3">Gas Filling Near by this location </h3>
 					<div class="contact-card-divider border-bottom border-primary mb-4" ></div>
 					<div   id="gasfuel-places"  data-center="11.4967237, 76.1051083"   >
  							<div id="gasfuel" >
- 							 <img title="Gas Filling in wayanad" src="https://www.bwstays.com/assets/img/ev_fuel/900-kandi-gas.webp" alt="Gas Station"   usemap="#locationmapgas" id="mapgasimage" class="det-img-f img-fluid"/>
-  							</div>
+  							 <img title="Gas Filling in wayanad" src="https://www.bwstays.com/assets/img/ev_fuel/900-kandi-gas.webp" alt="Gas Station"   usemap="#locationmapgas" id="mapgasimage" class="det-img-f img-fluid"/>
+    							</div>
  					</div>
 
 
@@ -805,9 +803,10 @@ ul.list-unstyled.mb-0.text-white-50 {
           </div>
 
 
-          <div class="div.col-lg-6 col-lg-6">
+          <div class="col-lg-6" id="right-content-column">
             <div
-              class="div.border-bottom.border-primary.text-center.mb-4 border-bottom border-primary text-center mb-4"
+              class="border-bottom border-primary text-center mb-4"
+              id="header-container"
 
             >
               <h5 class="text-white">Romantic Places</h5>
@@ -872,8 +871,8 @@ ul.list-unstyled.mb-0.text-white-50 {
 
 	<div class="container py-2">
 		  <div class="col-md-12 text-center ">
-			<div class="text-left mb-12 text-center">
-				<h2 class="text-black font-weight-bold text-center">Get in touch with us</h2>
+			<div class="text-left mb-12">
+				<h2 class="text-black font-weight-bold">Get in touch with us</h2>
 				<div class="border-bottom border-primary text-center mb-4" id="contact-divider-2"></div>
 			</div>
 		   </div>
@@ -980,8 +979,8 @@ ul.list-unstyled.mb-0.text-white-50 {
         <div class="container py-2">
 
             <div class="col-md-12 text-center mb-4">
-                <div class="text-left mb-12 text-center">
-                    <h2 class="text-white font-weight-bold text-center">About us</h2>
+                <div class="text-left mb-12">
+                    <h2 class="text-white font-weight-bold">About us</h2>
                     <div class="border-bottom border-primary text-center mb-4"
                         id="contact-divider-3"></div>
                 </div>
