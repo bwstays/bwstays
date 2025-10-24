@@ -6613,7 +6613,8 @@ select#fromCurrency {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
+  margin-right: 15px;
 }
 
 .weather-temp {
@@ -6656,6 +6657,7 @@ select#fromCurrency {
   font-weight: 500;
   margin-bottom: 8px;
   color: white;
+  margin-left: 3px;
 }
 
 .weather-high-low {
@@ -7143,7 +7145,7 @@ select#fromCurrency {
     border-radius: 10px;
     color: white;
     max-width: 200px;
-    max-height: 148px;
+    max-height: 136px;
 }
 .currency-top-section {
   background: linear-gradient(135deg, #64a19d 0%, #64a19d 100%);
