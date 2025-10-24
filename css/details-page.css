@@ -190,6 +190,7 @@
   /* border: 1px solid #f0f0f0; */
   cursor: pointer;
   transition: background-color 0.2s;
+  font-size: .9rem;
 }
 
 .days .day:hover {
@@ -7225,6 +7226,10 @@ select#fromCurrency {
 
 #language-selector:focus {
     outline: none;
+}
+
+#language-selector:active {
+    background-color: #64a19d;
 }
 
 #language-selector option {
