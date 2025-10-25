@@ -1,7 +1,7 @@
 const shopdata = {
   honey: [
     {
-      id: 80,
+      id: 1,
       name: "Peria tea plantation",
       description: "Lush greenery and tea plantations..",
       image: [
@@ -47,7 +47,7 @@ const shopdata = {
       www: "https://www.periatea.com/tourism/",
     },
     {
-      id: 61,
+      id: 2,
       name: "Rippon Tea estate",
       description: "L greenery and tea plantations near meppady.",
       image: [
@@ -97,7 +97,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 62,
+      id: 3,
       name: "Coffee Plantation",
       description:
         "Expansive Coffee Plantation with guided tours and tasting sessions.",
@@ -149,7 +149,7 @@ const shopdata = {
 
   tribal: [
     {
-      id: 33,
+      id: 4,
       name: "Meenmutty Falls",
       description:
         "One of the largest and most spectacular waterfalls in Wayanad.",
@@ -195,7 +195,7 @@ const shopdata = {
     },
 
     {
-      id: 34,
+      id: 5,
       name: "Sentinel Rock Waterfall",
       description:
         "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
@@ -238,7 +238,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 35,
+      id: 6,
       name: "Soochipara Falls",
       description:
         "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
@@ -280,7 +280,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 36,
+      id: 7,
       name: "Cheeyambam waterfalls",
       description:
         "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
@@ -322,7 +322,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 37,
+      id: 8,
       name: "Kanthanpara Falls",
       description:
         "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
@@ -367,7 +367,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 38,
+      id: 9,
       name: "Kappikalam waterfalls",
       description:
         "Kappikalam waterfalls, perfect for trekking and rock climbing.",
@@ -409,7 +409,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 40,
+      id: 10,
       name: "Arripara falls",
       description:
         "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
@@ -451,7 +451,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 41,
+      id: 11,
       name: "Irrupu falls ",
       description:
         "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
@@ -493,7 +493,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 42,
+      id: 12,
       name: "Chetalayam falls  ",
       description:
         "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
@@ -537,7 +537,7 @@ const shopdata = {
     },
 
     {
-      id: 16,
+      id: 13,
       name: "Thusharagiri",
       description: "Water fall down the Ghats of wayanad.",
       image: [
@@ -581,7 +581,7 @@ const shopdata = {
   ],
   spices: [
     {
-      id: 52,
+      id: 14,
       name: "Gandhi Museaum",
       description: "Gandhi Museaum.",
       image: [
@@ -631,7 +631,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 89,
+      id: 15,
       name: "Kungichira Museum & Chira",
       description: "Kungichira Museum & Chira.",
       image: [
@@ -682,7 +682,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 26,
+      id: 16,
       name: "Tea Museum",
       description:
         "Displays tribal heritage and ancient artifacts from the region.",
@@ -733,7 +733,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 78,
+      id: 17,
       name: "Honey Museum",
       description: "Varities of honey displayed to taste and purchase.",
       image: [
@@ -779,7 +779,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 27,
+      id: 18,
       name: "Folklore Museum",
       description:
         "Showcases the rich cultural heritage and tribal artifacts of Wayanad Pookonth House, Kuthirivallu",
@@ -834,7 +834,7 @@ const shopdata = {
   ],
   tourist: [
     {
-      id: 22,
+      id: 19,
       name: "Mullanpara View Point",
       description: "Mullanpara View Point.",
       image: [
@@ -881,7 +881,7 @@ const shopdata = {
       www: "",
     },
     {
-      id: 43,
+      id: 20,
       name: "Karapuzha Dam",
       description: "Karapuzha Dam.",
       image: [
@@ -929,864 +929,9 @@ const shopdata = {
 
       duration: "1-2 Hours",
       www: "",
-    },
+    }
 
-    {
-      id: 39,
-      name: "Karland Lake",
-      description:
-        "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-stays-karlad-lake-wayanad-tourism.webp",
-        "https://www.bwstays.com/assets/img/romantic/bw-rooms-karlad-lake-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "15",
-      transport: "Public",
-      rating: "4.1",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      latlong: "11.650035025731679, 75.9824076530733",
-      map: "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
 
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Water Falls",
-      knowmore: "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 44,
-      name: "Pookode Lake",
-      description:
-        "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp",
-        "https://www.bwstays.com/assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "13",
-      latlong: "11.542442317568533, 76.02721621504702",
-      map: "https://maps.app.goo.gl/aXHoGQxHbaYHuBrc9",
-      hrs: "2",
-      fee: "0",
-      aliases: ["pookode", "pookode lake"],
-      transport: "Public",
-      rating: "4.1",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore: "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 45,
-      name: "Banasurasagar Dam",
-      description:
-        "Opt for a speed or pedal boat to have an enthralling experience of the stupendous landscapes",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-staycation-banasura-sagar-wayanad.webp",
-        "https://www.bwstays.com/assets/img/romantic/bw-resort-banasura-sagar-dam-homestay.webp",
-        "https://www.bwstays.com/assets/img/romantic/bw-stays-banasura-sagar-dam-wayanad.avif",
-      ],
-      holidays: "Sun",
-      timing: ["06:00-17:30"],
-      Contact: "+91 493 627 3460",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "21",
-      latlong: "11.670215394616353, 75.95775654232763",
-      map: "https://maps.app.goo.gl/yP3jmivd2c4C1D258",
-      hrs: "1",
-      fee: "40 INR",
-      aliases: ["banasura", "banasurasagar", "banasura dam"],
-      transport: "Public",
-      rating: "4.3",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html",
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 46,
-      name: "Mailadippara",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/black-and-white-mailadanpara-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "3",
-      latlong: "11.624409556486977, 76.0923043558191",
-      map: "https://maps.app.goo.gl/BAfPDiMsxSXDTAy49",
-      transport: "Public",
-      rating: "4.3",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore: "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 47,
-      name: "Banasura Sagar Hills",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-villa-home-banasura-hills.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "29",
-      latlong: "11.695175204242553, 75.90797008546211",
-      map: "https://maps.app.goo.gl/VozGZG6FC7V28ZW66",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      transport: "Public",
-      rating: "4.3",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html",
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 48,
-      name: "Manjappara",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-holiday-longstay-manjapara-viewpoint.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "23",
-      latlong: "11.602130295485557, 76.19922151534472",
-      map: "https://maps.app.goo.gl/4gw5UYWqBXZZQKGz8",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      transport: "Public",
-      rating: "4.5",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore: "https://www.bwstays.com/bw-manjappara-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 50,
-      name: "Phantom rock",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-resort-phanthom-rock-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "19",
-      latlong: "11.636687345789426, 76.20460141779273",
-      map: "https://maps.app.goo.gl/5MyVymApv9TRyowB9",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      transport: "Public",
-      rating: "3.9",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html",
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 51,
-      name: "Kurumbalakotta",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-weekend-kurumbalakotta-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "18",
-      latlong: "11.698245, 76.028686",
-      map: "https://maps.app.goo.gl/uv6HuRSHrQJTb7hd7",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      transport: "Public",
-      rating: "4.5",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 53,
-      name: "Attamala View Point",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-stays-attamala-resort-wayanad.avif",
-      ],
-      holidays: "Sun",
-      timing: ["07:00-18:30"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "25",
-      latlong: "11.498498126983506, 76.17549155352333",
-      map: "https://maps.app.goo.gl/3uDXNU4VuoQLEVYJ6",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      transport: "Public",
-      rating: "4.6",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html",
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 54,
-      name: "Sunrise valley",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-stays-sunrise-valley-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "25",
-      latlong: "11.5233771, 76.2140645",
-      map: "https://maps.app.goo.gl/Sa4fZJ9RNckLwrHz5",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      transport: "Public",
-      rating: "4.4",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html",
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 55,
-      name: "Neelimala view point",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-kalpetta-neelimala-view-point-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "26",
-      latlong: "11.53679433721778, 76.22909644232763",
-      map: "https://maps.app.goo.gl/4YjzLwSQTPABJ1cK9",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      transport: "Public",
-      rating: "3.9",
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 56,
-      name: "Lakkidi view point",
-      description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-lakkidi-view-point-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "16",
-      latlong: "11.512393990351887, 76.01895535767235",
-      map: "https://maps.app.goo.gl/bdvdseoihwD9Ao9B7",
-      transport: "Public",
-      rating: "4.5",
-      hrs: "2",
-      fee: "0",
-      aliases: ["lakkidi", "lakkidi ghats", "lakkidi viewpoint"],
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 58,
-      name: "900 Kandi",
-      description:
-        "Welcome to the. Land of Bliss · Meet Kerala's longest hanging glass bridge.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-weekend-destination-glassbridge-wayanad.webp",
-        "https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp",
-      ],
-      holidays: "All Day",
-      timing: ["09:00-18:00"],
-      Contact: "+91 62385 76424/+91 97444 82007",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "21",
-      latlong: "11.4967237, 76.1051083",
-      map: "https://maps.app.goo.gl/NzMMtmVJKBeWaHSJ7",
-      transport: "Public",
-      rating: "3.9",
-      hrs: "3",
-      fee: "100-250 INR & 4*4 Jeep drive to top ₹1200",
-      aliases: ["900 kandi", "thollayiram kandi", "glass bridge"],
-      content:
-        "Prepare for an adventure that plunges you deep into the heart of excitement and exploration.",
-      amenities: ["Mountain View", "Glass Bridge", "Yoga Classes", "Park"],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-      type: "Romantic Spots",
-      knowmore: "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 83,
-      name: "Neelarchalu",
-      description: "Neelarchalu.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/black-and-white-nellarachal-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "49",
-      latlong: "11.60151625745816, 76.17700752883617",
-      map: "https://maps.app.goo.gl/ESWx6zyHnsxEKLyy8",
-      transport: "Public",
-      rating: "4.5",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 84,
-      name: "Munneswaran Kunnu",
-      description: "Munneswaran Kunnu.",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-villa-holiday-munnewaram-hill.webp",
-      ],
-      holidays: "Sun",
-      timing: ["07:00-18:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "42",
-      latlong: "11.863748932136927, 75.9589761534138",
-      map: "https://maps.app.goo.gl/Bi972R4oZ2jeZzRq8",
-      transport: "Public",
-      rating: "4.5",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 85,
-      name: "Bamboo Forest Valentine's Park",
-      description: "Bamboo Forest Valentine's Park",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-workation-bamboo-park-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["07:00-18:00"],
-      Contact: "+91-7591933369",
-      seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
-      ],
-      distance: "21",
-      latlong: "11.743355206702713, 76.12590988793323",
-      map: "https://maps.app.goo.gl/nY96t3Y3f7jPFpb77",
-      transport: "Public",
-      rating: "3.2",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
-      amenities: [
-        "Mountain View",
-        "Private Pool",
-        "Yoga Classes",
-        "Ayurvedic Spa",
-      ],
-      tags: [
-        "Ghats",
-        "kalpetta",
-        "Deccan Plateau",
-        "seafood",
-        "yoga",
-        "cliff",
-        "ayurvedic",
-        "spice shops",
-      ],
-
-      type: "Romantic Spots",
-      knowmore:
-        "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-
-    {
-      id: 75,
-      name: "Muneeswaran Kunnu View point",
-      description: "Sample",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-muneeswarankunnu-muneeswaran-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["10:00-21:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: ["All Season"],
-      distance: "10",
-      transport: "Public",
-      latlong: "11.619717987953072, 76.08467260510648",
-      map: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
-      rating: "4.5",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      content:
-        "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
-      amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
-      tags: [
-        "spice shopping",
-        "guided tours",
-        "local markets",
-        "cardamom",
-        "pepper",
-        "cinnamon",
-        "kerala cuisine",
-      ],
-
-      type: "Romantic Spots",
-      knowmore: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
-      duration: "1-2 Hours",
-      www: "",
-    },
-    {
-      id: 76,
-      name: "Bamboo Park",
-      description: "Sample",
-      image: [
-        "https://www.bwstays.com/assets/img/romantic/bw-workation-bamboo-park-wayanad.webp",
-      ],
-      holidays: "Sun",
-      timing: ["10:00-21:00"],
-      Contact: "+91-000 000 0000",
-      seasontovisit: ["All Season"],
-      distance: "10",
-      transport: "Public",
-      latlong: "11.619717987953072, 76.08467260510648",
-      map: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
-      rating: "4.5",
-      hrs: "2",
-      fee: "0",
-      aliases: [],
-      content:
-        "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
-      amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
-      tags: [
-        "spice shopping",
-        "guided tours",
-        "local markets",
-        "cardamom",
-        "pepper",
-        "cinnamon",
-        "kerala cuisine",
-      ],
-      type: "Romantic Spots",
-      knowmore: "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
-      duration: "1-2 Hours",
-      www: "",
-    },
   ]
 
 
