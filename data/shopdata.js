@@ -40,7 +40,7 @@ const shopdata = {
         "spice processing",
         "organic",
       ],
-      type: "Plantations",
+      type: "honey",
       knowmore:
         "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html",
       duration: "1-2 Hours",
@@ -90,7 +90,7 @@ const shopdata = {
         "spice processing",
         "organic",
       ],
-      type: "Plantations",
+      type: "honey",
       knowmore:
         "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html",
       duration: "1-2 Hours",
@@ -138,7 +138,7 @@ const shopdata = {
         "organic",
       ],
 
-      type: "Plantations",
+      type: "honey",
       knowmore:
         "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html",
 
@@ -188,7 +188,7 @@ const shopdata = {
         "authentic",
       ],
 
-      type: "Water Falls",
+      type: "tribal",
       knowmore: "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html",
       duration: "1-2 Hours",
       www: "",
@@ -230,7 +230,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore:
         "https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html",
 
@@ -274,7 +274,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore: "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html",
       duration: "1-2 Hours",
       www: "",
@@ -315,7 +315,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore: "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html",
 
       duration: "1-2 Hours",
@@ -360,7 +360,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore: "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html",
 
       duration: "1-2 Hours",
@@ -402,7 +402,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore: "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html",
 
       duration: "1-2 Hours",
@@ -444,7 +444,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore: "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html",
 
       duration: "1-2 Hours",
@@ -486,7 +486,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore: "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html",
 
       duration: "1-2 Hours",
@@ -529,7 +529,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore: "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html",
 
       duration: "1-2 Hours",
@@ -571,7 +571,7 @@ const shopdata = {
         "tranquil",
         "authentic",
       ],
-      type: "Water Falls",
+      type: "tribal",
       knowmore:
         "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html",
 
@@ -624,7 +624,7 @@ const shopdata = {
         "kerala dishes",
       ],
 
-      type: "Museums & Crafts",
+      type: "spices",
       knowmore: "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html",
 
       duration: "1-2 Hours",
@@ -674,7 +674,7 @@ const shopdata = {
         "kerala dishes",
       ],
 
-      type: "Museums & Crafts",
+      type: "spices",
       knowmore:
         "https://www.bwstays.com/bw-kunkichira-heritage-museum-at-periya-wayanad.html",
 
@@ -726,7 +726,7 @@ const shopdata = {
         "kerala dishes",
       ],
 
-      type: "Museums & Crafts",
+      type: "spices",
       knowmore: "https://www.bwstays.com/bw-tea-museum-wayanad.html",
 
       duration: "1-2 Hours",
@@ -772,7 +772,7 @@ const shopdata = {
         "kerala dishes",
       ],
 
-      type: "Museums & Crafts",
+      type: "spices",
       knowmore: "https://www.bwstays.com/bw-honey-museum-wayanad.html",
 
       duration: "1-2 Hours",
@@ -825,7 +825,7 @@ const shopdata = {
         "kerala dishes",
       ],
 
-      type: "Museums & Crafts",
+      type: "spices",
       knowmore: "https://www.bwstays.com/bw-folklore-museum-wayanad.html",
 
       duration: "1-2 Hours",
@@ -874,7 +874,7 @@ const shopdata = {
         "ayurvedic",
         "spice shops",
       ],
-      type: "Romantic Spots",
+      type: "tourist",
       knowmore:
         "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html",
       duration: "1-2 Hours",
@@ -923,7 +923,7 @@ const shopdata = {
         "spice shops",
       ],
 
-      type: "Romantic Spots",
+      type: "tourist",
       knowmore:
         "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html",
 
