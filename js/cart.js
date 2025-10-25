@@ -374,7 +374,6 @@ function updateLeftColumnContentForKnowMore() {
     if (leftArrow) leftArrow.style.display = 'none';
     if (rightArrow) rightArrow.style.display = 'none';
   }
-
   // Image navigation function
   function updateImage(direction) {
     if (imageArray.length <= 1) return;
