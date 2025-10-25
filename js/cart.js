@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
   const sections = document.querySelectorAll('#loc .container .row.justify-content-center');
-  let sectionIndex = 1;
+  let sectionIndex = 0;
   Object.keys(shopdata).forEach((sectionType) => {
 	    alert(sectionType);
     if (shopdata[sectionType]) {
