@@ -1,9 +1,9 @@
 window.addEventListener('load', function () {
   const sections = document.querySelectorAll('#loc .container .row.justify-content-center');
   let sectionIndex = 1;
-  Object.keys(siteData).forEach((sectionType) => {
-    if (siteData[sectionType]) {
-      initializeSection(sectionType, siteData[sectionType], sectionIndex);
+  Object.keys(shopdata).forEach((sectionType) => {
+    if (shopdata[sectionType]) {
+      initializeSection(sectionType, shopdata[sectionType], sectionIndex);
       sectionIndex++;
     }
   });
@@ -30,7 +30,7 @@ window.addEventListener('load', function () {
   if ( currentcatId !== undefined  && currentcatId  != null &&   currentPageId !== undefined && currentPageId != null
   && currentcatId.length!=0  && currentPageId.length!=0  )
   {
-  var currentItem = Object.values(siteData)[currentcatId].filter(item => item.id === eval(currentPageId));
+  var currentItem = Object.values(shopdata)[currentcatId].filter(item => item.id === eval(currentPageId));
   const imgContainer = document.createElement('div');
   imgContainer.style.marginBottom = '2rem';
   imgContainer.style.position = 'relative';
@@ -191,7 +191,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
     rightColumn.appendChild(rightColumnHead);
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'row';
-  const filteredItems =  Object.values(siteData)[currentcatId].filter(item => item.id !== eval(currentPageId));
+  const filteredItems =  Object.values(shopdata)[currentcatId].filter(item => item.id !== eval(currentPageId));
   filteredItems.forEach((item, index) => {
       const cardCol = document.createElement('div');
       cardCol.className = 'col-md-6 mb-4';
@@ -250,7 +250,7 @@ function updateRightColumnOnly() {
     return;
   }
   rightColumnContainer.innerHTML = '';
-  const filteredItems = Object.values(siteData)[currentcatId].filter(item => item.id !== eval(currentPageId));
+  const filteredItems = Object.values(shopdata)[currentcatId].filter(item => item.id !== eval(currentPageId));
   filteredItems.forEach((item) => {
     const cardCol = document.createElement('div');
     cardCol.className = 'col-md-6 mb-4';
@@ -296,7 +296,7 @@ function updateRightColumnOnly() {
   });
   const nearbyPlacesTitle = document.querySelector('#nearby-places h2');
   if (nearbyPlacesTitle) {
-    const currentItem = Object.values(siteData)[currentcatId].find(item => item.id === eval(currentPageId));
+    const currentItem = Object.values(shopdata)[currentcatId].find(item => item.id === eval(currentPageId));
     if (currentItem) {
       nearbyPlacesTitle.textContent = "Locations Nearby " + currentItem.name;
     }
@@ -316,7 +316,7 @@ function updateLeftColumnContentForKnowMore() {
   leftColumnContainer.innerHTML = '';
 
   // Get current item data
-  const currentItem = Object.values(siteData)[currentcatId].filter(item => item.id === eval(currentPageId));
+  const currentItem = Object.values(shopdata)[currentcatId].filter(item => item.id === eval(currentPageId));
   if (!currentItem || currentItem.length === 0) {
     return;
   }
