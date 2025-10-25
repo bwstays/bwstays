@@ -2243,12 +2243,10 @@ const siteData = {
         "https://www.bwstays.com/assets/img/trucking/bw-homestay-kerala-wayanad-edakkal-caves.webp",
       ],
       holidays: "Mon",
-      timing: ["08:30-16:00"],
+      timing: ["09:30-16:30"],
       Contact: "+91 493 621 5339",
       seasontovisit: [
-        "Summer (March-May)",
-        "Monsoon (June-September)",
-        "Winter (October-February)",
+        "Summer (November-March)",
       ],
       distance: "4",
       transport: "Public",
@@ -2278,7 +2276,7 @@ const siteData = {
       knowmore:
         "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html",
 
-      duration: "1-2 Hours",
+      duration: "2-3 Hours",
       www: "",
     },
     {
