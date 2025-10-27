@@ -7119,11 +7119,7 @@ select#fromCurrency {
 	transition: all 0.3s ease;
 }
 
-#language-selector:hover {
-    border-color: #64a19d;
-    	color:#565645
-
- }
+ 
 
 #language-selector:focus {
     border-color: #64a19d;
