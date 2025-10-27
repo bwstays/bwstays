@@ -7234,6 +7234,10 @@ select#fromCurrency {
     background-color: #64a19d;
 }
 
+#language-selector:hover {
+    background-color: #64a19d;
+}
+
 #language-selector option {
     background-color: white;
     border-radius: 5px;
