@@ -7112,7 +7112,7 @@ select#fromCurrency {
 	font-size: 14px;
 	border: 0px solid #000;
 	border-radius: 5px;
-	background-color: #ffffff	;
+	background-color: #64a19d;
 	cursor: pointer;
 	color:#000000;
 	outline: none;
@@ -7130,8 +7130,9 @@ select#fromCurrency {
 #language-selector option {
     padding: 12px;
     font-size: 15px;
-    background-color: #ffffff;
+    background-color: #64a19d;
     font-weight: 500;
+    color:#000000
 }
 
 
