@@ -7123,12 +7123,14 @@ select#fromCurrency {
 
 #language-selector:focus {
     border-color: #64a19d;
+    outline: none;
 
  }
 
 /* Style for dropdown options */
 #language-selector option {
     padding: 12px;
+    border-radius: 5px;
     font-size: 15px;
     background-color: #64a19d;
     font-weight: 500;
@@ -7223,9 +7225,7 @@ select#fromCurrency {
     padding: 5px 10px;
 }
 
-#language-selector:focus {
-    outline: none;
-}
+ 
 
 #language-selector:active {
     background-color: #64a19d;
@@ -7235,10 +7235,7 @@ select#fromCurrency {
     background-color: #64a19d;
 }
 
-#language-selector option {
-    background-color: white;
-    border-radius: 5px;
-}
+ 
 
 /* Flex container for widgets */
 .widgets-container {
