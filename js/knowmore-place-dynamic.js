@@ -463,7 +463,7 @@ function initializeSection(sectionType, data, sectionIndex) {
   const titleElement = document.createElement('h4');
   titleElement.className = 'text-white';
   titleElement.textContent = sectionTitle;
-  titleElement.setAttribute('data-i18n'+sectionIndex, 'translation_key');
+   titleElement.textContent = titleElement.getAttribute('data-i18n'+sectionIndex);
 
   textContainer.appendChild(titleElement);
   const line = document.createElement('div');
