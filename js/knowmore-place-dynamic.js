@@ -464,8 +464,8 @@ function initializeSection(sectionType, data, sectionIndex) {
   titleElement.className = 'text-white';
   titleElement.textContent = sectionTitle;
   alert(sectionIndex);
-  alert(titleElement.getAttribute('disc.item1'));
-  titleElement.setAttribute('data-i18n','disc.item'+sectionIndex);
+  //alert(titleElement.getAttribute('disc.item1'));
+  //titleElement.setAttribute('data-i18n','disc.item'+sectionIndex);
 
   textContainer.appendChild(titleElement);
   const line = document.createElement('div');
