@@ -288,7 +288,7 @@ function updateRightColumnOnly() {
             <i class="fas fa-phone"></i> ${item.Contact}
           </small>
         </div>
-        <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto" rel="dofollow" data-i18n="disc.km">Know More</a>
+        <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto" rel="dofollow" data-i18n="nav.km">Know More</a>
       </div>
     `;
     cardCol.appendChild(card);
