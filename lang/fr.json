@@ -6,7 +6,7 @@
   "nav.reservation": "Votre succès est notre mission",
   "nav.nby": "Lieux à proximité",
   "nav.contact": "Contact",
-  
+
   "foot.cd": "Droits d'auteur et avertissement",
   "foot.pp": "Politique de confidentialité",
   "foot.ts": "Conditions d'utilisation",
@@ -25,7 +25,7 @@
   "foot.p3": "Sites patrimoniaux, cafés, lacs et sentiers forestiers tous à proximité.",
   "foot.Af": "Idéal pour",
   "foot.p4": "Familles, couples et télétravailleurs recherchant le calme avec la commodité.",
-  
+
   "book.re": "Réservations",
   "book.ca": "Vérifier la disponibilité",
   "book.sev": "Sélectionner les villas",
@@ -35,5 +35,20 @@
   "book.imin": "Informations importantes",
   "book.fras": "Questions fréquemment posées",
   "book.prgu": "Invité principal",
-  "book.add": "Adresse"
+  "book.add": "Adresse",
+
+  "disc.item1": "Plantations",
+  "disc.item2": "Chutes d'eau",
+  "disc.item3": "Musées et artisanat",
+  "disc.item4": "Endroits romantiques",
+  "disc.item5": "Culturel et historique",
+  "disc.item6": "Randonnée",
+  "disc.item7": "Faune",
+  "disc.item8": "Visite de ferme",
+  "disc.item9": "Activités sportives",
+  "disc.item10": "Restaurants",
+  "disc.item11": "Tribal",
+  "disc.item12": "Cyclisme",
+  "disc.item13": "Shopping",
+"disc.item14": "Pèlerinage"
 }

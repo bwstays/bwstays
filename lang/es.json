@@ -6,7 +6,7 @@
   "nav.reservation": "Tu éxito es nuestra misión",
   "nav.nby": "Lugares cercanos",
   "nav.contact": "Contacto",
-  
+
   "foot.cd": "Derechos de autor y descargo de responsabilidad",
   "foot.pp": "Política de privacidad",
   "foot.ts": "Términos de servicio",
@@ -25,7 +25,7 @@
   "foot.p3": "Lugares patrimoniales, cafés, lagos y senderos forestales cercanos.",
   "foot.Af": "Ideal para",
   "foot.p4": "Familias, parejas y trabajadores remotos que buscan tranquilidad con comodidad.",
-  
+
   "book.re": "Reservas",
   "book.ca": "Verificar disponibilidad",
   "book.sev": "Seleccionar villas",
@@ -35,5 +35,20 @@
   "book.imin": "Información importante",
   "book.fras": "Preguntas frecuentes",
   "book.prgu": "Huésped principal",
-  "book.add": "Dirección"
+  "book.add": "Dirección",
+
+  "disc.item1": "Plantaciones",
+  "disc.item2": "Cascadas",
+  "disc.item3": "Museos y artesanía",
+  "disc.item4": "Lugares románticos",
+  "disc.item5": "Cultural e histórico",
+  "disc.item6": "Senderismo",
+  "disc.item7": "Vida silvestre",
+  "disc.item8": "Visita a granjas",
+  "disc.item9": "Deportes",
+  "disc.item10": "Restaurantes",
+  "disc.item11": "Tribal",
+  "disc.item12": "Ciclismo",
+  "disc.item13": "Compras",
+"disc.item14": "Peregrinación"
 }
