@@ -1709,7 +1709,6 @@ const siteData = {
       type: "Romantic Spots",
       knowmore:
         "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html",
-
       duration: "1-2 Hours",
       www: "",
     },

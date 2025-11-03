@@ -25,8 +25,8 @@
   "foot.p3": "Heritage spots, Cafes, Lakes and Forest trails all close by.",
   "foot.Af": "apt for",
   "foot.p4": "Families, couples and remote workers seeking calm with convenience.",
-  
-  "book.re": "Reservations",
+
+  "book.re": "Reservation",
   "book.ca": "Check Availability",
   "book.sev": "Select Villas",
   "book.gui": "Guest Information",
@@ -35,5 +35,21 @@
   "book.imin": "Important Information",
   "book.fras": "Frequently Asked Questions",
   "book.prgu": "Primary Guest",
-  "book.add": "Address"
+  "book.add": "Address",
+
+  "disc.item1": "Plantations",
+  "disc.item2": "Water Falls",
+  "disc.item3": "Museums & Crafts",
+  "disc.item4": "Romantic Spots",
+  "disc.item5": "Cultural & Historical",
+  "disc.item6": "Trekking",
+  "disc.item7": "Wildlife",
+  "disc.item8": "Farm Visit",
+  "disc.item9": "Sporting",
+  "disc.item10": "Restaurants",
+  "disc.item11": "Tribal",
+  "disc.item12": "Cycling",
+  "disc.item13": "Shopping",
+  "disc.item14": "Pilgrimage"
+
 }
