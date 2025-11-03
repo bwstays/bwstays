@@ -463,6 +463,8 @@ function initializeSection(sectionType, data, sectionIndex) {
   const titleElement = document.createElement('h4');
   titleElement.className = 'text-white';
   titleElement.textContent = sectionTitle;
+  titleElement.setAttribute('data-i18n'+sectionIndex, 'translation_key');
+
   textContainer.appendChild(titleElement);
   const line = document.createElement('div');
   line.className = 'border-bottom border-primary text-center mb-4';
@@ -481,6 +483,8 @@ function initializeSection(sectionType, data, sectionIndex) {
   imgWrapper.style.height = '100%';
   imgElement.parentNode.insertBefore(imgWrapper, imgElement);
   imgWrapper.appendChild(imgElement);
+
+
   function updateContent(direction = 'next', isHorizontal = true) {
     const currentItem = data[currentTabIndex];
     const tempImg = document.createElement('img');
