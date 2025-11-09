@@ -2,27 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+        <meta
+	      http-equiv="Content-Security-Policy"
+	      content="upgrade-insecure-requests; block-all-mixed-content;default-src 'self'; script-src  p4panorama.com cdnjs.cloudflare.com  overpass-api.de   unpkg.com  analytics.ahrefs.com mc.yandex.ru cdn.inspectlet.com   static.cloudflareinsights.com  'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com *.google-analytics.com  wati-integration-prod-service.clare.ai bwstays.com requirejs.org  maps.googleapis.com www.google-analytics.com  use.fontawesome.com ; style-src   cdnjs.cloudflare.com    unpkg.com 'self' 'unsafe-inline' 'unsafe-eval' blogs.bwstays.com bwstays.com  fonts.googleapis.com; img-src 'self'  data: https:; media-src 'self' ; frame-src  p4panorama.com  mc.yandex.ru mc.yandex.md bwstays.com;    connect-src api.frankfurter.dev cdnjs.cloudflare.com  api.groq.com router.project-osrm.org  overpass-api.de  analytics.ahrefs.com  ws.inspectlet.com  mc.yandex.ru hn.inspectlet.com mc.yandex.md   'self' www.googletagmanager.com *.google-analytics.com     mapsresources-pa.googleapis.com bwstays.com maps.googleapis.com api.open-meteo.com wss://mc.yandex.ru;font-src 'self' fonts.gstatic.com use.fontawesome.com;"
+	    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>360° Video Viewer</title>
+    <title>360ï¿½ Video Viewer</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: Arial, sans-serif;
             background: #000;
             overflow: hidden;
         }
-        
+
         #container {
             width: 100vw;
             height: 100vh;
             position: relative;
         }
-        
+
         #info {
             position: absolute;
             top: 20px;
@@ -34,7 +40,7 @@
             z-index: 10;
             font-size: 14px;
         }
-        
+
         #controls {
             position: absolute;
             bottom: 20px;
@@ -48,7 +54,7 @@
             gap: 15px;
             align-items: center;
         }
-        
+
         button {
             background: #fff;
             border: none;
@@ -58,15 +64,15 @@
             font-size: 14px;
             transition: background 0.3s;
         }
-        
+
         button:hover {
             background: #ddd;
         }
-        
+
         #fileInput {
             display: none;
         }
-        
+
         .file-label {
             background: #4CAF50;
             color: white;
@@ -76,7 +82,7 @@
             font-size: 14px;
             transition: background 0.3s;
         }
-        
+
         .file-label:hover {
             background: #45a049;
         }
@@ -84,13 +90,13 @@
 </head>
 <body>
     <div id="container"></div>
-    
+
     <div id="info">
-        <strong>360° Video Viewer</strong><br>
+        <strong>360ï¿½ Video Viewer</strong><br>
         Drag to look around<br>
         Scroll to zoom
     </div>
-    
+
     <div id="controls">
         <label for="fileInput" class="file-label">Load Video</label>
         <input type="file" id="fileInput" accept="video/*">
@@ -108,61 +114,61 @@
 
         function init() {
             const container = document.getElementById('container');
-            
+
             // Create scene
             scene = new THREE.Scene();
-            
+
             // Create camera
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
             camera.target = new THREE.Vector3(0, 0, 0);
-            
+
             // Create video element
             video = document.createElement('video');
             video.crossOrigin = 'anonymous';
             video.loop = true;
             video.muted = true;
-            
+
             // Use a sample 360 video URL (you can replace with your own)
             video.src = 'https://www.p4panorama.com/panos/wayanad-360-virtual-reality-tour/';
-            
+
             // Create video texture
             texture = new THREE.VideoTexture(video);
             texture.minFilter = THREE.LinearFilter;
             texture.magFilter = THREE.LinearFilter;
-            
+
             // Create sphere geometry
             const geometry = new THREE.SphereGeometry(500, 60, 40);
             geometry.scale(-1, 1, 1); // Invert the geometry on the x-axis
-            
+
             // Create material with video texture
             const material = new THREE.MeshBasicMaterial({ map: texture });
-            
+
             // Create mesh
             sphere = new THREE.Mesh(geometry, material);
             scene.add(sphere);
-            
+
             // Create renderer
             renderer = new THREE.WebGLRenderer();
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
             container.appendChild(renderer.domElement);
-            
+
             // Event listeners
             document.addEventListener('pointerdown', onPointerDown);
             document.addEventListener('pointermove', onPointerMove);
             document.addEventListener('pointerup', onPointerUp);
             document.addEventListener('wheel', onWheel);
             window.addEventListener('resize', onWindowResize);
-            
+
             // File input
             document.getElementById('fileInput').addEventListener('change', handleFileSelect);
-            
+
             // Play/Pause button
             document.getElementById('playPause').addEventListener('click', togglePlayPause);
-            
+
             animate();
         }
-        
+
         function handleFileSelect(e) {
             const file = e.target.files[0];
             if (file) {
@@ -171,7 +177,7 @@
                 video.load();
             }
         }
-        
+
         function togglePlayPause() {
             const btn = document.getElementById('playPause');
             if (video.paused) {
@@ -182,7 +188,7 @@
                 btn.textContent = 'Play';
             }
         }
-        
+
         function onPointerDown(e) {
             isUserInteracting = true;
             onPointerDownMouseX = e.clientX;
@@ -190,48 +196,48 @@
             onPointerDownLon = lon;
             onPointerDownLat = lat;
         }
-        
+
         function onPointerMove(e) {
             if (isUserInteracting) {
                 lon = (onPointerDownMouseX - e.clientX) * 0.1 + onPointerDownLon;
                 lat = (e.clientY - onPointerDownMouseY) * 0.1 + onPointerDownLat;
             }
         }
-        
+
         function onPointerUp() {
             isUserInteracting = false;
         }
-        
+
         function onWheel(e) {
             const fov = camera.fov + e.deltaY * 0.05;
             camera.fov = THREE.MathUtils.clamp(fov, 10, 75);
             camera.updateProjectionMatrix();
         }
-        
+
         function onWindowResize() {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         }
-        
+
         function animate() {
             requestAnimationFrame(animate);
             update();
         }
-        
+
         function update() {
             lat = Math.max(-85, Math.min(85, lat));
             phi = THREE.MathUtils.degToRad(90 - lat);
             theta = THREE.MathUtils.degToRad(lon);
-            
+
             camera.target.x = 500 * Math.sin(phi) * Math.cos(theta);
             camera.target.y = 500 * Math.cos(phi);
             camera.target.z = 500 * Math.sin(phi) * Math.sin(theta);
-            
+
             camera.lookAt(camera.target);
             renderer.render(scene, camera);
         }
-        
+
         init();
     </script>
 </body>
