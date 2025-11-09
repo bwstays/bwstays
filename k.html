@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° Video Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            overflow: hidden;
+        }
+        
+        #container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 15px 20px;
+            border-radius: 8px;
+            z-index: 10;
+            font-size: 14px;
+        }
+        
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            padding: 15px 25px;
+            border-radius: 30px;
+            z-index: 10;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        button {
+            background: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #ddd;
+        }
+        
+        #fileInput {
+            display: none;
+        }
+        
+        .file-label {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .file-label:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    
+    <div id="info">
+        <strong>360° Video Viewer</strong><br>
+        Drag to look around<br>
+        Scroll to zoom
+    </div>
+    
+    <div id="controls">
+        <label for="fileInput" class="file-label">Load Video</label>
+        <input type="file" id="fileInput" accept="video/*">
+        <button id="playPause">Play</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        let scene, camera, renderer, sphere, video, texture;
+        let isUserInteracting = false;
+        let onPointerDownMouseX = 0, onPointerDownMouseY = 0;
+        let lon = 0, onPointerDownLon = 0;
+        let lat = 0, onPointerDownLat = 0;
+        let phi = 0, theta = 0;
+
+        function init() {
+            const container = document.getElementById('container');
+            
+            // Create scene
+            scene = new THREE.Scene();
+            
+            // Create camera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
+            camera.target = new THREE.Vector3(0, 0, 0);
+            
+            // Create video element
+            video = document.createElement('video');
+            video.crossOrigin = 'anonymous';
+            video.loop = true;
+            video.muted = true;
+            
+            // Use a sample 360 video URL (you can replace with your own)
+            video.src = 'https://www.p4panorama.com/panos/wayanad-360-virtual-reality-tour/';
+            
+            // Create video texture
+            texture = new THREE.VideoTexture(video);
+            texture.minFilter = THREE.LinearFilter;
+            texture.magFilter = THREE.LinearFilter;
+            
+            // Create sphere geometry
+            const geometry = new THREE.SphereGeometry(500, 60, 40);
+            geometry.scale(-1, 1, 1); // Invert the geometry on the x-axis
+            
+            // Create material with video texture
+            const material = new THREE.MeshBasicMaterial({ map: texture });
+            
+            // Create mesh
+            sphere = new THREE.Mesh(geometry, material);
+            scene.add(sphere);
+            
+            // Create renderer
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+            
+            // Event listeners
+            document.addEventListener('pointerdown', onPointerDown);
+            document.addEventListener('pointermove', onPointerMove);
+            document.addEventListener('pointerup', onPointerUp);
+            document.addEventListener('wheel', onWheel);
+            window.addEventListener('resize', onWindowResize);
+            
+            // File input
+            document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+            
+            // Play/Pause button
+            document.getElementById('playPause').addEventListener('click', togglePlayPause);
+            
+            animate();
+        }
+        
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const url = URL.createObjectURL(file);
+                video.src = url;
+                video.load();
+            }
+        }
+        
+        function togglePlayPause() {
+            const btn = document.getElementById('playPause');
+            if (video.paused) {
+                video.play();
+                btn.textContent = 'Pause';
+            } else {
+                video.pause();
+                btn.textContent = 'Play';
+            }
+        }
+        
+        function onPointerDown(e) {
+            isUserInteracting = true;
+            onPointerDownMouseX = e.clientX;
+            onPointerDownMouseY = e.clientY;
+            onPointerDownLon = lon;
+            onPointerDownLat = lat;
+        }
+        
+        function onPointerMove(e) {
+            if (isUserInteracting) {
+                lon = (onPointerDownMouseX - e.clientX) * 0.1 + onPointerDownLon;
+                lat = (e.clientY - onPointerDownMouseY) * 0.1 + onPointerDownLat;
+            }
+        }
+        
+        function onPointerUp() {
+            isUserInteracting = false;
+        }
+        
+        function onWheel(e) {
+            const fov = camera.fov + e.deltaY * 0.05;
+            camera.fov = THREE.MathUtils.clamp(fov, 10, 75);
+            camera.updateProjectionMatrix();
+        }
+        
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            update();
+        }
+        
+        function update() {
+            lat = Math.max(-85, Math.min(85, lat));
+            phi = THREE.MathUtils.degToRad(90 - lat);
+            theta = THREE.MathUtils.degToRad(lon);
+            
+            camera.target.x = 500 * Math.sin(phi) * Math.cos(theta);
+            camera.target.y = 500 * Math.cos(phi);
+            camera.target.z = 500 * Math.sin(phi) * Math.sin(theta);
+            
+            camera.lookAt(camera.target);
+            renderer.render(scene, camera);
+        }
+        
+        init();
+    </script>
+</body>
+</html>
