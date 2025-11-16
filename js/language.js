@@ -43,7 +43,7 @@ class LanguageManager {
   // Load translation file from JSON
   async loadLanguageFromJSON(lang) {
     try {
-      const response = await fetch(`lang/${lang}.json`);
+      const response = await fetch(`https://www.bwstays.com/lang/${lang}.json`);
       if (!response.ok) throw new Error(`Language file not found: ${lang}`);
       this.translations = await response.json();
       this.currentLang = lang;
