@@ -138,143 +138,161 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K7RVCKPR');</script>
 <script type="application/ld+json">
- {
-        "@context": "https://schema.org",
-        "@type":  ["HotelRoom", "Product","VacationRent","Accommodation","LodgingBusiness"],
-        "additionalType": "HolidayVillageRental",
-        "brand": {
-          "@type": "Brand",
-          "name": "BW Stays"
-        },
-        "containsPlace": {
-          "@type": ["HotelRoom", "Product","VacationRent","Accommodation","LodgingBusiness"],
-          "additionalType": "EntirePlace",
-          "bed": {
-            "@type": "BedDetails",
-            "numberOfBeds" : 2,
-            "typeOfBed": "Queen"
-          },
-         "occupancy": {
-            "@type": "QuantitativeValue",
-            "value" : 4
-          },
-          "amenityFeature": [
-            {
+ <script type="application/ld+json">
+  {
+         "@context": "https://schema.org",
+         "@type":  ["HotelRoom", "Product","VacationRent","Accommodation","LodgingBusiness"],
+         "additionalType": "HolidayVillageRental",
+         "brand": {
+           "@type": "Brand",
+           "name": "BW Stays"
+         },
+         "containsPlace": {
+           "name": "BW Stays",
+           "@type": ["HotelRoom", "Product","VacationRent","Accommodation","LodgingBusiness"],
+
+
+            "address": {
+             "@type": "PostalAddress",
+
+           "addressCountry": "IN",
+           "addressLocality": "Kalpetta",
+           "addressRegion": "Wayanad",
+           "postalCode": "673121",
+           "streetAddress": "Kalpetta"
+         },
+           "additionalType": "EntirePlace",
+           "bed": {
+             "@type": "BedDetails",
+             "numberOfBeds" : 2,
+             "typeOfBed": "Queen"
+           },
+          "occupancy": {
+             "@type": "QuantitativeValue",
+             "value" : 4
+           },
+           "amenityFeature": [
+             {
+               "@type": "LocationFeatureSpecification",
+               "name": "ac",
+               "value": true
+             },
+             {
+               "@type": "LocationFeatureSpecification",
+               "name": "airportShuttle",
+               "value": false
+             },
+             {
               "@type": "LocationFeatureSpecification",
-              "name": "ac",
-              "value": true
-            },
-            {
-              "@type": "LocationFeatureSpecification",
-              "name": "airportShuttle",
-              "value": false
-            },
-            {
-             "@type": "LocationFeatureSpecification",
-              "name": "balcony",
-              "value": true
-            },
-            {
-              "@type": "LocationFeatureSpecification",
-              "name": "beachAccess",
-              "value": false
-            },
-            {
-              "@type": "LocationFeatureSpecification",
-              "name": "childFriendly",
-              "value": true
-            }
-          ],
-          "floorSize": {
-            "@type": "QuantitativeValue",
-            "value" : 8,
-            "unitCode": "MTK"
-          },
-          "numberOfBathroomsTotal": 4,
-          "numberOfBedrooms": 2,
-          "numberOfRooms": 2
-        },
-        "identifier": "abc123",
-        "latitude": "42.12345",
-        "longitude": "101.12345",
-        "name": "Beautiful Vacation Rental",
-        "address": {
-            "@type": "PostalAddress",
+               "name": "balcony",
+               "value": true
+             },
+             {
+               "@type": "LocationFeatureSpecification",
+               "name": "beachAccess",
+               "value": false
+             },
+             {
+               "@type": "LocationFeatureSpecification",
+               "name": "childFriendly",
+               "value": true
+             }
+           ],
+   "aggregateRating": {
+         "@type": "AggregateRating",
+         "ratingValue": 95,
+         "bestRating": 100,
+         "ratingCount": 20
+       },
+           "floorSize": {
+             "@type": "QuantitativeValue",
+             "value" : 8,
+             "unitCode": "MTK"
+           },
+           "numberOfBathroomsTotal": 4,
+           "numberOfBedrooms": 2,
+           "numberOfRooms": 2
+         },
+         "identifier": "abc123",
+         "latitude": "42.12345",
+         "longitude": "101.12345",
+         "name": "Beautiful Vacation Rental",
+         "address": {
+             "@type": "PostalAddress",
 
-          "addressCountry": "IN",
-          "addressLocality": "Kalpetta",
-          "addressRegion": "Wayanad",
-          "postalCode": "673121",
-          "streetAddress": "Kalpetta"
-        },
+           "addressCountry": "IN",
+           "addressLocality": "Kalpetta",
+           "addressRegion": "Wayanad",
+           "postalCode": "673121",
+           "streetAddress": "Kalpetta"
+         },
+         "image": [
+           "https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.png",
+           "https://www.bwstays.com/assets/img/villa1/bw-destination-chembra-wayanad.png"
+         ],
+   "telephone": "+91-999-999-9999",
+   "url": "https://www.bwstays.com",
+   "priceRange": "$50",
 
-        "image": [
-          "https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.png",
-          "https://www.bwstays.com/assets/img/villa1/bw-destination-chembra-wayanad.png"
-        ],
-  "telephone": "+91-999-999-9999",
-  "url": "https://www.bwstays.com",
-  "priceRange": "$50",
-
-        "description": "A great Vacation Rental in the perfect neighborhood.",
-        "knowsLanguage": ["en-US", "fr-FR"],
-  "amenityFeature": [
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Free WiFi",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Swimming Pool",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Restaurant",
-      "value": false
-    }
-  ],
+         "description": "A great Vacation Rental in the perfect neighborhood.",
+         "knowsLanguage": ["en-US", "fr-FR"],
+   "amenityFeature": [
+     {
+       "@type": "LocationFeatureSpecification",
+       "name": "Free WiFi",
+       "value": true
+     },
+     {
+       "@type": "LocationFeatureSpecification",
+       "name": "Swimming Pool",
+       "value": true
+     },
+     {
+       "@type": "LocationFeatureSpecification",
+       "name": "Restaurant",
+       "value": false
+     }
+   ],
 
 
-        "review": [{
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": 5,
-            "bestRating": 5
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Bw Stays"
-          },
-          "datePublished": "2024-12-01",
-          "contentReferenceTime": "2024-11-17"
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": 5,
-            "bestRating": 5
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Mr Bw Stays."
-          },
-          "datePublished": "2024-10-01",
-          "contentReferenceTime": "2024-09-28"
-        }
-      ],
- "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 95,
-        "bestRating": 100,
-        "ratingCount": 20
-      },
+         "review": [{
+           "@type": "Review",
+           "reviewRating": {
+             "@type": "Rating",
+             "ratingValue": 5,
+             "bestRating": 5
+           },
+           "author": {
+             "@type": "Person",
+             "name": "Bw Stays"
+           },
+           "datePublished": "2024-12-01",
+           "contentReferenceTime": "2024-11-17"
+         },
+         {
+           "@type": "Review",
+           "reviewRating": {
+             "@type": "Rating",
+             "ratingValue": 5,
+             "bestRating": 5
+           },
+           "author": {
+             "@type": "Person",
+             "name": "Mr Bw Stays."
+           },
+           "datePublished": "2024-10-01",
+           "contentReferenceTime": "2024-09-28"
+         }
+       ],
+  "aggregateRating": {
+         "@type": "AggregateRating",
+         "ratingValue": 95,
+         "bestRating": 100,
+         "ratingCount": 20
+       },
 
-      "petsAllowed": "Yes"
-      }
+       "petsAllowed": "Yes"
+       }
     </script>
 
 
