@@ -67,6 +67,7 @@ function updateWeatherDisplay(weatherData, cityName) {
 
     if (locationElement) {
         locationElement.textContent = cityName || 'Wayanad';
+        locationElement.title = cityName || 'Wayanad';
     }
     if (weatherData && weatherData.current_weather) {
         var current = weatherData.current_weather;
@@ -74,7 +75,9 @@ function updateWeatherDisplay(weatherData, cityName) {
             temperatureElement.innerHTML = Math.round(current.temperature) + '<span class="temp-unit">°</span>';
         }
         if (conditionElement) {
-            conditionElement.textContent = getWeatherDescription(current.weathercode);
+            var description = getWeatherDescription(current.weathercode);
+            conditionElement.textContent = description;
+            conditionElement.title = description;
         }
         if (highLowElement) {
             var daily = weatherData.daily || {};
