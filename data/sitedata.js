@@ -2037,7 +2037,7 @@ const siteData = {
         "RoadTrip Vibes",
         "Adventure Tourism",
       ],
-      type: "Trucking",
+      type: "Trekking",
       knowmore: "https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html",
 
       duration: "1-2 Hours",
@@ -2083,7 +2083,7 @@ const siteData = {
         "RoadTrip Vibes",
         "Adventure Tourism",
       ],
-      type: "Trucking",
+      type: "Trekking",
       knowmore: "https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html",
 
       duration: "1-2 Hours",
@@ -2130,7 +2130,7 @@ const siteData = {
         "RoadTrip Vibes",
         "Adventure Tourism",
       ],
-      type: "Trucking",
+      type: "Trekking",
       knowmore: "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html",
 
       duration: "1-2 Hours",
@@ -2175,7 +2175,7 @@ const siteData = {
         "RoadTrip Vibes",
         "Adventure Tourism",
       ],
-      type: "Trucking",
+      type: "Trekking",
       knowmore:
         "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html",
 
@@ -2225,7 +2225,7 @@ const siteData = {
         "RoadTrip Vibes",
         "Adventure Tourism",
       ],
-      type: "Trucking",
+      type: "Trekking",
       knowmore:
         "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html",
 
@@ -2271,7 +2271,7 @@ const siteData = {
         "RoadTrip Vibes",
         "Adventure Tourism",
       ],
-      type: "Trucking",
+      type: "Trekking",
       knowmore:
         "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html",
 
@@ -2318,7 +2318,7 @@ const siteData = {
         "RoadTrip Vibes",
         "Adventure Tourism",
       ],
-      type: "Trucking",
+      type: "Trekking",
       knowmore: "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html",
 
       duration: "1-2 Hours",
@@ -2363,7 +2363,7 @@ const siteData = {
         "RoadTrip Vibes",
         "Adventure Tourism",
       ],
-      type: "Trucking",
+      type: "Trekking",
       knowmore: "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html",
 
       duration: "1-2 Hours",
