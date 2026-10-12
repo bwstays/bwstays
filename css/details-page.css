@@ -8099,3 +8099,361 @@ button.faq-question .faq-question-text {
     align-self: stretch;
   }
 }
+
+/* ===== Get in touch / About us / Locate us: professional polish =====
+   one container, one 24px gutter, one check-icon style, short accent dividers, even heights */
+@media (min-width: 768px) {
+  #contact-form-div,
+  #signup .row.justify-content-center,
+  footer.footer .container > .row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  #contact-form-div > .col-md-6,
+  #signup .row.justify-content-center > [class*="col-md-"],
+  footer.footer .container > .row > .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+/* centred section headings share one short accent line; sub-headings share another */
+#contact-divider-2,
+#contact-divider-3,
+#contact-divider-5 {
+  width: 64px;
+  margin: 0.5rem auto 1.25rem !important;
+  border-bottom-width: 2px !important;
+}
+#signup .contact-card-divider,
+footer.footer .contact-card-divider,
+#contact-divider-4 {
+  width: 56px;
+  margin: 0 0 1rem 0 !important;
+  border-bottom-width: 2px !important;
+}
+
+/* contact card: roomy rows with hairline separators */
+#contact-card .card-body {
+  justify-content: flex-start !important;
+  padding: 1.5rem 2rem !important;
+}
+#contact-card h3 {
+  font-size: 1.25rem;
+}
+#contact-card .mb-4:not(.contact-card-divider) {
+  margin: 0 !important;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+#contact-card .mb-4:not(.contact-card-divider):last-child {
+  border-bottom: 0;
+}
+#contact-card p {
+  font-size: 1rem;
+}
+
+/* about us: same teal-ring check icon as Locate us, readable descriptions */
+#signup .col-md-5 .w-100 ul li::before {
+  width: 34px !important;
+  height: 34px !important;
+  border: 2px solid #64a19d !important;
+  border-radius: 8px !important;
+  background-color: rgba(100, 161, 157, 0.15) !important;
+  line-height: 30px !important;
+  font-size: 16px !important;
+  margin-right: 14px !important;
+}
+#feature-list .feature-description,
+footer.footer .feature-item p {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+#signup .reviews-title {
+  text-align: left;
+}
+#signup .reviews-title h3 {
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+#signup .reviews-title::after {
+  display: none;
+}
+
+/* locate us: map and list are the same height, items spread evenly */
+footer.footer .dir-map {
+  height: 280px;
+}
+@media (min-width: 768px) {
+  footer.footer .container > .row > .col-md-6:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+  footer.footer .container > .row > .col-md-6:last-child .feature-item {
+    flex: 1 1 0;
+    align-items: center;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* footer links and social icons: centred, readable */
+footer.footer .footer-row {
+  flex-direction: column;
+  justify-content: center !important;
+  gap: 0.6rem;
+  margin-top: 1.25rem !important;
+  text-align: center;
+}
+footer.footer .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-left: 0 !important;
+}
+footer.footer .footer-social a,
+footer.footer .footer-social i {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+}
+footer.footer .footer-social a:hover i {
+  color: #64a19d;
+}
+footer.footer .footer-copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.9rem;
+}
+footer.footer .footer-copyright a {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+footer.footer .footer-copyright a:hover {
+  color: #64a19d !important;
+}
+footer.footer .footer-author,
+footer.footer .footer-author p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* polish fixes: the contact-card divider is not a data row; reviews heading aligns left like its sibling */
+#contact-card .mb-4:not(.contact-card-divider) {
+  padding: 1.05rem 0;
+}
+#contact-card .contact-card-divider {
+  width: 56px;
+  height: 0;
+  margin: 0 0 0.75rem 0 !important;
+  padding: 0 !important;
+  border-bottom: 2px solid #64a19d !important;
+  background: none !important;
+}
+#signup .reviews-title,
+#signup .reviews-content {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+#signup .reviews-title h3 {
+  align-self: flex-start;
+  text-align: left !important;
+}
+#contact-divider-4 {
+  align-self: flex-start;
+  margin-left: 0 !important;
+}
+
+#signup .reviews-title {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* phones: the weather/currency pair flows in the page under the hero text instead of floating over it
+   (it was absolutely positioned with top AND bottom set, so on tall pages it covered the footer links) */
+@media (max-width: 767.98px) {
+  .container:has(> .widgets-container) {
+    flex-wrap: wrap;
+  }
+  .widgets-container {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: none;
+    height: auto !important;
+    margin: 1.25rem auto 0;
+    padding: 0;
+    flex-direction: row !important;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    z-index: 1;
+  }
+}
+
+/* phones: the fixed navigation is ~133px tall and used to cover the top of every page title,
+   so its height is reserved at the top of the page and in-page jumps stop below it */
+@media (max-width: 767.98px) {
+  html {
+    scroll-padding-top: 145px;
+  }
+  body {
+    padding-top: 133px;
+  }
+  .masthead.map-page {
+    padding-top: 1.5rem !important;
+  }
+  .legal-page {
+    padding-top: 1.5rem !important;
+  }
+  main#search {
+    padding-top: 1.5rem !important;
+  }
+}
+
+/* ===== Search page: compact tabs, result cards, pagination ===== */
+.bw-search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+  margin-bottom: 0.75rem;
+}
+.bw-search-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.bw-search-tabs .bw-map-pill {
+  padding: 0.2rem 0.75rem;
+  font-size: 0.78rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.bw-search-tabs .bw-map-pill .bw-count {
+  display: inline-block;
+  min-width: 1.35em;
+  margin-left: 0.25rem;
+  padding: 0 0.35em;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 0.85em;
+  line-height: 1.5;
+  text-align: center;
+}
+.bw-search-tabs .bw-map-pill.is-on {
+  border-color: #64a19d;
+  background: #64a19d;
+  box-shadow: 0 0 0 2px rgba(100, 161, 157, 0.35);
+  font-weight: 700;
+}
+.bw-search-tabs .bw-map-pill.is-on .bw-count {
+  background: rgba(0, 0, 0, 0.22);
+}
+.bw-search-sort {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+}
+.bw-search-sort select {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 0.78rem;
+}
+.bw-result {
+  position: relative;
+  height: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.bw-result:hover,
+.bw-result:focus-within {
+  border-color: #64a19d;
+  background: rgba(100, 161, 157, 0.1);
+}
+.bw-result-badge {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  padding: 0 0.55rem;
+  border-radius: 999px;
+  background: rgba(100, 161, 157, 0.25);
+  color: #bfe3df;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.bw-result-title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.bw-result-title a {
+  color: #fff;
+}
+.bw-result-sub {
+  margin: 0 0 0.3rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.bw-result-meta {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.78rem;
+}
+.bw-result-meta i {
+  margin-right: 0.3rem;
+  color: #64a19d;
+}
+.bw-result mark {
+  padding: 0 0.1em;
+  border-radius: 3px;
+  background: rgba(100, 161, 157, 0.45);
+  color: #fff;
+}
+.bw-pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+}
+.bw-page-btn {
+  min-width: 2rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.bw-page-btn:hover:not(:disabled),
+.bw-page-btn:focus-visible {
+  border-color: #fff;
+}
+.bw-page-btn.is-on {
+  border-color: #64a19d;
+  background: #64a19d;
+  font-weight: 700;
+}
+.bw-page-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.bw-page-gap {
+  color: rgba(255, 255, 255, 0.5);
+}
