@@ -45,33 +45,8 @@
         "distance_km": 6
       },
       {
-        "name": "Koottamundu Glass Temple Wayanad",
-        "category": "Pilgrimage",
-        "distance_km": 7
-      },
-      {
-        "name": "Bamboo Park",
-        "category": "Romantic Spots & Viewpoints",
-        "distance_km": 10
-      },
-      {
-        "name": "Bevo Beverages ( Govt of Kerala )",
-        "category": "Shopping",
-        "distance_km": 10
-      },
-      {
-        "name": "House Holds",
-        "category": "Shopping",
-        "distance_km": 10
-      },
-      {
         "name": "LocalCuisine",
         "category": "Food",
-        "distance_km": 10
-      },
-      {
-        "name": "Muneeswaran Kunnu View point",
-        "category": "Romantic Spots & Viewpoints",
         "distance_km": 10
       },
       {
@@ -88,6 +63,31 @@
         "name": "Spices",
         "category": "Shopping",
         "distance_km": 10
+      },
+      {
+        "name": "Ziplines",
+        "category": "Sporting",
+        "distance_km": 10
+      },
+      {
+        "name": "Rippon Tea estate",
+        "category": "Plantations",
+        "distance_km": 11
+      },
+      {
+        "name": "Uravu",
+        "category": "Tribal",
+        "distance_km": 11
+      },
+      {
+        "name": "Gandhi Museum",
+        "category": "Museums & Crafts",
+        "distance_km": 12
+      },
+      {
+        "name": "Honey Museum",
+        "category": "Museums & Crafts",
+        "distance_km": 12
       }
     ],
     "nearby_places_indexed": 90,
@@ -111,7 +111,7 @@
         "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
       },
       {
-        "name": "Gandhi Museaum",
+        "name": "Gandhi Museum",
         "kind": "spices",
         "description": "Gandhi Museaum",
         "distance_from_stay_km": 12,
@@ -246,7 +246,7 @@
         "page_url": "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html"
       },
       {
-        "name": "Peria tea plantation",
+        "name": "Periya tea plantation",
         "kind": "honey",
         "description": "Lush greenery and tea plantations",
         "distance_from_stay_km": 38,
