@@ -62,20 +62,21 @@
         "count": 12
       }
     },
+    "data_quality": {
+      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 85 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
+      "descriptions_withheld": 41,
+      "coordinates_withheld": 11,
+      "distances_withheld": 7
+    },
     "attractions": [
       {
         "id": "romantic-46",
         "name": "Mailadippara",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 3,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -98,11 +99,6 @@
         "description": "Turf",
         "distance_from_stay_km": 3,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "NA",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -122,14 +118,9 @@
         "name": "Ananthanatha Swamy Jain",
         "category": "pilgrimage",
         "category_label": "Pilgrimage",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 4,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -145,58 +136,6 @@
         "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
       },
       {
-        "id": "trucking-21",
-        "name": "Edakal Caves",
-        "category": "trucking",
-        "category_label": "Trekking",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
-        "distance_from_stay_km": 4,
-        "typical_visit_duration": "2-3 Hours",
-        "timing": [
-          "09:30-16:30"
-        ],
-        "weekly_holiday": "Mon",
-        "entry_fee_inr": null,
-        "rating": 4.1,
-        "best_seasons": [
-          "Summer (November-March)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.6268407,
-          "longitude": 76.234269
-        },
-        "map_url": "https://maps.app.goo.gl/yBs8PRhJEea7MJt8A",
-        "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html"
-      },
-      {
-        "id": "trucking-87",
-        "name": "Kolagapara",
-        "category": "trucking",
-        "category_label": "Trekking",
-        "description": "Ancient rock shelter",
-        "distance_from_stay_km": 4,
-        "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
-        "rating": 4.2,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.656161744533218,
-          "longitude": 76.19452691872974
-        },
-        "map_url": "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
-        "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
-      },
-      {
         "id": "trucking-23",
         "name": "Puliyarmala",
         "category": "trucking",
@@ -204,11 +143,6 @@
         "description": "Ancient rock shelter with prehistoric carvings and inscriptions",
         "distance_from_stay_km": 4,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.2,
         "best_seasons": [
           "Summer (March-May)",
@@ -231,11 +165,6 @@
         "description": "Try authentic Kerala dishes at local eateries and food stalls at kalpetta",
         "distance_from_stay_km": 5,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "11:00-23:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
         "rating": 4,
         "best_seasons": [
           "All Season"
@@ -253,50 +182,15 @@
         "description": "Chundail Tea Estate",
         "distance_from_stay_km": 6,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.7,
         "best_seasons": [
           "Summer (March-May)",
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.6076643,
-          "longitude": 76.1350769
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/UQHFNVCdWwFxWRsa8",
         "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
-      },
-      {
-        "id": "plantation-62",
-        "name": "Coffee Plantation",
-        "category": "plantation",
-        "category_label": "Plantations",
-        "description": "Expansive Coffee Plantation with guided tours and tasting sessions",
-        "distance_from_stay_km": 7,
-        "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Mon",
-        "entry_fee_inr": 0,
-        "rating": 4,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.758218103566884,
-          "longitude": 75.99955554569163
-        },
-        "map_url": "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
-        "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
       },
       {
         "id": "pilgrimage-3",
@@ -306,11 +200,6 @@
         "description": "Historic Koottamundu Glass Temple Wayanad with beautiful architecture and cultural significance",
         "distance_from_stay_km": 7,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-18:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4,
         "best_seasons": [
           "Summer (March-May)",
@@ -330,52 +219,17 @@
         "name": "Bamboo Park",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "Sample",
+        "description": null,
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "10:00-21:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "All Season"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.619717987953072,
-          "longitude": 76.08467260510648
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
         "page_url": null
-      },
-      {
-        "id": "sporting-82",
-        "name": "Bamboo Rafting",
-        "category": "sporting",
-        "category_label": "Sporting",
-        "description": "Bamboo rafting in Wayanad Kerala to a day of hiking or trekking. River guide, safety gear incl",
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": "2 Hours",
-        "timing": [
-          "09:00-16:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": null,
-        "rating": 4.5,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.808946574960723,
-          "longitude": 76.00202559265286
-        },
-        "map_url": "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
-        "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html"
       },
       {
         "id": "shopping-77",
@@ -385,47 +239,14 @@
         "description": "Bevo for all types of syrups and spirits",
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "10:00-21:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "All Season"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.619717987953072,
-          "longitude": 76.08467260510648
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
         "page_url": null
-      },
-      {
-        "id": "farms-88",
-        "name": "Gurukula Botanical Sanctuary",
-        "category": "farms",
-        "category_label": "Farm Visits",
-        "description": "Gurukula Botanical Sanctuary hosts over 2,000 native plant species including around 100 native trees restored to their natural habitat, 500 herbs, shrubs",
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "10:00-16:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
-        "rating": 4.9,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.821216,
-          "longitude": 75.844855
-        },
-        "map_url": "https://maps.app.goo.gl/gLZB7Pnn3mDAnuYw8",
-        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
       },
       {
         "id": "shopping-67",
@@ -435,11 +256,6 @@
         "description": "Nesto",
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "11:00-23:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "All Season"
@@ -460,11 +276,6 @@
         "description": "Try authentic Kerala dishes at local eateries and food stalls",
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "11:00-23:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "All Season"
@@ -479,64 +290,26 @@
         "name": "Muneeswaran Kunnu View point",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "Sample",
+        "description": null,
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "10:00-21:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "All Season"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.619717987953072,
-          "longitude": 76.08467260510648
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
         "page_url": null
-      },
-      {
-        "id": "farms-74",
-        "name": "Pepper Farm",
-        "category": "farms",
-        "category_label": "Farm Visits",
-        "description": "Experience spice cultivation and farm life in Wayanad",
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "08:00-18:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
-        "rating": 4.7,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.69283527987838,
-          "longitude": 76.1911296389339
-        },
-        "map_url": "https://maps.app.goo.gl/fihSsqhSHPCNRJzk9",
-        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
       },
       {
         "id": "food-65",
         "name": "Restaurants",
         "category": "food",
         "category_label": "Food",
-        "description": "Showcases the rich cultural heritage and tribal artifacts of Wayanad",
+        "description": null,
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "All Season"
@@ -554,11 +327,6 @@
         "description": "Rippon Tea estate",
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.7,
         "best_seasons": [
           "Summer (March-May)",
@@ -581,11 +349,6 @@
         "description": "Try authentic Kerala spices at local market",
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "11:00-23:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "All Season"
@@ -603,11 +366,6 @@
         "description": "Ziplines",
         "distance_from_stay_km": 10,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -615,10 +373,7 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.6076643,
-          "longitude": 76.1350769
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
         "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
       },
@@ -630,11 +385,6 @@
         "description": "L greenery and tea plantations near meppady",
         "distance_from_stay_km": 11,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -657,11 +407,6 @@
         "description": "Uravu",
         "distance_from_stay_km": 11,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -669,10 +414,7 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.6076643,
-          "longitude": 76.1350769
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/8HGVbA8w5gkfw6Sd7",
         "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html"
       },
@@ -684,11 +426,6 @@
         "description": "Gandhi Museaum",
         "distance_from_stay_km": 12,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -696,10 +433,7 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.600747990313033,
-          "longitude": 76.0148553711638
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
         "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
       },
@@ -711,11 +445,6 @@
         "description": "Varities of honey displayed to taste and purchase",
         "distance_from_stay_km": 12,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "All Season"
@@ -736,11 +465,6 @@
         "description": "Kungichira Museum & Chira",
         "distance_from_stay_km": 12,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -748,10 +472,7 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.600747990313033,
-          "longitude": 76.0148553711638
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
         "page_url": null
       },
@@ -763,11 +484,6 @@
         "description": "Displays tribal heritage and ancient artifacts from the region",
         "distance_from_stay_km": 12,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -775,10 +491,7 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.600747990313033,
-          "longitude": 76.0148553711638
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
         "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html"
       },
@@ -790,11 +503,6 @@
         "description": "Trikaipatta temple , nestled in the hills of Wayanad",
         "distance_from_stay_km": 12,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 3.9,
         "best_seasons": [
           "Summer (March-May)",
@@ -814,14 +522,9 @@
         "name": "Pookode Lake",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
+        "description": null,
         "distance_from_stay_km": 13,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
@@ -844,11 +547,6 @@
         "description": "Ancient Meenangadi Church  , nestled in the hills of Wayanad",
         "distance_from_stay_km": 14,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.4,
         "best_seasons": [
           "Summer (March-May)",
@@ -868,14 +566,9 @@
         "name": "Chain Tree",
         "category": "culthist",
         "category_label": "Cultural & Historical",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 15,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.2,
         "best_seasons": [
           "Summer (March-May)",
@@ -895,14 +588,9 @@
         "name": "Karland Lake",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
+        "description": null,
         "distance_from_stay_km": 15,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
@@ -925,11 +613,6 @@
         "description": "En ooru",
         "distance_from_stay_km": 16,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
@@ -952,11 +635,6 @@
         "description": "Karapuzha Dam",
         "distance_from_stay_km": 16,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-18:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -976,14 +654,9 @@
         "name": "Lakkidi Ghats View Point",
         "category": "trucking",
         "category_label": "Trekking",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 16,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -991,10 +664,7 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.512393990351887,
-          "longitude": 76.01895535767235
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/CQ4zA2hxFRyHxWQF8",
         "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
       },
@@ -1003,14 +673,9 @@
         "name": "Lakkidi view point",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 16,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -1018,10 +683,7 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.512393990351887,
-          "longitude": 76.01895535767235
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/bdvdseoihwD9Ao9B7",
         "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
       },
@@ -1033,11 +695,6 @@
         "description": "Mullanpara View Point",
         "distance_from_stay_km": 16,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-18:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -1057,14 +714,9 @@
         "name": "Chembra Peak",
         "category": "trucking",
         "category_label": "Trekking",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 17,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "05:00-13:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.6,
         "best_seasons": [
           "Summer (March-May)",
@@ -1084,14 +736,9 @@
         "name": "Santhinatha Temple",
         "category": "culthist",
         "category_label": "Cultural & Historical",
-        "description": "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad",
+        "description": null,
         "distance_from_stay_km": 17,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "08:00-17:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.4,
         "best_seasons": [
           "Summer (March-May)",
@@ -1111,14 +758,9 @@
         "name": "Kanthanpara Falls",
         "category": "waterfalls",
         "category_label": "Waterfalls & Lakes",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 18,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-16:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": null,
         "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
@@ -1138,14 +780,9 @@
         "name": "Kurumbalakotta",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 18,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -1165,14 +802,9 @@
         "name": "Phantom rock",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 19,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 3.9,
         "best_seasons": [
           "Summer (March-May)",
@@ -1195,11 +827,6 @@
         "description": "Popular trekking destination with breathtaking views",
         "distance_from_stay_km": 20,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "06:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.6,
         "best_seasons": [
           "Summer (March-May)",
@@ -1222,11 +849,6 @@
         "description": "Welcome to the. Land of Bliss · Meet Kerala's longest hanging glass bridge",
         "distance_from_stay_km": 21,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-18:00"
-        ],
-        "weekly_holiday": "All Day",
-        "entry_fee_inr": null,
         "rating": 3.9,
         "best_seasons": [
           "Summer (March-May)",
@@ -1246,14 +868,9 @@
         "name": "Ambalavayal",
         "category": "farms",
         "category_label": "Farm Visits",
-        "description": "Showcases the rich cultural heritage and tribal artifacts of Wayanad",
+        "description": null,
         "distance_from_stay_km": 21,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-16:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "All Season"
@@ -1274,11 +891,6 @@
         "description": "Bamboo Forest Valentine's Park",
         "distance_from_stay_km": 21,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "07:00-18:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 3.2,
         "best_seasons": [
           "Summer (March-May)",
@@ -1301,11 +913,6 @@
         "description": "Opt for a speed or pedal boat to have an enthralling experience of the stupendous landscapes",
         "distance_from_stay_km": 21,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "06:00-17:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": null,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -1328,11 +935,6 @@
         "description": "Showcases the rich cultural heritage and tribal artifacts of Wayanad Pookonth House, Kuthirivallu",
         "distance_from_stay_km": 21,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-18:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 3.9,
         "best_seasons": [
           "Summer (March-May)",
@@ -1355,11 +957,6 @@
         "description": "Historic Varampatta mosque with beautiful architecture and cultural significance",
         "distance_from_stay_km": 21,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.8,
         "best_seasons": [
           "Summer (March-May)",
@@ -1382,11 +979,6 @@
         "description": "Kappikalam waterfalls, perfect for trekking and rock climbing",
         "distance_from_stay_km": 22,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
@@ -1406,14 +998,9 @@
         "name": "Manjappara",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 23,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -1433,14 +1020,9 @@
         "name": "Sentinel Rock Waterfall",
         "category": "waterfalls",
         "category_label": "Waterfalls & Lakes",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
+        "description": null,
         "distance_from_stay_km": 23,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": null,
         "rating": 4,
         "best_seasons": [
           "Summer (March-May)",
@@ -1460,14 +1042,9 @@
         "name": "Soochipara Falls",
         "category": "waterfalls",
         "category_label": "Waterfalls & Lakes",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
+        "description": null,
         "distance_from_stay_km": 23,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "08:00-16:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": null,
         "rating": 4.2,
         "best_seasons": [
           "Summer (March-May)",
@@ -1483,33 +1060,6 @@
         "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html"
       },
       {
-        "id": "wildlife-28",
-        "name": "Muthanga Wildlife Sanctuary",
-        "category": "wildlife",
-        "category_label": "Wildlife",
-        "description": "Sanctuary with elephants, deer, and a variety of birds in their natural habitat",
-        "distance_from_stay_km": 24,
-        "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "06:00-19:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
-        "rating": 3.9,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.671820900367546,
-          "longitude": 76.3688581955536
-        },
-        "map_url": "https://maps.app.goo.gl/DLq8eRuT7tc7nQWE9",
-        "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html"
-      },
-      {
         "id": "shopping-86",
         "name": "Ali's wayanadan natural honey",
         "category": "shopping",
@@ -1517,11 +1067,6 @@
         "description": "Ali's Wayanadan Natural Honey is a brand of honey sourced from the Wayanad region of Kerala",
         "distance_from_stay_km": 25,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-20:00"
-        ],
-        "weekly_holiday": "NA",
-        "entry_fee_inr": null,
         "rating": 5,
         "best_seasons": [
           "All Season"
@@ -1539,14 +1084,9 @@
         "name": "Attamala View Point",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 25,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "07:00-18:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.6,
         "best_seasons": [
           "Summer (March-May)",
@@ -1566,14 +1106,9 @@
         "name": "Sunrise valley",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 25,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.4,
         "best_seasons": [
           "Summer (March-May)",
@@ -1593,14 +1128,9 @@
         "name": "Neelimala view point",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 26,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 3.9,
         "best_seasons": [
           "Summer (March-May)",
@@ -1620,14 +1150,9 @@
         "name": "Valliyoorkavu temple",
         "category": "pilgrimage",
         "category_label": "Pilgrimage",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 27,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -1647,14 +1172,9 @@
         "name": "Banasura Sagar Hills",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
+        "description": null,
         "distance_from_stay_km": 29,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -1677,11 +1197,6 @@
         "description": "Our lady of lourdes shrine, Pallikunnu , nestled in the hills of Wayanad",
         "distance_from_stay_km": 29,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.7,
         "best_seasons": [
           "Summer (March-May)",
@@ -1701,14 +1216,9 @@
         "name": "Mananthavady Pazhassi Tomb",
         "category": "culthist",
         "category_label": "Cultural & Historical",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 30,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.2,
         "best_seasons": [
           "Summer (March-May)",
@@ -1731,11 +1241,6 @@
         "description": "Pulpally Sitadevi temple, nestled in the hills of Wayanad",
         "distance_from_stay_km": 30,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.7,
         "best_seasons": [
           "Summer (March-May)",
@@ -1758,11 +1263,6 @@
         "description": "Water fall down the Ghats of wayanad",
         "distance_from_stay_km": 31,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.4,
         "best_seasons": [
           "Summer (March-May)",
@@ -1782,14 +1282,9 @@
         "name": "Cheeyambam waterfalls",
         "category": "waterfalls",
         "category_label": "Waterfalls & Lakes",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
+        "description": null,
         "distance_from_stay_km": 32,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -1809,14 +1304,9 @@
         "name": "Sultan's Batthery Valmiki Ashram",
         "category": "culthist",
         "category_label": "Cultural & Historical",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 32,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.8,
         "best_seasons": [
           "Summer (March-May)",
@@ -1836,14 +1326,9 @@
         "name": "Kuruwa Deep",
         "category": "trucking",
         "category_label": "Trekking",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 33,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-16:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
@@ -1863,14 +1348,9 @@
         "name": "Chetalayam falls  ",
         "category": "waterfalls",
         "category_label": "Waterfalls & Lakes",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
+        "description": null,
         "distance_from_stay_km": 34,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -1893,12 +1373,6 @@
         "description": "Historic Trishileri temple  with beautiful architecture and cultural significance",
         "distance_from_stay_km": 36,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "05:30-12:30",
-          "17:00-19:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -1918,14 +1392,9 @@
         "name": "Arripara falls",
         "category": "waterfalls",
         "category_label": "Waterfalls & Lakes",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
+        "description": null,
         "distance_from_stay_km": 37,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -1945,14 +1414,9 @@
         "name": "Begur wildlife sanctuary",
         "category": "wildlife",
         "category_label": "Wildlife",
-        "description": "Showcases the rich cultural heritage and tribal artifacts of Wayanad",
+        "description": null,
         "distance_from_stay_km": 37,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -1975,11 +1439,6 @@
         "description": "Lush greenery and tea plantations",
         "distance_from_stay_km": 38,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:30-16:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -2002,11 +1461,6 @@
         "description": "One of the largest and most spectacular waterfalls in Wayanad",
         "distance_from_stay_km": 41,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": null,
         "rating": 4.2,
         "best_seasons": [
           "Summer (March-May)",
@@ -2026,14 +1480,9 @@
         "name": "Sita Lav Kush Temple ponkuzhy",
         "category": "pilgrimage",
         "category_label": "Pilgrimage",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 41,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.8,
         "best_seasons": [
           "Summer (March-May)",
@@ -2056,11 +1505,6 @@
         "description": "Munneswaran Kunnu",
         "distance_from_stay_km": 42,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "07:00-18:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -2083,11 +1527,6 @@
         "description": "For bird lovers, this Pakshipathalam trek offers a myriad of bird species on its 7 km stretch in the deep forests of Wayanad. The Forest Resort at Lanternstay provides guided tours through various treks; thus, it is family friendly and the adventures here are always safe and enjoyable. On this stretch, there are possibilities to sighting some rare species, such as Malabar Grey Hornbill and migratory birds",
         "distance_from_stay_km": 42,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "07:00-17:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -2107,14 +1546,9 @@
         "name": "Boys Town",
         "category": "farms",
         "category_label": "Farm Visits",
-        "description": "Experience spice cultivation and farm life in Wayanad",
+        "description": null,
         "distance_from_stay_km": 43,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "08:00-18:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
         "rating": 4,
         "best_seasons": [
           "All Season"
@@ -2132,15 +1566,9 @@
         "name": "Tholpetty wild life sanctuary",
         "category": "wildlife",
         "category_label": "Wildlife",
-        "description": "Showcases the rich cultural heritage and tribal artifacts of Wayanad",
+        "description": null,
         "distance_from_stay_km": 47,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-10:00",
-          "15:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4,
         "best_seasons": [
           "Summer (March-May)",
@@ -2160,15 +1588,9 @@
         "name": "Tirunelli",
         "category": "pilgrimage",
         "category_label": "Pilgrimage",
-        "description": "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad",
+        "description": null,
         "distance_from_stay_km": 48,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "05:30-12:30",
-          "17:00-19:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.7,
         "best_seasons": [
           "Summer (March-May)",
@@ -2191,11 +1613,6 @@
         "description": "Neelarchalu",
         "distance_from_stay_km": 49,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -2218,12 +1635,6 @@
         "description": "Ancient temple stream to Lord Vishnu, nestled in the hills of Wayanad",
         "distance_from_stay_km": 49,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "05:30-12:30",
-          "17:00-19:30"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.7,
         "best_seasons": [
           "Summer (March-May)",
@@ -2243,14 +1654,9 @@
         "name": "Brahmagiri",
         "category": "trucking",
         "category_label": "Trekking",
-        "description": "Temple associated with the epic Ramayana, located in a serene setting",
+        "description": null,
         "distance_from_stay_km": 50,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.5,
         "best_seasons": [
           "Summer (March-May)",
@@ -2270,14 +1676,9 @@
         "name": "Nagarhole wild life sanctuary",
         "category": "wildlife",
         "category_label": "Wildlife",
-        "description": "Sanctuary with elephants, deer, and a variety of birds in their natural habitat",
+        "description": null,
         "distance_from_stay_km": 52,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "07:00-17:00"
-        ],
-        "weekly_holiday": "None",
-        "entry_fee_inr": 0,
         "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
@@ -2297,14 +1698,9 @@
         "name": "Irrupu falls ",
         "category": "waterfalls",
         "category_label": "Waterfalls & Lakes",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
+        "description": null,
         "distance_from_stay_km": 60,
         "typical_visit_duration": "1-2 Hours",
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
-        "entry_fee_inr": 0,
         "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
@@ -2318,6 +1714,154 @@
         },
         "map_url": "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
         "page_url": "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html"
+      },
+      {
+        "id": "sporting-82",
+        "name": "Bamboo Rafting",
+        "category": "sporting",
+        "category_label": "Sporting",
+        "description": "Bamboo rafting in Wayanad Kerala to a day of hiking or trekking. River guide, safety gear incl",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "2 Hours",
+        "rating": 4.5,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.808946574960723,
+          "longitude": 76.00202559265286
+        },
+        "map_url": "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
+        "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html"
+      },
+      {
+        "id": "plantation-62",
+        "name": "Coffee Plantation",
+        "category": "plantation",
+        "category_label": "Plantations",
+        "description": "Expansive Coffee Plantation with guided tours and tasting sessions",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.758218103566884,
+          "longitude": 75.99955554569163
+        },
+        "map_url": "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
+        "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
+      },
+      {
+        "id": "trucking-21",
+        "name": "Edakal Caves",
+        "category": "trucking",
+        "category_label": "Trekking",
+        "description": null,
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "2-3 Hours",
+        "rating": 4.1,
+        "best_seasons": [
+          "Summer (November-March)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.6268407,
+          "longitude": 76.234269
+        },
+        "map_url": "https://maps.app.goo.gl/yBs8PRhJEea7MJt8A",
+        "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html"
+      },
+      {
+        "id": "farms-88",
+        "name": "Gurukula Botanical Sanctuary",
+        "category": "farms",
+        "category_label": "Farm Visits",
+        "description": "Gurukula Botanical Sanctuary hosts over 2,000 native plant species including around 100 native trees restored to their natural habitat, 500 herbs, shrubs",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.9,
+        "best_seasons": [
+          "All Season"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.821216,
+          "longitude": 75.844855
+        },
+        "map_url": "https://maps.app.goo.gl/gLZB7Pnn3mDAnuYw8",
+        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+      },
+      {
+        "id": "trucking-87",
+        "name": "Kolagapara",
+        "category": "trucking",
+        "category_label": "Trekking",
+        "description": "Ancient rock shelter",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.2,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.656161744533218,
+          "longitude": 76.19452691872974
+        },
+        "map_url": "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
+        "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
+      },
+      {
+        "id": "wildlife-28",
+        "name": "Muthanga Wildlife Sanctuary",
+        "category": "wildlife",
+        "category_label": "Wildlife",
+        "description": null,
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 3.9,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.671820900367546,
+          "longitude": 76.3688581955536
+        },
+        "map_url": "https://maps.app.goo.gl/DLq8eRuT7tc7nQWE9",
+        "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html"
+      },
+      {
+        "id": "farms-74",
+        "name": "Pepper Farm",
+        "category": "farms",
+        "category_label": "Farm Visits",
+        "description": null,
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.7,
+        "best_seasons": [
+          "All Season"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.69283527987838,
+          "longitude": 76.1911296389339
+        },
+        "map_url": "https://maps.app.goo.gl/fihSsqhSHPCNRJzk9",
+        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
       }
     ]
   },
