@@ -109,43 +109,40 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
         $(function () {
-            var closed =
-                [
-                    [
-                        "2025-8-4", ""
-                    ],
-                    [
-                        "2025-8-5", "2025-8-5"
-                    ],
-                    [
-                        "2025-8-6", "2025-8-6"
-                    ],
-                    [
-                        "2025-8-10", "2025-8-10"
-                    ]
-                ];
-            var closedDays = [];
-            var bookedDays = [];
-            var booking = booking || [];
-             var todayDate = (function(){
-			      var d = new Date();
-			      var day = d.getDate();
-			      day =  day > 9 ? day : '0' + day ;
-			      var month = (d.getMonth() + 1);
-			      month = month > 9 ? month : '0' + month;
-			      var _value =  d.getFullYear() + '-' + month + '-' + day;
-			      return _value;
-			    })();
-            for (i = 0; i < booking.length; i++) {
-                if (booking[i].length == 2) {
-                    bookedDays.push(booking[i][0]);
-                }
+            // Booked and closed days come from data/bookingdata.js and data/closeddata.js.
+            // (A local "var booking = booking || []" used to shadow the real data, and a
+            // stale hard-coded copy of the closed days used unpadded dates that never matched.)
+            function bwPad(n) {
+                return String(n).length > 1 ? String(n) : '0' + n;
             }
-            for (i = 0; i < closed.length; i++) {
-                if (closed[i].length == 2) {
-                    closedDays.push(closed[i][0]);
-                }
+            function bwNormalize(value) {
+                var m = String(value || '').match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+                return m ? m[1] + '-' + bwPad(m[2]) + '-' + bwPad(m[3]) : null;
             }
+            // each entry is [from, to]; an empty "to" means a single day. Returns every day, padded.
+            function bwExpand(ranges) {
+                var out = [];
+                (ranges || []).forEach(function (range) {
+                    var start = bwNormalize(range[0]);
+                    var end = bwNormalize(range[1]) || start;
+                    if (!start) {
+                        return;
+                    }
+                    var d = new Date(start + 'T00:00:00');
+                    var last = new Date(end + 'T00:00:00');
+                    for (var guard = 0; d <= last && guard < 366; guard++) {
+                        out.push(d.getFullYear() + '-' + bwPad(d.getMonth() + 1) + '-' + bwPad(d.getDate()));
+                        d.setDate(d.getDate() + 1);
+                    }
+                });
+                return out;
+            }
+            var closedDays = bwExpand(window.closed);
+            var bookedDays = bwExpand(window.booking);
+            var todayDate = (function () {
+                var d = new Date();
+                return d.getFullYear() + '-' + bwPad(d.getMonth() + 1) + '-' + bwPad(d.getDate());
+            })();
             $("#date-range-calendar").datepicker({
                 showOn: "button",
                 buttonImageOnly: true,
@@ -189,23 +186,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         $("#checkOutDate").val("");
                         $("#nights-count").text("0");
                     }
-                    for (i = 0; i < booking.length; i++) {
-                        bDate = booking[i][0];
-                        if (booking[i].length == 2 && (Date.parse(sDate) == Date.parse(bDate))) {
-                            $("#villa1").prop("checked", true).prop("disabled", true);
-                            $("#villa2").prop("checked", true).prop("disabled", true);
-                            break;
-                        }
-                        else if (booking[i].length == 1 && (Date.parse(sDate) == Date.parse(bDate))) {
-                            $("#villa1").prop("checked", true).prop("disabled", true);
-                            break;
-                        }
-                        else {
-                            $("#villa1").prop("checked", false).prop("disabled", false);
-                            $("#villa2").prop("checked", false).prop("disabled", false);
-                            break;
-                        }
-                    }
+                    var taken = bookedDays.indexOf(bwNormalize(sDate)) > -1;
+                    $("#villa1").prop("checked", taken).prop("disabled", taken);
+                    $("#villa2").prop("checked", taken).prop("disabled", taken);
                 },
                 beforeShowDay: function (date) {
                     var day = date.getDate();
@@ -238,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function getNextThreeDays(todayDate)
         {
-	       if( (Date.parse(booking[0][0]) == Date.parse(todayDate)))
+	       if (window.booking && window.booking.length && (Date.parse(window.booking[0][0]) == Date.parse(todayDate)))
 	       {
 			    for (i = 0; i < booking.length; i++) {
                  }
