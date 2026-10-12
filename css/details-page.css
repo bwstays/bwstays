@@ -8213,11 +8213,13 @@ footer.footer .footer-social {
 }
 footer.footer .footer-social a,
 footer.footer .footer-social i {
-  color: rgba(255, 255, 255, 0.85);
+  color: #64a19d;
   font-size: 1.05rem;
 }
-footer.footer .footer-social a:hover i {
-  color: #64a19d;
+footer.footer .footer-social a:hover,
+footer.footer .footer-social a:hover i,
+footer.footer .footer-social a:focus-visible i {
+  color: #8cc4c0;
 }
 footer.footer .footer-copyright {
   display: flex;
