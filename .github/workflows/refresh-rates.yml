@@ -1,0 +1,32 @@
+name: Refresh exchange rates
+
+# Keeps data/exchange-rates.json (shown by the currency widget as a dated
+# fallback) current. Free: ECB rates via frankfurter.dev, no API key.
+on:
+  schedule:
+    - cron: '17 5 1 * *'   # 05:17 UTC on the 1st of each month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/update-rates.mjs
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/exchange-rates.json; then
+            echo "rates unchanged"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/exchange-rates.json
+            git commit -m "Refresh exchange rates"
+            git push
+          fi
