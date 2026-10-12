@@ -49,7 +49,7 @@ const shopdata = {
     {
       id: 2,
       name: "Rippon Tea estate",
-      description: "L greenery and tea plantations near meppady.",
+      description: "L greenery and tea plantations near Meppadi.",
       image: [
         "https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp",
         "https://www.bwstays.com/assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp",
@@ -176,7 +176,7 @@ const shopdata = {
       latlong: "11.677845397531414, 75.93568600923",
       map: "https://www.google.com/maps/place/Makkiyad+Meenmutty+Water+Falls/@11.7282012,75.8861335,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -219,7 +219,7 @@ const shopdata = {
       latlong: "11.511709053469259, 76.1637670659447",
       map: "https://www.google.com/maps/place/Sentinel+Rock/@11.4951824,76.1608204,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -263,7 +263,7 @@ const shopdata = {
       latlong: "11.51173007949638, 76.16378589573601",
       map: "https://www.google.com/maps/place/Soochipara+Waterfalls/@11.5115356,76.1637859,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -304,7 +304,7 @@ const shopdata = {
       latlong: "11.766189025300932, 76.25203494478279",
       map: "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -349,7 +349,7 @@ const shopdata = {
       latlong: "11.5239348, 76.1526896",
       map: "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -391,7 +391,7 @@ const shopdata = {
       latlong: "11.524617527477, 76.15260365204358",
       map: "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -433,7 +433,7 @@ const shopdata = {
       latlong: "11.43840307285013, 76.04597666931055",
       map: "https://www.google.com/maps/place/Arippara+Waterfalls/@11.4381875,76.0460625,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -475,7 +475,7 @@ const shopdata = {
       latlong: "11.967284462093113, 75.98393572809631",
       map: "https://www.google.com/maps/place/Iruppu+Falls/@11.96706,75.9839414,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -518,7 +518,7 @@ const shopdata = {
       latlong: "11.765721623585334, 76.25204562883619",
       map: "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -560,7 +560,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       content:
-        "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -583,7 +583,7 @@ const shopdata = {
     {
       id: 14,
       name: "Gandhi Museum",
-      description: "Gandhi Museaum.",
+      description: "Gandhi Museum.",
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-stays-kalpetta-gandhi-museum.webp",
       ],
@@ -735,7 +735,7 @@ const shopdata = {
     {
       id: 17,
       name: "Honey Museum",
-      description: "Varities of honey displayed to taste and purchase.",
+      description: "Varieties of honey displayed to taste and purchase.",
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-stays-honey-museum-wayanad.webp",
       ],
