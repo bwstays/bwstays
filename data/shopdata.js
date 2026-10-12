@@ -18,7 +18,7 @@ const shopdata = {
       distance: "38",
       transport: "Public",
       latlong: "11.840044094937126, 75.89842935307782",
-      map: "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
+      map: "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
       rating: "4.5",
       hrs: "2",
       fee: "0",
@@ -68,7 +68,7 @@ const shopdata = {
       distance: "11",
       transport: "Public",
       latlong: "11.534836134024715, 76.17498437471619",
-      map: "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
+      map: "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
       rating: "4.5",
       hrs: "2",
       fee: "0",
@@ -119,7 +119,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.758218103566884, 75.99955554569163",
-      map: "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
+      map: "https://www.google.com/maps/place/Coffee+plantation/@11.7415157,76.0020849,17z",
       content:
         "Immerse yourself in aromatic spice plantations while staying in our cozy mountain cottage. Perfect for nature lovers and those interested in learning about Kerala's famous spices. Includes guided plantation walks and spice processing demonstrations.",
       amenities: [
@@ -174,7 +174,7 @@ const shopdata = {
       fee: "100 INR",
       aliases: ["meenmutty", "meenmutty falls"],
       latlong: "11.677845397531414, 75.93568600923",
-      map: "https://maps.app.goo.gl/SvSDuShnpWmcceyg8",
+      map: "https://www.google.com/maps/place/Makkiyad+Meenmutty+Water+Falls/@11.7282012,75.8861335,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -217,7 +217,7 @@ const shopdata = {
       fee: "150 INR",
       aliases: [],
       latlong: "11.511709053469259, 76.1637670659447",
-      map: "https://maps.app.goo.gl/WTkrrH73W95w23Xm8",
+      map: "https://www.google.com/maps/place/Sentinel+Rock/@11.4951824,76.1608204,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -261,7 +261,7 @@ const shopdata = {
       fee: "150 INR",
       aliases: ["soochipara", "sentinel rock"],
       latlong: "11.51173007949638, 76.16378589573601",
-      map: "https://maps.app.goo.gl/qr1RZdxc5WMa5j71A",
+      map: "https://www.google.com/maps/place/Soochipara+Waterfalls/@11.5115356,76.1637859,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -302,7 +302,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.766189025300932, 76.25203494478279",
-      map: "https://maps.app.goo.gl/Xi6e2aPFEjWFkHBi9",
+      map: "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -347,7 +347,7 @@ const shopdata = {
       fee: "40  INR",
       aliases: [],
       latlong: "11.5239348, 76.1526896",
-      map: "https://maps.app.goo.gl/UkTgsP4fZoRngCyBA",
+      map: "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -389,7 +389,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.524617527477, 76.15260365204358",
-      map: "https://maps.app.goo.gl/fzrjabJfK5GG7CgD9",
+      map: "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -431,7 +431,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.43840307285013, 76.04597666931055",
-      map: "https://maps.app.goo.gl/BLpuvUbHqgNC54up8",
+      map: "https://www.google.com/maps/place/Arippara+Waterfalls/@11.4381875,76.0460625,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -473,7 +473,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.967284462093113, 75.98393572809631",
-      map: "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
+      map: "https://www.google.com/maps/place/Iruppu+Falls/@11.96706,75.9839414,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -516,7 +516,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.765721623585334, 76.25204562883619",
-      map: "https://maps.app.goo.gl/z4pftdA2hc1Ea7Ny6",
+      map: "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
       content:
         "Discover Wayand's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
@@ -554,7 +554,7 @@ const shopdata = {
       distance: "31",
       transport: "Public",
       latlong: "11.472979462955495, 76.05414413068944",
-      map: "https://maps.app.goo.gl/NK2gPWddyJeNDK7J8",
+      map: "https://www.google.com/maps/place/Thusharagiri+Waterfalls/@11.4728749,76.0541761,17z",
       rating: "4.4",
       hrs: "2",
       fee: "0",
@@ -602,7 +602,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.600747990313033, 76.0148553711638",
-      map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
+      map: "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
 
       content:
         "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
@@ -652,7 +652,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.600747990313033, 76.0148553711638",
-      map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
+      map: "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
 
       content:
         "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
@@ -704,7 +704,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.600747990313033, 76.0148553711638",
-      map: "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
+      map: "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
 
       content:
         "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
@@ -746,7 +746,7 @@ const shopdata = {
       distance: "12",
       transport: "Public",
       latlong: "11.5375175, 76.0434972",
-      map: "https://maps.app.goo.gl/8x4fQb5Cr9RBCFr17",
+      map: "https://www.google.com/maps/place/Honey+Museum+Wayanad/@11.5375153,76.0435405,17z",
       rating: "4.5",
       hrs: "2",
       fee: "0",
@@ -803,7 +803,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.748456154167792, 76.20383676709",
-      map: "https://maps.app.goo.gl/1E9kADRsBfxLQfs69",
+      map: "https://www.google.com/maps/place/Wayanad+Heritage+Museum%2C+Ambalavayal/@11.6193121,76.2106106,17z",
 
       content:
         "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
@@ -855,7 +855,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.537907109786387, 76.02770162612713",
-      map: "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
+      map: "https://www.google.com/maps/place/Karapuzha+Reservoir/@11.6099276,76.1660561,17z",
       content:
         "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
@@ -903,7 +903,7 @@ const shopdata = {
       fee: "0",
       aliases: [],
       latlong: "11.6182113, 76.1722152",
-      map: "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
+      map: "https://www.google.com/maps/place/Karapuzha+Reservoir/@11.6099276,76.1660561,17z",
       content:
         "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
