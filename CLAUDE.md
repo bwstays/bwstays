@@ -202,3 +202,12 @@ node scripts/generate-mcp.mjs      # then regenerate the MCP files
 - Missing opening hours, phones or cuisines are left null. The fix is to add them on OpenStreetMap (each place carries an `osm_edit_url`) and re-run the script.
 - Places whose coordinates cannot be trusted keep their historical distances or stay 0 (unknown); they are listed in `locations.meta`.
 - Attribution: data (c) OpenStreetMap contributors, ODbL.
+
+### Other generated data and checks
+
+```
+node scripts/build-map-data.mjs      # data/map-places.json: all-locations map with category filters
+node scripts/build-search-index.mjs  # data/search-index.json: search.html (run generate-mcp first)
+node scripts/update-rates.mjs        # data/exchange-rates.json: dated fallback for the currency widget
+node scripts/check.mjs               # syntax, JSON, JSON-LD, duplicate ids, MCP freshness (also runs in CI)
+```
