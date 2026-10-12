@@ -241,14 +241,14 @@ function bwRenderPlaceMap(data) {
 
     // filter bar, inserted above the map
     var bar = document.createElement('div');
-    bar.className = 'text-center mb-2';
+    bar.className = 'bw-map-filters';
     bar.setAttribute('role', 'group');
     bar.setAttribute('aria-label', 'Filter places on the map');
     var buttons = {};
     function paint() {
         Object.keys(buttons).forEach(function (k) {
             var on = k === 'all' ? Object.keys(shown).every(function (x) { return shown[x]; }) : shown[k];
-            buttons[k].className = 'btn btn-sm mr-1 mb-1 ' + (on ? 'btn-primary' : 'btn-outline-light');
+            buttons[k].className = 'bw-map-pill' + (on ? ' is-on' : '');
             buttons[k].setAttribute('aria-pressed', on ? 'true' : 'false');
         });
     }
