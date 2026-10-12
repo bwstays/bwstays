@@ -1,0 +1,32 @@
+{
+  "_comment": "Editorial decisions for the generated MCP files, from a web fact-check (2026-10). Keys are '<category>-<id>' from data/sitedata.js. The site's own data is left untouched because each attraction page renders by looking its record up by id; these decisions only affect what scripts/generate-mcp.mjs publishes. 'exclude' drops the record; 'district'/'locality' relabel it; 'withhold' nulls fields that the check showed to be wrong.",
+  "reviewed": "2026-10-12",
+  "entries": {
+    "shopping-77": { "exclude": "Not an attraction: a BEVCO liquor outlet" },
+    "museums-27": { "exclude": "Could not be located as a Wayanad attraction" },
+    "romantic-48": { "exclude": "Could not be located in Wayanad (possibly a different Manjappara in Idukki)" },
+    "romantic-83": { "exclude": "No place by this name could be found" },
+    "culthist-1": { "exclude": "No Santhinatha temple in Wayanad could be found" },
+    "romantic-76": { "exclude": "Placeholder record sharing another place's coordinates; unidentifiable" },
+    "romantic-22": { "exclude": "Record does not match its page (Karapuzha Dam) and its coordinates sit on Pookode Lake" },
+    "museums-89": { "exclude": "Planned museum near Periya; coordinates were copied from the Tea Museum" },
+    "shopping-67": { "exclude": "Unidentifiable sub-entry of En Ooru with coordinates in Kalpetta town" },
+    "waterfalls-34": { "exclude": "Duplicate of Soochipara Falls (Sentinel Rock is the same place)" },
+    "waterfalls-38": { "exclude": "No source found; coordinates are 0.2 km from Kanthanpara Falls" },
+    "plantation-62": { "exclude": "Generic name; no identifiable attraction" },
+    "romantic-56": { "exclude": "Duplicate of Lakkidi Ghats View Point (trucking-20); same page and coordinates" },
+
+    "waterfalls-40": { "district": "Kozhikode", "withhold": ["distance"], "note": "Aripara Falls is in Kozhikode district, not Wayanad" },
+    "waterfalls-16": { "district": "Kozhikode", "withhold": ["distance"], "note": "Thusharagiri Falls is in Kozhikode district, not Wayanad" },
+    "waterfalls-41": { "district": "Kodagu (Karnataka)", "withhold": ["distance"], "note": "Iruppu Falls is in Kodagu, Karnataka; the Brahmagiri trek needs a Karnataka Forest permit and guide" },
+    "wildlife-29": { "district": "Mysuru/Kodagu (Karnataka)", "withhold": ["distance"], "note": "Nagarhole is a national park in Karnataka, not a Wayanad sanctuary" },
+
+    "culthist-6": { "locality": "Pulpally", "withhold": ["coordinates"], "note": "Located in Pulpally rather than Sultan Bathery" },
+    "farms-88": { "locality": "Alattil, near Mananthavady", "withhold": ["distance"], "note": "North Wayanad; the stated 10 km from Kalpetta is doubtful" },
+    "romantic-75": { "withhold": ["distance", "coordinates"], "note": "The real place is near Thalappuzha, more than 40 km away; stated coordinates are in Kalpetta" },
+    "romantic-58": { "withhold": ["coordinates"], "note": "Stated coordinates are about 7.5 km from the real location" },
+    "pilgrimage-3": { "withhold": ["coordinates"], "note": "Stated coordinates conflict with the ~20 km road distance in Kerala Tourism" },
+    "waterfalls-36": { "note": "Shares coordinates with Chetalayam Falls and is likely the same place" },
+    "plantation-80": { "note": "No source found for a visitor-facing estate by this name; verify before recommending" }
+  }
+}
