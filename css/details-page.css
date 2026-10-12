@@ -3567,13 +3567,13 @@ footer.footer .stay-card {
   border: 1px solid #e0e0e0;
 }
 
-#captcha-answer {
+#captcha-answer, #captcha-answer-contact {
   max-width: 120px;
   height: 38px;
 }
 
 /* Fix captcha refresh button to match other elements */
-#refresh-captcha {
+#refresh-captcha, #refresh-captcha-contact {
   height: 38px !important;
   width: 38px !important;
   padding: 0 !important;
@@ -3583,7 +3583,7 @@ footer.footer .stay-card {
   border-radius: 0.25rem;
 }
 
-#refresh-captcha:hover {
+#refresh-captcha:hover, #refresh-captcha-contact:hover {
   background-color: #64a19d !important;
 }
 
@@ -3885,7 +3885,7 @@ footer.footer .stay-card {
   object-fit: cover !important;
 }
 
-#captcha-answer {
+#captcha-answer, #captcha-answer-contact {
   max-width: 120px !important;
 }
 
@@ -4157,7 +4157,7 @@ footer.footer .stay-card {
   font-size: 1rem;
 }
 
-#captcha-error {
+#captcha-error, #captcha-error-contact {
   display: none;
 }
 
@@ -5001,11 +5001,11 @@ footer.footer .stay-card {
     margin-right: 0 !important;
   }
   
-  #captcha-answer {
+  #captcha-answer, #captcha-answer-contact {
     margin-bottom: 0.5rem;
   }
   
-  #refresh-captcha {
+  #refresh-captcha, #refresh-captcha-contact {
     align-self: flex-start;
     margin-left: 0 !important;
   }
@@ -5520,7 +5520,7 @@ footer.footer .stay-card {
         text-align: center;
     }
     
-    #contact-form #refresh-captcha {
+    #contact-form #refresh-captcha, #contact-form #refresh-captcha-contact {
         margin-top: 0.5rem;
         margin-left: 0 !important;
         align-self: center;
@@ -7267,4 +7267,19 @@ select#fromCurrency {
         max-width: 300px;
         margin-bottom: 20px;
     }
+}
+
+/* Terms / disclaimer sections on footer.html are collapsible (open by default) */
+.scrollable-text details > summary {
+  cursor: pointer;
+  list-style-position: inside;
+  color: #fff;
+}
+.scrollable-text details > summary > h1,
+.scrollable-text details > summary > h2 {
+  display: inline;
+}
+.scrollable-text details > summary:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
 }
