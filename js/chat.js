@@ -1,4 +1,9 @@
 (function(){
+  // URL of the deployed chat worker (js/worker.js). Set it after `wrangler deploy`, e.g.
+  // 'https://bwstays-chat-worker.<your-account-subdomain>.workers.dev/chat'. It can also be
+  // supplied as window.BWSTAYS_CHAT_ENDPOINT. While empty, the chat answers from the local
+  // knowledge base only.
+  const CHAT_ENDPOINT = (typeof window !== 'undefined' && window.BWSTAYS_CHAT_ENDPOINT) || '';
   let knowledgeBase = [];
   let knowledgeLoaded = false;
   async function loadKnowledgeBase() {
@@ -493,7 +498,11 @@
         { role: 'system', content: enhancedSystemPrompt },
         ...messages.slice(1)
       ];
-      const resp = await fetch('www.bwstays/chat', {
+      if (!CHAT_ENDPOINT) {
+        // Not deployed/configured yet: let the caller use the local knowledge-base answer.
+        throw new Error('Chat endpoint is not configured');
+      }
+      const resp = await fetch(CHAT_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -533,11 +542,6 @@
       }
       typingEl.style.display = 'flex';
       try{
-        const unrestrictedMessages = [
-          { role: 'system', content: '' },
-          ...chatHistory.slice(1)
-        ];
-        const unrestrictedReply = await sendToGroq(unrestrictedMessages, text);
         const reply = await sendToGroq(chatHistory, text);
         appendMessage('assistant', reply);
         chatHistory.push({ role: 'assistant', content: reply });
