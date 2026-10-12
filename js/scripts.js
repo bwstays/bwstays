@@ -59,19 +59,27 @@
          behavior: 'smooth'
      });
  });
+  // decode the obfuscated e-mail address once, the first time it scrolls into view
   const emailtag = document.querySelector('.email-hidden.text-white');
-   let observer = new IntersectionObserver((entries) => {
-     entries.map((entry) => {
-       if (entry.isIntersecting) {
-         let script = document.createElement('script');
-         script.src = 'https://www.bwstays.com/js/decode-email.js';
-         script.onload = function () {
-           emaildecode(entry.target)
-         };
-         document.head.appendChild(script);
-       }
-     });
-   }).observe(emailtag);
+  if (emailtag && 'IntersectionObserver' in window) {
+    const emailObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        obs.unobserve(entry.target);
+        if (typeof emaildecode === 'function') {
+          emaildecode(entry.target);
+          return;
+        }
+        const script = document.createElement('script');
+        script.src = 'https://www.bwstays.com/js/decode-email.js';
+        script.onload = function () {
+          emaildecode(entry.target);
+        };
+        document.head.appendChild(script);
+      });
+    });
+    emailObserver.observe(emailtag);
+  }
 var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?65929';
 var s = document.createElement('script');
 s.type = 'text/javascript';
