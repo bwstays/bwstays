@@ -8700,3 +8700,57 @@ footer.footer .footer-author p {
 #loc .tab-content {
   overflow: visible;
 }
+
+
+/* Nearby EV charging and gas stations sit side by side */
+.ev-gas-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+.ev-gas-col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.ev-gas-col h3 {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  min-height: 2.6em;
+  margin-bottom: 0.4rem !important;
+}
+.ev-gas-col .contact-card-divider {
+  margin-bottom: 0.75rem !important;
+}
+.ev-gas-col #fuel-places,
+.ev-gas-col #gasfuel-places {
+  padding: 0;
+  margin: 0;
+}
+.ev-gas-col #fuel,
+.ev-gas-col #gasfuel {
+  height: 300px;
+  max-width: 100%;
+  border-width: 1px;
+  border-radius: 12px;
+}
+/* the generic phone cap on .det-img-f (200-300px) left a gap under the map image */
+.ev-gas-col .det-img-f {
+  max-height: none !important;
+  height: 100% !important;
+}
+@media (max-width: 575.98px) {
+  .ev-gas-row {
+    gap: 0.5rem;
+  }
+  .ev-gas-col h3 {
+    font-size: 0.78rem;
+    min-height: 3.9em;
+  }
+  .ev-gas-col #fuel,
+  .ev-gas-col #gasfuel {
+    height: 240px;
+    border-radius: 10px;
+  }
+}
