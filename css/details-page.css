@@ -8702,26 +8702,30 @@ footer.footer .footer-author p {
 }
 
 
-/* Nearby EV charging and gas stations sit side by side */
+/* Nearby EV charging and gas stations: their own full-width section, two maps side by side */
+.ev-gas-section {
+  background: #000;
+  color: #fff;
+  padding: 2.25rem 0 2.5rem;
+}
 .ev-gas-row {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  margin: 0.5rem 0 1rem;
+  gap: 1.25rem;
 }
 .ev-gas-col {
   flex: 1 1 0;
   min-width: 0;
 }
 .ev-gas-col h3 {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   line-height: 1.3;
   letter-spacing: 0.01em;
-  min-height: 2.6em;
+  min-height: 1.5em;
   margin-bottom: 0.4rem !important;
 }
 .ev-gas-col .contact-card-divider {
-  margin-bottom: 0.75rem !important;
+  margin-bottom: 1rem !important;
 }
 .ev-gas-col #fuel-places,
 .ev-gas-col #gasfuel-places {
@@ -8730,19 +8734,36 @@ footer.footer .footer-author p {
 }
 .ev-gas-col #fuel,
 .ev-gas-col #gasfuel {
-  height: 300px;
+  height: 420px;
   max-width: 100%;
   border-width: 1px;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 /* the generic phone cap on .det-img-f (200-300px) left a gap under the map image */
 .ev-gas-col .det-img-f {
   max-height: none !important;
   height: 100% !important;
 }
+@media (max-width: 991.98px) {
+  .ev-gas-col h3 {
+    font-size: 1rem;
+    min-height: 2.6em;
+  }
+  .ev-gas-col #fuel,
+  .ev-gas-col #gasfuel {
+    height: 360px;
+  }
+}
 @media (max-width: 575.98px) {
+  .ev-gas-section {
+    padding: 1.5rem 0 1.75rem;
+  }
+  .ev-gas-section .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   .ev-gas-row {
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
   .ev-gas-col h3 {
     font-size: 0.78rem;
@@ -8750,30 +8771,7 @@ footer.footer .footer-author p {
   }
   .ev-gas-col #fuel,
   .ev-gas-col #gasfuel {
-    height: 240px;
-    border-radius: 10px;
-  }
-}
-
-
-/* EV / gas maps: use the full width of the row (a little past the column padding, equal on both sides) and be taller */
-.ev-gas-row {
-  margin-left: -12px;
-  margin-right: -12px;
-  gap: 0.75rem;
-}
-.ev-gas-col #fuel,
-.ev-gas-col #gasfuel {
-  height: 340px;
-}
-@media (max-width: 575.98px) {
-  .ev-gas-row {
-    margin-left: -8px;
-    margin-right: -8px;
-    gap: 0.4rem;
-  }
-  .ev-gas-col #fuel,
-  .ev-gas-col #gasfuel {
     height: 290px;
+    border-radius: 10px;
   }
 }
