@@ -1,0 +1,12 @@
+/* 404 page: the "Resource Not Found" heading sits at the top of the page, so it needs to clear the
+   fixed navigation (about 97px tall from tablet width up; phones already reserve the nav height).
+   Specificity matches the shared "#signup.signup-section" spacing rule so this one wins. */
+#mainNav + #signup.signup-section {
+  padding-top: 8rem !important;
+}
+
+@media (max-width: 767.98px) {
+  #mainNav + #signup.signup-section {
+    padding-top: 2rem !important;
+  }
+}
