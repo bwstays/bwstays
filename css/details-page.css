@@ -4373,7 +4373,7 @@ footer.footer .stay-card {
     font-size: 2rem !important;
   }
   
-  .project-text h4 {
+  .project-text h4, .project-text h3.h4 {
     font-size: 1.5rem !important;
   }
   
@@ -4407,7 +4407,7 @@ footer.footer .stay-card {
     padding: 1.5rem !important;
   }
   
-  .project-text h4 {
+  .project-text h4, .project-text h3.h4 {
     font-size: 1.25rem !important;
     margin-bottom: 0.75rem !important;
   }
@@ -4451,7 +4451,7 @@ footer.footer .stay-card {
     padding: 1rem !important;
   }
   
-  .project-text h4 {
+  .project-text h4, .project-text h3.h4 {
     font-size: 1.1rem !important;
   }
   
@@ -4917,7 +4917,7 @@ footer.footer .stay-card {
     height: 300px !important;
   }
   
-  #food-list-container h5 {
+  #food-list-container h5, #food-list-container h3.h5 {
     font-size: 1.1rem !important;
     text-align: center !important;
   }
@@ -4941,7 +4941,7 @@ footer.footer .stay-card {
     height: 250px !important;
   }
   
-  #food-list-container h5 {
+  #food-list-container h5, #food-list-container h3.h5 {
     font-size: 1rem !important;
   }
 }
@@ -5043,7 +5043,7 @@ footer.footer .stay-card {
     font-size: 2rem !important;
   }
   
-  .signup-section h4 {
+  .signup-section h4, .signup-section h3.h4 {
     font-size: 1.5rem !important;
   }
 }
@@ -5057,7 +5057,7 @@ footer.footer .stay-card {
     font-size: 1.75rem !important;
   }
   
-  .signup-section h4 {
+  .signup-section h4, .signup-section h3.h4 {
     font-size: 1.25rem !important;
   }
   
@@ -5098,7 +5098,7 @@ footer.footer .stay-card {
     font-size: 1.5rem !important;
   }
   
-  .signup-section h4 {
+  .signup-section h4, .signup-section h3.h4 {
     font-size: 1.1rem !important;
   }
   
@@ -5355,7 +5355,7 @@ footer.footer .stay-card {
 /* Large screens and below (991.98px) */
 @media (max-width: 991.98px) {
     /* Fooding Page Header */
-    #fooding-top h4,
+    #fooding-top h4, #fooding-top h3.h4,
     #fooding-top h1 {
         font-size: 1.5rem !important;
         padding: 0 15px;
@@ -5395,7 +5395,7 @@ footer.footer .stay-card {
         padding: 1rem;
     }
     
-    #fooding-top h4,
+    #fooding-top h4, #fooding-top h3.h4,
     #fooding-top h1 {
         font-size: 1.3rem !important;
         line-height: 1.4;
@@ -5488,7 +5488,7 @@ footer.footer .stay-card {
         margin-bottom: 2rem !important;
     }
     
-    #fooding-top h4,
+    #fooding-top h4, #fooding-top h3.h4,
     #fooding-top h1 {
         font-size: 1.1rem !important;
         margin-top: 1rem !important;
@@ -5541,7 +5541,7 @@ footer.footer .stay-card {
     
     /* About us section */
     .signup-section h2,
-    .signup-section h4 {
+    .signup-section h4, .signup-section h3.h4 {
         font-size: 1.3rem;
     }
     
@@ -5898,7 +5898,7 @@ footer.footer .stay-card {
     
     /* About Us Section */
     .booking-page .signup-section h2,
-    .booking-page .signup-section h4 {
+    .booking-page .signup-section h4, .booking-page .signup-section h3.h4 {
         font-size: 1.3rem;
     }
     
@@ -6219,7 +6219,7 @@ footer.footer .stay-card {
     }
     
     .booking-page .signup-section h2,
-    .booking-page .signup-section h4 {
+    .booking-page .signup-section h4, .booking-page .signup-section h3.h4 {
         font-size: 1.1rem;
     }
     
@@ -7289,7 +7289,7 @@ select#fromCurrency {
   height: 300px;
   max-width: 100%;
 }
-.food-places #food-list-container h5 {
+.food-places #food-list-container h5, .food-places #food-list-container h3.h5 {
   text-align: left !important;
   font-size: 1rem;
   margin-bottom: 0.75rem !important;
