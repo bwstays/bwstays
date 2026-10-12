@@ -128,7 +128,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<link rel="apple-touch-icon" sizes="76x76" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-76x76.png"/>
 	<link rel="apple-touch-icon" sizes="152x152" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-152x152.png"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
- <link href="https://www.bwstays.com/css/details-page.css?v=a01ba11b" rel="stylesheet" type="text/css" media="all"/>
+ <link href="https://www.bwstays.com/css/details-page.css?v=cab581b7" rel="stylesheet" type="text/css" media="all"/>
      <link href="https://www.bwstays.com/css/new-page.css?v=d8af789d" rel="stylesheet" type="text/css" media="all"/>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" rel="stylesheet"/>
 
@@ -220,7 +220,7 @@ height="0" width="0"  class="goomgr"></iframe></noscript>
             </div>
         </div>
     </nav>
-    <main class="bg-dark" id="search" style="padding-top:120px;padding-bottom:3rem;" tabindex="-1">
+    <main class="bg-dark" id="search" style="padding-top:120px;padding-bottom:3rem;">
         <div class="container">
             <h1 class="h2 text-white mb-2">Search Wayanad</h1>
             <p class="text-white-50">Places to visit, restaurants, cafes, bakeries and answers to common questions.</p>
@@ -229,15 +229,26 @@ height="0" width="0"  class="goomgr"></iframe></noscript>
                 <input type="search" id="site-search-input" class="form-control form-control-lg" autocomplete="off"
                        placeholder="Try &quot;waterfall&quot;, &quot;vegetarian&quot; or a place name">
             </form>
-            <div class="mb-3" role="group" aria-label="Filter results">
-                <button type="button" class="btn btn-sm btn-primary active mr-1" data-search-type="all">All</button>
-                <button type="button" class="btn btn-sm btn-outline-light mr-1" data-search-type="place">Places</button>
-                <button type="button" class="btn btn-sm btn-outline-light mr-1" data-search-type="food">Food</button>
-                <button type="button" class="btn btn-sm btn-outline-light mr-1" data-search-type="faq">FAQ</button>
-                <button type="button" class="btn btn-sm btn-outline-light" data-search-type="page">Pages</button>
+            <div class="bw-search-bar">
+                <div class="bw-search-tabs" role="group" aria-label="Filter results by type">
+                    <button type="button" class="bw-map-pill is-on" data-search-type="all" aria-pressed="true">All <span class="bw-count">0</span></button>
+                    <button type="button" class="bw-map-pill" data-search-type="place" aria-pressed="false">Places <span class="bw-count">0</span></button>
+                    <button type="button" class="bw-map-pill" data-search-type="food" aria-pressed="false">Food <span class="bw-count">0</span></button>
+                    <button type="button" class="bw-map-pill" data-search-type="faq" aria-pressed="false">FAQ <span class="bw-count">0</span></button>
+                    <button type="button" class="bw-map-pill" data-search-type="page" aria-pressed="false">Pages <span class="bw-count">0</span></button>
+                </div>
+                <div class="bw-search-sort">
+                    <label for="site-search-sort">Sort by</label>
+                    <select id="site-search-sort">
+                        <option value="relevance">Best match</option>
+                        <option value="distance">Nearest first</option>
+                        <option value="name">Name A&ndash;Z</option>
+                    </select>
+                </div>
             </div>
             <p id="site-search-status" class="text-white-50 small" role="status" aria-live="polite">Loading...</p>
             <div id="site-search-results" class="row"></div>
+            <nav id="site-search-pages" class="bw-pager" aria-label="Search result pages"></nav>
             <p class="text-white-50 small mt-4">Food and place data &copy; <a class="text-white-50" href="https://www.openstreetmap.org/copyright" rel="noopener noreferrer nofollow">OpenStreetMap contributors</a>.</p>
         </div>
     </main>
@@ -491,9 +502,9 @@ height="0" width="0"  class="goomgr"></iframe></noscript>
 
     <script
       type="text/javascript"
-      src="https://www.bwstays.com/js/scripts.js?v=4cf08c1a"
+      src="https://www.bwstays.com/js/scripts.js?v=ea2beb90"
     ></script>
-  <script type="text/javascript" src="https://www.bwstays.com/js/site-search.js?v=dc26afd1"></script>
+  <script type="text/javascript" src="https://www.bwstays.com/js/site-search.js?v=a386463d"></script>
 </body>
 
 </html>
