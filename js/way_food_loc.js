@@ -195,6 +195,89 @@ if (typeof mapType !== 'undefined' && mapType == 1) {
         .catch(function () {
             bwAddLegacyMarkers();
         });
+} else if (typeof mapType !== 'undefined' && mapType == 2) {
+    // All-locations map: category filters over data/map-places.json (built by scripts/build-map-data.mjs)
+    fetch(iconURLPrefix + 'data/map-places.json')
+        .then(function (r) { return r.json(); })
+        .then(bwRenderPlaceMap)
+        .catch(function () {
+            bwAddLegacyMarkers();
+        });
 } else {
     bwAddLegacyMarkers();
+}
+
+function bwPlacePopup(p) {
+    var h = '';
+    if (p.img) {
+        h += '<img src="' + bwEsc(p.img) + '" alt="' + bwEsc(p.name) + '" width="240" style="max-width:100%;height:auto">';
+    }
+    var title = bwEsc(p.name);
+    var link = bwSafeUrl(p.url);
+    h += '<h6 class="mt-1">' + (link ? '<a href="' + bwEsc(link) + '">' + title + '</a>' : title) + '</h6>';
+    var meta = [p.label];
+    if (p.district) meta.push(p.district);
+    if (p.km != null) meta.push(p.km + ' km from Kalpetta');
+    h += '<div class="small">' + bwEsc(meta.join(' · ')) + '</div>';
+    if (p.note) h += '<div class="small text-muted">' + bwEsc(p.note) + '</div>';
+    h += '<div class="small mt-1"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.google.com/maps/dir/?api=1&destination=' +
+        encodeURIComponent(p.lat + ',' + p.lon) + '">Directions</a></div>';
+    return h;
+}
+
+function bwRenderPlaceMap(data) {
+    var groups = {};
+    var shown = {};
+    data.categories.forEach(function (c) {
+        groups[c.key] = L.featureGroup();
+        shown[c.key] = true;
+    });
+    data.places.forEach(function (p) {
+        var g = groups[p.cat];
+        if (g) {
+            L.marker([p.lat, p.lon], { title: p.name, icon: myIcon1 }).bindPopup(bwPlacePopup(p), { maxWidth: 260 }).addTo(g);
+        }
+    });
+
+    // filter bar, inserted above the map
+    var bar = document.createElement('div');
+    bar.className = 'text-center mb-2';
+    bar.setAttribute('role', 'group');
+    bar.setAttribute('aria-label', 'Filter places on the map');
+    var buttons = {};
+    function paint() {
+        Object.keys(buttons).forEach(function (k) {
+            var on = k === 'all' ? Object.keys(shown).every(function (x) { return shown[x]; }) : shown[k];
+            buttons[k].className = 'btn btn-sm mr-1 mb-1 ' + (on ? 'btn-primary' : 'btn-outline-light');
+            buttons[k].setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+    }
+    function apply() {
+        data.categories.forEach(function (c) {
+            if (shown[c.key]) groups[c.key].addTo(map1); else map1.removeLayer(groups[c.key]);
+        });
+        paint();
+    }
+    function add(key, label, onClick) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = label;
+        b.addEventListener('click', onClick);
+        buttons[key] = b;
+        bar.appendChild(b);
+    }
+    add('all', 'All (' + data.places.length + ')', function () {
+        var allOn = Object.keys(shown).every(function (x) { return shown[x]; });
+        Object.keys(shown).forEach(function (x) { shown[x] = !allOn; });
+        apply();
+    });
+    data.categories.forEach(function (c) {
+        add(c.key, c.label + ' (' + c.count + ')', function () {
+            shown[c.key] = !shown[c.key];
+            apply();
+        });
+    });
+    element1.parentNode.insertBefore(bar, element1);
+    apply();
+    map1.setView([data.center.lat, data.center.lon], 10);
 }
