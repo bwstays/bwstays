@@ -104,7 +104,7 @@
       {
         "name": "Rippon Tea estate",
         "kind": "honey",
-        "description": "L greenery and tea plantations near meppady",
+        "description": "L greenery and tea plantations near Meppadi",
         "distance_from_stay_km": 11,
         "rating": 4.5,
         "map_url": "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
@@ -113,7 +113,7 @@
       {
         "name": "Gandhi Museum",
         "kind": "spices",
-        "description": "Gandhi Museaum",
+        "description": "Gandhi Museum",
         "distance_from_stay_km": 12,
         "rating": 4.3,
         "map_url": "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
@@ -122,7 +122,7 @@
       {
         "name": "Honey Museum",
         "kind": "spices",
-        "description": "Varities of honey displayed to taste and purchase",
+        "description": "Varieties of honey displayed to taste and purchase",
         "distance_from_stay_km": 12,
         "rating": 4.5,
         "map_url": "https://www.google.com/maps/place/Honey+Museum+Wayanad/@11.5375153,76.0435405,17z",
