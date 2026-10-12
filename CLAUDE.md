@@ -212,3 +212,7 @@ node scripts/update-rates.mjs        # data/exchange-rates.json: dated fallback 
 node scripts/build-booking-report.mjs # data/booking-reports.json from the booking calendar (reports page)
 node scripts/check.mjs               # syntax, JSON, JSON-LD, duplicate ids, MCP freshness (also runs in CI)
 ```
+
+### Source of truth for front-end code
+
+`js/` and `css/` are edited directly and are the source of truth. The old unminified copies (`scripts/*.js`, `styles/`, `scripts/min.ps1`) were removed because they were stale and re-running the minify script would have overwritten later fixes. `scripts/` now holds only the Node build and check scripts. After changing `css/` or `js/`, run `node scripts/version-assets.mjs` so pages get a fresh `?v=` hash.
