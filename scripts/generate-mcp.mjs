@@ -151,9 +151,6 @@ for (const [category, rows] of Object.entries(siteData)) {
       description: (r.description ?? '').replace(/\.+$/, '').trim(),
       distance_from_stay_km: num(r.distance),
       typical_visit_duration: r.duration || null,
-      timing: r.timing ?? [],
-      weekly_holiday: r.holidays || null,
-      entry_fee_inr: num(r.fee),
       rating: num(r.rating),
       best_seasons: r.seasontovisit ?? [],
       transport: r.transport || null,
@@ -167,6 +164,53 @@ for (const [category, rows] of Object.entries(siteData)) {
   }
 }
 must(attractions.length > 50, 'attraction extraction produced too few rows');
+
+// ---- reliability filter
+// data/sitedata.js carries template defaults that are not facts about the place:
+// `fee` is "0" for 76 of 85 rows (including sanctuaries that charge entry),
+// `timing` is 09:00-17:00 for 48, `holidays` is "Sun" for 70, and one boilerplate
+// description is reused across unrelated places. Those fields are therefore not
+// published; the rest is published only when it passes basic consistency checks.
+const STAY_POINT = [business.geo.latitude, business.geo.longitude];
+const straightKm = (lat, lng) => {
+  const rad = (d) => (d * Math.PI) / 180;
+  const a = Math.sin(rad(lat - STAY_POINT[0]) / 2) ** 2 +
+    Math.cos(rad(STAY_POINT[0])) * Math.cos(rad(lat)) * Math.sin(rad(lng - STAY_POINT[1]) / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(a));
+};
+const count = (arr, key) => arr.reduce((m, x) => m.set(key(x), (m.get(key(x)) ?? 0) + 1), new Map());
+const descCount = count(attractions, (a) => a.description);
+const pointCount = count(attractions, (a) => (a.coordinates ? `${a.coordinates.latitude},${a.coordinates.longitude}` : ''));
+const reliability = { descriptions_withheld: 0, coordinates_withheld: 0, distances_withheld: 0 };
+for (const a of attractions) {
+  if (!a.description || descCount.get(a.description) > 1) {
+    if (a.description) reliability.descriptions_withheld++;
+    a.description = null;
+  }
+  if (a.coordinates) {
+    const key = `${a.coordinates.latitude},${a.coordinates.longitude}`;
+    if (pointCount.get(key) > 1) {
+      reliability.coordinates_withheld++;
+      a.coordinates = null;
+    }
+  }
+  if (a.coordinates && a.distance_from_stay_km != null) {
+    const line = straightKm(a.coordinates.latitude, a.coordinates.longitude);
+    // A road distance cannot be meaningfully shorter than the straight line.
+    if (a.distance_from_stay_km < line * 0.8 - 1) {
+      reliability.distances_withheld++;
+      a.distance_from_stay_km = null;
+    }
+  }
+}
+const rawRows = Object.entries(siteData).filter(([c]) => !SKIPPED_CATEGORIES.has(c)).flatMap(([, rows]) => rows);
+const feeZero = rawRows.filter((r) => Number(r.fee) === 0 && r.fee !== '').length;
+const mostCommonTiming = [...count(rawRows, (r) => (r.timing ?? []).join(',')).entries()].sort((a, b) => b[1] - a[1])[0];
+const ATTRACTION_DATA_NOTE =
+  `Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults ` +
+  `(fee 0 for ${feeZero} of ${rawRows.length} places, ${mostCommonTiming[0]} for ${mostCommonTiming[1]}). ` +
+  `Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line ` +
+  `distance, are withheld (null). Confirm details before relying on them.`;
 const byDistance = (a, b) =>
   (a.distance_from_stay_km ?? 1e9) - (b.distance_from_stay_km ?? 1e9) || a.name.localeCompare(b.name);
 
@@ -176,8 +220,6 @@ const shops = Object.entries(shopdata).flatMap(([kind, rows]) =>
     kind,
     description: (r.description ?? '').replace(/\.+$/, '').trim(),
     distance_from_stay_km: num(r.distance),
-    timing: r.timing ?? [],
-    weekly_holiday: r.holidays || null,
     rating: num(r.rating),
     map_url: r.map || null,
     page_url: sitePage(r.knowmore),
@@ -321,6 +363,7 @@ const resources = {
           .filter((c) => attractions.some((a) => a.category === c))
           .map((c) => [c, { label: CATEGORY_LABELS[c], count: attractions.filter((a) => a.category === c).length }]),
       ),
+      data_quality: { note: ATTRACTION_DATA_NOTE, ...reliability },
       attractions: [...attractions].sort(byDistance),
     },
     source: 'data/sitedata.js',
@@ -352,9 +395,7 @@ const brief = (a) => ({
   name: a.name,
   category: a.category_label,
   distance_from_stay_km: a.distance_from_stay_km,
-  entry_fee_inr: a.entry_fee_inr,
   rating: a.rating,
-  timing: a.timing,
   page_url: a.page_url,
 });
 const pick = (pred, cmp = byDistance) => attractions.filter(pred).sort(cmp).map(brief);
@@ -367,7 +408,6 @@ const attractionResponses = [
     })),
   { input: { max_distance_km: 10 }, output: { results: pick((a) => (a.distance_from_stay_km ?? 1e9) <= 10) } },
   { input: { max_distance_km: 25 }, output: { results: pick((a) => (a.distance_from_stay_km ?? 1e9) <= 25) } },
-  { input: { free_entry: true }, output: { results: pick((a) => a.entry_fee_inr === 0) } },
   {
     input: { top_rated: true },
     output: { results: pick((a) => (a.rating ?? 0) >= 4.6, (a, b) => b.rating - a.rating || byDistance(a, b)) },
@@ -384,8 +424,9 @@ const tools = {
     description: 'Look up attractions by category, distance, entry fee or rating (pre-computed)',
     responses: attractionResponses,
     default_response: {
-      message: 'Use one of the pre-computed inputs: category, max_distance_km (10 or 25), free_entry, top_rated.',
+      message: 'Use one of the pre-computed inputs: category, max_distance_km (10 or 25), top_rated.',
       categories: Object.keys(CATEGORY_LABELS),
+      data_quality: ATTRACTION_DATA_NOTE,
     },
   },
   'search/properties': {
