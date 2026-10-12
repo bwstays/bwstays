@@ -417,7 +417,7 @@ function initializeSection(sectionType, data, sectionIndex) {
     if (titleElement) {
       sectionTitle = titleElement.textContent;
     } else {
-      sectionTitle = sectionType.charAt(0).toUpperCase() + sectionType.slice(1);
+      sectionTitle = sectionType === 'trucking' ? 'Trekking' : sectionType.charAt(0).toUpperCase() + sectionType.slice(1);
     }
   } else {
     return;
