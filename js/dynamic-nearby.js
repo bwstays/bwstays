@@ -46,6 +46,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
 			if( distances[i]!="0")
 			{
 					var thisId=findPlaceById(i+1);
+					if (!thisId) continue;
 					nearbyPlaces.push({
 						id: i,
 						name: locations.names[i+1],
