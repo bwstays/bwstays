@@ -217,7 +217,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			.register('/sw.js', { scope: '/' })
 			.then(() => {
 
-			}, err => );
+			}, err => {
+				// registration is optional; the site works without a service worker
+			});
 
 		navigator.serviceWorker
 			.ready
