@@ -45,6 +45,16 @@
       "path": "/resources/location.json"
     },
     {
+      "name": "food",
+      "description": "Places to eat and drink in Wayanad (OpenStreetMap data), with driving distance from the stay",
+      "path": "/resources/food.json"
+    },
+    {
+      "name": "distances",
+      "description": "Driving distance in km between 90 Wayanad places (null = not computed)",
+      "path": "/resources/distances.json"
+    },
+    {
       "name": "help",
       "description": "Frequently asked questions shown on the site",
       "path": "/resources/help.json"
@@ -60,6 +70,16 @@
       "name": "search_properties",
       "description": "List the villas the site publishes",
       "path": "/tools/search/properties.json"
+    },
+    {
+      "name": "search_food",
+      "description": "Find places to eat near the stay by kind, diet or distance (pre-computed, OpenStreetMap data)",
+      "path": "/tools/search/food.json"
+    },
+    {
+      "name": "nearby_places",
+      "description": "The closest attractions to each place by driving distance (pre-computed)",
+      "path": "/tools/search/nearby.json"
     },
     {
       "name": "check_availability",
