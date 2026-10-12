@@ -3,27 +3,27 @@
   "description": "Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay",
   "content": {
     "destination": "Wayanad, Kerala",
-    "count": 85,
+    "count": 72,
     "categories": {
       "plantation": {
         "label": "Plantations",
-        "count": 3
+        "count": 2
       },
       "waterfalls": {
         "label": "Waterfalls & Lakes",
-        "count": 10
+        "count": 8
       },
       "museums": {
         "label": "Museums & Crafts",
-        "count": 5
+        "count": 3
       },
       "romantic": {
         "label": "Romantic Spots & Viewpoints",
-        "count": 20
+        "count": 15
       },
       "culthist": {
         "label": "Cultural & Historical",
-        "count": 4
+        "count": 3
       },
       "trucking": {
         "label": "Trekking",
@@ -55,7 +55,7 @@
       },
       "shopping": {
         "label": "Shopping",
-        "count": 4
+        "count": 2
       },
       "pilgrimage": {
         "label": "Pilgrimage",
@@ -64,9 +64,63 @@
     },
     "data_quality": {
       "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 85 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
-      "descriptions_withheld": 41,
-      "coordinates_withheld": 11,
-      "distances_withheld": 7
+      "descriptions_withheld": 34,
+      "coordinates_withheld": 5,
+      "distances_withheld": 2,
+      "excluded_after_fact_check": [
+        {
+          "name": "Coffee Plantation",
+          "reason": "Generic name; no identifiable attraction"
+        },
+        {
+          "name": "Sentinel Rock Waterfall",
+          "reason": "Duplicate of Soochipara Falls (Sentinel Rock is the same place)"
+        },
+        {
+          "name": "Kappikalam waterfalls",
+          "reason": "No source found; coordinates are 0.2 km from Kanthanpara Falls"
+        },
+        {
+          "name": "Kungichira Museum & Chira",
+          "reason": "Planned museum near Periya; coordinates were copied from the Tea Museum"
+        },
+        {
+          "name": "Folklore Museum",
+          "reason": "Could not be located as a Wayanad attraction"
+        },
+        {
+          "name": "Mullanpara View Point",
+          "reason": "Record does not match its page (Karapuzha Dam) and its coordinates sit on Pookode Lake"
+        },
+        {
+          "name": "Manjappara",
+          "reason": "Could not be located in Wayanad (possibly a different Manjappara in Idukki)"
+        },
+        {
+          "name": "Lakkidi view point",
+          "reason": "Duplicate of Lakkidi Ghats View Point (trucking-20); same page and coordinates"
+        },
+        {
+          "name": "Neelarchalu",
+          "reason": "No place by this name could be found"
+        },
+        {
+          "name": "Bamboo Park",
+          "reason": "Placeholder record sharing another place's coordinates; unidentifiable"
+        },
+        {
+          "name": "Santhinatha Temple",
+          "reason": "No Santhinatha temple in Wayanad could be found"
+        },
+        {
+          "name": "Bevo Beverages ( Govt of Kerala )",
+          "reason": "Not an attraction: a BEVCO liquor outlet"
+        },
+        {
+          "name": "House Holds",
+          "reason": "Unidentifiable sub-entry of En Ooru with coordinates in Kalpetta town"
+        }
+      ]
     },
     "attractions": [
       {
@@ -89,7 +143,10 @@
           "longitude": 76.0923043558191
         },
         "map_url": "https://maps.app.goo.gl/BAfPDiMsxSXDTAy49",
-        "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "sporting-90",
@@ -111,7 +168,10 @@
           "longitude": 76.08336925584594
         },
         "map_url": "https://maps.app.goo.gl/XqTMS94np895ge9w5",
-        "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-2",
@@ -133,7 +193,10 @@
           "longitude": 76.08687012883617
         },
         "map_url": "https://maps.app.goo.gl/YWpJhDWftdfpvpSm9",
-        "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "trucking-23",
@@ -155,7 +218,10 @@
           "longitude": 76.08420612038587
         },
         "map_url": "https://maps.app.goo.gl/n2aJqSpipqQjE6x56",
-        "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "food-60",
@@ -172,7 +238,10 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": null,
-        "page_url": "https://www.bwstays.com/all-fooding-wayanad.html"
+        "page_url": "https://www.bwstays.com/all-fooding-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "cycling-49",
@@ -190,83 +259,10 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": "https://maps.app.goo.gl/UQHFNVCdWwFxWRsa8",
-        "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
-      },
-      {
-        "id": "pilgrimage-3",
-        "name": "Koottamundu Glass Temple Wayanad",
-        "category": "pilgrimage",
-        "category_label": "Pilgrimage",
-        "description": "Historic Koottamundu Glass Temple Wayanad with beautiful architecture and cultural significance",
-        "distance_from_stay_km": 7,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.571875045855256,
-          "longitude": 76.08657265424115
-        },
-        "map_url": "https://maps.app.goo.gl/Uv81sPamq88kYvpZ9",
-        "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html"
-      },
-      {
-        "id": "romantic-76",
-        "name": "Bamboo Park",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": null,
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
-        "page_url": null
-      },
-      {
-        "id": "shopping-77",
-        "name": "Bevo Beverages ( Govt of Kerala )",
-        "category": "shopping",
-        "category_label": "Shopping",
-        "description": "Bevo for all types of syrups and spirits",
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
-        "page_url": null
-      },
-      {
-        "id": "shopping-67",
-        "name": "House Holds",
-        "category": "shopping",
-        "category_label": "Shopping",
-        "description": "Nesto",
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.603360689783923,
-          "longitude": 76.08304938129076
-        },
-        "map_url": "https://maps.app.goo.gl/cNbKwqxew22witU76",
-        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "food-66",
@@ -283,24 +279,10 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": null,
-        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
-      },
-      {
-        "id": "romantic-75",
-        "name": "Muneeswaran Kunnu View point",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": null,
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
-        "page_url": null
+        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "food-65",
@@ -317,7 +299,10 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": null,
-        "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "cycling-81",
@@ -339,7 +324,10 @@
           "longitude": 76.1789395934791
         },
         "map_url": "https://maps.app.goo.gl/UQHFNVCdWwFxWRsa8",
-        "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "shopping-79",
@@ -356,7 +344,10 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": null,
-        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "sporting-70",
@@ -375,7 +366,10 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
-        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "plantation-61",
@@ -397,7 +391,10 @@
           "longitude": 76.17498437471619
         },
         "map_url": "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
-        "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "tribal-59",
@@ -416,11 +413,14 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": "https://maps.app.goo.gl/8HGVbA8w5gkfw6Sd7",
-        "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "museums-52",
-        "name": "Gandhi Museaum",
+        "name": "Gandhi Museum",
         "category": "museums",
         "category_label": "Museums & Crafts",
         "description": "Gandhi Museaum",
@@ -435,7 +435,10 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
-        "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
+        "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "museums-78",
@@ -455,26 +458,10 @@
           "longitude": 76.0434972
         },
         "map_url": "https://maps.app.goo.gl/8x4fQb5Cr9RBCFr17",
-        "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
-      },
-      {
-        "id": "museums-89",
-        "name": "Kungichira Museum & Chira",
-        "category": "museums",
-        "category_label": "Museums & Crafts",
-        "description": "Kungichira Museum & Chira",
-        "distance_from_stay_km": 12,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.3,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
-        "page_url": null
+        "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "museums-26",
@@ -493,7 +480,10 @@
         "transport": "Public",
         "coordinates": null,
         "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
-        "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-10",
@@ -515,7 +505,10 @@
           "longitude": 76.133523
         },
         "map_url": "https://maps.app.goo.gl/mF1JKbkHQBNDeC4S9",
-        "page_url": "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-44",
@@ -537,7 +530,10 @@
           "longitude": 76.02721621504702
         },
         "map_url": "https://maps.app.goo.gl/aXHoGQxHbaYHuBrc9",
-        "page_url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-7",
@@ -559,7 +555,35 @@
           "longitude": 76.17374499957178
         },
         "map_url": "https://maps.app.goo.gl/voAar4qRh1U2jXjk7",
-        "page_url": "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "pilgrimage-8",
+        "name": "Our lady of lourdes shrine, Pallikunnu",
+        "category": "pilgrimage",
+        "category_label": "Pilgrimage",
+        "description": "Our lady of lourdes shrine, Pallikunnu , nestled in the hills of Wayanad",
+        "distance_from_stay_km": 14,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.7,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.685229537534148,
+          "longitude": 76.05606037116382
+        },
+        "map_url": "https://maps.app.goo.gl/GWhpBVduuz5Sm1a67",
+        "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "culthist-25",
@@ -581,17 +605,20 @@
           "longitude": 76.02092845767235
         },
         "map_url": "https://maps.app.goo.gl/n14LzGER8RxJ91hQ8",
-        "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
-        "id": "romantic-39",
-        "name": "Karland Lake",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": null,
+        "id": "trucking-87",
+        "name": "Kolagapara",
+        "category": "trucking",
+        "category_label": "Trekking",
+        "description": "Ancient rock shelter",
         "distance_from_stay_km": 15,
         "typical_visit_duration": "1-2 Hours",
-        "rating": 4.1,
+        "rating": 4.2,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -599,11 +626,14 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.650035025731679,
-          "longitude": 75.9824076530733
+          "latitude": 11.656161744533218,
+          "longitude": 76.19452691872974
         },
-        "map_url": "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
-        "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html"
+        "map_url": "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
+        "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "tribal-57",
@@ -625,7 +655,10 @@
           "longitude": 76.01545167598373
         },
         "map_url": "https://maps.app.goo.gl/srRewVQmwuyS1EfQ8",
-        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-43",
@@ -647,7 +680,10 @@
           "longitude": 76.1722152
         },
         "map_url": "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
-        "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "trucking-20",
@@ -664,50 +700,15 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://maps.app.goo.gl/CQ4zA2hxFRyHxWQF8",
-        "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
-      },
-      {
-        "id": "romantic-56",
-        "name": "Lakkidi view point",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": null,
-        "distance_from_stay_km": 16,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.5,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://maps.app.goo.gl/bdvdseoihwD9Ao9B7",
-        "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
-      },
-      {
-        "id": "romantic-22",
-        "name": "Mullanpara View Point",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": "Mullanpara View Point",
-        "distance_from_stay_km": 16,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.3,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
         "coordinates": {
-          "latitude": 11.537907109786387,
-          "longitude": 76.02770162612713
+          "latitude": 11.512393990351887,
+          "longitude": 76.01895535767235
         },
-        "map_url": "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
-        "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
+        "map_url": "https://maps.app.goo.gl/CQ4zA2hxFRyHxWQF8",
+        "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "trucking-18",
@@ -729,29 +730,10 @@
           "longitude": 76.0827242
         },
         "map_url": "https://maps.app.goo.gl/ivaAp162Cc3bVmpX6",
-        "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
-      },
-      {
-        "id": "culthist-1",
-        "name": "Santhinatha Temple",
-        "category": "culthist",
-        "category_label": "Cultural & Historical",
-        "description": null,
-        "distance_from_stay_km": 17,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.4,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.6788328,
-          "longitude": 76.0221398
-        },
-        "map_url": "https://maps.app.goo.gl/9c6PX7YqCDLEAp2s7",
-        "page_url": "https://www.bwstays.com/bw-santhinatha-temple-heritage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "waterfalls-37",
@@ -773,7 +755,10 @@
           "longitude": 76.1526896
         },
         "map_url": "https://maps.app.goo.gl/UkTgsP4fZoRngCyBA",
-        "page_url": "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-51",
@@ -795,29 +780,10 @@
           "longitude": 76.028686
         },
         "map_url": "https://maps.app.goo.gl/uv6HuRSHrQJTb7hd7",
-        "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html"
-      },
-      {
-        "id": "romantic-50",
-        "name": "Phantom rock",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": null,
-        "distance_from_stay_km": 19,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 3.9,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.636687345789426,
-          "longitude": 76.20460141779273
-        },
-        "map_url": "https://maps.app.goo.gl/5MyVymApv9TRyowB9",
-        "page_url": "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "trucking-19",
@@ -839,29 +805,32 @@
           "longitude": 76.19931730771042
         },
         "map_url": "https://maps.app.goo.gl/ZTJVQceN6Q8jyHru5",
-        "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
-        "id": "romantic-58",
-        "name": "900 Kandi",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": "Welcome to the. Land of Bliss · Meet Kerala's longest hanging glass bridge",
-        "distance_from_stay_km": 21,
+        "id": "pilgrimage-3",
+        "name": "Koottamundu Glass Temple Wayanad",
+        "category": "pilgrimage",
+        "category_label": "Pilgrimage",
+        "description": "Historic Koottamundu Glass Temple Wayanad with beautiful architecture and cultural significance",
+        "distance_from_stay_km": 20,
         "typical_visit_duration": "1-2 Hours",
-        "rating": 3.9,
+        "rating": 4,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.4967237,
-          "longitude": 76.1051083
-        },
-        "map_url": "https://maps.app.goo.gl/NzMMtmVJKBeWaHSJ7",
-        "page_url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html"
+        "coordinates": null,
+        "map_url": "https://maps.app.goo.gl/Uv81sPamq88kYvpZ9",
+        "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": "Stated coordinates conflict with the ~20 km road distance in Kerala Tourism"
       },
       {
         "id": "farms-64",
@@ -881,7 +850,10 @@
           "longitude": 76.21447474945045
         },
         "map_url": "https://maps.app.goo.gl/aNG6QgvrR1STh6JTA",
-        "page_url": "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-85",
@@ -903,11 +875,14 @@
           "longitude": 76.12590988793323
         },
         "map_url": "https://maps.app.goo.gl/nY96t3Y3f7jPFpb77",
-        "page_url": "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-45",
-        "name": "Banasurasagar Dam",
+        "name": "Banasura Sagar Dam",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
         "description": "Opt for a speed or pedal boat to have an enthralling experience of the stupendous landscapes",
@@ -925,17 +900,20 @@
           "longitude": 75.95775654232763
         },
         "map_url": "https://maps.app.goo.gl/yP3jmivd2c4C1D258",
-        "page_url": "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
-        "id": "museums-27",
-        "name": "Folklore Museum",
-        "category": "museums",
-        "category_label": "Museums & Crafts",
-        "description": "Showcases the rich cultural heritage and tribal artifacts of Wayanad Pookonth House, Kuthirivallu",
+        "id": "romantic-39",
+        "name": "Karlad Lake",
+        "category": "romantic",
+        "category_label": "Romantic Spots & Viewpoints",
+        "description": null,
         "distance_from_stay_km": 21,
         "typical_visit_duration": "1-2 Hours",
-        "rating": 3.9,
+        "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -943,11 +921,14 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.748456154167792,
-          "longitude": 76.20383676709
+          "latitude": 11.650035025731679,
+          "longitude": 75.9824076530733
         },
-        "map_url": "https://maps.app.goo.gl/1E9kADRsBfxLQfs69",
-        "page_url": "https://www.bwstays.com/bw-folklore-museum-wayanad.html"
+        "map_url": "https://maps.app.goo.gl/WwrHsEPLnMwpwSvD9",
+        "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-13",
@@ -969,73 +950,10 @@
           "longitude": 75.95892924232764
         },
         "map_url": "https://maps.app.goo.gl/XTLWiChkqFgatHmHA",
-        "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
-      },
-      {
-        "id": "waterfalls-38",
-        "name": "Kappikalam waterfalls",
-        "category": "waterfalls",
-        "category_label": "Waterfalls & Lakes",
-        "description": "Kappikalam waterfalls, perfect for trekking and rock climbing",
-        "distance_from_stay_km": 22,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.1,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.524617527477,
-          "longitude": 76.15260365204358
-        },
-        "map_url": "https://maps.app.goo.gl/fzrjabJfK5GG7CgD9",
-        "page_url": "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html"
-      },
-      {
-        "id": "romantic-48",
-        "name": "Manjappara",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": null,
-        "distance_from_stay_km": 23,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.5,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.602130295485557,
-          "longitude": 76.19922151534472
-        },
-        "map_url": "https://maps.app.goo.gl/4gw5UYWqBXZZQKGz8",
-        "page_url": "https://www.bwstays.com/bw-manjappara-romantic-wayanad.html"
-      },
-      {
-        "id": "waterfalls-34",
-        "name": "Sentinel Rock Waterfall",
-        "category": "waterfalls",
-        "category_label": "Waterfalls & Lakes",
-        "description": null,
-        "distance_from_stay_km": 23,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.511709053469259,
-          "longitude": 76.1637670659447
-        },
-        "map_url": "https://maps.app.goo.gl/WTkrrH73W95w23Xm8",
-        "page_url": "https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "waterfalls-35",
@@ -1057,7 +975,10 @@
           "longitude": 76.16378589573601
         },
         "map_url": "https://maps.app.goo.gl/qr1RZdxc5WMa5j71A",
-        "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "shopping-86",
@@ -1077,7 +998,10 @@
           "longitude": 76.21948657283083
         },
         "map_url": "https://maps.app.goo.gl/ZCFPmqauSefZ61UP7",
-        "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-53",
@@ -1099,7 +1023,35 @@
           "longitude": 76.17549155352333
         },
         "map_url": "https://maps.app.goo.gl/3uDXNU4VuoQLEVYJ6",
-        "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "waterfalls-33",
+        "name": "Meenmutty Falls",
+        "category": "waterfalls",
+        "category_label": "Waterfalls & Lakes",
+        "description": "One of the largest and most spectacular waterfalls in Wayanad",
+        "distance_from_stay_km": 25,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.2,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.677845397531414,
+          "longitude": 75.93568600923
+        },
+        "map_url": "https://maps.app.goo.gl/SvSDuShnpWmcceyg8",
+        "page_url": "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-54",
@@ -1121,7 +1073,32 @@
           "longitude": 76.2140645
         },
         "map_url": "https://maps.app.goo.gl/Sa4fZJ9RNckLwrHz5",
-        "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "romantic-58",
+        "name": "900 Kandi",
+        "category": "romantic",
+        "category_label": "Romantic Spots & Viewpoints",
+        "description": "Welcome to the. Land of Bliss · Meet Kerala's longest hanging glass bridge",
+        "distance_from_stay_km": 26,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 3.9,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": null,
+        "map_url": "https://maps.app.goo.gl/NzMMtmVJKBeWaHSJ7",
+        "page_url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": "Stated coordinates are about 7.5 km from the real location"
       },
       {
         "id": "romantic-55",
@@ -1143,7 +1120,35 @@
           "longitude": 76.22909644232763
         },
         "map_url": "https://maps.app.goo.gl/4YjzLwSQTPABJ1cK9",
-        "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "romantic-50",
+        "name": "Phantom rock",
+        "category": "romantic",
+        "category_label": "Romantic Spots & Viewpoints",
+        "description": null,
+        "distance_from_stay_km": 26,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 3.9,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.636687345789426,
+          "longitude": 76.20460141779273
+        },
+        "map_url": "https://maps.app.goo.gl/5MyVymApv9TRyowB9",
+        "page_url": "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-14",
@@ -1165,7 +1170,33 @@
           "longitude": 76.02997277047147
         },
         "map_url": "https://maps.app.goo.gl/b4X7qZHVCXuC7XDh9",
-        "page_url": "https://www.bwstays.com/bw-valliyoorkavu-temple-pilgrimage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-valliyoorkavu-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "trucking-21",
+        "name": "Edakkal Caves",
+        "category": "trucking",
+        "category_label": "Trekking",
+        "description": null,
+        "distance_from_stay_km": 28,
+        "typical_visit_duration": "2-3 Hours",
+        "rating": 4.1,
+        "best_seasons": [
+          "Summer (November-March)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.6268407,
+          "longitude": 76.234269
+        },
+        "map_url": "https://maps.app.goo.gl/yBs8PRhJEea7MJt8A",
+        "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-47",
@@ -1187,29 +1218,10 @@
           "longitude": 75.90797008546211
         },
         "map_url": "https://maps.app.goo.gl/VozGZG6FC7V28ZW66",
-        "page_url": "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html"
-      },
-      {
-        "id": "pilgrimage-8",
-        "name": "Our lady of lourdes shrine, Pallikunnu",
-        "category": "pilgrimage",
-        "category_label": "Pilgrimage",
-        "description": "Our lady of lourdes shrine, Pallikunnu , nestled in the hills of Wayanad",
-        "distance_from_stay_km": 29,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.7,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.685229537534148,
-          "longitude": 76.05606037116382
-        },
-        "map_url": "https://maps.app.goo.gl/GWhpBVduuz5Sm1a67",
-        "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "culthist-24",
@@ -1231,7 +1243,10 @@
           "longitude": 76.0006489
         },
         "map_url": "https://maps.app.goo.gl/mx7dtZoiZjUFXtMg8",
-        "page_url": "https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-9",
@@ -1253,29 +1268,10 @@
           "longitude": 76.16871715767236
         },
         "map_url": "https://maps.app.goo.gl/7EMqf1GJLZbLWdLSA",
-        "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html"
-      },
-      {
-        "id": "waterfalls-16",
-        "name": "Thusharagiri",
-        "category": "waterfalls",
-        "category_label": "Waterfalls & Lakes",
-        "description": "Water fall down the Ghats of wayanad",
-        "distance_from_stay_km": 31,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.4,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.472979462955495,
-          "longitude": 76.05414413068944
-        },
-        "map_url": "https://maps.app.goo.gl/NK2gPWddyJeNDK7J8",
-        "page_url": "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "waterfalls-36",
@@ -1297,7 +1293,10 @@
           "longitude": 76.25203494478279
         },
         "map_url": "https://maps.app.goo.gl/Xi6e2aPFEjWFkHBi9",
-        "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": "Shares coordinates with Chetalayam Falls and is likely the same place"
       },
       {
         "id": "culthist-6",
@@ -1314,34 +1313,12 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.778971412702218,
-          "longitude": 76.19547348280202
-        },
+        "coordinates": null,
         "map_url": "https://maps.app.goo.gl/iWXqG43yzZb3iSo66",
-        "page_url": "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html"
-      },
-      {
-        "id": "trucking-15",
-        "name": "Kuruwa Deep",
-        "category": "trucking",
-        "category_label": "Trekking",
-        "description": null,
-        "distance_from_stay_km": 33,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.1,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.821667,
-          "longitude": 76.092222
-        },
-        "map_url": "https://maps.app.goo.gl/V593gUux4rqrEqWaA",
-        "page_url": "https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html",
+        "district": null,
+        "locality": "Pulpally",
+        "review_note": "Located in Pulpally rather than Sultan Bathery"
       },
       {
         "id": "waterfalls-42",
@@ -1363,7 +1340,10 @@
           "longitude": 76.25204562883619
         },
         "map_url": "https://maps.app.goo.gl/z4pftdA2hc1Ea7Ny6",
-        "page_url": "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-11",
@@ -1385,29 +1365,10 @@
           "longitude": 76.01646686931055
         },
         "map_url": "https://maps.app.goo.gl/kKhmvmG6fLcWVG5a6",
-        "page_url": "https://www.bwstays.com/bw-trishileri-temple-pilgrimage-wayanad.html"
-      },
-      {
-        "id": "waterfalls-40",
-        "name": "Arripara falls",
-        "category": "waterfalls",
-        "category_label": "Waterfalls & Lakes",
-        "description": null,
-        "distance_from_stay_km": 37,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.3,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.43840307285013,
-          "longitude": 76.04597666931055
-        },
-        "map_url": "https://maps.app.goo.gl/BLpuvUbHqgNC54up8",
-        "page_url": "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-trishileri-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "wildlife-32",
@@ -1429,11 +1390,39 @@
           "longitude": 76.08839341349146
         },
         "map_url": "https://maps.app.goo.gl/tKgwhAjpDyX3X1tE7",
-        "page_url": "https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "wildlife-28",
+        "name": "Muthanga Wildlife Sanctuary",
+        "category": "wildlife",
+        "category_label": "Wildlife",
+        "description": null,
+        "distance_from_stay_km": 38,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 3.9,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.671820900367546,
+          "longitude": 76.3688581955536
+        },
+        "map_url": "https://maps.app.goo.gl/DLq8eRuT7tc7nQWE9",
+        "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "plantation-80",
-        "name": "Peria tea plantation",
+        "name": "Periya tea plantation",
         "category": "plantation",
         "category_label": "Plantations",
         "description": "Lush greenery and tea plantations",
@@ -1451,17 +1440,20 @@
           "longitude": 75.89842935307782
         },
         "map_url": "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
-        "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": "No source found for a visitor-facing estate by this name; verify before recommending"
       },
       {
-        "id": "waterfalls-33",
-        "name": "Meenmutty Falls",
-        "category": "waterfalls",
-        "category_label": "Waterfalls & Lakes",
-        "description": "One of the largest and most spectacular waterfalls in Wayanad",
-        "distance_from_stay_km": 41,
+        "id": "trucking-15",
+        "name": "Kuruwa Deep",
+        "category": "trucking",
+        "category_label": "Trekking",
+        "description": null,
+        "distance_from_stay_km": 40,
         "typical_visit_duration": "1-2 Hours",
-        "rating": 4.2,
+        "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1469,11 +1461,14 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.677845397531414,
-          "longitude": 75.93568600923
+          "latitude": 11.821667,
+          "longitude": 76.092222
         },
-        "map_url": "https://maps.app.goo.gl/SvSDuShnpWmcceyg8",
-        "page_url": "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html"
+        "map_url": "https://maps.app.goo.gl/V593gUux4rqrEqWaA",
+        "page_url": "https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-12",
@@ -1495,7 +1490,10 @@
           "longitude": 76.39100128986541
         },
         "map_url": "https://maps.app.goo.gl/w591kDeUWMTBGnHw6",
-        "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "romantic-84",
@@ -1517,7 +1515,10 @@
           "longitude": 75.9589761534138
         },
         "map_url": "https://maps.app.goo.gl/Bi972R4oZ2jeZzRq8",
-        "page_url": "https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "wildlife-30",
@@ -1539,7 +1540,10 @@
           "longitude": 75.96156549814673
         },
         "map_url": "https://maps.app.goo.gl/umBUHNr1ZaCRCiHN7",
-        "page_url": "https://www.bwstays.com/bw-pakshipathalam-wildlife-sanctuary-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-pakshipathalam-wildlife-sanctuary-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "farms-63",
@@ -1559,73 +1563,10 @@
           "longitude": 75.92226125826711
         },
         "map_url": "https://maps.app.goo.gl/v5JeXAMeYTLBpXvT6",
-        "page_url": "https://www.bwstays.com/bw-boys-town-farm-wayanad.html"
-      },
-      {
-        "id": "wildlife-31",
-        "name": "Tholpetty wild life sanctuary",
-        "category": "wildlife",
-        "category_label": "Wildlife",
-        "description": null,
-        "distance_from_stay_km": 47,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.94436067583858,
-          "longitude": 76.0601520539344
-        },
-        "map_url": "https://maps.app.goo.gl/Z9PqkSnB5K9VpF1z8",
-        "page_url": "https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html"
-      },
-      {
-        "id": "pilgrimage-4",
-        "name": "Tirunelli",
-        "category": "pilgrimage",
-        "category_label": "Pilgrimage",
-        "description": null,
-        "distance_from_stay_km": 48,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.7,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.9116989,
-          "longitude": 75.995828
-        },
-        "map_url": "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
-        "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
-      },
-      {
-        "id": "romantic-83",
-        "name": "Neelarchalu",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": "Neelarchalu",
-        "distance_from_stay_km": 49,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.5,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.60151625745816,
-          "longitude": 76.17700752883617
-        },
-        "map_url": "https://maps.app.goo.gl/ESWx6zyHnsxEKLyy8",
-        "page_url": "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-boys-town-farm-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "pilgrimage-5",
@@ -1647,7 +1588,10 @@
           "longitude": 75.99584945767235
         },
         "map_url": "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
-        "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "trucking-17",
@@ -1669,17 +1613,20 @@
           "longitude": 75.9940526
         },
         "map_url": "https://maps.app.goo.gl/yyhqfvCx6dNrw33y8",
-        "page_url": "https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
-        "id": "wildlife-29",
-        "name": "Nagarhole wild life sanctuary",
+        "id": "wildlife-31",
+        "name": "Tholpetty wild life sanctuary",
         "category": "wildlife",
         "category_label": "Wildlife",
         "description": null,
-        "distance_from_stay_km": 52,
+        "distance_from_stay_km": 54.5,
         "typical_visit_duration": "1-2 Hours",
-        "rating": 4.1,
+        "rating": 4,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1687,19 +1634,47 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.99814346014371,
-          "longitude": 76.0667218165248
+          "latitude": 11.94436067583858,
+          "longitude": 76.0601520539344
         },
-        "map_url": "https://maps.app.goo.gl/JZ5HtXAZt8Ngg8cx7",
-        "page_url": "https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html"
+        "map_url": "https://maps.app.goo.gl/Z9PqkSnB5K9VpF1z8",
+        "page_url": "https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
-        "id": "waterfalls-41",
-        "name": "Irrupu falls ",
+        "id": "pilgrimage-4",
+        "name": "Tirunelli",
+        "category": "pilgrimage",
+        "category_label": "Pilgrimage",
+        "description": "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad",
+        "distance_from_stay_km": 64,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.7,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.9116989,
+          "longitude": 75.995828
+        },
+        "map_url": "https://maps.app.goo.gl/wnJzKW4AbbF3Y6LcA",
+        "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "waterfalls-40",
+        "name": "Arripara falls",
         "category": "waterfalls",
         "category_label": "Waterfalls & Lakes",
         "description": null,
-        "distance_from_stay_km": 60,
+        "distance_from_stay_km": null,
         "typical_visit_duration": "1-2 Hours",
         "rating": 4.3,
         "best_seasons": [
@@ -1709,11 +1684,14 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.967284462093113,
-          "longitude": 75.98393572809631
+          "latitude": 11.43840307285013,
+          "longitude": 76.04597666931055
         },
-        "map_url": "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
-        "page_url": "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html"
+        "map_url": "https://maps.app.goo.gl/BLpuvUbHqgNC54up8",
+        "page_url": "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html",
+        "district": "Kozhikode",
+        "locality": null,
+        "review_note": "Aripara Falls is in Kozhikode district, not Wayanad"
       },
       {
         "id": "sporting-82",
@@ -1735,49 +1713,10 @@
           "longitude": 76.00202559265286
         },
         "map_url": "https://maps.app.goo.gl/hcP68xK2iD2eZShj7",
-        "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html"
-      },
-      {
-        "id": "plantation-62",
-        "name": "Coffee Plantation",
-        "category": "plantation",
-        "category_label": "Plantations",
-        "description": "Expansive Coffee Plantation with guided tours and tasting sessions",
-        "distance_from_stay_km": null,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.758218103566884,
-          "longitude": 75.99955554569163
-        },
-        "map_url": "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
-        "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
-      },
-      {
-        "id": "trucking-21",
-        "name": "Edakal Caves",
-        "category": "trucking",
-        "category_label": "Trekking",
-        "description": null,
-        "distance_from_stay_km": null,
-        "typical_visit_duration": "2-3 Hours",
-        "rating": 4.1,
-        "best_seasons": [
-          "Summer (November-March)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.6268407,
-          "longitude": 76.234269
-        },
-        "map_url": "https://maps.app.goo.gl/yBs8PRhJEea7MJt8A",
-        "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
       },
       {
         "id": "farms-88",
@@ -1797,17 +1736,20 @@
           "longitude": 75.844855
         },
         "map_url": "https://maps.app.goo.gl/gLZB7Pnn3mDAnuYw8",
-        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
+        "district": null,
+        "locality": "Alattil, near Mananthavady",
+        "review_note": "North Wayanad; the stated 10 km from Kalpetta is doubtful"
       },
       {
-        "id": "trucking-87",
-        "name": "Kolagapara",
-        "category": "trucking",
-        "category_label": "Trekking",
-        "description": "Ancient rock shelter",
+        "id": "waterfalls-41",
+        "name": "Irrupu falls ",
+        "category": "waterfalls",
+        "category_label": "Waterfalls & Lakes",
+        "description": null,
         "distance_from_stay_km": null,
         "typical_visit_duration": "1-2 Hours",
-        "rating": 4.2,
+        "rating": 4.3,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1815,21 +1757,44 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.656161744533218,
-          "longitude": 76.19452691872974
+          "latitude": 11.967284462093113,
+          "longitude": 75.98393572809631
         },
-        "map_url": "https://maps.app.goo.gl/oYnRH4pXzw9LxvPh9",
-        "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
+        "map_url": "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
+        "page_url": "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html",
+        "district": "Kodagu (Karnataka)",
+        "locality": null,
+        "review_note": "Iruppu Falls is in Kodagu, Karnataka; the Brahmagiri trek needs a Karnataka Forest permit and guide"
       },
       {
-        "id": "wildlife-28",
-        "name": "Muthanga Wildlife Sanctuary",
+        "id": "romantic-75",
+        "name": "Muneeswaran Kunnu View point",
+        "category": "romantic",
+        "category_label": "Romantic Spots & Viewpoints",
+        "description": "Sample",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.5,
+        "best_seasons": [
+          "All Season"
+        ],
+        "transport": "Public",
+        "coordinates": null,
+        "map_url": "https://maps.app.goo.gl/Z2atm5BC6g4LPBEJA",
+        "page_url": null,
+        "district": null,
+        "locality": null,
+        "review_note": "The real place is near Thalappuzha, more than 40 km away; stated coordinates are in Kalpetta"
+      },
+      {
+        "id": "wildlife-29",
+        "name": "Nagarhole wild life sanctuary",
         "category": "wildlife",
         "category_label": "Wildlife",
         "description": null,
         "distance_from_stay_km": null,
         "typical_visit_duration": "1-2 Hours",
-        "rating": 3.9,
+        "rating": 4.1,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1837,11 +1802,14 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.671820900367546,
-          "longitude": 76.3688581955536
+          "latitude": 11.99814346014371,
+          "longitude": 76.0667218165248
         },
-        "map_url": "https://maps.app.goo.gl/DLq8eRuT7tc7nQWE9",
-        "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html"
+        "map_url": "https://maps.app.goo.gl/JZ5HtXAZt8Ngg8cx7",
+        "page_url": "https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html",
+        "district": "Mysuru/Kodagu (Karnataka)",
+        "locality": null,
+        "review_note": "Nagarhole is a national park in Karnataka, not a Wayanad sanctuary"
       },
       {
         "id": "farms-74",
@@ -1861,7 +1829,35 @@
           "longitude": 76.1911296389339
         },
         "map_url": "https://maps.app.goo.gl/fihSsqhSHPCNRJzk9",
-        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "waterfalls-16",
+        "name": "Thusharagiri",
+        "category": "waterfalls",
+        "category_label": "Waterfalls & Lakes",
+        "description": "Water fall down the Ghats of wayanad",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.4,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": {
+          "latitude": 11.472979462955495,
+          "longitude": 76.05414413068944
+        },
+        "map_url": "https://maps.app.goo.gl/NK2gPWddyJeNDK7J8",
+        "page_url": "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html",
+        "district": "Kozhikode",
+        "locality": null,
+        "review_note": "Thusharagiri Falls is in Kozhikode district, not Wayanad"
       }
     ]
   },
