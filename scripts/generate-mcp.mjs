@@ -119,15 +119,16 @@ must(bookingVillas.length >= 1, 'bwstays-booking.html villa cards not found');
 const arrivalSlots = [...bookingHtml.matchAll(/<option[^>]*>\s*(\d{1,2}:\d{2} [AP]M - \d{1,2}:\d{2} [AP]M|After \d{1,2}:\d{2} [AP]M)\s*</g)]
   .map((m) => m[1]);
 
-// Terms of service paragraphs from footer.html (verbatim, trimmed).
-const termsSection = footerHtml.split(/Terms of Service/i)[1]?.split(/Cookies\s*&(?:amp;)?\s*Privacy/i)[0] ?? '';
-const termsParagraphs = [...termsSection.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
-  .map((m) => text(m[1]))
-  .filter((t) => t.length > 20);
+// Terms of service paragraphs from footer.html (verbatim, trimmed): the "Terms of Service"
+// and "Responsibility" cards, in page order.
+const legalCard = (id) => {
+  const m = footerHtml.match(new RegExp('<section class="legal-card" id="' + id + '">([\\s\\S]*?)</section>'));
+  return m ? [...m[1].matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)].map((x) => text(x[1])).filter((t) => t.length > 20) : [];
+};
+const termsParagraphs = [...legalCard('section-tc'), ...legalCard('section-responsibility')];
 must(termsParagraphs.length >= 5, 'terms paragraphs not found in footer.html');
-const privacyParagraph = text(
-  footerHtml.split(/Cookies\s*&(?:amp;)?\s*Privacy/i)[1]?.match(/<p[^>]*>([\s\S]*?)<\/p>/i)?.[1] ?? '',
-);
+const privacyParagraph = legalCard('section-privacy')[0] ?? '';
+must(privacyParagraph, 'privacy paragraph not found in footer.html');
 
 // ---------------------------------------------------------------- attractions
 const CATEGORY_LABELS = {
