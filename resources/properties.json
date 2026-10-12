@@ -1,132 +1,62 @@
 {
   "name": "properties",
-  "description": "Available villas and property listings at Black and White Stays Wayanad",
+  "description": "Villas offered by Black and White Stays with the rate and capacity the site publishes",
   "content": {
-    "overview": {
-      "total_properties": 3,
-      "property_types": ["Villa", "Service Apartment", "Studio Rooms"],
-      "location": "Wayanad, Kerala, India",
-      "service_type": "Luxury vacation rentals and workation spaces"
-    },
+    "count": 2,
     "properties": [
       {
         "id": "villa1",
-        "name": "Nestle with Nature Villa",
-        "type": "Premium Villa",
-        "tagline": "Experience the serene beauty of Wayanad's landscapes",
-        "description": "A luxurious villa nestled in the misty mountains of Wayanad, offering breathtaking views and complete tranquility",
-        "highlights": [
-          "Panoramic mountain views",
-          "Misty morning experiences",
-          "Direct access to nature trails",
-          "Perfect for nature lovers"
+        "name": "Luxury Villa 1 - Ground Floor",
+        "page_url": "https://www.bwstays.com/villa1.html",
+        "type": "Entire villa",
+        "rooms": 2,
+        "max_guests": "Up to 8 adults (villa page); booking form lists 2 guests per villa",
+        "price_from_inr_per_night": 3999,
+        "price_listed_on_booking_form_inr_per_night": 5000,
+        "amenities": [
+          "Premium Linens",
+          "Private Pool",
+          "EV Charging",
+          "Private Parking",
+          "Eco-Friendly",
+          "Premium Utensils",
+          "Bonfire & Music",
+          "Open Kitchen",
+          "Kitchen Set",
+          "Television",
+          "Online Games",
+          "High-Speed WiFi",
+          "Security",
+          "Pet Friendly",
+          "Bathroom Amenities",
+          "Air Condition",
+          "Iron",
+          "Mountain View",
+          "Laundry",
+          "Garden",
+          "Dish Wash"
         ],
-        "ideal_for": ["Families", "Nature enthusiasts", "Photography lovers", "Peaceful retreats"],
-        "features": {
-          "bedrooms": "Multiple",
-          "capacity": "6-8 guests",
-          "view": "Mountain and valley views",
-          "special": "Morning mist experiences"
-        },
-        "images": [
-          "black-and-white-wayanad-mist.webp"
-        ]
+        "pets_allowed": true
       },
       {
         "id": "villa2",
-        "name": "Hustle in Hisspeed Villa",
-        "type": "Luxury Workation Villa",
-        "tagline": "Luxurious amenities for your perfect stay",
-        "description": "Thoughtfully designed spaces combining work and leisure, with high-speed connectivity and premium amenities",
-        "highlights": [
-          "High-speed internet connectivity",
-          "Dedicated workspace areas",
-          "Premium amenities",
-          "Modern luxury interiors"
-        ],
-        "ideal_for": ["Remote workers", "Business travelers", "Digital nomads", "Long stays"],
-        "features": {
-          "bedrooms": "Multiple",
-          "capacity": "6-8 guests",
-          "workspace": "Dedicated work areas",
-          "connectivity": "High-speed WiFi"
-        },
-        "images": [
-          "bw-destination-chembra-wayanad.webp"
-        ]
-      },
-      {
-        "id": "outdoor",
-        "name": "Bustle in Budget Property",
-        "type": "Group Accommodation",
-        "tagline": "Group workation without distraction",
-        "description": "Budget-friendly accommodation perfect for groups, with beautiful settings to boost productivity and relaxation",
-        "highlights": [
-          "Budget-friendly pricing",
-          "Group accommodation options",
-          "Tea estate views",
-          "Productivity-focused environment"
-        ],
-        "ideal_for": ["Corporate groups", "Student groups", "Budget travelers", "Team retreats"],
-        "features": {
-          "bedrooms": "Multiple rooms",
-          "capacity": "10+ guests",
-          "setting": "Tea estate surroundings",
-          "value": "Best value for groups"
-        },
-        "images": [
-          "bw-tea-estate-kalpetta-india.webp"
-        ]
+        "name": "Luxury Villa 2 - First Floor",
+        "page_url": null,
+        "type": "Entire villa",
+        "price_listed_on_booking_form_inr_per_night": 5000,
+        "pets_allowed": true,
+        "note": "Listed on the booking form only; the site has no dedicated villa2 page."
       }
     ],
-    "common_features": {
-      "all_properties_include": [
-        "24/7 guest support",
-        "Housekeeping services",
-        "Parking facilities",
-        "Security",
-        "Garden/outdoor spaces",
-        "Kitchen facilities",
-        "WiFi connectivity"
-      ],
-      "available_services": [
-        "Airport transfers",
-        "Local sightseeing arrangements",
-        "Food delivery coordination",
-        "Laundry services",
-        "Tour planning assistance"
-      ]
-    },
-    "location_advantages": {
-      "proximity": {
-        "kalpetta_town": "Few minutes drive",
-        "tourist_spots": "Central location for all attractions",
-        "transport_hub": "Easy access to bus station and cab services",
-        "markets": "Close to local markets and shopping areas"
-      },
-      "scenic_features": [
-        "Western Ghats mountain views",
-        "Tea estate surroundings",
-        "Forest proximity",
-        "Valley views"
-      ]
-    },
-    "booking_options": {
-      "stay_types": [
-        "Daily rentals",
-        "Weekly stays",
-        "Monthly workations",
-        "Group bookings",
-        "Corporate retreats"
-      ],
-      "seasonal_availability": "Year-round availability with seasonal pricing",
-      "advance_booking": "Recommended for peak seasons and holidays"
-    }
+    "data_quality_notes": [
+      "villa1.html (\"up to 8 adults\", from INR 3,999/night) and bwstays-booking.html (\"2 guests\", INR 5,000/night) disagree. Both are reported; confirm current rate and capacity with the host."
+    ]
   },
   "metadata": {
-    "generated": "2025-01-16T00:00:00Z",
-    "version": "1.0.0",
+    "generated": "2026-10-12",
+    "version": "2.0.0",
     "type": "json",
-    "source": "index.html"
+    "source": "villa1.html, bwstays-booking.html",
+    "generator": "scripts/generate-mcp.mjs"
   }
 }

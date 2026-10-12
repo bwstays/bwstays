@@ -1,142 +1,178 @@
 {
   "name": "search_properties",
-  "description": "Search for available properties by various criteria",
+  "description": "List the villas the site publishes",
   "responses": [
     {
       "input": {
-        "query": "all properties"
+        "query": "all"
       },
       "output": {
         "results": [
           {
             "id": "villa1",
-            "name": "Nestle with Nature Villa",
-            "type": "Premium Villa",
-            "capacity": "6-8 guests",
-            "highlights": ["Mountain views", "Nature trails", "Misty mornings"],
-            "price_range": "Premium"
+            "name": "Luxury Villa 1 - Ground Floor",
+            "page_url": "https://www.bwstays.com/villa1.html",
+            "type": "Entire villa",
+            "rooms": 2,
+            "max_guests": "Up to 8 adults (villa page); booking form lists 2 guests per villa",
+            "price_from_inr_per_night": 3999,
+            "price_listed_on_booking_form_inr_per_night": 5000,
+            "amenities": [
+              "Premium Linens",
+              "Private Pool",
+              "EV Charging",
+              "Private Parking",
+              "Eco-Friendly",
+              "Premium Utensils",
+              "Bonfire & Music",
+              "Open Kitchen",
+              "Kitchen Set",
+              "Television",
+              "Online Games",
+              "High-Speed WiFi",
+              "Security",
+              "Pet Friendly",
+              "Bathroom Amenities",
+              "Air Condition",
+              "Iron",
+              "Mountain View",
+              "Laundry",
+              "Garden",
+              "Dish Wash"
+            ],
+            "pets_allowed": true
           },
           {
             "id": "villa2",
-            "name": "Hustle in Hisspeed Villa",
-            "type": "Luxury Workation Villa",
-            "capacity": "6-8 guests",
-            "highlights": ["High-speed WiFi", "Work spaces", "Modern amenities"],
-            "price_range": "Luxury"
-          },
-          {
-            "id": "outdoor",
-            "name": "Bustle in Budget Property",
-            "type": "Group Accommodation",
-            "capacity": "10+ guests",
-            "highlights": ["Budget-friendly", "Group spaces", "Tea estate views"],
-            "price_range": "Budget"
+            "name": "Luxury Villa 2 - First Floor",
+            "page_url": null,
+            "type": "Entire villa",
+            "price_listed_on_booking_form_inr_per_night": 5000,
+            "pets_allowed": true,
+            "note": "Listed on the booking form only; the site has no dedicated villa2 page."
           }
-        ],
-        "total": 3
+        ]
       }
     },
     {
       "input": {
-        "query": "workation"
-      },
-      "output": {
-        "results": [
-          {
-            "id": "villa2",
-            "name": "Hustle in Hisspeed Villa",
-            "type": "Luxury Workation Villa",
-            "features": ["High-speed internet", "Dedicated workspaces", "Quiet environment", "24/7 power backup"],
-            "ideal_for": "Remote workers, digital nomads, business travelers"
-          }
-        ],
-        "total": 1
-      }
-    },
-    {
-      "input": {
-        "query": "group booking"
-      },
-      "output": {
-        "results": [
-          {
-            "id": "outdoor",
-            "name": "Bustle in Budget Property",
-            "type": "Group Accommodation",
-            "capacity": "10+ guests",
-            "features": ["Multiple rooms", "Large common areas", "Group activities", "Budget pricing"],
-            "ideal_for": "Corporate retreats, student groups, large families"
-          }
-        ],
-        "total": 1
-      }
-    },
-    {
-      "input": {
-        "query": "family stay"
+        "id": "villa1"
       },
       "output": {
         "results": [
           {
             "id": "villa1",
-            "name": "Nestle with Nature Villa",
-            "capacity": "6-8 guests",
-            "family_features": ["Safe environment", "Garden space", "Multiple bedrooms", "Kitchen facilities"]
-          },
-          {
-            "id": "villa2",
-            "name": "Hustle in Hisspeed Villa",
-            "capacity": "6-8 guests",
-            "family_features": ["Modern amenities", "Entertainment options", "Spacious living areas"]
+            "name": "Luxury Villa 1 - Ground Floor",
+            "page_url": "https://www.bwstays.com/villa1.html",
+            "type": "Entire villa",
+            "rooms": 2,
+            "max_guests": "Up to 8 adults (villa page); booking form lists 2 guests per villa",
+            "price_from_inr_per_night": 3999,
+            "price_listed_on_booking_form_inr_per_night": 5000,
+            "amenities": [
+              "Premium Linens",
+              "Private Pool",
+              "EV Charging",
+              "Private Parking",
+              "Eco-Friendly",
+              "Premium Utensils",
+              "Bonfire & Music",
+              "Open Kitchen",
+              "Kitchen Set",
+              "Television",
+              "Online Games",
+              "High-Speed WiFi",
+              "Security",
+              "Pet Friendly",
+              "Bathroom Amenities",
+              "Air Condition",
+              "Iron",
+              "Mountain View",
+              "Laundry",
+              "Garden",
+              "Dish Wash"
+            ],
+            "pets_allowed": true
           }
-        ],
-        "total": 2
+        ]
       }
     },
     {
       "input": {
-        "query": "budget"
-      },
-      "output": {
-        "results": [
-          {
-            "id": "outdoor",
-            "name": "Bustle in Budget Property",
-            "type": "Group Accommodation",
-            "price_advantage": "Best value for money",
-            "features": ["Affordable rates", "Group discounts", "Essential amenities included"],
-            "minimum_stay": "Flexible"
-          }
-        ],
-        "total": 1
-      }
-    },
-    {
-      "input": {
-        "query": "luxury"
+        "id": "villa2"
       },
       "output": {
         "results": [
           {
             "id": "villa2",
-            "name": "Hustle in Hisspeed Villa",
-            "type": "Luxury Workation Villa",
-            "luxury_features": ["Premium interiors", "High-end amenities", "Exclusive services", "Prime location"]
-          },
+            "name": "Luxury Villa 2 - First Floor",
+            "page_url": null,
+            "type": "Entire villa",
+            "price_listed_on_booking_form_inr_per_night": 5000,
+            "pets_allowed": true,
+            "note": "Listed on the booking form only; the site has no dedicated villa2 page."
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "pets": true
+      },
+      "output": {
+        "results": [
           {
             "id": "villa1",
-            "name": "Nestle with Nature Villa",
-            "type": "Premium Villa",
-            "luxury_features": ["Scenic views", "Private spaces", "Premium bedding", "Personalized service"]
+            "name": "Luxury Villa 1 - Ground Floor",
+            "page_url": "https://www.bwstays.com/villa1.html",
+            "type": "Entire villa",
+            "rooms": 2,
+            "max_guests": "Up to 8 adults (villa page); booking form lists 2 guests per villa",
+            "price_from_inr_per_night": 3999,
+            "price_listed_on_booking_form_inr_per_night": 5000,
+            "amenities": [
+              "Premium Linens",
+              "Private Pool",
+              "EV Charging",
+              "Private Parking",
+              "Eco-Friendly",
+              "Premium Utensils",
+              "Bonfire & Music",
+              "Open Kitchen",
+              "Kitchen Set",
+              "Television",
+              "Online Games",
+              "High-Speed WiFi",
+              "Security",
+              "Pet Friendly",
+              "Bathroom Amenities",
+              "Air Condition",
+              "Iron",
+              "Mountain View",
+              "Laundry",
+              "Garden",
+              "Dish Wash"
+            ],
+            "pets_allowed": true
+          },
+          {
+            "id": "villa2",
+            "name": "Luxury Villa 2 - First Floor",
+            "page_url": null,
+            "type": "Entire villa",
+            "price_listed_on_booking_form_inr_per_night": 5000,
+            "pets_allowed": true,
+            "note": "Listed on the booking form only; the site has no dedicated villa2 page."
           }
-        ],
-        "total": 2
+        ]
       }
     }
   ],
   "metadata": {
-    "generated": "2025-01-16T00:00:00Z",
-    "version": "1.0.0",
-    "type": "tool_responses"
+    "generated": "2026-10-12",
+    "version": "2.0.0",
+    "type": "json",
+    "source": "generated from site data",
+    "generator": "scripts/generate-mcp.mjs"
   }
 }

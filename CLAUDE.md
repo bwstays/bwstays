@@ -169,3 +169,22 @@ Or self-host bridge for custom requirements
 - [Static MCP Website](https://staticmcp.com)
 - [MCP Protocol Specification](https://modelcontextprotocol.org)
 - Static MCP RFC and Standard documentation
+
+## Implementation Status
+
+The Static MCP files are **generated**, not hand-edited:
+
+```
+node scripts/generate-mcp.mjs           # regenerate mcp.json, .well-known/mcp.json, resources/, tools/
+node scripts/generate-mcp.mjs --check   # exit 1 if committed files are stale (use in CI)
+```
+
+Sources (single source of truth): `data/sitedata.js`, `data/shopdata.js`,
+`data/nearbylocationsdata.js`, `data/bookingdata.js`, `data/closeddata.js`,
+`js/faq.js`, `index.html`, `villa1.html`, `bwstays-booking.html`, `footer.html`.
+
+Rules the generator follows:
+- Only facts present on the site are emitted. Missing facts are reported as not published; nothing is invented.
+- The placeholder `stays` category in `data/sitedata.js` is never published.
+- Conflicts between pages (villa rate/capacity) are reported side by side with a note, not silently resolved.
+- No verified phone number is published on the site, so `phone` is `null` in the MCP output.

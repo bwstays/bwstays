@@ -1,74 +1,79 @@
 {
   "name": "bwstays",
-  "version": "1.0.0",
-  "description": "AI context for Black and White Stays - Luxury vacation rental and workation platform in Wayanad, Kerala",
+  "version": "2.0.0",
+  "description": "AI context for Black and White Stays - villas and workation stays in Kalpetta, Wayanad, Kerala",
   "metadata": {
-    "generated": "2025-01-16T00:00:00Z",
-    "generator": "bwstays-mcp-generator",
+    "generated": "2026-10-12",
+    "generator": "scripts/generate-mcp.mjs",
     "source": "https://www.bwstays.com",
     "contact": "bwstays@bwstays.com"
   },
   "resources": [
     {
       "name": "about",
-      "description": "Information about Black and White Stays company and services",
+      "description": "Who Black and White Stays is, where it is, and how to reach it",
       "path": "/resources/about.json"
     },
     {
       "name": "properties",
-      "description": "Available villas and property listings in Wayanad",
+      "description": "Villas offered by Black and White Stays with the rate and capacity the site publishes",
       "path": "/resources/properties.json"
     },
     {
       "name": "amenities",
-      "description": "Complete list of amenities and facilities available",
+      "description": "Amenities listed on the villa page",
       "path": "/resources/amenities.json"
     },
     {
       "name": "booking",
-      "description": "Booking process, contact information and reservation details",
+      "description": "How to book, what the booking form asks for, and how to make contact",
       "path": "/resources/booking.json"
     },
     {
       "name": "policies",
-      "description": "Terms, conditions, privacy policy and cancellation policies",
+      "description": "Terms of service and privacy statement, quoted from footer.html",
       "path": "/resources/policies.json"
     },
     {
       "name": "attractions",
-      "description": "Tourist attractions and places to visit in Wayanad",
+      "description": "Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay",
       "path": "/resources/attractions.json"
     },
     {
       "name": "location",
-      "description": "Location details, directions and area information",
+      "description": "Where the stay is and how far common destinations are",
       "path": "/resources/location.json"
+    },
+    {
+      "name": "help",
+      "description": "Frequently asked questions shown on the site",
+      "path": "/resources/help.json"
     }
   ],
   "tools": [
     {
-      "name": "search_properties",
-      "description": "Search for available properties by various criteria",
-      "path": "/tools/search/properties.json"
-    },
-    {
       "name": "search_attractions",
-      "description": "Find tourist attractions and activities in Wayanad",
+      "description": "Look up attractions by category, distance, entry fee or rating (pre-computed)",
       "path": "/tools/search/attractions.json"
     },
     {
+      "name": "search_properties",
+      "description": "List the villas the site publishes",
+      "path": "/tools/search/properties.json"
+    },
+    {
       "name": "check_availability",
-      "description": "Check property availability for specific dates",
+      "description": "Dates the site marks as booked or closed. Static snapshot - not live inventory.",
       "path": "/tools/booking/availability.json"
     },
     {
       "name": "get_pricing",
-      "description": "Get pricing information for properties and services",
+      "description": "Nightly rates exactly as published on the site",
       "path": "/tools/booking/pricing.json"
     },
     {
       "name": "contact_info",
-      "description": "Get contact information for reservations and inquiries",
+      "description": "How to reach Black and White Stays",
       "path": "/tools/booking/contact.json"
     }
   ]

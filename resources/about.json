@@ -1,100 +1,45 @@
 {
   "name": "about",
-  "description": "Information about Black and White Stays company and services",
+  "description": "Who Black and White Stays is, where it is, and how to reach it",
   "content": {
-    "company": {
-      "name": "Black and White Stays",
-      "tagline": "STAY CONNECTED, STAY CLOSE, STAY RELAXED",
-      "motto": "Redefine Your Stay",
-      "description": "Black & White Workations - Home Away Home for Family and Professionals for Vacation and Workations",
-      "services": [
-        "Luxury Villa Rentals",
-        "Workation Spaces",
-        "Staycation Services",
-        "Group Accommodations",
-        "Tourism Support"
-      ],
-      "philosophy": {
-        "primary": "Colive, Cowork & Coplay",
-        "vision": "Create unforgettable memories with our curated experiences and activities",
-        "approach": "Combining rural tranquility with urban convenience"
+    "name": "Black And White Stays",
+    "tagline": "STAY CONNECTED, STAY CLOSE, STAY RELAXED",
+    "summary": "Home Away for Family and professional for Vacation and Workations",
+    "website": "https://www.bwstays.com",
+    "concept": "Colive, Cowork & Coplay - villas for vacations and workations in Kalpetta, Wayanad",
+    "location": {
+      "locality": "Kalpetta",
+      "region": "Kerala",
+      "country": "India",
+      "postal_code": "673121",
+      "coordinates": {
+        "latitude": 11.605787,
+        "longitude": 76.083311
       }
     },
-    "unique_selling_points": [
-      {
-        "title": "Nestle with Nature",
-        "description": "Experience the serene beauty of Wayanad's landscapes and misty mountains at your doorstep",
-        "icon": "mountain"
-      },
-      {
-        "title": "Hustle in Hisspeed",
-        "description": "Luxurious amenities and thoughtfully designed spaces for your perfect stay",
-        "icon": "home"
-      },
-      {
-        "title": "Bustle in Budget",
-        "description": "Increased productivity. Group Workation without distraction (and with the motivation of their new, beautiful setting)",
-        "icon": "star"
-      }
+    "open_hours": "24 hours, 7 days a week (per structured data on index.html)",
+    "social": [
+      "https://x.com/bwstays",
+      "https://www.linkedin.com/in/blackandwhitestays",
+      "https://www.instagram.com/bwstays",
+      "https://www.youtube.com/@bwstays"
     ],
-    "location_benefits": {
-      "title": "Stay in the heart of hill station",
-      "features": [
-        {
-          "title": "Walk Everywhere",
-          "description": "Steps from Food Joints, City Center, and Tourist locations"
-        },
-        {
-          "title": "Stay Inspired",
-          "description": "Best nightlife, shopping, and cultural attractions at your doorstep"
-        },
-        {
-          "title": "Unmatched Connectivity",
-          "description": "Quick access to Cab Stand, Bus Station, and Transport"
-        },
-        {
-          "title": "Best for",
-          "description": "First-time visitors, business travelers, and those who want to be in the center of it all"
-        }
-      ]
-    },
-    "why_wayanad": {
-      "highlights": [
-        {
-          "title": "Central & Well-Connected",
-          "description": "Minutes to Kalpetta town, markets and top attractions"
-        },
-        {
-          "title": "Scenic Western Ghats Views",
-          "description": "Wake up to green hills, tea estates and misty mornings"
-        },
-        {
-          "title": "Vibrant Local Life",
-          "description": "Heritage spots, Cafes, Lakes and Forest trails all close by"
-        },
-        {
-          "title": "Apt for",
-          "description": "Families, couples and remote workers seeking calm with convenience"
-        }
-      ]
-    },
-    "business_hours": {
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "hours": "24/7 Service",
-      "note": "Round-the-clock support for all guests"
-    },
-    "social_media": {
-      "linkedin": "https://www.linkedin.com/in/blackandwhitestays/",
-      "twitter": "https://x.com/bwstays",
-      "facebook": "https://www.facebook.com/bwstays",
-      "instagram": "https://www.instagram.com/bwstays",
-      "youtube": "https://www.youtube.com/@bwstays"
-    }
+    "languages_offered_on_site": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "data_quality_notes": [
+      "villa1.html (\"up to 8 adults\", from INR 3,999/night) and bwstays-booking.html (\"2 guests\", INR 5,000/night) disagree. Both are reported; confirm current rate and capacity with the host.",
+      "No verified phone number is published: the site masks it and the WhatsApp link uses a placeholder-pattern number.",
+      "Payment and cancellation terms on the site are written for tours (\"tour commencement date\") and are quoted verbatim, not reinterpreted."
+    ]
   },
   "metadata": {
-    "generated": "2025-01-16T00:00:00Z",
-    "version": "1.0.0",
+    "generated": "2026-10-12",
+    "version": "2.0.0",
     "type": "json",
-    "source": "index.html"
+    "source": "index.html",
+    "generator": "scripts/generate-mcp.mjs"
   }
 }

@@ -1,201 +1,50 @@
 {
   "name": "booking",
-  "description": "Booking process, contact information and reservation details for Black and White Stays",
+  "description": "How to book, what the booking form asks for, and how to make contact",
   "content": {
-    "contact_information": {
-      "primary_email": "bwstays@bwstays.com",
-      "phone": {
-        "display": "+91-999-9999-9999",
-        "whatsapp": "+919999999999",
-        "availability": "24/7 support"
+    "booking_page": "https://www.bwstays.com/bwstays-booking.html",
+    "process": [
+      "Choose check-in and check-out dates on the booking page",
+      "Select a villa",
+      "Enter guest information, pick an arrival window and accept the Terms and Cancellation Policy",
+      "Submit the reservation"
+    ],
+    "arrival_windows": [
+      "12:00 PM - 2:00 PM",
+      "2:00 PM - 4:00 PM",
+      "4:00 PM - 6:00 PM",
+      "After 6:00 PM"
+    ],
+    "nightly_rate_on_booking_form_inr": [
+      {
+        "villa": "Luxury Villa 1 - Ground Floor",
+        "inr_per_night": 5000
       },
-      "address": {
-        "area": "Wayanad",
-        "city": "Kalpetta",
-        "state": "Kerala",
-        "country": "India",
-        "pincode": "673121",
-        "coordinates": {
-          "latitude": 11.605787,
-          "longitude": 76.083311
-        }
-      },
-      "office_hours": "24/7 - Round the clock service",
-      "response_time": "Usually within 2-4 hours"
-    },
-    "booking_process": {
-      "steps": [
-        {
-          "step": 1,
-          "title": "Inquiry",
-          "description": "Contact us via phone, WhatsApp, or email with your requirements"
-        },
-        {
-          "step": 2,
-          "title": "Availability Check",
-          "description": "We'll confirm property availability for your preferred dates"
-        },
-        {
-          "step": 3,
-          "title": "Quotation",
-          "description": "Receive detailed pricing based on property, dates, and group size"
-        },
-        {
-          "step": 4,
-          "title": "Confirmation",
-          "description": "Confirm booking with advance payment"
-        },
-        {
-          "step": 5,
-          "title": "Check-in",
-          "description": "Arrive at property, complete formalities, and enjoy your stay"
-        }
-      ],
-      "booking_methods": [
-        "Direct phone call",
-        "WhatsApp message",
-        "Email inquiry",
-        "Website contact form",
-        "Walk-in (subject to availability)"
-      ]
-    },
-    "reservation_policies": {
-      "advance_booking": {
-        "recommended": "2-4 weeks in advance for peak season",
-        "minimum": "24 hours for off-season",
-        "peak_seasons": ["December-January", "March-May", "Local festivals", "Long weekends"]
-      },
-      "payment": {
-        "advance_required": "50% advance payment to confirm booking",
-        "balance": "Remaining 50% on check-in",
-        "methods": [
-          "Bank transfer",
-          "UPI payment",
-          "Credit/Debit card",
-          "Cash on arrival (for balance only)"
-        ]
-      },
-      "check_in_out": {
-        "check_in": "12:00 PM onwards",
-        "check_out": "11:00 AM",
-        "early_check_in": "Subject to availability",
-        "late_check_out": "Additional charges may apply",
-        "flexible_timing": "Can be arranged for groups"
-      },
-      "documentation": {
-        "required": [
-          "Government-issued photo ID",
-          "Booking confirmation",
-          "Address proof (for local bookings)"
-        ],
-        "corporate": "Company ID or letter for corporate bookings"
+      {
+        "villa": "Luxury Villa 2- First Floor",
+        "inr_per_night": 5000
       }
-    },
-    "pricing_structure": {
-      "factors": [
-        "Property type and size",
-        "Season (peak/off-peak)",
-        "Duration of stay",
-        "Number of guests",
-        "Additional services requested"
-      ],
-      "discounts": {
-        "long_stays": "Special rates for weekly/monthly stays",
-        "group_bookings": "Discounts for groups of 10+",
-        "repeat_guests": "Loyalty benefits available",
-        "corporate": "Corporate rates on request",
-        "off_season": "Attractive off-season pricing"
-      },
-      "inclusions": {
-        "standard": [
-          "Accommodation",
-          "Basic amenities",
-          "Housekeeping",
-          "WiFi",
-          "Parking",
-          "Security"
-        ],
-        "optional": [
-          "Meals",
-          "Airport/station transfers",
-          "Sightseeing arrangements",
-          "Adventure activities",
-          "Special celebrations"
-        ]
-      }
-    },
-    "group_corporate_bookings": {
-      "facilities": [
-        "Bulk booking discounts",
-        "Customized meal plans",
-        "Conference/meeting arrangements",
-        "Team building activities",
-        "Transportation coordination"
-      ],
-      "requirements": {
-        "minimum_size": "Usually 6+ people",
-        "advance_notice": "1-2 weeks preferred",
-        "special_requests": "Can be accommodated with prior notice"
-      }
-    },
-    "special_services": {
-      "celebrations": {
-        "types": ["Birthday parties", "Anniversaries", "Small weddings", "Corporate events"],
-        "arrangements": [
-          "Decoration services",
-          "Cake arrangements",
-          "Special meal preparation",
-          "Photography coordination",
-          "Event planning support"
-        ]
-      },
-      "add_ons": [
-        "Barbecue setup",
-        "Campfire arrangements",
-        "Local guide services",
-        "Vehicle rental",
-        "Adventure sport bookings",
-        "Spa services (on request)"
-      ]
-    },
-    "cancellation_refund": {
-      "notice_period": {
-        "full_refund": "7 days before check-in",
-        "partial_refund": "3-7 days before check-in (50%)",
-        "no_refund": "Less than 3 days"
-      },
-      "exceptions": [
-        "Medical emergencies (with proof)",
-        "Natural disasters",
-        "Government restrictions"
-      ],
-      "modification": "Date changes subject to availability and may incur charges"
-    },
-    "guest_support": {
-      "pre_arrival": [
-        "Travel planning assistance",
-        "Local weather updates",
-        "Packing suggestions",
-        "Direction guidance"
-      ],
-      "during_stay": [
-        "24/7 on-call support",
-        "Concierge services",
-        "Emergency assistance",
-        "Local recommendations"
-      ],
-      "post_stay": [
-        "Feedback collection",
-        "Lost and found support",
-        "Future booking assistance",
-        "Loyalty program enrollment"
-      ]
+    ],
+    "payment_terms_quoted_from_site": [
+      "To make a booking with bw stays & simply fill in the online reservation form or download the reservation form and call or mail to us. Spaces will be confirmed in order of receipt and upon payment of deposit.",
+      "Once your reservation has been confirmed it is necessary to make full payment at least 90 days prior to the tour commencement date. Payment for the tour deposit may be made by Visa, Mastercard, cash deposit, internet banking or International Money Transfer. .",
+      "Payment for the balance of the tour fee may be made by cash deposit, internet banking or International Money Transfer, Visa or Mastercard.",
+      "Fees are quoted in United States dollars or Indian Rupees and are inclusive of the GST (18%)",
+      "We regret that personal or bank cheques are not accepted. We reserve the right to cancel your booking if payment is not received when due, wherein the Cancellations and Refunds clause, listed below, shall be effected."
+    ],
+    "contact": {
+      "email": "bwstays@bwstays.com",
+      "whatsapp_link": null,
+      "phone": null,
+      "phone_note": "The site masks its phone number and its WhatsApp link uses a placeholder-pattern number, so neither is published here. Use email or the booking page.",
+      "contact_form": "https://www.bwstays.com/index.html#signup"
     }
   },
   "metadata": {
-    "generated": "2025-01-16T00:00:00Z",
-    "version": "1.0.0",
+    "generated": "2026-10-12",
+    "version": "2.0.0",
     "type": "json",
-    "source": "index.html"
+    "source": "bwstays-booking.html, footer.html, index.html",
+    "generator": "scripts/generate-mcp.mjs"
   }
 }

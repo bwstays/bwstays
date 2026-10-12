@@ -1,199 +1,3034 @@
 {
   "name": "search_attractions",
-  "description": "Find tourist attractions and activities in Wayanad",
+  "description": "Look up attractions by category, distance, entry fee or rating (pre-computed)",
   "responses": [
     {
       "input": {
-        "query": "waterfalls"
+        "category": "plantation"
       },
       "output": {
+        "label": "Plantations",
         "results": [
           {
-            "name": "Thusharagiri Falls",
-            "type": "Waterfall",
-            "distance": "Varies from property",
-            "activities": ["Trekking", "Swimming", "Photography"]
+            "name": "Coffee Plantation",
+            "category": "Plantations",
+            "distance_from_stay_km": 7,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
           },
           {
-            "name": "Meenmutty Falls",
-            "type": "Waterfall",
-            "trek_difficulty": "Moderate to difficult",
-            "height": "Three-tiered"
+            "name": "Rippon Tea estate",
+            "category": "Plantations",
+            "distance_from_stay_km": 11,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
+          },
+          {
+            "name": "Peria tea plantation",
+            "category": "Plantations",
+            "distance_from_stay_km": 38,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:30-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "waterfalls"
+      },
+      "output": {
+        "label": "Waterfalls & Lakes",
+        "results": [
+          {
+            "name": "Kanthanpara Falls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 18,
+            "entry_fee_inr": null,
+            "rating": 4.1,
+            "timing": [
+              "09:00-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html"
+          },
+          {
+            "name": "Kappikalam waterfalls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 22,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html"
+          },
+          {
+            "name": "Sentinel Rock Waterfall",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 23,
+            "entry_fee_inr": null,
+            "rating": 4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html"
           },
           {
             "name": "Soochipara Falls",
-            "type": "Waterfall",
-            "special": "Natural pool for swimming",
-            "best_time": "Post-monsoon"
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 23,
+            "entry_fee_inr": null,
+            "rating": 4.2,
+            "timing": [
+              "08:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html"
           },
           {
-            "name": "Kanthanpara Falls",
-            "type": "Waterfall",
-            "accessibility": "Easy, family-friendly",
-            "distance": "12 km from Kalpetta"
+            "name": "Thusharagiri",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 31,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html"
+          },
+          {
+            "name": "Cheeyambam waterfalls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 32,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html"
+          },
+          {
+            "name": "Chetalayam falls  ",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 34,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html"
+          },
+          {
+            "name": "Arripara falls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 37,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html"
+          },
+          {
+            "name": "Meenmutty Falls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 41,
+            "entry_fee_inr": null,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html"
+          },
+          {
+            "name": "Irrupu falls ",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 60,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html"
           }
-        ],
-        "total": 4
+        ]
       }
     },
     {
       "input": {
-        "query": "trekking"
+        "category": "museums"
       },
       "output": {
+        "label": "Museums & Crafts",
         "results": [
           {
-            "name": "Chembra Peak",
-            "height": "2100m",
-            "difficulty": "Moderate to difficult",
-            "highlight": "Heart-shaped lake"
+            "name": "Gandhi Museaum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
           },
           {
-            "name": "Edakkal Caves",
-            "trek_duration": "45 minutes",
-            "attraction": "Prehistoric rock engravings",
-            "age": "6000 BCE"
+            "name": "Honey Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
+          },
+          {
+            "name": "Kungichira Museum & Chira",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Tea Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html"
+          },
+          {
+            "name": "Folklore Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-folklore-museum-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "romantic"
+      },
+      "output": {
+        "label": "Romantic Spots & Viewpoints",
+        "results": [
+          {
+            "name": "Mailadippara",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 3,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html"
+          },
+          {
+            "name": "Bamboo Park",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Muneeswaran Kunnu View point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Pookode Lake",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 13,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html"
+          },
+          {
+            "name": "Karland Lake",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 15,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html"
+          },
+          {
+            "name": "Karapuzha Dam",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
+          },
+          {
+            "name": "Lakkidi view point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
+          },
+          {
+            "name": "Mullanpara View Point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
+          },
+          {
+            "name": "Kurumbalakotta",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 18,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html"
+          },
+          {
+            "name": "Phantom rock",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 19,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html"
+          },
+          {
+            "name": "900 Kandi",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": null,
+            "rating": 3.9,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html"
+          },
+          {
+            "name": "Bamboo Forest Valentine's Park",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 3.2,
+            "timing": [
+              "07:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html"
+          },
+          {
+            "name": "Banasurasagar Dam",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": null,
+            "rating": 4.3,
+            "timing": [
+              "06:00-17:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html"
+          },
+          {
+            "name": "Manjappara",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 23,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-manjappara-romantic-wayanad.html"
+          },
+          {
+            "name": "Attamala View Point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "07:00-18:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html"
+          },
+          {
+            "name": "Sunrise valley",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html"
+          },
+          {
+            "name": "Neelimala view point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 26,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html"
+          },
+          {
+            "name": "Banasura Sagar Hills",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 29,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html"
+          },
+          {
+            "name": "Munneswaran Kunnu",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 42,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "07:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html"
+          },
+          {
+            "name": "Neelarchalu",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 49,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "culthist"
+      },
+      "output": {
+        "label": "Cultural & Historical",
+        "results": [
+          {
+            "name": "Chain Tree",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 15,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html"
+          },
+          {
+            "name": "Santhinatha Temple",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 17,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "08:00-17:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-santhinatha-temple-heritage-wayanad.html"
+          },
+          {
+            "name": "Mananthavady Pazhassi Tomb",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 30,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html"
+          },
+          {
+            "name": "Sultan's Batthery Valmiki Ashram",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 32,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "trucking"
+      },
+      "output": {
+        "label": "Trekking",
+        "results": [
+          {
+            "name": "Edakal Caves",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": null,
+            "rating": 4.1,
+            "timing": [
+              "09:30-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html"
+          },
+          {
+            "name": "Kolagapara",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
+          },
+          {
+            "name": "Puliyarmala",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html"
+          },
+          {
+            "name": "Lakkidi Ghats View Point",
+            "category": "Trekking",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
+          },
+          {
+            "name": "Chembra Peak",
+            "category": "Trekking",
+            "distance_from_stay_km": 17,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "05:00-13:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
+          },
+          {
+            "name": "Cheengeri Hill",
+            "category": "Trekking",
+            "distance_from_stay_km": 20,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "06:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html"
+          },
+          {
+            "name": "Kuruwa Deep",
+            "category": "Trekking",
+            "distance_from_stay_km": 33,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html"
+          },
+          {
+            "name": "Brahmagiri",
+            "category": "Trekking",
+            "distance_from_stay_km": 50,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "wildlife"
+      },
+      "output": {
+        "label": "Wildlife",
+        "results": [
+          {
+            "name": "Muthanga Wildlife Sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 24,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "06:00-19:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html"
+          },
+          {
+            "name": "Begur wildlife sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 37,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html"
           },
           {
             "name": "Pakshipathalam",
-            "trek_distance": "7 km",
-            "type": "Bird sanctuary trek",
-            "difficulty": "Challenging"
+            "category": "Wildlife",
+            "distance_from_stay_km": 42,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "07:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pakshipathalam-wildlife-sanctuary-wayanad.html"
           },
           {
-            "name": "Banasura Hills",
-            "activities": ["Trekking", "Boating", "Zip-lining"],
-            "feature": "Largest earthen dam"
+            "name": "Tholpetty wild life sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 47,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-10:00",
+              "15:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html"
+          },
+          {
+            "name": "Nagarhole wild life sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 52,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "07:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html"
           }
-        ],
-        "total": 4
+        ]
       }
     },
     {
       "input": {
-        "query": "wildlife"
+        "category": "farms"
       },
       "output": {
+        "label": "Farm Visits",
         "results": [
           {
-            "name": "Wayanad Wildlife Sanctuary",
-            "zones": ["Muthanga", "Tholpetty"],
-            "animals": ["Elephants", "Tigers", "Leopards"],
-            "area": "344 sq km"
+            "name": "Gurukula Botanical Sanctuary",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.9,
+            "timing": [
+              "10:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
           },
           {
-            "name": "Pakshipathalam Bird Sanctuary",
-            "specialty": "Rare birds and caves",
-            "trek": "Through dense forest"
+            "name": "Pepper Farm",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "08:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
           },
           {
-            "name": "Kuruva Island",
-            "area": "950 acres",
-            "activities": ["Bamboo rafting", "Bird watching"],
-            "best_time": "October to May"
+            "name": "Ambalavayal",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html"
+          },
+          {
+            "name": "Boys Town",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 43,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "08:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-boys-town-farm-wayanad.html"
           }
-        ],
-        "total": 3
+        ]
       }
     },
     {
       "input": {
-        "query": "cultural"
+        "category": "sporting"
       },
       "output": {
+        "label": "Sporting",
         "results": [
           {
-            "name": "Wayanad Heritage Museum",
-            "timings": "9 AM - 5 PM",
-            "closed": "Mondays",
-            "exhibits": "2nd century artifacts"
-          },
-          {
-            "name": "Chain Tree",
-            "type": "Historical site",
-            "story": "Local legend",
-            "location": "Lakkidi"
-          },
-          {
-            "name": "Jain Temple",
-            "age": "13th century",
-            "location": "Sulthan Bathery",
-            "significance": "Used by Tipu Sultan"
-          },
-          {
-            "name": "Uravu Bamboo Craft",
-            "type": "Traditional craft center",
-            "activities": ["Workshops", "Shopping"]
-          }
-        ],
-        "total": 4
-      }
-    },
-    {
-      "input": {
-        "query": "family activities"
-      },
-      "output": {
-        "results": [
-          {
-            "name": "Pookode Lake",
-            "activities": ["Boating", "Walking", "Picnic"],
-            "shape": "Heart-shaped",
-            "suitable": "All ages"
-          },
-          {
-            "name": "Tea Estate Tours",
-            "activities": ["Factory visit", "Tea tasting", "Photography"],
-            "duration": "2-3 hours"
-          },
-          {
-            "name": "Kanthanpara Falls",
-            "accessibility": "Easy for families",
-            "activities": ["Picnic", "Photography"]
-          },
-          {
-            "name": "Lakkidi View Point",
-            "attraction": "Sunset views",
-            "facilities": "Parking and viewpoints"
-          }
-        ],
-        "total": 4
-      }
-    },
-    {
-      "input": {
-        "query": "adventure"
-      },
-      "output": {
-        "results": [
-          {
-            "name": "Zip-lining",
-            "locations": ["Banasura", "Various resorts"],
-            "duration": "15-30 minutes"
-          },
-          {
-            "name": "Rock Climbing",
-            "locations": ["Soochipara", "Thusharagiri"],
-            "equipment": "Usually provided"
-          },
-          {
-            "name": "Mountain Biking",
-            "trails": "Tea estate roads",
-            "rental": "Bicycles available"
+            "name": "Turf",
+            "category": "Sporting",
+            "distance_from_stay_km": 3,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html"
           },
           {
             "name": "Bamboo Rafting",
-            "location": "Kuruva Island",
-            "season": "October to May"
+            "category": "Sporting",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": null,
+            "rating": 4.5,
+            "timing": [
+              "09:00-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html"
+          },
+          {
+            "name": "Ziplines",
+            "category": "Sporting",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
           }
-        ],
-        "total": 4
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "food"
+      },
+      "output": {
+        "label": "Food",
+        "results": [
+          {
+            "name": "Kalpetta Food Spots",
+            "category": "Food",
+            "distance_from_stay_km": 5,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/all-fooding-wayanad.html"
+          },
+          {
+            "name": "LocalCuisine",
+            "category": "Food",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Restaurants",
+            "category": "Food",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "tribal"
+      },
+      "output": {
+        "label": "Tribal",
+        "results": [
+          {
+            "name": "Uravu",
+            "category": "Tribal",
+            "distance_from_stay_km": 11,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html"
+          },
+          {
+            "name": "En ooru",
+            "category": "Tribal",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "cycling"
+      },
+      "output": {
+        "label": "Cycling",
+        "results": [
+          {
+            "name": "Chundail Tea Estate",
+            "category": "Cycling",
+            "distance_from_stay_km": 6,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
+          },
+          {
+            "name": "Rippon",
+            "category": "Cycling",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "shopping"
+      },
+      "output": {
+        "label": "Shopping",
+        "results": [
+          {
+            "name": "Bevo Beverages ( Govt of Kerala )",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "House Holds",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Spices",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Ali's wayanadan natural honey",
+            "category": "Shopping",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": null,
+            "rating": 5,
+            "timing": [
+              "09:00-20:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "category": "pilgrimage"
+      },
+      "output": {
+        "label": "Pilgrimage",
+        "results": [
+          {
+            "name": "Ananthanatha Swamy Jain",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Koottamundu Glass Temple Wayanad",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 7,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-18:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Trikaipatta temple",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Meenangadi Church",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 14,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Varampatta mosque",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Valliyoorkavu temple",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 27,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-valliyoorkavu-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Our lady of lourdes shrine, Pallikunnu",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 29,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Pulpally Sitadevi temple",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 30,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Trishileri temple ",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 36,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "05:30-12:30",
+              "17:00-19:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-trishileri-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Sita Lav Kush Temple ponkuzhy",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 41,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Tirunelli",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 48,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "05:30-12:30",
+              "17:00-19:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Papanasini River",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 49,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "05:30-12:30",
+              "17:00-19:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "max_distance_km": 10
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Mailadippara",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 3,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html"
+          },
+          {
+            "name": "Turf",
+            "category": "Sporting",
+            "distance_from_stay_km": 3,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html"
+          },
+          {
+            "name": "Ananthanatha Swamy Jain",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Edakal Caves",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": null,
+            "rating": 4.1,
+            "timing": [
+              "09:30-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html"
+          },
+          {
+            "name": "Kolagapara",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
+          },
+          {
+            "name": "Puliyarmala",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html"
+          },
+          {
+            "name": "Kalpetta Food Spots",
+            "category": "Food",
+            "distance_from_stay_km": 5,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/all-fooding-wayanad.html"
+          },
+          {
+            "name": "Chundail Tea Estate",
+            "category": "Cycling",
+            "distance_from_stay_km": 6,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
+          },
+          {
+            "name": "Coffee Plantation",
+            "category": "Plantations",
+            "distance_from_stay_km": 7,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
+          },
+          {
+            "name": "Koottamundu Glass Temple Wayanad",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 7,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-18:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Bamboo Park",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Bamboo Rafting",
+            "category": "Sporting",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": null,
+            "rating": 4.5,
+            "timing": [
+              "09:00-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html"
+          },
+          {
+            "name": "Bevo Beverages ( Govt of Kerala )",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Gurukula Botanical Sanctuary",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.9,
+            "timing": [
+              "10:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+          },
+          {
+            "name": "House Holds",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "LocalCuisine",
+            "category": "Food",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Muneeswaran Kunnu View point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Pepper Farm",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "08:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+          },
+          {
+            "name": "Restaurants",
+            "category": "Food",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
+          },
+          {
+            "name": "Rippon",
+            "category": "Cycling",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
+          },
+          {
+            "name": "Spices",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Ziplines",
+            "category": "Sporting",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "max_distance_km": 25
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Mailadippara",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 3,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html"
+          },
+          {
+            "name": "Turf",
+            "category": "Sporting",
+            "distance_from_stay_km": 3,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html"
+          },
+          {
+            "name": "Ananthanatha Swamy Jain",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Edakal Caves",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": null,
+            "rating": 4.1,
+            "timing": [
+              "09:30-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html"
+          },
+          {
+            "name": "Kolagapara",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
+          },
+          {
+            "name": "Puliyarmala",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html"
+          },
+          {
+            "name": "Kalpetta Food Spots",
+            "category": "Food",
+            "distance_from_stay_km": 5,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/all-fooding-wayanad.html"
+          },
+          {
+            "name": "Chundail Tea Estate",
+            "category": "Cycling",
+            "distance_from_stay_km": 6,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
+          },
+          {
+            "name": "Coffee Plantation",
+            "category": "Plantations",
+            "distance_from_stay_km": 7,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
+          },
+          {
+            "name": "Koottamundu Glass Temple Wayanad",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 7,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-18:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Bamboo Park",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Bamboo Rafting",
+            "category": "Sporting",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": null,
+            "rating": 4.5,
+            "timing": [
+              "09:00-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html"
+          },
+          {
+            "name": "Bevo Beverages ( Govt of Kerala )",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Gurukula Botanical Sanctuary",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.9,
+            "timing": [
+              "10:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+          },
+          {
+            "name": "House Holds",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "LocalCuisine",
+            "category": "Food",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Muneeswaran Kunnu View point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Pepper Farm",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "08:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+          },
+          {
+            "name": "Restaurants",
+            "category": "Food",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
+          },
+          {
+            "name": "Rippon",
+            "category": "Cycling",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
+          },
+          {
+            "name": "Spices",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Ziplines",
+            "category": "Sporting",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Rippon Tea estate",
+            "category": "Plantations",
+            "distance_from_stay_km": 11,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
+          },
+          {
+            "name": "Uravu",
+            "category": "Tribal",
+            "distance_from_stay_km": 11,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html"
+          },
+          {
+            "name": "Gandhi Museaum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
+          },
+          {
+            "name": "Honey Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
+          },
+          {
+            "name": "Kungichira Museum & Chira",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Tea Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html"
+          },
+          {
+            "name": "Trikaipatta temple",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Pookode Lake",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 13,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html"
+          },
+          {
+            "name": "Meenangadi Church",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 14,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Chain Tree",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 15,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html"
+          },
+          {
+            "name": "Karland Lake",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 15,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html"
+          },
+          {
+            "name": "En ooru",
+            "category": "Tribal",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Karapuzha Dam",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
+          },
+          {
+            "name": "Lakkidi Ghats View Point",
+            "category": "Trekking",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
+          },
+          {
+            "name": "Lakkidi view point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
+          },
+          {
+            "name": "Mullanpara View Point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
+          },
+          {
+            "name": "Chembra Peak",
+            "category": "Trekking",
+            "distance_from_stay_km": 17,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "05:00-13:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
+          },
+          {
+            "name": "Santhinatha Temple",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 17,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "08:00-17:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-santhinatha-temple-heritage-wayanad.html"
+          },
+          {
+            "name": "Kanthanpara Falls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 18,
+            "entry_fee_inr": null,
+            "rating": 4.1,
+            "timing": [
+              "09:00-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html"
+          },
+          {
+            "name": "Kurumbalakotta",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 18,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html"
+          },
+          {
+            "name": "Phantom rock",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 19,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html"
+          },
+          {
+            "name": "Cheengeri Hill",
+            "category": "Trekking",
+            "distance_from_stay_km": 20,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "06:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html"
+          },
+          {
+            "name": "900 Kandi",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": null,
+            "rating": 3.9,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html"
+          },
+          {
+            "name": "Ambalavayal",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html"
+          },
+          {
+            "name": "Bamboo Forest Valentine's Park",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 3.2,
+            "timing": [
+              "07:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html"
+          },
+          {
+            "name": "Banasurasagar Dam",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": null,
+            "rating": 4.3,
+            "timing": [
+              "06:00-17:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html"
+          },
+          {
+            "name": "Folklore Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-folklore-museum-wayanad.html"
+          },
+          {
+            "name": "Varampatta mosque",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Kappikalam waterfalls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 22,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html"
+          },
+          {
+            "name": "Manjappara",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 23,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-manjappara-romantic-wayanad.html"
+          },
+          {
+            "name": "Sentinel Rock Waterfall",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 23,
+            "entry_fee_inr": null,
+            "rating": 4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html"
+          },
+          {
+            "name": "Soochipara Falls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 23,
+            "entry_fee_inr": null,
+            "rating": 4.2,
+            "timing": [
+              "08:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html"
+          },
+          {
+            "name": "Muthanga Wildlife Sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 24,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "06:00-19:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html"
+          },
+          {
+            "name": "Ali's wayanadan natural honey",
+            "category": "Shopping",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": null,
+            "rating": 5,
+            "timing": [
+              "09:00-20:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html"
+          },
+          {
+            "name": "Attamala View Point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "07:00-18:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html"
+          },
+          {
+            "name": "Sunrise valley",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "free_entry": true
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Mailadippara",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 3,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html"
+          },
+          {
+            "name": "Turf",
+            "category": "Sporting",
+            "distance_from_stay_km": 3,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html"
+          },
+          {
+            "name": "Ananthanatha Swamy Jain",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Kolagapara",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
+          },
+          {
+            "name": "Puliyarmala",
+            "category": "Trekking",
+            "distance_from_stay_km": 4,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html"
+          },
+          {
+            "name": "Kalpetta Food Spots",
+            "category": "Food",
+            "distance_from_stay_km": 5,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/all-fooding-wayanad.html"
+          },
+          {
+            "name": "Chundail Tea Estate",
+            "category": "Cycling",
+            "distance_from_stay_km": 6,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
+          },
+          {
+            "name": "Coffee Plantation",
+            "category": "Plantations",
+            "distance_from_stay_km": 7,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
+          },
+          {
+            "name": "Koottamundu Glass Temple Wayanad",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 7,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-18:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Bamboo Park",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Bevo Beverages ( Govt of Kerala )",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Gurukula Botanical Sanctuary",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.9,
+            "timing": [
+              "10:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+          },
+          {
+            "name": "House Holds",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "LocalCuisine",
+            "category": "Food",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Muneeswaran Kunnu View point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "10:00-21:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Pepper Farm",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "08:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+          },
+          {
+            "name": "Restaurants",
+            "category": "Food",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
+          },
+          {
+            "name": "Rippon",
+            "category": "Cycling",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
+          },
+          {
+            "name": "Spices",
+            "category": "Shopping",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "11:00-23:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Ziplines",
+            "category": "Sporting",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Rippon Tea estate",
+            "category": "Plantations",
+            "distance_from_stay_km": 11,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
+          },
+          {
+            "name": "Uravu",
+            "category": "Tribal",
+            "distance_from_stay_km": 11,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html"
+          },
+          {
+            "name": "Gandhi Museaum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
+          },
+          {
+            "name": "Honey Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
+          },
+          {
+            "name": "Kungichira Museum & Chira",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": null
+          },
+          {
+            "name": "Tea Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html"
+          },
+          {
+            "name": "Trikaipatta temple",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 12,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Pookode Lake",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 13,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html"
+          },
+          {
+            "name": "Meenangadi Church",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 14,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Chain Tree",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 15,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html"
+          },
+          {
+            "name": "Karland Lake",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 15,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html"
+          },
+          {
+            "name": "En ooru",
+            "category": "Tribal",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
+          },
+          {
+            "name": "Karapuzha Dam",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
+          },
+          {
+            "name": "Lakkidi Ghats View Point",
+            "category": "Trekking",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
+          },
+          {
+            "name": "Lakkidi view point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
+          },
+          {
+            "name": "Mullanpara View Point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 16,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
+          },
+          {
+            "name": "Chembra Peak",
+            "category": "Trekking",
+            "distance_from_stay_km": 17,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "05:00-13:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
+          },
+          {
+            "name": "Santhinatha Temple",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 17,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "08:00-17:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-santhinatha-temple-heritage-wayanad.html"
+          },
+          {
+            "name": "Kurumbalakotta",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 18,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html"
+          },
+          {
+            "name": "Phantom rock",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 19,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html"
+          },
+          {
+            "name": "Cheengeri Hill",
+            "category": "Trekking",
+            "distance_from_stay_km": 20,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "06:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html"
+          },
+          {
+            "name": "Ambalavayal",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html"
+          },
+          {
+            "name": "Bamboo Forest Valentine's Park",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 3.2,
+            "timing": [
+              "07:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html"
+          },
+          {
+            "name": "Folklore Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-folklore-museum-wayanad.html"
+          },
+          {
+            "name": "Varampatta mosque",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Kappikalam waterfalls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 22,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html"
+          },
+          {
+            "name": "Manjappara",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 23,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-manjappara-romantic-wayanad.html"
+          },
+          {
+            "name": "Muthanga Wildlife Sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 24,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "06:00-19:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html"
+          },
+          {
+            "name": "Attamala View Point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "07:00-18:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html"
+          },
+          {
+            "name": "Sunrise valley",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html"
+          },
+          {
+            "name": "Neelimala view point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 26,
+            "entry_fee_inr": 0,
+            "rating": 3.9,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html"
+          },
+          {
+            "name": "Valliyoorkavu temple",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 27,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-valliyoorkavu-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Banasura Sagar Hills",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 29,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html"
+          },
+          {
+            "name": "Our lady of lourdes shrine, Pallikunnu",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 29,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Mananthavady Pazhassi Tomb",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 30,
+            "entry_fee_inr": 0,
+            "rating": 4.2,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html"
+          },
+          {
+            "name": "Pulpally Sitadevi temple",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 30,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Thusharagiri",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 31,
+            "entry_fee_inr": 0,
+            "rating": 4.4,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html"
+          },
+          {
+            "name": "Cheeyambam waterfalls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 32,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html"
+          },
+          {
+            "name": "Sultan's Batthery Valmiki Ashram",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 32,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html"
+          },
+          {
+            "name": "Kuruwa Deep",
+            "category": "Trekking",
+            "distance_from_stay_km": 33,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "09:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html"
+          },
+          {
+            "name": "Chetalayam falls  ",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 34,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html"
+          },
+          {
+            "name": "Trishileri temple ",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 36,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "05:30-12:30",
+              "17:00-19:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-trishileri-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Arripara falls",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 37,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html"
+          },
+          {
+            "name": "Begur wildlife sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 37,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html"
+          },
+          {
+            "name": "Peria tea plantation",
+            "category": "Plantations",
+            "distance_from_stay_km": 38,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:30-16:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html"
+          },
+          {
+            "name": "Sita Lav Kush Temple ponkuzhy",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 41,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Munneswaran Kunnu",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 42,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "07:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html"
+          },
+          {
+            "name": "Pakshipathalam",
+            "category": "Wildlife",
+            "distance_from_stay_km": 42,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "07:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pakshipathalam-wildlife-sanctuary-wayanad.html"
+          },
+          {
+            "name": "Boys Town",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 43,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "08:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-boys-town-farm-wayanad.html"
+          },
+          {
+            "name": "Tholpetty wild life sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 47,
+            "entry_fee_inr": 0,
+            "rating": 4,
+            "timing": [
+              "09:00-10:00",
+              "15:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html"
+          },
+          {
+            "name": "Tirunelli",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 48,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "05:30-12:30",
+              "17:00-19:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Neelarchalu",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 49,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html"
+          },
+          {
+            "name": "Papanasini River",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 49,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "05:30-12:30",
+              "17:00-19:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Brahmagiri",
+            "category": "Trekking",
+            "distance_from_stay_km": 50,
+            "entry_fee_inr": 0,
+            "rating": 4.5,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html"
+          },
+          {
+            "name": "Nagarhole wild life sanctuary",
+            "category": "Wildlife",
+            "distance_from_stay_km": 52,
+            "entry_fee_inr": 0,
+            "rating": 4.1,
+            "timing": [
+              "07:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html"
+          },
+          {
+            "name": "Irrupu falls ",
+            "category": "Waterfalls & Lakes",
+            "distance_from_stay_km": 60,
+            "entry_fee_inr": 0,
+            "rating": 4.3,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "top_rated": true
+      },
+      "output": {
+        "results": [
+          {
+            "name": "Ali's wayanadan natural honey",
+            "category": "Shopping",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": null,
+            "rating": 5,
+            "timing": [
+              "09:00-20:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html"
+          },
+          {
+            "name": "Gurukula Botanical Sanctuary",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.9,
+            "timing": [
+              "10:00-16:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+          },
+          {
+            "name": "Varampatta mosque",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 21,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Sultan's Batthery Valmiki Ashram",
+            "category": "Cultural & Historical",
+            "distance_from_stay_km": 32,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html"
+          },
+          {
+            "name": "Sita Lav Kush Temple ponkuzhy",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 41,
+            "entry_fee_inr": 0,
+            "rating": 4.8,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Chundail Tea Estate",
+            "category": "Cycling",
+            "distance_from_stay_km": 6,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
+          },
+          {
+            "name": "Pepper Farm",
+            "category": "Farm Visits",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "08:00-18:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+          },
+          {
+            "name": "Rippon",
+            "category": "Cycling",
+            "distance_from_stay_km": 10,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
+          },
+          {
+            "name": "Our lady of lourdes shrine, Pallikunnu",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 29,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Pulpally Sitadevi temple",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 30,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "09:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Tirunelli",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 48,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "05:30-12:30",
+              "17:00-19:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Papanasini River",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 49,
+            "entry_fee_inr": 0,
+            "rating": 4.7,
+            "timing": [
+              "05:30-12:30",
+              "17:00-19:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Chembra Peak",
+            "category": "Trekking",
+            "distance_from_stay_km": 17,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "05:00-13:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
+          },
+          {
+            "name": "Cheengeri Hill",
+            "category": "Trekking",
+            "distance_from_stay_km": 20,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "06:00-17:00"
+            ],
+            "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html"
+          },
+          {
+            "name": "Attamala View Point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 25,
+            "entry_fee_inr": 0,
+            "rating": 4.6,
+            "timing": [
+              "07:00-18:30"
+            ],
+            "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html"
+          }
+        ]
       }
     }
   ],
+  "default_response": {
+    "message": "Use one of the pre-computed inputs: category, max_distance_km (10 or 25), free_entry, top_rated.",
+    "categories": [
+      "plantation",
+      "waterfalls",
+      "museums",
+      "romantic",
+      "culthist",
+      "trucking",
+      "wildlife",
+      "farms",
+      "sporting",
+      "food",
+      "tribal",
+      "cycling",
+      "shopping",
+      "pilgrimage"
+    ]
+  },
   "metadata": {
-    "generated": "2025-01-16T00:00:00Z",
-    "version": "1.0.0",
-    "type": "tool_responses"
+    "generated": "2026-10-12",
+    "version": "2.0.0",
+    "type": "json",
+    "source": "generated from site data",
+    "generator": "scripts/generate-mcp.mjs"
   }
 }
