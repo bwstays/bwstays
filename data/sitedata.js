@@ -2,7 +2,7 @@ const siteData = {
   plantation: [
     {
       id: 80,
-      name: "Peria tea plantation",
+      name: "Periya tea plantation",
       description: "Lush greenery and tea plantations..",
       image: [
         "https://www.bwstays.com/assets/img/plantation/bw-periya-estate-wyanad.webp",
@@ -167,7 +167,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "41",
+      distance: "25",
       transport: "Public",
       rating: "4.2",
       hrs: "2",
@@ -582,7 +582,7 @@ const siteData = {
   museums: [
     {
       id: 52,
-      name: "Gandhi Museaum",
+      name: "Gandhi Museum",
       description: "Gandhi Museaum.",
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-stays-kalpetta-gandhi-museum.webp",
@@ -933,7 +933,7 @@ const siteData = {
 
     {
       id: 39,
-      name: "Karland Lake",
+      name: "Karlad Lake",
       description:
         "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
       image: [
@@ -948,7 +948,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "15",
+      distance: "21",
       transport: "Public",
       rating: "4.1",
       hrs: "2",
@@ -1034,7 +1034,7 @@ const siteData = {
     },
     {
       id: 45,
-      name: "Banasurasagar Dam",
+      name: "Banasura Sagar Dam",
       description:
         "Opt for a speed or pedal boat to have an enthralling experience of the stupendous landscapes",
       image: [
@@ -1244,7 +1244,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "19",
+      distance: "26",
       latlong: "11.636687345789426, 76.20460141779273",
       map: "https://maps.app.goo.gl/5MyVymApv9TRyowB9",
       hrs: "2",
@@ -1539,7 +1539,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "21",
+      distance: "26",
       latlong: "11.4967237, 76.1051083",
       map: "https://maps.app.goo.gl/NzMMtmVJKBeWaHSJ7",
       transport: "Public",
@@ -2013,7 +2013,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "33",
+      distance: "40",
       transport: "Public",
       latlong: "11.821667, 76.092222",
       map: "https://maps.app.goo.gl/V593gUux4rqrEqWaA",
@@ -2234,7 +2234,7 @@ const siteData = {
     },
     {
       id: 21,
-      name: "Edakal Caves",
+      name: "Edakkal Caves",
       description:
         "Temple associated with the epic Ramayana, located in a serene setting.",
       image: [
@@ -2247,7 +2247,7 @@ const siteData = {
       seasontovisit: [
         "Summer (November-March)",
       ],
-      distance: "4",
+      distance: "28",
       transport: "Public",
       latlong: "11.6268407, 76.234269",
       map: "https://maps.app.goo.gl/yBs8PRhJEea7MJt8A",
@@ -2339,7 +2339,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "4",
+      distance: "15",
       transport: "Public",
       rating: "4.2",
       hrs: "2",
@@ -2388,7 +2388,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "24",
+      distance: "38",
       transport: "Public",
       latlong: "11.671820900367546, 76.3688581955536",
       map: "https://maps.app.goo.gl/DLq8eRuT7tc7nQWE9",
@@ -2541,7 +2541,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "47",
+      distance: "54.5",
       transport: "Public",
       latlong: "11.94436067583858, 76.0601520539344",
       map: "https://maps.app.goo.gl/Z9PqkSnB5K9VpF1z8",
@@ -3408,7 +3408,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "48",
+      distance: "64",
       transport: "Public",
       rating: "4.7",
       hrs: "2",
@@ -3489,7 +3489,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "7",
+      distance: "20",
       transport: "Public",
       latlong: "11.571875045855256, 76.08657265424115",
       map: "https://maps.app.goo.gl/Uv81sPamq88kYvpZ9",
@@ -3613,7 +3613,7 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "29",
+      distance: "14",
       transport: "Public",
       rating: "4.7",
       hrs: "2",
