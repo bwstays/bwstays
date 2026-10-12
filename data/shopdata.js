@@ -2,7 +2,7 @@ const shopdata = {
   honey: [
     {
       id: 1,
-      name: "Peria tea plantation",
+      name: "Periya tea plantation",
       description: "Lush greenery and tea plantations..",
       image: [
         "https://www.bwstays.com/assets/img/plantation/bw-periya-estate-wyanad.webp",
@@ -582,7 +582,7 @@ const shopdata = {
   spices: [
     {
       id: 14,
-      name: "Gandhi Museaum",
+      name: "Gandhi Museum",
       description: "Gandhi Museaum.",
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-stays-kalpetta-gandhi-museum.webp",
