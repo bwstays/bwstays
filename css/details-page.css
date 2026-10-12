@@ -7609,3 +7609,493 @@ button.faq-question .faq-question-text {
     padding-top: 6rem;
   }
 }
+
+/* Header widgets: weather and currency are the same fixed size whatever the data
+   (up to "-100", a long condition, or "1,234.56 INR"); long text is truncated. */
+.widgets-container {
+  gap: 10px;
+  max-width: none;
+  padding: 10px;
+}
+.widgets-container .weather-widget,
+.widgets-container .currency-converter-widget {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 124px;
+  min-width: 124px;
+  max-width: 124px;
+  height: 100px;
+  min-height: 100px;
+  padding: 8px;
+  overflow: hidden;
+  border-radius: 10px;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+.widgets-container .weather-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.widgets-container .weather-location,
+.widgets-container .weather-condition,
+.widgets-container .weather-high-low,
+.widgets-container .conv-label,
+.widgets-container .conv-value {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.widgets-container .weather-location {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.widgets-container .weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+.widgets-container .weather-icon-section {
+  flex: 0 0 auto;
+  line-height: 0;
+}
+.widgets-container .weather-icon {
+  width: 30px;
+  height: 30px;
+}
+.widgets-container .weather-temp {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+.widgets-container .temp-unit {
+  font-size: 0.6em;
+  vertical-align: top;
+}
+.widgets-container .weather-condition {
+  margin: 0;
+  font-size: 10.5px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.widgets-container .weather-high-low {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.2;
+  opacity: 0.9;
+}
+.widgets-container .currency-converter-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.widgets-container .currency-top-section,
+.widgets-container .currency-main {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+.widgets-container .currency-icon-section {
+  flex: 0 0 auto;
+  line-height: 0;
+}
+.widgets-container .currency-icon {
+  width: 30px;
+  height: 30px;
+}
+.widgets-container .currency-selection {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.widgets-container .currency-label {
+  display: none;
+}
+.widgets-container .currency-select {
+  width: 100%;
+  height: 26px;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 1;
+}
+.widgets-container .currency-bottom-section {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.widgets-container .conversion-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 0;
+  font-size: 10.5px;
+  line-height: 1.2;
+}
+.widgets-container .conv-label {
+  opacity: 0.85;
+}
+.widgets-container .conv-value {
+  font-size: 14px;
+  font-weight: 700;
+}
+@media (max-width: 576px) {
+  .widgets-container {
+    max-width: none;
+    gap: 10px;
+  }
+}
+
+/* Terms page: the open/close arrow uses the site's button colour instead of black */
+.legal-card details > summary {
+  color: #64a19d;
+}
+.legal-card details > summary::marker {
+  color: #64a19d;
+}
+.legal-card details > summary::-webkit-details-marker {
+  color: #64a19d;
+}
+.scrollable-text details > summary {
+  color: #64a19d;
+}
+
+/* Currency card: same teal card as the weather card, with a full-width readable dropdown */
+.widgets-container .currency-converter-widget {
+  background: linear-gradient(180deg, #64a19d 0%, #64a19d 100%);
+}
+.widgets-container .currency-top-section,
+.widgets-container .currency-bottom-section,
+.widgets-container .conversion-result {
+  width: auto;
+  background: transparent;
+}
+.widgets-container .currency-icon-section {
+  width: 30px;
+}
+.widgets-container .currency-selection {
+  display: block;
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+}
+.widgets-container .currency-select {
+  width: 100%;
+  min-width: 0;
+  padding: 0 4px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2c2c2e;
+}
+.widgets-container .conversion-text,
+.widgets-container .conv-label,
+.widgets-container .conv-value {
+  color: #fff;
+}
+
+/* beats the older select#fromCurrency id rule (8px padding clipped the text) */
+.widgets-container select#fromCurrency.currency-select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 26px;
+  padding: 0 18px 0 6px;
+  border: 0;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.95);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c2c2e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 12px;
+  color: #2c2c2e;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+/* Get in touch / About us / Locate us: tighter spacing, calmer type, aligned columns */
+#testimonial.testimonial-section,
+#signup.signup-section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+#testimonial h2,
+#signup h2,
+.footer > h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+}
+#contact-divider-2,
+#contact-divider-3,
+#contact-divider-4,
+#contact-divider-5 {
+  margin-bottom: 1.25rem !important;
+}
+#testimonial p,
+#signup p,
+.footer p,
+.footer h5 {
+  letter-spacing: 0.02em;
+}
+
+/* contact: the card lines up with the top of the form and is compact */
+#contact-form-div {
+  align-items: flex-start;
+}
+#contact-form-div > .col-md-6.d-flex {
+  align-items: flex-start !important;
+}
+#contact-card .card-body {
+  padding: 1.25rem 1.5rem !important;
+}
+#contact-card h3 {
+  margin-bottom: 0.75rem !important;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+}
+#contact-card .contact-card-divider {
+  margin-bottom: 1rem !important;
+}
+#contact-card .mb-4 {
+  margin-bottom: 0.9rem !important;
+}
+#contact-card .h5 {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+#contact-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* about us */
+#signup h3.h4 {
+  margin-bottom: 0.6rem !important;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+#signup .contact-card-divider {
+  margin-bottom: 1rem !important;
+}
+#feature-list li {
+  margin-bottom: 0.9rem !important;
+}
+#feature-list .feature-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+#feature-list .feature-description {
+  margin: 0.15rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+#signup .reviews-container {
+  padding: 1rem 1.25rem;
+}
+
+/* locate us */
+.footer {
+  padding-top: 2.5rem;
+  padding-bottom: 1.25rem;
+}
+.footer > p.text-white {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+.footer h4 {
+  margin-bottom: 0.6rem !important;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+.footer .contact-card-divider {
+  margin-bottom: 1rem !important;
+}
+.footer .feature-item {
+  margin-bottom: 0.9rem !important;
+}
+.footer .feature-item h5 {
+  margin-bottom: 0.15rem !important;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.footer .feature-item p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.footer .dir-map {
+  height: 260px;
+}
+.footer .footer-row {
+  margin-top: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  #testimonial.testimonial-section,
+  #signup.signup-section {
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+  #testimonial h2,
+  #signup h2,
+  .footer > h3 {
+    font-size: 1.5rem;
+  }
+  #contact-form-div > .col-md-6 {
+    margin-bottom: 1rem;
+  }
+  .footer {
+    padding-top: 2rem;
+  }
+}
+
+/* desktop: the contact card matches the form's height with its content centred */
+@media (min-width: 768px) {
+  #contact-form-div > .col-md-6.d-flex {
+    align-items: stretch !important;
+  }
+  #contact-card {
+    height: auto;
+  }
+  #contact-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* phones: full-width fields, side padding, left-aligned feature lists */
+@media (max-width: 767.98px) {
+  #contact-form-div,
+  #signup .row,
+  .footer .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #testimonial .container,
+  #signup .container,
+  .footer .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #contact-form-div > [class*="col-"],
+  #signup .row > [class*="col-"],
+  .footer .row > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #contact-form .form-control,
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  #contact-form textarea {
+    width: 100% !important;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  #contact-form .row > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #contact-form .captcha-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  #contact-form .captcha-container .captcha-question {
+    flex: 1 1 100%;
+    margin-right: 0 !important;
+  }
+  #contact-form .captcha-container input {
+    flex: 1 1 60%;
+    width: auto !important;
+  }
+  .footer .col-md-6,
+  .footer .col-md-6 h4,
+  .footer .col-md-6 p {
+    text-align: left;
+  }
+  .footer .feature-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footer .feature-item .checkbox-container {
+    flex: 0 0 auto;
+    margin-right: 0.75rem;
+  }
+  .footer > h3,
+  .footer > p.text-white {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* phones: override the older flex/zero-padding rules that squeezed these sections */
+@media (max-width: 767.98px) {
+  #testimonial.testimonial-section .container,
+  #signup.signup-section .container,
+  footer.footer .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  #contact-form .row > [class*="col-"] {
+    display: block !important;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  #contact-form .form-group {
+    width: 100%;
+  }
+  #contact-form .form-group .form-control {
+    display: block;
+    width: 100% !important;
+  }
+  footer.footer .col-md-6 .feature-item.d-flex {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  footer.footer .col-md-6 .feature-item > div:last-child {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left !important;
+  }
+}
+
+/* Phones: Bootstrap rows use margin 0 -15px, so their container needs 15px of padding.
+   Shrunk container padding (12px / 4px / 0) pushed rows past the screen edge and made pages pan sideways. */
+@media (max-width: 767.98px) {
+  body .container:not(.p-0):not(.px-0),
+  body .container-fluid:not(.p-0):not(.px-0) {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* the email field no longer relies on an absolute-position/left:-20px hack */
+#contact-form #inputEmail4.form-control {
+  position: static !important;
+  left: auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+  #contact-form .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact-form-div {
+    align-items: stretch !important;
+  }
+  #contact-form-div > .col-md-6.d-flex > #contact-card {
+    align-self: stretch;
+  }
+}
