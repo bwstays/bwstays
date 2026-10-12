@@ -7,7 +7,7 @@
  *  - every .js/.mjs file parses (an earlier "cleanup" commit once left
  *    js/worker.js and js/pdfgen.js unparseable)
  *  - every .json file parses
- *  - every JSON-LD block in every HTML page parses
+ *  - every JSON-LD block and every inline script in every HTML page parses
  *  - no HTML page repeats an element id
  *  - the generated MCP files are up to date
  *
@@ -17,6 +17,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -62,6 +63,20 @@ for (const file of walk(ROOT)) {
         JSON.parse(m[1]);
       } catch (e) {
         problems.push(`${r}: invalid JSON-LD (${e.message.slice(0, 60)})`);
+      }
+    }
+    // inline scripts: a stripped log statement once left `err => )` and silently
+    // disabled the whole block on three pages
+    for (const m of s.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
+      const attrs = m[1];
+      if (/\bsrc\s*=/.test(attrs) || !m[2].trim()) continue;
+      const type = (attrs.match(/type\s*=\s*["']([^"']+)/i) ?? [])[1]?.toLowerCase();
+      if (type && !/^(text|application)\/javascript$/.test(type)) continue;
+      try {
+        new vm.Script(m[2]);
+      } catch (e) {
+        const line = s.slice(0, m.index).split('\n').length;
+        problems.push(`${r}: inline script near line ${line}: ${e.message}`);
       }
     }
     const body = s
