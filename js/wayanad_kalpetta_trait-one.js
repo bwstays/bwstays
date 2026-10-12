@@ -62,45 +62,27 @@ var bwlocations = [
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm">Pepper Farm</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-pepper-farm-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-pepper-farm-wayanad.webp" width="300" ></a>', 11.69283527987838, 76.1911296389339, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ['<h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Honey Museaum">Honey Museaum</a></h6><a target="_blank" href="'+iconURLPrefix+'bw-honey-museum-wayanad.html" title="Pepper Farm"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"   src="'+iconURLPrefix+'assets/img/farm/bw-stays-honey-museum-wayanad.webp" width="300" ></a>',  11.5375175, 76.0434972, 2, iconURLPrefix+"assets/img/logo/pin-drop.png"],
 ];
-var map = new google.maps.Map(document.getElementById('mapall'), {
-  zoom: 9.999,
-  disableDefaultUI: true,
-  zoomControl: true,
-  streetViewControl: true,
-  fullscreenControl: true,
-  center: new google.maps.LatLng(11.542442317568533, 76.02721621504702),
-  mapId: 'f03033acde18bc0d'
-});
-var infowindow = new google.maps.InfoWindow();
-var  i;
-var markers = [];
-for (i = 0; i < bwlocations.length; i++) {
- new google.maps.DirectionsService().route({
-      origin: new google.maps.LatLng( 11.605943, 76.083429), 
-      destination: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
-      travelMode: google.maps.TravelMode.DRIVING,
-    }, (response, status) => {
-        if (status === "OK") {
-          new google.maps.DirectionsRenderer({
-						  map: map,
-						  suppressMarkers: true,
-						  polylineOptions: {
-							strokeColor: '#4285F4',
-							strokeWeight: 4,
-							strokeOpacity: 0.8
-						  }
-						}).setDirections(response);
-        }
-  })
-  marker = new google.maps.Marker({
-    position: new google.maps.LatLng(bwlocations[i][1], bwlocations[i][2]),
-    icon: bwlocations[i][4],
-    map: map
+// Trails map: OpenStreetMap tiles via Leaflet (no Google Maps API key or billing needed).
+var STAY_POINT = [11.605787, 76.083311];
+var mapEl = document.getElementById('mapall');
+if (mapEl && typeof L !== 'undefined') {
+  var map = L.map(mapEl).setView([11.57, 76.1], 10);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  var pin = L.icon({ iconUrl: iconURLPrefix + 'assets/img/logo/pin.webp', iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -28] });
+  var home = L.marker(STAY_POINT, {
+    icon: L.icon({ iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png', iconSize: [32, 32], iconAnchor: [16, 32] }),
+    title: 'Black and White Stays'
+  }).addTo(map);
+  home.bindPopup('<strong>Black and White Stays</strong><br>Kalpetta, Wayanad');
+  var bounds = [STAY_POINT];
+  bwlocations.forEach(function (loc) {
+    var lat = Number(loc[1]);
+    var lng = Number(loc[2]);
+    if (!isFinite(lat) || !isFinite(lng)) return;
+    bounds.push([lat, lng]);
+    L.marker([lat, lng], { icon: pin }).addTo(map).bindPopup(loc[0], { maxWidth: 280 });
   });
-  google.maps.event.addListener(marker, 'click', (function (marker, i) {
-    return function () {
-      infowindow.setContent(bwlocations[i][0]);
-      infowindow.open(map, marker);
-    }
-  })(marker, i));
+  if (bounds.length > 1) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 11 });
 }
