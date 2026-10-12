@@ -1,31 +1,35 @@
-	          function generateCaptcha() {
+	          // The booking page has two captcha widgets (reservation and contact
+	          // forms) that share element ids, so every lookup is scoped to its form.
+	          function bwCaptchaEl(form, id) {
+	              return form.querySelector('#' + id);
+	          }
+	          function bwGenerateCaptcha(form) {
 	              const num1 = Math.floor(Math.random() * 10) + 1;
 	              const num2 = Math.floor(Math.random() * 10) + 1;
-	              document.getElementById('captcha-num1').textContent = num1;
-	              document.getElementById('captcha-num2').textContent = num2;
-	              document.getElementById('captcha-answer').value = '';
-	              clearCaptchaError();
+	              bwCaptchaEl(form, 'captcha-num1').textContent = num1;
+	              bwCaptchaEl(form, 'captcha-num2').textContent = num2;
+	              bwCaptchaEl(form, 'captcha-answer').value = '';
+	              bwClearCaptchaError(form);
 	          }
-	          function showCaptchaError(message) {
-	              const errorElement = document.getElementById('captcha-error');
+	          function bwShowCaptchaError(form, message) {
+	              const errorElement = bwCaptchaEl(form, 'captcha-error');
 	              if (errorElement) {
 	                  errorElement.textContent = message;
 	                  errorElement.style.display = 'block';
 	              }
 	          }
-	          function clearCaptchaError() {
-	              const errorElement = document.getElementById('captcha-error');
+	          function bwClearCaptchaError(form) {
+	              const errorElement = bwCaptchaEl(form, 'captcha-error');
 	              if (errorElement) {
 	                  errorElement.style.display = 'none';
 	                  errorElement.textContent = '';
 	              }
 	          }
-	          function validateCaptcha() {
-	              const num1 = parseInt(document.getElementById('captcha-num1').textContent);
-	              const num2 = parseInt(document.getElementById('captcha-num2').textContent);
-	              const userAnswer = parseInt(document.getElementById('captcha-answer').value);
-	              const correctAnswer = num1 + num2;
-	              return userAnswer === correctAnswer;
+	          function bwValidateCaptcha(form) {
+	              const num1 = parseInt(bwCaptchaEl(form, 'captcha-num1').textContent, 10);
+	              const num2 = parseInt(bwCaptchaEl(form, 'captcha-num2').textContent, 10);
+	              const userAnswer = parseInt(bwCaptchaEl(form, 'captcha-answer').value, 10);
+	              return userAnswer === num1 + num2;
 	          }
 const testCardData = {
     test: [
@@ -128,36 +132,25 @@ document.addEventListener('DOMContentLoaded', renderTestimonial);
 			}
       });
 	          document.addEventListener('DOMContentLoaded', function() {
-	              generateCaptcha();
-	              document.getElementById('refresh-captcha').addEventListener('click', function() {
-	                  generateCaptcha();
+	              ['myForm', 'contact-form'].forEach(function(formId) {
+	                  const form = document.getElementById(formId);
+	                  if (!form || !bwCaptchaEl(form, 'captcha-answer')) return;
+	                  bwGenerateCaptcha(form);
+	                  const refresh = bwCaptchaEl(form, 'refresh-captcha');
+	                  if (refresh) {
+	                      refresh.addEventListener('click', function() {
+	                          bwGenerateCaptcha(form);
+	                      });
+	                  }
+	                  bwCaptchaEl(form, 'captcha-answer').addEventListener('input', function() {
+	                      bwClearCaptchaError(form);
+	                  });
+	                  form.addEventListener('submit', function(e) {
+	                      if (!bwValidateCaptcha(form)) {
+	                          e.preventDefault();
+	                          bwShowCaptchaError(form, 'Please enter the correct answer for the security verification.');
+	                          bwCaptchaEl(form, 'captcha-answer').focus();
+	                      }
+	                  });
 	              });
-	              const bookingForm = document.getElementById('myForm');
-	              const contactForm = document.getElementById('contact-form');
-	              if (bookingForm) {
-	                  bookingForm.addEventListener('submit', function(e) {
-	                      if (!validateCaptcha()) {
-	                          e.preventDefault();
-	                          showCaptchaError('Please enter the correct answer for the security verification.');
-	                          document.getElementById('captcha-answer').focus();
-	                          return false;
-	                      }
-	                  });
-	              }
-	              if (contactForm) {
-	                  contactForm.addEventListener('submit', function(e) {
-	                      if (!validateCaptcha()) {
-	                          e.preventDefault();
-	                          showCaptchaError('Please enter the correct answer for the security verification.');
-	                          document.getElementById('captcha-answer').focus();
-	                          return false;
-	                      }
-	                  });
-	              }
-	              const captchaInput = document.getElementById('captcha-answer');
-	              if (captchaInput) {
-	                  captchaInput.addEventListener('input', function() {
-	                      clearCaptchaError();
-	                  });
-	              }
-        });
+	          });

@@ -17,21 +17,27 @@ class StaticMCPClient {
             const resourceName = uri.replace('resource://', '');
             const response = await fetch(`${this.baseUrl}/resources/${resourceName}.json`);
             const data = await response.json();
-            return data.contents[0].text;
+            return typeof data.content === 'string' ? data.content : JSON.stringify(data.content, null, 2);
         } catch (error) {
-            return 'Sorry, I couldn\'t find that information.';
+            return "Sorry, I couldn't find that information.";
         }
     }
     async callTool(name, args) {
         try {
             if (name === 'search') {
                 const query = args.query.toLowerCase();
-                let searchType = 'attractions';
-                if (query.includes('attractions')) searchType = 'attractions';
-                if (query.includes('about') || query.includes('me')) searchType = 'about';
-                const response = await fetch(`${this.baseUrl}/tools/search/${searchType}.json`);
+                const response = await fetch(`${this.baseUrl}/tools/search/attractions.json`);
                 const data = await response.json();
-                return data.content[0].text;
+                const match = data.responses.find((r) => {
+                    const category = r.input.category;
+                    return category && (query.includes(category) || query.includes(String(r.output.label).toLowerCase()));
+                });
+                if (!match) {
+                    return `Try one of these categories: ${data.default_response.categories.join(', ')}.`;
+                }
+                return match.output.results
+                    .map((a) => `${a.name} (${a.distance_from_stay_km ?? '?'} km)`)
+                    .join('\n');
             }
         } catch (error) {
             return 'Sorry, I encountered an error processing your request.';

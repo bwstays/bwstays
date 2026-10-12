@@ -1,100 +1,104 @@
+const DEFAULT_ORIGINS = ['https://www.bwstays.com', 'https://bwstays.com'];
+const DEFAULT_MODEL = 'openai/gpt-oss-120b';
+const MAX_TOKENS_LIMIT = 1000;
+const MAX_MESSAGES = 30;
+const MAX_BODY_CHARS = 60000;
+
 export default {
   async fetch(request, env) {
-    return await handleRequest(request, env).catch(
-      (err) => new Response(JSON.stringify({ error: err.message }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' }
-      })
-    );
+    const headers = corsHeaders(request, env);
+    try {
+      return await handleRequest(request, env, headers);
+    } catch (err) {
+      return json({ error: 'Internal server error' }, 500, headers);
+    }
   },
 };
-async function handleRequest(request, env) {
+
+async function handleRequest(request, env, headers) {
   const url = new URL(request.url);
   if (request.method === 'OPTIONS') {
-    return handleCORS();
+    return new Response(null, { status: 204, headers });
   }
   if (request.method !== 'POST' || url.pathname !== '/chat') {
-    return new Response('Not Found', { status: 404 });
+    return json({ error: 'Not Found' }, 404, headers);
+  }
+  if (!headers['Access-Control-Allow-Origin']) {
+    return json({ error: 'Origin not allowed' }, 403, headers);
   }
   if (!env.LLMTOKEN) {
-    return new Response(JSON.stringify({ error: 'API token not configured' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' }
-    });
+    return json({ error: 'API token not configured' }, 500, headers);
   }
+
+  const raw = await request.text();
+  if (raw.length > MAX_BODY_CHARS) {
+    return json({ error: 'Request too large' }, 413, headers);
+  }
+  let body;
   try {
-    const requestData = await request.json();
-    if (!requestData.messages || !Array.isArray(requestData.messages)) {
-      return new Response(JSON.stringify({ error: 'Invalid request: messages array required' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' }
-      });
-    }
-    const groqRequest = {
-      model: requestData.model || 'openai/gpt-oss-120b',
-      messages: requestData.messages,
-      temperature: requestData.temperature || 0.7,
-      max_tokens: requestData.max_tokens || 1000,
-      stream: false 
-    };
-    const groqResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${env.LLMTOKEN}`
-      },
-      body: JSON.stringify(groqRequest)
-    });
-    if (!groqResponse.ok) {
-      const errorText = await groqResponse.text();
-      return new Response(JSON.stringify({
-        error: `LLM API error: ${groqResponse.status}`,
-        details: errorText
-      }), {
-        status: groqResponse.status,
-        headers: {
-          'Content-Type': 'application/json',
-          ...getCORSHeaders()
-        }
-      });
-    }
-    const responseData = await groqResponse.json();
-    return new Response(JSON.stringify(responseData), {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        ...getCORSHeaders()
-      }
-    });
-  } catch (error) {
-    return new Response(JSON.stringify({
-      error: 'Internal server error',
-      message: error.message
-    }), {
-      status: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        ...getCORSHeaders()
-      }
-    });
+    body = JSON.parse(raw);
+  } catch {
+    return json({ error: 'Invalid JSON' }, 400, headers);
   }
-}
-function handleCORS() {
-  return new Response(null, {
-    status: 200,
-    headers: getCORSHeaders()
+  if (!Array.isArray(body.messages) || body.messages.length === 0 || body.messages.length > MAX_MESSAGES) {
+    return json({ error: 'Invalid request: messages array required' }, 400, headers);
+  }
+  const messages = body.messages.map((m) => ({
+    role: ['system', 'user', 'assistant'].includes(m?.role) ? m.role : 'user',
+    content: typeof m?.content === 'string' ? m.content : '',
+  }));
+
+  // The client only chooses sampling knobs; the model and ceiling are ours so
+  // the endpoint cannot be used as a general-purpose proxy to the LLM account.
+  const temperature = Number.isFinite(body.temperature) ? Math.min(Math.max(body.temperature, 0), 1.5) : 0.7;
+  const maxTokens = Number.isFinite(body.max_tokens)
+    ? Math.min(Math.max(Math.trunc(body.max_tokens), 1), MAX_TOKENS_LIMIT)
+    : MAX_TOKENS_LIMIT;
+
+  const upstream = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${env.LLMTOKEN}`,
+    },
+    body: JSON.stringify({
+      model: env.LLM_MODEL || DEFAULT_MODEL,
+      messages,
+      temperature,
+      max_tokens: maxTokens,
+      stream: false,
+    }),
   });
+
+  if (!upstream.ok) {
+    // Upstream error bodies can echo request content; do not forward them.
+    return json({ error: `LLM API error: ${upstream.status}` }, upstream.status === 429 ? 429 : 502, headers);
+  }
+  return json(await upstream.json(), 200, headers);
 }
-function getCORSHeaders() {
-  return {
-    'Access-Control-Allow-Origin': '*', 
+
+function corsHeaders(request, env) {
+  const allowed = (env.ALLOWED_ORIGINS || '')
+    .split(',')
+    .map((o) => o.trim())
+    .filter(Boolean);
+  const origins = allowed.length ? allowed : DEFAULT_ORIGINS;
+  const origin = request.headers.get('Origin');
+  const headers = {
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    'Access-Control-Max-Age': '86400'
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Max-Age': '86400',
+    Vary: 'Origin',
   };
+  if (origin && origins.includes(origin)) {
+    headers['Access-Control-Allow-Origin'] = origin;
+  }
+  return headers;
 }
-function logRequest(request) {
-  ),
-    timestamp: new Date().toISOString()
+
+function json(data, status, headers) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { 'Content-Type': 'application/json', ...headers },
   });
 }
