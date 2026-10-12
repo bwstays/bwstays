@@ -7449,3 +7449,52 @@ select#fromCurrency {
     scrollbar-width: thin;
   }
 }
+
+/* FAQ accordion (buttons, search, no pagination) */
+button.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+button.faq-question .faq-question-text {
+  padding-right: 1rem;
+}
+.faq-answer:not(.show) {
+  visibility: hidden;
+}
+.faq-search-box {
+  max-width: 560px;
+  margin: 0 auto 1.25rem;
+}
+.faq-search {
+  border-radius: 999px;
+  padding-left: 1.1rem;
+}
+.faq-count {
+  margin: 0.4rem 0 0;
+  color: #6c757d;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.faq-empty {
+  color: #6c757d;
+}
+
+/* Map pages: more air below the nav and between the map and the contact block (#22) */
+.masthead.map-page {
+  padding-top: 8rem;
+  padding-bottom: 4.5rem;
+}
+.masthead.map-page + .testimonial-section {
+  margin-top: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .masthead.map-page {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+}
