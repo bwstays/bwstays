@@ -255,6 +255,33 @@ const shops = Object.entries(shopdata).flatMap(([kind, rows]) =>
   })),
 );
 
+// ---------------------------------------------------------------- food and distances
+const foodFile = JSON.parse(read('data/food-places.json'));
+const foodPlaces = foodFile.places.map((p) => ({
+  name: p.name,
+  kind: p.kind.replace('shop:', ''),
+  cuisine: p.cuisine,
+  lat: p.lat,
+  lon: p.lon,
+  address: p.address,
+  phone: p.phone,
+  website: p.website,
+  opening_hours: p.opening_hours,
+  vegetarian: p.vegetarian,
+  takeaway: p.takeaway,
+  delivery: p.delivery,
+  from_stay_road_km: p.from_stay_road_km,
+  position_unverified: p.unverified_position === true,
+  osm_url: p.osm_url,
+}));
+const placeIds = Object.keys(locations.names).map(Number).sort((a, b) => a - b);
+// ids are unique across data/sitedata.js; places excluded by the fact-check are not offered as neighbours
+const excludedIds = new Set(
+  Object.entries(reviewEntries).filter(([, v]) => v.exclude).map(([k]) => Number(k.split('-').pop())),
+);
+const kmBetween = (a, b) =>
+  a === b ? 0 : excludedIds.has(a) || excludedIds.has(b) ? null : locations.distances[a]?.[b - 1] || null;
+
 // ---------------------------------------------------------------- availability
 const pad = (n) => String(n).padStart(2, '0');
 const isoDate = (s) => {
@@ -414,6 +441,36 @@ const resources = {
     },
     source: 'index.html, data/sitedata.js, data/shopdata.js, data/nearbylocationsdata.js',
   },
+  food: {
+    description: 'Places to eat and drink in Wayanad (OpenStreetMap data), with driving distance from the stay',
+    content: {
+      attribution: foodFile.meta.attribution,
+      generated: foodFile.meta.generated,
+      count: foodFile.places.length,
+      completeness: foodFile.meta.completeness,
+      how_to_improve: foodFile.meta.how_to_improve,
+      note: 'Hours, phone and cuisine are null where not recorded; they are not guessed.',
+      places: foodPlaces,
+    },
+    source: 'data/food-places.json',
+  },
+  distances: {
+    description: 'Driving distance in km between 90 Wayanad places (null = not computed)',
+    content: {
+      unit: 'km, fastest driving route on OpenStreetMap data, averaged over both directions, rounded',
+      attribution: 'Routing data (c) OpenStreetMap contributors, ODbL',
+      generated: locations.meta?.generated ?? null,
+      usage: 'matrix[i][j] is the distance from places[i] to places[j]; the matrix is symmetric.',
+      places: placeIds.map((id) => ({
+        id,
+        name: locations.names[id].trim(),
+        ...(excludedIds.has(id) ? { excluded: 'failed the web fact-check; see resources/attractions.json' } : {}),
+      })),
+      matrix: placeIds.map((a) => placeIds.map((b) => kmBetween(a, b))),
+      places_without_trusted_coordinates: locations.meta?.places_without_trusted_coordinates ?? [],
+    },
+    source: 'data/nearbylocationsdata.js',
+  },
   help: {
     description: 'Frequently asked questions shown on the site',
     content: { faq: faqData.map((f) => ({ question: f.question, answer: f.answer })) },
@@ -472,6 +529,56 @@ const tools = {
       ...properties.map((p) => ({ input: { id: p.id }, output: { results: [p] } })),
       { input: { pets: true }, output: { results: properties.filter((p) => p.pets_allowed) } },
     ],
+  },
+  'search/food': {
+    name: 'search_food',
+    description: 'Find places to eat near the stay by kind, diet or distance (pre-computed, OpenStreetMap data)',
+    responses: (() => {
+      const brief = (p) => ({
+        name: p.name,
+        kind: p.kind,
+        cuisine: p.cuisine,
+        from_stay_road_km: p.from_stay_road_km,
+        opening_hours: p.opening_hours,
+        phone: p.phone,
+        osm_url: p.osm_url,
+      });
+      const byDist = (a, b) => (a.from_stay_road_km ?? 1e9) - (b.from_stay_road_km ?? 1e9) || a.name.localeCompare(b.name);
+      const pick = (pred) => foodPlaces.filter(pred).sort(byDist).map(brief);
+      const out = [
+        { input: { max_distance_km: 1 }, output: { results: pick((p) => (p.from_stay_road_km ?? 1e9) <= 1) } },
+        { input: { max_distance_km: 3 }, output: { results: pick((p) => (p.from_stay_road_km ?? 1e9) <= 3) } },
+        { input: { vegetarian: true }, output: { results: pick((p) => p.vegetarian).slice(0, 40) } },
+        { input: { has_opening_hours: true }, output: { results: pick((p) => p.opening_hours).slice(0, 40) } },
+      ];
+      for (const kind of ['restaurant', 'cafe', 'bakery', 'fast_food']) {
+        out.push({ input: { kind }, output: { results: pick((p) => p.kind === kind).slice(0, 40) } });
+      }
+      return out;
+    })(),
+    default_response: {
+      message: 'Use max_distance_km (1 or 3), vegetarian, has_opening_hours, or kind (restaurant, cafe, bakery, fast_food).',
+      attribution: foodFile.meta.attribution,
+    },
+  },
+  'search/nearby': {
+    name: 'nearby_places',
+    description: 'The closest attractions to each place by driving distance (pre-computed)',
+    responses: placeIds
+      .filter((id) => placeIds.some((o) => o !== id && kmBetween(id, o)))
+      .map((id) => ({
+        input: { place_id: id, place: locations.names[id].trim() },
+        output: {
+          nearest: placeIds
+            .filter((o) => o !== id && kmBetween(id, o))
+            .map((o) => ({ id: o, name: locations.names[o].trim(), distance_km: kmBetween(id, o) }))
+            .sort((a, b) => a.distance_km - b.distance_km || a.name.localeCompare(b.name))
+            .slice(0, 8),
+        },
+      })),
+    default_response: {
+      message: 'Look up a place by id or exact name; the full matrix is in resources/distances.json.',
+    },
   },
   'booking/availability': {
     name: 'check_availability',
