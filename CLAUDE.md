@@ -188,3 +188,17 @@ Rules the generator follows:
 - The placeholder `stays` category in `data/sitedata.js` is never published.
 - Conflicts between pages (villa rate/capacity) are reported side by side with a note, not silently resolved.
 - No verified phone number is published on the site, so `phone` is `null` in the MCP output.
+
+## Refreshing the community data
+
+Both datasets are built from OpenStreetMap, so the site keeps working on free static hosting with no runtime API.
+
+```
+node scripts/build-distances.mjs   # data/nearbylocationsdata.js: driving km between places (OSRM)
+node scripts/build-food.mjs        # data/food-places.json + .csv: places to eat (Overpass + site list)
+node scripts/generate-mcp.mjs      # then regenerate the MCP files
+```
+
+- Missing opening hours, phones or cuisines are left null. The fix is to add them on OpenStreetMap (each place carries an `osm_edit_url`) and re-run the script.
+- Places whose coordinates cannot be trusted keep their historical distances or stay 0 (unknown); they are listed in `locations.meta`.
+- Attribution: data (c) OpenStreetMap contributors, ODbL.
