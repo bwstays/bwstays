@@ -292,3 +292,49 @@ a.text-primary:focus {
 .badge {
 		border: 1px solid #000000;
 }
+
+/* Accessibility: skip link, visible keyboard focus, reduced motion */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 2000;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 8px 0;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 0;
+  outline: 3px solid #8bc4c0;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #8bc4c0;
+  outline-offset: 2px;
+}
+main:focus {
+  outline: none;
+}
+#mainNav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
