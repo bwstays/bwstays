@@ -209,5 +209,6 @@ node scripts/generate-mcp.mjs      # then regenerate the MCP files
 node scripts/build-map-data.mjs      # data/map-places.json: all-locations map with category filters
 node scripts/build-search-index.mjs  # data/search-index.json: search.html (run generate-mcp first)
 node scripts/update-rates.mjs        # data/exchange-rates.json: dated fallback for the currency widget
+node scripts/build-booking-report.mjs # data/booking-reports.json from the booking calendar (reports page)
 node scripts/check.mjs               # syntax, JSON, JSON-LD, duplicate ids, MCP freshness (also runs in CI)
 ```
