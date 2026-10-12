@@ -30,16 +30,6 @@
         "distance_km": 4
       },
       {
-        "name": "Edakal Caves",
-        "category": "Trekking",
-        "distance_km": 4
-      },
-      {
-        "name": "Kolagapara",
-        "category": "Trekking",
-        "distance_km": 4
-      },
-      {
         "name": "Puliyarmala",
         "category": "Trekking",
         "distance_km": 4
@@ -55,11 +45,6 @@
         "distance_km": 6
       },
       {
-        "name": "Coffee Plantation",
-        "category": "Plantations",
-        "distance_km": 7
-      },
-      {
         "name": "Koottamundu Glass Temple Wayanad",
         "category": "Pilgrimage",
         "distance_km": 7
@@ -70,22 +55,37 @@
         "distance_km": 10
       },
       {
-        "name": "Bamboo Rafting",
-        "category": "Sporting",
-        "distance_km": 10
-      },
-      {
         "name": "Bevo Beverages ( Govt of Kerala )",
         "category": "Shopping",
         "distance_km": 10
       },
       {
-        "name": "Gurukula Botanical Sanctuary",
-        "category": "Farm Visits",
+        "name": "House Holds",
+        "category": "Shopping",
         "distance_km": 10
       },
       {
-        "name": "House Holds",
+        "name": "LocalCuisine",
+        "category": "Food",
+        "distance_km": 10
+      },
+      {
+        "name": "Muneeswaran Kunnu View point",
+        "category": "Romantic Spots & Viewpoints",
+        "distance_km": 10
+      },
+      {
+        "name": "Restaurants",
+        "category": "Food",
+        "distance_km": 10
+      },
+      {
+        "name": "Rippon",
+        "category": "Cycling",
+        "distance_km": 10
+      },
+      {
+        "name": "Spices",
         "category": "Shopping",
         "distance_km": 10
       }
@@ -97,10 +97,6 @@
         "kind": "honey",
         "description": "Expansive Coffee Plantation with guided tours and tasting sessions",
         "distance_from_stay_km": 7,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Mon",
         "rating": 4,
         "map_url": "https://maps.app.goo.gl/fAof2pmTRXKwC1GL9",
         "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
@@ -110,10 +106,6 @@
         "kind": "honey",
         "description": "L greenery and tea plantations near meppady",
         "distance_from_stay_km": 11,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.5,
         "map_url": "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
         "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
@@ -123,10 +115,6 @@
         "kind": "spices",
         "description": "Gandhi Museaum",
         "distance_from_stay_km": 12,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
         "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
@@ -136,10 +124,6 @@
         "kind": "spices",
         "description": "Varities of honey displayed to taste and purchase",
         "distance_from_stay_km": 12,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.5,
         "map_url": "https://maps.app.goo.gl/8x4fQb5Cr9RBCFr17",
         "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
@@ -149,10 +133,6 @@
         "kind": "spices",
         "description": "Kungichira Museum & Chira",
         "distance_from_stay_km": 12,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
         "page_url": null
@@ -162,10 +142,6 @@
         "kind": "spices",
         "description": "Displays tribal heritage and ancient artifacts from the region",
         "distance_from_stay_km": 12,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/E3GRWsdvjmpZUY7x5",
         "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html"
@@ -175,10 +151,6 @@
         "kind": "tourist",
         "description": "Karapuzha Dam",
         "distance_from_stay_km": 16,
-        "timing": [
-          "09:00-18:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
         "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
@@ -188,10 +160,6 @@
         "kind": "tourist",
         "description": "Mullanpara View Point",
         "distance_from_stay_km": 16,
-        "timing": [
-          "09:00-18:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/Zcj6Xnc7ZHcwFusx7",
         "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
@@ -201,10 +169,6 @@
         "kind": "tribal",
         "description": "A picturesque waterfall surrounded by lush greenery and coffee plantations",
         "distance_from_stay_km": 18,
-        "timing": [
-          "09:00-16:30"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.1,
         "map_url": "https://maps.app.goo.gl/UkTgsP4fZoRngCyBA",
         "page_url": "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html"
@@ -214,10 +178,6 @@
         "kind": "spices",
         "description": "Showcases the rich cultural heritage and tribal artifacts of Wayanad Pookonth House, Kuthirivallu",
         "distance_from_stay_km": 21,
-        "timing": [
-          "09:00-18:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 3.9,
         "map_url": "https://maps.app.goo.gl/1E9kADRsBfxLQfs69",
         "page_url": "https://www.bwstays.com/bw-folklore-museum-wayanad.html"
@@ -227,10 +187,6 @@
         "kind": "tribal",
         "description": "Kappikalam waterfalls, perfect for trekking and rock climbing",
         "distance_from_stay_km": 22,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.1,
         "map_url": "https://maps.app.goo.gl/fzrjabJfK5GG7CgD9",
         "page_url": "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html"
@@ -240,10 +196,6 @@
         "kind": "tribal",
         "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
         "distance_from_stay_km": 23,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4,
         "map_url": "https://maps.app.goo.gl/WTkrrH73W95w23Xm8",
         "page_url": "https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html"
@@ -253,10 +205,6 @@
         "kind": "tribal",
         "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
         "distance_from_stay_km": 23,
-        "timing": [
-          "08:00-16:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.2,
         "map_url": "https://maps.app.goo.gl/qr1RZdxc5WMa5j71A",
         "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html"
@@ -266,10 +214,6 @@
         "kind": "tribal",
         "description": "Water fall down the Ghats of wayanad",
         "distance_from_stay_km": 31,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.4,
         "map_url": "https://maps.app.goo.gl/NK2gPWddyJeNDK7J8",
         "page_url": "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html"
@@ -279,10 +223,6 @@
         "kind": "tribal",
         "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
         "distance_from_stay_km": 32,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/Xi6e2aPFEjWFkHBi9",
         "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html"
@@ -292,10 +232,6 @@
         "kind": "tribal",
         "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
         "distance_from_stay_km": 34,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/z4pftdA2hc1Ea7Ny6",
         "page_url": "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html"
@@ -305,10 +241,6 @@
         "kind": "tribal",
         "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
         "distance_from_stay_km": 37,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/BLpuvUbHqgNC54up8",
         "page_url": "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html"
@@ -318,10 +250,6 @@
         "kind": "honey",
         "description": "Lush greenery and tea plantations",
         "distance_from_stay_km": 38,
-        "timing": [
-          "09:30-16:30"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.5,
         "map_url": "https://maps.app.goo.gl/eCpHa85un5L4d3WBA",
         "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html"
@@ -331,10 +259,6 @@
         "kind": "tribal",
         "description": "One of the largest and most spectacular waterfalls in Wayanad",
         "distance_from_stay_km": 41,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.2,
         "map_url": "https://maps.app.goo.gl/SvSDuShnpWmcceyg8",
         "page_url": "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html"
@@ -344,10 +268,6 @@
         "kind": "tribal",
         "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
         "distance_from_stay_km": 60,
-        "timing": [
-          "09:00-17:00"
-        ],
-        "weekly_holiday": "Sun",
         "rating": 4.3,
         "map_url": "https://maps.app.goo.gl/TeqhksyA3Xcttxh29",
         "page_url": "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html"
