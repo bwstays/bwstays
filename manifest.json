@@ -1,46 +1,23 @@
 {
-	"name": "Black and White Stays",
-	"short_name": "BWStays",
-	"description": "BWStays Villa Stays ",
-	"display": "standalone",
-    "background_color": "#000",
-    "theme_color": "#000",
-    "orientation": "portrait",
-    "start_url": "/",
-    "id": "/index.html",
-    "scope": "https:\/\/www.bwstays.com\/",
-	"icons": [
-		{
-			"src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
-			"type": "image/png",
-			"sizes": "41x41",
-			"purpose": "any"
-		},
-		{
-		  "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
-		  "sizes": "512x512",
-		  "type": "image/png",
-		  "purpose": "maskable"
-		}
-
-	],
-    "screenshots" : [
-                  {
-                    "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
-                    "sizes": "41x41",
-                    "type": "image/png",
-                    "form_factor": "narrow",
-                    "label": "Service Villa "
-                  },
-                  {
-                    "src": "https:\/\/www.bwstays.com\/assets\/img\/pwa\/bw.png",
-                    "sizes": "41x41",
-                    "type": "image/png",
-                    "form_factor": "wide",
-                    "label": "The best Service Villa."
-                  }
-    ],
-	"author": {
-		"name": "BWStays"
-	}
+  "name": "Black and White Stays",
+  "short_name": "BWStays",
+  "description": "Villa stays and workations in Kalpetta, Wayanad, Kerala",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#000",
+  "orientation": "portrait",
+  "start_url": "/",
+  "id": "/index.html",
+  "scope": "https://www.bwstays.com/",
+  "icons": [
+    {
+      "src": "https://www.bwstays.com/assets/img/pwa/bw.png",
+      "type": "image/png",
+      "sizes": "41x41",
+      "purpose": "any"
+    }
+  ],
+  "author": {
+    "name": "BWStays"
+  }
 }
