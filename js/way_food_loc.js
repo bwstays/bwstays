@@ -117,8 +117,8 @@ var foodations =
 }
 var element1 = document.getElementById('mapall');
 var map1 = L.map(element1).setView([11.6057872, 76.0833109], 12);
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).on('tileload', function(e) {
     e.tile.alt = 'All Locations at wayand';
 }).addTo(map1);
@@ -136,18 +136,65 @@ let myIcon1 = L.icon(customIcon1);
   }).on('tileload', function(e) {
     e.tile.alt = 'All Locations at wayand';
 }).addTo(map1);
-var  i;
-for (i = 0; i < loc.length; i++) {
-	//if(loc[i][6]=="ro")
-	 //if ( locchoice.includes(loc[i][6]))
-		{
-			var target = L.latLng(loc[i][1], loc[i][2]);
-
-			map1.setView(target, 12);
-
-			L.marker(target,  {    title:loc[i][5],icon:myIcon1}).on('tileload', function(e) {
-				e.tile.alt = 'All Locations at wayand';
-			}).addTo(map1).bindPopup( loc[i][0]);
-		}
-
+function bwEsc(v) {
+    return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+}
+function bwSafeUrl(u) {
+    return /^https?:\/\//i.test(u || '') ? u : null;
+}
+function bwFoodPopup(p) {
+    var kind = p.cuisine && p.cuisine.length ? p.cuisine.join(', ') : String(p.kind).replace('shop:', '').replace(/_/g, ' ');
+    var h = '<h6>' + bwEsc(p.name) + '</h6><div class="small text-capitalize">' + bwEsc(kind) + '</div>';
+    var rows = [];
+    if (p.address) rows.push('<i class="fas fa-map-marker-alt"></i> ' + bwEsc(p.address));
+    if (p.opening_hours) rows.push('<i class="far fa-clock"></i> ' + bwEsc(p.opening_hours));
+    if (p.phone) rows.push('<i class="fas fa-phone"></i> <a href="tel:' + bwEsc(p.phone.replace(/[^+\d]/g, '')) + '">' + bwEsc(p.phone) + '</a>');
+    var site = bwSafeUrl(p.website);
+    if (site) rows.push('<i class="fas fa-globe"></i> <a href="' + bwEsc(site) + '" target="_blank" rel="noopener noreferrer nofollow">Website</a>');
+    var tags = [];
+    if (p.vegetarian === 'only') tags.push('Pure vegetarian'); else if (p.vegetarian) tags.push('Vegetarian options');
+    if (p.vegan) tags.push('Vegan options');
+    if (p.halal) tags.push('Halal');
+    if (p.takeaway) tags.push('Takeaway');
+    if (p.delivery) tags.push('Delivery');
+    if (p.outdoor_seating) tags.push('Outdoor seating');
+    if (p.wifi) tags.push('WiFi');
+    if (tags.length) rows.push(bwEsc(tags.join(' · ')));
+    if (p.from_stay_road_km != null) rows.push('<i class="fas fa-route"></i> ' + p.from_stay_road_km + ' km by road from Black &amp; White Stays');
+    h += '<div class="small">' + rows.join('<br>') + '</div>';
+    h += '<div class="small mt-1"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.google.com/maps/dir/?api=1&destination=' +
+        encodeURIComponent(p.lat + ',' + p.lon) + '">Directions</a>';
+    if (p.osm_edit_url) h += ' · <a target="_blank" rel="noopener noreferrer nofollow" href="' + bwEsc(p.osm_edit_url) + '">Add missing details on OpenStreetMap</a>';
+    h += '</div>';
+    if (p.unverified_position) h += '<div class="small text-muted">Position from the site\'s own list; not yet confirmed on OpenStreetMap.</div>';
+    return h;
+}
+function bwAddLegacyMarkers() {
+    var i;
+    for (i = 0; i < loc.length; i++) {
+        var target = L.latLng(loc[i][1], loc[i][2]);
+        L.marker(target, { title: loc[i][5], icon: myIcon1 }).on('tileload', function (e) {
+            e.tile.alt = 'All Locations at wayand';
+        }).addTo(map1).bindPopup(loc[i][0]);
+    }
+}
+if (typeof mapType !== 'undefined' && mapType == 1) {
+    // Static dataset built by scripts/build-food.mjs (OpenStreetMap, ODbL): no third-party API call at view time.
+    fetch(iconURLPrefix + 'data/food-places.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+            var group = L.featureGroup();
+            d.places.forEach(function (p) {
+                L.marker([p.lat, p.lon], { title: p.name, icon: myIcon1 }).bindPopup(bwFoodPopup(p), { maxWidth: 280 }).addTo(group);
+            });
+            group.addTo(map1);
+            map1.setView([11.6057872, 76.0833109], 12);
+        })
+        .catch(function () {
+            bwAddLegacyMarkers();
+        });
+} else {
+    bwAddLegacyMarkers();
 }
