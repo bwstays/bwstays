@@ -165,6 +165,35 @@ for (const [category, rows] of Object.entries(siteData)) {
 }
 must(attractions.length > 50, 'attraction extraction produced too few rows');
 
+// ---- editorial review (data/mcp-review.json)
+// Records stay in data/sitedata.js because each attraction page renders by id;
+// the review only changes what is published to AI consumers.
+const reviewEntries = JSON.parse(read('data/mcp-review.json')).entries;
+const excluded = [];
+const knownIds = new Set(attractions.map((a) => a.id));
+for (const id of Object.keys(reviewEntries)) {
+  must(knownIds.has(id), `data/mcp-review.json: no attraction with id ${id}`);
+}
+for (let i = attractions.length - 1; i >= 0; i--) {
+  const a = attractions[i];
+  const rv = reviewEntries[a.id];
+  a.district = rv?.district ?? null;
+  a.locality = rv?.locality ?? null;
+  a.review_note = rv?.note ?? null;
+  if (!rv) continue;
+  if (rv.exclude) {
+    excluded.unshift({ name: a.name.trim(), reason: rv.exclude });
+    attractions.splice(i, 1);
+    continue;
+  }
+  for (const f of rv.withhold ?? []) {
+    if (f === 'distance') a.distance_from_stay_km = null;
+    else if (f === 'coordinates') a.coordinates = null;
+    else if (f === 'description') a.description = null;
+    else throw new Error(`generate-mcp: unknown withhold field "${f}" for ${a.id}`);
+  }
+}
+
 // ---- reliability filter
 // data/sitedata.js carries template defaults that are not facts about the place:
 // `fee` is "0" for 76 of 85 rows (including sanctuaries that charge entry),
@@ -363,7 +392,11 @@ const resources = {
           .filter((c) => attractions.some((a) => a.category === c))
           .map((c) => [c, { label: CATEGORY_LABELS[c], count: attractions.filter((a) => a.category === c).length }]),
       ),
-      data_quality: { note: ATTRACTION_DATA_NOTE, ...reliability },
+      data_quality: {
+        note: ATTRACTION_DATA_NOTE,
+        ...reliability,
+        excluded_after_fact_check: excluded,
+      },
       attractions: [...attractions].sort(byDistance),
     },
     source: 'data/sitedata.js',
@@ -396,6 +429,8 @@ const brief = (a) => ({
   category: a.category_label,
   distance_from_stay_km: a.distance_from_stay_km,
   rating: a.rating,
+  district: a.district ?? 'Wayanad',
+  note: a.review_note,
   page_url: a.page_url,
 });
 const pick = (pred, cmp = byDistance) => attractions.filter(pred).sort(cmp).map(brief);
