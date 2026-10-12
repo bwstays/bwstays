@@ -8651,3 +8651,44 @@ footer.footer .footer-author p {
 #contact-form #inputEmail4 {
   width: 100% !important;
 }
+
+
+/* Guest Experiences: smaller stars and tighter space between reviews */
+#signup .reviews-grid,
+#testimonial .reviews-grid {
+  gap: 0;
+}
+#signup .reviews-grid .review-card,
+#testimonial .reviews-grid .review-card {
+  padding: 8px 20px 6px;
+  margin: 0;
+}
+#signup .reviews-grid .reviewer-details .name,
+#testimonial .reviews-grid .reviewer-details .name {
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+#signup .reviews-grid .stars,
+#testimonial .reviews-grid .stars {
+  display: block;
+  font-size: 0.6rem;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+#signup .reviews-grid .rating-row,
+#testimonial .reviews-grid .rating-row {
+  margin-top: 0;
+}
+#signup .reviews-grid .my-star-icon,
+#testimonial .reviews-grid .my-star-icon {
+  font-size: 0.6rem !important;
+  margin-right: 1px;
+}
+#signup .reviews-grid #top-star,
+#testimonial .reviews-grid #top-star {
+  font-size: 0.6rem !important;
+}
+#signup .reviews-grid .review-text,
+#testimonial .reviews-grid .review-text {
+  line-height: 1.3;
+}
