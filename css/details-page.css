@@ -5355,7 +5355,8 @@ footer.footer .stay-card {
 /* Large screens and below (991.98px) */
 @media (max-width: 991.98px) {
     /* Fooding Page Header */
-    #fooding-top h4 {
+    #fooding-top h4,
+    #fooding-top h1 {
         font-size: 1.5rem !important;
         padding: 0 15px;
     }
@@ -5394,7 +5395,8 @@ footer.footer .stay-card {
         padding: 1rem;
     }
     
-    #fooding-top h4 {
+    #fooding-top h4,
+    #fooding-top h1 {
         font-size: 1.3rem !important;
         line-height: 1.4;
     }
@@ -5486,7 +5488,8 @@ footer.footer .stay-card {
         margin-bottom: 2rem !important;
     }
     
-    #fooding-top h4 {
+    #fooding-top h4,
+    #fooding-top h1 {
         font-size: 1.1rem !important;
         margin-top: 1rem !important;
     }
