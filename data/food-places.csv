@@ -1,0 +1,184 @@
+id,name,kind,cuisine,lat,lon,address,phone,website,opening_hours,vegetarian,takeaway,delivery,from_stay_road_km,source,osm_url
+osm-node-4443701412,ClayHut,restaurant,Regional,11.605787,76.083311,"346, Opp New Busstand Kalpetta, Wayanad, 673121",+91 9741496273,http://www.clayhut.co.in,11:00-23:00,,true,true,0,openstreetmap,https://www.openstreetmap.org/node/4443701412
+site-ruchipura-11.6058,Ruchi Pura,restaurant,,11.605751134803608,76.08368257503619,,,,,,,,0.2,bwstays-listing,
+osm-node-2703689977,Swamy's Udupi,restaurant,,11.606079,76.083254,,,,,,,,0.3,openstreetmap,https://www.openstreetmap.org/node/2703689977
+site-affaspurevegetarian-11.6071,Affas Pure Vegetarian,restaurant,,11.607133989832576,76.08324548447946,,,,,true,,,0.3,bwstays-listing,
+site-chatiyumchorum-11.6052,Chatiyum Chorum,restaurant,,11.605200936482868,76.08393188530898,,,,,,,,0.1,bwstays-listing,
+osm-node-5281469727,Cofee cafe,cafe,,11.606132,76.083972,,,,,,,,0.2,openstreetmap,https://www.openstreetmap.org/node/5281469727
+site-cupcoffee-11.6066,Cup Coffee,restaurant,,11.60659514471941,76.08388093697519,,,,,,,,0.3,bwstays-listing,
+osm-node-4067977574,Hotel Amar,restaurant,,11.605151,76.083546,,,,,,,,0.1,openstreetmap,https://www.openstreetmap.org/node/4067977574
+site-majesticbakesandrestaurants-11.6048,Majestic Bakes and Restaurants,restaurant,,11.604780705721431,76.08324548447946,,,,,,,,0.2,bwstays-listing,
+site-nighttattukada-11.6048,Night Tattu Kada,restaurant,,11.604806010573219,76.08376805542096,,,,,,,,0.1,bwstays-listing,
+site-thebungalow-11.6064,The Bungalow,restaurant,,11.606377579247457,76.08390328527442,,,,,,,,0.2,bwstays-listing,
+site-cafecocktail-11.6045,Cafe Cocktail,restaurant,,11.604506794638315,76.08376943606282,,,,,,,,0.2,bwstays-listing,
+site-newhotel-11.6075,New Hotel,restaurant,,11.607452677265156,76.08362059821074,,,,,,,,0.4,bwstays-listing,
+site-chicking-11.6030,Chicking,restaurant,,11.603008465130017,76.08304000088835,,,,,,,,0.4,bwstays-listing,
+osm-node-6266400490,Apple cafe,shop:bakery,,11.609336,76.083096,,,,,,,,0.6,openstreetmap,https://www.openstreetmap.org/node/6266400490
+osm-way-935448555,Bistro Resaturant,restaurant,,11.606843,76.086965,,,,,,,,0.8,openstreetmap,https://www.openstreetmap.org/way/935448555
+site-chillout-11.6090,Chill Out,restaurant,,11.608996367231134,76.08346178431843,,,,,,,,0.5,bwstays-listing,
+site-krishnabhavanpureveg-11.6059,Krishna Bhavan Pure Veg,restaurant,,11.60585860731025,76.08680326940188,,,,,true,,,0.8,bwstays-listing,
+site-majesticbakes-11.6043,Majestic Bakes,restaurant,,11.604323109796422,76.08630892473452,,,,,,,,0.6,bwstays-listing,
+osm-node-1028617522,Pankaj,restaurant,,11.609345,76.081967,,,,,,,,0.8,openstreetmap,https://www.openstreetmap.org/node/1028617522
+site-vanitamess-11.6090,Vanita Mess,restaurant,,11.609012788111084,76.0832646419536,,,,,,,,0.5,bwstays-listing,
+site-cafe41kalpetta-11.6102,Cafe 41 Kalpetta,restaurant,,11.610153825099772,76.08097305952563,,,,,,,,1,bwstays-listing,
+site-casamia21-11.6086,Casa Mia 2.1,restaurant,,11.608590691762718,76.08721315614605,,,,,,,,1.1,bwstays-listing,
+site-fruitbae-11.6012,Fruit Bae,restaurant,,11.60119739560447,76.08164781022073,,,,,,,,0.6,bwstays-listing,
+site-hotelparadise-11.6018,Hotel Paradise,restaurant,,11.60176526999694,76.08164659461592,,,,,,,,0.6,bwstays-listing,
+site-jallelskitchen-11.6107,Jallels Kitchen,restaurant,,11.610667798353557,76.0833430886246,,,,,,,,0.8,bwstays-listing,
+site-ramavilasvegetarian-11.6104,Ramavilas Vegetarian,restaurant,,11.610380054042501,76.08310942611584,,,,,true,,,0.7,bwstays-listing,
+site-alibabaand41dishes-11.6103,Alibaba and 41 Dishes,restaurant,,11.610318686152537,76.08084825487074,,,,,,,,1,bwstays-listing,
+site-muzwallarestaurant-11.6007,Muzwalla Restaurant,restaurant,,11.600690382919279,76.08111456843432,,,,,,,,0.7,bwstays-listing,
+site-maracanarestaurants-11.6001,Maracana Restaurants,restaurant,,11.600071240199552,76.0812581584653,,,,,,,,0.8,bwstays-listing,
+site-dosacafe-11.6132,Dosa Cafe,restaurant,,11.61319990659965,76.08091551813482,,,,,,,,1.1,bwstays-listing,
+osm-node-2602974757,New Form,restaurant,,11.613752,76.082825,,,,,,,,1.1,openstreetmap,https://www.openstreetmap.org/node/2602974757
+osm-node-7515020631,Aksa Bakes,shop:bakery,,11.614586,76.082793,,,,,,,,1.2,openstreetmap,https://www.openstreetmap.org/node/7515020631
+osm-node-5463931021,cheap tasty south Indian food,restaurant,,11.615003,76.083108,,,,,,,,1.2,openstreetmap,https://www.openstreetmap.org/node/5463931021
+site-cupcoffee-11.6149,Cup Coffee,restaurant,,11.614914415984193,76.08302861096685,,,,,,,,1.2,bwstays-listing,
+osm-node-7515020638,Grand Bakes,shop:bakery,,11.615202,76.083016,,,,,,,,1.2,openstreetmap,https://www.openstreetmap.org/node/7515020638
+osm-node-7515020637,Walnuts,shop:bakery,,11.615085,76.082931,,,,,,,,1.2,openstreetmap,https://www.openstreetmap.org/node/7515020637
+osm-node-7515412994,apple,shop:bakery,,11.615325,76.081756,,,,,,,,1.3,openstreetmap,https://www.openstreetmap.org/node/7515412994
+osm-node-7515020640,Thoufeeque,restaurant,,11.615573,76.083165,,,,,,,,1.3,openstreetmap,https://www.openstreetmap.org/node/7515020640
+site-touffequqeerestaurant-11.6159,Touffequqee Restaurant,restaurant,,11.615868291399686,76.08321320185325,,,,,,,,1.3,bwstays-listing,
+osm-node-845922165,Woodlands,restaurant,,11.615845,76.083545,,,,,,,,1.3,openstreetmap,https://www.openstreetmap.org/node/845922165
+site-holidayvillage-11.6167,Holiday Village,restaurant,,11.616672058724552,76.08291280737211,,,,,,,,1.5,bwstays-listing,
+osm-node-7515020676,Soundharya Bakes,shop:bakery,,11.617615,76.084102,,,,,,,,1.5,openstreetmap,https://www.openstreetmap.org/node/7515020676
+osm-node-6359499499,Haritagir BAR,bar,,11.617949,76.082875,,,,,,,,1.7,openstreetmap,https://www.openstreetmap.org/node/6359499499
+osm-node-443616790,Harithagiri,restaurant,,11.618265,76.082506,,,,,,,,1.7,openstreetmap,https://www.openstreetmap.org/node/443616790
+osm-node-6359499500,Green Grass Land inn,restaurant,,11.595525,76.092921,,,,,,,,2.1,openstreetmap,https://www.openstreetmap.org/node/6359499500
+site-rayanrestaurant-11.6198,Rayan Restaurant,restaurant,,11.619758043374217,76.08496651902011,,,,,,,,1.8,bwstays-listing,
+site-kababshack-11.6203,Kabab Shack,restaurant,,11.6203363540984,76.08884269768355,,,,,,,,2.4,bwstays-listing,
+site-1980nostalgia-11.6209,1980 Nostalgia,restaurant,,11.620851803949527,76.08899671802779,,,,,,,,2.5,bwstays-listing,
+site-thecoffeeshop-11.6172,The Coffee Shop,restaurant,,11.617154317507989,76.06854264615934,,,,,,,,3.9,bwstays-listing,
+osm-node-10945873256,ocean restaurent,restaurant,,11.625837,76.087774,,,,,,,,2.6,openstreetmap,https://www.openstreetmap.org/node/10945873256
+site-oshinrestaurant-11.6262,Oshin Restaurant,restaurant,,11.626228731134612,76.087809496246,,,,,,,,2.6,bwstays-listing,
+osm-node-4113765603,Indian Coffee House,restaurant,,11.627154,76.087931,,,,,,,,2.7,openstreetmap,https://www.openstreetmap.org/node/4113765603
+osm-node-845922162,Green Gates,restaurant,,11.629361,76.08812,,,,,,,,3,openstreetmap,https://www.openstreetmap.org/node/845922162
+osm-node-12347717850,ceepees cafeio,cafe,,11.575015,76.059343,,,,,,,,5.4,openstreetmap,https://www.openstreetmap.org/node/12347717850
+osm-node-12347717849,Hotel Sagar,restaurant,,11.574148,76.058612,,,,,,,,5.5,openstreetmap,https://www.openstreetmap.org/node/12347717849
+site-ramavilaschundale-11.5739,Ramavilas Chundale,restaurant,,11.5738608278821,76.05500967074094,,,,,,,,6,bwstays-listing,
+osm-node-14251965611,vadakara bakery,shop:bakery,,11.641834,76.110778,,,,,,,,6.4,openstreetmap,https://www.openstreetmap.org/node/14251965611
+osm-node-12347607613,Lala Restaurant,restaurant,,11.572534,76.0514,,,,,,,,6.4,openstreetmap,https://www.openstreetmap.org/node/12347607613
+osm-node-13513704001,Taya,cafe,,11.572546,76.05108,Wayanad Road,,,Mo-Sa 15:00-01:00,,,,6.4,openstreetmap,https://www.openstreetmap.org/node/13513704001
+site-olanrestaurant-11.6447,Olan Restaurant,restaurant,,11.644692054539417,76.11396083068944,,,,,,,,6.9,bwstays-listing,
+osm-node-6544242435,Boat Restaurant,restaurant,,11.558795,76.044148,,,,,,,,9.4,openstreetmap,https://www.openstreetmap.org/node/6544242435
+osm-way-804575656,Star bakery,shop:bakery,,11.622129,76.02437,,,,,,,,8.8,openstreetmap,https://www.openstreetmap.org/way/804575656
+osm-node-7992691766,WMO Qatar Backery & eatery,restaurant,Indian; Chicken; Ice Cream; Arabic,11.649116,76.126702,"Wariyad, 673122",,,,,,,8.4,openstreetmap,https://www.openstreetmap.org/node/7992691766
+osm-node-7992654881,Sree Karthika Hotel,restaurant,Indian,11.648793,76.128265,"7/63, Wariyad, 673122",+91-4936247169,,,,,,8.6,openstreetmap,https://www.openstreetmap.org/node/7992654881
+osm-node-8848202009,Hotel Riya,restaurant,,11.55595,76.037952,,,,,,,,9.3,openstreetmap,https://www.openstreetmap.org/node/8848202009
+osm-node-7803568277,Harris Hotel,restaurant,,11.553816,76.039234,,,,,,,,9.5,openstreetmap,https://www.openstreetmap.org/node/7803568277
+osm-way-905452585,Malabar Hotel and tourist home,restaurant,Regional,11.556086,76.131126,"Calicut - Vythiri - Gudalur Road, Meppadi, 673577",,,,,,,9.3,openstreetmap,https://www.openstreetmap.org/way/905452585
+osm-way-1204153144,Mocha,cafe,,11.555893,76.131051,,,,Mo-Su 10:00-22:00,,,,9.3,openstreetmap,https://www.openstreetmap.org/way/1204153144
+osm-node-7483934414,Famous Bakery,shop:bakery,,11.553098,76.13196,,,,,,,,9.8,openstreetmap,https://www.openstreetmap.org/node/7483934414
+osm-node-6198803089,Paris restaurant,restaurant,,11.55305,76.131675,,,,,,,,9.7,openstreetmap,https://www.openstreetmap.org/node/6198803089
+osm-node-8408609776,MSA bakery,shop:bakery,,11.552742,76.133281,"Calicut - Vythiri - Gudalur Road, Meppadi, 673577",,,,,,,9.9,openstreetmap,https://www.openstreetmap.org/node/8408609776
+osm-node-7483994592,Bismi Hotel,restaurant,,11.551762,76.133076,,,,,,,,9.9,openstreetmap,https://www.openstreetmap.org/node/7483994592
+osm-node-7484048934,Jaya Hotel,restaurant,,11.552742,76.134314,,,,,,,,10,openstreetmap,https://www.openstreetmap.org/node/7484048934
+osm-node-7484216405,Samovar,cafe,,11.553335,76.134518,,,,,,,,10.1,openstreetmap,https://www.openstreetmap.org/node/7484216405
+osm-node-7484259423,Palm Dew,restaurant,,11.553248,76.136504,,,,,,,,10.3,openstreetmap,https://www.openstreetmap.org/node/7484259423
+osm-node-8408525486,ajwa restaurant,restaurant,Regional,11.554053,76.137951,"Kalpetta - Meppadi Road, Meppadi, 673577",,,,,,,10.5,openstreetmap,https://www.openstreetmap.org/node/8408525486
+osm-node-6359499503,MRR restaurant,restaurant,,11.555205,76.139696,,,,,,,,10.7,openstreetmap,https://www.openstreetmap.org/node/6359499503
+osm-node-8408451908,quassim hotel,restaurant,Regional,11.55493,76.139314,"Calicut - Vythiri - Gudalur Road, Meppadi, 673577",,,,,,,10.6,openstreetmap,https://www.openstreetmap.org/node/8408451908
+osm-node-12339238841,Hotel Marhaba,cafe,,11.615128,76.005689,,,,,,,,11.5,openstreetmap,https://www.openstreetmap.org/node/12339238841
+osm-node-6359499492,Breeze Home stay,restaurant,,11.539548,76.035285,,,,,,,,11.4,openstreetmap,https://www.openstreetmap.org/node/6359499492
+osm-node-12343865647,Taste of Wynd,restaurant,,11.539226,76.035875,,,,,,,,11.3,openstreetmap,https://www.openstreetmap.org/node/12343865647
+osm-way-981183023,Wayanad Royal Grand,restaurant,,11.654825,76.15348,,,,,,,,11.7,openstreetmap,https://www.openstreetmap.org/way/981183023
+osm-node-6591327245,Chai Chai,cafe,,11.534733,76.033633,,,,,,,,11.9,openstreetmap,https://www.openstreetmap.org/node/6591327245
+osm-way-845756742,Calicut Bakery,shop:bakery,,11.676664,76.134892,"Panamaram - Meenangadi road, Karyambadi, 673591",,,,,,,12.2,openstreetmap,https://www.openstreetmap.org/way/845756742
+osm-node-11171342201,K.K Restraunt,restaurant,,11.535328,76.029852,,,,,,,,12.4,openstreetmap,https://www.openstreetmap.org/node/11171342201
+osm-node-6615258534,Mess House,restaurant,,11.558532,76.159709,,,,Mo-Su 08:00-20:00,,,,14.7,openstreetmap,https://www.openstreetmap.org/node/6615258534
+osm-node-12347124084,Rest n Dine,restaurant,,11.535584,76.027283,,,,,,,,12.6,openstreetmap,https://www.openstreetmap.org/node/12347124084
+osm-node-8764050927,The Walnut Cakes,cafe,,11.535571,76.027141,,,,,,,,12.7,openstreetmap,https://www.openstreetmap.org/node/8764050927
+osm-node-12346380994,Vanitha Hotel,restaurant,,11.535594,76.027346,,,,,,,,12.6,openstreetmap,https://www.openstreetmap.org/node/12346380994
+osm-node-12345190705,University Canteen,restaurant,,11.540679,76.020193,,,,,,,,14.5,openstreetmap,https://www.openstreetmap.org/node/12345190705
+osm-way-1347587323,Hotel River View,restaurant,,11.532255,76.138096,,,,,,,,13.5,openstreetmap,https://www.openstreetmap.org/way/1347587323
+osm-node-7509639020,AL SAFA COOL BAR,cafe,,11.659685,76.161577,,,,,,,,13,openstreetmap,https://www.openstreetmap.org/node/7509639020
+osm-way-847943236,Lucky,restaurant,,11.660274,76.163384,,,,,,,,13.3,openstreetmap,https://www.openstreetmap.org/way/847943236
+osm-way-847934318,Mayo,bar,,11.661587,76.162255,,,,,,,,13.4,openstreetmap,https://www.openstreetmap.org/way/847934318
+osm-node-12350923102,Hotel Veg Bhavan,restaurant,,11.528967,76.024319,,,,,true,,,13.5,openstreetmap,https://www.openstreetmap.org/node/12350923102
+osm-way-847944005,Thoufeeque,restaurant,,11.660149,76.164027,,,,,,,,13.4,openstreetmap,https://www.openstreetmap.org/way/847944005
+osm-node-12350747671,Veg Bhavan Restaurant,restaurant,,11.528992,76.024316,,+91 4936 237 272,,,true,,,13.5,openstreetmap,https://www.openstreetmap.org/node/12350747671
+osm-node-8370871279,Malabar Bakery,fast_food,Regional; Coffee Shop; Sandwich; Indian; Ice Cream; Burger,11.659837,76.165208,"Main road, Kalpetta-Sulthan Bathery Road, Meenangadi, 673591",+91-9947042559,,Mo-Su 09:00-21:00,,,,13.5,openstreetmap,https://www.openstreetmap.org/node/8370871279
+osm-node-6244126385,Shruti Mess,restaurant,,11.700841,76.106248,,,,,,,,16.3,openstreetmap,https://www.openstreetmap.org/node/6244126385
+osm-node-7398792175,famous,shop:bakery,,11.659989,76.167835,Kalpetta-Sulthan Bathery Road,,,,,,,13.8,openstreetmap,https://www.openstreetmap.org/node/7398792175
+osm-node-12350910699,Taj Restaurant,restaurant,,11.52625,76.023329,,,,,,,,13.9,openstreetmap,https://www.openstreetmap.org/node/12350910699
+osm-node-12361547922,Priyadarshini Treats Cool Bar,fast_food,Juice,11.528803,76.017736,,,,,,,,14.8,openstreetmap,https://www.openstreetmap.org/node/12361547922
+osm-node-12361598707,SDS Coffee Shop,cafe,Coffee Shop,11.529813,76.015265,,,,,,,,15.3,openstreetmap,https://www.openstreetmap.org/node/12361598707
+osm-way-848433361,"Canteen, CHC Meenangadi",restaurant,,11.664531,76.168295,,,,,,,,14.3,openstreetmap,https://www.openstreetmap.org/way/848433361
+osm-node-12361598754,Gaddika Food Court,restaurant,,11.528826,76.015625,,,,,,,,15.1,openstreetmap,https://www.openstreetmap.org/node/12361598754
+osm-node-5273444622,Dennys Coffee & Home Made Chocolate,cafe,,11.522212,76.021578,,,,,,,,14.4,openstreetmap,https://www.openstreetmap.org/node/5273444622
+osm-way-1039059034,Hot N Cool,shop:bakery,,11.712063,76.079497,,,,,,,,14.4,openstreetmap,https://www.openstreetmap.org/way/1039059034
+osm-node-4111283573,Home Food,restaurant,,11.649701,75.983788,,,,,,,,16.7,openstreetmap,https://www.openstreetmap.org/node/4111283573
+site-muzwallarestaurant-11.6963,Muzwalla Restaurant,restaurant,,11.6963,76.1411,,,,,,,,16.7,bwstays-listing,
+osm-node-12339279155,Wilton,restaurant,,11.514987,76.021848,,+91 89882 91111; +91 89883 91111,,,,,,15.3,openstreetmap,https://www.openstreetmap.org/node/12339279155
+osm-way-1184384315,REST IN,cafe,Mexican,11.716976,76.047868,PANAMARAM,,,Mo-Sa 08:00-20:00,,,,18.9,openstreetmap,https://www.openstreetmap.org/way/1184384315
+osm-way-1184388106,Madayikkal,cafe,,11.724289,76.042696,,,,Mo-Fr 08:00-17:00,,,,22.6,openstreetmap,https://www.openstreetmap.org/way/1184388106
+osm-node-8396562450,Famous bakery,shop:bakery,,11.629882,76.213173,,,,,,,,20.9,openstreetmap,https://www.openstreetmap.org/node/8396562450
+osm-node-5274917020,Olive,restaurant,,11.735788,76.073214,,,,,,,,17.4,openstreetmap,https://www.openstreetmap.org/node/5274917020
+osm-node-4834356991,Hotel New Banasura,fast_food,,11.674373,75.967561,,,,,,,,22.7,openstreetmap,https://www.openstreetmap.org/node/4834356991
+osm-node-4398563389,Mess House,restaurant,,11.737287,76.072809,,,,,,,,17.6,openstreetmap,https://www.openstreetmap.org/node/4398563389
+osm-node-7990885815,Cousins's Bakery,cafe,,11.723047,76.15262,"Kenichira, Kenichira, 673596",,,,,,,19.2,openstreetmap,https://www.openstreetmap.org/node/7990885815
+osm-way-950144060,Mithuna Bakery,shop:bakery,,11.723034,76.152483,"kenichira, Kenichira, 673596",,,,,,,19.1,openstreetmap,https://www.openstreetmap.org/way/950144060
+osm-node-7990960795,Vikas Bakery,cafe,,11.723218,76.152387,"KENICHIRA, KENICHIRA",,,,,,,19.1,openstreetmap,https://www.openstreetmap.org/node/7990960795
+osm-node-7459014284,Vikas Bakes,shop:bakery,,11.723394,76.15215,kenichira,,,,,,,19.1,openstreetmap,https://www.openstreetmap.org/node/7459014284
+osm-node-5275246122,Olive Bakery,shop:bakery,,11.74065,76.118895,"Nadavayal - Nelliyambam, Nadavayal, 670721",,,Mo-Su 09:00-21:00,,,,20.6,openstreetmap,https://www.openstreetmap.org/node/5275246122
+osm-node-5275245899,Appai's Star Bakery,shop:bakery,,11.741484,76.119335,"Nadavayal - Nekkuppa, Nadavayal, 670721",,,Mo-Su 09:00-21:00,,,,20.7,openstreetmap,https://www.openstreetmap.org/node/5275245899
+osm-node-5275245914,Sams Bakery;Indian national congress I group Nadavayal Town committee office,shop:bakery,,11.741269,76.118947,,,,,,,,20.6,openstreetmap,https://www.openstreetmap.org/node/5275245914
+osm-way-1267501295,Toddy Shop,pub,,11.74292,76.115368,,,,,,,,21.1,openstreetmap,https://www.openstreetmap.org/way/1267501295
+osm-node-12338949751,Dcups,cafe,,11.631539,76.230924,,,,,,,,24.1,openstreetmap,https://www.openstreetmap.org/node/12338949751
+osm-node-8406841332,Juice Magics,fast_food,Juice,11.631327,76.230741,,,,,,,,24.1,openstreetmap,https://www.openstreetmap.org/node/8406841332
+osm-node-7512200781,Paplassery botti kada,fast_food,,11.719057,76.189778,,+919605398155,,,,,,21.8,openstreetmap,https://www.openstreetmap.org/node/7512200781
+osm-way-1184387322,MOOP,restaurant,,11.747788,76.017655,,,,,,,,26.3,openstreetmap,https://www.openstreetmap.org/way/1184387322
+osm-node-8746179935,Changayis food,fast_food,,11.737982,75.988446,,,,,,,,30.1,openstreetmap,https://www.openstreetmap.org/node/8746179935
+osm-node-8279463296,walnut cakes,shop:bakery,,11.658669,76.246648,,,,,,,,23.2,openstreetmap,https://www.openstreetmap.org/node/8279463296
+osm-node-6590543887,Wilton Restaurant,restaurant,,11.658467,76.246895,Sulthan bathery kalpetta Road,,,,,,,23.3,openstreetmap,https://www.openstreetmap.org/node/6590543887
+osm-way-804812416,dosa hut,restaurant,Indian,11.658988,76.248566,,,,,true,,,23.5,openstreetmap,https://www.openstreetmap.org/way/804812416
+osm-node-11462640613,Hotel Adarsh,restaurant,,11.758814,76.006879,,,,,,,,27.9,openstreetmap,https://www.openstreetmap.org/node/11462640613
+osm-node-4113765602,Aji Mess House,restaurant,,11.776138,76.055347,,,,,,,,22.8,openstreetmap,https://www.openstreetmap.org/node/4113765602
+osm-way-961928792,Sathishan Store,cafe,,11.777999,76.079317,neervaram,,,sunrise-sunset,,,,24.3,openstreetmap,https://www.openstreetmap.org/way/961928792
+osm-way-960822163,Ambetkar Tea stall,cafe,,11.756215,75.981333,,,,,,,,31.5,openstreetmap,https://www.openstreetmap.org/way/960822163
+osm-node-8883600058,Issac's Tea Stall,cafe,,11.755915,75.980648,,,,,,,,31.5,openstreetmap,https://www.openstreetmap.org/node/8883600058
+osm-node-5276823727,Kalpaka,restaurant,,11.663269,76.257826,,,,,,,,24.6,openstreetmap,https://www.openstreetmap.org/node/5276823727
+osm-node-5273008648,Archana sweets and bakes,shop:bakery,,11.663813,76.261333,,,,,,,,25.1,openstreetmap,https://www.openstreetmap.org/node/5273008648
+osm-node-5278008687,Beer and Wine,bar,,11.664211,76.260494,,,,,,,,25,openstreetmap,https://www.openstreetmap.org/node/5278008687
+osm-node-3259281723,Hotel,restaurant,Indian,11.770795,76.001887,,,,,,,,29.5,openstreetmap,https://www.openstreetmap.org/node/3259281723
+osm-node-5278008686,Hotel Prince,restaurant,,11.66421,76.260714,,,,,,,,25,openstreetmap,https://www.openstreetmap.org/node/5278008686
+osm-node-5273008649,NRS bakes and restaurant,restaurant,,11.663766,76.261486,,,,,,,,25.1,openstreetmap,https://www.openstreetmap.org/node/5273008649
+osm-node-8432309555,Village food,restaurant,Regional; Indian; Fish And Chips,11.770975,76.001878,"Mananthavady- Kalpetta road, Thonichal, 670645",,,Mo-Su 09:00-21:00,true,,,29.5,openstreetmap,https://www.openstreetmap.org/node/8432309555
+osm-node-5273032068,Dany sweets chungam sulthan bathery,shop:bakery,,11.663768,76.261635,,,,,,,,25.1,openstreetmap,https://www.openstreetmap.org/node/5273032068
+osm-node-13752210901,Sangheeta Mess House,restaurant,Indian; Local; Regional; Tea,11.670982,76.260435,,9495649020,,,true,,,26.1,openstreetmap,https://www.openstreetmap.org/node/13752210901
+osm-node-9814343540,Achayan's Bakery,cafe,,11.666393,76.26285,,+919961462851,,Mo-Sa 08:00-21:30,,,,25.4,openstreetmap,https://www.openstreetmap.org/node/9814343540
+osm-way-960822161,noon food time,restaurant,,11.754466,75.968277,,,,,,,,31.1,openstreetmap,https://www.openstreetmap.org/way/960822161
+osm-node-7525112189,Usmanikka Tea Shop,cafe,,11.772267,75.990322,,,,,,,,31,openstreetmap,https://www.openstreetmap.org/node/7525112189
+osm-way-803336732,appoos,shop:bakery,,11.787016,76.166702,,,,"Mo-Fr 09:00-12:00,13:30-18:30; Sa 09:00-17:00; PH closed",,,,30.7,openstreetmap,https://www.openstreetmap.org/way/803336732
+osm-node-8892596635,4U CAFE,shop:bakery,,11.766343,75.962619,,,,,,,,34.6,openstreetmap,https://www.openstreetmap.org/node/8892596635
+osm-node-8398593440,Ranthal,food_court,,11.735927,75.928959,,,,,,,,34.3,openstreetmap,https://www.openstreetmap.org/node/8398593440
+osm-node-13953171501,Tea Shop,shop:bakery,,11.65807,76.279952,Gudalur-Sultan Bathery Rd,,,,,,,27.3,openstreetmap,https://www.openstreetmap.org/node/13953171501
+osm-way-802860814,illikkal bakery,shop:bakery,,11.789307,76.166712,,,,24/7,,,,31,openstreetmap,https://www.openstreetmap.org/way/802860814
+osm-node-7515049189,jurassic park,shop:bakery,,11.792037,76.167164,,,,,,,,31.4,openstreetmap,https://www.openstreetmap.org/node/7515049189
+osm-node-1467997146,Century,restaurant,,11.801044,76.003937,,,,,,,,30.7,openstreetmap,https://www.openstreetmap.org/node/1467997146
+osm-node-2625240814,Winner's,restaurant,Regional,11.803633,76.006801,,,,,,,,30.3,openstreetmap,https://www.openstreetmap.org/node/2625240814
+osm-way-257352738,Grace,restaurant,,11.803097,76.003812,,,,,,,,30.9,openstreetmap,https://www.openstreetmap.org/way/257352738
+osm-way-257529577,Indian Coffee house,restaurant,Regional,11.804136,76.005437,,,,Mo-Sa 07:00-20:00,,,,30.9,openstreetmap,https://www.openstreetmap.org/way/257529577
+osm-way-257352743,Winner's,shop:bakery,,11.802857,76.003496,,,,,,,,31,openstreetmap,https://www.openstreetmap.org/way/257352743
+osm-way-966343774,White fort,restaurant,,11.8101,76.014981,,,,,,,,29.7,openstreetmap,https://www.openstreetmap.org/way/966343774
+osm-node-5429288322,Pazhassi,restaurant,,11.82526,76.073656,,,,,,,,32,openstreetmap,https://www.openstreetmap.org/node/5429288322
+osm-node-7509778502,Gopika Coolbar,shop:bakery,,11.636556,76.306759,Gudalur-Sultan Bathery Rd,,,,,,,31.6,openstreetmap,https://www.openstreetmap.org/node/7509778502
+osm-way-257525372,Mary Matha College Canteen,restaurant,Regional,11.825891,76.032299,,,,,true,,,31.8,openstreetmap,https://www.openstreetmap.org/way/257525372
+osm-node-13105748709,Chekadi's 90's Kitchen,restaurant,Indian,11.839188,76.096773,"Kakkeri, Bavali, Mananthavady",,riparian.in,,,,,33.5,openstreetmap,https://www.openstreetmap.org/node/13105748709
+osm-node-8928795519,Nice Restaurant,restaurant,,11.820298,75.983169,,,,,,,,34.3,openstreetmap,https://www.openstreetmap.org/node/8928795519
+osm-node-4834362651,Anugraha Bakery and Cool Bar,shop:bakery,,11.847356,76.062986,,,,,,,,33.6,openstreetmap,https://www.openstreetmap.org/node/4834362651
+osm-node-4109607876,Sana Sweets,shop:confectionery,,11.847992,76.064539,,,,,,,,33.8,openstreetmap,https://www.openstreetmap.org/node/4109607876
+osm-node-4109181955,Pure Vegetarian,restaurant,,11.848878,76.065932,,,,,only,,,34,openstreetmap,https://www.openstreetmap.org/node/4109181955
+osm-way-804576067,Hotel,restaurant,,11.829229,75.976706,,,,,,,,35.8,openstreetmap,https://www.openstreetmap.org/way/804576067
+osm-way-796395928,Bafa Restaurant,restaurant,,11.831542,75.971344,,,,,,,,36.5,openstreetmap,https://www.openstreetmap.org/way/796395928
+osm-node-9575293317,Chilles restaurant,restaurant,,11.831546,75.971366,,,,,,,,36.5,openstreetmap,https://www.openstreetmap.org/node/9575293317
+osm-way-804576064,Chinju mess house,cafe,Coffee Shop; Chicken; Indian,11.832596,75.968234,,,,Mo-Sa 06:00-22:30,,,,36.8,openstreetmap,https://www.openstreetmap.org/way/804576064
+osm-node-7688380063,Kudumbasree Canteen,restaurant,,11.833294,75.968949,,,,,,,false,36.8,openstreetmap,https://www.openstreetmap.org/node/7688380063
+osm-node-11758401156,Wayanad Kitchen,restaurant,,11.860345,76.071742,,,,,,,,35.8,openstreetmap,https://www.openstreetmap.org/node/11758401156
+osm-node-7500678923,thattukada,fast_food,,11.83957,75.95574,,,,,,,,38.5,openstreetmap,https://www.openstreetmap.org/node/7500678923
+osm-node-7500678959,Bafa,restaurant,,11.840264,75.95435,,,,,,,,38.7,openstreetmap,https://www.openstreetmap.org/node/7500678959
+osm-node-7500678928,Chew nuts,food_court,,11.84032,75.954967,,,,,,,,38.6,openstreetmap,https://www.openstreetmap.org/node/7500678928
+osm-node-7500678933,coffee corner,food_court,,11.840488,75.95409,,,,,,,,38.7,openstreetmap,https://www.openstreetmap.org/node/7500678933
+osm-node-7500678920,Fresh bakers and Cofee coolbar,shop:bakery,,11.840319,75.953855,,,,,,,,38.8,openstreetmap,https://www.openstreetmap.org/node/7500678920
+osm-node-7500678918,Makkani restaurant,restaurant,,11.840329,75.954886,,,,,,,,38.7,openstreetmap,https://www.openstreetmap.org/node/7500678918
+osm-node-7472817495,Tea Shop,restaurant,,11.859009,76.181961,,,,,,,,41.8,openstreetmap,https://www.openstreetmap.org/node/7472817495
