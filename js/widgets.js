@@ -1,264 +1,203 @@
+// Weather and currency widgets shown in the page header.
+//
+// Weather: Open-Meteo (free, no key). High/low come from the API's daily
+// forecast; when the API cannot be reached the widget shows "--" rather than
+// invented numbers.
+// Currency: the dated snapshot in data/exchange-rates.json (ECB rates, refreshed
+// by scripts/update-rates.mjs) is shown first, then replaced by the live
+// Frankfurter rate when that call succeeds.
+var BW_SITE = 'https://www.bwstays.com/';
+var BW_DEFAULT_PLACE = { name: 'Kalpetta', lat: 11.6182, lon: 76.1722 };
+
 function initWeatherWidget() {
     updateDate();
     fetchWeatherData();
-    
     setInterval(fetchWeatherData, 30 * 60 * 1000);
 }
 
 function updateDate() {
-    const now = new Date();
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    
-    const monthElement = document.querySelector('.month');
-    const dayElement = document.querySelector('.day');
-    
+    var now = new Date();
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var monthElement = document.querySelector('.month');
+    var dayElement = document.querySelector('.day');
     if (monthElement && dayElement) {
         monthElement.textContent = months[now.getMonth()];
         dayElement.textContent = now.getDate();
     }
 }
 
-async function fetchWeatherData() {
+function bwWeatherPlace() {
     try {
-        const pageId = getCurrentPageId ? getCurrentPageId() : null;
-        
-        if (pageId && typeof siteData !== 'undefined') {
-            let locationData = null;
-            
-            for (const category in siteData) {
-                const item = siteData[category].find(loc => loc.id === pageId);
-                if (item) {
-                    locationData = item;
-                    break;
+        var pageId = typeof getCurrentPageId === 'function' ? Number(getCurrentPageId()) : NaN;
+        if (Number.isFinite(pageId) && typeof siteData !== 'undefined') {
+            for (var category in siteData) {
+                var item = siteData[category].find(function (loc) { return Number(loc.id) === pageId; });
+                if (item && item.latlong) {
+                    var parts = item.latlong.split(',').map(function (c) { return parseFloat(c.trim()); });
+                    if (Number.isFinite(parts[0]) && Number.isFinite(parts[1])) {
+                        return { name: String(item.name).trim(), lat: parts[0], lon: parts[1] };
+                    }
                 }
-            }
-            
-            if (locationData && locationData.latlong) {
-                const [lat, lon] = locationData.latlong.split(',').map(coord => parseFloat(coord.trim()));
-                const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
-                
-                if (!response.ok) {
-                    throw new Error(`Weather API error: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                updateWeatherDisplay(data, locationData.name);
-                return;
             }
         }
-        
-        const lat = 11.6182;
-        const lon = 76.1722;
-        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
-        
+    } catch (e) { /* fall through to the default */ }
+    return BW_DEFAULT_PLACE;
+}
+
+async function fetchWeatherData() {
+    var place = bwWeatherPlace();
+    try {
+        var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + place.lat + '&longitude=' + place.lon +
+            '&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=1';
+        var response = await fetch(url);
         if (!response.ok) {
-            throw new Error(`Weather API error: ${response.status}`);
+            throw new Error('Weather API error: ' + response.status);
         }
-        
-        const data = await response.json();
-        updateWeatherDisplay(data, 'Kalpetta');
+        updateWeatherDisplay(await response.json(), place.name);
     } catch (error) {
-        console.error('Error fetching weather data:', error);
-        updateWeatherDisplay(null, 'Kalpetta');
+        updateWeatherDisplay(null, place.name);
     }
 }
 
 function updateWeatherDisplay(weatherData, cityName) {
-    const temperatureElement = document.querySelector('.weather-temp');
-    const conditionElement = document.querySelector('.weather-condition');
-    const locationElement = document.querySelector('.weather-location');
-    const highLowElement = document.querySelector('.weather-high-low');
-    
+    var temperatureElement = document.querySelector('.weather-temp');
+    var conditionElement = document.querySelector('.weather-condition');
+    var locationElement = document.querySelector('.weather-location');
+    var highLowElement = document.querySelector('.weather-high-low');
+
+    if (locationElement) {
+        locationElement.textContent = cityName || 'Wayanad';
+    }
     if (weatherData && weatherData.current_weather) {
-        const temp = weatherData.current_weather.temperature;
+        var current = weatherData.current_weather;
         if (temperatureElement) {
-            temperatureElement.innerHTML = `${Math.round(temp)}<span class="temp-unit">°</span>`;
+            temperatureElement.innerHTML = Math.round(current.temperature) + '<span class="temp-unit">°</span>';
         }
-        
-        const weatherCode = weatherData.current_weather.weathercode;
-        const condition = getWeatherDescription(weatherCode);
         if (conditionElement) {
-            conditionElement.textContent = condition;
+            conditionElement.textContent = getWeatherDescription(current.weathercode);
         }
-        
-        if (locationElement) {
-            locationElement.textContent = cityName || 'New Delhi';
-        }
-        
         if (highLowElement) {
-            const high = Math.round(temp + 2);
-            const low = Math.round(temp - 9);
-            highLowElement.textContent = `H:${high}° L:${low}°`;
+            var daily = weatherData.daily || {};
+            var high = daily.temperature_2m_max && daily.temperature_2m_max[0];
+            var low = daily.temperature_2m_min && daily.temperature_2m_min[0];
+            highLowElement.textContent = (high != null && low != null)
+                ? 'H:' + Math.round(high) + '° L:' + Math.round(low) + '°'
+                : 'H:--° L:--°';
         }
     } else {
         if (temperatureElement) {
-            temperatureElement.innerHTML = `29<span class="temp-unit">°</span>`;
+            temperatureElement.innerHTML = '--<span class="temp-unit">°</span>';
         }
         if (conditionElement) {
-            conditionElement.textContent = 'Sunny';
-        }
-        if (locationElement) {
-            locationElement.textContent = cityName || 'New Delhi';
+            conditionElement.textContent = 'Weather unavailable';
         }
         if (highLowElement) {
-            highLowElement.textContent = 'H:31° L:20°';
+            highLowElement.textContent = 'H:--° L:--°';
         }
     }
 }
 
 function getWeatherDescription(weatherCode) {
-    const weatherDescriptions = {
-        0: 'Clear sky',
-        1: 'Mainly clear',
-        2: 'Partly cloudy',
-        3: 'Overcast',
-        45: 'Fog',
-        48: 'Depositing rime fog',
-        51: 'Light drizzle',
-        53: 'Moderate drizzle',
-        55: 'Dense drizzle',
-        56: 'Light freezing drizzle',
-        57: 'Dense freezing drizzle',
-        61: 'Slight rain',
-        63: 'Moderate rain',
-        65: 'Heavy rain',
-        66: 'Light freezing rain',
-        67: 'Heavy freezing rain',
-        71: 'Slight snow fall',
-        73: 'Moderate snow fall',
-        75: 'Heavy snow fall',
-        77: 'Snow grains',
-        80: 'Slight rain showers',
-        81: 'Moderate rain showers',
-        82: 'Violent rain showers',
-        85: 'Slight snow showers',
-        86: 'Heavy snow showers',
-        95: 'Thunderstorm',
-        96: 'Thunderstorm with slight hail',
-        99: 'Thunderstorm with heavy hail'
+    var weatherDescriptions = {
+        0: 'Clear sky', 1: 'Mainly clear', 2: 'Partly cloudy', 3: 'Overcast',
+        45: 'Fog', 48: 'Depositing rime fog',
+        51: 'Light drizzle', 53: 'Moderate drizzle', 55: 'Dense drizzle',
+        56: 'Light freezing drizzle', 57: 'Dense freezing drizzle',
+        61: 'Slight rain', 63: 'Moderate rain', 65: 'Heavy rain',
+        66: 'Light freezing rain', 67: 'Heavy freezing rain',
+        71: 'Slight snow fall', 73: 'Moderate snow fall', 75: 'Heavy snow fall', 77: 'Snow grains',
+        80: 'Slight rain showers', 81: 'Moderate rain showers', 82: 'Violent rain showers',
+        85: 'Slight snow showers', 86: 'Heavy snow showers',
+        95: 'Thunderstorm', 96: 'Thunderstorm with slight hail', 99: 'Thunderstorm with heavy hail'
     };
-    
     return weatherDescriptions[weatherCode] || 'Unknown';
 }
 
-function initCurrencyConverter() {
-    const fromCurrencySelect = document.getElementById('fromCurrency');
-    const convertedAmountElement = document.getElementById('result');
-    const fromCurrencyCodeElement = document.getElementById('fromCurrencyCode');
+var BW_CURRENCIES = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'SGD', 'CNY', 'AED'];
+var BW_CURRENCY_SYMBOLS = {
+    USD: '$', EUR: '€', GBP: '£', JPY: '¥', CHF: 'CHF', CAD: 'C$',
+    AUD: 'A$', SGD: 'S$', CNY: '¥', AED: 'د.إ'
+};
+var bwRateSnapshot = null;
 
+function initCurrencyConverter() {
+    var fromCurrencySelect = document.getElementById('fromCurrency');
+    var convertedAmountElement = document.getElementById('result');
+    var fromCurrencyCodeElement = document.getElementById('fromCurrencyCode');
     if (!fromCurrencySelect || !convertedAmountElement) {
         return;
     }
-    
-    function updateCurrencyCodeDisplay() {
+
+    function updateCurrencyIcon(currency) {
+        var currencyIcon = document.querySelector('.currency-icon text');
+        if (currencyIcon) {
+            currencyIcon.textContent = BW_CURRENCY_SYMBOLS[currency] || '$';
+        }
+    }
+    function refresh() {
         if (fromCurrencyCodeElement) {
             fromCurrencyCodeElement.textContent = fromCurrencySelect.value;
         }
         updateCurrencyIcon(fromCurrencySelect.value);
         convertCurrency(fromCurrencySelect, convertedAmountElement);
     }
-    
 
-    function updateCurrencyIcon(currency) {
-        const currencyIcon = document.querySelector('.currency-icon text');
-        if (currencyIcon) {
-            const currencySymbols = {
-                'USD': '$',
-                'EUR': '€',
-                'GBP': '£',
-                'JPY': '¥',
-                'CHF': '&#8355;',
-                'CAD': 'C$',
-                'AUD': 'A$',
-                'SGD': 'S$',
-                'CNY': '¥',
-                'AED': 'د.إ'
-            };
-            currencyIcon.textContent = currencySymbols[currency] || '$';
-        }
-    }
-    
-
-    fromCurrencySelect.addEventListener('change', updateCurrencyCodeDisplay);
-    
-    
-    const currencyOptions = [
-        { code: 'USD', name: 'USD - US Dollar' },
-        { code: 'EUR', name: 'EUR - Euro' },
-        { code: 'GBP', name: 'GBP - British Pound' },
-        { code: 'JPY', name: 'JPY - Japanese Yen' },
-        { code: 'CHF', name: 'CHF - Swiss Franc' },
-        { code: 'CAD', name: 'CAD - Canadian Dollar' },
-        { code: 'AUD', name: 'AUD - Australian Dollar' },
-        { code: 'SGD', name: 'SGD - Singapore Dollar' },
-        { code: 'CNY', name: 'CNY - Chinese Yuan' },
-        { code: 'AED', name: 'AED - UAE Dirham' }
-    ];
-    
+    var chosen = fromCurrencySelect.value || 'USD';
     fromCurrencySelect.innerHTML = '';
-    currencyOptions.forEach(currency => {
-        const option = document.createElement('option');
-        option.value = currency.code;
-        option.textContent = currency.code;
+    BW_CURRENCIES.forEach(function (code) {
+        var option = document.createElement('option');
+        option.value = code;
+        option.textContent = code;
         fromCurrencySelect.appendChild(option);
     });
-    
-    updateCurrencyCodeDisplay(); 
+    fromCurrencySelect.value = BW_CURRENCIES.indexOf(chosen) > -1 ? chosen : 'USD';
+    fromCurrencySelect.addEventListener('change', refresh);
+    refresh();
 }
 
-function populateCurrencyOptions(selectElement, currencyOptions) {
-    selectElement.innerHTML = '';
-    
-    currencyOptions.forEach(currency => {
-        const option = document.createElement('option');
-        option.value = currency.code;
-        option.textContent = currency.code;
-        selectElement.appendChild(option);
-    });
+async function bwLoadRateSnapshot() {
+    if (bwRateSnapshot) {
+        return bwRateSnapshot;
+    }
+    try {
+        var response = await fetch(BW_SITE + 'data/exchange-rates.json');
+        if (response.ok) {
+            bwRateSnapshot = await response.json();
+        }
+    } catch (e) { /* the live call below may still work */ }
+    return bwRateSnapshot;
 }
 
+function bwSetRate(element, value, note) {
+    element.textContent = value == null ? '--' : Number(value).toFixed(2);
+    element.title = note || '';
+}
 
 async function convertCurrency(fromCurrencySelect, convertedAmountElement) {
-    const fromCurrency = fromCurrencySelect.value;
-    const toCurrency = 'INR'; 
-
-    // Use updated static rates as the primary source
-    const staticRates = {
-        'USD': 87.83,
-        'EUR': 105.98,
-        'GBP': 117.27,
-        'JPY': 0.5756,
-        'CHF': 69.98,
-        'CAD': 122.86,
-        'AUD': 57.19,
-        'SGD': 66.17,
-        'CNY': 12.33,
-        'AED': 23.92
-    };
-
-    const rate = staticRates[fromCurrency];
-    if (rate) {
-        convertedAmountElement.textContent = rate.toFixed(2);
+    var from = fromCurrencySelect.value;
+    var snapshot = await bwLoadRateSnapshot();
+    if (snapshot && snapshot.rates && snapshot.rates[from]) {
+        bwSetRate(convertedAmountElement, snapshot.rates[from], 'ECB rate as of ' + snapshot.date);
     } else {
-        convertedAmountElement.textContent = '--';
+        bwSetRate(convertedAmountElement, null, 'Rate unavailable');
     }
-
+    // AED is not an ECB currency: it is pegged to USD at 3.6725
+    var base = from === 'AED' ? 'USD' : from;
     try {
-        const response = await fetch(`https://api.frankfurter.dev/v1/latest?amount=1&base=${fromCurrency}&symbols=${toCurrency}`);
-        
+        var response = await fetch('https://api.frankfurter.dev/v1/latest?base=' + base + '&symbols=INR');
         if (!response.ok) {
-            return; 
+            return;
         }
-        
-        const data = await response.json();
-        const liveRate = data.rates ? data.rates[toCurrency] : null;
-        
-        if (liveRate) {
-            convertedAmountElement.textContent = liveRate.toFixed(2);
+        var data = await response.json();
+        var live = data.rates && data.rates.INR;
+        if (live) {
+            // ignore the answer if the user switched currency while the request was in flight
+            if (fromCurrencySelect.value === from) {
+                bwSetRate(convertedAmountElement, from === 'AED' ? live / 3.6725 : live, 'ECB rate as of ' + data.date);
+            }
         }
     } catch (error) {
-        console.error('Error fetching currency rates:', error);
-        return;
+        /* keep the dated snapshot */
     }
 }
 
