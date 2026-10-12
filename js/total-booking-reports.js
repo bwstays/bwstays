@@ -12,9 +12,25 @@ const brandColors = {
     info: '#649da1'
 };
 const propertyConfig = {
-    villa1: { name: 'Nestle with Nature Villa', color: brandColors.primary },
-    villa2: { name: 'Hustle in Hisspeed Villa', color: brandColors.complementary }
+    all: { name: 'All villas', color: brandColors.primary },
+    villa1: { name: 'Luxury Villa 1 - Ground Floor', color: brandColors.primary },
+    villa2: { name: 'Luxury Villa 2 - First Floor', color: brandColors.complementary }
 };
+// The booking calendar records dates only; guest, party size and amount are null.
+function bwMoney(v) {
+    return v == null ? '\u2014' : '\u20b9' + Number(v).toLocaleString();
+}
+function bwNum(v) {
+    return v == null ? '\u2014' : String(v);
+}
+function bwText(v) {
+    return v == null || v === '' ? '\u2014' : String(v);
+}
+function bwNights(b) {
+    if (b.nights != null) return b.nights;
+    var a = Date.parse(b.checkIn), c = Date.parse(b.checkOut);
+    return isFinite(a) && isFinite(c) ? Math.max(1, Math.round((c - a) / 86400000)) : 1;
+}
 let allBookings = [];
 let filteredBookings = [];
 let monthlyChart = null;
@@ -27,7 +43,7 @@ $(document).ready(function() {
     initializePagination();
 });
 function loadBookingData() {
-    fetch('./data/booking-reports.json')
+    fetch('https://www.bwstays.com/data/booking-reports.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -36,6 +52,11 @@ function loadBookingData() {
         })
         .then(data => {
             if (data.bookings && Array.isArray(data.bookings)) {
+                if (data.note && !$('#bwReportNote').length) {
+                    $('#totalBookings').closest('.row').before(
+                        '<div id="bwReportNote" class="alert alert-info" role="note">' +
+                        $('<div>').text(data.note + ' Latest calendar entry: ' + (data.latest_entry || 'none') + '.').html() + '</div>');
+                }
                 allBookings = data.bookings;
                 filteredBookings = [...allBookings];
                 generateReport();
@@ -44,7 +65,7 @@ function loadBookingData() {
             }
         })
         .catch(error => {
-            allBookings = getSampleBookingData();
+            allBookings = [];
             filteredBookings = [...allBookings];
             generateReport();
         });
@@ -67,7 +88,7 @@ function applyFilters() {
     const property = $('#propertySelect').val();
     const status = $('#statusSelect').val();
     filteredBookings = allBookings.filter(booking => {
-        const bookingDate = new Date(booking.bookingDate);
+        const bookingDate = new Date(booking.bookingDate || booking.checkIn);
         const bookingYear = bookingDate.getFullYear().toString();
         const bookingMonth = (bookingDate.getMonth() + 1).toString();
         const yearMatch = (!year || bookingYear === year);
@@ -111,13 +132,15 @@ function generateReport() {
 }
 function updateSummaryCards() {
     const totalBookings = filteredBookings.length;
-    const totalRevenue = filteredBookings.reduce((sum, booking) => sum + booking.amount, 0);
-    const totalGuests = filteredBookings.reduce((sum, booking) => sum + booking.guests, 0);
-    const avgBookingValue = totalBookings > 0 ? totalRevenue / totalBookings : 0;
+    const withAmount = filteredBookings.filter(booking => booking.amount != null);
+    const withGuests = filteredBookings.filter(booking => booking.guests != null);
+    const totalRevenue = withAmount.reduce((sum, booking) => sum + booking.amount, 0);
+    const totalGuests = withGuests.reduce((sum, booking) => sum + booking.guests, 0);
+    const bookedNights = filteredBookings.filter(booking => booking.status !== 'closed').reduce((sum, booking) => sum + bwNights(booking), 0);
     $('#totalBookings').text(totalBookings);
-    $('#totalRevenue').text('₹' + totalRevenue.toLocaleString());
-    $('#totalGuests').text(totalGuests);
-    $('#avgBookingValue').text('₹' + Math.round(avgBookingValue).toLocaleString());
+    $('#totalRevenue').text(withAmount.length ? '₹' + totalRevenue.toLocaleString() : '—');
+    $('#totalGuests').text(withGuests.length ? totalGuests : '—');
+    $('#avgBookingValue').text(withAmount.length ? '₹' + Math.round(totalRevenue / withAmount.length).toLocaleString() : bookedNights + ' nights');
 }
 function renderCharts() {
     renderMonthlyChart();
@@ -143,7 +166,7 @@ function renderMonthlyChart() {
             };
         }
         monthlyData[monthKey].bookings++;
-        monthlyData[monthKey].revenue += booking.amount;
+        monthlyData[monthKey].revenue += booking.amount || 0;
     });
     const sortedMonths = Object.keys(monthlyData).sort();
     const labels = sortedMonths.map(key => monthlyData[key].label);
@@ -331,21 +354,17 @@ function populateBookingTable() {
     const currentPageData = filteredBookings.slice(startIndex, endIndex);
     currentPageData.forEach(booking => {
         const statusBadge = getStatusBadge(booking.status);
-        const propertyNames = {
-            'villa1': 'Nestle with Nature Villa',
-            'villa2': 'Hustle in Hisspeed Villa'
-        };
-        const propertyName = propertyNames[booking.propertyId] || booking.propertyName;
+        const propertyName = (propertyConfig[booking.propertyId] || {}).name || booking.propertyName;
         const row = `
             <tr>
                 <td>${booking.bookingId}</td>
                 <td>${propertyName}</td>
-                <td>${booking.guestName}</td>
+                <td>${bwText(booking.guestName)}</td>
                 <td>${formatDate(booking.checkIn)}</td>
                 <td>${formatDate(booking.checkOut)}</td>
-                <td>${booking.guests}</td>
+                <td>${bwNum(booking.guests)}</td>
                 <td>${statusBadge}</td>
-                <td>₹${booking.amount.toLocaleString()}</td>
+                <td>${bwMoney(booking.amount)}</td>
             </tr>
         `;
         tbody.append(row);
@@ -416,7 +435,8 @@ function getStatusBadge(status) {
         completed: 'Completed',
         confirmed: 'Confirmed',
         pending: 'Pending',
-        cancelled: 'Cancelled'
+        cancelled: 'Cancelled',
+        closed: 'Closed'
     };
     const text = labels[status] || status;
     return `<span class="badge" style="background-color: ${brandColors.primary}; color: #ffffff;">${text}</span>`;
@@ -456,31 +476,29 @@ function exportToPDF() {
         const status = $('#statusSelect option:selected').text() || 'All Status';
         doc.text(`Filters: Year: ${year}, Month: ${month}, Property: ${property}, Status: ${status}`, 20, 40);
         const totalBookings = filteredBookings.length;
-        const totalRevenue = filteredBookings.reduce((sum, booking) => sum + booking.amount, 0);
-        const totalGuests = filteredBookings.reduce((sum, booking) => sum + booking.guests, 0);
-        const avgBookingValue = totalBookings > 0 ? totalRevenue / totalBookings : 0;
+        const totalRevenue = filteredBookings.reduce((sum, booking) => sum + (booking.amount || 0), 0);
+        const hasAmounts = filteredBookings.some(booking => booking.amount != null);
+        const hasGuests = filteredBookings.some(booking => booking.guests != null);
+        const totalGuests = filteredBookings.reduce((sum, booking) => sum + (booking.guests || 0), 0);
+        const bookedNights = filteredBookings.filter(booking => booking.status !== 'closed').reduce((sum, booking) => sum + bwNights(booking), 0);
         doc.setFontSize(12);
         doc.text('Summary:', 20, 55);
         doc.setFontSize(10);
-        doc.text(`Total Bookings: ${totalBookings}`, 20, 65);
-        doc.text(`Total Revenue: ₹${totalRevenue.toLocaleString()}`, 20, 72);
-        doc.text(`Total Guests: ${totalGuests}`, 20, 79);
-        doc.text(`Average Booking Value: ₹${Math.round(avgBookingValue).toLocaleString()}`, 20, 86);
+        doc.text(`Calendar entries: ${totalBookings}`, 20, 65);
+        doc.text(`Booked nights: ${bookedNights}`, 20, 72);
+        doc.text(`Total Revenue: ${hasAmounts ? '₹' + totalRevenue.toLocaleString() : 'not recorded'}`, 20, 79);
+        doc.text(`Total Guests: ${hasGuests ? totalGuests : 'not recorded'}`, 20, 86);
         const tableData = filteredBookings.map(booking => {
-            const propertyNames = {
-                'villa1': 'Nestle with Nature Villa',
-                'villa2': 'Hustle in Hisspeed Villa'
-            };
-            const propertyName = propertyNames[booking.propertyId] || booking.propertyName;
+            const propertyName = (propertyConfig[booking.propertyId] || {}).name || booking.propertyName;
             return [
                 booking.bookingId,
                 propertyName,
-                booking.guestName,
+                bwText(booking.guestName),
                 formatDate(booking.checkIn),
                 formatDate(booking.checkOut),
-                booking.guests.toString(),
+                bwNum(booking.guests),
                 booking.status,
-                `₹${booking.amount.toLocaleString()}`
+                bwMoney(booking.amount)
             ];
         });
         if (typeof doc.autoTable !== 'function') {
@@ -531,54 +549,5 @@ function exportToPDF() {
     }
 }
 function getSampleBookingData() {
-    return [
-        {
-            bookingId: "BW2024001",
-            propertyId: "villa1",
-            propertyName: "Nestle with Nature Villa",
-            guestName: "Rajesh Kumar",
-            checkIn: "2024-01-15",
-            checkOut: "2024-01-18",
-            guests: 4,
-            status: "completed",
-            amount: 25000,
-            bookingDate: "2024-01-10"
-        },
-        {
-            bookingId: "BW2024002",
-            propertyId: "villa2",
-            propertyName: "Hustle in Hisspeed Villa",
-            guestName: "Priya Sharma",
-            checkIn: "2024-02-20",
-            checkOut: "2024-02-23",
-            guests: 6,
-            status: "confirmed",
-            amount: 35000,
-            bookingDate: "2024-02-15"
-        },
-        {
-            bookingId: "BW2024004",
-            propertyId: "villa1",
-            propertyName: "Nestle with Nature Villa",
-            guestName: "Sunita Gupta",
-            checkIn: "2024-04-05",
-            checkOut: "2024-04-08",
-            guests: 5,
-            status: "cancelled",
-            amount: 28000,
-            bookingDate: "2024-03-28"
-        },
-        {
-            bookingId: "BW2024005",
-            propertyId: "villa2",
-            propertyName: "Hustle in Hisspeed Villa",
-            guestName: "Vikram Singh",
-            checkIn: "2024-05-12",
-            checkOut: "2024-05-16",
-            guests: 8,
-            status: "completed",
-            amount: 42000,
-            bookingDate: "2024-05-01"
-        }
-    ];
+    return [];
 }
