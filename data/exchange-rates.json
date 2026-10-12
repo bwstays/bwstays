@@ -1,0 +1,18 @@
+{
+  "base": "INR",
+  "meaning": "rates[X] is the number of Indian rupees for 1 unit of X",
+  "date": "2026-10-09",
+  "source": "ECB reference rates via https://frankfurter.dev (AED derived from USD at the 3.6725 peg)",
+  "rates": {
+    "USD": 96.73,
+    "EUR": 108.3965,
+    "GBP": 127.89,
+    "JPY": 0.6113,
+    "CHF": 116.4,
+    "CAD": 67.996,
+    "AUD": 67.531,
+    "SGD": 75.551,
+    "CNY": 14.4549,
+    "AED": 26.339
+  }
+}
