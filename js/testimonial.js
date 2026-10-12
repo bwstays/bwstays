@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        // the booking page has two captcha widgets; use the one inside this form
+        const capEl = (id) => contactForm.querySelector('#' + id + ', #' + id + '-contact');
         contactForm.setAttribute('action', 'https://formsubmit.co/bwstays@gmail.com');
         contactForm.setAttribute('method', 'POST');
 
@@ -94,10 +96,10 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             hideMessage();
 
-            const num1 = parseInt(document.getElementById('captcha-num1').innerText);
-            const num2 = parseInt(document.getElementById('captcha-num2').innerText);
-            const userAnswer = parseInt(document.getElementById('captcha-answer').value);
-            const captchaError = document.getElementById('captcha-error');
+            const num1 = parseInt(capEl('captcha-num1').innerText);
+            const num2 = parseInt(capEl('captcha-num2').innerText);
+            const userAnswer = parseInt(capEl('captcha-answer').value);
+            const captchaError = capEl('captcha-error');
 
             if (userAnswer !== (num1 + num2)) {
                 captchaError.innerText = 'Incorrect captcha answer.';
@@ -138,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        const refreshCaptcha = document.getElementById('refresh-captcha');
+        const refreshCaptcha = capEl('refresh-captcha');
         if (refreshCaptcha) {
             refreshCaptcha.addEventListener('click', generateCaptcha);
         }
@@ -146,9 +148,9 @@ document.addEventListener('DOMContentLoaded', function () {
         function generateCaptcha() {
             const num1 = Math.floor(Math.random() * 10) + 1;
             const num2 = Math.floor(Math.random() * 10) + 1;
-            document.getElementById('captcha-num1').innerText = num1;
-            document.getElementById('captcha-num2').innerText = num2;
-            document.getElementById('captcha-answer').value = '';
+            capEl('captcha-num1').innerText = num1;
+            capEl('captcha-num2').innerText = num2;
+            capEl('captcha-answer').value = '';
         }
 
         generateCaptcha();
