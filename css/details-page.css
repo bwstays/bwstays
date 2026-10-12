@@ -7498,3 +7498,114 @@ button.faq-question .faq-question-text {
     padding-bottom: 3rem;
   }
 }
+
+/* Terms / legal page: reading layout with an index and one card per policy */
+.legal-page {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  text-align: left;
+}
+.legal-hero {
+  margin-bottom: 2.25rem;
+}
+.legal-hero h1 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.legal-hero p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+.legal-page [id] {
+  scroll-margin-top: 100px;
+}
+.legal-toc {
+  position: sticky;
+  top: 100px;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.legal-toc-title {
+  margin: 0 0 0.5rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.legal-toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.legal-toc a {
+  display: block;
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+}
+.legal-toc a:hover,
+.legal-toc a:focus-visible {
+  background: rgba(100, 161, 157, 0.3);
+  color: #fff;
+  text-decoration: none;
+}
+.legal-card {
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.legal-card details > summary {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style-position: inside;
+}
+.legal-card-title {
+  display: inline;
+  margin: 0;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.legal-card-title i {
+  margin-right: 0.6rem;
+  color: #64a19d;
+}
+.legal-body {
+  padding: 0 1.25rem 1.1rem;
+}
+.legal-body p {
+  max-width: 72ch;
+  margin-bottom: 0.9rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.legal-body p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .legal-toc {
+    position: static;
+  }
+  .legal-toc ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .legal-toc a {
+    padding: 0.25rem 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    font-size: 0.8rem;
+  }
+  .legal-page {
+    padding-top: 6rem;
+  }
+}
