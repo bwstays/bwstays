@@ -7373,3 +7373,79 @@ select#fromCurrency {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
 }
+
+/* Map pages (all-locations, all-food): compact header, title / filters / map share one column */
+.masthead.map-page {
+  min-height: 0;
+  padding: 6.5rem 0 2.5rem;
+}
+.masthead.map-page #fooding-top {
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+}
+.masthead.map-page #fooding-top h1 {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+}
+.masthead.map-page #mapID {
+  width: 56px !important;
+  margin: 0 auto 0.75rem !important;
+}
+.masthead.map-page .map-full,
+.masthead.map-page .bw-map-filters {
+  width: calc(100% - 2rem);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.masthead.map-page .map-full {
+  height: 68vh !important;
+  min-height: 380px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Category filter pills above the all-locations map */
+.bw-map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+.bw-map-pill {
+  padding: 0.2rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.bw-map-pill:hover,
+.bw-map-pill:focus-visible {
+  border-color: #fff;
+  outline: none;
+}
+.bw-map-pill.is-on {
+  border-color: #64a19d;
+  background: #64a19d;
+}
+@media (max-width: 767.98px) {
+  .masthead.map-page {
+    padding-top: 5.5rem;
+  }
+  .masthead.map-page .map-full {
+    height: 60vh !important;
+    min-height: 320px;
+  }
+  .bw-map-filters {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scrollbar-width: thin;
+  }
+}
