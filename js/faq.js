@@ -81,157 +81,146 @@ const faqData = [
     }
 ];
 
-let currentPage = 0;
-const itemsPerPage = 5;
-const totalPages = Math.ceil(faqData.length / itemsPerPage);
+// ---------------------------------------------------------------- FAQ accordion
+// One accessible accordion: each question is a real <button> (keyboard and
+// screen-reader friendly) with aria-expanded / aria-controls, a single answer
+// open at a time, and a search box that filters the list. No pagination.
+var faqSearchValue = '';
+
+function faqEscape(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+}
 
 function toggleFAQ() {
-    const faqSectionWrapper = document.querySelector('.faq-section-wrapper');
-    const faqContainer = document.getElementById('faq-container');
-    const faqToggle = document.getElementById('faq-toggle');
-    
-    if (faqSectionWrapper.style.display === 'none') {
-        faqSectionWrapper.style.display = 'block';
-        faqContainer.style.display = 'block';
-        faqToggle.innerHTML = 'Hide FAQ';
-        setTimeout(() => {
-            initializeFAQCarousel();
-        }, 100);
-        setTimeout(() => {
-            faqSectionWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 200);
-    } else {
-        faqSectionWrapper.style.display = 'none';
-        faqToggle.innerHTML = 'Frequently Asked Questions';
-    }
-}
-
-function initializeFAQCarousel() {
-    const carousel = document.getElementById('faq-carousel');
-    if (!carousel) {
+    var wrapper = document.querySelector('.faq-section-wrapper');
+    var container = document.getElementById('faq-container');
+    var toggle = document.getElementById('faq-toggle');
+    if (!wrapper || !toggle) {
         return;
     }
-    currentPage = 0;
-    carousel.innerHTML = '';
-    const faqContainer = document.getElementById('faq-container');
-    if (faqContainer) {
-        const existingFaqItems = faqContainer.querySelectorAll('.faq-item:not(#faq-carousel .faq-item)');
-        existingFaqItems.forEach(item => item.remove());
-    }
-    renderFAQPage();
-    updateNavigationButtons();
-}
-
-function renderFAQPage() {
-    const carousel = document.getElementById('faq-carousel');
-    const startIndex = currentPage * itemsPerPage;
-    const endIndex = Math.min(startIndex + itemsPerPage, faqData.length);
-    carousel.innerHTML = '';
-    for (let i = startIndex; i < endIndex; i++) {
-        const faq = faqData[i];
-        const faqItem = document.createElement('div');
-        faqItem.className = 'faq-item mb-3';
-        faqItem.innerHTML = `
-            <div class="faq-question bg-dark text-white p-3 rounded cursor-pointer">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h6 class="mb-0 font-weight-bold">${faq.question}</h6>
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </div>
-            </div>
-            <div class="faq-answer bg-light rounded-bottom">
-                <p class="mb-0">${faq.answer}</p>
-            </div>
-        `;
-        carousel.appendChild(faqItem);
-    }
-    
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
-            toggleAnswer(this);
-        });
-    });
-}
-
-function changeFAQPage(direction) {
-    const newPage = currentPage + direction;
-    if (newPage >= 0 && newPage < totalPages) {
-        currentPage = newPage;
-        renderFAQPage();
-        updateNavigationButtons();
-    }
-}
-
-function updateNavigationButtons() {
-    const prevBtn = document.getElementById('faq-prev');
-    const nextBtn = document.getElementById('faq-next');
-    const pageInfo = document.getElementById('faq-page-info');
-    if (prevBtn) prevBtn.disabled = currentPage === 0;
-    if (nextBtn) nextBtn.disabled = currentPage === totalPages - 1;
-    if (pageInfo) pageInfo.textContent = `Page ${currentPage + 1} of ${totalPages}`;
-}
-
-function toggleAnswer(questionElement) {
-    const answer = questionElement.nextElementSibling;
-    const icon = questionElement.querySelector('.faq-icon');
-    const allQuestions = document.querySelectorAll('.faq-question');
-    const allAnswers = document.querySelectorAll('.faq-answer');
-    allQuestions.forEach(q => {
-        if (q !== questionElement) {
-            q.classList.remove('active');
-            const qIcon = q.querySelector('.faq-icon');
-            if (qIcon) qIcon.classList.remove('fa-chevron-up');
-            if (qIcon) qIcon.classList.add('fa-chevron-down');
+    var closed = wrapper.style.display === 'none' || wrapper.style.display === '';
+    if (closed) {
+        wrapper.style.display = 'block';
+        if (container) {
+            container.style.display = 'block';
         }
-    });
-    allAnswers.forEach(a => {
-        if (a !== answer) {
-            a.classList.remove('show');
-        }
-    });
-    if (!answer.classList.contains('show')) {
-        answer.classList.add('show');
-        questionElement.classList.add('active');
-        if (icon) {
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-chevron-up');
-        }
+        toggle.textContent = 'Hide FAQ';
+        toggle.setAttribute('aria-expanded', 'true');
+        buildFAQ();
+        setTimeout(function () {
+            wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
     } else {
-        answer.classList.remove('show');
-        questionElement.classList.remove('active');
+        wrapper.style.display = 'none';
+        toggle.textContent = 'Frequently Asked Questions';
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+}
+
+function buildFAQ() {
+    var list = document.getElementById('faq-carousel');
+    if (!list) {
+        return;
+    }
+    var nav = document.querySelector('.faq-carousel-nav');
+    if (nav) {
+        nav.style.display = 'none'; // pagination is replaced by search
+    }
+    if (!document.getElementById('faq-search')) {
+        var box = document.createElement('div');
+        box.className = 'faq-search-box';
+        box.innerHTML = '<label for="faq-search" class="sr-only">Search the frequently asked questions</label>' +
+            '<input type="search" id="faq-search" class="form-control faq-search" autocomplete="off" ' +
+            'placeholder="Search questions, e.g. workation, family, price">' +
+            '<p id="faq-count" class="faq-count" role="status" aria-live="polite"></p>';
+        list.parentNode.insertBefore(box, list);
+        document.getElementById('faq-search').addEventListener('input', function (e) {
+            faqSearchValue = e.target.value;
+            renderFAQList();
+        });
+        list.addEventListener('click', function (e) {
+            var button = e.target.closest ? e.target.closest('.faq-question') : null;
+            if (button) {
+                toggleAnswer(button);
+            }
+        });
+    }
+    renderFAQList();
+}
+
+function renderFAQList() {
+    var list = document.getElementById('faq-carousel');
+    var count = document.getElementById('faq-count');
+    if (!list) {
+        return;
+    }
+    var words = faqSearchValue.toLowerCase().split(/\s+/).filter(Boolean);
+    var shown = 0;
+    var html = '';
+    faqData.forEach(function (faq, i) {
+        var text = (faq.question + ' ' + faq.answer).toLowerCase();
+        if (!words.every(function (w) { return text.indexOf(w) > -1; })) {
+            return;
+        }
+        shown++;
+        html += '<div class="faq-item mb-3">' +
+            '<h3 class="h6 mb-0"><button type="button" class="faq-question bg-dark text-white p-3 rounded" ' +
+            'id="faq-q-' + i + '" aria-expanded="false" aria-controls="faq-a-' + i + '">' +
+            '<span class="faq-question-text font-weight-bold">' + faqEscape(faq.question) + '</span>' +
+            '<i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i></button></h3>' +
+            '<div class="faq-answer bg-light rounded-bottom" id="faq-a-' + i + '" role="region" aria-labelledby="faq-q-' + i + '">' +
+            '<p class="mb-0">' + faqEscape(faq.answer) + '</p></div></div>';
+    });
+    list.innerHTML = html || '<p class="faq-empty text-center">No questions match your search. Try another word, or use the contact form below.</p>';
+    if (count) {
+        count.textContent = words.length ? shown + ' of ' + faqData.length + ' questions' : faqData.length + ' questions';
+    }
+}
+
+function toggleAnswer(button) {
+    var open = button.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('#faq-carousel .faq-question').forEach(function (q) {
+        q.setAttribute('aria-expanded', 'false');
+        q.classList.remove('active');
+        var icon = q.querySelector('.faq-icon');
         if (icon) {
             icon.classList.remove('fa-chevron-up');
             icon.classList.add('fa-chevron-down');
         }
+    });
+    document.querySelectorAll('#faq-carousel .faq-answer').forEach(function (a) {
+        a.classList.remove('show');
+    });
+    if (!open) {
+        button.setAttribute('aria-expanded', 'true');
+        button.classList.add('active');
+        var icon = button.querySelector('.faq-icon');
+        if (icon) {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        }
+        var answer = document.getElementById(button.getAttribute('aria-controls'));
+        if (answer) {
+            answer.classList.add('show');
+        }
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const faqSectionWrapper = document.querySelector('.faq-section-wrapper');
-    if (faqSectionWrapper) {
-        faqSectionWrapper.style.display = 'none';
+document.addEventListener('DOMContentLoaded', function () {
+    var wrapper = document.querySelector('.faq-section-wrapper');
+    if (wrapper) {
+        wrapper.style.display = 'none';
     }
-    
-    const faqContainer = document.getElementById('faq-container');
-    
-    if (faqContainer) {
-        const prevBtn = document.getElementById('faq-prev');
-        const nextBtn = document.getElementById('faq-next');
-        
-        if (prevBtn) {
-            prevBtn.addEventListener('click', function() {
-                changeFAQPage(-1);
-            });
-        }
-        
-        if (nextBtn) {
-            nextBtn.addEventListener('click', function() {
-                changeFAQPage(1);
-            });
-        }
+    var toggle = document.getElementById('faq-toggle');
+    if (toggle) {
+        toggle.setAttribute('role', 'button');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-controls', 'faq-container');
     }
-    
-    if (faqSectionWrapper && faqSectionWrapper.style.display !== 'none') {
-        initializeFAQCarousel();
+    // open directly from a #faq link
+    if (location.hash === '#faq' || location.hash === '#faq-heading') {
+        toggleFAQ();
     }
 });
