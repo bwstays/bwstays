@@ -51,9 +51,6 @@
 			<image:loc>https://www.bwstays.com/assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.webp</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://www.bwstays.com/assets/img/tribal/bbw-workation-uravu-thrikkaipetta-bamboo-wayanad-1.webp</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://www.bwstays.com/assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.webp</image:loc>
 		</image:image>
 		<image:image>
@@ -373,9 +370,6 @@
 	</image:image>
 
 
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/black-and-white-stays-brahmagiri-wayanad.avif</image:loc>
-	</image:image>
 
 
 	<image:image>
@@ -391,9 +385,6 @@
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-weekend-destination-cheengeri-hills.webp</image:loc>
 	</image:image>
 	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-stays-cheengeri-mala-wayanad.webp</image:loc>
-	</image:image>
-	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-hotel-rooms-cheengeri-hills-wayanad.webp</image:loc>
 	</image:image>
 
@@ -403,12 +394,6 @@
 	<loc>https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
 	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-service-villa-chembra-peak-wayanad.webp</image:loc>
-	</image:image>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-staycation-chembra-peak-lake.webp</image:loc>
-	</image:image>
-	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-destination-chembra-wayanad.webp</image:loc>
 	</image:image>
 	<image:image>
@@ -416,15 +401,6 @@
 	</image:image>
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-destination-chembra-wayanad.webp</image:loc>
-	</image:image>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-holiday-chembra-peak-lake-wayanad.webp</image:loc>
-	</image:image>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-homestay-chembra-wayanad.webp</image:loc>
-	</image:image>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-villa-staycation-chembra-wayanad.webp</image:loc>
 	</image:image>
 
     <priority>0.7</priority></url> 
@@ -465,9 +441,6 @@
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-kuruva-island-wayanad-2.webp</image:loc>
 	</image:image>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-stays-kuruva-wayanad-workation.webp</image:loc>
-	</image:image>
 
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-workation-kuruva-island-wayanad.webp</image:loc>
@@ -491,9 +464,6 @@
 <url>
 	<loc>https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/heritage/bw-pazhassi-tomb-heritage-wayanad.webp</image:loc>
-	</image:image> 
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/heritage/bw-stays-pazhassi-tomb-wayanad-resort.webp</image:loc>
 	</image:image> 
@@ -619,9 +589,6 @@
 <url>
 	<loc>https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/heritage/bw-stays-sunrise-valley-wayanad.webp</image:loc>
-	</image:image> 
 	 
 
     <priority>0.7</priority></url> 
@@ -774,12 +741,6 @@
 <url>
 	<loc>https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-coffee-estate-forest.webp</image:loc>
-	</image:image>  
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-chethalayam-waterfall-homestay.webp</image:loc>
-	</image:image>  
 		<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp</image:loc>
 	</image:image>    
@@ -823,9 +784,6 @@
 <url>
 	<loc>https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/trucking/bw-homestay-en-ooru-tribal-heritage-village-wayanad.webp</image:loc>
-	</image:image>  
 	 
  <priority>0.7</priority></url> 
 
@@ -963,9 +921,6 @@
 		<image:loc>https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-waterfall-wayanad.webp</image:loc>
 	</image:image> 
 	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/falls/bw-staycation-meenagadhi-church-wayanad.webp</image:loc>
-	</image:image> 
-	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-homestay-wayanad.webp</image:loc>
 	</image:image> 
 
@@ -996,9 +951,6 @@
 	 
 	  
 
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-city-tourist-phantom-rock-wayanad.webp</image:loc>
-	</image:image> 
 
 	<image:image>
 		<image:loc>https://www.bwstays.com/assets/img/romantic/bw-resort-phanthom-rock-wayanad.webp</image:loc>
@@ -1083,9 +1035,6 @@
 		<image:loc>https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantation-wayanad-1.webp</image:loc>
 	</image:image> 
 
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/plantation/bw-holiday-plan-edakkal-caves.webp</image:loc>
-	</image:image>  
 	 
  <priority>0.7</priority></url> 
 
@@ -1129,9 +1078,6 @@
 	<loc>https://www.bwstays.com/bw-tea-museum-wayanad.html</loc>
 	<lastmod>2025-07-07T07:16:39+00:00</lastmod>
 	 
-	<image:image>
-		<image:loc>https://www.bwstays.com/assets/img/museum/bw-service-apartment-soochipara-wayanad.webp</image:loc>
-	</image:image> 
 
 	 
 	 

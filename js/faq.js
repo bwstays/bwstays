@@ -5,7 +5,7 @@ const faqData = [
     },
     {
         question: "Get quote for co-living co-working space Wayanad",
-        answer: "For co-living and co-working space quotes, please contact us at +91-999-9999-9999 or WhatsApp us. Pricing varies based on duration, group size, and specific requirements. We offer competitive rates for both short-term and long-term stays."
+        answer: "For co-living and co-working space quotes, please contact us at +91-999-999-9999 or WhatsApp us. Pricing varies based on duration, group size, and specific requirements. We offer competitive rates for both short-term and long-term stays."
     },
     {
         question: "What is the connectivity like for Transport at BW Stays Wayanad?",
@@ -37,7 +37,7 @@ const faqData = [
     },
     {
         question: "Book a workation villa in Wayanad",
-        answer: "To book a workation villa, contact us at +91-999-9999-9999, WhatsApp +919999999999, or email bwstays@bwstays.com. We'll help you choose the perfect villa based on your group size, duration, and specific requirements."
+        answer: "To book a workation villa, contact us at +91-999-999-9999, WhatsApp +919999999999, or email bwstays@bwstays.com. We'll help you choose the perfect villa based on your group size, duration, and specific requirements."
     },
     {
         question: "What availability Wayanad rental stays",
