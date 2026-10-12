@@ -119,8 +119,8 @@ let iconOptions = {
     title:"BW Stays",
     icon:myIcon
 }
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).on('tileload', function(e) {
     e.tile.alt = 'BW Stays Kalpetta';
 }).addTo(map);
