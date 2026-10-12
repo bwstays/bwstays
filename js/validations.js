@@ -1,7 +1,7 @@
 	          // The booking page has two captcha widgets (reservation and contact
 	          // forms) that share element ids, so every lookup is scoped to its form.
 	          function bwCaptchaEl(form, id) {
-	              return form.querySelector('#' + id);
+	              return form.querySelector('#' + id + ', #' + id + '-contact');
 	          }
 	          function bwGenerateCaptcha(form) {
 	              const num1 = Math.floor(Math.random() * 10) + 1;
