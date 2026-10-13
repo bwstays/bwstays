@@ -8821,3 +8821,12 @@ body #language-selector {
   border-color: #3f7f7b;
   color: #fff;
 }
+
+/* Map pages: the hero is as tall as its content. The generic desktop rule
+   (.masthead {height:100vh}) made it shorter than the heading + map, so the map
+   overflowed into the contact section below. */
+.masthead.map-page {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
