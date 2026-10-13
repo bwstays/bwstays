@@ -71,7 +71,7 @@ const testCardData = {
                                     <div class="reviewer-details">
                                         <div class="name">${custname} (${rating} ) <i class="fas fa-star my-star-icon" id="top-star"></i> </div>
                                         <div class="rating-row">
-                                            <span class="stars" aria-label="5 out of 5 stars">
+                                            <span class="stars" role="img" aria-label="5 out of 5 stars">
                                                 <i class="fas fa-star my-star-icon"></i>
                                                 <i class="fas fa-star my-star-icon"></i>
                                                 <i class="fas fa-star my-star-icon"></i>
