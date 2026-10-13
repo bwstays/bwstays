@@ -8830,3 +8830,39 @@ body #language-selector {
   min-height: 0;
   overflow: visible;
 }
+
+/* Map pages (all-fooding, all-locations): readable heading, grayscale map tiles, aligned with the 1140px container */
+.masthead.map-page #fooding-top h1 {
+  max-width: 1110px;
+  margin: 0 auto 0.5rem !important;
+  padding: 0 15px;
+  line-height: 1.35;
+  letter-spacing: 0.1rem;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .masthead.map-page #fooding-top h1 {
+    font-size: 2rem !important;
+    line-height: 1.35;
+    letter-spacing: 0.12rem;
+  }
+}
+.masthead.map-page .map-full,
+.masthead.map-page .bw-map-filters {
+  width: calc(100% - 30px);
+  max-width: 1110px;
+}
+.masthead.map-page .map-full .leaflet-tile-pane {
+  filter: grayscale(100%);
+}
+
+/* match the Bootstrap container (content width = container - 30px) at every breakpoint */
+.masthead.map-page .map-full,
+.masthead.map-page .bw-map-filters,
+.masthead.map-page #fooding-top h1 { max-width: calc(100% - 30px); }
+@media (min-width: 576px) { .masthead.map-page .map-full, .masthead.map-page .bw-map-filters, .masthead.map-page #fooding-top h1 { max-width: 510px; } }
+@media (min-width: 768px) { .masthead.map-page .map-full, .masthead.map-page .bw-map-filters, .masthead.map-page #fooding-top h1 { max-width: 690px; } }
+@media (min-width: 992px) { .masthead.map-page .map-full, .masthead.map-page .bw-map-filters, .masthead.map-page #fooding-top h1 { max-width: 930px; } }
+@media (min-width: 1200px) { .masthead.map-page .map-full, .masthead.map-page .bw-map-filters, .masthead.map-page #fooding-top h1 { max-width: 1110px; } }
