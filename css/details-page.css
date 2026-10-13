@@ -8775,3 +8775,39 @@ footer.footer .footer-author p {
     border-radius: 10px;
   }
 }
+
+/* Colour contrast (WCAG AA, 4.5:1). White text on the brand teal #64a19d was
+   only 2.9:1, so buttons and badges use #3f7f7b (4.6:1); teal text on the dark
+   cards (3.9:1) uses a lighter tint of the same teal (5.9:1). */
+body .btn-primary,
+body .about-section .btn-primary,
+body .btn-primary:disabled,
+body .btn-primary.disabled {
+  background-color: #3f7f7b;
+  border-color: #3f7f7b;
+}
+body .btn-primary:hover,
+body .btn-primary:focus,
+body .btn-primary.focus,
+body .about-section .btn-primary:hover,
+body .btn-primary:not(:disabled):not(.disabled):active,
+body .btn-primary:not(:disabled):not(.disabled).active {
+  background-color: #2f6f6b;
+  border-color: #2f6f6b;
+}
+body #getStarted {
+  background-color: #3f7f7b;
+}
+body #getStarted:hover {
+  background-color: #2f6f6b;
+}
+body .bw-food-km {
+  background: #3f7f7b;
+}
+body #mainNav .navbar-toggler {
+  color: #3f7f7b;
+  border-color: #3f7f7b;
+}
+body .text-warning {
+  color: #8cc4c0 !important;
+}
