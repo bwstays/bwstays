@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         markers.push(marker);
         const diet = dietOf(p);
         const open = p.opening_hours ? '<span class="bw-food-chip" title="' + esc(p.opening_hours) + '">Hours</span>' : '';
-        return '<li><button type="button" class="bw-food-item" data-i="' + i + '" aria-label="Show ' + esc(p.name) + ' on the map">' +
+        return '<li><button type="button" class="bw-food-item" data-i="' + i + '" title="Show on the map">' +
           '<span class="bw-food-main"><span class="bw-food-name">' + esc(p.name) + '</span>' +
           '<span class="bw-food-meta">' + esc(kindOf(p)) + (diet ? ' &middot; ' + esc(diet) : '') + '</span></span>' +
           '<span class="bw-food-side">' + open + '<span class="bw-food-km">' + km + ' km</span></span>' +
