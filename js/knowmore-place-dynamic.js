@@ -152,7 +152,7 @@ rightArrow.addEventListener('mouseleave', () => {
           <span class="text-warning">★ ${currentItemData.rating}</span>
           <span class="text-white-50 ml-2">${currentItemData.distance}km from Kalpetta</span>
 		  <span class="text-white-50 ml-2">
-			<a href="${currentItemData.map}" target="_new" class="text-decoration-none text-white">
+			<a href="${currentItemData.map}" target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
 			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
 			</a>
 		  </span>
@@ -214,7 +214,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
               <div class="rating mb-2">
                   <span class="text-warning">★ ${item.rating}</span>
                   <span class="text-white-50 ml-2 "> <span class="text-warning">${item.distance} km </span> from Kalpetta</span>
-                    <span class="text-white-50 ml-2"><a href="${currentItemData.map}" target="_new" class="text-decoration-none text-white">
+                    <span class="text-white-50 ml-2"><a href="${currentItemData.map}" target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
 				  			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
 						</a>
 						</span>
@@ -274,7 +274,7 @@ function updateRightColumnOnly() {
           <span class="text-warning">★ ${item.rating}</span>
           <span class="text-white-50 ml-2">${item.distance}km from Kalpetta</span>
           <span class="text-white-50 ml-2">
-            <a href="${item.map}" target="_new" class="text-decoration-none text-white">
+            <a href="${item.map}" target="_new" rel="noopener" aria-label="${item.name} on Google Maps" class="text-decoration-none text-white">
               <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
             </a>
           </span>
@@ -413,7 +413,7 @@ function initializeSection(sectionType, data, sectionIndex) {
   const isOdd = sectionIndex % 2 === 1;
   if (sectionIndex - 1 < allSections.length) {
     sectionContainer = allSections[sectionIndex - 1];
-    const titleElement = sectionContainer.querySelector('.project-text h4');
+    const titleElement = sectionContainer.querySelector('.project-text h3, .project-text h4');
     if (titleElement) {
       sectionTitle = titleElement.textContent;
     } else {
@@ -460,8 +460,8 @@ function initializeSection(sectionType, data, sectionIndex) {
     return;
   }
   textContainer.innerHTML = '';
-  const titleElement = document.createElement('h4');
-  titleElement.className = 'text-white';
+  const titleElement = document.createElement('h3');
+  titleElement.className = 'h4 text-white';
   titleElement.textContent = sectionTitle;
   //alert(sectionIndex);
   //titleElement.setAttribute('data-i18n','disc.item'+sectionIndex);
