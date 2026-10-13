@@ -1,0 +1,72 @@
+name: Refresh community data
+
+# Rebuilds the OpenStreetMap-derived data (places to eat, driving distances),
+# the booking report and everything generated from them (MCP files, map data,
+# search index). Nothing is pushed to main: if anything really changed, the job
+# opens a pull request so the new figures can be reviewed before they go live.
+# Free: OpenStreetMap Overpass + OSRM, no API keys.
+on:
+  schedule:
+    - cron: '41 4 2 * *'   # 04:41 UTC on the 2nd of each month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # If an upstream service is down the step fails and nothing is committed.
+      - name: Rebuild food places
+        run: node scripts/build-food.mjs
+      - name: Rebuild driving distances
+        run: node scripts/build-distances.mjs
+
+      - name: Did the data really change?
+        id: diff
+        run: |
+          # every generated file carries a "generated" date; ignore that line
+          if git diff --quiet -I'"?generated"?' -- data/food-places.json data/food-places.csv data/nearbylocationsdata.js; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "no real change in food or distance data"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Regenerate derived files
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          node scripts/build-booking-report.mjs
+          node scripts/generate-mcp.mjs
+          node scripts/build-map-data.mjs
+          node scripts/build-search-index.mjs
+          node scripts/check.mjs
+
+      - name: Open a pull request
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="data-refresh-$(date -u +%Y-%m)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$branch"
+          git add -A
+          git commit -m "Refresh food places and driving distances ($(date -u +%Y-%m))"
+          git push --force origin "$branch"
+          gh pr create --base main --head "$branch" \
+            --title "Refresh food places and driving distances ($(date -u +%Y-%m))" \
+            --body "Monthly rebuild from OpenStreetMap (Overpass + OSRM), with the MCP files, map data and search index regenerated. Review the data diff, then merge. Data (c) OpenStreetMap contributors, ODbL." \
+            || echo "A pull request for $branch already exists, or PR creation is not allowed for Actions; the branch has been pushed."
