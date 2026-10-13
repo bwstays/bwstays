@@ -522,7 +522,7 @@ function initializeSection(sectionType, data, sectionIndex) {
     const tempContent = document.createElement('div');
     tempContent.className = 'tab-content-temp';
     tempContent.innerHTML = `
-      <h5 class="text-white mb-1" style="font-size: 1rem;">${currentItem.name} (${currentItem.rating}★)</h5>
+      <h4 class="text-white mb-1" style="font-size: 1rem;">${currentItem.name} (${currentItem.rating}★)</h4>
       <p class="mb-1 text-white-50" style="font-size: 0.8rem; line-height: 1.2;">${currentItem.description.substring(0,50)}...</p>
       <div class="mb-1 text-white-50" style="font-size: 0.8rem;">
         <i class="fas fa-times me-1" style="color: #64a19d;"></i> Holiday: ${currentItem.holidays}
