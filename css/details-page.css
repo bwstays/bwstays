@@ -8811,3 +8811,13 @@ body #mainNav .navbar-toggler {
 body .text-warning {
   color: #8cc4c0 !important;
 }
+
+/* More colour contrast: .text-white-50 (4.2:1 on the dark cards) and the language selector */
+body .text-white-50 {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+body #language-selector {
+  background-color: #3f7f7b;
+  border-color: #3f7f7b;
+  color: #fff;
+}
