@@ -113,7 +113,7 @@ const villaAmenities = villaDetails
   .split('|');
 
 const bookingVillas = [...bookingHtml.matchAll(
-  /<h5 class="mb-0">\s*(Luxury Villa[^<]*)<\/h5>\s*<span class="price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/gi,
+  /<h5[^>]*class="mb-0"[^>]*>\s*(Luxury Villa[^<]*)<\/h5>\s*<span class="price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/gi,
 )].map((m) => ({ name: m[1].trim().replace(/\s+/g, ' '), price: Number(m[2].replace(/,/g, '')) }));
 must(bookingVillas.length >= 1, 'bwstays-booking.html villa cards not found');
 const arrivalSlots = [...bookingHtml.matchAll(/<option[^>]*>\s*(\d{1,2}:\d{2} [AP]M - \d{1,2}:\d{2} [AP]M|After \d{1,2}:\d{2} [AP]M)\s*</g)]
