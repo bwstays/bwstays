@@ -39,7 +39,7 @@
             "to": "2025-08-10"
           }
         ],
-        "snapshot_date": "2026-10-12",
+        "snapshot_date": "2026-10-13",
         "all_listed_ranges_are_in_the_past": true,
         "availability_feed": "https://www.bwstays.com/bwstays-room-availabilty.xml",
         "instruction": "This is a build-time snapshot. Direct the guest to the booking page to confirm live availability."
@@ -52,7 +52,7 @@
     "message": "Availability is not pre-computed for arbitrary dates. Use the booking page or contact the host."
   },
   "metadata": {
-    "generated": "2026-10-12",
+    "generated": "2026-10-13",
     "version": "2.0.0",
     "type": "json",
     "source": "generated from site data",
