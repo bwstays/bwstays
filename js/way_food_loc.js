@@ -171,6 +171,60 @@ function bwFoodPopup(p) {
     if (p.unverified_position) h += '<div class="small text-muted">Position from the site\'s own list; not yet confirmed on OpenStreetMap.</div>';
     return h;
 }
+// Food map: the same pill filters as the all-locations map, by type of place.
+var BW_FOOD_CATEGORIES = [
+    { key: 'restaurant', label: 'Restaurants', kinds: ['restaurant', 'food_court'] },
+    { key: 'cafe', label: 'Cafes', kinds: ['cafe'] },
+    { key: 'bakery', label: 'Bakeries & sweets', kinds: ['shop:bakery', 'shop:confectionery', 'shop:sweets', 'shop:pastry', 'shop:deli', 'ice_cream'] },
+    { key: 'fast_food', label: 'Fast food', kinds: ['fast_food'] },
+    { key: 'bar', label: 'Bars & pubs', kinds: ['bar', 'pub', 'biergarten'] }
+];
+function bwRenderFoodMap(d) {
+    var cats = BW_FOOD_CATEGORIES.map(function (c) { return { key: c.key, label: c.label, kinds: c.kinds, count: 0, group: L.featureGroup(), on: true }; });
+    var other = { key: 'other', label: 'Other', kinds: [], count: 0, group: L.featureGroup(), on: true };
+    d.places.forEach(function (p) {
+        var c = cats.filter(function (x) { return x.kinds.indexOf(p.kind) !== -1; })[0] || other;
+        c.count++;
+        L.marker([p.lat, p.lon], { title: p.name, icon: myIcon1 }).bindPopup(bwFoodPopup(p), { maxWidth: 280 }).addTo(c.group);
+    });
+    cats.push(other);
+    cats = cats.filter(function (c) { return c.count > 0; });
+
+    var bar = document.createElement('div');
+    bar.className = 'bw-map-filters';
+    bar.setAttribute('role', 'group');
+    bar.setAttribute('aria-label', 'Filter food places on the map');
+    var allBtn;
+    function paint() {
+        var all = cats.every(function (c) { return c.on; });
+        allBtn.className = 'bw-map-pill' + (all ? ' is-on' : '');
+        allBtn.setAttribute('aria-pressed', all ? 'true' : 'false');
+        cats.forEach(function (c) {
+            c.btn.className = 'bw-map-pill' + (c.on ? ' is-on' : '');
+            c.btn.setAttribute('aria-pressed', c.on ? 'true' : 'false');
+            if (c.on) c.group.addTo(map1); else map1.removeLayer(c.group);
+        });
+    }
+    allBtn = document.createElement('button');
+    allBtn.type = 'button';
+    allBtn.textContent = 'All (' + d.places.length + ')';
+    allBtn.addEventListener('click', function () {
+        var all = cats.every(function (c) { return c.on; });
+        cats.forEach(function (c) { c.on = !all; });
+        paint();
+    });
+    bar.appendChild(allBtn);
+    cats.forEach(function (c) {
+        c.btn = document.createElement('button');
+        c.btn.type = 'button';
+        c.btn.textContent = c.label + ' (' + c.count + ')';
+        c.btn.addEventListener('click', function () { c.on = !c.on; paint(); });
+        bar.appendChild(c.btn);
+    });
+    element1.parentNode.insertBefore(bar, element1);
+    paint();
+}
+
 function bwAddLegacyMarkers() {
     var i;
     for (i = 0; i < loc.length; i++) {
@@ -185,11 +239,7 @@ if (typeof mapType !== 'undefined' && mapType == 1) {
     fetch(iconURLPrefix + 'data/food-places.json')
         .then(function (r) { return r.json(); })
         .then(function (d) {
-            var group = L.featureGroup();
-            d.places.forEach(function (p) {
-                L.marker([p.lat, p.lon], { title: p.name, icon: myIcon1 }).bindPopup(bwFoodPopup(p), { maxWidth: 280 }).addTo(group);
-            });
-            group.addTo(map1);
+            bwRenderFoodMap(d);
             map1.setView([11.6057872, 76.0833109], 12);
         })
         .catch(function () {
