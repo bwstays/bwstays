@@ -208,6 +208,10 @@ node scripts/generate-mcp.mjs      # then regenerate the MCP files
 - `.github/workflows/refresh-rates.yml` (1st of the month): exchange rates, committed to main.
 - `.github/workflows/refresh-data.yml` (2nd of the month): food places and driving distances, then the booking report, MCP files, map data and search index. It opens a pull request (branch `data-refresh-YYYY-MM`) only when the OpenStreetMap data really changed; nothing reaches main without review. Run it by hand from the Actions tab (workflow_dispatch).
 
+### Icons (Font Awesome)
+
+Font Awesome Free 5.15.1 is self-hosted as a web font: `css/fontawesome.min.css` plus `assets/fonts/fontawesome/*.woff2` (solid, brands, regular), loaded by a `<link>` in each page's head. The old `all.min.js` (SVG-with-JS) is no longer used, so icons are plain `<i class="fas fa-...">` elements and CSS rules that target `i` apply. To add icons from a newer Font Awesome release, replace the css and the three woff2 files together.
+
 ### Other generated data and checks
 
 ```
