@@ -126,6 +126,7 @@ function createPlaceCard(place) {
                     </div>
                 </div>
             </div>
+        </div>
     `;
 }
 {}
