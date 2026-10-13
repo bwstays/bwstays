@@ -203,6 +203,11 @@ node scripts/generate-mcp.mjs      # then regenerate the MCP files
 - Places whose coordinates cannot be trusted keep their historical distances or stay 0 (unknown); they are listed in `locations.meta`.
 - Attribution: data (c) OpenStreetMap contributors, ODbL.
 
+### Scheduled refreshes
+
+- `.github/workflows/refresh-rates.yml` (1st of the month): exchange rates, committed to main.
+- `.github/workflows/refresh-data.yml` (2nd of the month): food places and driving distances, then the booking report, MCP files, map data and search index. It opens a pull request (branch `data-refresh-YYYY-MM`) only when the OpenStreetMap data really changed; nothing reaches main without review. Run it by hand from the Actions tab (workflow_dispatch).
+
 ### Other generated data and checks
 
 ```
