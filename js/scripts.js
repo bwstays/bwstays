@@ -99,7 +99,7 @@ var options = {
 "brandSetting":{
 	"brandName":"Wati",
 	"brandSubTitle":"undefined",
-	"brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+	"brandImg":"https://www.bwstays.com/assets/img/icons/bw.svg",
 	"welcomeText":"Hi there!\nHow can I help you?",
 	"messageText":"Hello, %0A I have a question about {{page_link}}",
 	"backgroundColor":"#64a19d",
