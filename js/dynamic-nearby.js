@@ -99,17 +99,17 @@ function createPlaceCard(place) {
     const imageUrl = place.image || iconURLPrefix+'assets/img/villa1/demo-image-02.webp';
     const knowmoreUrl = place.knowmore || '#';
     return `
-        <a  id="knowmore" href="${knowmoreUrl}" class="text-decoration-none text-white"><div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="card nearby-card h-100 border-0" style="border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease;"><div class="card-img-top">
-                    <a href="${knowmoreUrl}" class="text-decoration-none text-white"><img title="Black and White Stays Service Villa"  alt="Information about places in Wayanad" src="${imageUrl}" class="img-fluid" alt="${place.name}"  loading="lazy"  style="width: 100%; height: 160px; object-fit: cover;"></a> </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="card nearby-card h-100 border-0 position-relative" style="border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease;"><div class="card-img-top">
+                    <a href="${knowmoreUrl}" tabindex="-1" aria-hidden="true" class="text-decoration-none text-white"><img title="Black and White Stays Service Villa" src="${imageUrl}" class="img-fluid" alt="${place.name}"  loading="lazy"  style="width: 100%; height: 160px; object-fit: cover;"></a> </div>
                 <div class="card-body p-3">
                     <div class="d-flex">
                         <div style="flex: 1;">
                             <div class="d-flex justify-content-between align-items-start mb-1">
-                                <a href="${knowmoreUrl}" class="text-decoration-none text-white"><h3 class="h6 card-title mb-0" style="font-size: 0.85rem; word-wrap: break-word;">
+                                <a href="${knowmoreUrl}" class="text-decoration-none text-white stretched-link"><h3 class="h6 card-title mb-0" style="font-size: 0.85rem; word-wrap: break-word;">
                                      ${place.name}
                                 </h3></a>
-                                <a href="${place.map}" target="_new" rel="noopener" aria-label="${place.name} on Google Maps" class="ms-2" style="background: rgba(255,255,255,0.9); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); flex-shrink: 0;">
+                                <a href="${place.map}" target="_new" rel="noopener" aria-label="${place.name} on Google Maps" class="ms-2" style="position: relative; z-index: 2; background: rgba(255,255,255,0.9); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); flex-shrink: 0;">
                                     <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
                                 </a>
                             </div>
@@ -126,7 +126,6 @@ function createPlaceCard(place) {
                     </div>
                 </div>
             </div>
-        </div></a>
     `;
 }
 {}
