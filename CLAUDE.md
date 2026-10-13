@@ -210,7 +210,7 @@ node scripts/generate-mcp.mjs      # then regenerate the MCP files
 
 ### Icons (Font Awesome)
 
-Font Awesome Free 5.15.1 is self-hosted as a web font: `css/fontawesome.min.css` plus `assets/fonts/fontawesome/*.woff2` (solid, brands, regular), loaded by a `<link>` in each page's head. The old `all.min.js` (SVG-with-JS) is no longer used, so icons are plain `<i class="fas fa-...">` elements and CSS rules that target `i` apply. To add icons from a newer Font Awesome release, replace the css and the three woff2 files together.
+Font Awesome Free 5.15.1 is self-hosted as a web font: `css/fontawesome.min.css` plus `assets/fonts/fontawesome/*.woff2` (solid, brands, regular), loaded by a `<link>` in each page's head. The old `all.min.js` (SVG-with-JS) is no longer used, so icons are plain `<i class="fas fa-...">` elements and CSS rules that target `i` apply. The css and fonts are a subset holding only the icons the site uses (about 7 KB css + 9 KB fonts instead of 58 KB + 170 KB). After adding an icon (`fa-...`) anywhere, run `python scripts/build-fontawesome.py` (needs `pip install fonttools brotli`) and then `node scripts/version-assets.mjs`. The unmodified Font Awesome 5.15.1 sources are kept in `scripts/fontawesome-src/`.
 
 ### Other generated data and checks
 
