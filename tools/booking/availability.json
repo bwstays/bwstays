@@ -7,38 +7,8 @@
         "property": "all"
       },
       "output": {
-        "booked_ranges": [
-          {
-            "from": "2025-08-16",
-            "to": "2025-08-16"
-          },
-          {
-            "from": "2025-08-17",
-            "to": "2025-08-17"
-          },
-          {
-            "from": "2025-08-18",
-            "to": "2025-08-18"
-          }
-        ],
-        "closed_ranges": [
-          {
-            "from": "2025-08-04",
-            "to": "2025-08-04"
-          },
-          {
-            "from": "2025-08-05",
-            "to": "2025-08-05"
-          },
-          {
-            "from": "2025-08-06",
-            "to": "2025-08-06"
-          },
-          {
-            "from": "2025-08-10",
-            "to": "2025-08-10"
-          }
-        ],
+        "booked_ranges": [],
+        "closed_ranges": [],
         "snapshot_date": "2026-10-14",
         "all_listed_ranges_are_in_the_past": true,
         "availability_feed": "https://www.bwstays.com/bwstays-room-availabilty.xml",

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["new-page.css"],
-  "sourcesContent": ["#contact-divider,\r\n[id^=\"contact-divider\"]{\r\n    width: 22% !important;\r\n    margin: 0 auto !important;\r\n    border-radius: 10% !important;\r\n    margin-bottom: 20px !important;\r\n   \r\n}\r\n\r\n/**\r\n#content-divider{\r\n    width: 22% !important;\r\n    margin: 0 auto !important;\r\n    border-radius: 10% !important;\r\n    margin-bottom: 20px !important;\r\n   \r\n}\r\n*/\r\n/* \r\n*{\r\n    border: 1px solid red;\r\n} */"],
+  "sourcesContent": ["#contact-divider,\n[id^=\"contact-divider\"]{\n    width: 22% !important;\n    margin: 0 auto !important;\n    border-radius: 10% !important;\n    margin-bottom: 20px !important;\n   \n}\n\n/**\n#content-divider{\n    width: 22% !important;\n    margin: 0 auto !important;\n    border-radius: 10% !important;\n    margin-bottom: 20px !important;\n   \n}\n*/\n/* \n*{\n    border: 1px solid red;\n} */"],
   "mappings": "AAAA,CAAC,gBACD,CAAC,qBACG,MAAO,cAFX,OAGY,EAAE,KAEK,eALnB,cAImB,aAGnB",
   "names": []
 }
