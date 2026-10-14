@@ -7777,3 +7777,20 @@ body .reviews-title > .border-bottom.border-primary,
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(100, 161, 157, 0.4);
 }
+
+/* booking page: centred "Get in touch" accent line, and the Guest Experiences line matches
+   the other sub-heading accents (short, 2px, left aligned) */
+#testimonial #contact-divider-4 {
+  width: 64px !important;
+  margin: 0.5rem auto 1.25rem !important;
+  border-bottom-width: 2px !important;
+  align-self: center;
+}
+#signup #contact-divider-6,
+#contact-divider-6 {
+  width: 56px !important;
+  margin: 0 0 1rem 0 !important;
+  border-bottom-width: 2px !important;
+  align-self: flex-start;
+  flex: 0 0 auto;
+}
