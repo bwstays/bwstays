@@ -1,5 +1,9 @@
 const faqData = [
     {
+        question: "What is the cancellation and refund policy at BW Stays Wayanad?",
+        answer: "Standard dates: cancel 15 or more days before check-in for a full refund (less payment-gateway or bank charges), 7 to 14 days before for a 50% refund, and less than 7 days before or no-show for no refund. Holiday and peak-season stays (public holidays, festival weekends, 20 December to 5 January): 30 or more days before for a full refund, 15 to 29 days before for 50%, and less than 15 days before or no-show for no refund. You can move a confirmed booking once, free of charge, up to 7 days before check-in, subject to availability. Refunds are paid back to the original payment method within 7 to 10 working days. Full details: https://www.bwstays.com/footer.html#cancellation"
+    },
+    {
         question: "Who owns Black & White Workations Wayanad?",
         answer: "Black & White Workations Wayanad is owned and operated by BW Stays, a hospitality company specializing in workation and co-living spaces in scenic locations across India."
     },
