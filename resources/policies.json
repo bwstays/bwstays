@@ -16,8 +16,19 @@
       "All parts of the Terms and Conditions, and the Acceptance of Risk release, shall be governed in all respects by and interpreted in accordance with the law within India.",
       "By checking the Terms and Conditions box on the reservation form you certify that you have read, fully understand and agree to abide by the Terms and Conditions aforementioned."
     ],
+    "cancellations_and_refunds": [
+      "To cancel or change a booking, write to us from the email address or contact form used for the booking, with your name and stay dates. The date and time we receive your request is the cancellation date.",
+      "Standard dates. Cancelled 15 or more days before check-in: full refund of the amount paid, less any payment-gateway or bank charges. Cancelled 7 to 14 days before check-in: 50% of the amount paid is refunded. Cancelled less than 7 days before check-in, or no-show: no refund.",
+      "Holiday and peak-season stays. A stay is a holiday booking if any night falls on a public holiday, a festival weekend or between 20 December and 5 January. Cancelled 30 or more days before check-in: full refund, less payment-gateway or bank charges. Cancelled 15 to 29 days before check-in: 50% refund. Cancelled less than 15 days before check-in, or no-show: no refund.",
+      "Changing dates. You may move a confirmed booking to other dates once, free of charge, up to 7 days before check-in, subject to availability. Any difference in the rate is payable.",
+      "Early departure. Unused nights are not refunded.",
+      "If we cancel. If bw stays cancels a booking, you receive a full refund of everything you paid, or you may choose new dates.",
+      "Weather and events beyond our control. If floods, landslides, road closures or similar events make the stay impossible, we will offer you alternative dates.",
+      "Refund timing. Approved refunds go back to the original payment method within 7 to 10 working days."
+    ],
+    "cancellation_url": "https://www.bwstays.com/footer.html#cancellation",
     "privacy": "We respect your privacy. Any and all the information collected on this site will be kept strictly confidential and will not be sold, reused, rented, disclosed, or loaned. Any information you give us will be held with the utmost care and will not be used in ways that you have not consented to. If you have any questions, please feel free to contact us.",
-    "note": "Quoted verbatim. Cancellation and refund specifics are referenced on the booking page but not spelled out there."
+    "note": "Quoted verbatim from footer.html."
   },
   "metadata": {
     "generated": "2026-10-14",
