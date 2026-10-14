@@ -67,11 +67,6 @@
 }
 
 /* Style for the route lines */
-.route-line {
-    stroke: #4285F4;
-    stroke-width: 3;
-    stroke-opacity: 0.8;
-}
 
 /* Style for the markers */
 .custom-marker {
@@ -79,17 +74,5 @@
     height: 32px;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-.bw-marker {
-    background-image: url('https://www.bwstays.com/assets/img/logo/bw.png');
-}
-
-.location-marker {
-    background-image: url('https://www.bwstays.com/assets/img/logo/pin-drop.png');
-}
-
-.padding-top-120 {
-  padding-top: 120px;
 }
 
