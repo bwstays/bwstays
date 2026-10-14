@@ -3325,7 +3325,7 @@ const siteData = {
       distance: "10",
       transport: "Public",
       latlong: "",
-      map: "",
+      map: "https://www.google.com/maps/search/?api=1&query=Spices+Kalpetta+Wayanad+Kerala",
       rating: "4.5",
       hrs: "2",
       fee: "0",
@@ -3344,7 +3344,7 @@ const siteData = {
       ],
 
       type: "shopping",
-      knowmore: "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
+      knowmore: "https://www.google.com/maps/search/?api=1&query=Spices+Kalpetta+Wayanad+Kerala",
 
       duration: "1-2 Hours",
       www: "",
@@ -3382,7 +3382,7 @@ const siteData = {
       ],
 
       type: "shopping",
-      knowmore: "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
+      knowmore: "https://www.google.com/maps?q=11.603319,76.083006",
 
       duration: "1-2 Hours",
       www: "",
