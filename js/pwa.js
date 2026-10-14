@@ -26,7 +26,7 @@
     if (styleEl) return;
     styleEl = document.createElement('style');
     styleEl.textContent =
-      '.bw-pwa-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:84px;z-index:1050;max-width:min(520px,calc(100vw - 24px));' +
+      '.bw-pwa-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:1050;max-width:min(520px,calc(100vw - 24px));' +
       'width:max-content;background:#111;color:#fff;border-radius:12px;padding:10px 14px;font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;' +
       'box-shadow:0 6px 24px rgba(0,0,0,.35);display:flex;gap:10px;align-items:center;flex-wrap:wrap}' +
       '.bw-pwa-bar button{border:0;border-radius:8px;padding:7px 12px;font:inherit;cursor:pointer}' +
@@ -165,17 +165,21 @@
     if (el) el.remove();
   });
 
+  // iOS has no install prompt API. Safari, Chrome, Firefox and Edge on iOS 16.4+ can all
+  // "Add to Home Screen" from the share menu, so show a short how-to in any of them.
   function iosHint() {
     var ua = window.navigator.userAgent || '';
-    var isIos = /iphone|ipad|ipod/i.test(ua) && !window.MSStream;
-    var isSafari = /safari/i.test(ua) && !/crios|fxios|edgios/i.test(ua);
-    if (!isIos || !isSafari || standalone() || dismissed()) return;
+    var isIphone = /iphone|ipad|ipod/i.test(ua) && !window.MSStream;
+    // iPadOS reports a Mac user agent; touch support tells it apart from a real Mac
+    var isIpadOs = /macintosh/i.test(ua) && window.navigator.maxTouchPoints > 1;
+    if (!(isIphone || isIpadOs) || standalone() || dismissed()) return;
     window.setTimeout(function () {
+      if (document.getElementById('bw-pwa-install')) return;
       var el = bar('bw-pwa-install',
-        '<span>Install: tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>.</span>' +
+        '<span>Install this app: tap the <strong>Share</strong> button, then <strong>Add to Home Screen</strong>.</span>' +
         '<button type="button" class="bw-pwa-secondary">Got it</button>');
       el.querySelector('button').addEventListener('click', function () { el.remove(); remember(); });
-    }, 20000);
+    }, 8000);
   }
 
   // ---- registration
