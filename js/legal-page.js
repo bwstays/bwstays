@@ -6,6 +6,10 @@
   var TARGETS = {
     tc: 'section-tc',
     terms: 'section-tc',
+    cancellation: 'section-cancellation',
+    cancellations: 'section-cancellation',
+    refund: 'section-cancellation',
+    refunds: 'section-cancellation',
     responsibility: 'section-responsibility',
     disclaimer: 'section-disclaimer',
     copyright: 'section-disclaimer',
