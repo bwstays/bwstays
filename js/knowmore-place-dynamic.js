@@ -488,6 +488,8 @@ function initializeSection(sectionType, data, sectionIndex) {
   imgWrapper.style.height = '100%';
   imgElement.parentNode.insertBefore(imgWrapper, imgElement);
   imgWrapper.appendChild(imgElement);
+  // the picture is shown whole; its own blurred copy fills the rest of the frame (see css #loc .img-wrapper)
+  imgWrapper.style.backgroundImage = 'url("' + imgElement.src + '")';
 
 
   function updateContent(direction = 'next', isHorizontal = true) {
@@ -510,6 +512,7 @@ function initializeSection(sectionType, data, sectionIndex) {
       tempImg.style.left = '0';
     }
     imgWrapper.appendChild(tempImg);
+    imgWrapper.style.backgroundImage = 'url("' + tempImg.src + '")';
     const oldImages = imgWrapper.querySelectorAll('img:not(.temp-image)');
     oldImages.forEach(oldImg => {
       oldImg.style.transition = 'all 0.5s ease';

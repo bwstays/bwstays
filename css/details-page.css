@@ -7872,9 +7872,10 @@ body .reviews-title > .border-bottom.border-primary,
   color: #3f7f7b !important;
 }
 
-/* DISCOVER: 14 category rows. Every picture sits in the same 16:9 frame and is scaled to fit it
-   whole (never cropped); the black frame blends into the black text panel. The row height is
-   one variable, and a row only grows if its text needs more room. */
+/* DISCOVER: 14 category rows. Left (picture) and right (text) are always equal halves on
+   desktop. The picture is shown whole and uniformly scaled; a blurred copy of it fills the rest
+   of the half, so there are no black bars and nothing is cropped. Rows share one height, and
+   a row only grows if its text needs more room. */
 #loc.projects-section {
   padding: 3rem 0 3.25rem;
 }
@@ -7885,7 +7886,7 @@ body .reviews-title > .border-bottom.border-primary,
   margin-bottom: 1.5rem;
 }
 #loc #wrapper-div {
-  --disc-row: 210px;
+  --disc-row: 220px;
 }
 #loc #wrapper-div > .row {
   min-height: var(--disc-row);
@@ -7895,39 +7896,49 @@ body .reviews-title > .border-bottom.border-primary,
   overflow: hidden;
   background: #000;
 }
-/* picture column: a 16:9 frame as tall as the row; text column takes the rest */
-#loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
-#loc #wrapper-div > .row > [class*="col-"]:has(> img) {
-  flex: 0 0 calc(var(--disc-row) * 16 / 9);
-  max-width: calc(var(--disc-row) * 16 / 9);
+#loc #wrapper-div > .row > [class*="col-"] {
+  flex: 0 0 50%;
+  max-width: 50%;
   min-width: 0;
 }
-#loc #wrapper-div > .row > [class*="col-"]:not(:has(.img-wrapper)):not(:has(> img)) {
-  flex: 1 1 0;
-  max-width: none;
-  min-width: 0;
-}
+/* picture frame */
 #loc #wrapper-div .img-wrapper {
   height: 100% !important;
   min-height: var(--disc-row);
-  background: #000;
+  background-color: #111;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+#loc #wrapper-div .img-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: inherit;
+  filter: blur(18px) brightness(0.65);
+  z-index: 0;
 }
 #loc #wrapper-div .img-wrapper img {
+  position: relative;
+  z-index: 1;
   object-fit: contain;
   object-position: center;
   height: 100%;
   width: 100%;
+}
+#loc #wrapper-div .img-wrapper img.temp-image {
+  position: absolute;
 }
 #loc #wrapper-div .project {
   min-height: 0 !important;
   height: 100%;
 }
 #loc #wrapper-div .project-text {
-  padding: 0.75rem 2.5rem !important;
+  padding: 0.75rem 2.75rem !important;
   font-size: 100%;
 }
 #loc #wrapper-div .project-text h3.h4 {
-  font-size: 1.25rem !important;
+  font-size: 1.3rem !important;
   margin-bottom: 0.2rem !important;
   line-height: 1.25;
 }
@@ -7935,7 +7946,7 @@ body .reviews-title > .border-bottom.border-primary,
   margin-bottom: 0.65rem !important;
 }
 #loc #wrapper-div .tab-content {
-  min-height: 92px;
+  min-height: 100px;
 }
 /* holiday and timing share one line */
 #loc #wrapper-div .tab-content-temp {
@@ -7949,7 +7960,7 @@ body .reviews-title > .border-bottom.border-primary,
   flex: 0 0 100%;
 }
 #loc #wrapper-div .tab-content-temp > h4 {
-  font-size: 1rem !important;
+  font-size: 1.02rem !important;
   margin-bottom: 0.15rem !important;
 }
 #loc #wrapper-div .tab-content-temp > p {
@@ -7970,19 +7981,20 @@ body .reviews-title > .border-bottom.border-primary,
     justify-content: flex-end;
   }
 }
-/* tablets: picture left (16:9 frame), text right */
+/* tablets and phones: picture left, text right, still a slim band per row */
 @media (max-width: 991.98px) {
   #loc #wrapper-div {
-    --disc-row: 176px;
-  }
-  #loc #wrapper-div .tab-content {
-    min-height: 100px;
+    --disc-row: 180px;
   }
   #loc #wrapper-div > .row > [class*="col-"] {
+    flex: 1 1 52%;
+    max-width: 52%;
     order: 2;
   }
   #loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
   #loc #wrapper-div > .row > [class*="col-"]:has(> img) {
+    flex: 0 0 48%;
+    max-width: 48%;
     order: 1;
   }
   #loc #wrapper-div .project-text {
@@ -7996,13 +8008,16 @@ body .reviews-title > .border-bottom.border-primary,
     font-size: 1.1rem !important;
   }
 }
-/* phones: the frame takes about 40% of the width, the text the rest */
 @media (max-width: 767.98px) {
   #loc.projects-section {
     padding: 2.25rem 0 2.5rem !important;
   }
   #loc #wrapper-div {
     --disc-row: 172px;
+  }
+  #loc #wrapper-div > .row > [class*="col-"] {
+    flex-basis: 56%;
+    max-width: 56%;
   }
   #loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
   #loc #wrapper-div > .row > [class*="col-"]:has(> img) {
