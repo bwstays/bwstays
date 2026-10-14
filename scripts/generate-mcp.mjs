@@ -68,6 +68,9 @@ const faqData = vm.runInNewContext(`(${faqSrc[1]})`);
 const { booking: bookedRaw } = loadGlobals('data/bookingdata.js', ['booking']);
 const { closed: closedRaw } = loadGlobals('data/closeddata.js', ['closed']);
 
+const evFile = JSON.parse(read('data/ev-stations.json'));
+const fuelFile = JSON.parse(read('data/fuel-places.json'));
+
 const indexHtml = read('index.html');
 const villaHtml = read('villa1.html');
 const bookingHtml = read('bwstays-booking.html');
@@ -285,6 +288,33 @@ const excludedIds = new Set(
 const kmBetween = (a, b) =>
   a === b ? 0 : excludedIds.has(a) || excludedIds.has(b) ? null : locations.distances[a]?.[b - 1] || null;
 
+// ---------------------------------------------------------------- charging and fuel
+const evStations = evFile.stations
+  .map((x) => ({
+    id: x.id,
+    name: x.name,
+    operator: x.operator ?? null,
+    latitude: x.lat,
+    longitude: x.lon,
+    distance_km: Number(straightKm(x.lat, x.lon).toFixed(1)),
+    verified: Boolean(x.verified),
+  }))
+  .sort((a, b) => a.distance_km - b.distance_km);
+const fuelStations = fuelFile.places
+  .map((x) => ({
+    id: x.id,
+    name: x.name,
+    brand: x.brand ?? null,
+    latitude: x.lat,
+    longitude: x.lon,
+    distance_km: Number(straightKm(x.lat, x.lon).toFixed(1)),
+    fuels: x.fuels ?? [],
+    opening_hours: x.opening_hours ?? null,
+    phone: x.phone ?? null,
+    osm_url: x.osm_url ?? null,
+  }))
+  .sort((a, b) => a.distance_km - b.distance_km);
+
 // ---------------------------------------------------------------- availability
 const pad = (n) => String(n).padStart(2, '0');
 const isoDate = (s) => {
@@ -355,6 +385,11 @@ const resources = {
       open_hours: '24 hours, 7 days a week (per structured data on index.html)',
       social: (business.sameAs ?? []).map((u) => u.replace(/\/$/, '')),
       languages_offered_on_site: ['English', 'Spanish', 'French'],
+      web_app: {
+        installable: true,
+        works_offline: 'pages, places, food, charging and fuel lists, policies; not live availability, booking submit, chat or weather',
+        manifest: `${SITE}/manifest.json`,
+      },
       data_quality_notes: dataQualityNotes,
     },
     source: 'index.html',
@@ -476,6 +511,29 @@ const resources = {
     },
     source: 'data/nearbylocationsdata.js',
   },
+  charging_and_fuel: {
+    description: 'EV charging stations and fuel stations around the stay, with straight-line distance from the stay',
+    content: {
+      stay: { name: business.name, coordinates: { latitude: STAY_POINT[0], longitude: STAY_POINT[1] } },
+      distance_note: 'distance_km is the straight-line distance from the stay, not a driving distance.',
+      ev_charging: {
+        count: evFile.stations.length,
+        note: evFile.note,
+        verified_count: evFile.stations.filter((x) => x.verified).length,
+        warning:
+          'OpenStreetMap has no charging stations mapped in Wayanad. This list is kept by hand from places already shown on the site; positions are approximate until verified on the ground.',
+        stations: evStations,
+      },
+      fuel: {
+        count: fuelFile.places.length,
+        attribution: fuelFile.source,
+        generated: fuelFile.generated,
+        note: 'Opening hours and phone numbers are null where OpenStreetMap does not record them; they are not guessed.',
+        stations: fuelStations,
+      },
+    },
+    source: 'data/ev-stations.json, data/fuel-places.json',
+  },
   help: {
     description: 'Frequently asked questions shown on the site',
     content: { faq: faqData.map((f) => ({ question: f.question, answer: f.answer })) },
@@ -595,9 +653,15 @@ const tools = {
           booked_ranges: bookedRanges,
           closed_ranges: closedRanges,
           snapshot_date: BUILD_DATE,
-          all_listed_ranges_are_in_the_past: [...bookedRanges, ...closedRanges].every(isPast),
-          availability_feed: `${SITE}/bwstays-room-availabilty.xml`,
-          instruction: 'This is a build-time snapshot. Direct the guest to the booking page to confirm live availability.',
+          no_dates_listed: bookedRanges.length + closedRanges.length === 0,
+          all_listed_ranges_are_in_the_past:
+            bookedRanges.length + closedRanges.length > 0 && [...bookedRanges, ...closedRanges].every(isPast),
+          data_source:
+            'The host keeps booked and closed dates in a Google Calendar; a scheduled job copies the next 365 days into data/bookingdata.js and data/closeddata.js every 30 minutes.',
+          booking_window: 'today up to one year ahead; earlier dates cannot be booked',
+          nights_rule: 'A stay may end (check-out) on a booked day, but no night of the stay may be booked or closed.',
+          instruction:
+            'This is a build-time snapshot. An empty list means no dates are marked yet, not that every date is free. Direct the guest to the booking page to confirm live availability.',
         },
       },
     ],
@@ -605,6 +669,20 @@ const tools = {
       status: 'unknown',
       booking_page: `${SITE}/bwstays-booking.html`,
       message: 'Availability is not pre-computed for arbitrary dates. Use the booking page or contact the host.',
+    },
+  },
+  'search/charging': {
+    name: 'nearby_charging_and_fuel',
+    description: 'Closest EV charging stations and fuel stations to the stay (pre-computed, straight-line km)',
+    responses: [
+      { input: { kind: 'ev', limit: 5 }, output: { results: evStations.slice(0, 5), note: 'Positions are approximate and not yet verified on the ground.' } },
+      { input: { kind: 'fuel', limit: 5 }, output: { results: fuelStations.slice(0, 5) } },
+      { input: { kind: 'ev', within_km: 25 }, output: { results: evStations.filter((x) => x.distance_km <= 25) } },
+      { input: { kind: 'fuel', within_km: 15 }, output: { results: fuelStations.filter((x) => x.distance_km <= 15) } },
+    ],
+    default_response: {
+      message: 'Use one of the pre-computed inputs: kind ev or fuel with limit 5, or within_km 25 (ev) / 15 (fuel).',
+      full_lists: `${SITE}/resources/charging_and_fuel.json`,
     },
   },
   'booking/pricing': {
