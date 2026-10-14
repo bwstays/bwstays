@@ -473,3 +473,30 @@ function highlightDateRange(startDate, endDate) {
             }
             return doc;
         }
+
+// Highlight the step (Check Availability / Select Villas / Guest Information) that is in view
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.reservation-steps .step-link');
+    if (!links.length || !('IntersectionObserver' in window)) {
+        return;
+    }
+    const setActive = function (id) {
+        links.forEach(function (a) {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+    };
+    setActive('checkavailability');
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                setActive(entry.target.id);
+            }
+        });
+    }, { rootMargin: '-35% 0px -55% 0px' });
+    ['checkavailability', 'selectvilla', 'guestinformation'].forEach(function (id) {
+        const el = document.getElementById(id);
+        if (el) {
+            observer.observe(el);
+        }
+    });
+});
