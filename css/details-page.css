@@ -8871,3 +8871,42 @@ body #language-selector {
 .masthead.map-page + .testimonial-section {
   margin-top: 0;
 }
+
+/* Section underlines follow the heading's alignment: DISCOVER is centred, Guest Experiences is left-aligned */
+#loc .col-lg-8 > .border-bottom.border-primary {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+body .reviews-title > .border-bottom.border-primary,
+#signup .reviews-title > .border-bottom.border-primary,
+#testimonial .reviews-title > .border-bottom.border-primary {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Floating chat and back-to-top buttons: icon exactly centred in the circle at every width */
+#btn-chat {
+  display: flex;
+}
+#btn-chat,
+#btn-back-to-top {
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+#btn-chat i,
+#btn-back-to-top i {
+  display: block;
+  line-height: 1;
+  margin: 0 !important;
+}
+
+/* Footer link row: no underline on hover or focus */
+.footer-copyright a,
+.footer-copyright a:hover,
+.footer-copyright a:focus,
+.footer-copyright a:focus-visible,
+.footer-copyright a:active {
+  text-decoration: none !important;
+}
