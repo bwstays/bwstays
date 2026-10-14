@@ -452,6 +452,7 @@
       const wantsStay = t.includes('stay') || t.includes('room') || t.includes('villa') || t.includes('homestay') || t.includes('resort');
       const wantsPrice = t.includes('price') || t.includes('rate') || t.includes('cost');
       const wantsAvail = t.includes('availability') || t.includes('available') || t.includes('date');
+      const wantsCancel = t.includes('cancel') || t.includes('refund');
       const wantsCheckin = t.includes('check-in') || t.includes('checkin') || t.includes('check out') || t.includes('checkout');
       const wantsAttractions = t.includes('attraction') || t.includes('things to do') || t.includes('waterfall') || t.includes('trek') || t.includes('temple');
       const parts = [];
@@ -470,6 +471,9 @@
       }
       if(wantsAvail || wantsPrice){
         parts.push('For real-time prices and availability, visit our booking page: https://www.bwstays.com/bwstays-booking.html');
+      }
+      if(wantsCancel){
+        parts.push('Cancellations: 15 or more days before check-in is a full refund (less payment charges), 7 to 14 days before is 50%, and under 7 days or no-show is no refund. Holiday and peak-season stays need 30 days for a full refund and 15 days for 50%. Full policy: https://www.bwstays.com/footer.html#cancellation');
       }
       if(wantsCheckin){
         parts.push('Standard check-in is around 2 PM, check-out by 11 AM. Exact timings vary by property – we\'ll share specific details once you book.');
