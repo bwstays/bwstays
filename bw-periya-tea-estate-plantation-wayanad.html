@@ -126,7 +126,7 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-76x76.png"/>
 	<link rel="apple-touch-icon" sizes="152x152" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-152x152.png"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
- <link href="https://www.bwstays.com/css/details-page.min.css?v=f7d4af0d" rel="stylesheet" type="text/css" media="all"/>
+ <link href="https://www.bwstays.com/css/details-page.min.css?v=ea6ca897" rel="stylesheet" type="text/css" media="all"/>
       <link href="https://www.bwstays.com/css/new-page.min.css?v=f2e8abdc" rel="stylesheet" type="text/css" media="all"/>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"></noscript>
 
@@ -391,18 +391,12 @@
 <div class="ev-gas-col">
 <h3 class="text-white mb-3">Nearby Public/Private EV Charging Station </h3>
 					<div class="contact-card-divider border-bottom border-primary mb-4" ></div>
-					<div   id="fuel-places"  data-center="11.840044094937126, 75.89842935307782"   >
- 							<div id="fuel"><img width="551" height="396" title="Electric Charging in wayanad" src="https://www.bwstays.com/assets/img/ev_fuel/periy-ev.webp" alt="EV Charging"   usemap="#locationmapev" id="mapevimage" class="det-img-f img-fluid"/></div>
- 					</div>
+					<div id="fuel-places" data-evgas data-kind="ev" data-center="11.840044094937126, 75.89842935307782"><noscript>Charging stations near Periya are shown on an interactive map when JavaScript is enabled.</noscript></div>
 </div>
 <div class="ev-gas-col">
 <h3 class="text-white mb-3">Nearby Gas Filling Station </h3>
 					<div class="contact-card-divider border-bottom border-primary mb-4" ></div>
-					<div   id="gasfuel-places"  data-center="11.840044094937126, 75.89842935307782"   >
- 							<div id="gasfuel" >
- 							 <img width="562" height="400" title="Gas Filling in wayanad" src="https://www.bwstays.com/assets/img/ev_fuel/periy-gas.webp" alt="Fuel"   usemap="#locationmap" id="mapImage" class="det-img-f img-fluid"/>
-  							</div>
- 					</div>
+					<div id="gasfuel-places" data-evgas data-kind="gas" data-center="11.840044094937126, 75.89842935307782"><noscript>Fuel stations near Periya are shown on an interactive map when JavaScript is enabled.</noscript></div>
 </div>
 </div>
 </div>
@@ -777,6 +771,7 @@
 
 <script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.min.js?v=56cb74aa' + Date.now();document.body.appendChild(script);</script>
  <script       type="text/javascript"       src="https://www.bwstays.com/js/dynamic-foodmap.min.js?v=1b144640"     ></script>
+ <script       type="text/javascript"       src="https://www.bwstays.com/js/dynamic-evgas.min.js?v=58c75acd"     ></script>
  <script type="text/javascript" src="https://www.bwstays.com/js/widgets.min.js?v=913ebcd9"></script>
 
   <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.min.js?v=a304cc64" ></script>
