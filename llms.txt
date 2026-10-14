@@ -50,3 +50,35 @@ Additional Information
 - [Boys Town Farm - Black and White Wayanad Kalpetta - BW Stays](https://www.bwstays.com/bw-boys-town-farm-wayanad.html): A farm experience for visitors.
 - [Begur wildlife sanctuary - Black and White Wayanad Kalpetta](https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html): A sanctuary offering a glimpse into the local wildlife.
 This structured summary provides a comprehensive overview of the offerings and attractions associated with Black and White Stays in Wayanad, Kerala.
+
+<!-- BEGIN GENERATED: site-data -->
+## Machine-readable data (generated from the site data)
+
+Snapshot: 2026-10-14
+
+- [Static MCP manifest](https://www.bwstays.com/mcp.json): 11 resources and 8 tools, pre-built JSON, no server
+- [LLMFeed](https://www.bwstays.com/.well-known/mcp.llmfeed.json): the same capabilities in LLMFeed format
+- [Full text](https://www.bwstays.com/llms-full.txt): all page text, policies and data summaries
+- [about](https://www.bwstays.com/resources/about.json): Who Black and White Stays is, where it is, and how to reach it
+- [properties](https://www.bwstays.com/resources/properties.json): Villas offered by Black and White Stays with the rate and capacity the site publishes
+- [amenities](https://www.bwstays.com/resources/amenities.json): Amenities listed on the villa page
+- [booking](https://www.bwstays.com/resources/booking.json): How to book, what the booking form asks for, and how to make contact
+- [policies](https://www.bwstays.com/resources/policies.json): Terms of service and privacy statement, quoted from footer.html
+- [attractions](https://www.bwstays.com/resources/attractions.json): Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay
+- [location](https://www.bwstays.com/resources/location.json): Where the stay is and how far common destinations are
+- [food](https://www.bwstays.com/resources/food.json): Places to eat and drink in Wayanad (OpenStreetMap data), with driving distance from the stay
+- [distances](https://www.bwstays.com/resources/distances.json): Driving distance in km between 90 Wayanad places (null = not computed)
+- [charging_and_fuel](https://www.bwstays.com/resources/charging_and_fuel.json): EV charging stations and fuel stations around the stay, with straight-line distance from the stay
+- [help](https://www.bwstays.com/resources/help.json): Frequently asked questions shown on the site
+- [tool search_attractions](https://www.bwstays.com/tools/search/attractions.json): Look up attractions by category, distance, entry fee or rating (pre-computed)
+- [tool search_properties](https://www.bwstays.com/tools/search/properties.json): List the villas the site publishes
+- [tool search_food](https://www.bwstays.com/tools/search/food.json): Find places to eat near the stay by kind, diet or distance (pre-computed, OpenStreetMap data)
+- [tool nearby_places](https://www.bwstays.com/tools/search/nearby.json): The closest attractions to each place by driving distance (pre-computed)
+- [tool check_availability](https://www.bwstays.com/tools/booking/availability.json): Dates the site marks as booked or closed. Static snapshot - not live inventory.
+- [tool nearby_charging_and_fuel](https://www.bwstays.com/tools/search/charging.json): Closest EV charging stations and fuel stations to the stay (pre-computed, straight-line km)
+- [tool get_pricing](https://www.bwstays.com/tools/booking/pricing.json): Nightly rates exactly as published on the site
+- [tool contact_info](https://www.bwstays.com/tools/booking/contact.json): How to reach Black and White Stays
+
+- Availability: the host keeps booked and closed dates in a calendar that is copied into the booking page every 30 minutes; only today to one year ahead can be booked. Confirm on the booking page: https://www.bwstays.com/bwstays-booking.html
+- The website is an installable web app and keeps saved pages available offline.
+<!-- END GENERATED: site-data -->
