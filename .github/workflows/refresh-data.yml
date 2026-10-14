@@ -52,6 +52,7 @@ jobs:
           node scripts/generate-mcp.mjs
           node scripts/build-map-data.mjs
           node scripts/build-search-index.mjs
+          node scripts/build-pwa.mjs
           node scripts/check.mjs
 
       - name: Open a pull request
