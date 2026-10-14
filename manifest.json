@@ -1,23 +1,60 @@
 {
-  "name": "Black and White Stays",
+  "id": "/",
+  "name": "Black and White Stays - Villas in Kalpetta, Wayanad",
   "short_name": "BWStays",
-  "description": "Villa stays and workations in Kalpetta, Wayanad, Kerala",
+  "description": "Villa stays, workations and local travel guide for Kalpetta and Wayanad, Kerala. Browse places to visit, eat and charge, and book your stay.",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "start_url": "/index.html?utm_source=pwa",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#000",
-  "theme_color": "#000",
-  "orientation": "portrait",
-  "start_url": "/",
-  "id": "/index.html",
-  "scope": "https://www.bwstays.com/",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#000000",
+  "theme_color": "#3f7f7b",
+  "categories": ["travel", "lifestyle", "navigation"],
   "icons": [
     {
-      "src": "https://www.bwstays.com/assets/img/pwa/bw.png",
+      "src": "/assets/img/pwa/icon-192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "sizes": "41x41",
       "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "author": {
-    "name": "BWStays"
-  }
+  "shortcuts": [
+    {
+      "name": "Book a stay",
+      "short_name": "Book",
+      "description": "Check availability and book your villa",
+      "url": "/bwstays-booking.html?utm_source=pwa_shortcut",
+      "icons": [{ "src": "/assets/img/pwa/icon-96.png", "sizes": "96x96", "type": "image/png" }]
+    },
+    {
+      "name": "Places to visit",
+      "short_name": "Locations",
+      "description": "Explore places to visit around Kalpetta",
+      "url": "/all-locations-wayanad.html?utm_source=pwa_shortcut",
+      "icons": [{ "src": "/assets/img/pwa/icon-96.png", "sizes": "96x96", "type": "image/png" }]
+    },
+    {
+      "name": "Places to eat",
+      "short_name": "Eatery",
+      "description": "Restaurants and cafes near your stay",
+      "url": "/all-fooding-wayanad.html?utm_source=pwa_shortcut",
+      "icons": [{ "src": "/assets/img/pwa/icon-96.png", "sizes": "96x96", "type": "image/png" }]
+    }
+  ],
+  "prefer_related_applications": false
 }
