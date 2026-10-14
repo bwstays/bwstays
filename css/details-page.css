@@ -7687,3 +7687,55 @@ body .reviews-title > .border-bottom.border-primary,
 .footer-copyright a:active {
   text-decoration: none !important;
 }
+
+/* Booking calendar: past, booked and closed days are greyed out and cannot be chosen */
+.calendar-container .days .day.unavailable,
+.calendar-container .days .day.unavailable:hover {
+  cursor: not-allowed;
+  background: transparent;
+  box-shadow: none;
+}
+.calendar-container .days .day.past,
+.calendar-container .days .day.beyond {
+  color: #9aa0a6;
+  opacity: 0.55;
+}
+.calendar-container .days .day.reserved {
+  color: #b3261e;
+  background: rgba(179, 38, 30, 0.12);
+  text-decoration: line-through;
+}
+.calendar-container .days .day.blocked {
+  color: #6c757d;
+  background: repeating-linear-gradient(45deg, rgba(108, 117, 125, 0.18), rgba(108, 117, 125, 0.18) 3px, transparent 3px, transparent 6px);
+}
+.calendar-container .month-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  color: #495057;
+}
+.calendar-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.calendar-legend i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.calendar-legend .lg-open { background: #fff; }
+.calendar-legend .lg-booked { background: rgba(179, 38, 30, 0.55); }
+.calendar-legend .lg-closed { background: repeating-linear-gradient(45deg, #adb5bd, #adb5bd 3px, #6c757d 3px, #6c757d 6px); }
+.calendar-legend .lg-past { background: #9aa0a6; opacity: 0.55; }
