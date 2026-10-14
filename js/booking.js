@@ -1,4 +1,96 @@
 let currentMonthOffset = 0;
+// ---------------------------------------------------------------- availability
+// Booked days come from data/bookingdata.js (window.booking), closed days from
+// data/closeddata.js (window.closed). Each entry is [from, to]; an empty "to"
+// means a single day. Only days from today to one year ahead can be booked:
+// earlier days are greyed out and later days are not offered.
+function bwPad(n) {
+    return String(n).length > 1 ? String(n) : '0' + n;
+}
+function bwIso(d) {
+    return d.getFullYear() + '-' + bwPad(d.getMonth() + 1) + '-' + bwPad(d.getDate());
+}
+function bwNormalize(value) {
+    const m = String(value || '').match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+    return m ? m[1] + '-' + bwPad(m[2]) + '-' + bwPad(m[3]) : null;
+}
+function bwExpand(ranges) {
+    const out = {};
+    (ranges || []).forEach(function (range) {
+        const start = bwNormalize(range[0]);
+        const end = bwNormalize(range[1]) || start;
+        if (!start) {
+            return;
+        }
+        const d = new Date(start + 'T00:00:00');
+        const last = new Date(end + 'T00:00:00');
+        for (let guard = 0; d <= last && guard < 400; guard++) {
+            out[bwIso(d)] = true;
+            d.setDate(d.getDate() + 1);
+        }
+    });
+    return out;
+}
+function bwToday() {
+    const d = new Date();
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+}
+function bwMaxDate() {
+    const d = bwToday();
+    d.setFullYear(d.getFullYear() + 1);
+    return d;
+}
+// 'past' | 'beyond' | 'reserved' | 'blocked' | '' for a Date
+function bwDayState(date) {
+    const day = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    if (day < bwToday()) {
+        return 'past';
+    }
+    if (day > bwMaxDate()) {
+        return 'beyond';
+    }
+    const iso = bwIso(day);
+    if (bwExpand(window.closed)[iso]) {
+        return 'blocked';
+    }
+    if (bwExpand(window.booking)[iso]) {
+        return 'reserved';
+    }
+    return '';
+}
+// Returns '' when the stay is bookable, otherwise a message for the visitor.
+// Used for clicks, for typed or pasted values and again on submit.
+function bwStayProblem(checkInValue, checkOutValue) {
+    const checkIn = new Date(checkInValue);
+    const checkOut = new Date(checkOutValue);
+    if (isNaN(checkIn) || isNaN(checkOut)) {
+        return 'Please choose your check-in and check-out dates from the calendar.';
+    }
+    if (checkIn < bwToday()) {
+        return 'Check-in cannot be in the past.';
+    }
+    if (checkOut > bwMaxDate() || checkIn > bwMaxDate()) {
+        return 'Bookings can be made up to one year ahead.';
+    }
+    if (checkOut <= checkIn) {
+        return 'Check-out date must be at least one day after check-in date.';
+    }
+    const closed = bwExpand(window.closed);
+    const booked = bwExpand(window.booking);
+    for (const d = new Date(checkIn); d < checkOut; d.setDate(d.getDate() + 1)) {
+        const iso = bwIso(d);
+        if (closed[iso] || booked[iso]) {
+            return 'Some of the nights you chose are not available. Please pick other dates.';
+        }
+    }
+    return '';
+}
+function bwMaxOffset() {
+    // two months are shown; the last one shown may be the month that holds the maximum date
+    const now = bwToday();
+    const max = bwMaxDate();
+    return Math.max(0, (max.getFullYear() * 12 + max.getMonth()) - (now.getFullYear() * 12 + now.getMonth()) - 1);
+}
 document.addEventListener('DOMContentLoaded', function () {
     generateCalendars();
     setupDateSelection();
@@ -27,6 +119,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
                 if (nights <= 0 || checkOutDateObj <= checkInDateObj) {
                     showErrorMessage('Invalid dates: Check-out date must be at least one day after check-in date.', 'error');
+                    return;
+                }
+                const stayProblem = bwStayProblem(checkInDate, checkOutDate);
+                if (stayProblem) {
+                    showErrorMessage(stayProblem, 'error');
                     return;
                 }
                 if (nights < 1) {
@@ -106,100 +203,12 @@ document.addEventListener('DOMContentLoaded', function () {
 						   showErrorMessage("Check out date should be same or greater than the check in date", 'error');
 						   return;
 			    }
-            });
-        });
-        $(function () {
-            // Booked and closed days come from data/bookingdata.js and data/closeddata.js.
-            // (A local "var booking = booking || []" used to shadow the real data, and a
-            // stale hard-coded copy of the closed days used unpadded dates that never matched.)
-            function bwPad(n) {
-                return String(n).length > 1 ? String(n) : '0' + n;
-            }
-            function bwNormalize(value) {
-                var m = String(value || '').match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
-                return m ? m[1] + '-' + bwPad(m[2]) + '-' + bwPad(m[3]) : null;
-            }
-            // each entry is [from, to]; an empty "to" means a single day. Returns every day, padded.
-            function bwExpand(ranges) {
-                var out = [];
-                (ranges || []).forEach(function (range) {
-                    var start = bwNormalize(range[0]);
-                    var end = bwNormalize(range[1]) || start;
-                    if (!start) {
-                        return;
-                    }
-                    var d = new Date(start + 'T00:00:00');
-                    var last = new Date(end + 'T00:00:00');
-                    for (var guard = 0; d <= last && guard < 366; guard++) {
-                        out.push(d.getFullYear() + '-' + bwPad(d.getMonth() + 1) + '-' + bwPad(d.getDate()));
-                        d.setDate(d.getDate() + 1);
-                    }
-                });
-                return out;
-            }
-            var closedDays = bwExpand(window.closed);
-            var bookedDays = bwExpand(window.booking);
-            var todayDate = (function () {
-                var d = new Date();
-                return d.getFullYear() + '-' + bwPad(d.getMonth() + 1) + '-' + bwPad(d.getDate());
-            })();
-            $("#date-range-calendar").datepicker({
-                showOn: "button",
-                buttonImageOnly: true,
-                buttonText: "Select date",
-                dateFormat: "yy-m-dd",
-                minDate: "today",
-                numberOfMonths: 2,
-                onSelect: function (selected) {
-                    var sDate = selected;
-                    var bDate;
-                    hideErrorMessage();
-                    var formattedDate = $.datepicker.formatDate('D, M d, yy', new Date(sDate));
-                    if (!$("#checkInDate").val()) {
-                        $("#checkInDate").val(formattedDate);
-                    }
-                    else if (!$("#checkOutDate").val()) {
-                        var checkInStr = $("#checkInDate").val();
-                        var checkIn = new Date(checkInStr);
-                        var checkOut = new Date(sDate);
-                        var timeDiff = checkOut.getTime() - checkIn.getTime();
-                        var nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-                        if(nights <= 0 || checkOut <= checkIn) {
-                            $("#checkInDate").val("");
-                            $("#checkOutDate").val("");
-                            $("#nights-count").text("0");
-                            showErrorMessage("Check-out date must be at least one day after check-in date. Please select your dates again.", 'error');
-                            return false;
-                        }
-                        if(nights < 1) {
-                            $("#checkInDate").val("");
-                            $("#checkOutDate").val("");
-                            $("#nights-count").text("0");
-                            showErrorMessage("Minimum stay is 1 night. Please select valid dates.", 'error');
-                            return false;
-                        }
-                        $("#checkOutDate").val(formattedDate);
-                        $("#nights-count").text(nights);
-                    }
-                    else {
-                        $("#checkInDate").val(formattedDate);
-                        $("#checkOutDate").val("");
-                        $("#nights-count").text("0");
-                    }
-                    var taken = bookedDays.indexOf(bwNormalize(sDate)) > -1;
-                    $("#villa1").prop("checked", taken).prop("disabled", taken);
-                    $("#villa2").prop("checked", taken).prop("disabled", taken);
-                },
-                beforeShowDay: function (date) {
-                    var day = date.getDate();
-                    day = day > 9 ? day : '0' + day;
-                    var month = (date.getMonth() + 1);
-                    month = month > 9 ? month : '0' + month;
-                    var dateAsString = date.getFullYear().toString() + '-' + month + '-' + day;
-                    return ($.inArray(dateAsString, closedDays) > -1 ? [false, 'blocked'] :
-                        ($.inArray(dateAsString, bookedDays) > -1 ? [false, 'reserved'] : [true, '']));
+                var availProblem = bwStayProblem(checkin, checkout);
+                if (availProblem) {
+                    showErrorMessage(availProblem, 'error');
+                    return;
                 }
-            }).datepicker("setDate", new Date());
+            });
         });
         document.addEventListener('DOMContentLoaded', function () {
             const counterContainers = document.querySelectorAll('.counter-container');
@@ -219,14 +228,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
         });
-        function getNextThreeDays(todayDate)
-        {
-	       if (window.booking && window.booking.length && (Date.parse(window.booking[0][0]) == Date.parse(todayDate)))
-	       {
-			    for (i = 0; i < booking.length; i++) {
-                 }
-		    }
-		}
 function createErrorMessageContainers() {
     const dateRangeContainer = document.querySelector('.date-range-container');
     if (dateRangeContainer && !document.getElementById('date-error-message')) {
@@ -320,6 +321,7 @@ function createMonthCalendar(date, isFirstMonth = false) {
     prevButton.className = 'month-nav-btn prev-btn';
     prevButton.innerHTML = '&laquo;';
     prevButton.setAttribute('aria-label', 'Previous month');
+    prevButton.disabled = currentMonthOffset <= 0;
     prevButton.addEventListener('click', function() {
         currentMonthOffset = Math.max(currentMonthOffset - 1, 0);
         generateCalendars();
@@ -331,8 +333,9 @@ function createMonthCalendar(date, isFirstMonth = false) {
     nextButton.className = 'month-nav-btn next-btn';
     nextButton.innerHTML = '&raquo;';
     nextButton.setAttribute('aria-label', 'Next month');
+    nextButton.disabled = currentMonthOffset >= bwMaxOffset();
     nextButton.addEventListener('click', function() {
-        currentMonthOffset++;
+        currentMonthOffset = Math.min(currentMonthOffset + 1, bwMaxOffset());
         generateCalendars();
     });
     headerNav.appendChild(prevButton);
@@ -365,6 +368,15 @@ function createMonthCalendar(date, isFirstMonth = false) {
         dayElement.className = 'day';
         dayElement.textContent = i;
         dayElement.dataset.date = `${date.getFullYear()}-${date.getMonth() + 1}-${i}`;
+        const cellDate = new Date(date.getFullYear(), date.getMonth(), i);
+        const state = bwDayState(cellDate);
+        if (state) {
+            dayElement.classList.add('unavailable', state);
+            dayElement.setAttribute('aria-disabled', 'true');
+            dayElement.title = state === 'reserved' ? 'Booked' : state === 'blocked' ? 'Closed' : state === 'past' ? 'Past date' : 'More than a year ahead';
+        } else if (bwIso(cellDate) === bwIso(bwToday())) {
+            dayElement.classList.add('today');
+        }
         daysContainer.appendChild(dayElement);
     }
     monthCalendar.appendChild(daysContainer);
@@ -377,6 +389,9 @@ function setupDateSelection() {
     let checkOutDate = null;
     calendarContainer.addEventListener('click', function(e) {
         if (e.target.classList.contains('day') && e.target.textContent) {
+            if (e.target.classList.contains('unavailable')) {
+                return;
+            }
             const clickedDate = new Date(e.target.dataset.date);
             const formattedDate = formatDate(clickedDate);
             hideErrorMessage();
@@ -388,6 +403,11 @@ function setupDateSelection() {
             else if (!checkOutDate) {
                 if (clickedDate <= checkInDate) {
                     showErrorMessage('Check-out date must be after check-in date', 'error');
+                    return;
+                }
+                const rangeProblem = bwStayProblem(checkInDate, clickedDate);
+                if (rangeProblem) {
+                    showErrorMessage(rangeProblem, 'error');
                     return;
                 }
                 checkOutDate = clickedDate;
