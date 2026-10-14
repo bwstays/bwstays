@@ -1,0 +1,74 @@
+name: Refresh booking availability
+
+# Reads the owner's calendar feeds (Google Calendar, Airbnb, Booking.com iCal)
+# and rewrites data/bookingdata.js and data/closeddata.js for the booking
+# calendar: today to one year ahead only, no guest names. Free.
+#
+# Setup: add a repository secret BW_ICAL_URLS holding the iCal links, one per
+# line, optionally prefixed "booked|" or "closed|" (see scripts/build-availability.mjs).
+# If a feed cannot be read the job fails and the last good files stay live.
+on:
+  schedule:
+    - cron: '7,37 * * * *'   # every 30 minutes
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-availability
+  cancel-in-progress: false
+
+jobs:
+  availability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check the secret is set
+        id: secret
+        env:
+          URLS: ${{ secrets.BW_ICAL_URLS }}
+        run: |
+          if [ -z "$URLS" ]; then
+            echo "BW_ICAL_URLS is not set; nothing to do."
+            echo "set=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "set=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build availability from the calendars
+        if: steps.secret.outputs.set == 'true'
+        env:
+          BW_ICAL_URLS: ${{ secrets.BW_ICAL_URLS }}
+        run: node scripts/build-availability.mjs
+
+      - name: Did availability change?
+        id: diff
+        if: steps.secret.outputs.set == 'true'
+        run: |
+          if git diff --quiet -- data/bookingdata.js data/closeddata.js; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "availability unchanged"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Rebuild derived files and commit to main
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          node scripts/minify-assets.mjs
+          node scripts/version-assets.mjs
+          node scripts/build-booking-report.mjs
+          node scripts/generate-mcp.mjs
+          node scripts/check.mjs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Refresh booking availability from calendar feeds"
+          git pull --rebase origin main
+          git push
