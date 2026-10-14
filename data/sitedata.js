@@ -3387,6 +3387,166 @@ const siteData = {
       duration: "1-2 Hours",
       www: "",
     },
+    {
+      "id": 91,
+      "name": "The Tribal Spot Near the Forest",
+      "description": "Shopping place at Kunnathidavaka, Wayanad, Kerala.",
+      "image": [
+        "https://www.bwstays.com/assets/img/tribal/bw-homestay-en-ooru-tribal-heritage-village-wayanad.webp"
+      ],
+      "holidays": "",
+      "timing": [],
+      "Contact": "",
+      "seasontovisit": [],
+      "distance": "",
+      "transport": "",
+      "latlong": "",
+      "map": "https://www.google.com/maps/search/?api=1&query=The+Tribal+Spot+Near+the+Forest+Kunnathidavaka+Wayanad+Kerala",
+      "rating": "",
+      "hrs": "",
+      "fee": "",
+      "aliases": [],
+      "content": "The Tribal Spot Near the Forest is a shopping place at Kunnathidavaka, Wayanad, Kerala. Opening hours, contact details and photos will be added once they are confirmed.",
+      "amenities": [],
+      "tags": [
+        "shopping",
+        "wayanad",
+        "local products",
+        "kunnathidavaka"
+      ],
+      "type": "shopping",
+      "knowmore": "https://www.google.com/maps/search/?api=1&query=The+Tribal+Spot+Near+the+Forest+Kunnathidavaka+Wayanad+Kerala",
+      "duration": "",
+      "www": ""
+    },
+    {
+      "id": 92,
+      "name": "Government & Cooperative Trust Places",
+      "description": "Shopping place at Pookode, Kunnathidavaka, Wayanad, Kerala.",
+      "image": [
+        "https://www.bwstays.com/assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.webp"
+      ],
+      "holidays": "",
+      "timing": [],
+      "Contact": "",
+      "seasontovisit": [],
+      "distance": "",
+      "transport": "",
+      "latlong": "",
+      "map": "https://www.google.com/maps/search/?api=1&query=Government+%26+Cooperative+Trust+Places+Pookode%2C+Kunnathidavaka+Wayanad+Kerala",
+      "rating": "",
+      "hrs": "",
+      "fee": "",
+      "aliases": [],
+      "content": "Government & Cooperative Trust Places is a shopping place at Pookode, Kunnathidavaka, Wayanad, Kerala. Opening hours, contact details and photos will be added once they are confirmed.",
+      "amenities": [],
+      "tags": [
+        "shopping",
+        "wayanad",
+        "local products",
+        "pookode"
+      ],
+      "type": "shopping",
+      "knowmore": "https://www.google.com/maps/search/?api=1&query=Government+%26+Cooperative+Trust+Places+Pookode%2C+Kunnathidavaka+Wayanad+Kerala",
+      "duration": "",
+      "www": ""
+    },
+    {
+      "id": 93,
+      "name": "Scheduled Tribe Cooperative Society Outlet",
+      "description": "Shopping place at Kalloor, Wayanad, Kerala.",
+      "image": [
+        "https://www.bwstays.com/assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.webp"
+      ],
+      "holidays": "",
+      "timing": [],
+      "Contact": "",
+      "seasontovisit": [],
+      "distance": "",
+      "transport": "",
+      "latlong": "",
+      "map": "https://www.google.com/maps/search/?api=1&query=Scheduled+Tribe+Cooperative+Society+Outlet+Kalloor+Wayanad+Kerala",
+      "rating": "",
+      "hrs": "",
+      "fee": "",
+      "aliases": [],
+      "content": "Scheduled Tribe Cooperative Society Outlet is a shopping place at Kalloor, Wayanad, Kerala. Opening hours, contact details and photos will be added once they are confirmed.",
+      "amenities": [],
+      "tags": [
+        "shopping",
+        "wayanad",
+        "local products",
+        "kalloor"
+      ],
+      "type": "shopping",
+      "knowmore": "https://www.google.com/maps/search/?api=1&query=Scheduled+Tribe+Cooperative+Society+Outlet+Kalloor+Wayanad+Kerala",
+      "duration": "",
+      "www": ""
+    },
+    {
+      "id": 94,
+      "name": "Wayanad Heritage Museum Shop",
+      "description": "Shopping place at Ambalavayal, Wayanad, Kerala.",
+      "image": [
+        "https://www.bwstays.com/assets/img/shopping/bw-whole-spices-wholesale-kalpetta-wayanad.webp"
+      ],
+      "holidays": "",
+      "timing": [],
+      "Contact": "",
+      "seasontovisit": [],
+      "distance": "",
+      "transport": "",
+      "latlong": "",
+      "map": "https://www.google.com/maps/search/?api=1&query=Wayanad+Heritage+Museum+Shop+Ambalavayal+Wayanad+Kerala",
+      "rating": "",
+      "hrs": "",
+      "fee": "",
+      "aliases": [],
+      "content": "Wayanad Heritage Museum Shop is a shopping place at Ambalavayal, Wayanad, Kerala. Opening hours, contact details and photos will be added once they are confirmed.",
+      "amenities": [],
+      "tags": [
+        "shopping",
+        "wayanad",
+        "local products",
+        "ambalavayal"
+      ],
+      "type": "shopping",
+      "knowmore": "https://www.google.com/maps/search/?api=1&query=Wayanad+Heritage+Museum+Shop+Ambalavayal+Wayanad+Kerala",
+      "duration": "",
+      "www": ""
+    },
+    {
+      "id": 95,
+      "name": "Vanamoolika Herbals",
+      "description": "Shopping place at Mullenkolly, Pulpally, Wayanad, Kerala.",
+      "image": [
+        "https://www.bwstays.com/assets/img/shopping/bw-whole-spices-wholesale-kalpetta-wayanad.webp"
+      ],
+      "holidays": "",
+      "timing": [],
+      "Contact": "",
+      "seasontovisit": [],
+      "distance": "",
+      "transport": "",
+      "latlong": "",
+      "map": "https://www.google.com/maps/search/?api=1&query=Vanamoolika+Herbals+Mullenkolly%2C+Pulpally+Wayanad+Kerala",
+      "rating": "",
+      "hrs": "",
+      "fee": "",
+      "aliases": [],
+      "content": "Vanamoolika Herbals is a shopping place at Mullenkolly, Pulpally, Wayanad, Kerala. Opening hours, contact details and photos will be added once they are confirmed.",
+      "amenities": [],
+      "tags": [
+        "shopping",
+        "wayanad",
+        "local products",
+        "mullenkolly"
+      ],
+      "type": "shopping",
+      "knowmore": "https://www.google.com/maps/search/?api=1&query=Vanamoolika+Herbals+Mullenkolly%2C+Pulpally+Wayanad+Kerala",
+      "duration": "",
+      "www": ""
+    },
   ],
 
   pilgrimage: [
