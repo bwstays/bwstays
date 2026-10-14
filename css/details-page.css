@@ -8062,3 +8062,33 @@ body .reviews-title > .border-bottom.border-primary,
     min-height: 128px;
   }
 }
+
+/* DISCOVER, tablets and desktop: the picture alone fills its half (cover, centred). The row is a
+   little taller than the narrow-phone layout so that only a thin strip of a 16:9 picture is trimmed.
+   Phones keep the whole picture over a blurred fill because their frame is almost square. */
+@media (min-width: 768px) {
+  #loc #wrapper-div .img-wrapper::before {
+    display: none;
+  }
+  #loc #wrapper-div .img-wrapper img {
+    object-fit: cover;
+    object-position: center;
+  }
+  #loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
+  #loc #wrapper-div > .row > [class*="col-"]:has(> img) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  #loc #wrapper-div > .row > [class*="col-"]:not(:has(.img-wrapper)):not(:has(> img)) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  #loc #wrapper-div {
+    --disc-row: 190px;
+  }
+}
+@media (min-width: 992px) {
+  #loc #wrapper-div {
+    --disc-row: 240px;
+  }
+}
