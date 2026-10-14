@@ -160,14 +160,14 @@
       "output": {
         "nearest": [
           {
-            "id": 4,
-            "name": "Thirunelly",
+            "id": 17,
+            "name": "Brahmagiri",
             "distance_km": 1
           },
           {
-            "id": 17,
-            "name": "Brahmagiri",
-            "distance_km": 2
+            "id": 4,
+            "name": "Thirunelly",
+            "distance_km": 1
           },
           {
             "id": 31,
@@ -760,24 +760,24 @@
       "output": {
         "nearest": [
           {
+            "id": 5,
+            "name": "Papanasini River",
+            "distance_km": 1
+          },
+          {
             "id": 4,
             "name": "Thirunelly",
             "distance_km": 1
           },
           {
-            "id": 5,
-            "name": "Papanasini River",
-            "distance_km": 2
+            "id": 31,
+            "name": "Tholpetty wild life sanctuary",
+            "distance_km": 15
           },
           {
             "id": 32,
             "name": "Begur wild life sanctuary",
-            "distance_km": 18
-          },
-          {
-            "id": 31,
-            "name": "Tholpetty wild life sanctuary",
-            "distance_km": 19
+            "distance_km": 17
           },
           {
             "id": 15,
@@ -787,17 +787,17 @@
           {
             "id": 11,
             "name": "Trishileri temple",
-            "distance_km": 22
-          },
-          {
-            "id": 29,
-            "name": "Nagarhole wild life sanctuary",
             "distance_km": 23
           },
           {
-            "id": 24,
-            "name": "Mananthavady Pazhassi Tomb",
-            "distance_km": 25
+            "id": 14,
+            "name": "Valliyoorkavu temple",
+            "distance_km": 23
+          },
+          {
+            "id": 82,
+            "name": "Bamboo Rafting",
+            "distance_km": 24
           }
         ]
       }
@@ -1277,7 +1277,7 @@
           {
             "id": 17,
             "name": "Brahmagiri",
-            "distance_km": 23
+            "distance_km": 24
           },
           {
             "id": 5,
@@ -1335,6 +1335,11 @@
             "distance_km": 13
           },
           {
+            "id": 17,
+            "name": "Brahmagiri",
+            "distance_km": 15
+          },
+          {
             "id": 5,
             "name": "Papanasini River",
             "distance_km": 15
@@ -1348,11 +1353,6 @@
             "id": 32,
             "name": "Begur wild life sanctuary",
             "distance_km": 16
-          },
-          {
-            "id": 17,
-            "name": "Brahmagiri",
-            "distance_km": 19
           },
           {
             "id": 15,
@@ -1410,8 +1410,8 @@
             "distance_km": 16
           },
           {
-            "id": 5,
-            "name": "Papanasini River",
+            "id": 17,
+            "name": "Brahmagiri",
             "distance_km": 17
           }
         ]

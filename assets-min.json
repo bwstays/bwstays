@@ -7,11 +7,9 @@
   "css/villa.css": "8726bc1d469b",
   "data/bookingdata.js": "6c7bcd61d74f",
   "data/closeddata.js": "0d24ff068790",
-  "data/nearbylocationsdata.js": "820d78eb9628",
-  "data/shopdata.js": "4a941be42270",
+  "data/nearbylocationsdata.js": "06e7678a82da",
   "data/sitedata.js": "22a8794e003b",
   "js/booking.js": "50db3632b060",
-  "js/cart.js": "20d82af8eb02",
   "js/chat.js": "1b7ca9f8f4f8",
   "js/dynamic-evgas.js": "a6fb24589720",
   "js/dynamic-foodmap.js": "cca2cdb9d14a",
@@ -30,7 +28,7 @@
   "js/testimonial.js": "809abf211383",
   "js/total-booking-reports.js": "33b5ad7e49f8",
   "js/validations.js": "29fc66f29623",
-  "js/way_food_loc.js": "2b5fa194275a",
+  "js/way_food_loc.js": "b925db1fe720",
   "js/wayanad_kalpetta_trait-one.js": "fce993d15730",
   "js/widgets.js": "94e944eaac67"
 }
