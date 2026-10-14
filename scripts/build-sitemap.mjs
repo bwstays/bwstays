@@ -44,7 +44,7 @@ if (fs.existsSync(prevFile)) {
 //     committed page by page, e.g. "Refresh CSS version string in x.html"), or
 //   - it is plumbing: asset versions, minified files, regenerated data, merges.
 const BULK_LIMIT = 15;
-const PLUMBING = /^(Refresh|Rebuild|Regenerate|PWA:|All pages:|Location pages:|Merge)|version string|asset version|minified|cache.?bust/i;
+const PLUMBING = /^(Refresh|Rebuild|Regenerate|Prerender|PWA:|All pages:|Location pages:|Merge)|version string|asset version|minified|cache.?bust/i;
 const lastChange = new Map();
 {
   const r = spawnSync('git', ['log', '--no-merges', '--name-only', '--format=@%cs|%s', '--', '*.html'],

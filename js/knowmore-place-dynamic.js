@@ -537,7 +537,7 @@ function initializeSection(sectionType, data, sectionIndex) {
       <div class="mb-1 text-white-50" style="font-size: 0.8rem; ">
         <i class="fas fa-clock me-1" style="color: #64a19d;"></i> Timing: ${currentItem.timing}
       </div>
-      <a id="viewattraction" href="${currentItem.knowmore || '#'}" class="js-scroll-trigger" style="font-size: 0.8rem;">View Attractions</a>`;
+      <a href="${currentItem.knowmore || '#'}" class="js-scroll-trigger view-attraction" style="font-size: 0.8rem;">View Attractions</a>`;
     tempContent.style.position = 'absolute';
     tempContent.style.width = '100%';
     tempContent.style.opacity = '0';
