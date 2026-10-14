@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#3f7f7b">
+<title>You are offline - Black and White Stays</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/assets/img/pwa/icon-96.png">
+<style>
+  :root { --teal: #3f7f7b; --ink: #111; --muted: #5a6268; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--ink); background: #f6f7f7; }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; }
+  .logo { width: 72px; height: 72px; border-radius: 16px; display: block; margin: 0 auto 16px; }
+  h1 { font-size: 1.5rem; text-align: center; margin: 0 0 8px; }
+  p.lead { text-align: center; color: var(--muted); margin: 0 0 24px; }
+  .card { background: #fff; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.12); padding: 16px; margin-bottom: 16px; }
+  .card h2 { font-size: 1.05rem; margin: 0 0 8px; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li a { display: block; padding: 10px 4px; color: var(--teal); text-decoration: none; border-bottom: 1px solid #e6e8e8; word-break: break-word; }
+  li:last-child a { border-bottom: 0; }
+  li a:focus-visible, .btn:focus-visible { outline: 3px solid #8cc4c0; outline-offset: 2px; }
+  .btn { display: inline-block; background: var(--teal); color: #fff; border: 0; border-radius: 8px; padding: 10px 18px; font-size: 1rem; cursor: pointer; text-decoration: none; }
+  .btn:hover { background: #2f6f6b; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 16px; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  noscript p { text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="/assets/img/pwa/icon-192.png" alt="Black and White Stays" width="72" height="72">
+  <h1>You are offline</h1>
+  <p class="lead">This page is not saved on your phone yet. Pages you have already opened are available below.</p>
+
+  <div class="actions">
+    <button class="btn" type="button" id="retry">Try again</button>
+    <a class="btn" href="/index.html">Home</a>
+  </div>
+
+  <section class="card" aria-labelledby="saved-title">
+    <h2 id="saved-title">Saved pages</h2>
+    <ul id="saved"><li class="muted">Looking for saved pages&hellip;</li></ul>
+  </section>
+
+  <section class="card" aria-labelledby="needs-title">
+    <h2 id="needs-title">Needs an internet connection</h2>
+    <p class="muted">Live availability, sending a booking request, the chat assistant, the weather widget and map backgrounds need a connection. Everything else, including places, food, charging stations and policies, works from the saved pages.</p>
+  </section>
+  <noscript><p>Please turn on JavaScript to see your saved pages.</p></noscript>
+</main>
+<script>
+  document.getElementById('retry').addEventListener('click', function () { location.reload(); });
+  (function () {
+    var list = document.getElementById('saved');
+    function title(path) {
+      var name = path.replace(/^\//, '').replace(/\.html$/, '').replace(/^bw-/, '').replace(/-wayanad$/, '');
+      if (!name || name === 'index') return 'Home';
+      return name.replace(/[-_]+/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+    }
+    if (!('caches' in window)) { list.innerHTML = '<li class="muted">Saved pages are not available in this browser.</li>'; return; }
+    caches.open('bw-site-v1').then(function (cache) { return cache.keys(); }).then(function (keys) {
+      var paths = keys.map(function (r) { return new URL(r.url).pathname; })
+        .filter(function (p) { return /\.html$/.test(p) && p !== '/offline.html'; })
+        .sort(function (a, b) { return title(a).localeCompare(title(b)); });
+      if (!paths.length) { list.innerHTML = '<li class="muted">No pages saved yet. Open the site once while online and they will be saved for offline use.</li>'; return; }
+      list.innerHTML = '';
+      paths.forEach(function (p) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = p; a.textContent = title(p);
+        li.appendChild(a); list.appendChild(li);
+      });
+    }).catch(function () { list.innerHTML = '<li class="muted">Could not read saved pages.</li>'; });
+    window.addEventListener('online', function () { location.reload(); });
+  })();
+</script>
+</body>
+</html>
