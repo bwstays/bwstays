@@ -8866,3 +8866,8 @@ body #language-selector {
 @media (min-width: 768px) { .masthead.map-page .map-full, .masthead.map-page .bw-map-filters, .masthead.map-page #fooding-top h1 { max-width: 690px; } }
 @media (min-width: 992px) { .masthead.map-page .map-full, .masthead.map-page .bw-map-filters, .masthead.map-page #fooding-top h1 { max-width: 930px; } }
 @media (min-width: 1200px) { .masthead.map-page .map-full, .masthead.map-page .bw-map-filters, .masthead.map-page #fooding-top h1 { max-width: 1110px; } }
+
+/* Map pages: no white strip between the map hero and the contact section */
+.masthead.map-page + .testimonial-section {
+  margin-top: 0;
+}
