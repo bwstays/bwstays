@@ -7852,3 +7852,15 @@ body .reviews-title > .border-bottom.border-primary,
 .weekdays .day {
   color: #5a6268;
 }
+
+/* booking page: teal text on white and white on teal used #64a19d (2.9:1); #3f7f7b is 4.6:1 */
+.villa-card a,
+.villa-card .price-tag,
+.calendar-container .days .day.today,
+.guest-information .form-check-label a {
+  color: #3f7f7b;
+}
+.villa-card .price-tag {
+  background-color: #3f7f7b;
+  color: #fff;
+}
