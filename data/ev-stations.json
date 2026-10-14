@@ -1,0 +1,285 @@
+{
+ "note": "Hand-maintained list: OpenStreetMap has no charging stations mapped in Wayanad. Set verified to true after checking a station on site or with its operator. Do not copy coordinates from Google Maps into OpenStreetMap (licence).",
+ "updated": "2026-10-14",
+ "stations": [
+  {
+   "id": "ev-001",
+   "name": "Electric Vehicle Charging Station",
+   "operator": null,
+   "lat": 11.483715,
+   "lon": 76.008472,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-002",
+   "name": "GOEC Charging Station",
+   "operator": "GOEC",
+   "lat": 11.521793,
+   "lon": 76.024642,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-003",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.545877,
+   "lon": 76.039502,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-004",
+   "name": "Ather Grid Charging Station",
+   "operator": "Ather Grid",
+   "lat": 11.559258,
+   "lon": 76.03512,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-005",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.561511,
+   "lon": 76.130481,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-006",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.591059,
+   "lon": 76.070645,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-007",
+   "name": "Ather Grid Charging Station",
+   "operator": "Ather Grid",
+   "lat": 11.591627,
+   "lon": 76.070625,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-008",
+   "name": "Electric Vehicle Charging Station",
+   "operator": null,
+   "lat": 11.592206,
+   "lon": 76.097882,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-009",
+   "name": "BPCL Charging Station",
+   "operator": "BPCL",
+   "lat": 11.59565,
+   "lon": 76.077805,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-010",
+   "name": "GOEC Charging Station",
+   "operator": "GOEC",
+   "lat": 11.597931,
+   "lon": 76.080261,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-011",
+   "name": "Zeon Charging Station",
+   "operator": "Zeon",
+   "lat": 11.603273,
+   "lon": 76.083345,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-012",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.60918,
+   "lon": 76.083398,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-013",
+   "name": "Ather Grid Charging Station",
+   "operator": "Ather Grid",
+   "lat": 11.609382,
+   "lon": 76.081333,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-014",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.614657,
+   "lon": 76.059642,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-015",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.623306,
+   "lon": 76.087366,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-016",
+   "name": "KSEB Charging Station",
+   "operator": "KSEB",
+   "lat": 11.62472,
+   "lon": 76.087968,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-017",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.633047,
+   "lon": 76.089714,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-018",
+   "name": "KSEB Charging Station",
+   "operator": "KSEB",
+   "lat": 11.633408,
+   "lon": 76.089293,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-019",
+   "name": "Tata Power Charging Station",
+   "operator": "Tata Power",
+   "lat": 11.637309,
+   "lon": 76.094708,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-020",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.642409,
+   "lon": 76.111,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-021",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.654022,
+   "lon": 76.153572,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-022",
+   "name": "BPCL Charging Station",
+   "operator": "BPCL",
+   "lat": 11.655998,
+   "lon": 76.158993,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-023",
+   "name": "KSEB Charging Station",
+   "operator": "KSEB",
+   "lat": 11.659863,
+   "lon": 76.167353,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-024",
+   "name": "Charge N Go Charging Station",
+   "operator": "Charge N Go",
+   "lat": 11.664167,
+   "lon": 76.150564,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-025",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.725129,
+   "lon": 76.147209,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-026",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.742845,
+   "lon": 76.120345,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-027",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.750778,
+   "lon": 76.019444,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-028",
+   "name": "Ather Grid Charging Station",
+   "operator": "Ather Grid",
+   "lat": 11.782537,
+   "lon": 76.170105,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-029",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.787097,
+   "lon": 76.166722,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-030",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.791662,
+   "lon": 76.169359,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  },
+  {
+   "id": "ev-031",
+   "name": "ChargeMOD Charging Station",
+   "operator": "ChargeMOD",
+   "lat": 11.797125,
+   "lon": 76.006451,
+   "verified": false,
+   "source": "Listed on the site's own EV maps (900 Kandi, Ali Honey, Ananthanatha pages); position approximate, not yet visited"
+  }
+ ]
+}

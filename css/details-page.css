@@ -7794,3 +7794,53 @@ body .reviews-title > .border-bottom.border-primary,
   align-self: flex-start;
   flex: 0 0 auto;
 }
+
+/* EV charging and gas station maps (js/dynamic-evgas.js) */
+.evgas-map {
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  z-index: 0;
+}
+.evgas-list.bw-food-widget {
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  scrollbar-width: thin;
+}
+.bw-pin span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 2px auto 0;
+  border: 3px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.bw-pin-ev span { background: #2e9e5b; }
+.bw-pin-gas span { background: #d9822b; }
+@media (max-width: 575.98px) {
+  .evgas-map { height: 260px; }
+}
+
+/* interactive EV/gas maps need the full width: stack the two columns on phones and small tablets */
+@media (max-width: 767.98px) {
+  .ev-gas-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.75rem;
+  }
+  .ev-gas-col {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .ev-gas-col h3 {
+    font-size: 1.05rem;
+    min-height: 0;
+  }
+}
