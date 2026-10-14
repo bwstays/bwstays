@@ -14,11 +14,6 @@
 
     <script type="text/javascript" src="https://analytics.ahrefs.com/analytics.js" data-key="65LXpG9qPXZ91m/BgZ6YpA"  async  >
     </script>
-    <script
-      type="text/javascript"
-      src="https://www.googletagmanager.com/gtag/js?id=G-VZWJNHM47Z"
-      async
-    ></script>
     <script type="text/javascript">
       /* <![CDATA[ */
       window.dataLayer = window.dataLayer || [];
@@ -27,7 +22,18 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-VZWJNHM47Z");
+      gtag('config', 'G-VZWJNHM47Z');
+  /* load gtag.js after the page has finished loading so it does not compete with first paint */
+  (function () {
+    function load() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VZWJNHM47Z';
+      document.head.appendChild(s);
+    }
+    if (document.readyState === 'complete') { setTimeout(load, 1500); }
+    else { window.addEventListener('load', function () { setTimeout(load, 1500); }); }
+  })();
       /* ]]> */
     </script>
     <title>
@@ -123,7 +129,6 @@
   <link rel="shortlink" href="https://www.bwstays.com" />
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
-<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 
     <link rel="manifest" href="https://www.bwstays.com/manifest.json"/>
@@ -142,7 +147,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.bwstays.com/assets/fonts/fontawesome/fa-solid-900.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.bwstays.com/assets/fonts/fontawesome/fa-brands-400.woff2">
 <link href="https://www.bwstays.com/css/fontawesome.min.css?v=a611ff0d" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.bwstays.com/vendor/bootstrap/bootstrap.min.css?v=4.5.3">
 
 
     <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
@@ -174,9 +179,9 @@
   	<link rel="apple-touch-icon" sizes="76x76" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-76x76.png"/>
   	<link rel="apple-touch-icon" sizes="152x152" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-152x152.png"/>
   	<link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" rel="stylesheet"/>
+    <link href="https://www.bwstays.com/vendor/leaflet/leaflet.min.css?v=1.9.4" rel="stylesheet"/>
 
- <link href="https://www.bwstays.com/css/details-page.min.css?v=ea6ca897" rel="stylesheet" type="text/css" media="all"/>
+ <link href="https://www.bwstays.com/css/details-page.min.css?v=153bd877" rel="stylesheet" type="text/css" media="all"/>
      <link href="https://www.bwstays.com/css/new-page.min.css?v=f2e8abdc" rel="stylesheet" type="text/css" media="all"/>
 
 
@@ -250,7 +255,7 @@
           data-target="#navbarResponsive"
           aria-controls="navbarResponsive"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Menu"
         >
           Menu
           <i class="fas fa-bars"></i>
@@ -627,19 +632,19 @@
 
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      src="https://www.bwstays.com/vendor/jquery/jquery.min.js?v=3.5.1"
     ></script>
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      src="https://www.bwstays.com/vendor/jquery/jquery.easing.min.js?v=1.4.1"
     ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet-src.min.js"></script>
+        <script src="https://www.bwstays.com/vendor/leaflet/leaflet-src.min.js?v=1.9.4"></script>
 
 
 
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.bundle.min.js"
+      src="https://www.bwstays.com/vendor/bootstrap/bootstrap.bundle.min.js?v=4.5.3"
     ></script>
 
 
