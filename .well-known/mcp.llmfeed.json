@@ -1,0 +1,191 @@
+{
+  "feed_type": "mcp",
+  "metadata": {
+    "title": "Black and White Stays - Kalpetta, Wayanad",
+    "origin": "https://www.bwstays.com",
+    "description": "AI context for Black and White Stays - villas and workation stays in Kalpetta, Wayanad, Kerala",
+    "lang": "en",
+    "generated_at": "2026-10-14",
+    "generator": "scripts/build-llmfeed.mjs (from mcp.json)",
+    "contact": "bwstays@bwstays.com"
+  },
+  "trust": {
+    "scope": "public",
+    "signed": false,
+    "note": "Static snapshot generated from the published website. Availability is a snapshot, not live."
+  },
+  "prompts": [
+    {
+      "intent": "find a place to stay in Kalpetta Wayanad",
+      "keywords": [
+        "villa",
+        "homestay",
+        "Kalpetta",
+        "Wayanad",
+        "stay"
+      ],
+      "description": "Villas, rates and capacity published by the site."
+    },
+    {
+      "intent": "plan sightseeing near Kalpetta",
+      "keywords": [
+        "places to visit",
+        "waterfall",
+        "trek",
+        "museum",
+        "Wayanad"
+      ],
+      "description": "Attractions with distances from the stay and nearby places."
+    },
+    {
+      "intent": "find food near the stay",
+      "keywords": [
+        "restaurant",
+        "cafe",
+        "food",
+        "Kalpetta"
+      ],
+      "description": "Places to eat from OpenStreetMap with driving distances."
+    },
+    {
+      "intent": "check availability and how to book",
+      "keywords": [
+        "availability",
+        "booking",
+        "price"
+      ],
+      "description": "Booked and closed dates, nightly rates and how to contact."
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "search_attractions",
+      "type": "tool",
+      "method": "GET",
+      "path": "https://www.bwstays.com/tools/search/attractions.json",
+      "description": "Look up attractions by category, distance, entry fee or rating (pre-computed)"
+    },
+    {
+      "name": "search_properties",
+      "type": "tool",
+      "method": "GET",
+      "path": "https://www.bwstays.com/tools/search/properties.json",
+      "description": "List the villas the site publishes"
+    },
+    {
+      "name": "search_food",
+      "type": "tool",
+      "method": "GET",
+      "path": "https://www.bwstays.com/tools/search/food.json",
+      "description": "Find places to eat near the stay by kind, diet or distance (pre-computed, OpenStreetMap data)"
+    },
+    {
+      "name": "nearby_places",
+      "type": "tool",
+      "method": "GET",
+      "path": "https://www.bwstays.com/tools/search/nearby.json",
+      "description": "The closest attractions to each place by driving distance (pre-computed)"
+    },
+    {
+      "name": "check_availability",
+      "type": "tool",
+      "method": "GET",
+      "path": "https://www.bwstays.com/tools/booking/availability.json",
+      "description": "Dates the site marks as booked or closed. Static snapshot - not live inventory."
+    },
+    {
+      "name": "get_pricing",
+      "type": "tool",
+      "method": "GET",
+      "path": "https://www.bwstays.com/tools/booking/pricing.json",
+      "description": "Nightly rates exactly as published on the site"
+    },
+    {
+      "name": "contact_info",
+      "type": "tool",
+      "method": "GET",
+      "path": "https://www.bwstays.com/tools/booking/contact.json",
+      "description": "How to reach Black and White Stays"
+    },
+    {
+      "name": "about",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/about.json",
+      "description": "Who Black and White Stays is, where it is, and how to reach it"
+    },
+    {
+      "name": "properties",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/properties.json",
+      "description": "Villas offered by Black and White Stays with the rate and capacity the site publishes"
+    },
+    {
+      "name": "amenities",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/amenities.json",
+      "description": "Amenities listed on the villa page"
+    },
+    {
+      "name": "booking",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/booking.json",
+      "description": "How to book, what the booking form asks for, and how to make contact"
+    },
+    {
+      "name": "policies",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/policies.json",
+      "description": "Terms of service and privacy statement, quoted from footer.html"
+    },
+    {
+      "name": "attractions",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/attractions.json",
+      "description": "Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay"
+    },
+    {
+      "name": "location",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/location.json",
+      "description": "Where the stay is and how far common destinations are"
+    },
+    {
+      "name": "food",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/food.json",
+      "description": "Places to eat and drink in Wayanad (OpenStreetMap data), with driving distance from the stay"
+    },
+    {
+      "name": "distances",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/distances.json",
+      "description": "Driving distance in km between 90 Wayanad places (null = not computed)"
+    },
+    {
+      "name": "help",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/help.json",
+      "description": "Frequently asked questions shown on the site"
+    }
+  ],
+  "related": [
+    {
+      "rel": "static-mcp-manifest",
+      "href": "https://www.bwstays.com/mcp.json"
+    },
+    {
+      "rel": "llms-full",
+      "href": "https://www.bwstays.com/llms-full.txt"
+    }
+  ]
+}
