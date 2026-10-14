@@ -226,3 +226,18 @@ node scripts/check.mjs               # syntax, JSON, JSON-LD, duplicate ids, MCP
 ### Source of truth for front-end code
 
 `js/` and `css/` are edited directly and are the source of truth. The old unminified copies (`scripts/*.js`, `styles/`, `scripts/min.ps1`) were removed because they were stale and re-running the minify script would have overwritten later fixes. `scripts/` now holds only the Node build and check scripts. The pages load minified copies (`name.min.css`, `name.min.js`, `data/name.min.js`, each with a `.map` source map, so browser dev tools show the readable source). Edit only the readable files. After changing anything under `css/`, `js/` or `data/*.js`, run `node scripts/minify-assets.mjs` (rebuilds the `.min` files and points the pages at them) and then `node scripts/version-assets.mjs` (fresh `?v=` hashes). `check.mjs` fails if a `.min` file is older than its source. To go back to the unminified files, check out the tag `restore-before-speed-pass`.
+
+### Progressive Web App (installable, works offline)
+
+```
+node scripts/build-pwa.mjs           # regenerate /sw.js (service worker)
+node scripts/build-pwa.mjs --check   # exit 1 if /sw.js is stale (also run by check.mjs)
+```
+
+- `manifest.json`: name, icons (192, 512, maskable 512 in `assets/img/pwa/`), theme colours, shortcuts (Book, Locations, Eatery).
+- `scripts/pwa/sw.template.js` is the source of the service worker; **`/sw.js` is generated, never edit it**. It lives at the site root so it controls every page.
+- Shell (css, js, fonts, vendor, small data, offline page, icons) is saved at install. After the first load the rest of the site (all HTML pages, data, images) is saved in the background, skipped on Save-Data/2G. Pages are network-first with a 4 s timeout, then the saved copy, then `/offline.html`. Availability data is network-first.
+- `js/pwa.js` registers the worker, shows the update prompt, offline notice and install prompt (Android and an iOS hint).
+- The worker VERSION only changes when a shell file changes, so booking updates do not make visitors re-download the shell. Run `build-pwa` after `minify-assets` and `version-assets`; the availability and data workflows already do.
+- Needs a connection: live availability, booking submit (formsubmit), chat, weather, currency rates, map tile backgrounds, Tally embed.
+- To go back: tag `restore-before-pwa`.
