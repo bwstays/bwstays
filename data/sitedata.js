@@ -3424,7 +3424,7 @@ const siteData = {
       "name": "Government & Cooperative Trust Places",
       "description": "Shopping place at Pookode, Kunnathidavaka, Wayanad, Kerala.",
       "image": [
-        "https://www.bwstays.com/assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.webp"
+        "https://www.bwstays.com/assets/img/shopping/photo-coming-soon.svg"
       ],
       "holidays": "",
       "timing": [],
@@ -3456,7 +3456,7 @@ const siteData = {
       "name": "Scheduled Tribe Cooperative Society Outlet",
       "description": "Shopping place at Kalloor, Wayanad, Kerala.",
       "image": [
-        "https://www.bwstays.com/assets/img/shopping/bw-ali-s-wayanadan-natural-honey-wayanad-honey.webp"
+        "https://www.bwstays.com/assets/img/shopping/photo-coming-soon.svg"
       ],
       "holidays": "",
       "timing": [],
@@ -3488,7 +3488,7 @@ const siteData = {
       "name": "Wayanad Heritage Museum Shop",
       "description": "Shopping place at Ambalavayal, Wayanad, Kerala.",
       "image": [
-        "https://www.bwstays.com/assets/img/shopping/bw-whole-spices-wholesale-kalpetta-wayanad.webp"
+        "https://www.bwstays.com/assets/img/shopping/photo-coming-soon.svg"
       ],
       "holidays": "",
       "timing": [],
@@ -3520,7 +3520,7 @@ const siteData = {
       "name": "Vanamoolika Herbals",
       "description": "Shopping place at Mullenkolly, Pulpally, Wayanad, Kerala.",
       "image": [
-        "https://www.bwstays.com/assets/img/shopping/bw-whole-spices-wholesale-kalpetta-wayanad.webp"
+        "https://www.bwstays.com/assets/img/shopping/photo-coming-soon.svg"
       ],
       "holidays": "",
       "timing": [],
