@@ -241,3 +241,17 @@ node scripts/build-pwa.mjs --check   # exit 1 if /sw.js is stale (also run by ch
 - The worker VERSION only changes when a shell file changes, so booking updates do not make visitors re-download the shell. Run `build-pwa` after `minify-assets` and `version-assets`; the availability and data workflows already do.
 - Needs a connection: live availability, booking submit (formsubmit), chat, weather, currency rates, map tile backgrounds, Tally embed.
 - To go back: tag `restore-before-pwa`.
+
+### Sitemap, LLMFeed and data worklists
+
+```
+node scripts/build-sitemap.mjs     # sitemap.xml, page-sitemap.xml, sitemap.txt, sitemap_index.xml (lastmod from git)
+node scripts/build-llmfeed.mjs     # .well-known/mcp.llmfeed.json from mcp.json (run after generate-mcp)
+node scripts/build-fuel.mjs        # data/fuel-places.json: Wayanad fuel stations from OpenStreetMap
+node scripts/build-survey.mjs      # data/survey-food.csv and data/survey-coordinates.csv: what to verify on the ground
+node scripts/probe-coords.mjs 3 6  # read-only OpenStreetMap lookup for places whose coordinate is not trusted
+```
+
+- `check.mjs` verifies that the sitemap lists every indexable page and that the LLMFeed is current. The sitemap `lastmod` ignores site-wide edits (asset versions, plumbing, the same change committed page by page); the monthly workflow checks out full history so dates stay correct.
+- `data/mcp-review.json` `coordinate_confirmations` lists hills/peaks whose coordinate is far from a road but matches an OpenStreetMap feature; `build-distances.mjs` trusts those.
+- The two survey CSVs are the field checklist for issues #101 and #102. Never copy hours, phone numbers or coordinates from Google Maps into OpenStreetMap (licence).
