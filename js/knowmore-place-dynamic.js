@@ -232,7 +232,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
                       ${bwHas(item.Contact) ? '<i class="fas fa-phone"></i> ' + item.Contact : ''}
                   </small>
               </div>
-              <a  id="attractions"  href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Attractions</a>
+              <a  id="attractions"  href="${item.knowmore}"${/^https:\/\/www\.bwstays\.com\//.test(item.knowmore || '') ? '' : ' target="_blank" rel="noopener noreferrer"'} class="btn btn-primary btn-sm mt-auto">Attractions</a>
           </div>
       `;
       cardCol.appendChild(card);
@@ -292,7 +292,7 @@ function updateRightColumnOnly() {
             ${bwHas(item.Contact) ? '<i class="fas fa-phone"></i> ' + item.Contact : ''}
           </small>
         </div>
-        <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto" rel="dofollow" data-i18n="nav.km">Know More</a>
+        <a href="${item.knowmore}"${/^https:\/\/www\.bwstays\.com\//.test(item.knowmore || '') ? '' : ' target="_blank" rel="noopener noreferrer"'} class="btn btn-primary btn-sm mt-auto" rel="dofollow" data-i18n="nav.km">Know More</a>
       </div>
     `;
     cardCol.appendChild(card);
