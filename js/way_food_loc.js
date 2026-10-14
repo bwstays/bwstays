@@ -167,6 +167,8 @@ function bwFoodPopup(p) {
     h += '<div class="small mt-1"><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.google.com/maps/dir/?api=1&destination=' +
         encodeURIComponent(p.lat + ',' + p.lon) + '">Directions</a>';
     if (p.osm_edit_url) h += ' · <a target="_blank" rel="noopener noreferrer nofollow" href="' + bwEsc(p.osm_edit_url) + '">Add missing details on OpenStreetMap</a>';
+    h += ' &middot; <a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/bwstays/bwstays/issues/new?labels=data&title=' +
+        encodeURIComponent('Food map correction: ' + p.name) + '">Report a correction</a>';
     h += '</div>';
     if (p.unverified_position) h += '<div class="small text-muted">Position from the site\'s own list; not yet confirmed on OpenStreetMap.</div>';
     return h;
