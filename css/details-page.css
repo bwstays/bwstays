@@ -7871,3 +7871,158 @@ body .reviews-title > .border-bottom.border-primary,
 .guest-information .text-primary {
   color: #3f7f7b !important;
 }
+
+/* DISCOVER: 14 category rows, compact. Each row is one slim band: image beside the title and the
+   current place (name, short description, holiday and timing on one line, link). The row only
+   grows if its text needs it, so nothing is clipped. */
+#loc.projects-section {
+  padding: 3rem 0 3.25rem;
+}
+#loc .col-lg-8 h2 {
+  margin-bottom: 0.5rem !important;
+}
+#loc .col-lg-8 > p {
+  margin-bottom: 1.5rem;
+}
+#loc #wrapper-div {
+  --disc-row: 150px;
+}
+#loc #wrapper-div > .row {
+  min-height: var(--disc-row);
+  margin: 0 !important;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow: hidden;
+}
+#loc #wrapper-div > .row > [class*="col-"] {
+  flex: 0 0 50%;
+  max-width: 50%;
+  min-width: 0;
+}
+#loc #wrapper-div .img-wrapper {
+  height: 100% !important;
+  min-height: var(--disc-row);
+}
+#loc #wrapper-div .img-wrapper img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+#loc #wrapper-div .project {
+  min-height: 0 !important;
+  height: 100%;
+}
+#loc #wrapper-div .project-text {
+  padding: 0.6rem 2.5rem !important;
+  font-size: 100%;
+}
+#loc #wrapper-div .project-text h3.h4 {
+  font-size: 1.2rem !important;
+  margin-bottom: 0.15rem !important;
+  line-height: 1.25;
+}
+#loc #wrapper-div .project-text > .border-bottom {
+  margin-bottom: 0.5rem !important;
+}
+#loc #wrapper-div .tab-content {
+  min-height: 78px;
+}
+/* holiday and timing share one line */
+#loc #wrapper-div .tab-content-temp {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  column-gap: 0.9rem;
+  align-content: flex-start;
+  justify-content: inherit;
+}
+#loc #wrapper-div .tab-content-temp > h4,
+#loc #wrapper-div .tab-content-temp > p {
+  flex: 0 0 100%;
+}
+#loc #wrapper-div .tab-content-temp > h4 {
+  font-size: 0.98rem !important;
+  margin-bottom: 0.1rem !important;
+}
+#loc #wrapper-div .tab-content-temp > p {
+  margin-bottom: 0.2rem !important;
+}
+#loc #wrapper-div .tab-content-temp > div {
+  margin-bottom: 0.1rem !important;
+}
+#loc #wrapper-div .tab-content-temp > a {
+  flex: 0 0 100%;
+  margin-top: 0.15rem;
+}
+@media (min-width: 992px) {
+  #loc #wrapper-div .text-lg-right .tab-content-temp {
+    justify-content: flex-end;
+  }
+}
+/* tablets and phones: image on the left, text on the right, one slim band per row */
+@media (max-width: 991.98px) {
+  #loc #wrapper-div {
+    --disc-row: 128px;
+  }
+  #loc #wrapper-div > .row > [class*="col-"] {
+    flex: 1 1 58%;
+    max-width: 58%;
+    order: 2;
+  }
+  #loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
+  #loc #wrapper-div > .row > [class*="col-"]:has(> img) {
+    flex: 0 0 42%;
+    max-width: 42%;
+    order: 1;
+  }
+  #loc #wrapper-div .project-text {
+    padding: 0.6rem 1rem !important;
+    text-align: left !important;
+  }
+  #loc #wrapper-div .tab-content-temp {
+    justify-content: flex-start;
+  }
+  #loc #wrapper-div .project-text h3.h4 {
+    font-size: 1.05rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  #loc.projects-section {
+    padding: 2.25rem 0 2.5rem !important;
+  }
+  #loc #wrapper-div {
+    --disc-row: 112px;
+  }
+  #loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
+  #loc #wrapper-div > .row > [class*="col-"]:has(> img) {
+    flex-basis: 36%;
+    max-width: 36%;
+  }
+  #loc #wrapper-div > .row > [class*="col-"] {
+    flex-basis: 64%;
+    max-width: 64%;
+  }
+  #loc #wrapper-div .project-text {
+    padding: 0.5rem 0.75rem !important;
+  }
+  #loc #wrapper-div .project-text h3.h4 {
+    font-size: 1rem !important;
+  }
+  /* the short description is the first thing to go on a narrow screen */
+  #loc #wrapper-div .tab-content-temp > p {
+    display: none;
+  }
+  #loc #wrapper-div .project-text {
+    padding-right: 3rem !important;
+  }
+  #loc #wrapper-div .tab-content {
+    min-height: 92px;
+  }
+  #loc #wrapper-div .tab-content-temp > h4 {
+    font-size: 0.92rem !important;
+    line-height: 1.25;
+  }
+  #loc #wrapper-div .tab-content-temp > div,
+  #loc #wrapper-div .tab-content-temp > a {
+    font-size: 0.74rem !important;
+  }
+}
