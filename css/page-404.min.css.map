@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["page-404.css"],
+  "sourcesContent": ["/* 404 page: the \"Resource Not Found\" heading sits at the top of the page, so it needs to clear the\n   fixed navigation (about 97px tall from tablet width up; phones already reserve the nav height).\n   Specificity matches the shared \"#signup.signup-section\" spacing rule so this one wins. */\n#mainNav + #signup.signup-section {\n  padding-top: 8rem !important;\n}\n\n@media (max-width: 767.98px) {\n  #mainNav + #signup.signup-section {\n    padding-top: 2rem !important;\n  }\n}\n"],
+  "mappings": "AAGA,CAAC,OAAQ,CAAE,CAAC,MAAM,CAAC,eACjB,YAAa,cACf,CAEA,OAAO,CAAC,SAAS,EAAE,UACjB,CALD,OAKU,CAAE,CALD,MAKQ,CALD,eAMf,YAAa,cACf,CACF",
+  "names": []
+}
