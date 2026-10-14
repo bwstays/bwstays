@@ -1,5 +1,5 @@
 {
-  "css/details-page.css": "44ad580e89cb",
+  "css/details-page.css": "04a046547f2e",
   "css/maps.css": "c3a77def87bd",
   "css/new-page.css": "d8af789de46b",
   "css/page-404.css": "2687648efbb1",
@@ -13,6 +13,7 @@
   "js/booking.js": "50db3632b060",
   "js/cart.js": "20d82af8eb02",
   "js/chat.js": "1b7ca9f8f4f8",
+  "js/dynamic-evgas.js": "1830ccf9fe5b",
   "js/dynamic-foodmap.js": "448180edbaaa",
   "js/dynamic-nearby.js": "8bfc0bb38af5",
   "js/faq.js": "c1b9d6c34d92",
