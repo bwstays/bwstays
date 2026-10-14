@@ -94,6 +94,13 @@
       "description": "Dates the site marks as booked or closed. Static snapshot - not live inventory."
     },
     {
+      "name": "nearby_charging_and_fuel",
+      "type": "tool",
+      "method": "GET",
+      "path": "https://www.bwstays.com/tools/search/charging.json",
+      "description": "Closest EV charging stations and fuel stations to the stay (pre-computed, straight-line km)"
+    },
+    {
       "name": "get_pricing",
       "type": "tool",
       "method": "GET",
@@ -169,6 +176,13 @@
       "method": "GET",
       "path": "https://www.bwstays.com/resources/distances.json",
       "description": "Driving distance in km between 90 Wayanad places (null = not computed)"
+    },
+    {
+      "name": "charging_and_fuel",
+      "type": "resource",
+      "method": "GET",
+      "path": "https://www.bwstays.com/resources/charging_and_fuel.json",
+      "description": "EV charging stations and fuel stations around the stay, with straight-line distance from the stay"
     },
     {
       "name": "help",
