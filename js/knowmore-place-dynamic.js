@@ -1,3 +1,7 @@
+// true when a data field holds a real value (empty, "NA" and missing values are not shown on cards)
+function bwHas(v) {
+  return v !== undefined && v !== null && String(v).trim() !== '' && !/^(na|n\/a)$/i.test(String(v).trim());
+}
 window.addEventListener('load', function () {
   const sections = document.querySelectorAll('#loc .container .row.justify-content-center');
   let sectionIndex = 1;
@@ -212,8 +216,8 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
           <div class="card-body d-flex flex-column">
               <h5 class="card-title text-white">${item.name}</h5>
               <div class="rating mb-2">
-                  <span class="text-warning">★ ${item.rating}</span>
-                  <span class="text-white-50 ml-2 "> <span class="text-warning">${item.distance} km </span> from Kalpetta</span>
+                  ${bwHas(item.rating) ? '<span class="text-warning">★ ' + item.rating + '</span>' : ''}
+                  ${bwHas(item.distance) ? '<span class="text-white-50 ml-2 "> <span class="text-warning">' + item.distance + ' km </span> from Kalpetta</span>' : ''}
                     <span class="text-white-50 ml-2"><a href="${currentItemData.map}" target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
 				  			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
 						</a>
@@ -222,10 +226,10 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
               <p class="card-text text-white-50 flex-grow-1">${item.description.substring(0,100)}...</p>
               <div class="card-footer-info mb-3">
                   <small class="text-white-50">
-                      <i class="fas fa-clock"></i> ${item.timing}<br>
-                      <i class="fas fa-car-side"></i> ${item.transport} <br>
-					            <i class="fas fa-calendar-week"></i> ${item.holidays} <br>
-                      <i class="fas fa-phone"></i> ${item.Contact}
+                      ${bwHas(item.timing) ? '<i class="fas fa-clock"></i> ' + item.timing + '<br>' : ''}
+                      ${bwHas(item.transport) ? '<i class="fas fa-car-side"></i> ' + item.transport + ' <br>' : ''}
+					            ${bwHas(item.holidays) ? '<i class="fas fa-calendar-week"></i> ' + item.holidays + ' <br>' : ''}
+                      ${bwHas(item.Contact) ? '<i class="fas fa-phone"></i> ' + item.Contact : ''}
                   </small>
               </div>
               <a  id="attractions"  href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto">Attractions</a>
@@ -271,8 +275,8 @@ function updateRightColumnOnly() {
       <div class="card-body d-flex flex-column">
         <h5 class="card-title text-white">${item.name}</h5>
         <div class="rating mb-2">
-          <span class="text-warning">★ ${item.rating}</span>
-          <span class="text-white-50 ml-2">${item.distance}km from Kalpetta</span>
+          ${bwHas(item.rating) ? '<span class="text-warning">★ ' + item.rating + '</span>' : ''}
+          ${bwHas(item.distance) ? '<span class="text-white-50 ml-2">' + item.distance + 'km from Kalpetta</span>' : ''}
           <span class="text-white-50 ml-2">
             <a href="${item.map}" target="_new" rel="noopener" aria-label="${item.name} on Google Maps" class="text-decoration-none text-white">
               <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
@@ -282,10 +286,10 @@ function updateRightColumnOnly() {
         <p class="card-text text-white-50 flex-grow-1">${item.description.substring(0,100)}...</p>
         <div class="card-footer-info mb-3">
           <small class="text-white-50">
-            <i class="fas fa-clock"></i> ${item.timing}<br>
-            <i class="fas fa-car-side"></i> ${item.transport} <br>
-            <i class="fas fa-calendar-week"></i> ${item.holidays} <br>
-            <i class="fas fa-phone"></i> ${item.Contact}
+            ${bwHas(item.timing) ? '<i class="fas fa-clock"></i> ' + item.timing + '<br>' : ''}
+            ${bwHas(item.transport) ? '<i class="fas fa-car-side"></i> ' + item.transport + ' <br>' : ''}
+            ${bwHas(item.holidays) ? '<i class="fas fa-calendar-week"></i> ' + item.holidays + ' <br>' : ''}
+            ${bwHas(item.Contact) ? '<i class="fas fa-phone"></i> ' + item.Contact : ''}
           </small>
         </div>
         <a href="${item.knowmore}" class="btn btn-primary btn-sm mt-auto" rel="dofollow" data-i18n="nav.km">Know More</a>
