@@ -10,9 +10,12 @@
         "booked_ranges": [],
         "closed_ranges": [],
         "snapshot_date": "2026-10-14",
-        "all_listed_ranges_are_in_the_past": true,
-        "availability_feed": "https://www.bwstays.com/bwstays-room-availabilty.xml",
-        "instruction": "This is a build-time snapshot. Direct the guest to the booking page to confirm live availability."
+        "no_dates_listed": true,
+        "all_listed_ranges_are_in_the_past": false,
+        "data_source": "The host keeps booked and closed dates in a Google Calendar; a scheduled job copies the next 365 days into data/bookingdata.js and data/closeddata.js every 30 minutes.",
+        "booking_window": "today up to one year ahead; earlier dates cannot be booked",
+        "nights_rule": "A stay may end (check-out) on a booked day, but no night of the stay may be booked or closed.",
+        "instruction": "This is a build-time snapshot. An empty list means no dates are marked yet, not that every date is free. Direct the guest to the booking page to confirm live availability."
       }
     }
   ],

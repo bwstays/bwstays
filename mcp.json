@@ -55,6 +55,11 @@
       "path": "/resources/distances.json"
     },
     {
+      "name": "charging_and_fuel",
+      "description": "EV charging stations and fuel stations around the stay, with straight-line distance from the stay",
+      "path": "/resources/charging_and_fuel.json"
+    },
+    {
       "name": "help",
       "description": "Frequently asked questions shown on the site",
       "path": "/resources/help.json"
@@ -85,6 +90,11 @@
       "name": "check_availability",
       "description": "Dates the site marks as booked or closed. Static snapshot - not live inventory.",
       "path": "/tools/booking/availability.json"
+    },
+    {
+      "name": "nearby_charging_and_fuel",
+      "description": "Closest EV charging stations and fuel stations to the stay (pre-computed, straight-line km)",
+      "path": "/tools/search/charging.json"
     },
     {
       "name": "get_pricing",

@@ -1,0 +1,673 @@
+{
+  "name": "nearby_charging_and_fuel",
+  "description": "Closest EV charging stations and fuel stations to the stay (pre-computed, straight-line km)",
+  "responses": [
+    {
+      "input": {
+        "kind": "ev",
+        "limit": 5
+      },
+      "output": {
+        "results": [
+          {
+            "id": "ev-011",
+            "name": "Zeon Charging Station",
+            "operator": "Zeon",
+            "latitude": 11.603273,
+            "longitude": 76.083345,
+            "distance_km": 0.3,
+            "verified": false
+          },
+          {
+            "id": "ev-012",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.60918,
+            "longitude": 76.083398,
+            "distance_km": 0.4,
+            "verified": false
+          },
+          {
+            "id": "ev-013",
+            "name": "Ather Grid Charging Station",
+            "operator": "Ather Grid",
+            "latitude": 11.609382,
+            "longitude": 76.081333,
+            "distance_km": 0.5,
+            "verified": false
+          },
+          {
+            "id": "ev-010",
+            "name": "GOEC Charging Station",
+            "operator": "GOEC",
+            "latitude": 11.597931,
+            "longitude": 76.080261,
+            "distance_km": 0.9,
+            "verified": false
+          },
+          {
+            "id": "ev-009",
+            "name": "BPCL Charging Station",
+            "operator": "BPCL",
+            "latitude": 11.59565,
+            "longitude": 76.077805,
+            "distance_km": 1.3,
+            "verified": false
+          }
+        ],
+        "note": "Positions are approximate and not yet verified on the ground."
+      }
+    },
+    {
+      "input": {
+        "kind": "fuel",
+        "limit": 5
+      },
+      "output": {
+        "results": [
+          {
+            "id": "osm-node-4067971615",
+            "name": "Bharat Petroleum",
+            "brand": "Bharat Petroleum",
+            "latitude": 11.595639,
+            "longitude": 76.077649,
+            "distance_km": 1.3,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/4067971615"
+          },
+          {
+            "id": "osm-node-7515020680",
+            "name": "Hindustan Petroleum",
+            "brand": "Hindustan Petroleum",
+            "latitude": 11.618438,
+            "longitude": 76.084583,
+            "distance_km": 1.4,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/7515020680"
+          },
+          {
+            "id": "osm-node-8907674291",
+            "name": "Fuel station",
+            "brand": null,
+            "latitude": 11.629735,
+            "longitude": 76.088738,
+            "distance_km": 2.7,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/8907674291"
+          },
+          {
+            "id": "osm-way-303894073",
+            "name": "Chundale petrol pump, Chundale",
+            "brand": "Hindustan Petroleum",
+            "latitude": 11.574592,
+            "longitude": 76.058632,
+            "distance_km": 4.4,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/303894073"
+          },
+          {
+            "id": "osm-node-12347588560",
+            "name": "Fuel station",
+            "brand": null,
+            "latitude": 11.563781,
+            "longitude": 76.042921,
+            "distance_km": 6.4,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/12347588560"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "kind": "ev",
+        "within_km": 25
+      },
+      "output": {
+        "results": [
+          {
+            "id": "ev-011",
+            "name": "Zeon Charging Station",
+            "operator": "Zeon",
+            "latitude": 11.603273,
+            "longitude": 76.083345,
+            "distance_km": 0.3,
+            "verified": false
+          },
+          {
+            "id": "ev-012",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.60918,
+            "longitude": 76.083398,
+            "distance_km": 0.4,
+            "verified": false
+          },
+          {
+            "id": "ev-013",
+            "name": "Ather Grid Charging Station",
+            "operator": "Ather Grid",
+            "latitude": 11.609382,
+            "longitude": 76.081333,
+            "distance_km": 0.5,
+            "verified": false
+          },
+          {
+            "id": "ev-010",
+            "name": "GOEC Charging Station",
+            "operator": "GOEC",
+            "latitude": 11.597931,
+            "longitude": 76.080261,
+            "distance_km": 0.9,
+            "verified": false
+          },
+          {
+            "id": "ev-009",
+            "name": "BPCL Charging Station",
+            "operator": "BPCL",
+            "latitude": 11.59565,
+            "longitude": 76.077805,
+            "distance_km": 1.3,
+            "verified": false
+          },
+          {
+            "id": "ev-015",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.623306,
+            "longitude": 76.087366,
+            "distance_km": 2,
+            "verified": false
+          },
+          {
+            "id": "ev-006",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.591059,
+            "longitude": 76.070645,
+            "distance_km": 2.1,
+            "verified": false
+          },
+          {
+            "id": "ev-007",
+            "name": "Ather Grid Charging Station",
+            "operator": "Ather Grid",
+            "latitude": 11.591627,
+            "longitude": 76.070625,
+            "distance_km": 2.1,
+            "verified": false
+          },
+          {
+            "id": "ev-008",
+            "name": "Electric Vehicle Charging Station",
+            "operator": null,
+            "latitude": 11.592206,
+            "longitude": 76.097882,
+            "distance_km": 2.2,
+            "verified": false
+          },
+          {
+            "id": "ev-016",
+            "name": "KSEB Charging Station",
+            "operator": "KSEB",
+            "latitude": 11.62472,
+            "longitude": 76.087968,
+            "distance_km": 2.2,
+            "verified": false
+          },
+          {
+            "id": "ev-014",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.614657,
+            "longitude": 76.059642,
+            "distance_km": 2.8,
+            "verified": false
+          },
+          {
+            "id": "ev-017",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.633047,
+            "longitude": 76.089714,
+            "distance_km": 3.1,
+            "verified": false
+          },
+          {
+            "id": "ev-018",
+            "name": "KSEB Charging Station",
+            "operator": "KSEB",
+            "latitude": 11.633408,
+            "longitude": 76.089293,
+            "distance_km": 3.1,
+            "verified": false
+          },
+          {
+            "id": "ev-019",
+            "name": "Tata Power Charging Station",
+            "operator": "Tata Power",
+            "latitude": 11.637309,
+            "longitude": 76.094708,
+            "distance_km": 3.7,
+            "verified": false
+          },
+          {
+            "id": "ev-020",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.642409,
+            "longitude": 76.111,
+            "distance_km": 5.1,
+            "verified": false
+          },
+          {
+            "id": "ev-005",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.561511,
+            "longitude": 76.130481,
+            "distance_km": 7.1,
+            "verified": false
+          },
+          {
+            "id": "ev-004",
+            "name": "Ather Grid Charging Station",
+            "operator": "Ather Grid",
+            "latitude": 11.559258,
+            "longitude": 76.03512,
+            "distance_km": 7.4,
+            "verified": false
+          },
+          {
+            "id": "ev-003",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.545877,
+            "longitude": 76.039502,
+            "distance_km": 8.2,
+            "verified": false
+          },
+          {
+            "id": "ev-021",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.654022,
+            "longitude": 76.153572,
+            "distance_km": 9.3,
+            "verified": false
+          },
+          {
+            "id": "ev-024",
+            "name": "Charge N Go Charging Station",
+            "operator": "Charge N Go",
+            "latitude": 11.664167,
+            "longitude": 76.150564,
+            "distance_km": 9.8,
+            "verified": false
+          },
+          {
+            "id": "ev-022",
+            "name": "BPCL Charging Station",
+            "operator": "BPCL",
+            "latitude": 11.655998,
+            "longitude": 76.158993,
+            "distance_km": 10,
+            "verified": false
+          },
+          {
+            "id": "ev-023",
+            "name": "KSEB Charging Station",
+            "operator": "KSEB",
+            "latitude": 11.659863,
+            "longitude": 76.167353,
+            "distance_km": 11,
+            "verified": false
+          },
+          {
+            "id": "ev-002",
+            "name": "GOEC Charging Station",
+            "operator": "GOEC",
+            "latitude": 11.521793,
+            "longitude": 76.024642,
+            "distance_km": 11.3,
+            "verified": false
+          },
+          {
+            "id": "ev-025",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.725129,
+            "longitude": 76.147209,
+            "distance_km": 15,
+            "verified": false
+          },
+          {
+            "id": "ev-001",
+            "name": "Electric Vehicle Charging Station",
+            "operator": null,
+            "latitude": 11.483715,
+            "longitude": 76.008472,
+            "distance_km": 15.8,
+            "verified": false
+          },
+          {
+            "id": "ev-026",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.742845,
+            "longitude": 76.120345,
+            "distance_km": 15.8,
+            "verified": false
+          },
+          {
+            "id": "ev-027",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.750778,
+            "longitude": 76.019444,
+            "distance_km": 17.6,
+            "verified": false
+          },
+          {
+            "id": "ev-028",
+            "name": "Ather Grid Charging Station",
+            "operator": "Ather Grid",
+            "latitude": 11.782537,
+            "longitude": 76.170105,
+            "distance_km": 21.8,
+            "verified": false
+          },
+          {
+            "id": "ev-029",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.787097,
+            "longitude": 76.166722,
+            "distance_km": 22.1,
+            "verified": false
+          },
+          {
+            "id": "ev-030",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.791662,
+            "longitude": 76.169359,
+            "distance_km": 22.7,
+            "verified": false
+          },
+          {
+            "id": "ev-031",
+            "name": "ChargeMOD Charging Station",
+            "operator": "ChargeMOD",
+            "latitude": 11.797125,
+            "longitude": 76.006451,
+            "distance_km": 22.9,
+            "verified": false
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "kind": "fuel",
+        "within_km": 15
+      },
+      "output": {
+        "results": [
+          {
+            "id": "osm-node-4067971615",
+            "name": "Bharat Petroleum",
+            "brand": "Bharat Petroleum",
+            "latitude": 11.595639,
+            "longitude": 76.077649,
+            "distance_km": 1.3,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/4067971615"
+          },
+          {
+            "id": "osm-node-7515020680",
+            "name": "Hindustan Petroleum",
+            "brand": "Hindustan Petroleum",
+            "latitude": 11.618438,
+            "longitude": 76.084583,
+            "distance_km": 1.4,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/7515020680"
+          },
+          {
+            "id": "osm-node-8907674291",
+            "name": "Fuel station",
+            "brand": null,
+            "latitude": 11.629735,
+            "longitude": 76.088738,
+            "distance_km": 2.7,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/8907674291"
+          },
+          {
+            "id": "osm-way-303894073",
+            "name": "Chundale petrol pump, Chundale",
+            "brand": "Hindustan Petroleum",
+            "latitude": 11.574592,
+            "longitude": 76.058632,
+            "distance_km": 4.4,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/303894073"
+          },
+          {
+            "id": "osm-node-12347588560",
+            "name": "Fuel station",
+            "brand": null,
+            "latitude": 11.563781,
+            "longitude": 76.042921,
+            "distance_km": 6.4,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/12347588560"
+          },
+          {
+            "id": "osm-way-1352572235",
+            "name": "HP",
+            "brand": "Hindustan Petroleum",
+            "latitude": 11.67299,
+            "longitude": 76.078725,
+            "distance_km": 7.5,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/1352572235"
+          },
+          {
+            "id": "osm-node-8404003241",
+            "name": "HP petrol pump",
+            "brand": "Hindustan Petroleum",
+            "latitude": 11.554366,
+            "longitude": 76.138138,
+            "distance_km": 8.3,
+            "fuels": [
+              "diesel",
+              "petrol"
+            ],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/8404003241"
+          },
+          {
+            "id": "osm-way-1352632489",
+            "name": "Nayara",
+            "brand": "Nayara",
+            "latitude": 11.689428,
+            "longitude": 76.110956,
+            "distance_km": 9.8,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/1352632489"
+          },
+          {
+            "id": "osm-way-545701849",
+            "name": "Bharat Petroleum",
+            "brand": null,
+            "latitude": 11.656021,
+            "longitude": 76.158981,
+            "distance_km": 10,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/545701849"
+          },
+          {
+            "id": "osm-way-802807528",
+            "name": "Moosa Fuels",
+            "brand": null,
+            "latitude": 11.656055,
+            "longitude": 76.159027,
+            "distance_km": 10,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/802807528"
+          },
+          {
+            "id": "osm-node-6726448572",
+            "name": "Petrol Meenangadi",
+            "brand": null,
+            "latitude": 11.663108,
+            "longitude": 76.161154,
+            "distance_km": 10.6,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/6726448572"
+          },
+          {
+            "id": "osm-way-1352632499",
+            "name": "Indian Oil",
+            "brand": "Indian Oil",
+            "latitude": 11.663146,
+            "longitude": 76.161199,
+            "distance_km": 10.6,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/1352632499"
+          },
+          {
+            "id": "osm-node-12350910696",
+            "name": "Fuel station",
+            "brand": null,
+            "latitude": 11.524323,
+            "longitude": 76.022845,
+            "distance_km": 11.2,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/12350910696"
+          },
+          {
+            "id": "osm-way-804561222",
+            "name": "Fuel station",
+            "brand": null,
+            "latitude": 11.659673,
+            "longitude": 76.178319,
+            "distance_km": 12,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/804561222"
+          },
+          {
+            "id": "osm-way-1352544980",
+            "name": "Nayara",
+            "brand": "Nayara",
+            "latitude": 11.71759,
+            "longitude": 76.080391,
+            "distance_km": 12.4,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/1352544980"
+          },
+          {
+            "id": "osm-way-891020662",
+            "name": "Indian Oil",
+            "brand": "Indian Oil",
+            "latitude": 11.726815,
+            "longitude": 76.076922,
+            "distance_km": 13.5,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/891020662"
+          },
+          {
+            "id": "osm-node-8396073232",
+            "name": "Fuel station",
+            "brand": null,
+            "latitude": 11.626268,
+            "longitude": 76.210382,
+            "distance_km": 14,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/8396073232"
+          },
+          {
+            "id": "osm-node-4828242645",
+            "name": "Ioc",
+            "brand": null,
+            "latitude": 11.680933,
+            "longitude": 75.974339,
+            "distance_km": 14.5,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/node/4828242645"
+          },
+          {
+            "id": "osm-way-952221843",
+            "name": "Indian Oil Petrol Pump",
+            "brand": "Indian Oil",
+            "latitude": 11.723733,
+            "longitude": 76.150752,
+            "distance_km": 15,
+            "fuels": [],
+            "opening_hours": null,
+            "phone": null,
+            "osm_url": "https://www.openstreetmap.org/way/952221843"
+          }
+        ]
+      }
+    }
+  ],
+  "default_response": {
+    "message": "Use one of the pre-computed inputs: kind ev or fuel with limit 5, or within_km 25 (ev) / 15 (fuel).",
+    "full_lists": "https://www.bwstays.com/resources/charging_and_fuel.json"
+  },
+  "metadata": {
+    "generated": "2026-10-14",
+    "version": "2.0.0",
+    "type": "json",
+    "source": "generated from site data",
+    "generator": "scripts/generate-mcp.mjs"
+  }
+}

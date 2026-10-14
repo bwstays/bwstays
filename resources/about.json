@@ -29,6 +29,11 @@
       "Spanish",
       "French"
     ],
+    "web_app": {
+      "installable": true,
+      "works_offline": "pages, places, food, charging and fuel lists, policies; not live availability, booking submit, chat or weather",
+      "manifest": "https://www.bwstays.com/manifest.json"
+    },
     "data_quality_notes": [
       "villa1.html (\"up to 8 adults\", from INR 3,999/night) and bwstays-booking.html (\"2 guests\", INR 5,000/night) disagree. Both are reported; confirm current rate and capacity with the host.",
       "No verified phone number is published: the site masks it and the WhatsApp link uses a placeholder-pattern number.",
