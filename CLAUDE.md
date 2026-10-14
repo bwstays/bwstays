@@ -206,6 +206,7 @@ node scripts/generate-mcp.mjs      # then regenerate the MCP files
 ### Scheduled refreshes
 
 - `.github/workflows/refresh-rates.yml` (1st of the month): exchange rates, committed to main.
+- `.github/workflows/refresh-availability.yml` (every 30 minutes): reads the calendar iCal feeds in the repository secret `BW_ICAL_URLS` (Google Calendar, Airbnb, Booking.com; optional `booked|` / `closed|` prefix per line) with `scripts/build-availability.mjs`, rewrites `data/bookingdata.js` and `data/closeddata.js` (today to +1 year, no guest details) and commits to main only when they changed. A feed failure leaves the last good files in place. Test locally with `node scripts/build-availability.mjs --dry-run --file sample.ics`.
 - `.github/workflows/refresh-data.yml` (2nd of the month): food places and driving distances, then the booking report, MCP files, map data and search index. It opens a pull request (branch `data-refresh-YYYY-MM`) only when the OpenStreetMap data really changed; nothing reaches main without review. Run it by hand from the Actions tab (workflow_dispatch).
 
 ### Icons (Font Awesome)
