@@ -24,6 +24,8 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history: the sitemap's lastmod dates come from git
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -33,12 +35,14 @@ jobs:
         run: node scripts/build-food.mjs
       - name: Rebuild driving distances
         run: node scripts/build-distances.mjs
+      - name: Rebuild fuel stations
+        run: node scripts/build-fuel.mjs
 
       - name: Did the data really change?
         id: diff
         run: |
           # every generated file carries a "generated" date; ignore that line
-          if git diff --quiet -I'"?generated"?' -- data/food-places.json data/food-places.csv data/nearbylocationsdata.js; then
+          if git diff --quiet -I'"?generated"?' -- data/food-places.json data/food-places.csv data/nearbylocationsdata.js data/fuel-places.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "no real change in food or distance data"
           else
@@ -52,6 +56,9 @@ jobs:
           node scripts/generate-mcp.mjs
           node scripts/build-map-data.mjs
           node scripts/build-search-index.mjs
+          node scripts/build-survey.mjs
+          node scripts/build-llmfeed.mjs
+          node scripts/build-sitemap.mjs
           node scripts/build-pwa.mjs
           node scripts/check.mjs
 

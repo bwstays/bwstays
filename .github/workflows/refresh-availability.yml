@@ -66,6 +66,7 @@ jobs:
           node scripts/build-pwa.mjs
           node scripts/build-booking-report.mjs
           node scripts/generate-mcp.mjs
+          node scripts/build-llmfeed.mjs
           node scripts/check.mjs
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
