@@ -100,6 +100,8 @@ const pwa = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-pwa.mjs'
 if (pwa.status !== 0) problems.push(`service worker is stale: ${(pwa.stderr || pwa.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const sitemap = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-sitemap.mjs'), '--check'], { encoding: 'utf8' });
 if (sitemap.status !== 0) problems.push(`sitemap is stale: ${(sitemap.stderr || sitemap.stdout).trim().split(String.fromCharCode(10))[0]}`);
+const prerender = spawnSync(process.execPath, [path.join(ROOT, 'scripts/prerender.mjs'), '--verify'], { encoding: 'utf8' });
+if (prerender.status !== 0) problems.push(`prerender is incomplete: ${(prerender.stderr || prerender.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const llms = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-llms.mjs'), '--check'], { encoding: 'utf8' });
 if (llms.status !== 0) problems.push(`llms.txt / llms-full.txt are stale: ${(llms.stderr || llms.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const llmfeed = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-llmfeed.mjs'), '--check'], { encoding: 'utf8' });

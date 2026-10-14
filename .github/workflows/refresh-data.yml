@@ -59,6 +59,9 @@ jobs:
           node scripts/build-survey.mjs
           node scripts/build-llmfeed.mjs
           node scripts/build-llms.mjs
+          # content the page scripts build is written into the HTML for crawlers that do not run JavaScript
+          npm i --no-save playwright-core
+          CHROME_PATH="$(command -v google-chrome || command -v chromium-browser || command -v chromium)" node scripts/prerender.mjs
           node scripts/build-sitemap.mjs
           node scripts/build-pwa.mjs
           node scripts/check.mjs

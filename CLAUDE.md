@@ -257,3 +257,15 @@ node scripts/probe-coords.mjs 3 6  # read-only OpenStreetMap lookup for places w
 - `llms.txt` and `llms-full.txt` are hand-written except for the block between `BEGIN/END GENERATED: site-data`, which `build-llms.mjs` rewrites from the MCP data (booking rules, shopping places, EV and fuel stations). The site chat reads `llms-full.txt`.
 - `data/mcp-review.json` `coordinate_confirmations` lists hills/peaks whose coordinate is far from a road but matches an OpenStreetMap feature; `build-distances.mjs` trusts those.
 - The two survey CSVs are the field checklist for issues #101 and #102. Never copy hours, phone numbers or coordinates from Google Maps into OpenStreetMap (licence).
+
+### Build-time prerender
+
+```
+node scripts/prerender.mjs            # open every page in headless Chrome and write the script-built blocks into the HTML
+node scripts/prerender.mjs --verify   # no browser: check the blocks are present (also run by check.mjs)
+```
+
+- Crawlers that do not run JavaScript (AI crawlers, social previews) now get the Discover rows, place details, other places, nearby places, food list and EV/fuel lists in the HTML. No new files; only the containers listed in `TARGETS` are changed, between `<!--prerender:begin-->` and `<!--prerender:end-->`.
+- Each target is a container that its script clears and rebuilds, so visitors see the same page as before. Re-run it after changing `data/sitedata.js`, the distance, food, fuel or EV data, or the scripts that render these blocks (the monthly data workflow does).
+- Needs `npm i --no-save playwright-core` and Chrome (`CHROME_PATH`, `PLAYWRIGHT_CORE` for a non-local install). Commit subjects starting "Prerender" are ignored by the sitemap `lastmod` logic.
+- Cloudflare: no worker is needed for this. A bot-only worker (prerender.io style or KV) must not be attached to www.bwstays.com unless it is working: it would return errors to crawlers.
