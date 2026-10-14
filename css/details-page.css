@@ -559,7 +559,7 @@ nav#mainNav.navbar-shrink,
   box-shadow: 0 5px 15px rgba(100, 161, 157, 0.3);
 }
 
-.reservation-steps .step:not(.active):hover {
+.reservation-steps .step:not(.active):not(.step-link):hover {
   background-color: #2c3e50 !important;
   cursor: pointer;
 }
@@ -7745,3 +7745,35 @@ body .reviews-title > .border-bottom.border-primary,
 .calendar-legend .lg-booked { background: #e3ecea; }
 .calendar-legend .lg-closed { background: repeating-linear-gradient(45deg, #e3ecea, #e3ecea 3px, #fff 3px, #fff 6px); }
 .calendar-legend .lg-past { background: #9aa0a6; opacity: 0.55; }
+
+/* Booking page steps: three identical link-buttons, same look and behaviour as .btn-primary */
+.reservation-steps .step.step-link {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  background-color: #3f7f7b;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.reservation-steps .step.step-link h5 {
+  color: inherit;
+  font-size: 1rem;
+}
+.reservation-steps .step.step-link:hover,
+.reservation-steps .step.step-link:focus {
+  background-color: #2f6f6b;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(100, 161, 157, 0.4);
+}
+.reservation-steps .step.step-link:focus-visible {
+  outline: 3px solid #8cc4c0;
+  outline-offset: 2px;
+}
+.reservation-steps .step.step-link.active {
+  background-color: #2f6f6b;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(100, 161, 157, 0.4);
+}
