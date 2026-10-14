@@ -235,7 +235,8 @@
     const elements = createChatWidget();
     const { chatBtn, chatModal, chatClose, chatBody, chatInput, chatSend, typingEl, voiceMic, voiceSpeaker, voiceStatus, voiceStatusText } = elements;
     if(!chatBtn || !chatModal) return;
-    loadKnowledgeBase();
+    // the 900 KB knowledge file is only fetched when the visitor opens the chat
+    chatBtn.addEventListener('click', function () { loadKnowledgeBase(); }, { once: true });
 
     // Voice recognition setup
     let recognition = null;
@@ -488,6 +489,7 @@
       return parts.join('\n\n');
     }
     async function sendToGroq(messages, userQuery){
+      await loadKnowledgeBase();
       const relevantChunks = searchKnowledgeBase(userQuery, 2);
       let enhancedSystemPrompt = messages[0].content;
       if (relevantChunks.length > 0) {
