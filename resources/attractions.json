@@ -3,7 +3,7 @@
   "description": "Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay",
   "content": {
     "destination": "Wayanad, Kerala",
-    "count": 72,
+    "count": 77,
     "categories": {
       "plantation": {
         "label": "Plantations",
@@ -55,7 +55,7 @@
       },
       "shopping": {
         "label": "Shopping",
-        "count": 2
+        "count": 7
       },
       "pilgrimage": {
         "label": "Pilgrimage",
@@ -63,7 +63,7 @@
       }
     },
     "data_quality": {
-      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 85 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
+      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 90 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
       "descriptions_withheld": 34,
       "coordinates_withheld": 5,
       "distances_withheld": 2,
@@ -1719,6 +1719,24 @@
         "review_note": null
       },
       {
+        "id": "shopping-92",
+        "name": "Government & Cooperative Trust Places",
+        "category": "shopping",
+        "category_label": "Shopping",
+        "description": "Shopping place at Pookode, Kunnathidavaka, Wayanad, Kerala",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [],
+        "transport": null,
+        "coordinates": null,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Government+%26+Cooperative+Trust+Places+Pookode%2C+Kunnathidavaka+Wayanad+Kerala",
+        "page_url": null,
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
         "id": "farms-88",
         "name": "Gurukula Botanical Sanctuary",
         "category": "farms",
@@ -1835,6 +1853,42 @@
         "review_note": null
       },
       {
+        "id": "shopping-93",
+        "name": "Scheduled Tribe Cooperative Society Outlet",
+        "category": "shopping",
+        "category_label": "Shopping",
+        "description": "Shopping place at Kalloor, Wayanad, Kerala",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [],
+        "transport": null,
+        "coordinates": null,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Scheduled+Tribe+Cooperative+Society+Outlet+Kalloor+Wayanad+Kerala",
+        "page_url": null,
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "shopping-91",
+        "name": "The Tribal Spot Near the Forest",
+        "category": "shopping",
+        "category_label": "Shopping",
+        "description": "Shopping place at Kunnathidavaka, Wayanad, Kerala",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [],
+        "transport": null,
+        "coordinates": null,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=The+Tribal+Spot+Near+the+Forest+Kunnathidavaka+Wayanad+Kerala",
+        "page_url": null,
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
         "id": "waterfalls-16",
         "name": "Thusharagiri",
         "category": "waterfalls",
@@ -1858,6 +1912,42 @@
         "district": "Kozhikode",
         "locality": null,
         "review_note": "Thusharagiri Falls is in Kozhikode district, not Wayanad"
+      },
+      {
+        "id": "shopping-95",
+        "name": "Vanamoolika Herbals",
+        "category": "shopping",
+        "category_label": "Shopping",
+        "description": "Shopping place at Mullenkolly, Pulpally, Wayanad, Kerala",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [],
+        "transport": null,
+        "coordinates": null,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Vanamoolika+Herbals+Mullenkolly%2C+Pulpally+Wayanad+Kerala",
+        "page_url": null,
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
+        "id": "shopping-94",
+        "name": "Wayanad Heritage Museum Shop",
+        "category": "shopping",
+        "category_label": "Shopping",
+        "description": "Shopping place at Ambalavayal, Wayanad, Kerala",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [],
+        "transport": null,
+        "coordinates": null,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Wayanad+Heritage+Museum+Shop+Ambalavayal+Wayanad+Kerala",
+        "page_url": null,
+        "district": null,
+        "locality": null,
+        "review_note": null
       }
     ]
   },

@@ -668,6 +668,51 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html"
+          },
+          {
+            "name": "Government & Cooperative Trust Places",
+            "category": "Shopping",
+            "distance_from_stay_km": null,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": null
+          },
+          {
+            "name": "Scheduled Tribe Cooperative Society Outlet",
+            "category": "Shopping",
+            "distance_from_stay_km": null,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": null
+          },
+          {
+            "name": "The Tribal Spot Near the Forest",
+            "category": "Shopping",
+            "distance_from_stay_km": null,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": null
+          },
+          {
+            "name": "Vanamoolika Herbals",
+            "category": "Shopping",
+            "distance_from_stay_km": null,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": null
+          },
+          {
+            "name": "Wayanad Heritage Museum Shop",
+            "category": "Shopping",
+            "distance_from_stay_km": null,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": null
           }
         ]
       }
@@ -1430,7 +1475,7 @@
       "shopping",
       "pilgrimage"
     ],
-    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 85 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
+    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 90 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
   },
   "metadata": {
     "generated": "2026-10-14",
