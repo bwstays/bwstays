@@ -132,9 +132,14 @@ const hash = crypto.createHash('sha1');
 for (const u of shellList) {
   hash.update(u + '\n');
   const file = decodeURIComponent(u.replace(/^\//, '').split('?')[0]);
-  if (file && !/\.html$/.test(file) && exists(file)) hash.update(fs.readFileSync(path.join(ROOT, file)));
+  if (file && !/\.html$/.test(file) && exists(file)) {
+    let buf = fs.readFileSync(path.join(ROOT, file));
+    // text files are hashed with LF endings so Windows (CRLF checkout) and Linux (CI) agree
+    if (/\.(css|js|json|svg|txt|map)$/.test(file)) buf = Buffer.from(buf.toString('utf8').replace(/\r\n/g, '\n'));
+    hash.update(buf);
+  }
 }
-for (const f of ['scripts/pwa/sw.template.js']) hash.update(fs.readFileSync(path.join(ROOT, f)));
+for (const f of ['scripts/pwa/sw.template.js']) hash.update(fs.readFileSync(path.join(ROOT, f), 'utf8').replace(/\r\n/g, '\n'));
 const version = hash.digest('hex').slice(0, 10);
 
 const template = fs.readFileSync(path.join(ROOT, 'scripts/pwa/sw.template.js'), 'utf8').replace(/\r\n/g, '\n');
