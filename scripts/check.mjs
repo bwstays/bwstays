@@ -10,6 +10,7 @@
  *  - every JSON-LD block and every inline script in every HTML page parses
  *  - no HTML page repeats an element id
  *  - the ?v= content hashes on local CSS/JS URLs are current
+ *  - the .min.css/.min.js files match their sources (scripts/minify-assets.mjs)
  *  - the generated MCP files are up to date
  *
  * Zero dependencies, Node >= 18.
@@ -93,6 +94,8 @@ for (const file of walk(ROOT)) {
 
 const ver = spawnSync(process.execPath, [path.join(ROOT, 'scripts/version-assets.mjs'), '--check'], { encoding: 'utf8' });
 if (ver.status !== 0) problems.push(`asset versions are stale: ${(ver.stderr || ver.stdout).trim().split('\n')[0]}`);
+const minified = spawnSync(process.execPath, [path.join(ROOT, 'scripts/minify-assets.mjs'), '--check'], { encoding: 'utf8' });
+if (minified.status !== 0) problems.push(`minified assets are stale: ${(minified.stderr || minified.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const mcp = spawnSync(process.execPath, [path.join(ROOT, 'scripts/generate-mcp.mjs'), '--check'], { encoding: 'utf8' });
 if (mcp.status !== 0) problems.push(`MCP files are stale: ${(mcp.stderr || mcp.stdout).trim().split('\n').slice(-2).join(' | ')}`);
 
