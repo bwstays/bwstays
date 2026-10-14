@@ -1040,7 +1040,7 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-staycation-banasura-sagar-wayanad.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-resort-banasura-sagar-dam-homestay.webp",
-        "https://www.bwstays.com/assets/img/romantic/bw-stays-banasura-sagar-dam-wayanad.avif",
+        "https://www.bwstays.com/assets/img/romantic/bw-stays-banasura-sagar-dam-wayanad.webp",
       ],
       holidays: "Sun",
       timing: ["06:00-17:30"],
@@ -2870,7 +2870,7 @@ const siteData = {
         "quiet travel",
       ],
       type: "Sporting",
-      knowmore: "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
+      knowmore: "https://www.bwstays.com/bw-ziplines-sporting-wayanad.html",
       duration: "1-2 Hours",
       www: "",
     },
@@ -3203,7 +3203,7 @@ const siteData = {
       description: "Chundail Tea Estate",
       image: [
         "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp",
-        "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.avif",
+        "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.webp",
         "https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp",
         "https://www.bwstays.com/assets/img/cycling/bw-hotel-stays-chundale-wayanad.webp",
       ],
@@ -4010,7 +4010,7 @@ const siteData = {
         "Temple associated with the epic Ramayana, located in a serene setting.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-valliyurkavu-bhagavathy-temple-wayanad.webp",
-        "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-resort-valliyurkavu-wayanad.avif",
+        "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-resort-valliyurkavu-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-valliyoorkavu-homestay-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-valliyoorkavu-bhagavathy-temple-wayanad.webp",
       ],
