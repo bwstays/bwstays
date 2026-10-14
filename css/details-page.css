@@ -7844,3 +7844,11 @@ body .reviews-title > .border-bottom.border-primary,
     min-height: 0;
   }
 }
+
+/* calendar header and weekday labels: WCAG AA contrast (white on #3f7f7b is 4.6:1, #5a6268 on #f8f9fa is 6:1) */
+.month-header {
+  background-color: #3f7f7b;
+}
+.weekdays .day {
+  color: #5a6268;
+}

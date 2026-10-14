@@ -6,7 +6,7 @@
 // The list is a compact, scrollable widget the same height as the map: one small
 // row per place (name, kind, distance). Selecting a row pans the map and opens the
 // place's popup, which holds the details (hours, phone, diet, directions).
-document.addEventListener('DOMContentLoaded', () => {
+function bwInitFoodMap() {
   const section = document.querySelector('#food-places');
   if (!section) return;
   const centerAttr = section.getAttribute('data-center');
@@ -127,4 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(() => {
       foodPlacesContainer.innerHTML = '<p class="bw-food-empty">Unable to load nearby food places right now.</p>';
     });
+}
+
+// Build the food map only when it is about to scroll into view: Leaflet, the map tiles and
+// the food data are not needed for the first paint and the widget sits far down the page.
+document.addEventListener('DOMContentLoaded', () => {
+  const target = document.querySelector('#food-places');
+  if (!target) return;
+  if (!('IntersectionObserver' in window)) {
+    bwInitFoodMap();
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) {
+      observer.disconnect();
+      bwInitFoodMap();
+    }
+  }, { rootMargin: '400px 0px' });
+  observer.observe(target);
 });

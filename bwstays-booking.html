@@ -9,7 +9,6 @@
 <meta name="google-site-verification" content="B_KOKbW_mfGigQdZHONkGyMyjr1B8BI37JNR3JvON1o" />
 
 <script type="text/javascript" src="https://analytics.ahrefs.com/analytics.js" data-key="65LXpG9qPXZ91m/BgZ6YpA"  async  ></script>
-<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-VZWJNHM47Z" async></script>
 <script type="text/javascript" >
   /* <![CDATA[ */
   window.dataLayer = window.dataLayer || [];
@@ -17,6 +16,17 @@
   gtag('js', new Date());
 
   gtag('config', 'G-VZWJNHM47Z');
+  /* load gtag.js after the page has finished loading so it does not compete with first paint */
+  (function () {
+    function load() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VZWJNHM47Z';
+      document.head.appendChild(s);
+    }
+    if (document.readyState === 'complete') { setTimeout(load, 1500); }
+    else { window.addEventListener('load', function () { setTimeout(load, 1500); }); }
+  })();
   /* ]]> */
 </script>
 <title>Black and White Wayanad Book or Cancel you stay at bwstays</title>
@@ -98,7 +108,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.bwstays.com/assets/fonts/fontawesome/fa-solid-900.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.bwstays.com/assets/fonts/fontawesome/fa-brands-400.woff2">
 <link href="https://www.bwstays.com/css/fontawesome.min.css?v=a611ff0d" rel="stylesheet" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.bwstays.com/vendor/bootstrap/bootstrap.min.css?v=4.5.3">
 
 
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
@@ -110,7 +120,6 @@
 
      <link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"   type='text/css' media='all'   rel="dns-prefetch"  />
 
-     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/[version]/flatpickr.min.css">
 
 
 
@@ -125,11 +134,11 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-76x76.png"/>
 	<link rel="apple-touch-icon" sizes="152x152" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-152x152.png"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/icons/apple/apple-touch-icon-180x180.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"></noscript>
+    <link rel="stylesheet" href="https://www.bwstays.com/vendor/leaflet/leaflet.min.css?v=1.9.4" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://www.bwstays.com/vendor/leaflet/leaflet.min.css?v=1.9.4"></noscript>
 
     <link href="https://www.bwstays.com/css/styles.min.css?v=ac639506" rel="stylesheet"   type='text/css' media='all'  />
     <link href="https://www.bwstays.com/css/maps.min.css?v=cef28474" rel="stylesheet"   type='text/css' media='all'  />
-    <link href="https://www.bwstays.com/css/details-page.min.css?v=ea6ca897" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://www.bwstays.com/css/details-page.min.css?v=153bd877" rel="stylesheet" type="text/css" media="all"/>
     <link href="https://www.bwstays.com/css/new-page.min.css?v=f2e8abdc" rel="stylesheet" type="text/css" media="all"/>
 
 
@@ -234,7 +243,7 @@
             </div>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Menu">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
@@ -376,7 +385,7 @@
                                          <button class="counter-btn minus faMinusBtn" type="button" aria-label="Minus">
                                              <i class="fas fa-minus"></i>
                                          </button>
-                                         <input  type="text" class="counter-inputvilla1 faInputBox" value="4" readonly>
+                                         <input  type="text" class="counter-inputvilla1 faInputBox" value="4" aria-label="Adults, Luxury Villa 1" readonly>
                                          <button class="counter-btn plus faPlusBtn" type="button" aria-label="Plus">
                                              <i class="fas fa-plus"></i>
                                          </button>
@@ -388,7 +397,7 @@
                                          <button class="counter-btn minus faMinusBtn" type="button" aria-label="Minus">
                                              <i class="fas fa-minus"></i>
                                          </button>
-                                         <input  type="text" class="counter-inputvilla faInputBox" value="1" readonly>
+                                         <input  type="text" class="counter-inputvilla faInputBox" value="1" aria-label="Children (0-12 years), Luxury Villa 1" readonly>
                                          <button class="counter-btn plus faPlusBtn" type="button" aria-label="Plus">
                                              <i class="fas fa-plus"></i>
                                          </button>
@@ -441,7 +450,7 @@
                                          <button class="counter-btn minus faMinusBtn" type="button" aria-label="Minus">
                                              <i class="fas fa-minus"></i>
                                          </button>
-                                         <input  type="text" class="counter-input faInputBox" value="4" readonly>
+                                         <input  type="text" class="counter-input faInputBox" value="4" aria-label="Adults, Luxury Villa 2" readonly>
                                          <button class="counter-btn plus faPlusBtn" type="button" aria-label="Plus">
                                              <i class="fas fa-plus"></i>
                                          </button>
@@ -454,7 +463,7 @@
                                          <button class="counter-btn minus faMinusBtn" type="button" aria-label="Minus">
                                              <i class="fas fa-minus"></i>
                                          </button>
-                                         <input  type="text" class="counter-input faInputBox" value="1" readonly>
+                                         <input  type="text" class="counter-input faInputBox" value="1" aria-label="Children (0-12 years), Luxury Villa 2" readonly>
                                          <button class="counter-btn plus faPlusBtn" type="button" aria-label="Plus">
                                              <i class="fas fa-plus"></i>
                                          </button>
@@ -502,7 +511,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="form-label">Arrival Time<span class="required-asterisk">*</span></label>
-                                    <select class="form-control">
+                                    <select class="form-control" aria-label="Arrival time">
                                         <option>Select arrival time</option>
                                         <option>12:00 PM - 2:00 PM</option>
                                         <option>2:00 PM - 4:00 PM</option>
@@ -904,12 +913,12 @@
 
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet-src.min.js"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/vendor/jquery/jquery.min.js?v=3.5.1"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/vendor/jquery/jquery.easing.min.js?v=1.4.1"></script>
+<script src="https://www.bwstays.com/vendor/leaflet/leaflet-src.min.js?v=1.9.4"></script>
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/vendor/bootstrap/bootstrap.bundle.min.js?v=4.5.3"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
 
 

@@ -100,5 +100,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  document.querySelectorAll('[data-evgas]').forEach(build);
+  // Build each map only when it is about to scroll into view: Leaflet, the map tiles and the
+  // station data are not needed for the first paint, and they sit far down the page.
+  const targets = document.querySelectorAll('[data-evgas]');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(build);
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      observer.unobserve(entry.target);
+      build(entry.target);
+    });
+  }, { rootMargin: '400px 0px' });
+  targets.forEach((el) => observer.observe(el));
 });
