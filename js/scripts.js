@@ -117,24 +117,43 @@ x.parentNode.insertBefore(s, x);
 var iconURLPrefix = 'https://www.bwstays.com/';
 var bwlocations = [['<h6><a id="bwlocation" target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Location Kalpetta"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.6057872, 76.0833109, 2, iconURLPrefix+"assets/img/logo/bw.png","Black and White Stays"]];
 var element = document.getElementById('map');
-var map = L.map(element,{ zoomControl: false });
-let customIcon = {
-    iconUrl:"https://www.bwstays.com/assets/img/logo/pin.webp",
-    iconSize:[40,40]
+var bwFooterMapReady = false;
+// The footer map sits at the bottom of the page: create it (and fetch its tiles) only when it is about to be seen.
+function bwInitFooterMap() {
+  if (bwFooterMapReady || !element || typeof L === 'undefined') return;
+  bwFooterMapReady = true;
+  var map = L.map(element,{ zoomControl: false });
+  let customIcon = {
+      iconUrl:"https://www.bwstays.com/assets/img/logo/pin.webp",
+      iconSize:[40,40]
+  }
+  let myIcon = L.icon(customIcon);
+  let iconOptions = {
+      title:"BW Stays",
+      icon:myIcon
+  }
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).on('tileload', function(e) {
+      e.tile.alt = 'BW Stays Kalpetta';
+  }).addTo(map);
+  var target = L.latLng(bwlocations[0][1], bwlocations[0][2]);
+  map.fitBounds([[11.6057872, 76.0833109], [11.610,76.090]]);
+  map.setView(target, 14);
+  L.marker(target,iconOptions).on('tileload', function(e) {
+      e.tile.alt = 'All Locations at wayand';
+  }).addTo(map).bindPopup( bwlocations[0][5]);
 }
-let myIcon = L.icon(customIcon);
-let iconOptions = {
-    title:"BW Stays",
-    icon:myIcon
+if (element) {
+  if ('IntersectionObserver' in window) {
+    var bwMapObserver = new IntersectionObserver(function (entries) {
+      if (entries.some(function (e) { return e.isIntersecting; })) {
+        bwMapObserver.disconnect();
+        bwInitFooterMap();
+      }
+    }, { rootMargin: '600px 0px' });
+    bwMapObserver.observe(element);
+  } else {
+    bwInitFooterMap();
+  }
 }
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).on('tileload', function(e) {
-    e.tile.alt = 'BW Stays Kalpetta';
-}).addTo(map);
-var target = L.latLng(bwlocations[0][1], bwlocations[0][2]);
-map.fitBounds([[11.6057872, 76.0833109], [11.610,76.090]]);
-map.setView(target, 14);
-L.marker(target,iconOptions).on('tileload', function(e) {
-    e.tile.alt = 'All Locations at wayand';
-}).addTo(map).bindPopup( bwlocations[0][5]);
