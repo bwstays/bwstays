@@ -7864,3 +7864,10 @@ body .reviews-title > .border-bottom.border-primary,
   background-color: #3f7f7b;
   color: #fff;
 }
+
+/* booking form and callback link: .text-primary on white (#64a19d, 2.9:1) -> accessible teal (4.6:1) */
+#myForm .text-primary,
+#requestCallback a.text-primary,
+.guest-information .text-primary {
+  color: #3f7f7b !important;
+}
