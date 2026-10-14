@@ -126,6 +126,8 @@ const legalCard = (id) => {
   return m ? [...m[1].matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)].map((x) => text(x[1])).filter((t) => t.length > 20) : [];
 };
 const termsParagraphs = [...legalCard('section-tc'), ...legalCard('section-responsibility')];
+const cancellationParagraphs = legalCard('section-cancellation');
+must(cancellationParagraphs.length >= 5, 'cancellation paragraphs not found in footer.html');
 must(termsParagraphs.length >= 5, 'terms paragraphs not found in footer.html');
 const privacyParagraph = legalCard('section-privacy')[0] ?? '';
 must(privacyParagraph, 'privacy paragraph not found in footer.html');
@@ -405,8 +407,10 @@ const resources = {
     content: {
       terms_url: `${SITE}/footer.html`,
       terms_of_service: termsParagraphs,
+      cancellations_and_refunds: cancellationParagraphs,
+      cancellation_url: `${SITE}/footer.html#cancellation`,
       privacy: privacyParagraph,
-      note: 'Quoted verbatim. Cancellation and refund specifics are referenced on the booking page but not spelled out there.',
+      note: 'Quoted verbatim from footer.html.',
     },
     source: 'footer.html',
   },
