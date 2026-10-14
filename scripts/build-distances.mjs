@@ -34,7 +34,10 @@ const load = (file, expr) => {
 
 const siteData = load('data/sitedata.js', 'siteData');
 const old = load('data/nearbylocationsdata.js', 'locations');
-const review = JSON.parse(read('data/mcp-review.json')).entries;
+const reviewFile = JSON.parse(read('data/mcp-review.json'));
+const review = reviewFile.entries;
+// hills and peaks confirmed against an OpenStreetMap feature of the same name may sit far from a road
+const confirmedRemote = reviewFile.coordinate_confirmations ?? {};
 
 // ---- places
 const siteById = new Map();
@@ -103,7 +106,9 @@ const first = await osrmTable([...trusted.map((p) => p.coord), STAY]);
 // a coordinate that snaps more than 1.5 km from any road is not a real road-side place
 trusted.forEach((p, i) => {
   const snap = first.sources[i]?.distance ?? 0;
-  if (snap > 1500) p.untrusted = `coordinate is ${(snap / 1000).toFixed(1)} km from the nearest road`;
+  const site = siteById.get(p.id);
+  const confirmed = site && confirmedRemote[key(site.category, p.id)];
+  if (snap > 1500 && !confirmed) p.untrusted = `coordinate is ${(snap / 1000).toFixed(1)} km from the nearest road`;
 });
 trusted = trusted.filter((p) => !p.untrusted);
 const net = await osrmTable([...trusted.map((p) => p.coord), STAY]);
