@@ -63,6 +63,7 @@ jobs:
         run: |
           node scripts/minify-assets.mjs
           node scripts/version-assets.mjs
+          node scripts/build-pwa.mjs
           node scripts/build-booking-report.mjs
           node scripts/generate-mcp.mjs
           node scripts/check.mjs

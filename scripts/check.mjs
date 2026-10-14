@@ -96,6 +96,8 @@ const ver = spawnSync(process.execPath, [path.join(ROOT, 'scripts/version-assets
 if (ver.status !== 0) problems.push(`asset versions are stale: ${(ver.stderr || ver.stdout).trim().split('\n')[0]}`);
 const minified = spawnSync(process.execPath, [path.join(ROOT, 'scripts/minify-assets.mjs'), '--check'], { encoding: 'utf8' });
 if (minified.status !== 0) problems.push(`minified assets are stale: ${(minified.stderr || minified.stdout).trim().split(String.fromCharCode(10))[0]}`);
+const pwa = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-pwa.mjs'), '--check'], { encoding: 'utf8' });
+if (pwa.status !== 0) problems.push(`service worker is stale: ${(pwa.stderr || pwa.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const mcp = spawnSync(process.execPath, [path.join(ROOT, 'scripts/generate-mcp.mjs'), '--check'], { encoding: 'utf8' });
 if (mcp.status !== 0) problems.push(`MCP files are stale: ${(mcp.stderr || mcp.stdout).trim().split('\n').slice(-2).join(' | ')}`);
 
