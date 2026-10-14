@@ -7872,9 +7872,9 @@ body .reviews-title > .border-bottom.border-primary,
   color: #3f7f7b !important;
 }
 
-/* DISCOVER: 14 category rows, compact. Each row is one slim band: image beside the title and the
-   current place (name, short description, holiday and timing on one line, link). The row only
-   grows if its text needs it, so nothing is clipped. */
+/* DISCOVER: 14 category rows. Every picture sits in the same 16:9 frame and is scaled to fit it
+   whole (never cropped); the black frame blends into the black text panel. The row height is
+   one variable, and a row only grows if its text needs more room. */
 #loc.projects-section {
   padding: 3rem 0 3.25rem;
 }
@@ -7885,7 +7885,7 @@ body .reviews-title > .border-bottom.border-primary,
   margin-bottom: 1.5rem;
 }
 #loc #wrapper-div {
-  --disc-row: 150px;
+  --disc-row: 210px;
 }
 #loc #wrapper-div > .row {
   min-height: var(--disc-row);
@@ -7893,18 +7893,28 @@ body .reviews-title > .border-bottom.border-primary,
   flex-wrap: nowrap;
   align-items: stretch;
   overflow: hidden;
+  background: #000;
 }
-#loc #wrapper-div > .row > [class*="col-"] {
-  flex: 0 0 50%;
-  max-width: 50%;
+/* picture column: a 16:9 frame as tall as the row; text column takes the rest */
+#loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
+#loc #wrapper-div > .row > [class*="col-"]:has(> img) {
+  flex: 0 0 calc(var(--disc-row) * 16 / 9);
+  max-width: calc(var(--disc-row) * 16 / 9);
+  min-width: 0;
+}
+#loc #wrapper-div > .row > [class*="col-"]:not(:has(.img-wrapper)):not(:has(> img)) {
+  flex: 1 1 0;
+  max-width: none;
   min-width: 0;
 }
 #loc #wrapper-div .img-wrapper {
   height: 100% !important;
   min-height: var(--disc-row);
+  background: #000;
 }
 #loc #wrapper-div .img-wrapper img {
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   height: 100%;
   width: 100%;
 }
@@ -7913,19 +7923,19 @@ body .reviews-title > .border-bottom.border-primary,
   height: 100%;
 }
 #loc #wrapper-div .project-text {
-  padding: 0.6rem 2.5rem !important;
+  padding: 0.75rem 2.5rem !important;
   font-size: 100%;
 }
 #loc #wrapper-div .project-text h3.h4 {
-  font-size: 1.2rem !important;
-  margin-bottom: 0.15rem !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 0.2rem !important;
   line-height: 1.25;
 }
 #loc #wrapper-div .project-text > .border-bottom {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.65rem !important;
 }
 #loc #wrapper-div .tab-content {
-  min-height: 78px;
+  min-height: 92px;
 }
 /* holiday and timing share one line */
 #loc #wrapper-div .tab-content-temp {
@@ -7933,89 +7943,83 @@ body .reviews-title > .border-bottom.border-primary,
   flex-wrap: wrap;
   column-gap: 0.9rem;
   align-content: flex-start;
-  justify-content: inherit;
 }
 #loc #wrapper-div .tab-content-temp > h4,
 #loc #wrapper-div .tab-content-temp > p {
   flex: 0 0 100%;
 }
 #loc #wrapper-div .tab-content-temp > h4 {
-  font-size: 0.98rem !important;
-  margin-bottom: 0.1rem !important;
+  font-size: 1rem !important;
+  margin-bottom: 0.15rem !important;
 }
 #loc #wrapper-div .tab-content-temp > p {
-  margin-bottom: 0.2rem !important;
+  margin-bottom: 0.3rem !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #loc #wrapper-div .tab-content-temp > div {
-  margin-bottom: 0.1rem !important;
+  margin-bottom: 0.15rem !important;
 }
 #loc #wrapper-div .tab-content-temp > a {
   flex: 0 0 100%;
-  margin-top: 0.15rem;
+  margin-top: 0.25rem;
 }
 @media (min-width: 992px) {
   #loc #wrapper-div .text-lg-right .tab-content-temp {
     justify-content: flex-end;
   }
 }
-/* tablets and phones: image on the left, text on the right, one slim band per row */
+/* tablets: picture left (16:9 frame), text right */
 @media (max-width: 991.98px) {
   #loc #wrapper-div {
-    --disc-row: 128px;
+    --disc-row: 176px;
+  }
+  #loc #wrapper-div .tab-content {
+    min-height: 100px;
   }
   #loc #wrapper-div > .row > [class*="col-"] {
-    flex: 1 1 58%;
-    max-width: 58%;
     order: 2;
   }
   #loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
   #loc #wrapper-div > .row > [class*="col-"]:has(> img) {
-    flex: 0 0 42%;
-    max-width: 42%;
     order: 1;
   }
   #loc #wrapper-div .project-text {
-    padding: 0.6rem 1rem !important;
+    padding: 0.75rem 1.25rem !important;
     text-align: left !important;
   }
   #loc #wrapper-div .tab-content-temp {
     justify-content: flex-start;
   }
   #loc #wrapper-div .project-text h3.h4 {
-    font-size: 1.05rem !important;
+    font-size: 1.1rem !important;
   }
 }
-@media (max-width: 575.98px) {
+/* phones: the frame takes about 40% of the width, the text the rest */
+@media (max-width: 767.98px) {
   #loc.projects-section {
     padding: 2.25rem 0 2.5rem !important;
   }
   #loc #wrapper-div {
-    --disc-row: 112px;
+    --disc-row: 172px;
   }
   #loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
   #loc #wrapper-div > .row > [class*="col-"]:has(> img) {
-    flex-basis: 36%;
-    max-width: 36%;
-  }
-  #loc #wrapper-div > .row > [class*="col-"] {
-    flex-basis: 64%;
-    max-width: 64%;
+    flex: 0 0 44%;
+    max-width: 44%;
   }
   #loc #wrapper-div .project-text {
-    padding: 0.5rem 0.75rem !important;
+    padding: 0.6rem 3rem 0.6rem 0.75rem !important;
   }
   #loc #wrapper-div .project-text h3.h4 {
     font-size: 1rem !important;
   }
-  /* the short description is the first thing to go on a narrow screen */
   #loc #wrapper-div .tab-content-temp > p {
     display: none;
   }
-  #loc #wrapper-div .project-text {
-    padding-right: 3rem !important;
-  }
   #loc #wrapper-div .tab-content {
-    min-height: 92px;
+    min-height: 124px;
   }
   #loc #wrapper-div .tab-content-temp > h4 {
     font-size: 0.92rem !important;
@@ -8024,5 +8028,22 @@ body .reviews-title > .border-bottom.border-primary,
   #loc #wrapper-div .tab-content-temp > div,
   #loc #wrapper-div .tab-content-temp > a {
     font-size: 0.74rem !important;
+  }
+}
+/* very narrow phones: a little more width for the text */
+@media (max-width: 389.98px) {
+  #loc #wrapper-div > .row > [class*="col-"]:has(.img-wrapper),
+  #loc #wrapper-div > .row > [class*="col-"]:has(> img) {
+    flex: 0 0 38%;
+    max-width: 38%;
+  }
+  #loc #wrapper-div .project-text {
+    padding: 0.5rem 2.75rem 0.5rem 0.6rem !important;
+  }
+  #loc #wrapper-div .tab-content-temp > h4 {
+    font-size: 0.86rem !important;
+  }
+  #loc #wrapper-div .tab-content {
+    min-height: 128px;
   }
 }
