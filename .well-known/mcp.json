@@ -21,7 +21,7 @@
     },
     {
       "name": "amenities",
-      "description": "Amenities listed on the villa page",
+      "description": "Amenities listed on the booking page",
       "path": "/resources/amenities.json"
     },
     {

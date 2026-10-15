@@ -79,4 +79,3 @@ https://www.bwstays.com/bwstays-booking.html
 https://www.bwstays.com/footer.html
 https://www.bwstays.com/index.html
 https://www.bwstays.com/search.html
-https://www.bwstays.com/villa1.html

@@ -35,7 +35,7 @@
       "manifest": "https://www.bwstays.com/manifest.json"
     },
     "data_quality_notes": [
-      "villa1.html (\"up to 8 adults\", from INR 3,999/night) and bwstays-booking.html (\"2 guests\", INR 5,000/night) disagree. Both are reported; confirm current rate and capacity with the host.",
+      "bwstays-booking.html lists \"2 guests\" on the villa card and \"Up to 8 Adults\" in the amenities. Both are reported; confirm the capacity with the host.",
       "No verified phone number is published: the site masks it and the WhatsApp link uses a placeholder-pattern number.",
       "Payment and cancellation terms on the site are written for tours (\"tour commencement date\") and are quoted verbatim, not reinterpreted."
     ]

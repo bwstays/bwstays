@@ -61,7 +61,7 @@ Snapshot: 2026-10-15
 - [Full text](https://www.bwstays.com/llms-full.txt): all page text, policies and data summaries
 - [about](https://www.bwstays.com/resources/about.json): Who Black and White Stays is, where it is, and how to reach it
 - [properties](https://www.bwstays.com/resources/properties.json): Villas offered by Black and White Stays with the rate and capacity the site publishes
-- [amenities](https://www.bwstays.com/resources/amenities.json): Amenities listed on the villa page
+- [amenities](https://www.bwstays.com/resources/amenities.json): Amenities listed on the booking page
 - [booking](https://www.bwstays.com/resources/booking.json): How to book, what the booking form asks for, and how to make contact
 - [policies](https://www.bwstays.com/resources/policies.json): Terms of service and privacy statement, quoted from footer.html
 - [attractions](https://www.bwstays.com/resources/attractions.json): Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay

@@ -133,7 +133,7 @@
       "type": "resource",
       "method": "GET",
       "path": "https://www.bwstays.com/resources/amenities.json",
-      "description": "Amenities listed on the villa page"
+      "description": "Amenities listed on the booking page"
     },
     {
       "name": "booking",

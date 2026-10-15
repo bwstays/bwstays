@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '2c7a3435a8';
+const VERSION = '63f689783f';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -37,12 +37,11 @@ const SHELL = [
   "/css/new-page.min.css?v=f2e8abdc",
   "/css/page-404.min.css?v=1898d2c3",
   "/css/styles.min.css?v=ac639506",
-  "/css/villa.min.css?v=41680af5",
   "/data/nearbylocationsdata.min.js?v=07ece56e",
   "/data/sitedata.min.js?v=3542ec90",
   "/index.html",
   "/js/booking.min.js?v=cff4af6b",
-  "/js/chat.min.js?v=a304cc64",
+  "/js/chat.min.js?v=9dd05b45",
   "/js/decode-email.js",
   "/js/dynamic-evgas.min.js?v=1a3b82d4",
   "/js/dynamic-foodmap.min.js?v=e3ef5086",
@@ -54,7 +53,6 @@ const SHELL = [
   "/js/pdfgen.min.js?v=4b76e38b",
   "/js/promo-banner.min.js?v=56cb74aa",
   "/js/pwa.min.js?v=edc4f8b5",
-  "/js/reveal.min.js?v=166471ed",
   "/js/scripts.min.js?v=84ab9a9c",
   "/js/site-search.min.js?v=b67e0575",
   "/js/specrule.min.js?v=1f8a513f",
@@ -158,8 +156,7 @@ const PAGES = [
   "/offline.html",
   "/reciprocal.html",
   "/reports/bwstays-total-booking.html",
-  "/search.html",
-  "/villa1.html"
+  "/search.html"
 ];
 const DATA = [
   "/data/booking-reports.json",
@@ -331,7 +328,6 @@ const IMAGES = [
   "/assets/img/trucking/bw-weekend-destination-cheengeri-hills.webp",
   "/assets/img/villa1/black-and-white-wayanad-mist.webp",
   "/assets/img/villa1/bw-destination-chembra-wayanad.webp",
-  "/assets/img/villa1/demo-image-02.webp",
   "/assets/img/wildlife/bw-food-stay-muthanga-wildlife-wayanad.webp",
   "/assets/img/wildlife/bw-homestays-nagarhole-wayanad-wildlife-sanctuary.webp",
   "/assets/img/wildlife/bw-kerala-begur-wildlife-sanctuary-wayanad.webp",
