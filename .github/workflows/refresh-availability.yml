@@ -1,7 +1,7 @@
 name: Refresh booking availability
 
 # Reads the owner's calendar feeds (Google Calendar, Airbnb, Booking.com iCal)
-# and rewrites data/bookingdata.js and data/closeddata.js for the booking
+# and rewrites data/bookingdata.js, data/closeddata.js and data/pendingdata.js for the booking
 # calendar: today to one year ahead only, no guest names. Free.
 #
 # Setup: add a repository secret BW_ICAL_URLS holding the iCal links, one per
@@ -51,7 +51,7 @@ jobs:
         id: diff
         if: steps.secret.outputs.set == 'true'
         run: |
-          if git diff --quiet -- data/bookingdata.js data/closeddata.js; then
+          if git diff --quiet -- data/bookingdata.js data/closeddata.js data/pendingdata.js; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "availability unchanged"
           else

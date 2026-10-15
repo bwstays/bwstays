@@ -4,6 +4,7 @@
  *
  *   data/bookingdata.js  -> var booking = [[from, to], ...]   (booked nights)
  *   data/closeddata.js   -> var closed  = [[from, to], ...]   (closed days)
+ *   data/pendingdata.js  -> var pending = [[from, to], ...]   (requested, not yet confirmed)
  *
  * The page, the MCP files and the booking report already read these two files,
  * so nothing else changes. Only the window today .. today + 365 days is kept,
@@ -15,6 +16,7 @@
  *
  *   booked|https://calendar.google.com/calendar/ical/.../basic.ics
  *   closed|https://calendar.google.com/calendar/ical/.../basic.ics
+ *   pending|https://calendar.google.com/calendar/ical/.../basic.ics   (the "Booking requests" calendar)
  *   https://www.airbnb.com/calendar/ical/....ics        (type decided by title)
  *
  * Without a prefix an event counts as closed when its title contains
@@ -87,7 +89,7 @@ function parseIcs(text) {
 
 function parseSources(raw) {
   return raw.split(/[\s,]+/).filter(Boolean).map((tok) => {
-    const m = tok.match(/^(booked|closed)\|(.+)$/i);
+    const m = tok.match(/^(booked|closed|pending)\|(.+)$/i);
     return m ? { type: m[1].toLowerCase(), url: m[2] } : { type: null, url: tok };
   });
 }
@@ -144,13 +146,14 @@ limit.setDate(limit.getDate() + DAYS);
 
 const booked = new Set();
 const closed = new Set();
+const pending = new Set();
 let seen = 0;
 for (const src of sources) {
   const events = parseIcs(src.text);
   seen += events.length;
   for (const e of events) {
     const type = src.type || (CLOSED_RE.test(e.title) ? 'closed' : 'booked');
-    const target = type === 'closed' ? closed : booked;
+    const target = type === 'closed' ? closed : type === 'pending' ? pending : booked;
     for (const d = new Date(e.start); d <= e.end; d.setDate(d.getDate() + 1)) {
       if (d >= today && d <= limit) target.add(iso(d));
     }
@@ -158,13 +161,17 @@ for (const src of sources) {
 }
 // a day that is closed is shown as closed, not as booked
 for (const d of closed) booked.delete(d);
+// a requested day that is already booked or closed is shown as booked or closed
+for (const d of [...booked, ...closed]) pending.delete(d);
 
 const bookedRanges = toRanges(booked);
 const closedRanges = toRanges(closed);
-console.log(`events read: ${seen} | booked ranges: ${bookedRanges.length} (${booked.size} days) | closed ranges: ${closedRanges.length} (${closed.size} days)`);
+const pendingRanges = toRanges(pending);
+console.log(`events read: ${seen} | booked ranges: ${bookedRanges.length} (${booked.size} days) | closed ranges: ${closedRanges.length} (${closed.size} days) | requested ranges: ${pendingRanges.length} (${pending.size} days)`);
 console.log(`window: ${iso(today)} .. ${iso(limit)}`);
 
 if (DRY) process.exit(0);
 fs.writeFileSync('data/bookingdata.js', render('booking', bookedRanges, 'Booked nights'));
 fs.writeFileSync('data/closeddata.js', render('closed', closedRanges, 'Closed days'));
-console.log('wrote data/bookingdata.js and data/closeddata.js');
+fs.writeFileSync('data/pendingdata.js', render('pending', pendingRanges, 'Requested days (not yet confirmed)'));
+console.log('wrote data/bookingdata.js, data/closeddata.js and data/pendingdata.js');
