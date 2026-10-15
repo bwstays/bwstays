@@ -73,7 +73,7 @@
         var checkOut = parseDay(dates[1]);
         var nights = checkIn && checkOut ? Math.max(1, Math.round((checkOut - checkIn) / 86400000)) : 1;
         var rows = [];
-        if (myArray[2] && myArray[2].length) rows.push(villaRow('Villa 1 - Ground floor', myArray[2], nights));
+        if (myArray[2] && myArray[2].length) rows.push(villaRow('Villa Stay', myArray[2], nights));
         var subtotal = rows.reduce(function (s, r) { return s + r.amount; }, 0);
         var tax = subtotal * RATE.gst / 100;
         var total = subtotal + tax;

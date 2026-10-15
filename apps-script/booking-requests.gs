@@ -136,7 +136,7 @@ function validate_(data) {
 
   var v1 = clean_(data.villa_1_ground_floor, 60);
   var villas = [];
-  if (v1 && v1 !== 'not selected') villas.push('Villa 1: ' + v1);
+  if (v1 && v1 !== 'not selected') villas.push('Villa Stay: ' + v1);
   if (!villas.length) return { error: 'villa' };
 
   function fmt(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
