@@ -13,7 +13,7 @@ const brandColors = {
 };
 const propertyConfig = {
     all: { name: 'All villas', color: brandColors.primary },
-    villa1: { name: 'Luxury Villa 1 - Ground Floor', color: brandColors.primary }
+    villa1: { name: 'Villa Stay', color: brandColors.primary }
 };
 // The booking calendar records dates only; guest, party size and amount are null.
 function bwMoney(v) {

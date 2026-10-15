@@ -25,7 +25,7 @@ const items = [];
 
 // ---- pages
 const pages = [
-  ['Villa 1 - Ground Floor', 'Villa, rooms, amenities and rates', `${SITE}/villa1.html`],
+  ['Villa Stay', 'Villa, rooms, amenities and rates', `${SITE}/villa1.html`],
   ['Book your stay', 'Reservation and availability', `${SITE}/bwstays-booking.html`],
   ['Terms, disclaimer and privacy', 'Policies', `${SITE}/footer.html`],
   ['All places to visit in Wayanad', 'Map of attractions', `${SITE}/all-locations-wayanad.html`],
