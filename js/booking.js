@@ -166,22 +166,57 @@ document.addEventListener('DOMContentLoaded', function () {
                 myArray.push(dateArray);
                 myArray.push(villaArray1);
                 myArray.push(villaArray2);
-                invokeRefBooking(myArray);
-                const jsonString = JSON.stringify(myArray);
-                showErrorMessage('Booking completed successfully!', 'success');
-        $.ajax({
-            type: "POST",
-            url: "https://formsubmit.co/ajax/bwstays@gmail.com",
-            data:  jsonString,
-			 dataType: 'json',
-	    accepts: 'application/json',
-	    success: function(response) {
-                $('#result').html('<p>Form submitted successfully!</p>'+jsonString);
-            },
-            error: function(xhr, status, error) {
-                $('#result').html('<p>Error submitting form.</p>'+jsonString);
-            }
-        });
+                // The form sends a booking REQUEST by email. The dates are held only after the host confirms
+                // (and adds them to the booking calendar), so the message must say that, and must only
+                // claim success when the request was really delivered.
+                const guests = (arr) => (arr.length ? `${arr[1]} adults, ${arr[2]} children` : 'not selected');
+                const payload = {
+                    _subject: `Booking request: ${fullName}, ${checkInDate} to ${checkOutDate}`,
+                    _template: 'table',
+                    _captcha: 'false',
+                    name: fullName,
+                    email: email,
+                    phone: phone,
+                    check_in: checkInDate,
+                    check_out: checkOutDate,
+                    nights: String(nights),
+                    villa_1_ground_floor: villa1 ? guests(villaArray1) : 'not selected',
+                    villa_2_first_floor: villa2 ? guests(villaArray2) : 'not selected',
+                    arrival_time: arrivalTime,
+                    address_or_requests: specialRequests,
+                    status: 'REQUEST - dates are not blocked until you confirm and add them to the booking calendar',
+                };
+                const submitBtn = this.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://formsubmit.co/ajax/bwstays@gmail.com',
+                    contentType: 'application/json',
+                    data: JSON.stringify(payload),
+                    dataType: 'json',
+                    accepts: 'application/json',
+                    success: function (response) {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                        }
+                        if (response && (response.success === 'false' || response.success === false)) {
+                            showErrorMessage('We could not send your request just now. Please try again, or email us at bwstays@gmail.com.', 'error');
+                            return;
+                        }
+                        showErrorMessage('Thank you! Your booking request has been sent. We will confirm availability by email shortly; your dates are held only once we confirm.', 'success');
+                        try {
+                            invokeRefBooking(myArray);
+                        } catch (e) { /* the request is sent; the PDF summary is optional */ }
+                    },
+                    error: function () {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                        }
+                        showErrorMessage('We could not send your request just now. Please check your connection and try again, or email us at bwstays@gmail.com.', 'error');
+                    }
+                });
             });
         });
         $(document).ready(function () {
