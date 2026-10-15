@@ -32132,7 +32132,7 @@ Standard dates: cancel 15 or more days before check-in for a full refund (less p
 <!-- BEGIN GENERATED: site-data -->
 ## Site data summary (generated; the MCP files hold the full detail)
 
-Snapshot: 2026-10-14
+Snapshot: 2026-10-15
 
 ### Booking, availability and cancellation
 - Booking page: https://www.bwstays.com/bwstays-booking.html. Dates can be chosen from today up to one year ahead; past dates are not selectable.
