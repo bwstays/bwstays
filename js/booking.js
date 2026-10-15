@@ -1,4 +1,7 @@
 let currentMonthOffset = 0;
+// Optional: URL of the Google Apps Script web app that also writes each request into the
+// "BWStays Booking Requests" calendar (see apps-script/README.md). Empty = email only.
+const BW_REQUEST_ENDPOINT = '';
 // ---------------------------------------------------------------- availability
 // Booked days come from data/bookingdata.js (window.booking), closed days from
 // data/closeddata.js (window.closed). Each entry is [from, to]; an empty "to"
@@ -40,7 +43,7 @@ function bwMaxDate() {
     d.setFullYear(d.getFullYear() + 1);
     return d;
 }
-// 'past' | 'beyond' | 'reserved' | 'blocked' | '' for a Date
+// 'past' | 'beyond' | 'reserved' | 'blocked' | 'requested' | '' for a Date
 function bwDayState(date) {
     const day = new Date(date.getFullYear(), date.getMonth(), date.getDate());
     if (day < bwToday()) {
@@ -55,6 +58,10 @@ function bwDayState(date) {
     }
     if (bwExpand(window.booking)[iso]) {
         return 'reserved';
+    }
+    // requested by a guest but not confirmed yet: shown, still selectable
+    if (bwExpand(window.pending)[iso]) {
+        return 'requested';
     }
     return '';
 }
@@ -186,6 +193,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     address_or_requests: specialRequests,
                     status: 'REQUEST - dates are not blocked until you confirm and add them to the booking calendar',
                 };
+                if (BW_REQUEST_ENDPOINT) {
+                    // text/plain keeps this a simple request (no CORS preflight); the reply is not needed
+                    try {
+                        fetch(BW_REQUEST_ENDPOINT, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            keepalive: true,
+                            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                            body: JSON.stringify(payload),
+                        }).catch(function () { /* the email request is the primary channel */ });
+                    } catch (e) { /* ignore */ }
+                }
                 const submitBtn = this.querySelector('button[type="submit"]');
                 if (submitBtn) {
                     submitBtn.disabled = true;
@@ -405,7 +424,10 @@ function createMonthCalendar(date, isFirstMonth = false) {
         dayElement.dataset.date = `${date.getFullYear()}-${date.getMonth() + 1}-${i}`;
         const cellDate = new Date(date.getFullYear(), date.getMonth(), i);
         const state = bwDayState(cellDate);
-        if (state) {
+        if (state === 'requested') {
+            dayElement.classList.add('requested');
+            dayElement.title = 'Requested by another guest - not confirmed yet';
+        } else if (state) {
             dayElement.classList.add('unavailable', state);
             dayElement.setAttribute('aria-disabled', 'true');
             dayElement.title = state === 'reserved' ? 'Booked' : state === 'blocked' ? 'Closed' : state === 'past' ? 'Past date' : 'More than a year ahead';

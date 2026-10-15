@@ -8092,3 +8092,11 @@ body .reviews-title > .border-bottom.border-primary,
     --disc-row: 240px;
   }
 }
+
+/* calendar: dates another guest has requested but the host has not confirmed yet (still selectable) */
+.calendar-container .days .day.requested {
+  background: repeating-linear-gradient(45deg, #fff3d6, #fff3d6 3px, #fff 3px, #fff 6px);
+  color: #7a5a00;
+  box-shadow: inset 0 0 0 1px #e8c872;
+}
+.calendar-legend .lg-requested { background: repeating-linear-gradient(45deg, #fff3d6, #fff3d6 3px, #fff 3px, #fff 6px); border-color: #e8c872; }
