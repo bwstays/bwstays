@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 const checkOutDate = document.getElementById('checkOutDate').value;
                 const termsCheck = document.getElementById('termsCheck').checked;
                 const villa1 = document.getElementById('villa1').checked;
-                const villa2 = document.getElementById('villa2').checked;
                 const specialRequests = document.querySelector('textarea[placeholder="Your Address"]').value;
                 const arrivalTime = document.querySelector('select').value;
                 hideErrorMessage();
@@ -137,29 +136,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     showErrorMessage('Minimum stay is 1 night. Please select valid dates.', 'error');
                     return;
                 }
-                if (!villa1 && !villa2) {
-                    showErrorMessage('Please select at least one villa', 'error');
+                if (!villa1) {
+                    showErrorMessage('Please select the villa to continue', 'error');
                     return;
                 }
                 const adultsInput1 = document.querySelectorAll('.counter-inputvilla1')[0].value;
                 const childrenInput1 = document.querySelectorAll('.counter-inputvilla')[0].value;
-                const adultsInput2 = document.querySelectorAll('.counter-input')[0].value;
-                const childrenInput2 = document.querySelectorAll('.counter-input')[1].value;
                 let myArray = [];
                 let dateArray = [];
                 let villaArray1 = [];
-                let villaArray2 = [];
                 let obj = new Object();
                 obj.total = '';
                 if(villa1) {
 					villaArray1.push("villa1");
 					villaArray1.push(adultsInput1);
 					villaArray1.push(childrenInput1);
-                }
-                if(villa2) {
-                    villaArray2.push("villa2");
-                    villaArray2.push(adultsInput2);
-                    villaArray2.push(childrenInput2);
                 }
                 obj.unitPrice = 5000; 
                 obj.contactName = fullName;
@@ -172,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 myArray.push(obj);
                 myArray.push(dateArray);
                 myArray.push(villaArray1);
-                myArray.push(villaArray2);
                 // The form sends a booking REQUEST by email. The dates are held only after the host confirms
                 // (and adds them to the booking calendar), so the message must say that, and must only
                 // claim success when the request was really delivered.
@@ -188,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     check_out: checkOutDate,
                     nights: String(nights),
                     villa_1_ground_floor: villa1 ? guests(villaArray1) : 'not selected',
-                    villa_2_first_floor: villa2 ? guests(villaArray2) : 'not selected',
                     arrival_time: arrivalTime,
                     address_or_requests: specialRequests,
                     status: 'REQUEST - dates are not blocked until you confirm and add them to the booking calendar',

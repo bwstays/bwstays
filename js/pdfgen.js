@@ -2,8 +2,7 @@
 // Input is the array built by the booking form:
 //   [ { contactName, contactEmail, contactPersonMobNo, arrivalTime, requirementSpec },
 //     [checkIn, checkOut],
-//     ["villa1", adults, children] | [],
-//     ["villa2", adults, children] | [] ]
+//     ["villa1", adults, children] ]
 // It is a reference document, not a confirmation: the host confirms availability first.
 (function (global) {
     'use strict';
@@ -75,7 +74,6 @@
         var nights = checkIn && checkOut ? Math.max(1, Math.round((checkOut - checkIn) / 86400000)) : 1;
         var rows = [];
         if (myArray[2] && myArray[2].length) rows.push(villaRow('Villa 1 - Ground floor', myArray[2], nights));
-        if (myArray[3] && myArray[3].length) rows.push(villaRow('Villa 2 - First floor', myArray[3], nights));
         var subtotal = rows.reduce(function (s, r) { return s + r.amount; }, 0);
         var tax = subtotal * RATE.gst / 100;
         var total = subtotal + tax;

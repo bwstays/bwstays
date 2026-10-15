@@ -2,7 +2,7 @@
   "name": "properties",
   "description": "Villas offered by Black and White Stays with the rate and capacity the site publishes",
   "content": {
-    "count": 2,
+    "count": 1,
     "properties": [
       {
         "id": "villa1",
@@ -37,15 +37,6 @@
           "Dish Wash"
         ],
         "pets_allowed": true
-      },
-      {
-        "id": "villa2",
-        "name": "Luxury Villa 2 - First Floor",
-        "page_url": null,
-        "type": "Entire villa",
-        "price_listed_on_booking_form_inr_per_night": 5000,
-        "pets_allowed": true,
-        "note": "Listed on the booking form only; the site has no dedicated villa2 page."
       }
     ],
     "data_quality_notes": [
