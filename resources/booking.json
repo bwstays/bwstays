@@ -19,10 +19,6 @@
       {
         "villa": "Luxury Villa 1 - Ground Floor",
         "inr_per_night": 5000
-      },
-      {
-        "villa": "Luxury Villa 2- First Floor",
-        "inr_per_night": 5000
       }
     ],
     "payment_terms_quoted_from_site": [

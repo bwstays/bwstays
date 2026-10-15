@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = 'd52a62e49e';
+const VERSION = '22d2d0c224';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -41,7 +41,7 @@ const SHELL = [
   "/data/nearbylocationsdata.min.js?v=07ece56e",
   "/data/sitedata.min.js?v=3542ec90",
   "/index.html",
-  "/js/booking.min.js?v=6bcc8c18",
+  "/js/booking.min.js?v=cff4af6b",
   "/js/chat.min.js?v=a304cc64",
   "/js/decode-email.js",
   "/js/dynamic-evgas.min.js?v=1a3b82d4",
@@ -51,7 +51,7 @@ const SHELL = [
   "/js/knowmore-place-dynamic.min.js?v=ffe52400",
   "/js/language.min.js?v=d8bf0fe7",
   "/js/legal-page.min.js?v=313fa758",
-  "/js/pdfgen.min.js?v=03cba7b4",
+  "/js/pdfgen.min.js?v=5b08ab3e",
   "/js/promo-banner.min.js?v=56cb74aa",
   "/js/pwa.min.js?v=edc4f8b5",
   "/js/reveal.min.js?v=166471ed",
@@ -59,7 +59,7 @@ const SHELL = [
   "/js/site-search.min.js?v=b67e0575",
   "/js/specrule.min.js?v=1f8a513f",
   "/js/testimonial.min.js?v=c59378fa",
-  "/js/total-booking-reports.min.js?v=dc7d7d78",
+  "/js/total-booking-reports.min.js?v=b993a6e5",
   "/js/validations.min.js?v=ef97f6ba",
   "/js/way_food_loc.min.js?v=10afad43",
   "/js/wayanad_kalpetta_trait-one.min.js?v=1bfb78be",

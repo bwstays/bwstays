@@ -12,15 +12,6 @@
         "gst": "Terms state fees are inclusive of 18% GST",
         "note": "The two prices come from different pages and are not reconciled by the site."
       }
-    },
-    {
-      "input": {
-        "property": "villa2"
-      },
-      "output": {
-        "booking_form_inr_per_night": 5000,
-        "note": "Listed on the booking form only; the site has no dedicated villa2 page."
-      }
     }
   ],
   "default_response": {
