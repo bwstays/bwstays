@@ -134,8 +134,7 @@
 										<tr>
 											 
 											<th width="25%">Date</th>
-											<th width="25%"><a href="https://www.bwstays.com/villa1.html">Villa Stay</a></th>
-											<th width="25%"><a href="https://www.bwstays.com/villa1.html">Villa 2</a></th>
+											<th width="25%"><a href="https://www.bwstays.com/bwstays-booking.html">Villa Stay</a></th>
 										</tr>
 									</thead>
 
@@ -147,9 +146,6 @@
 											</xsl:variable>
 											<xsl:variable name="villa1">
 												<xsl:value-of select="sitemap:villa1"/>
-											</xsl:variable>
-											<xsl:variable name="villa2">
-												<xsl:value-of select="sitemap:villa2"/>
 											</xsl:variable>
 
 
@@ -163,9 +159,6 @@
 													<a href="https://www.bwstays.com/bwstays-booking.html"> <xsl:value-of select="sitemap:villa1"/> </a>
 												</td>
 
-												<td>
-													<a href="https://www.bwstays.com/bwstays-booking.html"> <xsl:value-of select="sitemap:villa2"/> </a>
-												</td>
 
 											</tr>
 										</xsl:for-each>
