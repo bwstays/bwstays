@@ -135,10 +135,8 @@ function validate_(data) {
   if (nights < 1 || nights > CONFIG.MAX_NIGHTS) return { error: 'nights' };
 
   var v1 = clean_(data.villa_1_ground_floor, 60);
-  var v2 = clean_(data.villa_2_first_floor, 60);
   var villas = [];
   if (v1 && v1 !== 'not selected') villas.push('Villa 1: ' + v1);
-  if (v2 && v2 !== 'not selected') villas.push('Villa 2: ' + v2);
   if (!villas.length) return { error: 'villa' };
 
   function fmt(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
