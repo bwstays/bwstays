@@ -779,7 +779,7 @@ const owned = (dir) =>
 const stale = [...owned('resources'), ...owned('tools')].filter((f) => !outputs.has(f));
 
 // `generated` is a date, so --check ignores it to avoid failing every midnight.
-const stripDate = (s) => s.replace(/"generated": "\d{4}-\d{2}-\d{2}"/g, '"generated": "-"');
+const stripDate = (s) => s.replace(/"(generated|snapshot_date)": "\d{4}-\d{2}-\d{2}"/g, '"$1": "-"');
 let drift = 0;
 for (const [rel, body] of outputs) {
   const abs = path.join(ROOT, rel);
