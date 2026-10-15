@@ -269,3 +269,10 @@ node scripts/prerender.mjs --verify   # no browser: check the blocks are present
 - Each target is a container that its script clears and rebuilds, so visitors see the same page as before. Re-run it after changing `data/sitedata.js`, the distance, food, fuel or EV data, or the scripts that render these blocks (the monthly data workflow does).
 - Needs `npm i --no-save playwright-core` and Chrome (`CHROME_PATH`, `PLAYWRIGHT_CORE` for a non-local install). Commit subjects starting "Prerender" are ignored by the sitemap `lastmod` logic.
 - Cloudflare: the HTML served to every client already contains this content, so no bot-specific worker is involved. The pages are cached at the Cloudflare edge (cache rule, 4 h); purge the cache after a deploy to see changes at once. No third-party prerender service is used.
+
+### Booking requests and the calendar
+
+- The booking form is a request: it emails bwstays@gmail.com (formsubmit.co) and says so. Nothing is blocked until the host confirms and adds the dates to the Google Calendar that `BW_ICAL_URLS` points at.
+- Optional: `apps-script/booking-requests.gs` (deployed by the owner as a Google Apps Script web app, see `apps-script/README.md`) also writes each request into a separate "BWStays Booking Requests" calendar. Set `BW_REQUEST_ENDPOINT` in `js/booking.js` to its URL and add `pending|<that calendar's secret iCal address>` to the `BW_ICAL_URLS` secret.
+- `build-availability.mjs` writes `data/pendingdata.js` for `pending|` feeds; the booking calendar shows those dates as "Requested" (amber, still selectable). Booked or closed dates win over requested ones.
+- `js/pdfgen.js` builds the one-page request summary PDF (reference number, guest, stay, price estimate, status box, next steps).
