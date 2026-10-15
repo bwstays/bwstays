@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '4ec094befb';
+const VERSION = 'd52a62e49e';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -31,7 +31,7 @@ const SHELL = [
   "/assets/img/pwa/icon-96.png",
   "/assets/img/pwa/icon-maskable-512.png",
   "/bwstays-booking.html",
-  "/css/details-page.min.css?v=e2e8fe45",
+  "/css/details-page.min.css?v=a1195021",
   "/css/fontawesome.min.css?v=a611ff0d",
   "/css/maps.min.css?v=cef28474",
   "/css/new-page.min.css?v=f2e8abdc",
@@ -41,7 +41,7 @@ const SHELL = [
   "/data/nearbylocationsdata.min.js?v=07ece56e",
   "/data/sitedata.min.js?v=3542ec90",
   "/index.html",
-  "/js/booking.min.js?v=b885875e",
+  "/js/booking.min.js?v=6bcc8c18",
   "/js/chat.min.js?v=a304cc64",
   "/js/decode-email.js",
   "/js/dynamic-evgas.min.js?v=1a3b82d4",
@@ -51,7 +51,7 @@ const SHELL = [
   "/js/knowmore-place-dynamic.min.js?v=ffe52400",
   "/js/language.min.js?v=d8bf0fe7",
   "/js/legal-page.min.js?v=313fa758",
-  "/js/pdfgen.min.js?v=bb468e17",
+  "/js/pdfgen.min.js?v=03cba7b4",
   "/js/promo-banner.min.js?v=56cb74aa",
   "/js/pwa.min.js?v=edc4f8b5",
   "/js/reveal.min.js?v=166471ed",
@@ -348,13 +348,13 @@ const EXTERNAL = [
   "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
 ]; // static libraries on a public CDN that some pages load
 // availability files change with every booking, so they are not listed in this file
-const FRESH_FILES = ['/data/bookingdata.min.js', '/data/closeddata.min.js'];
+const FRESH_FILES = ['/data/bookingdata.min.js', '/data/closeddata.min.js', '/data/pendingdata.min.js'];
 
 const OFFLINE_URL = '/offline.html';
 const NETWORK_TIMEOUT_MS = 4000;
 const MAX_MEDIA_ENTRIES = 600;
 const MAX_RUNTIME_ENTRIES = 160;
-const FRESH_DATA = /\/data\/(bookingdata|closeddata)(\.min)?\.js/;
+const FRESH_DATA = /\/data\/(bookingdata|closeddata|pendingdata)(\.min)?\.js/;
 const DATA_PATH = /\/data\/[^/]+\.(json|js)$|\/llms-full\.txt$/;
 const IMAGE_EXT = /\.(?:png|jpe?g|gif|webp|avif|svg|ico)$/i;
 const RUNTIME_HOSTS = [
