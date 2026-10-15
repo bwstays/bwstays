@@ -26,7 +26,7 @@ const CHECK = process.argv.includes('--check');
 const ORIGIN = 'https://www.bwstays.com';
 const SKIP_PAGES = /^(google[0-9a-f]+|yandex_[0-9a-f]+)\.html$/i;
 // availability changes with every booking: always fetched fresh, never part of the shell/version
-const FRESH = /^data\/(bookingdata|closeddata)(\.min)?\.js$/;
+const FRESH = /^data\/(bookingdata|closeddata|pendingdata)(\.min)?\.js$/;
 
 const rel = (p) => p.split(path.sep).join('/');
 const exists = (r) => fs.existsSync(path.join(ROOT, r)) && fs.statSync(path.join(ROOT, r)).isFile();

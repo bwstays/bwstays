@@ -26,13 +26,13 @@ const DATA = __DATA__;
 const IMAGES = __IMAGES__;
 const EXTERNAL = __EXTERNAL__; // static libraries on a public CDN that some pages load
 // availability files change with every booking, so they are not listed in this file
-const FRESH_FILES = ['/data/bookingdata.min.js', '/data/closeddata.min.js'];
+const FRESH_FILES = ['/data/bookingdata.min.js', '/data/closeddata.min.js', '/data/pendingdata.min.js'];
 
 const OFFLINE_URL = '/offline.html';
 const NETWORK_TIMEOUT_MS = 4000;
 const MAX_MEDIA_ENTRIES = 600;
 const MAX_RUNTIME_ENTRIES = 160;
-const FRESH_DATA = /\/data\/(bookingdata|closeddata)(\.min)?\.js/;
+const FRESH_DATA = /\/data\/(bookingdata|closeddata|pendingdata)(\.min)?\.js/;
 const DATA_PATH = /\/data\/[^/]+\.(json|js)$|\/llms-full\.txt$/;
 const IMAGE_EXT = /\.(?:png|jpe?g|gif|webp|avif|svg|ico)$/i;
 const RUNTIME_HOSTS = [
