@@ -4,13 +4,12 @@
   "responses": [
     {
       "input": {
-        "property": "villa1"
+        "property": "villa_stay"
       },
       "output": {
-        "from_inr_per_night": 3999,
         "booking_form_inr_per_night": 5000,
         "gst": "Terms state fees are inclusive of 18% GST",
-        "note": "The two prices come from different pages and are not reconciled by the site."
+        "note": "Rate as listed on the booking page."
       }
     }
   ],

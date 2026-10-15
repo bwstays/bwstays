@@ -9,23 +9,19 @@
       "output": {
         "results": [
           {
-            "id": "villa1",
+            "id": "villa_stay",
             "name": "Villa Stay",
-            "page_url": "https://www.bwstays.com/villa1.html",
+            "page_url": "https://www.bwstays.com/bwstays-booking.html",
             "type": "Entire villa",
-            "rooms": 2,
-            "max_guests": "Up to 8 adults (villa page); booking form lists 2 guests per villa",
-            "price_from_inr_per_night": 3999,
+            "beds": 2,
+            "max_guests": "2 guests on the villa card; the amenities list says \"Up to 8 Adults\"",
             "price_listed_on_booking_form_inr_per_night": 5000,
             "amenities": [
-              "Premium Linens",
-              "Private Pool",
               "EV Charging",
               "Private Parking",
               "Eco-Friendly",
               "Premium Utensils",
               "Bonfire & Music",
-              "Open Kitchen",
               "Kitchen Set",
               "Television",
               "Online Games",
@@ -34,11 +30,8 @@
               "Pet Friendly",
               "Bathroom Amenities",
               "Air Condition",
-              "Iron",
               "Mountain View",
-              "Laundry",
-              "Garden",
-              "Dish Wash"
+              "Garden"
             ],
             "pets_allowed": true
           }
@@ -47,28 +40,24 @@
     },
     {
       "input": {
-        "id": "villa1"
+        "id": "villa_stay"
       },
       "output": {
         "results": [
           {
-            "id": "villa1",
+            "id": "villa_stay",
             "name": "Villa Stay",
-            "page_url": "https://www.bwstays.com/villa1.html",
+            "page_url": "https://www.bwstays.com/bwstays-booking.html",
             "type": "Entire villa",
-            "rooms": 2,
-            "max_guests": "Up to 8 adults (villa page); booking form lists 2 guests per villa",
-            "price_from_inr_per_night": 3999,
+            "beds": 2,
+            "max_guests": "2 guests on the villa card; the amenities list says \"Up to 8 Adults\"",
             "price_listed_on_booking_form_inr_per_night": 5000,
             "amenities": [
-              "Premium Linens",
-              "Private Pool",
               "EV Charging",
               "Private Parking",
               "Eco-Friendly",
               "Premium Utensils",
               "Bonfire & Music",
-              "Open Kitchen",
               "Kitchen Set",
               "Television",
               "Online Games",
@@ -77,11 +66,8 @@
               "Pet Friendly",
               "Bathroom Amenities",
               "Air Condition",
-              "Iron",
               "Mountain View",
-              "Laundry",
-              "Garden",
-              "Dish Wash"
+              "Garden"
             ],
             "pets_allowed": true
           }
@@ -95,23 +81,19 @@
       "output": {
         "results": [
           {
-            "id": "villa1",
+            "id": "villa_stay",
             "name": "Villa Stay",
-            "page_url": "https://www.bwstays.com/villa1.html",
+            "page_url": "https://www.bwstays.com/bwstays-booking.html",
             "type": "Entire villa",
-            "rooms": 2,
-            "max_guests": "Up to 8 adults (villa page); booking form lists 2 guests per villa",
-            "price_from_inr_per_night": 3999,
+            "beds": 2,
+            "max_guests": "2 guests on the villa card; the amenities list says \"Up to 8 Adults\"",
             "price_listed_on_booking_form_inr_per_night": 5000,
             "amenities": [
-              "Premium Linens",
-              "Private Pool",
               "EV Charging",
               "Private Parking",
               "Eco-Friendly",
               "Premium Utensils",
               "Bonfire & Music",
-              "Open Kitchen",
               "Kitchen Set",
               "Television",
               "Online Games",
@@ -120,11 +102,8 @@
               "Pet Friendly",
               "Bathroom Amenities",
               "Air Condition",
-              "Iron",
               "Mountain View",
-              "Laundry",
-              "Garden",
-              "Dish Wash"
+              "Garden"
             ],
             "pets_allowed": true
           }

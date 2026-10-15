@@ -24,7 +24,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CHECK = process.argv.includes('--check');
 const ORIGIN = 'https://www.bwstays.com';
-const SKIP_PAGES = /^(google[0-9a-f]+|yandex_[0-9a-f]+)\.html$/i;
+const SKIP_PAGES = /^(google[0-9a-f]+|yandex_[0-9a-f]+|villa1)\.html$/i;
 // availability changes with every booking: always fetched fresh, never part of the shell/version
 const FRESH = /^data\/(bookingdata|closeddata|pendingdata)(\.min)?\.js$/;
 

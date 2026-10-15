@@ -72,7 +72,6 @@ const evFile = JSON.parse(read('data/ev-stations.json'));
 const fuelFile = JSON.parse(read('data/fuel-places.json'));
 
 const indexHtml = read('index.html');
-const villaHtml = read('villa1.html');
 const bookingHtml = read('bwstays-booking.html');
 const footerHtml = read('footer.html');
 
@@ -101,19 +100,20 @@ const whatsapp = indexHtml.match(/https:\/\/wa\.me\/(\d+)/)?.[1] ?? null;
 const phoneIsPlaceholder = !whatsapp || /^(\d)\1{3,}|9999999999$/.test(whatsapp);
 const WHATSAPP_LINK = phoneIsPlaceholder ? null : `https://wa.me/${whatsapp}`;
 
-const villaPrice = villaHtml.match(/From\s*(?:&#8377;|₹)\s*([\d,]+)\s*\/\s*Night/i);
-must(villaPrice, 'villa1.html starting price not found');
-const villaDetails = [...villaHtml.slice(villaHtml.indexOf('id="amenities"')).matchAll(
-  /detail-value[^>]*>\s*([^<]*)</g,
-)].map((m) => m[1].trim()).filter(Boolean);
-must(villaDetails.length > 5, 'villa1.html amenity list not found');
-// First two tiles are room count and capacity; "Premium" + "Utensils" is one
-// amenity the page splits across two tiles.
-const villaAmenities = villaDetails
-  .slice(2)
-  .join('|')
-  .replace('Premium|Utensils', 'Premium Utensils')
-  .split('|');
+// The amenity chips, the card facts and the rate all come from the booking page
+// (commented-out chips are ignored).
+const amenityBlock = bookingHtml.replace(/<!--[\s\S]*?-->/g, '').match(/<ul class="bk-amenities">([\s\S]*?)<\/ul>/);
+must(amenityBlock, 'bwstays-booking.html amenity list not found');
+const amenityChips = [...amenityBlock[1].matchAll(/<span>([^<]+)<\/span>/g)]
+  .map((m) => m[1].replace(/&amp;/g, '&').trim())
+  .filter(Boolean);
+must(amenityChips.length > 5, 'bwstays-booking.html amenity list is too short');
+const capacityChip = amenityChips.find((x) => /^Up to \d+ adults?$/i.test(x)) ?? null;
+const villaAmenities = amenityChips.filter((x) => x !== capacityChip);
+const cardFacts = bookingHtml.match(/(\d+)\s*Beds?[\s\S]{0,300}?(\d+)\s*Guests?/i);
+must(cardFacts, 'bwstays-booking.html villa card facts not found');
+const villaBeds = Number(cardFacts[1]);
+const villaGuests = Number(cardFacts[2]);
 
 const bookingVillas = [...bookingHtml.matchAll(
   /<h5[^>]*class="mb-0"[^>]*>\s*(Villa Stay[^<]*)<\/h5>\s*<span class="price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/gi,
@@ -336,13 +336,14 @@ const NOT_PUBLISHED = 'Not published on bwstays.com - confirm with the host befo
 
 const properties = [
   {
-    id: 'villa1',
+    id: 'villa_stay',
     name: 'Villa Stay',
-    page_url: `${SITE}/villa1.html`,
+    page_url: `${SITE}/bwstays-booking.html`,
     type: 'Entire villa',
-    rooms: 2,
-    max_guests: 'Up to 8 adults (villa page); booking form lists 2 guests per villa',
-    price_from_inr_per_night: Number(villaPrice[1].replace(/,/g, '')),
+    beds: villaBeds,
+    max_guests: capacityChip
+      ? `${villaGuests} guests on the villa card; the amenities list says "${capacityChip}"`
+      : `${villaGuests} guests`,
     price_listed_on_booking_form_inr_per_night: bookingVillas[0]?.price ?? null,
     amenities: villaAmenities,
     pets_allowed: true,
@@ -361,7 +362,9 @@ const properties = [
 ];
 
 const dataQualityNotes = [
-  'villa1.html ("up to 8 adults", from INR 3,999/night) and bwstays-booking.html ("2 guests", INR 5,000/night) disagree. Both are reported; confirm current rate and capacity with the host.',
+  ...(capacityChip
+    ? [`bwstays-booking.html lists "${villaGuests} guests" on the villa card and "${capacityChip}" in the amenities. Both are reported; confirm the capacity with the host.`]
+    : []),
   'No verified phone number is published: the site masks it and the WhatsApp link uses a placeholder-pattern number.',
   'Payment and cancellation terms on the site are written for tours ("tour commencement date") and are quoted verbatim, not reinterpreted.',
 ];
@@ -399,20 +402,20 @@ const resources = {
     content: {
       count: properties.length,
       properties,
-      data_quality_notes: dataQualityNotes.slice(0, 1),
+      data_quality_notes: dataQualityNotes.slice(0, capacityChip ? 1 : 0),
     },
-    source: 'villa1.html, bwstays-booking.html',
+    source: 'bwstays-booking.html',
   },
   amenities: {
-    description: 'Amenities listed on the villa page',
+    description: 'Amenities listed on the booking page',
     content: {
-      property: 'villa1',
+      property: 'villa_stay',
       amenities: villaAmenities,
-      rooms: 2,
-      max_guests_per_villa_page: 'Up to 8 adults',
+      beds: villaBeds,
+      max_guests_listed: capacityChip,
       pets_allowed: true,
     },
-    source: 'villa1.html',
+    source: 'bwstays-booking.html',
   },
   booking: {
     description: 'How to book, what the booking form asks for, and how to make contact',
@@ -690,17 +693,13 @@ const tools = {
     description: 'Nightly rates exactly as published on the site',
     responses: [
       {
-        input: { property: 'villa1' },
+        input: { property: 'villa_stay' },
         output: {
-          from_inr_per_night: properties[0].price_from_inr_per_night,
           booking_form_inr_per_night: properties[0].price_listed_on_booking_form_inr_per_night,
           gst: 'Terms state fees are inclusive of 18% GST',
-          note: 'The two prices come from different pages and are not reconciled by the site.',
+          note: 'Rate as listed on the booking page.',
         },
       },
-      ...(bookingVillas[1]
-        ? [{ input: { property: 'villa2' }, output: { booking_form_inr_per_night: bookingVillas[1].price, note: properties[1].note } }]
-        : []),
     ],
     default_response: { message: NOT_PUBLISHED, booking_page: `${SITE}/bwstays-booking.html` },
   },

@@ -5,7 +5,7 @@
  * simple fetchers) see the same text and links as visitors.
  *
  *   node scripts/prerender.mjs                 # prerender every page
- *   node scripts/prerender.mjs --page index.html --page villa1.html
+ *   node scripts/prerender.mjs --page index.html --page bwstays-booking.html
  *   node scripts/prerender.mjs --dry-run       # report what would change, write nothing
  *   node scripts/prerender.mjs --verify        # no browser: check the markers are in place
  *
@@ -40,7 +40,7 @@ const DRY = args.includes('--dry-run');
 const VERIFY = args.includes('--verify');
 const onlyPages = args.flatMap((a, i) => (a === '--page' ? [args[i + 1]] : []));
 
-const SKIP = /^(google[0-9a-f]+|yandex_[0-9a-f]+|404|offline)\.html$/i;
+const SKIP = /^(google[0-9a-f]+|yandex_[0-9a-f]+|404|offline|villa1)\.html$/i;
 
 /**
  * Containers whose content is built by JavaScript and replaced (never appended to) by it.

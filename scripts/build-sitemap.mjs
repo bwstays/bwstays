@@ -22,7 +22,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CHECK = process.argv.includes('--check');
 const ORIGIN = 'https://www.bwstays.com';
-const SKIP = /^(google[0-9a-f]+|yandex_[0-9a-f]+|404|offline)\.html$/i;
+const SKIP = /^(google[0-9a-f]+|yandex_[0-9a-f]+|404|offline|villa1)\.html$/i;
 const SKIP_IMG = /^assets\/img\/(pwa|icons|logo)\b/;
 const MAX_IMAGES = 40;
 

@@ -1,17 +1,14 @@
 {
   "name": "amenities",
-  "description": "Amenities listed on the villa page",
+  "description": "Amenities listed on the booking page",
   "content": {
-    "property": "villa1",
+    "property": "villa_stay",
     "amenities": [
-      "Premium Linens",
-      "Private Pool",
       "EV Charging",
       "Private Parking",
       "Eco-Friendly",
       "Premium Utensils",
       "Bonfire & Music",
-      "Open Kitchen",
       "Kitchen Set",
       "Television",
       "Online Games",
@@ -20,21 +17,18 @@
       "Pet Friendly",
       "Bathroom Amenities",
       "Air Condition",
-      "Iron",
       "Mountain View",
-      "Laundry",
-      "Garden",
-      "Dish Wash"
+      "Garden"
     ],
-    "rooms": 2,
-    "max_guests_per_villa_page": "Up to 8 adults",
+    "beds": 2,
+    "max_guests_listed": "Up to 8 Adults",
     "pets_allowed": true
   },
   "metadata": {
     "generated": "2026-10-15",
     "version": "2.0.0",
     "type": "json",
-    "source": "villa1.html",
+    "source": "bwstays-booking.html",
     "generator": "scripts/generate-mcp.mjs"
   }
 }
