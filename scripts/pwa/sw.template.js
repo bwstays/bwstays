@@ -53,10 +53,14 @@ function pageKey(url) {
   return new Request(u.origin + p);
 }
 
+// The copy must be taken BEFORE the first await: callers hand the response to the page right after calling this
+// (handleNavigation returns it), and once the page starts reading the body a later clone() throws
+// "Response body is already used".
 async function putIfOk(cacheName, request, response) {
   if (!response || !(response.ok || response.type === 'opaque')) return;
+  const copy = response.clone();
   const cache = await caches.open(cacheName);
-  await cache.put(request, response.clone());
+  await cache.put(request, copy);
 }
 
 async function trim(cacheName, max) {
