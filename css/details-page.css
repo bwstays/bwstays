@@ -2,6 +2,7 @@
   --bw-teal: #3f7f7b;       /* the one theme colour for fills: buttons, dropdowns, circles, selected days, pills (white text 4.6:1) */
   --bw-teal-dark: #2f6f6b;  /* hover, active and pressed */
   --bw-teal-soft: #8cc4c0;  /* focus rings and tints */
+  --bw-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  /* the one font stack of the site (no web font is loaded) */
   --bw-teal-text: #64a19d;  /* teal text and links on the page backgrounds; the only place the lighter teal is defined for text */
 }
 
@@ -225,10 +226,6 @@ body {
   letter-spacing: 0.0625em;
 }
 
-@font-face {
-  font-family: 'Nunito';
-  font-display: swap;
-}
 
 #mainNav {
   min-height: 3.5rem;
@@ -336,7 +333,7 @@ nav#mainNav.navbar-shrink,
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--bw-font);
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -357,7 +354,7 @@ nav#mainNav.navbar-shrink,
 }
 
 .masthead h1 {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--bw-font);
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
@@ -440,7 +437,7 @@ nav#mainNav.navbar-shrink,
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1rem 1.5rem;
   height: auto;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--bw-font);
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -8057,4 +8054,27 @@ a.view-attraction:focus-visible {
     padding-left: 0.75rem;
     border-left: 0.25rem solid var(--bw-teal);
   }
+}
+
+/* One font everywhere: form controls, headings, buttons, map popups and the map hint use the site font stack
+   (browsers and Leaflet otherwise bring their own: system-ui, Helvetica Neue, Arial). */
+body,
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+button, input, select, textarea, optgroup,
+.btn,
+.leaflet-container,
+.leaflet-popup-content-wrapper,
+.leaflet-bar a,
+.leaflet-container .leaflet-control-attribution,
+.bw-map-hint {
+  font-family: var(--bw-font);
+}
+
+/* in-page links to a section (e.g. Premium Amenities) stop below the fixed menu */
+#premium-amenities,
+#selectvilla,
+#guestinformation,
+#checkavailability {
+  scroll-margin-top: 90px;
 }
