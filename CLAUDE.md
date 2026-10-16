@@ -301,3 +301,7 @@ GitHub Pages cannot set response headers: they are set in Cloudflare, see `docs/
 ### Rates
 
 `data/rates.js` is the single source of the rates: nightly rate (INR 3,999, GST included), the 4 adults and 1 child included, the extra bed charges (INR 1,000 per extra adult, INR 800 per extra child, per night) and the 8-adult capacity. The request PDF (`js/pdfgen.js`) reads it (no GST line is added; the estimate is the nightly rate plus extra bed charges). The booking page card and its `rate-note`, `js/faq.js`, and the generated MCP, llms and structured data must agree with it: `build-faq.mjs`, `build-schema.mjs` and `generate-mcp.mjs` stop with an error when they do not (`check.mjs` runs them). To change a price: edit `data/rates.js`, the card in `bwstays-booking.html` and the numbers in `js/faq.js`, then run the build.
+
+### Maps and page scrolling
+
+`js/map-guard.js` is loaded right after `vendor/leaflet/leaflet-src.min.js` on every page that has a map. It is a Leaflet init hook, so it covers every map (all-locations, food, EV/fuel, footer) without touching their scripts: the mouse-wheel zoom is OFF until the visitor clicks or drags the map and goes OFF again when the pointer leaves, focus is lost or Escape is pressed; a wheel turn over an inactive map shows a short hint (`.bw-map-hint`). Dragging, +/- buttons, double click, pinch and keyboard zoom are unchanged. Add the script tag after leaflet on any new page with a map.

@@ -8013,3 +8013,27 @@ a.view-attraction:focus-visible {
   margin: 0;
   padding: 0 1rem 1rem;
 }
+
+/* Map scroll guard (js/map-guard.js): hint shown when the wheel is turned over a map that is not active yet */
+.bw-map-hint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.bw-map-hint.show {
+  opacity: 1;
+}
