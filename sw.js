@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = 'f6d5dea385';
+const VERSION = 'faea3e3c23';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -39,7 +39,7 @@ const SHELL = [
   "/css/styles.min.css?v=42d28f62",
   "/data/nearbylocationsdata.min.js?v=07ece56e",
   "/data/rates.min.js?v=633df2f6",
-  "/data/sitedata.min.js?v=3542ec90",
+  "/data/sitedata.min.js?v=6be46ef7",
   "/index.html",
   "/js/booking.min.js?v=da70307a",
   "/js/chat.min.js?v=71b140e2",
@@ -245,6 +245,7 @@ const IMAGES = [
   "/assets/img/pilgrimage/bw-staycation-papanashini-wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-anantha-swami-jain-temple-wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-korome-mosque-wayanad.webp",
+  "/assets/img/pilgrimage/bw-stays-lav-kush-temple-wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-lava-kush-ponkuzhi-wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-pallikunnu-church-wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-papanasini-thirunelli-wayanad.webp",
