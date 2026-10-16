@@ -52,6 +52,7 @@ const testCardData = {
 };
    function renderTestimonial( ) {
 		const testCardsContainer = document.getElementById('reviews-grid');
+		if (!testCardsContainer) return; // pages without the reviews block (search, 404, reciprocal)
 		const cardHTMLArray = [];
 		const testim = testCardData.test;
  		for (let i = 0; i < testim.length; i++) {

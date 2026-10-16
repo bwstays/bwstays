@@ -117,11 +117,12 @@ function parseDay_(value) {
 
 function validate_(data) {
   var name = clean_(data.name, 80);
-  var email = clean_(data.email, 120);
-  var phone = clean_(data.phone, 30);
+  var email = clean_(data.email, 254);
+  var phone = clean_(data.phone, 20);
   if (name.length < 2) return { error: 'name' };
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return { error: 'email' };
-  if (phone.replace(/\D/g, '').length < 7) return { error: 'phone' };
+  var phoneDigits = phone.replace(/\D/g, '').length;
+  if (phoneDigits < 7 || phoneDigits > 15) return { error: 'phone' };
 
   var inDate = parseDay_(data.check_in);
   var outDate = parseDay_(data.check_out);
@@ -146,7 +147,7 @@ function validate_(data) {
     checkIn: fmt(inDate), checkOut: fmt(outDate), nights: nights,
     villas: villas.join(' + '),
     arrival: clean_(data.arrival_time, 60),
-    notes: clean_(data.address_or_requests, 400)
+    notes: clean_(data.address_or_requests, 500)
   };
 }
 
