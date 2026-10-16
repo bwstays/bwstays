@@ -10,12 +10,13 @@
         "page_url": "https://www.bwstays.com/bwstays-booking.html",
         "type": "Entire villa",
         "beds": 2,
-        "max_guests": "Up to 8 adults in the large room",
+        "max_guests": "Up to 4 adults and 4 children (booking limit)",
         "price_listed_on_booking_form_inr_per_night": 3999,
         "extra_bed": {
           "included_in_nightly_rate": "4 adults and 1 child (0-12 years)",
-          "extra_adult_inr_per_night": 1000,
           "extra_child_inr_per_night": 800,
+          "max_adults": 4,
+          "max_children": 4,
           "gst": "Rates include GST (the Terms state fees are inclusive of 18% GST)"
         },
         "amenities": [
