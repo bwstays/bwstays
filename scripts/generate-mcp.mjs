@@ -348,17 +348,6 @@ const properties = [
     amenities: villaAmenities,
     pets_allowed: true,
   },
-  ...(bookingVillas[1]
-    ? [{
-        id: 'villa2',
-        name: bookingVillas[1].name.replace(/\s*-\s*/, ' - '),
-        page_url: null,
-        type: 'Entire villa',
-        price_listed_on_booking_form_inr_per_night: bookingVillas[1].price,
-        pets_allowed: true,
-        note: 'Listed on the booking form only; the site has no dedicated villa2 page.',
-      }]
-    : []),
 ];
 
 const dataQualityNotes = [
@@ -398,7 +387,7 @@ const resources = {
     source: 'index.html',
   },
   properties: {
-    description: 'Villas offered by Black and White Stays with the rate and capacity the site publishes',
+    description: 'The villa stay offered by Black and White Stays, with the rate and capacity the booking page publishes',
     content: {
       count: properties.length,
       properties,
@@ -427,6 +416,7 @@ const resources = {
         'Enter guest information, pick an arrival window and accept the Terms and Cancellation Policy',
         'Submit the reservation',
       ],
+      is_a_request: 'The booking form sends a booking request by email. The dates are held only after the host confirms by email; dates already asked for show as Requested on the calendar and stay selectable.',
       arrival_windows: arrivalSlots,
       nightly_rate_on_booking_form_inr: bookingVillas.map((v) => ({ villa: v.name, inr_per_night: v.price })),
       payment_terms_quoted_from_site: termsParagraphs.slice(0, 5),
@@ -444,6 +434,7 @@ const resources = {
     description: 'Terms of service and privacy statement, quoted from footer.html',
     content: {
       terms_url: `${SITE}/footer.html`,
+      faq_url: `${SITE}/footer.html#faq`,
       terms_of_service: termsParagraphs,
       cancellations_and_refunds: cancellationParagraphs,
       cancellation_url: `${SITE}/footer.html#cancellation`,
@@ -538,9 +529,9 @@ const resources = {
     source: 'data/ev-stations.json, data/fuel-places.json',
   },
   help: {
-    description: 'Frequently asked questions shown on the site',
-    content: { faq: faqData.map((f) => ({ question: f.question, answer: f.answer })) },
-    source: 'js/faq.js',
+    description: 'Frequently asked questions shown on the site (footer page, #faq)',
+    content: { faq: faqData.map((f, i) => ({ question: f.question, answer: f.answer, url: `${SITE}/footer.html#faq-${i + 1}` })) },
+    source: 'js/faq.js (shown on footer.html#faq)',
   },
 };
 
@@ -589,7 +580,7 @@ const tools = {
   },
   'search/properties': {
     name: 'search_properties',
-    description: 'List the villas the site publishes',
+    description: 'The villa stay the booking page publishes',
     responses: [
       { input: { query: 'all' }, output: { results: properties } },
       ...properties.map((p) => ({ input: { id: p.id }, output: { results: [p] } })),

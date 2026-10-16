@@ -25,8 +25,8 @@ const items = [];
 
 // ---- pages
 const pages = [
-  ['Book your stay', 'Villa stay, amenities, reservation and availability', `${SITE}/bwstays-booking.html`],
-  ['Terms, disclaimer and privacy', 'Policies', `${SITE}/footer.html`],
+  ['Villa Stay - book your stay', 'Villa photos, video tour, amenities, reservation and availability', `${SITE}/bwstays-booking.html`],
+  ['Rules, terms, cancellations, privacy and FAQ', 'Policies and frequently asked questions', `${SITE}/footer.html`],
   ['All places to visit in Wayanad', 'Map of attractions', `${SITE}/all-locations-wayanad.html`],
   ['Food and dining map', 'Restaurants, cafes and bakeries', `${SITE}/all-fooding-wayanad.html`],
 ];
@@ -65,7 +65,7 @@ for (const p of food) {
 
 // ---- FAQ
 for (const f of readJson('resources/help.json').content.faq) {
-  items.push({ t: 'faq', n: trim(f.question), s: trim(f.answer), u: `${SITE}/bwstays-booking.html` });
+  items.push({ t: 'faq', n: trim(f.question), s: trim(f.answer), u: f.url ?? `${SITE}/footer.html#faq` });
 }
 
 const out = {

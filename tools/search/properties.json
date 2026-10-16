@@ -1,6 +1,6 @@
 {
   "name": "search_properties",
-  "description": "List the villas the site publishes",
+  "description": "The villa stay the booking page publishes",
   "responses": [
     {
       "input": {

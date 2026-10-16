@@ -3,6 +3,7 @@
   "description": "Terms of service and privacy statement, quoted from footer.html",
   "content": {
     "terms_url": "https://www.bwstays.com/footer.html",
+    "faq_url": "https://www.bwstays.com/footer.html#faq",
     "terms_of_service": [
       "To make a booking with bw stays & simply fill in the online reservation form or download the reservation form and call or mail to us. Spaces will be confirmed in order of receipt and upon payment of deposit.",
       "Once your reservation has been confirmed it is necessary to make full payment at least 90 days prior to the tour commencement date. Payment for the tour deposit may be made by Visa, Mastercard, cash deposit, internet banking or International Money Transfer.",

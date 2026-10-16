@@ -70,7 +70,7 @@
       "type": "tool",
       "method": "GET",
       "path": "https://www.bwstays.com/tools/search/properties.json",
-      "description": "List the villas the site publishes"
+      "description": "The villa stay the booking page publishes"
     },
     {
       "name": "search_food",
@@ -126,7 +126,7 @@
       "type": "resource",
       "method": "GET",
       "path": "https://www.bwstays.com/resources/properties.json",
-      "description": "Villas offered by Black and White Stays with the rate and capacity the site publishes"
+      "description": "The villa stay offered by Black and White Stays, with the rate and capacity the booking page publishes"
     },
     {
       "name": "amenities",
@@ -189,7 +189,7 @@
       "type": "resource",
       "method": "GET",
       "path": "https://www.bwstays.com/resources/help.json",
-      "description": "Frequently asked questions shown on the site"
+      "description": "Frequently asked questions shown on the site (footer page, #faq)"
     }
   ],
   "related": [

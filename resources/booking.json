@@ -9,6 +9,7 @@
       "Enter guest information, pick an arrival window and accept the Terms and Cancellation Policy",
       "Submit the reservation"
     ],
+    "is_a_request": "The booking form sends a booking request by email. The dates are held only after the host confirms by email; dates already asked for show as Requested on the calendar and stay selectable.",
     "arrival_windows": [
       "12:00 PM - 2:00 PM",
       "2:00 PM - 4:00 PM",

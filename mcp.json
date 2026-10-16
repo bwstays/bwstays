@@ -16,7 +16,7 @@
     },
     {
       "name": "properties",
-      "description": "Villas offered by Black and White Stays with the rate and capacity the site publishes",
+      "description": "The villa stay offered by Black and White Stays, with the rate and capacity the booking page publishes",
       "path": "/resources/properties.json"
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "name": "help",
-      "description": "Frequently asked questions shown on the site",
+      "description": "Frequently asked questions shown on the site (footer page, #faq)",
       "path": "/resources/help.json"
     }
   ],
@@ -73,7 +73,7 @@
     },
     {
       "name": "search_properties",
-      "description": "List the villas the site publishes",
+      "description": "The villa stay the booking page publishes",
       "path": "/tools/search/properties.json"
     },
     {
