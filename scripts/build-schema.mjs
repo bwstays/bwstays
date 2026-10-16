@@ -59,7 +59,7 @@ function put(file, begin, end, block) {
   const beds = Number((html.match(/(\d+)\s*Beds?\b/i) || [])[1]);
   const baths = Number((html.match(/(\d+)\s*Baths?\b/i) || [])[1]);
   const cardAdults = Number((html.match(/fa-user-friends[\s\S]{0,120}?Up to (\d+)\s*Adults?/i) || [])[1]); // adults included in the rate, shown on the card
-  const adults = rates.maxAdults; // the large room sleeps up to this many with an extra bed
+  const adults = rates.maxAdults; // booking limit
   const pets = /Pet Friendly/i.test(html); // amenity chip
   const list = html.replace(/<!--[\s\S]*?-->/g, '').match(/<ul class="bk-amenities">([\s\S]*?)<\/ul>/);
   const amenities = list ? [...list[1].matchAll(/<span>([^<]+)<\/span>/g)].map((m) => decode(m[1])) : [];
@@ -68,14 +68,14 @@ function put(file, begin, end, block) {
     throw new Error(`build-schema: could not read the villa facts from the booking page (rate ${rate}, beds ${beds}, adults ${adults}, amenities ${amenities.length}, images ${images.length})`);
   }
   if (rate !== rates.perNight) throw new Error(`build-schema: the booking page shows INR ${rate} but data/rates.js says INR ${rates.perNight}`);
-  if (cardAdults !== rates.includedAdults) throw new Error(`build-schema: the booking page card says up to ${cardAdults} adults but data/rates.js includes ${rates.includedAdults}`);
+  if (cardAdults !== rates.maxAdults) throw new Error(`build-schema: the booking page card says up to ${cardAdults} adults but data/rates.js allows ${rates.maxAdults}`);
   const rental = {
     '@context': 'https://schema.org',
     '@type': 'VacationRental',
     '@id': `${SITE}/bwstays-booking.html#villa-stay`,
     name: 'Black and White Stays - Villa Stay',
     identifier: 'bwstays-villa-stay',
-    description: `A villa stay in Kalpetta, Wayanad for staycations and workations. The large room sleeps up to ${adults} adults. Rate listed on the booking page: INR ${rate} per night, GST included. Extra bed per night: INR ${rates.extraAdultPerNight} per extra adult and INR ${rates.extraChildPerNight} per extra child, beyond ${rates.includedAdults} adults and ${rates.includedChildren} child.`,
+    description: `A villa stay in Kalpetta, Wayanad for staycations and workations. The villa takes up to ${adults} adults and ${rates.maxChildren} children. Rate listed on the booking page: INR ${rate} per night, GST included. Extra child per night: INR ${rates.extraChildPerNight} for each child beyond ${rates.includedChildren}.`,
     url: `${SITE}/bwstays-booking.html`,
     image: images,
     latitude: business.geo.latitude,
@@ -88,7 +88,7 @@ function put(file, begin, end, block) {
       '@type': 'Accommodation',
       additionalType: 'EntirePlace',
       name: 'Villa Stay',
-      occupancy: { '@type': 'QuantitativeValue', value: adults, unitText: 'adults' },
+      occupancy: { '@type': 'QuantitativeValue', value: adults + rates.maxChildren, unitText: 'guests' },
       bed: { '@type': 'BedDetails', numberOfBeds: beds },
       ...(baths ? { numberOfBathroomsTotal: baths } : {}),
       petsAllowed: pets,

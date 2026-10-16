@@ -6,8 +6,8 @@ var bwRates = {
   perNight: 3999,          // the villa, per night
   includedAdults: 4,       // included in the nightly rate
   includedChildren: 1,     // children 0-12 included in the nightly rate
-  extraAdultPerNight: 1000, // extra bed: each adult beyond the included guests, per night
-  extraChildPerNight: 800,  // extra bed: each child beyond the included guests, per night
-  maxAdults: 8,            // the large room sleeps up to 8 adults
+  extraChildPerNight: 800,  // extra bed: each child beyond the included child, per night
+  maxAdults: 4,            // booking limit: adults
+  maxChildren: 4,          // booking limit: children (0-12 years)
   gstIncluded: true
 };

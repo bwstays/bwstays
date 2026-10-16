@@ -125,7 +125,7 @@
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/pwa/apple-touch-icon.png" />
- <link href="https://www.bwstays.com/css/details-page.min.css?v=30372491" rel="stylesheet" type="text/css" media="all"/>
+ <link href="https://www.bwstays.com/css/details-page.min.css?v=a6e9648d" rel="stylesheet" type="text/css" media="all"/>
       <link href="https://www.bwstays.com/css/new-page.min.css?v=f2e8abdc" rel="stylesheet" type="text/css" media="all"/>
  <link rel="stylesheet" href="https://www.bwstays.com/vendor/leaflet/leaflet.min.css?v=1.9.4" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://www.bwstays.com/vendor/leaflet/leaflet.min.css?v=1.9.4"></noscript>
 
@@ -1650,14 +1650,14 @@
                             <div class="form-group mb-3">
                                 <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
                                 <input  type="text"
-                                    class="form-control bg-light border-0" id="inputName"  autocomplete="name" required placeholder="Your Name">
+                                    class="form-control bg-light border-0" id="inputName"  autocomplete="name" required placeholder="Your Name" maxlength="80">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mb-3">
                                 <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
                                 <input   type="email"  autocomplete="email"
-                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="your email">
+                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="your email" maxlength="254">
                             </div>
                         </div>
                     </div>
@@ -1667,7 +1667,7 @@
                         <label for="inputAddress2" class="text-white-50 small text-uppercase" data-i18n="nav.contact" >Contact</label>
                         <input  type="text"
                             class="form-control bg-light border-0" id="inputAddress2"  autocomplete="street-address"
-                              required placeholder="+-- --- --- ----">
+                              required placeholder="+-- --- --- ----" maxlength="20" inputmode="tel">
                     </div>
 
                     <div class="row">
@@ -1677,7 +1677,7 @@
                     <div class="form-group mb-3">
                         <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
                         <textarea autocomplete="off"    class="form-control bg-light border-0"
-                            id="inputMessage" rows="3" required placeholder="Your message"></textarea>
+                            id="inputMessage" rows="3" required placeholder="Your message" maxlength="1000"></textarea>
                     </div>
 
                                        <div class="form-group mb-3">
@@ -1686,7 +1686,7 @@
                             <div class="captcha-question p-2  mr-3">
                                 <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
                             </div>
-                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" required>
+                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" required maxlength="2" inputmode="numeric" autocomplete="off">
                             <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh">
                                 <i class="fas fa-sync-alt"></i>
                             </button>
@@ -1975,11 +1975,11 @@
  <script       type="text/javascript"       src="https://www.bwstays.com/js/dynamic-evgas.min.js?v=1a3b82d4"     ></script>
  <script type="text/javascript" src="https://www.bwstays.com/js/widgets.min.js?v=913ebcd9"></script>
 
-  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.min.js?v=1433e229" ></script>
+  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.min.js?v=71b140e2" ></script>
   <script  type="text/javascript"   src="https://www.bwstays.com/js/language.min.js?v=d8bf0fe7" ></script>
 
 
-   <script type="text/javascript"  src="https://www.bwstays.com/js/validations.min.js?v=ef97f6ba"></script>
+   <script type="text/javascript"  src="https://www.bwstays.com/js/validations.min.js?v=c89575c7"></script>
    <script type="text/javascript" src="https://www.bwstays.com/js/pwa.min.js?v=9f12090c" defer data-cfasync="false"></script>
 </body>
 

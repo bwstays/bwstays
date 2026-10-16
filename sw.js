@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '4ead69ca6f';
+const VERSION = 'aca2b806ae';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -31,18 +31,18 @@ const SHELL = [
   "/assets/img/pwa/icon-96.png",
   "/assets/img/pwa/icon-maskable-512.png",
   "/bwstays-booking.html",
-  "/css/details-page.min.css?v=30372491",
+  "/css/details-page.min.css?v=a6e9648d",
   "/css/fontawesome.min.css?v=a611ff0d",
   "/css/maps.min.css?v=cef28474",
   "/css/new-page.min.css?v=f2e8abdc",
   "/css/page-404.min.css?v=1898d2c3",
   "/css/styles.min.css?v=42d28f62",
   "/data/nearbylocationsdata.min.js?v=07ece56e",
-  "/data/rates.min.js?v=2e7a7755",
+  "/data/rates.min.js?v=633df2f6",
   "/data/sitedata.min.js?v=3542ec90",
   "/index.html",
-  "/js/booking.min.js?v=f36303f0",
-  "/js/chat.min.js?v=1433e229",
+  "/js/booking.min.js?v=8936de99",
+  "/js/chat.min.js?v=71b140e2",
   "/js/decode-email.js",
   "/js/dynamic-evgas.min.js?v=1a3b82d4",
   "/js/dynamic-foodmap.min.js?v=e3ef5086",
@@ -51,7 +51,7 @@ const SHELL = [
   "/js/language.min.js?v=d8bf0fe7",
   "/js/legal-page.min.js?v=89020b58",
   "/js/map-guard.min.js?v=42197ca9",
-  "/js/pdfgen.min.js?v=a45b12e0",
+  "/js/pdfgen.min.js?v=56444957",
   "/js/promo-banner.min.js?v=56cb74aa",
   "/js/pwa.min.js?v=9f12090c",
   "/js/scripts.min.js?v=7537fada",
@@ -59,7 +59,7 @@ const SHELL = [
   "/js/specrule.min.js?v=1f8a513f",
   "/js/testimonial.min.js?v=c59378fa",
   "/js/total-booking-reports.min.js?v=5527f1e2",
-  "/js/validations.min.js?v=ef97f6ba",
+  "/js/validations.min.js?v=c89575c7",
   "/js/way_food_loc.min.js?v=10afad43",
   "/js/wayanad_kalpetta_trait-one.min.js?v=1bfb78be",
   "/js/widgets.min.js?v=913ebcd9",

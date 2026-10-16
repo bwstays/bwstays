@@ -114,8 +114,8 @@ const cardFacts = bookingHtml.match(/(\d+)\s*Beds?[\s\S]{0,300}?Up to (\d+)\s*Ad
 must(cardFacts, 'bwstays-booking.html villa card facts not found');
 const villaBeds = Number(cardFacts[1]);
 const cardAdults = Number(cardFacts[2]); // adults included in the rate (shown on the card)
-must(cardAdults === bwRates.includedAdults, `bwstays-booking.html card says up to ${cardAdults} adults but data/rates.js includes ${bwRates.includedAdults}`);
-const villaMaxAdults = bwRates.maxAdults; // the large room sleeps up to this many with an extra bed
+must(cardAdults === bwRates.maxAdults, `bwstays-booking.html card says up to ${cardAdults} adults but data/rates.js allows ${bwRates.maxAdults}`);
+const villaMaxAdults = bwRates.maxAdults; // booking limit
 
 const bookingVillas = [...bookingHtml.matchAll(
   /<h5[^>]*class="mb-0"[^>]*>\s*(Villa Stay[^<]*)<\/h5>\s*<span class="price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/gi,
@@ -124,8 +124,9 @@ must(bookingVillas.length >= 1, 'bwstays-booking.html villa cards not found');
 must(bookingVillas[0].price === bwRates.perNight, `bwstays-booking.html shows INR ${bookingVillas[0].price} but data/rates.js says INR ${bwRates.perNight}`);
 const extraBed = {
   included_in_nightly_rate: `${bwRates.includedAdults} adults and ${bwRates.includedChildren} child (0-12 years)`,
-  extra_adult_inr_per_night: bwRates.extraAdultPerNight,
   extra_child_inr_per_night: bwRates.extraChildPerNight,
+  max_adults: bwRates.maxAdults,
+  max_children: bwRates.maxChildren,
   gst: 'Rates include GST (the Terms state fees are inclusive of 18% GST)',
 };
 const arrivalSlots = [...bookingHtml.matchAll(/<option[^>]*>\s*(\d{1,2}:\d{2} [AP]M - \d{1,2}:\d{2} [AP]M|After \d{1,2}:\d{2} [AP]M)\s*</g)]
@@ -350,7 +351,7 @@ const properties = [
     page_url: `${SITE}/bwstays-booking.html`,
     type: 'Entire villa',
     beds: villaBeds,
-    max_guests: `Up to ${villaMaxAdults} adults in the large room`,
+    max_guests: `Up to ${villaMaxAdults} adults and ${bwRates.maxChildren} children (booking limit)`,
     price_listed_on_booking_form_inr_per_night: bookingVillas[0]?.price ?? null,
     extra_bed: extraBed,
     amenities: villaAmenities,

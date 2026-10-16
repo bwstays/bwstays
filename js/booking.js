@@ -142,6 +142,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 const adultsInput1 = document.querySelectorAll('.counter-inputvilla1')[0].value;
                 const childrenInput1 = document.querySelectorAll('.counter-inputvilla')[0].value;
+                const adultsCount = parseInt(adultsInput1, 10);
+                const childrenCount = parseInt(childrenInput1, 10);
+                if (!(adultsCount >= 1 && adultsCount <= 4) || !(childrenCount >= 0 && childrenCount <= 4)) {
+                    showErrorMessage('A booking takes 1 to 4 adults and up to 4 children.', 'error');
+                    return;
+                }
+                const phoneDigits = phone.replace(/\D/g, '').length;
+                if (phoneDigits < 7 || phoneDigits > 15) {
+                    showErrorMessage('Please enter a valid phone number (7 to 15 digits).', 'error');
+                    return;
+                }
                 let myArray = [];
                 let dateArray = [];
                 let villaArray1 = [];
@@ -261,7 +272,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const input = container.querySelector('input[type="text"]');
                 minusBtn.addEventListener('click', function () {
                     let value = parseInt(input.value);
-                    if (value > 0) {
+                    const min = parseInt(input.dataset.min, 10);
+                    if (value > (isNaN(min) ? 0 : min)) {
                         input.value = value - 1;
                     }
                 });

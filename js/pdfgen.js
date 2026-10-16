@@ -15,8 +15,8 @@
     };
     // Estimate only: rates are as listed on the booking page; extra guests as per the site's occupancy rule.
     // data/rates.js (loaded before this file) is the single source of the rates; the fallback below only guards a failed load.
-    var R0 = global.bwRates || { perNight: 3999, includedAdults: 4, includedChildren: 1, extraAdultPerNight: 1000, extraChildPerNight: 800 };
-    var RATE = { perNight: R0.perNight, includedAdults: R0.includedAdults, includedChildren: R0.includedChildren, includedTotal: R0.includedAdults + R0.includedChildren, extraAdult: R0.extraAdultPerNight, extraChild: R0.extraChildPerNight };
+    var R0 = global.bwRates || { perNight: 3999, includedAdults: 4, includedChildren: 1, extraChildPerNight: 800 };
+    var RATE = { perNight: R0.perNight, includedAdults: R0.includedAdults, includedChildren: R0.includedChildren, includedTotal: R0.includedAdults + R0.includedChildren, extraChild: R0.extraChildPerNight };
     var TEAL = [63, 127, 123];
     var INK = [33, 37, 41];
     var MUTED = [108, 117, 125];
@@ -46,13 +46,9 @@
     function villaRow(label, spec, nights) {
         var adults = Number(spec[1]) || 0;
         var children = Number(spec[2]) || 0;
-        var extraAdults = 0;
-        var extraChildren = 0;
-        if (adults + children > RATE.includedTotal) {
-            extraAdults = Math.max(0, adults - RATE.includedAdults);
-            extraChildren = Math.max(0, children - RATE.includedChildren);
-        }
-        var extraPerNight = extraAdults * RATE.extraAdult + extraChildren * RATE.extraChild;
+        // an extra bed is charged for each child beyond the included child (the booking form allows up to 4 adults and 4 children)
+        var extraChildren = Math.max(0, children - RATE.includedChildren);
+        var extraPerNight = extraChildren * RATE.extraChild;
         var perNight = RATE.perNight + extraPerNight;
         return {
             villa: label,
@@ -224,7 +220,7 @@
         pdf.setFont('helvetica', 'normal');
         pdf.setFontSize(8);
         pdf.setTextColor.apply(pdf, MUTED);
-        text('Extra bed per night: ' + inr(RATE.extraAdult) + ' per extra adult, ' + inr(RATE.extraChild) + ' per extra child (beyond ' + RATE.includedAdults + ' adults and ' + RATE.includedChildren + ' child).', R, y - 1, { align: 'right' });
+        text('Extra child per night: ' + inr(RATE.extraChild) + ' for each child beyond ' + RATE.includedChildren + ' (up to 4 children in all).', R, y - 1, { align: 'right' });
         y += 6;
         pdf.setDrawColor.apply(pdf, TEAL);
         pdf.setLineWidth(0.4);
