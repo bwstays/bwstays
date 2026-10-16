@@ -280,3 +280,7 @@ node scripts/prerender.mjs --verify   # no browser: check the blocks are present
 ### Theme colour
 
 One teal for every filled control (buttons, Know More, dropdowns, floating circles, selected calendar days, pills): `var(--bw-teal)` = `#3f7f7b` (white text 4.6:1), hover and pressed `var(--bw-teal-dark)` = `#2f6f6b`, focus rings `var(--bw-teal-soft)`. They are defined in `css/styles.css` and `css/details-page.css`. Use the variables, not new hex values. The lighter `#64a19d` stays only for teal text, icons and thin lines on dark backgrounds, where it reads better.
+
+### FAQ
+
+The Frequently Asked Questions live in the card `#section-faq` of `footer.html` (the Rules & Regulations page, next to the terms and cancellation policy), as collapsible questions with Expand all / Collapse all and FAQPage structured data. They are generated from `js/faq.js` (the single source, also read by the MCP generator): edit `js/faq.js`, then run `node scripts/build-faq.mjs` (`--check` is part of `check.mjs`). The booking page only links to `footer.html#faq`.
