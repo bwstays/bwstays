@@ -6,7 +6,7 @@
     "tagline": "STAY CONNECTED, STAY CLOSE, STAY RELAXED",
     "summary": "Home Away for Family and professional for Vacation and Workations",
     "website": "https://www.bwstays.com",
-    "concept": "Colive, Cowork & Coplay - villas for vacations and workations in Kalpetta, Wayanad",
+    "concept": "Colive, Cowork & Coplay - a villa stay for vacations and workations in Kalpetta, Wayanad",
     "location": {
       "locality": "Kalpetta",
       "region": "Kerala",
@@ -35,7 +35,6 @@
       "manifest": "https://www.bwstays.com/manifest.json"
     },
     "data_quality_notes": [
-      "bwstays-booking.html lists \"2 guests\" on the villa card and \"Up to 8 Adults\" in the amenities. Both are reported; confirm the capacity with the host.",
       "No verified phone number is published: the site masks it and the WhatsApp link uses a placeholder-pattern number.",
       "Payment and cancellation terms on the site are written for tours (\"tour commencement date\") and are quoted verbatim, not reinterpreted."
     ]
