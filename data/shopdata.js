@@ -156,7 +156,7 @@ const shopdata = {
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-homestay-wayanad.webp",
         "https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-waterfall-wayanad.webp",
-        "https://www.bwstays.com/assets/img/falls/bw_meenmufalls_wayanad2.avif",
+        "https://www.bwstays.com/assets/img/falls/bw_meenmufalls_wayanad2.webp",
         "https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-falls-wayanad.webp",
       ],
       holidays: "Sun",

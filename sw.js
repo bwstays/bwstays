@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = 'faea3e3c23';
+const VERSION = '8ac12056c8';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -39,7 +39,7 @@ const SHELL = [
   "/css/styles.min.css?v=42d28f62",
   "/data/nearbylocationsdata.min.js?v=07ece56e",
   "/data/rates.min.js?v=633df2f6",
-  "/data/sitedata.min.js?v=6be46ef7",
+  "/data/sitedata.min.js?v=c6a164c2",
   "/index.html",
   "/js/booking.min.js?v=da70307a",
   "/js/chat.min.js?v=71b140e2",
@@ -201,6 +201,7 @@ const IMAGES = [
   "/assets/img/falls/bw-stays-meenmutty-waterfall-wayanad.webp",
   "/assets/img/falls/bw-stays-sentinal-waterfall-wayanad.webp",
   "/assets/img/falls/bw-stays-thusharagiri-falls-service-apartment.webp",
+  "/assets/img/falls/bw_meenmufalls_wayanad2.webp",
   "/assets/img/farm/bw-gurukula-botanical-sanctuary-wayanad.webp",
   "/assets/img/farm/bw-stays-boys-town-farm-wayanad.webp",
   "/assets/img/farm/bw-stays-pepper-farm-wayanad.webp",
@@ -252,6 +253,7 @@ const IMAGES = [
   "/assets/img/pilgrimage/bw-stays-papanasini-wayanad-tourist.webp",
   "/assets/img/pilgrimage/bw-stays-resort-valliyurkavu-wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-thirunelli-temple-wayanad.webp",
+  "/assets/img/pilgrimage/bw-stays-thirunelli-temple_wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-trikaipattta-temple-wayanad.webp",
   "/assets/img/pilgrimage/bw-stays-trishilerry-temple-wayanad.webp",
@@ -290,14 +292,17 @@ const IMAGES = [
   "/assets/img/romantic/bw-stays-attamala-resort-wayanad.avif",
   "/assets/img/romantic/bw-stays-banasura-sagar-dam-wayanad.webp",
   "/assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp",
+  "/assets/img/romantic/bw-stays-ghats-wayanad.webp",
   "/assets/img/romantic/bw-stays-karlad-lake-wayanad-tourism.webp",
   "/assets/img/romantic/bw-stays-mullanpara-viewpoint-wayanad.webp",
   "/assets/img/romantic/bw-stays-neelimala-view-point-wayanad.webp",
   "/assets/img/romantic/bw-stays-pookode-lake-wayanad.webp",
   "/assets/img/romantic/bw-stays-sunrise-valley-wayanad.webp",
+  "/assets/img/romantic/bw-vacation-ghats-viewpoint-kalpetta.webp",
   "/assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp",
   "/assets/img/romantic/bw-villa-holiday-munnewaram-hill.webp",
   "/assets/img/romantic/bw-villa-home-banasura-hills.webp",
+  "/assets/img/romantic/bw-villa-rooms-ghats-wayanad.webp",
   "/assets/img/romantic/bw-weekend-destination-glassbridge-wayanad.webp",
   "/assets/img/romantic/bw-weekend-kurumbalakotta-wayanad.webp",
   "/assets/img/romantic/bw-workation-bamboo-park-wayanad.webp",
@@ -320,6 +325,7 @@ const IMAGES = [
   "/assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.webp",
   "/assets/img/tribal/bw-workation-uravu-thrikkaipetta-bamboo-wayanad-1.webp",
   "/assets/img/trucking/bw-destination-chembra-wayanad.webp",
+  "/assets/img/trucking/bw-homestay-chembra-wayanad.webp",
   "/assets/img/trucking/bw-homestay-kerala-wayanad-edakkal-caves.webp",
   "/assets/img/trucking/bw-kuruva-island-wayanad-2.webp",
   "/assets/img/trucking/bw-kuruva-island-wayanad.webp",
