@@ -7425,7 +7425,7 @@ body .reviews-title > .border-bottom.border-primary,
 /* booking page: centred "Get in touch" accent line, and the Guest Experiences line matches
    the other sub-heading accents (short, 2px, left aligned) */
 #testimonial #contact-divider-4 {
-  width: 64px !important;
+  width: 22% !important;
   margin: 0.5rem auto 1.25rem !important;
   border-bottom-width: 2px !important;
   align-self: center;
@@ -8279,10 +8279,19 @@ body select.currency-select option {
 /* index: the "About us" accent line sits under its centred heading; the "Guest Experiences" line is as thick as the others */
 #signup #contact-divider-6,
 #contact-divider-6 {
+  width: 22% !important;
   margin: 0.5rem auto 1.25rem !important;
   align-self: center;
 }
 #contact-divider-7 {
   width: 56px !important;
+  border-bottom-width: 2px !important;
+}
+
+/* "Get in touch with us" and "Locate us" accent lines: the same 22% wide, 2px line on every page */
+[data-i18n="foot.gt"] + :is(#contact-divider,#contact-divider-1,#contact-divider-2,#contact-divider-3,#contact-divider-4,#contact-divider-5,#contact-divider-6,#contact-divider-7,#contact-divider-8,#contact-divider-9),
+[data-i18n="foot.lu"] + :is(#contact-divider,#contact-divider-1,#contact-divider-2,#contact-divider-3,#contact-divider-4,#contact-divider-5,#contact-divider-6,#contact-divider-7,#contact-divider-8,#contact-divider-9) {
+  width: 22% !important;
+  margin: 0.5rem auto 1.25rem !important;
   border-bottom-width: 2px !important;
 }
