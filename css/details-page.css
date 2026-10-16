@@ -8310,3 +8310,16 @@ body #language-selector option {
 body #language-selector option::checkmark {
   display: none;
 }
+
+/* the B/W monogram in the nav bar is a little larger so both letters stay readable */
+.navbar-brand img.logo-loc {
+  width: 34px !important;
+  height: 34px !important;
+  max-width: 34px;
+}
+@media (max-width: 575.98px) {
+  .navbar-brand img.logo-loc {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
