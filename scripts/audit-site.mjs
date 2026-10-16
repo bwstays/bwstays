@@ -64,9 +64,16 @@ for (const f of pages) {
   if (h1 > 1) add('warn', f, `${h1} <h1> headings`);
 
   // JSON-LD
+  const jsonLdBlocks = [];
   for (const m of h.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
-    try { JSON.parse(m[1]); } catch { add('error', f, 'invalid JSON-LD block'); }
+    try { jsonLdBlocks.push(JSON.parse(m[1])); } catch { add('error', f, 'invalid JSON-LD block'); }
   }
+  // lodging / product markup belongs only on the booking page, once; a copied place block there is wrong data
+  const rentals = jsonLdBlocks.filter((b) => [].concat(b['@type'] || []).some((t) => /^(VacationRental|Product)$/.test(t)));
+  if (f === 'bwstays-booking.html') {
+    if (rentals.length !== 1) add('error', f, `expected exactly one VacationRental block, found ${rentals.length}`);
+    else if (!/Villa Stay/.test(rentals[0].name || '')) add('error', f, `the VacationRental is named "${rentals[0].name}"`);
+  } else if (rentals.length && f !== 'villa1.html') add('error', f, 'VacationRental/Product markup outside the booking page');
   const faqBlocks = [...h.matchAll(/"@type":\s*"FAQPage"/g)].length;
   if (faqBlocks > 1) add('error', f, `${faqBlocks} FAQPage blocks (Google accepts one)`);
 
