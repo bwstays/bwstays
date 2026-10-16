@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://www.bwstays.com';
 const STRICT = process.argv.includes('--strict');
-const SKIP = /^(google[0-9a-f]+|yandex_[0-9a-f]+)\.html$/i;
+const SKIP = /^(google[0-9a-f]+|yandex_[0-9a-f]+|villa1)\.html$/i;
 
 const pages = fs.readdirSync(ROOT).filter((f) => f.endsWith('.html') && !SKIP.test(f));
 const rep = fs.existsSync(path.join(ROOT, 'reports')) ? fs.readdirSync(path.join(ROOT, 'reports')).filter((f) => f.endsWith('.html')).map((f) => `reports/${f}`) : [];

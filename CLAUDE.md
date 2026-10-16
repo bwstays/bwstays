@@ -181,7 +181,7 @@ node scripts/generate-mcp.mjs --check   # exit 1 if committed files are stale (u
 
 Sources (single source of truth): `data/sitedata.js`, `data/shopdata.js`,
 `data/nearbylocationsdata.js`, `data/bookingdata.js`, `data/closeddata.js`,
-`js/faq.js`, `index.html`, `bwstays-booking.html` (villa card, amenities, rate), `footer.html`. `villa1.html` is not linked from any page, sitemap, MCP or llms file and is `noindex`.
+`js/faq.js`, `index.html`, `bwstays-booking.html` (villa card, amenities, rate), `footer.html`. `villa1.html` is only a redirect to the booking page (old links); it is not linked from any page, sitemap, MCP or llms file.
 
 Rules the generator follows:
 - Only facts present on the site are emitted. Missing facts are reported as not published; nothing is invented.
