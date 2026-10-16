@@ -44,7 +44,7 @@ The service worker and the manifest must not stay stale, and visitors must see p
 
 ## 3. Other settings worth checking
 
-- Security > Bots: AI crawlers (GPTBot, ClaudeBot, CCBot, Amazonbot, Bytespider) get 403 today. Decide whether the site wants to be readable by them; `llms.txt` and the MCP files assume yes.
+- AI crawlers: see the next section.
 - Security > WAF > Managed rules: on. Security > Settings > Security Level: Medium.
 - Speed > Optimization: Early Hints on, Brotli on. Auto Minify is not needed (the build already minifies).
 - Email Address Obfuscation: leave on (the site also hides its address in the page).
@@ -55,3 +55,27 @@ The service worker and the manifest must not stay stale, and visitors must see p
   `block-all-mixed-content`; `object-src 'none'`; `base-uri 'self'`; `form-action 'self' https://formsubmit.co`.
 - Referrer policy meta on every page; `rel="noopener"` on links that open a new tab; no plain `http://` resources.
 - `/.well-known/security.txt` tells researchers where to report a problem.
+
+## 4. AI crawlers: allowed once a week
+
+GPTBot, ClaudeBot, CCBot, Amazonbot and Bytespider were getting `403` from Cloudflare's "Block AI bots" setting, so `llms.txt` and the MCP files
+could not be read. `robots.txt` now allows the main AI crawlers. A crawler cannot be told "come once a week" in robots.txt (`Crawl-delay` is a delay
+between requests, and most AI crawlers ignore it), so the weekly rhythm is enforced in Cloudflare with a time window.
+
+1. **Security > Bots**: set **Block AI bots** to **Do not block (allow crawlers)**. If your dashboard shows **AI Crawl Control**, set the crawlers to **Allow**.
+2. **Security > WAF > Custom rules > Create rule**, name `AI crawlers: weekly window`, **Edit expression** and paste:
+
+```
+(http.user_agent contains "GPTBot" or http.user_agent contains "OAI-SearchBot" or http.user_agent contains "ClaudeBot" or http.user_agent contains "Claude-SearchBot" or http.user_agent contains "anthropic-ai" or http.user_agent contains "PerplexityBot" or http.user_agent contains "CCBot" or http.user_agent contains "Amazonbot" or http.user_agent contains "Bytespider") and not (http.request.timestamp.sec % 604800 < 86400)
+```
+
+   Action: **Block**. Deploy.
+
+   What it does: these crawlers get through for 24 hours each week (every **Thursday, 00:00 to 24:00 UTC**, which is Thursday 05:30 to Friday 05:30 IST)
+   and get `403` the rest of the week. Search engines (Googlebot, Bingbot) and visitors are not affected. To move the day, change `< 86400` to
+   `>= 86400 and < 172800` (Friday), `>= 172800 and < 259200` (Saturday), and so on (the epoch started on a Thursday).
+3. If Cloudflare rejects the `%` operator on your plan, tell me; the fallback is a rate-limiting rule for the same user agents.
+4. Test: `curl -s -o /dev/null -w "%{http_code}" -A "GPTBot" https://www.bwstays.com/llms.txt` gives `200` inside the window and `403` outside it
+   (`node scripts/check-headers.mjs` prints this probe).
+5. Bytespider (TikTok) is often aggressive and ignores robots.txt; it is only in the block list above on purpose, so it is also blocked outside its window.
+
