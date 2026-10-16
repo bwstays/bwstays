@@ -8192,3 +8192,21 @@ select option:checked {
     display: none;
   }
 }
+
+/* Field hints: small grey help text under a form field (format, example, character limit) */
+.bw-hint {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: var(--bw-track);
+  color: #6c757d;
+}
+.bw-hint .bw-count {
+  font-variant-numeric: tabular-nums;
+}
+#contact-form .bw-hint,
+.masthead .bw-hint,
+.bw-search-box .bw-hint {
+  color: rgba(255, 255, 255, 0.62);
+}
