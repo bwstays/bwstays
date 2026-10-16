@@ -105,14 +105,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const bookingForm = document.querySelector('.guest-information form');
             bookingForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                const fullName = document.querySelector('input[placeholder="Enter your full name"]').value;
-                const email = document.querySelector('input[placeholder="Enter your email"]').value;
-                const phone = document.querySelector('input[placeholder="Enter your phone number"]').value;
+                const fullName = document.getElementById('resName').value;
+                const email = document.getElementById('resEmail').value;
+                const phone = document.getElementById('resPhone').value;
                 const checkInDate = document.getElementById('checkInDate').value;
                 const checkOutDate = document.getElementById('checkOutDate').value;
                 const termsCheck = document.getElementById('termsCheck').checked;
                 const villa1 = document.getElementById('villa1').checked;
-                const specialRequests = document.querySelector('textarea[placeholder="Your Address"]').value;
+                const specialRequests = document.getElementById('resAddress').value;
                 const arrivalTime = document.querySelector('select').value;
                 hideErrorMessage();
                 if (!fullName || !email || !phone || !checkInDate || !checkOutDate || !termsCheck) {
