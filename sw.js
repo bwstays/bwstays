@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '46f3427181';
+const VERSION = '9ac831fc5d';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -31,7 +31,7 @@ const SHELL = [
   "/assets/img/pwa/icon-96.png",
   "/assets/img/pwa/icon-maskable-512.png",
   "/bwstays-booking.html",
-  "/css/details-page.min.css?v=f18cc839",
+  "/css/details-page.min.css?v=f5c58df7",
   "/css/fontawesome.min.css?v=a611ff0d",
   "/css/maps.min.css?v=cef28474",
   "/css/new-page.min.css?v=f2e8abdc",
@@ -46,10 +46,9 @@ const SHELL = [
   "/js/dynamic-evgas.min.js?v=1a3b82d4",
   "/js/dynamic-foodmap.min.js?v=e3ef5086",
   "/js/dynamic-nearby.min.js?v=d7d974bd",
-  "/js/faq.min.js?v=112f96b1",
   "/js/knowmore-place-dynamic.min.js?v=30af38d1",
   "/js/language.min.js?v=d8bf0fe7",
-  "/js/legal-page.min.js?v=313fa758",
+  "/js/legal-page.min.js?v=89020b58",
   "/js/pdfgen.min.js?v=4b76e38b",
   "/js/promo-banner.min.js?v=56cb74aa",
   "/js/pwa.min.js?v=908474fc",
