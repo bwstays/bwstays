@@ -55,5 +55,12 @@ for (const u of URLS) {
   problems.forEach((p) => console.log('   - ' + p));
   missing += problems.length;
 }
+// AI crawlers: Cloudflare lets them in for one 24 hour window a week (docs/cloudflare-security-headers.md)
+const weekSecond = Math.floor(Date.now() / 1000) % 604800;
+const inWindow = weekSecond < 86400;
+for (const ua of ['GPTBot', 'ClaudeBot']) {
+  const r = await fetch(SITE + '/llms.txt', { headers: { 'user-agent': `Mozilla/5.0 (compatible; ${ua}/1.0)` } }).catch(() => null);
+  console.log(`AI crawler ${ua}: ${r ? r.status : 'request failed'} (weekly window is ${inWindow ? 'OPEN now, expect 200' : 'closed now, 403 is expected'})`);
+}
 console.log(missing ? `\n${missing} issue(s). See docs/cloudflare-security-headers.md` : '\nAll expected headers are present.');
 if (STRICT && missing) process.exit(1);
