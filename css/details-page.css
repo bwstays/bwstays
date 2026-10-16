@@ -210,7 +210,7 @@
 
 .days .day.today {
   font-weight: bold;
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 
 .mid {
@@ -239,8 +239,8 @@ body {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: var(--bw-teal-text);
+  border: 1px solid var(--bw-teal);
 }
 
 #mainNav .navbar-toggler:focus {
@@ -320,7 +320,7 @@ nav#mainNav.navbar-shrink,
   }
 
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: var(--bw-teal-text);
   }
 
   #mainNav.navbar-shrink .nav-link:active {
@@ -328,9 +328,9 @@ nav#mainNav.navbar-shrink,
   }
 
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: var(--bw-teal-text);
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid var(--bw-teal);
   }
 }
 
@@ -422,7 +422,7 @@ nav#mainNav.navbar-shrink,
   }
 
   .projects-section .project-text hr {
-    border-color: #64a19d;
+    border-color: var(--bw-teal);
     border-width: 0.25rem;
     width: 30%;
   }
@@ -577,7 +577,7 @@ nav#mainNav.navbar-shrink,
 }
 
 .form-control:focus {
-  border-color: #64a19d;
+  border-color: var(--bw-teal);
   box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.25);
 }
 
@@ -611,7 +611,7 @@ nav#mainNav.navbar-shrink,
 }
 
 .info-box {
-  border-left: 4px solid #64a19d;
+  border-left: 4px solid var(--bw-teal);
   transition: all 0.3s ease;
 }
 
@@ -621,7 +621,7 @@ nav#mainNav.navbar-shrink,
 }
 
 .hover-primary:hover {
-  color: #64a19d !important;
+  color: var(--bw-teal-text) !important;
   text-decoration: none;
 }
 
@@ -900,7 +900,7 @@ html {
 }
 
 .nearby-card .distance-text i {
-  color: #64a19d;
+  color: var(--bw-teal-text);
   margin-right: 0.5rem;
 }
 
@@ -1069,7 +1069,7 @@ div.image-nav-arrow.image-nav-right {
 
 .detail-icon {
   font-size: 1.5em;
-  color: #64a19d;
+  color: var(--bw-teal-text);
   /* margin-right: 15px; */
   width: 30px;
 }
@@ -1589,7 +1589,7 @@ a.text-black:focus {
 /* Custom checkbox styles - blue by default */
 .form-check-input,
 .custom-control-input {
-  accent-color: #64a19d;
+  accent-color: var(--bw-teal);
 }
 
 .custom-control-label::before {
@@ -1710,7 +1710,7 @@ a.text-black:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #64a19d;
+  color: var(--bw-teal-text);
   flex-shrink: 0;
 }
 
@@ -1766,7 +1766,7 @@ a.text-black:focus {
 /* Voice control buttons */
 .voice-btn {
   background: #2b2b2b;
-  color: #64a19d;
+  color: var(--bw-teal-text);
   border: 1px solid rgba(100, 161, 157, 0.3);
   border-radius: 8px;
   width: 38px;
@@ -2094,7 +2094,7 @@ a.text-black:focus {
   justify-content: center;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #64a19d;
+  color: var(--bw-teal-text);
   margin-right: 15px;
 }
 
@@ -2111,7 +2111,7 @@ a.text-black:focus {
 }
 
 .stars {
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 
 .date {
@@ -2197,7 +2197,7 @@ a.text-black:focus {
 }
 
 #testimonial .name {
-  color: #64a19d;
+  color: var(--bw-teal-text);
   font-weight: 600;
 }
 
@@ -2409,7 +2409,7 @@ a.text-black:focus {
 }
 
 #signup .stars {
-  color: #64a19d;
+  color: var(--bw-teal-text);
   font-size: 0.5rem;
   margin-bottom: 16px;
 }
@@ -2426,7 +2426,7 @@ a.text-black:focus {
 
 #testimonial .rating-row .stars,
 #testimonial .stars {
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 
 #testimonial .rating-row .date {
@@ -2775,7 +2775,7 @@ a.text-black:focus {
 
 
 .my-star-icon {
-  color: #64a19d !important;
+  color: var(--bw-teal-text) !important;
   font-size: 1rem;
   margin-right: 2px;
 }
@@ -2785,7 +2785,7 @@ a.text-black:focus {
 }
 
 #contact-card h3 {
-  color: #64a19d !important;
+  color: var(--bw-teal-text) !important;
 }
 
 /* Custom styling for email input field */
@@ -2895,7 +2895,7 @@ a.text-black:focus {
 
 .faq-icon {
   font-size: 14px;
-  color: #64a19d;
+  color: var(--bw-teal-text);
   transition: transform 0.3s ease;
   margin-left: 15px;
 }
@@ -3206,9 +3206,9 @@ a.text-black:focus {
 
 .pagination-btn {
   padding: 8px 16px;
-  border: 1px solid #64a19d;
+  border: 1px solid var(--bw-teal);
   background-color: #fff;
-  color: #64a19d;
+  color: var(--bw-teal-text);
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
@@ -3300,7 +3300,7 @@ a.text-black:focus {
 }
 
 #map-marker-icon {
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 
 #info-list {
@@ -5525,12 +5525,12 @@ select#fromCurrency {
   width: 100%;
   padding: 8px;
   border-radius: 6px;
-  border: 1px solid #64a19d;
+  border: 1px solid var(--bw-teal);
   background: rgba(255, 255, 255, 0.9);
   font-size: 12px;
   box-sizing: border-box;
   margin: 10px 0;
-  color: #64a19d;
+  color: var(--bw-teal-text);
   font-weight: bold;
 }
 
@@ -5761,7 +5761,7 @@ select#fromCurrency {
 }
 
 .footer-author a:hover {
-    color: #64a19d;
+    color: var(--bw-teal-text);
 }
 
 .currency-icon-section {
@@ -5944,7 +5944,7 @@ select#fromCurrency {
 .da-icon {
   background: #2b2b2b;
   border: 0px solid rgba(0, 0, 0, 0.1);
-  color: #64a19d;
+  color: var(--bw-teal-text);
   place-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -5975,7 +5975,7 @@ select#fromCurrency {
  
 
 #language-selector:focus {
-    border-color: #64a19d;
+    border-color: var(--bw-teal);
     outline: none;
 
  }
@@ -6361,7 +6361,7 @@ button.faq-question .faq-question-text {
 }
 .legal-card-title i {
   margin-right: 0.6rem;
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 .legal-body {
   padding: 0 1.25rem 1.1rem;
@@ -6538,13 +6538,13 @@ button.faq-question .faq-question-text {
 
 /* Terms page: the open/close arrow uses the site's button colour instead of black */
 .legal-card details > summary {
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 .legal-card details > summary::marker {
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 .legal-card details > summary::-webkit-details-marker {
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 
 /* Currency card: same teal card as the weather card, with a full-width readable dropdown */
@@ -6942,7 +6942,7 @@ footer.footer .contact-card-divider,
 #signup .col-md-5 .w-100 ul li::before {
   width: 34px !important;
   height: 34px !important;
-  border: 2px solid #64a19d !important;
+  border: 2px solid var(--bw-teal) !important;
   border-radius: 8px !important;
   background-color: rgba(100, 161, 157, 0.15) !important;
   line-height: 30px !important;
@@ -6996,7 +6996,7 @@ footer.footer .footer-social {
 }
 footer.footer .footer-social a,
 footer.footer .footer-social i {
-  color: #64a19d;
+  color: var(--bw-teal-text);
   font-size: 1.05rem;
 }
 footer.footer .footer-social a:hover,
@@ -7014,7 +7014,7 @@ footer.footer .footer-copyright a {
   color: rgba(255, 255, 255, 0.78) !important;
 }
 footer.footer .footer-copyright a:hover {
-  color: #64a19d !important;
+  color: var(--bw-teal-text) !important;
 }
 footer.footer .footer-author,
 footer.footer .footer-author p {
@@ -7032,7 +7032,7 @@ footer.footer .footer-author p {
   height: 0;
   margin: 0 0 0.75rem 0 !important;
   padding: 0 !important;
-  border-bottom: 2px solid #64a19d !important;
+  border-bottom: 2px solid var(--bw-teal) !important;
   background: none !important;
 }
 #signup .reviews-title,
@@ -7164,7 +7164,7 @@ footer.footer .footer-author p {
 }
 .bw-result:hover,
 .bw-result:focus-within {
-  border-color: #64a19d;
+  border-color: var(--bw-teal);
   background: rgba(100, 161, 157, 0.1);
 }
 .bw-result-badge {
@@ -7199,7 +7199,7 @@ footer.footer .footer-author p {
 }
 .bw-result-meta i {
   margin-right: 0.3rem;
-  color: #64a19d;
+  color: var(--bw-teal-text);
 }
 .bw-result mark {
   padding: 0 0.1em;
@@ -7717,7 +7717,7 @@ body .reviews-title > .border-bottom.border-primary,
   background: repeating-linear-gradient(45deg, #e3ecea, #e3ecea 3px, #fff 3px, #fff 6px);
 }
 .calendar-container .days .day.today {
-  box-shadow: inset 0 0 0 2px #64a19d;
+  box-shadow: inset 0 0 0 2px var(--bw-teal);
   border-radius: 6px;
 }
 .calendar-container .month-nav-btn:disabled {
@@ -8204,7 +8204,7 @@ body .reviews-title > .border-bottom.border-primary,
   font-size: 0.88rem;
   color: #3d4b4b;
 }
-.bk-amenities i { width: 20px; text-align: center; color: #64a19d; font-size: 1rem; flex: none; }
+.bk-amenities i { width: 20px; text-align: center; color: var(--bw-teal-text); font-size: 1rem; flex: none; }
 @media (max-width: 575.98px) {
   .bk-showcase { padding: 16px; }
   .bk-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 110px; }
@@ -8280,3 +8280,7 @@ body #language-selector option:hover {
   background: var(--bw-teal) linear-gradient(var(--bw-teal), var(--bw-teal));
   color: #fff;
 }
+
+/* Bootstrap teal helpers follow the theme: underlines and dividers (.border-primary) and fills (.bg-primary) use the one fill teal */
+.border-primary { border-color: var(--bw-teal) !important; }
+.bg-primary { background-color: var(--bw-teal) !important; }

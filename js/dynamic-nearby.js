@@ -110,17 +110,17 @@ function createPlaceCard(place) {
                                      ${place.name}
                                 </h3></a>
                                 <a href="${place.map}" target="_new" rel="noopener" aria-label="${place.name} on Google Maps" class="ms-2" style="position: relative; z-index: 2; background: rgba(255,255,255,0.9); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); flex-shrink: 0;">
-                                    <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+                                    <i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
                                 </a>
                             </div>
                             <div class="text-white mb-1" style="font-size: 0.85rem;">Time: ${place.timing}</div>
                             <div class="mb-1">
                                 <span class="text-white" style="font-size: 0.85rem;">
-                                    <i class="fas fa-star" style="color: #64a19d;"></i> Rating: <span class="text-warning">${place.rating}</span>
+                                    <i class="fas fa-star" style="color: var(--bw-teal);"></i> Rating: <span class="text-warning">${place.rating}</span>
                                 </span>
                             </div>
                             <small class="distance-text" style="color: #a8a8a8;">
-                                <i class="fas fa-road me-1" style="color: #64a19d;"></i> Distance:  <span class="text-warning">${place.distance} km </span>
+                                <i class="fas fa-road me-1" style="color: var(--bw-teal);"></i> Distance:  <span class="text-warning">${place.distance} km </span>
                             </small>
                         </div>
                     </div>
