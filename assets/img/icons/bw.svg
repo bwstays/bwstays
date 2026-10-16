@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Black and White Stays"><title>Black and White Stays</title>
 <defs><clipPath id="r"><rect width="512" height="512" rx="96"/></clipPath></defs>
 <g clip-path="url(#r)">
-<rect width="512" height="512" fill="#ffffff"/>
+<rect width="512" height="512" fill="#e3e6e9"/>
 <path d="M0 0H512L0 512Z" fill="#868c93"/>
 <path d="M512 0L0 512" stroke="#3f7f7b" stroke-width="16"/>
 <g transform="translate(256 256) scale(1.0) translate(-256 -256)">
