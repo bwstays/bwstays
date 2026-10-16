@@ -8302,3 +8302,76 @@ a.view-attraction:focus-visible {
   outline: 2px solid var(--bw-teal-soft);
   outline-offset: 2px;
 }
+
+/* FAQ card on the terms page (footer.html): same dark card theme as the other legal cards; each question expands and collapses */
+.faq-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.85rem;
+}
+.faq-tools button {
+  margin-left: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--bw-teal);
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.faq-tools button:hover,
+.faq-tools button:focus-visible {
+  background: var(--bw-teal-dark);
+}
+.legal-card details.faq-qa {
+  margin-bottom: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.legal-card details.faq-qa[open] {
+  border-color: var(--bw-teal);
+}
+.legal-card details.faq-qa > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  list-style: none;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  cursor: pointer;
+}
+.legal-card details.faq-qa > summary::-webkit-details-marker {
+  display: none;
+}
+.legal-card details.faq-qa > summary::marker {
+  content: "";
+}
+.legal-card details.faq-qa > summary::after {
+  content: "+";
+  flex: none;
+  color: var(--bw-teal-text);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.legal-card details.faq-qa[open] > summary::after {
+  content: "\2212";
+}
+.legal-card details.faq-qa > summary:hover,
+.legal-card details.faq-qa > summary:focus-visible {
+  color: var(--bw-teal-soft);
+}
+.legal-body details.faq-qa p {
+  max-width: none;
+  margin: 0;
+  padding: 0 1rem 1rem;
+}
