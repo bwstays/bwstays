@@ -74,6 +74,11 @@ for (const f of pages) {
     if (rentals.length !== 1) add('error', f, `expected exactly one VacationRental block, found ${rentals.length}`);
     else if (!/Villa Stay/.test(rentals[0].name || '')) add('error', f, `the VacationRental is named "${rentals[0].name}"`);
   } else if (rentals.length && f !== 'villa1.html') add('error', f, 'VacationRental/Product markup outside the booking page');
+  // images: every local image URL must point at a file (root-level image URLs are always a typo for an assets/ path)
+  for (const u of new Set([...h.matchAll(/https:\/\/www\.bwstays\.com\/([^"'\s)?#]+\.(?:webp|avif|png|jpe?g|svg))/g)].map((m) => m[1]))) {
+    if (!u.includes('/')) add('error', f, `image URL in the site root (missing the assets/ folder): ${u}`);
+    else if (!fs.existsSync(path.join(ROOT, u))) add('warn', f, `image file not found: ${u}`);
+  }
   const faqBlocks = [...h.matchAll(/"@type":\s*"FAQPage"/g)].length;
   if (faqBlocks > 1) add('error', f, `${faqBlocks} FAQPage blocks (Google accepts one)`);
 

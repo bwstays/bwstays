@@ -3924,8 +3924,8 @@ const siteData = {
         "Temple associated with the epic Ramayana, located in a serene setting.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-lava-kush-ponkuzhi-wayanad.webp",
-        "https://www.bwstays.com/bw-seetha-lava-kusha-temple-wayanad.webp",
-        "https://www.bwstays.com/bw-stays-lav-kush-temple-wayanad.webp",
+        "https://www.bwstays.com/assets/img/pilgrimage/bw-seetha-lava-kusha-temple-wayanad.webp",
+        "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-lav-kush-temple-wayanad.webp",
       ],
       holidays: "Sun",
       timing: ["09:00-17:00"],
