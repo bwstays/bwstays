@@ -284,3 +284,12 @@ One teal for every filled control (buttons, Know More, dropdowns, floating circl
 ### FAQ
 
 The Frequently Asked Questions live in the card `#section-faq` of `footer.html` (the Rules & Regulations page, next to the terms and cancellation policy), as collapsible questions with Expand all / Collapse all and FAQPage structured data. They are generated from `js/faq.js` (the single source, also read by the MCP generator): edit `js/faq.js`, then run `node scripts/build-faq.mjs` (`--check` is part of `check.mjs`). The booking page only links to `footer.html#faq`.
+
+### SEO, PWA and security checks
+
+```
+node scripts/audit-site.mjs            # every page: title, description, canonical, hreflang, Open Graph, JSON-LD, CSP, referrer, noopener, manifest, security.txt (errors fail check.mjs)
+node scripts/check-headers.mjs         # the LIVE response headers (HSTS, Referrer-Policy, Permissions-Policy, frame-ancestors, cache of /sw.js)
+```
+
+GitHub Pages cannot set response headers: they are set in Cloudflare, see `docs/cloudflare-security-headers.md` (header rule and cache rules). Every page carries a CSP meta (no `unsafe-eval`, `object-src 'none'`, `base-uri 'self'`) and a referrer-policy meta. The service worker serves manifest, translations, MCP/AI files and sitemaps network-first (`LIVE_FILES` in `scripts/pwa/sw.template.js`) so they never stay stale; it registers with `updateViaCache: 'none'`. The manifest has screenshots (`assets/img/pwa/screenshot-*.jpg`, made from the real pages).

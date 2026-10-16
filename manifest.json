@@ -8,11 +8,18 @@
   "start_url": "/index.html?utm_source=pwa",
   "scope": "/",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "background_color": "#000000",
   "theme_color": "#3f7f7b",
-  "categories": ["travel", "lifestyle", "navigation"],
+  "categories": [
+    "travel",
+    "lifestyle",
+    "navigation"
+  ],
   "icons": [
     {
       "src": "/assets/img/pwa/icon-192.png",
@@ -39,22 +46,73 @@
       "short_name": "Book",
       "description": "Check availability and book your villa",
       "url": "/bwstays-booking.html?utm_source=pwa_shortcut",
-      "icons": [{ "src": "/assets/img/pwa/icon-96.png", "sizes": "96x96", "type": "image/png" }]
+      "icons": [
+        {
+          "src": "/assets/img/pwa/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     },
     {
       "name": "Places to visit",
       "short_name": "Locations",
       "description": "Explore places to visit around Kalpetta",
       "url": "/all-locations-wayanad.html?utm_source=pwa_shortcut",
-      "icons": [{ "src": "/assets/img/pwa/icon-96.png", "sizes": "96x96", "type": "image/png" }]
+      "icons": [
+        {
+          "src": "/assets/img/pwa/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     },
     {
       "name": "Places to eat",
       "short_name": "Eatery",
       "description": "Restaurants and cafes near your stay",
       "url": "/all-fooding-wayanad.html?utm_source=pwa_shortcut",
-      "icons": [{ "src": "/assets/img/pwa/icon-96.png", "sizes": "96x96", "type": "image/png" }]
+      "icons": [
+        {
+          "src": "/assets/img/pwa/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     }
   ],
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/assets/img/pwa/screenshot-wide-home.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Black and White Stays home page"
+    },
+    {
+      "src": "/assets/img/pwa/screenshot-wide-booking.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Check availability and send a booking request"
+    },
+    {
+      "src": "/assets/img/pwa/screenshot-narrow-home.jpg",
+      "sizes": "780x1688",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Home page on a phone"
+    },
+    {
+      "src": "/assets/img/pwa/screenshot-narrow-booking.jpg",
+      "sizes": "780x1688",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Booking page on a phone"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
 }

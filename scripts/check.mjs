@@ -106,6 +106,8 @@ const llms = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-llms.mj
 if (llms.status !== 0) problems.push(`llms.txt / llms-full.txt are stale: ${(llms.stderr || llms.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const llmfeed = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-llmfeed.mjs'), '--check'], { encoding: 'utf8' });
 if (llmfeed.status !== 0) problems.push(`LLMFeed is stale: ${(llmfeed.stderr || llmfeed.stdout).trim().split(String.fromCharCode(10))[0]}`);
+const audit = spawnSync(process.execPath, [path.join(ROOT, 'scripts/audit-site.mjs'), '--strict'], { encoding: 'utf8' });
+if (audit.status !== 0) problems.push(`SEO / PWA / security audit has errors: run node scripts/audit-site.mjs`);
 const faqBuild = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-faq.mjs'), '--check'], { encoding: 'utf8' });
 if (faqBuild.status !== 0) problems.push(`footer.html FAQ block is stale: ${(faqBuild.stderr || faqBuild.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const mcp = spawnSync(process.execPath, [path.join(ROOT, 'scripts/generate-mcp.mjs'), '--check'], { encoding: 'utf8' });

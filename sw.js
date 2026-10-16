@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '164ee612ba';
+const VERSION = '2a074c5748';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -51,7 +51,7 @@ const SHELL = [
   "/js/legal-page.min.js?v=89020b58",
   "/js/pdfgen.min.js?v=4b76e38b",
   "/js/promo-banner.min.js?v=56cb74aa",
-  "/js/pwa.min.js?v=908474fc",
+  "/js/pwa.min.js?v=9f12090c",
   "/js/scripts.min.js?v=e48878e1",
   "/js/site-search.min.js?v=b67e0575",
   "/js/specrule.min.js?v=1f8a513f",
@@ -351,6 +351,8 @@ const MAX_MEDIA_ENTRIES = 600;
 const MAX_RUNTIME_ENTRIES = 160;
 const FRESH_DATA = /\/data\/(bookingdata|closeddata|pendingdata)(\.min)?\.js/;
 const DATA_PATH = /\/data\/[^/]+\.(json|js)$|\/llms-full\.txt$/;
+// files that are not versioned with ?v= and must not stay stale in the saved copy: manifest, translations, MCP / AI files, sitemaps
+const LIVE_FILES = /^\/(manifest\.json|lang\/[^/]+\.json|llms\.txt|mcp\.json|sitemap[^/]*\.(xml|txt)|resources\/.+\.json|tools\/.+\.json|\.well-known\/.+)$/;
 const IMAGE_EXT = /\.(?:png|jpe?g|gif|webp|avif|svg|ico)$/i;
 const RUNTIME_HOSTS = [
   'fonts.googleapis.com',
@@ -429,7 +431,7 @@ self.addEventListener('fetch', (event) => {
     if (url.pathname === '/sw.js') return;
     if (request.mode === 'navigate') {
       event.respondWith(handleNavigation(event));
-    } else if (FRESH_DATA.test(url.pathname) || DATA_PATH.test(url.pathname)) {
+    } else if (FRESH_DATA.test(url.pathname) || DATA_PATH.test(url.pathname) || LIVE_FILES.test(url.pathname)) {
       event.respondWith(networkFirst(request));
     } else if (IMAGE_EXT.test(url.pathname) || request.destination === 'image') {
       event.respondWith(cacheFirst(request, MEDIA_CACHE, MAX_MEDIA_ENTRIES));
