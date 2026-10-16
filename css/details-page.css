@@ -8295,3 +8295,18 @@ body select.currency-select option {
   margin: 0.5rem auto 1.25rem !important;
   border-bottom-width: 2px !important;
 }
+
+/* language dropdown: the selected language and the list rows are centred */
+body #language-selector {
+  text-align: center;
+  text-align-last: center;
+  justify-content: center;
+}
+body #language-selector option {
+  justify-content: center;
+  text-align: center;
+  text-align-last: center;
+}
+body #language-selector option::checkmark {
+  display: none;
+}
