@@ -8323,3 +8323,15 @@ body #language-selector option::checkmark {
     height: 28px !important;
   }
 }
+
+/* nav bar brand: the monogram with "Black & White" beside it, on one line */
+#mainNav .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  white-space: nowrap;
+}
+#mainNav .navbar-brand img.logo-loc {
+  margin: 0;
+  flex: 0 0 auto;
+}
