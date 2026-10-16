@@ -330,8 +330,7 @@ main:focus {
   outline: none;
 }
 #mainNav a[aria-current="page"] {
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  text-decoration: none;
 }
 @media (prefers-reduced-motion: reduce) {
   html {
