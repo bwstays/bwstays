@@ -8225,3 +8225,30 @@ body .reviews-title > .border-bottom.border-primary,
   border-color: #2f6f6b;
   color: #fff;
 }
+
+/* Language dropdown: the closed select, its hover/active state and the open list all use the site teal (#3f7f7b, white text) */
+body #language-selector,
+body #language-selector:active,
+body #language-selector:focus {
+  background-color: #3f7f7b;
+  border-color: #3f7f7b;
+  color: #fff;
+}
+body #language-selector:hover {
+  background-color: #2f6f6b;
+  border-color: #2f6f6b;
+  color: #fff;
+}
+body #language-selector:focus-visible {
+  outline: 3px solid #8cc4c0;
+  outline-offset: 2px;
+}
+body #language-selector option {
+  background-color: #3f7f7b;
+  color: #fff;
+}
+body #language-selector option:checked,
+body #language-selector option:hover {
+  background-color: #2f6f6b;
+  color: #fff;
+}
