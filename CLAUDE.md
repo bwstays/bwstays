@@ -293,3 +293,7 @@ node scripts/check-headers.mjs         # the LIVE response headers (HSTS, Referr
 ```
 
 GitHub Pages cannot set response headers: they are set in Cloudflare, see `docs/cloudflare-security-headers.md` (header rule and cache rules). Every page carries a CSP meta (no `unsafe-eval`, `object-src 'none'`, `base-uri 'self'`) and a referrer-policy meta. The service worker serves manifest, translations, MCP/AI files and sitemaps network-first (`LIVE_FILES` in `scripts/pwa/sw.template.js`) so they never stay stale; it registers with `updateViaCache: 'none'`. The manifest has screenshots (`assets/img/pwa/screenshot-*.jpg`, made from the real pages).
+
+### Structured data (generated)
+
+`node scripts/build-schema.mjs` (`--check` is part of `check.mjs`) writes the VacationRental block of the villa on `bwstays-booking.html` from the page itself (rate, up to N adults, beds, bath, amenity chips, gallery photos; address and coordinates from the home page LocalBusiness) and a BreadcrumbList on every place page (Home > Places to visit in Wayanad > place) and the booking page. Re-run it after changing the villa card, the amenity list or the gallery. No phone number or rating is published in the markup until a real one exists (the home and booking LocalBusiness `telephone` placeholder was removed).
