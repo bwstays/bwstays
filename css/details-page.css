@@ -8042,10 +8042,11 @@ a.view-attraction:focus-visible {
   }
 }
 @media (max-width: 991.98px) {
+  /* mobile menu: the items are centred, so the current page gets the same centred bar under its text */
   #mainNav .nav-link.is-current {
+    display: inline-block;
     color: var(--bw-teal-text);
-    padding-left: 0.75rem;
-    border-left: 0.25rem solid var(--bw-teal);
+    border-bottom: 0.25rem solid var(--bw-teal);
   }
 }
 
