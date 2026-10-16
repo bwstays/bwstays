@@ -24,7 +24,7 @@ const faqData = vm.runInNewContext(m[1]);
 {
   const booking = fs.readFileSync(path.join(ROOT, 'bwstays-booking.html'), 'utf8');
   const rate = Number(((booking.match(/price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/i) || [])[1] || '').replace(/,/g, ''));
-  const adults = Number((booking.match(/Up to (\d+)\s*Adults?/i) || [])[1]);
+  const adults = Number((booking.match(/fa-user-friends[\s\S]{0,120}?Up to (\d+)\s*Adults?/i) || [])[1]); // the card (the JSON-LD also says 'up to')
   const all = faqData.map((f) => f.answer).join(' ');
   if (!rate || !adults) throw new Error('build-faq: could not read the rate and capacity from bwstays-booking.html');
   const money = 'INR ' + rate.toLocaleString('en-IN');
@@ -39,7 +39,8 @@ const faqData = vm.runInNewContext(m[1]);
     if (!all.includes('INR ' + fmt)) throw new Error(`build-faq: js/faq.js must mention the extra bed charge INR ${fmt}`);
     if (!booking.includes('₹' + fmt)) throw new Error(`build-faq: the booking page card (rate-note) must mention the extra bed charge ₹${fmt}`);
   }
-  if (!all.includes(`up to ${adults} adults`)) throw new Error(`build-faq: js/faq.js must say "up to ${adults} adults"`);
+  if (adults !== rates.includedAdults) throw new Error(`build-faq: the booking page card says up to ${adults} adults but data/rates.js includes ${rates.includedAdults}`);
+  if (!all.includes(`up to ${rates.maxAdults} adults`)) throw new Error(`build-faq: js/faq.js must say "up to ${rates.maxAdults} adults"`);
 }
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
