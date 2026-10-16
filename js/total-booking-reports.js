@@ -1,5 +1,5 @@
 const brandColors = {
-    primary: '#64a19d',
+    primary: '#3f7f7b',
     secondary: '#4a7c87',
     accent1: '#8bc4c0',
     accent2: '#a8d5d1',

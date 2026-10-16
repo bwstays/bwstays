@@ -157,7 +157,7 @@ rightArrow.addEventListener('mouseleave', () => {
           <span class="text-white-50 ml-2">${currentItemData.distance}km from Kalpetta</span>
 		  <span class="text-white-50 ml-2">
 			<a href="${currentItemData.map}" target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
-			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+			<i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
 			</a>
 		  </span>
  </div>
@@ -219,7 +219,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
                   ${bwHas(item.rating) ? '<span class="text-warning">★ ' + item.rating + '</span>' : ''}
                   ${bwHas(item.distance) ? '<span class="text-white-50 ml-2 "> <span class="text-warning">' + item.distance + ' km </span> from Kalpetta</span>' : ''}
                     <span class="text-white-50 ml-2"><a href="${currentItemData.map}" target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
-				  			<i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+				  			<i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
 						</a>
 						</span>
               </div>
@@ -279,7 +279,7 @@ function updateRightColumnOnly() {
           ${bwHas(item.distance) ? '<span class="text-white-50 ml-2">' + item.distance + 'km from Kalpetta</span>' : ''}
           <span class="text-white-50 ml-2">
             <a href="${item.map}" target="_new" rel="noopener" aria-label="${item.name} on Google Maps" class="text-decoration-none text-white">
-              <i class="fas fa-map-marker-alt" style="color: #64a19d;"></i>
+              <i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
             </a>
           </span>
         </div>
@@ -532,10 +532,10 @@ function initializeSection(sectionType, data, sectionIndex) {
       <h4 class="text-white mb-1" style="font-size: 1rem;">${currentItem.name} (${currentItem.rating}★)</h4>
       <p class="mb-1 text-white-50" style="font-size: 0.8rem; line-height: 1.2;">${currentItem.description.substring(0,50)}...</p>
       <div class="mb-1 text-white-50" style="font-size: 0.8rem;">
-        <i class="fas fa-times me-1" style="color: #64a19d;"></i> Holiday: ${currentItem.holidays}
+        <i class="fas fa-times me-1" style="color: var(--bw-teal);"></i> Holiday: ${currentItem.holidays}
       </div>
       <div class="mb-1 text-white-50" style="font-size: 0.8rem; ">
-        <i class="fas fa-clock me-1" style="color: #64a19d;"></i> Timing: ${currentItem.timing}
+        <i class="fas fa-clock me-1" style="color: var(--bw-teal);"></i> Timing: ${currentItem.timing}
       </div>
       <a href="${currentItem.knowmore || '#'}" class="js-scroll-trigger view-attraction" style="font-size: 0.8rem;">View Attractions</a>`;
     tempContent.style.position = 'absolute';
