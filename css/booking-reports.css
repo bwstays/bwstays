@@ -38,7 +38,7 @@
 }
 
 /* .border-left-primary {
-    border-left: 0.25rem solid #64a19d !important;
+    border-left: 0.25rem solid var(--bw-teal) !important;
 }
 
 .border-left-success {
@@ -67,7 +67,7 @@
 }
 
 .text-primary {
-    color: #64a19d !important;
+    color: var(--bw-teal-text) !important;
 }
 
 .text-success {
@@ -101,7 +101,7 @@
 }
 
 .pagination .page-item .page-link {
-    color: #64a19d;
+    color: var(--bw-teal-text);
 }
 
 .pagination .page-item.active .page-link {
