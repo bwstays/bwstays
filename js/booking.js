@@ -265,25 +265,49 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
         document.addEventListener('DOMContentLoaded', function () {
+            // Guest counters: the plus and minus buttons stop at the limits (data-min / data-max on the input), switch
+            // off at the limit, and the hint under the counter says why (also read out by screen readers).
             const counterContainers = document.querySelectorAll('.counter-container');
             counterContainers.forEach(container => {
                 const minusBtn = container.querySelector('.minus');
                 const plusBtn = container.querySelector('.plus');
                 const input = container.querySelector('input[type="text"]');
-                minusBtn.addEventListener('click', function () {
-                    let value = parseInt(input.value);
-                    const min = parseInt(input.dataset.min, 10);
-                    if (value > (isNaN(min) ? 0 : min)) {
-                        input.value = value - 1;
+                const hint = container.parentElement.querySelector('.counter-hint');
+                const min = parseInt(input.dataset.min, 10);
+                const max = parseInt(input.dataset.max, 10);
+                const lo = isNaN(min) ? 0 : min;
+                function clamp() {
+                    let value = parseInt(input.value, 10);
+                    if (isNaN(value)) value = lo;
+                    if (value < lo) value = lo;
+                    if (max && value > max) value = max;
+                    input.value = value;
+                    return value;
+                }
+                function sync() {
+                    const value = clamp();
+                    const atMin = value <= lo;
+                    const atMax = !!max && value >= max;
+                    minusBtn.disabled = atMin;
+                    plusBtn.disabled = atMax;
+                    minusBtn.setAttribute('aria-disabled', String(atMin));
+                    plusBtn.setAttribute('aria-disabled', String(atMax));
+                    minusBtn.title = atMin ? 'Minimum reached' : '';
+                    plusBtn.title = atMax ? 'Maximum reached' : '';
+                    if (hint) {
+                        hint.textContent = atMax ? hint.dataset.max : (atMin && hint.dataset.min ? hint.dataset.min : hint.dataset.normal);
+                        hint.classList.toggle('at-limit', atMax || (atMin && !!hint.dataset.min));
                     }
+                }
+                minusBtn.addEventListener('click', function () {
+                    input.value = clamp() - 1;
+                    sync();
                 });
                 plusBtn.addEventListener('click', function () {
-                    let value = parseInt(input.value);
-                    const max = parseInt(input.dataset.max, 10);
-                    if (!max || value < max) {
-                        input.value = value + 1;
-                    }
+                    input.value = clamp() + 1;
+                    sync();
                 });
+                sync();
             });
         });
 function createErrorMessageContainers() {
