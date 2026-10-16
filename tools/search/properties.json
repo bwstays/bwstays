@@ -15,7 +15,7 @@
             "type": "Entire villa",
             "beds": 2,
             "max_guests": "Up to 8 adults in the large room",
-            "price_listed_on_booking_form_inr_per_night": 5000,
+            "price_listed_on_booking_form_inr_per_night": 3999,
             "amenities": [
               "EV Charging",
               "Private Parking",
@@ -51,7 +51,7 @@
             "type": "Entire villa",
             "beds": 2,
             "max_guests": "Up to 8 adults in the large room",
-            "price_listed_on_booking_form_inr_per_night": 5000,
+            "price_listed_on_booking_form_inr_per_night": 3999,
             "amenities": [
               "EV Charging",
               "Private Parking",
@@ -87,7 +87,7 @@
             "type": "Entire villa",
             "beds": 2,
             "max_guests": "Up to 8 adults in the large room",
-            "price_listed_on_booking_form_inr_per_night": 5000,
+            "price_listed_on_booking_form_inr_per_night": 3999,
             "amenities": [
               "EV Charging",
               "Private Parking",

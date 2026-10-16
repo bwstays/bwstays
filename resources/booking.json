@@ -19,7 +19,7 @@
     "nightly_rate_on_booking_form_inr": [
       {
         "villa": "Villa Stay",
-        "inr_per_night": 5000
+        "inr_per_night": 3999
       }
     ],
     "payment_terms_quoted_from_site": [
