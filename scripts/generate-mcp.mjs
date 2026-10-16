@@ -108,12 +108,11 @@ const amenityChips = [...amenityBlock[1].matchAll(/<span>([^<]+)<\/span>/g)]
   .map((m) => m[1].replace(/&amp;/g, '&').trim())
   .filter(Boolean);
 must(amenityChips.length > 5, 'bwstays-booking.html amenity list is too short');
-const capacityChip = amenityChips.find((x) => /^Up to \d+ adults?$/i.test(x)) ?? null;
-const villaAmenities = amenityChips.filter((x) => x !== capacityChip);
-const cardFacts = bookingHtml.match(/(\d+)\s*Beds?[\s\S]{0,300}?(\d+)\s*Guests?/i);
+const villaAmenities = amenityChips;
+const cardFacts = bookingHtml.match(/(\d+)\s*Beds?[\s\S]{0,300}?Up to (\d+)\s*Adults?/i);
 must(cardFacts, 'bwstays-booking.html villa card facts not found');
 const villaBeds = Number(cardFacts[1]);
-const villaGuests = Number(cardFacts[2]);
+const villaMaxAdults = Number(cardFacts[2]);
 
 const bookingVillas = [...bookingHtml.matchAll(
   /<h5[^>]*class="mb-0"[^>]*>\s*(Villa Stay[^<]*)<\/h5>\s*<span class="price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/gi,
@@ -341,9 +340,7 @@ const properties = [
     page_url: `${SITE}/bwstays-booking.html`,
     type: 'Entire villa',
     beds: villaBeds,
-    max_guests: capacityChip
-      ? `${villaGuests} guests on the villa card; the amenities list says "${capacityChip}"`
-      : `${villaGuests} guests`,
+    max_guests: `Up to ${villaMaxAdults} adults in the large room`,
     price_listed_on_booking_form_inr_per_night: bookingVillas[0]?.price ?? null,
     amenities: villaAmenities,
     pets_allowed: true,
@@ -351,9 +348,6 @@ const properties = [
 ];
 
 const dataQualityNotes = [
-  ...(capacityChip
-    ? [`bwstays-booking.html lists "${villaGuests} guests" on the villa card and "${capacityChip}" in the amenities. Both are reported; confirm the capacity with the host.`]
-    : []),
   'No verified phone number is published: the site masks it and the WhatsApp link uses a placeholder-pattern number.',
   'Payment and cancellation terms on the site are written for tours ("tour commencement date") and are quoted verbatim, not reinterpreted.',
 ];
@@ -366,7 +360,7 @@ const resources = {
       tagline: 'STAY CONNECTED, STAY CLOSE, STAY RELAXED',
       summary: business.description,
       website: SITE,
-      concept: 'Colive, Cowork & Coplay - villas for vacations and workations in Kalpetta, Wayanad',
+      concept: 'Colive, Cowork & Coplay - a villa stay for vacations and workations in Kalpetta, Wayanad',
       location: {
         locality: business.address.addressLocality,
         region: 'Kerala',
@@ -391,7 +385,7 @@ const resources = {
     content: {
       count: properties.length,
       properties,
-      data_quality_notes: dataQualityNotes.slice(0, capacityChip ? 1 : 0),
+      data_quality_notes: [],
     },
     source: 'bwstays-booking.html',
   },
@@ -401,7 +395,7 @@ const resources = {
       property: 'villa_stay',
       amenities: villaAmenities,
       beds: villaBeds,
-      max_guests_listed: capacityChip,
+      max_adults: villaMaxAdults,
       pets_allowed: true,
     },
     source: 'bwstays-booking.html',
@@ -717,7 +711,7 @@ const tools = {
 const manifest = {
   name: 'bwstays',
   version: '2.0.0',
-  description: 'AI context for Black and White Stays - villas and workation stays in Kalpetta, Wayanad, Kerala',
+  description: 'AI context for Black and White Stays - a villa stay for vacations and workations in Kalpetta, Wayanad, Kerala',
   metadata: {
     generated: BUILD_DATE,
     generator: 'scripts/generate-mcp.mjs',
