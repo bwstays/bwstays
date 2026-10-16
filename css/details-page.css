@@ -8189,10 +8189,6 @@ select option:checked {
   select.currency-select::picker(select) {
     appearance: base-select;
   }
-  /* the currency dropdown draws its own arrow */
-  select.currency-select::picker-icon {
-    display: none;
-  }
 }
 
 /* Field hints: small grey help text under a form field (format, example, character limit) */
@@ -8241,4 +8237,40 @@ select option:checked {
   color: #fff;
   background-color: var(--bw-teal);
   border-color: var(--bw-teal);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------
+   The three site dropdowns look the same everywhere: language (top of every page), Best match / sort (search page) and
+   currency (home page): one teal pill, one smaller font, the same arrow and the same smaller list rows. */
+:root {
+  --bw-fs-select: 0.8rem;
+}
+body #language-selector,
+body #site-search-sort,
+body select.currency-select,
+body .widgets-container select#fromCurrency.currency-select {
+  appearance: base-select;
+  height: 30px;
+  min-height: 30px;
+  padding: 0 0.7rem !important;
+  font-size: var(--bw-fs-select) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1.2 !important;
+  color: #fff !important;
+  background: var(--bw-teal) !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+body #language-selector:hover,
+body #site-search-sort:hover,
+body select.currency-select:hover {
+  background: var(--bw-teal-dark) !important;
+}
+body #language-selector option,
+body #site-search-sort option,
+body select.currency-select option {
+  font-size: var(--bw-fs-select);
+  padding: 0.35rem 0.6rem;
 }
