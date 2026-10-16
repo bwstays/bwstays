@@ -122,8 +122,8 @@ var options = {
 	"position":"left"
 },
 "brandSetting":{
-	"brandName":"Wati",
-	"brandSubTitle":"undefined",
+	"brandName":"Black and White Stays",
+	"brandSubTitle":"Chat on WhatsApp",
 	"brandImg":"https://www.bwstays.com/assets/img/icons/bw.svg",
 	"welcomeText":"Hi there!\nHow can I help you?",
 	"messageText":"Hello, %0A I have a question about {{page_link}}",

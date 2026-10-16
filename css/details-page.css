@@ -8078,3 +8078,68 @@ button, input, select, textarea, optgroup,
 #checkavailability {
   scroll-margin-top: 90px;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------
+   Typography scale (the same on every page): form fields and labels, section titles, page titles, villa card text.
+   Change a number here, not in a page. */
+:root {
+  --bw-fs-field: 0.9rem;   /* inputs, selects, textareas, pager buttons */
+  --bw-fs-label: 0.9rem;   /* form labels and checkbox labels */
+  --bw-fs-title: 1.25rem;  /* section titles */
+  --bw-fs-text: 0.9rem;    /* supporting text in cards */
+  --bw-track: 1px;         /* letter-spacing shared by text and controls */
+}
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="hidden"]),
+select,
+textarea,
+.form-control,
+.bw-page-btn {
+  font-size: var(--bw-fs-field) !important;
+  letter-spacing: var(--bw-track);
+}
+#site-search-input {
+  font-size: 1.1rem !important;
+}
+label,
+.form-label,
+.form-check-label {
+  font-size: var(--bw-fs-label) !important;
+}
+#contact-form label {
+  text-transform: none !important;
+  letter-spacing: var(--bw-track) !important;
+}
+.booking-page h5[aria-level="2"],
+.booking-page .date-range-container h5,
+.booking-page .date-range-container h2,
+.bk-title {
+  font-size: var(--bw-fs-title) !important;
+  font-weight: 600 !important;
+}
+.legal-hero h1,
+h1.h2 {
+  font-weight: 600;
+}
+.villa-features {
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+.villa-feature {
+  white-space: nowrap;
+}
+.villa-feature,
+#rate-note,
+.bk-text,
+.bk-amenities li {
+  font-size: var(--bw-fs-text);
+}
+.bk-lead {
+  font-size: 1rem;
+}
+/* the WhatsApp chat box is a third-party widget that loads its own font; use the site font */
+.wa-chat-box,
+.wa-chat-box *,
+.wa-chat-bubble,
+.wa-chat-bubble * {
+  font-family: var(--bw-font) !important;
+}
