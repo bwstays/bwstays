@@ -14,7 +14,7 @@
         email: 'bwstays@gmail.com'
     };
     // Estimate only: rates are as listed on the booking page; extra guests as per the site's occupancy rule.
-    var RATE = { perNight: 5000, includedAdults: 4, includedChildren: 1, includedTotal: 5, extraAdult: 1000, extraChild: 800, gst: 18 };
+    var RATE = { perNight: 3999, includedAdults: 4, includedChildren: 1, includedTotal: 5, extraAdult: 1000, extraChild: 800, gst: 18 };
     var TEAL = [63, 127, 123];
     var INK = [33, 37, 41];
     var MUTED = [108, 117, 125];

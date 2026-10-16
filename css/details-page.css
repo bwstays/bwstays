@@ -6,7 +6,6 @@
 }
 
 
-
 /* Back to Top Button */
 #btn-back-to-top {
   position: fixed;
@@ -117,7 +116,6 @@
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }
-
 
 
 .month-header {
@@ -522,7 +520,6 @@ nav#mainNav.navbar-shrink,
 }
 
 
-
 .button-container {
   margin-top: 50px;
   padding-top: 30px;
@@ -611,16 +608,6 @@ nav#mainNav.navbar-shrink,
   background-color: #528b87 !important;
 }
 
-.info-box {
-  border-left: 4px solid var(--bw-teal);
-  transition: all 0.3s ease;
-}
-
-.info-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
 .hover-primary:hover {
   color: var(--bw-teal-text) !important;
   text-decoration: none;
@@ -697,7 +684,6 @@ nav#mainNav.navbar-shrink,
   background-attachment: fixed;
   background-size: cover;
 }
-
 
 
 .tab-content {
@@ -1111,7 +1097,6 @@ div.image-nav-arrow.image-nav-right {
 }
 
 
-
 .vertical-menu a:last-child {
   border-bottom: none;
 }
@@ -1146,7 +1131,6 @@ div.image-nav-arrow.image-nav-right {
 }
 
 
-
 #contact-card::before {
   content: '';
   position: absolute;
@@ -1159,7 +1143,6 @@ div.image-nav-arrow.image-nav-right {
 }
 
 
-
 .contact-card-divider {
   width: 45%;
   height: 0px;
@@ -1169,7 +1152,6 @@ div.image-nav-arrow.image-nav-right {
   transition: all 0.3s ease;
 
 }
-
 
 
 /* Responsive Design */
@@ -1216,25 +1198,6 @@ div.image-nav-arrow.image-nav-right {
   }
 
 
-}
-
-/* Video Section Styling */
-
-
-
-.faq-section-wrapper {
-  background-color: #f8f9fa;
-  padding: 2rem 0;
-}
-
-.faq-section {
-  padding: 50px 20px;
-  margin: 50px 0;
-  text-align: center;
-}
-
-#faq-title-divider {
-  width: 100px;
 }
 
 .food-places {
@@ -1359,7 +1322,6 @@ div.image-nav-arrow.image-nav-right {
 }
 
 
-
 /* Fuel Places Section Styling */
 #fuel-places {
   border-radius: 20px;
@@ -1390,7 +1352,6 @@ div.image-nav-arrow.image-nav-right {
   display: block;
   margin: 0;
 }
-
 
 
 /* Chat icon and modal styles */
@@ -1586,7 +1547,6 @@ a.text-black:focus {
 }
 
 
-
 /* Custom checkbox styles - blue by default */
 .form-check-input,
 .custom-control-input {
@@ -1608,7 +1568,6 @@ a.text-black:focus {
   border-color: var(--bw-teal) !important;
   box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.25);
 }
-
 
 
 /* Ensure all checkbox icons are consistent */
@@ -1682,7 +1641,6 @@ a.text-black:focus {
   opacity: 0.85;
   cursor: pointer;
 }
-
 
 
 .chat-body {
@@ -1983,7 +1941,6 @@ a.text-black:focus {
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 123, 255, 0.5);
 }
-
 
 
 /* Statistics Card Styling */
@@ -2347,7 +2304,6 @@ a.text-black:focus {
   flex-direction: column;
   justify-content: center;
 }
-
 
 
 /* Style reviews grid as a single line */
@@ -2874,97 +2830,7 @@ a.text-black:focus {
   color: red;
 }
 
-/* FAQ Section Styles */
-.faq-section {
-  background-color: #f8f9fa;
-  padding: 80px 0;
-}
-
-.faq-item {
-  background: #fff;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-
-.faq-question {
-  border-bottom: none;
-}
-
-.faq-icon {
-  font-size: 14px;
-  color: var(--bw-teal-text);
-  transition: transform 0.3s ease;
-  margin-left: 15px;
-}
-
-/* FAQ Carousel Styles */
-.faq-carousel-nav {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.faq-page-info {
-  color: #666;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0 15px;
-  border: 2px solid #e9ecef;
-  border-radius: 20px;
-  background-color: #f8f9fa;
-  min-width: 120px;
-  text-align: center;
-  line-height: 2;
-}
-
-/* FAQ Question Active State */
-.faq-question.active {
-  background-color: var(--bw-teal) !important;
-  color: white !important;
-}
-
-.faq-question.active .faq-icon {
-  transform: rotate(180deg);
-  color: white;
-}
-
-/* FAQ Answer Animation */
-.faq-answer {
-  background-color: #f8f9fa;
-  border-top: 1px solid #e9ecef;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  padding: 0 1rem;
-  transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
-}
-
-.faq-answer.show {
-  max-height: 500px;
-  opacity: 1;
-  padding: 1.5rem;
-}
-
-.faq-answer p {
-  color: #495057;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  margin: 0;
-}
-
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .faq-section {
-    padding: 60px 0;
-  }
-}
 
 
 /* fooding -wayanad */
@@ -2992,7 +2858,6 @@ a.text-black:focus {
 .date-pick {
   background: #fff !important;
 }
-
 
 
 /* inline css of bwstays-booking */
@@ -3061,124 +2926,13 @@ a.text-black:focus {
   font-size: 1rem;
 }
 
-.faq-section {
-  background-color: #f8f9fa;
-  transition: all 0.3s ease-in-out;
-}
-
-.faq-item {
-  background: #ffffff;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.faq-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
-.faq-question {
-  padding: 20px;
-  cursor: pointer;
-  background: linear-gradient(135deg, var(--bw-teal) 0%, var(--bw-teal-dark) 100%);
-  color: white;
-  border-radius: 8px 8px 0 0;
-  transition: all 0.3s ease;
-  position: relative;
-  user-select: none;
-}
-
-.faq-question:hover {
-  background: linear-gradient(135deg, var(--bw-teal-dark) 0%, #4f7b77 100%);
-}
-
-.faq-question h5 {
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.faq-icon {
-  transition: transform 0.3s ease;
-  font-size: 1rem;
-  margin-left: 10px;
-}
-
-.faq-question.active .faq-icon {
-  transform: rotate(180deg);
-}
-
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  background-color: #ffffff;
-  border-radius: 0 0 8px 8px;
-}
-
-.faq-answer.active {
-  padding: 20px;
-  max-height: 200px;
-}
-
-.faq-answer p {
-  margin: 0;
-  color: #495057;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .faq-question {
-    padding: 15px;
-  }
-
-  .faq-question h5 {
-    font-size: 1rem;
-  }
-
-  .faq-answer.active {
-    padding: 15px;
-  }
-
-  .faq-answer p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .faq-question {
-    padding: 12px;
-  }
-
-  .faq-question h5 {
-    font-size: 0.95rem;
-  }
-
-  .faq-answer.active {
-    padding: 12px;
-  }
-}
 
 
 #requestCallback {
   position: relative;
   right: 11rem;
   bottom: 79px;
-}
-
-#faq-prev,
-#faq-next {
-  padding: .5rem 1rem !important;
-  width: 9rem !important;
 }
 
 /* Pagination Styles for Booking Reports */
@@ -3330,10 +3084,6 @@ a.text-black:focus {
   left: 100%;
   transition: transform 0.5s ease;
   min-width: 100%;
-}
-
-#faq-title-divider {
-  width: 100px;
 }
 
 /* ===== INDEX.HTML RESPONSIVE STYLES ===== */
@@ -4753,7 +4503,6 @@ a.text-black:focus {
 }
 
 
-
 /* ===== BOOKING PAGE RESPONSIVE STYLES ===== */
 
 /* Large screens (up to 991.98px) */
@@ -4819,17 +4568,6 @@ a.text-black:focus {
         margin-bottom: 0.5rem !important;
         margin-right: 0 !important;
         text-align: center;
-    }
-    
-    .booking-page .faq-carousel-nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .booking-page .faq-carousel-nav .btn {
-        width: 100%;
-        max-width: 200px;
-        margin: 0 auto !important;
     }
     
     .booking-page .testimonial-section .row {
@@ -4958,29 +4696,6 @@ a.text-black:focus {
     .booking-page .captcha-container .btn {
         margin-top: 0.5rem;
         margin-left: 0 !important;
-    }
-    
-    /* Info Box */
-    .booking-page .info-box {
-        padding: 1rem !important;
-    }
-    
-    .booking-page .info-box h5 {
-        font-size: 1rem;
-    }
-    
-    .booking-page .info-box .fa-2x {
-        font-size: 1.5em !important;
-    }
-    
-    /* FAQ Section */
-    .booking-page .faq-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .booking-page .faq-page-info {
-        display: block;
-        margin: 0.5rem 0;
     }
     
     /* Contact Form */
@@ -5224,58 +4939,6 @@ a.text-black:focus {
     .booking-page .btn-lg {
         padding: 0.5rem 1.5rem;
         font-size: 0.9rem;
-    }
-    
-    /* Info Box */
-    .booking-page .info-box {
-        padding: 0.75rem !important;
-        margin-top: 1rem;
-    }
-    
-    .booking-page .info-box .d-flex {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .booking-page .info-box .fa-2x {
-        font-size: 1.2em !important;
-        margin-bottom: 0.5rem;
-        margin-right: 0 !important;
-    }
-    
-    .booking-page .info-box h5 {
-        font-size: 0.9rem;
-    }
-    
-    .booking-page .info-box p {
-        font-size: 0.8rem;
-    }
-    
-    .booking-page .info-box ul {
-        padding-left: 0 !important;
-    }
-    
-    .booking-page .info-box li {
-        margin-bottom: 0.5rem;
-        font-size: 0.8rem;
-    }
-    
-    /* FAQ Section */
-    .booking-page .faq-section {
-        padding: 2rem 0;
-    }
-    
-    .booking-page .faq-section h2 {
-        font-size: 1.3rem;
-    }
-    
-    .booking-page .faq-carousel-nav .btn {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-    
-    .booking-page .faq-page-info {
-        font-size: 0.8rem;
     }
     
     /* Contact Section */
@@ -5550,7 +5213,6 @@ select#fromCurrency {
 }
 
 
-
 /* Weather Widget and Currency Converter Widget - Solid Style */
 .weather-widget,
 .currency-converter-widget {
@@ -5584,7 +5246,6 @@ select#fromCurrency {
   flex-direction: column;
   justify-content: space-between;
 }
-
 
 
 .weather-location {
@@ -5670,7 +5331,6 @@ select#fromCurrency {
   vertical-align: top;
   font-weight: 500;
 }
-
 
 
 /* Responsive adjustments for widgets */
@@ -5859,7 +5519,6 @@ select#fromCurrency {
 }
 
 
-
 .currency-selection {
   display: flex;
   flex-direction: column;
@@ -5990,8 +5649,6 @@ select#fromCurrency {
     font-weight: 500;
     color:#000000
 }
-
-
 
 
 /* Currency Converter Widget Styles */
@@ -6235,10 +5892,8 @@ select#fromCurrency {
     padding-bottom: 0.25rem;
     scrollbar-width: thin;
   }
-}
-
-/* FAQ accordion (buttons, search, no pagination) */
-button.faq-question {
+}/* FAQ accordion (buttons,
+search {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6247,28 +5902,11 @@ button.faq-question {
   text-align: left;
   cursor: pointer;
 }
-button.faq-question .faq-question-text {
-  padding-right: 1rem;
-}
-.faq-answer:not(.show) {
-  visibility: hidden;
-}
-.faq-search-box {
-  max-width: 560px;
-  margin: 0 auto 1.25rem;
-}
-.faq-search {
-  border-radius: 999px;
-  padding-left: 1.1rem;
-}
 .faq-count {
   margin: 0.4rem 0 0;
   color: #6c757d;
   font-size: 0.8rem;
   text-align: center;
-}
-.faq-empty {
-  color: #6c757d;
 }
 
 /* Map pages: more air below the nav and between the map and the contact block (#22) */

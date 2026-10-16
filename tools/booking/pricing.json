@@ -7,7 +7,7 @@
         "property": "villa_stay"
       },
       "output": {
-        "booking_form_inr_per_night": 5000,
+        "booking_form_inr_per_night": 3999,
         "gst": "Terms state fees are inclusive of 18% GST",
         "note": "Rate as listed on the booking page."
       }
