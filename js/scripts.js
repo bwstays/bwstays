@@ -11,12 +11,30 @@
                 ? target
                 : $("[name=" + this.hash.slice(1) + "]");
             if (target.length) {
+                var landed = false;
                 $("html, body").animate(
                     {
                         scrollTop: target.offset().top - 70,
                     },
                     1000,
-                    "easeInOutExpo"
+                    "easeInOutExpo",
+                    function () {
+                        if (landed) return;
+                        landed = true;
+                        // Images and lists above the target keep loading while the page scrolls, which moves the target
+                        // and leaves the page just short of it (the menu then highlights nothing). Land exactly on it,
+                        // then let scroll-spy re-measure so the clicked menu item is highlighted.
+                        var again = target.offset().top - 70;
+                        var settle = function () {
+                            $("body").scrollspy("refresh");
+                            $(window).trigger("scroll");
+                        };
+                        if (Math.abs($(window).scrollTop() - again) > 4) {
+                            $("html, body").animate({ scrollTop: again }, 300, settle);
+                        } else {
+                            settle();
+                        }
+                    }
                 );
                 return false;
             }
@@ -29,12 +47,19 @@
         target: "#mainNav",
         offset: 100,
     });
+    // The page's own menu item (aria-current, e.g. Search) shows the highlight bar only while no section item is
+    // highlighted by scroll-spy, so exactly one item is highlighted at a time.
+    var syncCurrent = function () {
+        var sectionActive = $("#mainNav .nav-link.active").length > 0;
+        $('#mainNav .nav-link[aria-current="page"]').toggleClass("is-current", !sectionActive);
+    };
     var navbarCollapse = function () {
         if ($(window).scrollTop() > 100) {
             $("#mainNav").addClass("navbar-shrink");
         } else {
             $("#mainNav").removeClass("navbar-shrink");
         }
+        syncCurrent();
     };
     navbarCollapse();
     $(window).scroll(navbarCollapse);
