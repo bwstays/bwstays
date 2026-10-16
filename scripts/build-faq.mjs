@@ -20,6 +20,20 @@ const m = src.match(/const faqData\s*=\s*(\[[\s\S]*?\r?\n\]);/);
 if (!m) throw new Error('build-faq: faqData array not found in js/faq.js');
 const faqData = vm.runInNewContext(m[1]);
 
+// the answers quote the nightly rate and the capacity: they must match the booking page
+{
+  const booking = fs.readFileSync(path.join(ROOT, 'bwstays-booking.html'), 'utf8');
+  const rate = Number(((booking.match(/price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/i) || [])[1] || '').replace(/,/g, ''));
+  const adults = Number((booking.match(/Up to (\d+)\s*Adults?/i) || [])[1]);
+  const all = faqData.map((f) => f.answer).join(' ');
+  if (!rate || !adults) throw new Error('build-faq: could not read the rate and capacity from bwstays-booking.html');
+  const money = 'INR ' + rate.toLocaleString('en-IN');
+  if (!all.includes(money)) throw new Error(`build-faq: js/faq.js must mention "${money}" (the rate on the booking page)`);
+  const otherRates = [...all.matchAll(/INR ([\d,]+)/g)].map((m) => m[1]).filter((v) => Number(v.replace(/,/g, '')) !== rate);
+  if (otherRates.length) throw new Error('build-faq: js/faq.js quotes a rate that is not the booking page rate: INR ' + otherRates.join(', '));
+  if (!all.includes(`up to ${adults} adults`)) throw new Error(`build-faq: js/faq.js must say "up to ${adults} adults"`);
+}
+
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 const items = faqData

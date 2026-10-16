@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					villaArray1.push(adultsInput1);
 					villaArray1.push(childrenInput1);
                 }
-                obj.unitPrice = 5000; 
+                obj.unitPrice = 3999; 
                 obj.contactName = fullName;
                 obj.contactEmail = email;
                 obj.contactPersonMobNo = phone;
