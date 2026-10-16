@@ -8252,3 +8252,25 @@ body #language-selector option:hover {
   background-color: #2f6f6b;
   color: #fff;
 }
+
+/* Reservation form: the Arrival Time dropdown follows the site teal (field, focus ring and the open list) */
+.guest-information select.form-control {
+  background-color: #f2f8f7;
+  border: 1px solid #3f7f7b;
+  color: #2b3f3e;
+  cursor: pointer;
+}
+.guest-information select.form-control:focus {
+  border-color: #3f7f7b;
+  box-shadow: 0 0 0 0.2rem rgba(63, 127, 123, 0.25);
+  outline: none;
+}
+.guest-information select.form-control option {
+  background-color: #fff;
+  color: #2b3f3e;
+}
+.guest-information select.form-control option:checked,
+.guest-information select.form-control option:hover {
+  background: #3f7f7b linear-gradient(#3f7f7b, #3f7f7b);
+  color: #fff;
+}
