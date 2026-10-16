@@ -4,6 +4,7 @@
   --bw-teal: #3f7f7b;       /* the one theme colour for fills: buttons, dropdowns, circles, selected days, pills (white text 4.6:1) */
   --bw-teal-dark: #2f6f6b;  /* hover, active and pressed */
   --bw-teal-soft: #8cc4c0;  /* focus rings and tints */
+  --bw-teal-text: #64a19d;  /* teal text and links on the page backgrounds; the only place the lighter teal is defined for text */
 }
 
 :root {
