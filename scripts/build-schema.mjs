@@ -13,6 +13,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -30,6 +31,7 @@ function jsonLdBlocks(html) {
   return out;
 }
 
+const rates = vm.runInNewContext(read('data/rates.js') + ';bwRates');
 const index = read('index.html');
 const business = jsonLdBlocks(index).find((b) => b['@type'] === 'LocalBusiness');
 if (!business) throw new Error('build-schema: LocalBusiness JSON-LD not found in index.html');
@@ -64,13 +66,15 @@ function put(file, begin, end, block) {
   if (!rate || !beds || !adults || amenities.length < 5 || images.length < 3) {
     throw new Error(`build-schema: could not read the villa facts from the booking page (rate ${rate}, beds ${beds}, adults ${adults}, amenities ${amenities.length}, images ${images.length})`);
   }
+  if (rate !== rates.perNight) throw new Error(`build-schema: the booking page shows INR ${rate} but data/rates.js says INR ${rates.perNight}`);
+  if (adults !== rates.maxAdults) throw new Error(`build-schema: the booking page says up to ${adults} adults but data/rates.js says ${rates.maxAdults}`);
   const rental = {
     '@context': 'https://schema.org',
     '@type': 'VacationRental',
     '@id': `${SITE}/bwstays-booking.html#villa-stay`,
     name: 'Black and White Stays - Villa Stay',
     identifier: 'bwstays-villa-stay',
-    description: `A villa stay in Kalpetta, Wayanad for staycations and workations. The large room sleeps up to ${adults} adults. Rate listed on the booking page: INR ${rate} per night.`,
+    description: `A villa stay in Kalpetta, Wayanad for staycations and workations. The large room sleeps up to ${adults} adults. Rate listed on the booking page: INR ${rate} per night, GST included. Extra bed per night: INR ${rates.extraAdultPerNight} per extra adult and INR ${rates.extraChildPerNight} per extra child, beyond ${rates.includedAdults} adults and ${rates.includedChildren} child.`,
     url: `${SITE}/bwstays-booking.html`,
     image: images,
     latitude: business.geo.latitude,

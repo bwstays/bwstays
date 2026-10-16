@@ -29,8 +29,16 @@ const faqData = vm.runInNewContext(m[1]);
   if (!rate || !adults) throw new Error('build-faq: could not read the rate and capacity from bwstays-booking.html');
   const money = 'INR ' + rate.toLocaleString('en-IN');
   if (!all.includes(money)) throw new Error(`build-faq: js/faq.js must mention "${money}" (the rate on the booking page)`);
-  const otherRates = [...all.matchAll(/INR ([\d,]+)/g)].map((m) => m[1]).filter((v) => Number(v.replace(/,/g, '')) !== rate);
-  if (otherRates.length) throw new Error('build-faq: js/faq.js quotes a rate that is not the booking page rate: INR ' + otherRates.join(', '));
+  const rates = vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'data/rates.js'), 'utf8') + ';bwRates');
+  if (rates.perNight !== rate) throw new Error(`build-faq: bwstays-booking.html shows INR ${rate} but data/rates.js says INR ${rates.perNight}`);
+  const allowed = new Set([rate, rates.extraAdultPerNight, rates.extraChildPerNight]);
+  const otherRates = [...all.matchAll(/INR ([\d,]+)/g)].map((m) => m[1]).filter((v) => !allowed.has(Number(v.replace(/,/g, ''))));
+  if (otherRates.length) throw new Error('build-faq: js/faq.js quotes an amount that is not in data/rates.js: INR ' + otherRates.join(', '));
+  for (const v of [rates.extraAdultPerNight, rates.extraChildPerNight]) {
+    const fmt = v.toLocaleString('en-IN');
+    if (!all.includes('INR ' + fmt)) throw new Error(`build-faq: js/faq.js must mention the extra bed charge INR ${fmt}`);
+    if (!booking.includes('₹' + fmt)) throw new Error(`build-faq: the booking page card (rate-note) must mention the extra bed charge ₹${fmt}`);
+  }
   if (!all.includes(`up to ${adults} adults`)) throw new Error(`build-faq: js/faq.js must say "up to ${adults} adults"`);
 }
 
