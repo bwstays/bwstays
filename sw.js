@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = 'aca2b806ae';
+const VERSION = '93c080e081';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -31,7 +31,7 @@ const SHELL = [
   "/assets/img/pwa/icon-96.png",
   "/assets/img/pwa/icon-maskable-512.png",
   "/bwstays-booking.html",
-  "/css/details-page.min.css?v=a6e9648d",
+  "/css/details-page.min.css?v=c76c8a67",
   "/css/fontawesome.min.css?v=a611ff0d",
   "/css/maps.min.css?v=cef28474",
   "/css/new-page.min.css?v=f2e8abdc",
@@ -59,7 +59,7 @@ const SHELL = [
   "/js/specrule.min.js?v=1f8a513f",
   "/js/testimonial.min.js?v=c59378fa",
   "/js/total-booking-reports.min.js?v=5527f1e2",
-  "/js/validations.min.js?v=c89575c7",
+  "/js/validations.min.js?v=83a714d7",
   "/js/way_food_loc.min.js?v=10afad43",
   "/js/wayanad_kalpetta_trait-one.min.js?v=1bfb78be",
   "/js/widgets.min.js?v=913ebcd9",

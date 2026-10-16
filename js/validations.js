@@ -155,3 +155,14 @@ document.addEventListener('DOMContentLoaded', renderTestimonial);
 	                  });
 	              });
 	          });
+
+// Live character counters for the hints under long text fields (<span class="bw-count" data-for="hint-id">)
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.bw-count[data-for]').forEach(function (counter) {
+    var field = document.querySelector('[aria-describedby="' + counter.getAttribute('data-for') + '"]');
+    if (!field) return;
+    var update = function () { counter.textContent = field.value.length; };
+    field.addEventListener('input', update);
+    update();
+  });
+});

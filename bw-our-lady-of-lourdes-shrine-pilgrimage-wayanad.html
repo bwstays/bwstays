@@ -129,7 +129,7 @@
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.bwstays.com/assets/img/pwa/apple-touch-icon.png" />
- <link href="https://www.bwstays.com/css/details-page.min.css?v=a6e9648d" rel="stylesheet" type="text/css" media="all"/>
+ <link href="https://www.bwstays.com/css/details-page.min.css?v=c76c8a67" rel="stylesheet" type="text/css" media="all"/>
       <link href="https://www.bwstays.com/css/new-page.min.css?v=f2e8abdc" rel="stylesheet" type="text/css" media="all"/>
  <link rel="stylesheet" href="https://www.bwstays.com/vendor/leaflet/leaflet.min.css?v=1.9.4" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://www.bwstays.com/vendor/leaflet/leaflet.min.css?v=1.9.4"></noscript>
 
@@ -1315,14 +1315,16 @@
                             <div class="form-group mb-3">
                                 <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
                                 <input  type="text"
-                                    class="form-control bg-light border-0" id="inputName"  autocomplete="name" required placeholder="Your Name" maxlength="80">
+                                    class="form-control bg-light border-0" id="inputName"  autocomplete="name" required placeholder="Your Name" maxlength="80" aria-describedby="hint-contact-name">
+<small class="bw-hint" id="hint-contact-name">Your full name, up to 80 characters.</small>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mb-3">
                                 <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
                                 <input   type="email"  autocomplete="email"
-                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="your email" maxlength="254">
+                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="your email" maxlength="254" aria-describedby="hint-contact-email">
+<small class="bw-hint" id="hint-contact-email">For example name@example.com (up to 254 characters).</small>
                             </div>
                         </div>
                     </div>
@@ -1332,7 +1334,8 @@
                         <label for="inputAddress2" class="text-white-50 small text-uppercase" data-i18n="nav.contact" >Contact</label>
                         <input  type="text"
                             class="form-control bg-light border-0" id="inputAddress2"  autocomplete="street-address"
-                              required placeholder="+-- --- --- ----" maxlength="20" inputmode="tel">
+                              required placeholder="+-- --- --- ----" maxlength="20" inputmode="tel" aria-describedby="hint-contact-phone">
+<small class="bw-hint" id="hint-contact-phone">Phone or WhatsApp with country code, for example +91 98765 43210 (7 to 15 digits).</small>
                     </div>
 
                     <div class="row">
@@ -1342,7 +1345,8 @@
                     <div class="form-group mb-3">
                         <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
                         <textarea autocomplete="off"    class="form-control bg-light border-0"
-                            id="inputMessage" rows="3" required placeholder="Your message" maxlength="1000"></textarea>
+                            id="inputMessage" rows="3" required placeholder="Your message" maxlength="1000" aria-describedby="hint-contact-message"></textarea>
+<small class="bw-hint" id="hint-contact-message">Up to 1000 characters. <span class="bw-count" data-for="hint-contact-message">0</span>/1000</small>
                     </div>
                                         <div class="form-group mb-3">
 					                        <label class="text-white-50 small text-uppercase">Security Verification</label>
@@ -1350,12 +1354,13 @@
 					                            <div class="captcha-question p-2  mr-3">
 					                                <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
 					                            </div>
-					                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" required maxlength="2" inputmode="numeric" autocomplete="off">
+					                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer" required maxlength="2" inputmode="numeric" autocomplete="off" aria-describedby="hint-captcha">
 					                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh">
 					                                <i class="fas fa-sync-alt"></i>
 					                            </button>
 					                        </div>
 					                        <div id="captcha-error" class="captcha-error-message"></div>
+<small class="bw-hint" id="hint-captcha">Type the sum of the two numbers.</small>
                     </div>
                     <button class="btn btn-primary btn-block   px-4  py-2 text-uppercase"
                         type="submit" aria-label="Request Callback">Request Callback</button>
@@ -1642,7 +1647,7 @@
   <script  type="text/javascript"   src="https://www.bwstays.com/js/language.min.js?v=d8bf0fe7" ></script>
 
 
-   <script type="text/javascript"  src="https://www.bwstays.com/js/validations.min.js?v=c89575c7"></script>
+   <script type="text/javascript"  src="https://www.bwstays.com/js/validations.min.js?v=83a714d7"></script>
    <script type="text/javascript" src="https://www.bwstays.com/js/pwa.min.js?v=9f12090c" defer data-cfasync="false"></script>
 </body>
 
