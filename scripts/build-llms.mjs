@@ -75,7 +75,7 @@ const villa = json('resources/properties.json').content.properties[0];
 lines.push('### The villa');
 lines.push(`- ${villa.name}: the only stay offered. Book and see photos, the video tour and amenities on ${villa.page_url}.`);
 lines.push(`- Rate listed on the booking page: INR ${villa.price_listed_on_booking_form_inr_per_night} per night, GST included. Beds: ${villa.beds}. Capacity: ${villa.max_guests}.`);
-lines.push(`- Extra bed (per night): INR ${villa.extra_bed.extra_adult_inr_per_night} per extra adult and INR ${villa.extra_bed.extra_child_inr_per_night} per extra child, beyond the ${villa.extra_bed.included_in_nightly_rate} included in the nightly rate.`);
+lines.push(`- Extra child (per night): INR ${villa.extra_bed.extra_child_inr_per_night} for each child beyond the ${villa.extra_bed.included_in_nightly_rate} included in the nightly rate; the booking form accepts up to ${villa.extra_bed.max_adults} adults and ${villa.extra_bed.max_children} children.`);
 lines.push(`- Amenities: ${villa.amenities.join(', ')}. Pets allowed: ${villa.pets_allowed ? 'yes' : 'no'}.`, '');
 
 const faq = json('resources/help.json').content.faq;

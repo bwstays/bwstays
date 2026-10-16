@@ -467,7 +467,7 @@
         parts.push('Many popular Wayanad attractions have general info easily found on Google. We focus on local timing tips, crowd avoidance, and how to combine nearby spots for the perfect day out!');
       }
       if(wantsStay){
-        parts.push('For comfortable stays in Wayanad, our villa stay is the perfect base for your Wayanad adventures; the large room sleeps up to 8 adults.');
+        parts.push('For comfortable stays in Wayanad, our villa stay is the perfect base for your Wayanad adventures; the villa takes up to 4 adults and 4 children.');
         parts.push('- Villa stay, photos and amenities: https://www.bwstays.com/bwstays-booking.html#selectvilla');
       }
       if(wantsAvail || wantsPrice){

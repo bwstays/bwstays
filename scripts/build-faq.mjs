@@ -31,16 +31,17 @@ const faqData = vm.runInNewContext(m[1]);
   if (!all.includes(money)) throw new Error(`build-faq: js/faq.js must mention "${money}" (the rate on the booking page)`);
   const rates = vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'data/rates.js'), 'utf8') + ';bwRates');
   if (rates.perNight !== rate) throw new Error(`build-faq: bwstays-booking.html shows INR ${rate} but data/rates.js says INR ${rates.perNight}`);
-  const allowed = new Set([rate, rates.extraAdultPerNight, rates.extraChildPerNight]);
+  const allowed = new Set([rate, rates.extraChildPerNight]);
   const otherRates = [...all.matchAll(/INR ([\d,]+)/g)].map((m) => m[1]).filter((v) => !allowed.has(Number(v.replace(/,/g, ''))));
   if (otherRates.length) throw new Error('build-faq: js/faq.js quotes an amount that is not in data/rates.js: INR ' + otherRates.join(', '));
-  for (const v of [rates.extraAdultPerNight, rates.extraChildPerNight]) {
+  for (const v of [rates.extraChildPerNight]) {
     const fmt = v.toLocaleString('en-IN');
     if (!all.includes('INR ' + fmt)) throw new Error(`build-faq: js/faq.js must mention the extra bed charge INR ${fmt}`);
     if (!booking.includes('₹' + fmt)) throw new Error(`build-faq: the booking page card (rate-note) must mention the extra bed charge ₹${fmt}`);
   }
-  if (adults !== rates.includedAdults) throw new Error(`build-faq: the booking page card says up to ${adults} adults but data/rates.js includes ${rates.includedAdults}`);
+  if (adults !== rates.maxAdults) throw new Error(`build-faq: the booking page card says up to ${adults} adults but data/rates.js allows ${rates.maxAdults}`);
   if (!all.includes(`up to ${rates.maxAdults} adults`)) throw new Error(`build-faq: js/faq.js must say "up to ${rates.maxAdults} adults"`);
+  if (!all.includes(`up to ${rates.maxChildren} children`)) throw new Error(`build-faq: js/faq.js must say "up to ${rates.maxChildren} children"`);
 }
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
