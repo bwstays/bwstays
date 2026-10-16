@@ -267,7 +267,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
                 plusBtn.addEventListener('click', function () {
                     let value = parseInt(input.value);
-                    input.value = value + 1;
+                    const max = parseInt(input.dataset.max, 10);
+                    if (!max || value < max) {
+                        input.value = value + 1;
+                    }
                 });
             });
         });

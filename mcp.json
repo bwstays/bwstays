@@ -1,7 +1,7 @@
 {
   "name": "bwstays",
   "version": "2.0.0",
-  "description": "AI context for Black and White Stays - villas and workation stays in Kalpetta, Wayanad, Kerala",
+  "description": "AI context for Black and White Stays - a villa stay for vacations and workations in Kalpetta, Wayanad, Kerala",
   "metadata": {
     "generated": "2026-10-16",
     "generator": "scripts/generate-mcp.mjs",

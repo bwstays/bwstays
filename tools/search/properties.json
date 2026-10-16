@@ -14,7 +14,7 @@
             "page_url": "https://www.bwstays.com/bwstays-booking.html",
             "type": "Entire villa",
             "beds": 2,
-            "max_guests": "2 guests on the villa card; the amenities list says \"Up to 8 Adults\"",
+            "max_guests": "Up to 8 adults in the large room",
             "price_listed_on_booking_form_inr_per_night": 5000,
             "amenities": [
               "EV Charging",
@@ -50,7 +50,7 @@
             "page_url": "https://www.bwstays.com/bwstays-booking.html",
             "type": "Entire villa",
             "beds": 2,
-            "max_guests": "2 guests on the villa card; the amenities list says \"Up to 8 Adults\"",
+            "max_guests": "Up to 8 adults in the large room",
             "price_listed_on_booking_form_inr_per_night": 5000,
             "amenities": [
               "EV Charging",
@@ -86,7 +86,7 @@
             "page_url": "https://www.bwstays.com/bwstays-booking.html",
             "type": "Entire villa",
             "beds": 2,
-            "max_guests": "2 guests on the villa card; the amenities list says \"Up to 8 Adults\"",
+            "max_guests": "Up to 8 adults in the large room",
             "price_listed_on_booking_form_inr_per_night": 5000,
             "amenities": [
               "EV Charging",

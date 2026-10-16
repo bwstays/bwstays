@@ -64,23 +64,23 @@ const faqData = [
         answer: "We specialize in corporate retreats with customized itineraries including team-building exercises, leadership workshops, outdoor adventures, and cultural experiences. Our packages include accommodation, meeting facilities, meals, and activity coordination."
     },
     {
-        question: "Where are BW Stays Wayanad villas located relative to tourist spots?",
-        answer: "Our BW Stays Wayanad villas are strategically located within close proximity to major tourist attractions including Chembra Peak, Pookode Lake, Edakkal Caves, and Banasura Sagar Dam. Most attractions are within 15-30 minutes drive, offering easy access while maintaining the tranquility needed for productive work."
+        question: "Where is the BW Stays Wayanad villa located relative to tourist spots?",
+        answer: "Our BW Stays Wayanad villa is strategically located within close proximity to major tourist attractions including Chembra Peak, Pookode Lake, Edakkal Caves, and Banasura Sagar Dam. Most attractions are within 15-30 minutes drive, offering easy access while maintaining the tranquility needed for productive work."
     },
     {
-        question: "Luxury villas Wayanad with coworking space",
-        answer: "Our luxury villas in Wayanad feature dedicated coworking spaces with high-speed WiFi, ergonomic furniture, meeting rooms, and quiet zones. Each villa combines premium amenities like private pools, gourmet kitchens, and spa facilities with professional workspace infrastructure for the ultimate workation experience."
+        question: "Luxury villa Wayanad with coworking space",
+        answer: "Our luxury villa in Wayanad features dedicated coworking spaces with high-speed WiFi, ergonomic furniture, meeting rooms, and quiet zones. Each villa combines premium amenities like private pools, gourmet kitchens, and spa facilities with professional workspace infrastructure for the ultimate workation experience."
     },
     {
         question: "Rent a luxury villa in Wayanad for family",
-        answer: "Our family-friendly luxury villas offer spacious accommodations with multiple bedrooms, kid-safe areas, family entertainment zones, and child-friendly amenities. Parents can work productively in dedicated spaces while children enjoy safe play areas and family activities in the beautiful Wayanad setting."
+        answer: "Our family-friendly luxury villa offers a large room that sleeps up to 8 adults, kid-safe areas, family entertainment zones, and child-friendly amenities. Parents can work productively in dedicated spaces while children enjoy safe play areas and family activities in the beautiful Wayanad setting."
     },
     {
         question: "Wayanad rentals near city center and tourist spots",
         answer: "Our Wayanad rental properties are conveniently located near Kalpetta city center and major tourist destinations. You'll have easy access to local markets, restaurants, cultural sites, and adventure activities while enjoying the peaceful environment perfect for remote work and relaxation."
     },
     {
-        question: "Do Wayanad rental villas have luxurious amenities?",
-        answer: "Yes, our Wayanad rental villas feature luxurious amenities including private pools, spa facilities, gourmet kitchens, premium bedding, air conditioning, high-speed internet, entertainment systems, landscaped gardens, and 24/7 concierge services to ensure a comfortable and productive stay."
+        question: "Does the Wayanad rental villa have luxurious amenities?",
+        answer: "Yes, our Wayanad rental villa features luxurious amenities including private pools, spa facilities, gourmet kitchens, premium bedding, air conditioning, high-speed internet, entertainment systems, landscaped gardens, and 24/7 concierge services to ensure a comfortable and productive stay."
     }
 ];

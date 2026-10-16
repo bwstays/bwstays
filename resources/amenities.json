@@ -21,7 +21,7 @@
       "Garden"
     ],
     "beds": 2,
-    "max_guests_listed": "Up to 8 Adults",
+    "max_adults": 8,
     "pets_allowed": true
   },
   "metadata": {
