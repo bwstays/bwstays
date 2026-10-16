@@ -1,5 +1,5 @@
 {
-  "css/details-page.css": "011ce7789815",
+  "css/details-page.css": "3296aca8e296",
   "css/maps.css": "c3a77def87bd",
   "css/new-page.css": "d8af789de46b",
   "css/page-404.css": "2687648efbb1",
@@ -18,6 +18,7 @@
   "js/knowmore-place-dynamic.js": "22650f8ad7ca",
   "js/language.js": "57acf52a92d2",
   "js/legal-page.js": "2d3e70dc2705",
+  "js/map-guard.js": "f0a4536f17df",
   "js/pdfgen.js": "69b8e9f32168",
   "js/promo-banner.js": "9b0a8443a3f0",
   "js/pwa.js": "457cc84243b5",
