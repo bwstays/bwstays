@@ -133,7 +133,7 @@
 
     <link href="https://www.bwstays.com/css/styles.min.css?v=42d28f62" rel="stylesheet"   type='text/css' media='all'  />
     <link href="https://www.bwstays.com/css/maps.min.css?v=cef28474" rel="stylesheet"   type='text/css' media='all'  />
-    <link href="https://www.bwstays.com/css/details-page.min.css?v=30372491" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://www.bwstays.com/css/details-page.min.css?v=a6e9648d" rel="stylesheet" type="text/css" media="all"/>
     <link href="https://www.bwstays.com/css/new-page.min.css?v=f2e8abdc" rel="stylesheet" type="text/css" media="all"/>
 
 
@@ -193,7 +193,7 @@
   "@id": "https://www.bwstays.com/bwstays-booking.html#villa-stay",
   "name": "Black and White Stays - Villa Stay",
   "identifier": "bwstays-villa-stay",
-  "description": "A villa stay in Kalpetta, Wayanad for staycations and workations. The large room sleeps up to 8 adults. Rate listed on the booking page: INR 3999 per night, GST included. Extra bed per night: INR 1000 per extra adult and INR 800 per extra child, beyond 4 adults and 1 child.",
+  "description": "A villa stay in Kalpetta, Wayanad for staycations and workations. The villa takes up to 4 adults and 4 children. Rate listed on the booking page: INR 3999 per night, GST included. Extra child per night: INR 800 for each child beyond 1.",
   "url": "https://www.bwstays.com/bwstays-booking.html",
   "image": [
     "https://www.bwstays.com/assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp",
@@ -226,7 +226,7 @@
     "occupancy": {
       "@type": "QuantitativeValue",
       "value": 8,
-      "unitText": "adults"
+      "unitText": "guests"
     },
     "bed": {
       "@type": "BedDetails",
@@ -476,7 +476,7 @@
                                         <h5 aria-level="3" class="mb-0">Villa Stay</h5>
                                         <span class="price-tag px-4  py-2 text-uppercase">₹3,999/night</span>
                                     </div>
-                                    <p class="small text-muted mb-2" id="rate-note">Includes up to 4 adults and 1 child. Extra bed: ₹1,000 per extra adult and ₹800 per extra child, per night. Rates include GST.</p>
+                                    <p class="small text-muted mb-2" id="rate-note">Includes up to 4 adults and 1 child. Extra child (up to 4 children in all): ₹800 per night. Rates include GST.</p>
                                     <div class="villa-features">
                                         <div class="villa-feature"><i class="fas fa-bed text-primary"></i> 2 Beds
                                         </div>
@@ -504,7 +504,7 @@
                                          <button class="counter-btn minus faMinusBtn" type="button" aria-label="Minus">
                                              <i class="fas fa-minus"></i>
                                          </button>
-                                         <input  type="text" class="counter-inputvilla1 faInputBox" data-max="8" value="4" aria-label="Adults, Villa Stay" readonly>
+                                         <input  type="text" class="counter-inputvilla1 faInputBox" data-min="1" data-max="4" value="4" aria-label="Adults, Villa Stay" readonly>
                                          <button class="counter-btn plus faPlusBtn" type="button" aria-label="Plus">
                                              <i class="fas fa-plus"></i>
                                          </button>
@@ -516,7 +516,7 @@
                                          <button class="counter-btn minus faMinusBtn" type="button" aria-label="Minus">
                                              <i class="fas fa-minus"></i>
                                          </button>
-                                         <input  type="text" class="counter-inputvilla faInputBox" value="1" aria-label="Children (0-12 years), Villa Stay" readonly>
+                                         <input  type="text" class="counter-inputvilla faInputBox" data-min="0" data-max="4" value="1" aria-label="Children (0-12 years), Villa Stay" readonly>
                                          <button class="counter-btn plus faPlusBtn" type="button" aria-label="Plus">
                                              <i class="fas fa-plus"></i>
                                          </button>
@@ -618,16 +618,16 @@
                                 <h6 aria-level="3" class="mb-3 text-primary">Primary Guest</h6>
                                 <div class="form-group mb-3">
                                     <label class="form-label">Full Name<span class="required-asterisk">*</span></label>
-                                    <input  type="text" class="form-control" placeholder="Enter your full name" required>
+                                    <input  type="text" class="form-control" placeholder="Enter your full name" required maxlength="80" autocomplete="name">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="form-label">Email<span class="required-asterisk">*</span></label>
-                                    <input    type="email"  autocomplete="email"    class="form-control" placeholder="Enter your email" required>
+                                    <input    type="email"  autocomplete="email"    class="form-control" placeholder="Enter your email" required maxlength="254">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="form-label">Phone Number<span class="required-asterisk">*</span></label>
                                     <input  type="tel" class="form-control" placeholder="Enter your phone number"
-                                        required>
+                                        required maxlength="20" inputmode="tel" autocomplete="tel">
                                 </div>
                             </div>
 
@@ -637,7 +637,7 @@
                                 <div class="form-group mb-3">
                                     <label class="form-label">Your Address<span class="required-asterisk">*</span></label>
                                     <textarea autocomplete="off"    class="form-control" rows="3"
-                                        placeholder="Your Address"></textarea>
+                                        placeholder="Your Address" maxlength="500"></textarea>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="form-label">Arrival Time<span class="required-asterisk">*</span></label>
@@ -657,7 +657,7 @@
                                         <div class="captcha-question p-2 mr-3" id="booking-captcha-ques">
                                             <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
                                         </div>
-                                        <input type="text" class="form-control" id="captcha-answer" placeholder="Enter answer"required>
+                                        <input type="text" class="form-control" id="captcha-answer" placeholder="Enter answer"required maxlength="2" inputmode="numeric" autocomplete="off">
                                         <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh">
                                             <i class="fas fa-sync-alt"></i>
                                         </button>
@@ -713,14 +713,14 @@
                             <div class="form-group mb-3">
                                 <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
                                 <input  type="text"
-                                    class="form-control bg-light border-0" id="inputName"  autocomplete="name" required placeholder="Your Name">
+                                    class="form-control bg-light border-0" id="inputName"  autocomplete="name" required placeholder="Your Name" maxlength="80">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mb-3">
                                 <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
                                 <input   type="email"  autocomplete="email"
-                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="your email">
+                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="your email" maxlength="254">
                             </div>
                         </div>
                     </div>
@@ -730,7 +730,7 @@
                         <label for="inputAddress2" class="text-white-50 small text-uppercase" data-i18n="nav.contact" >Contact</label>
                         <input  type="text"
                             class="form-control bg-light border-0" id="inputAddress2"  autocomplete="street-address"
-                              required placeholder="+-- --- --- ----">
+                              required placeholder="+-- --- --- ----" maxlength="20" inputmode="tel">
                     </div>
 
                     <div class="row">
@@ -740,7 +740,7 @@
                     <div class="form-group mb-3">
                         <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
                         <textarea autocomplete="off"    class="form-control bg-light border-0"
-                            id="inputMessage" rows="3" required placeholder="Your message"></textarea>
+                            id="inputMessage" rows="3" required placeholder="Your message" maxlength="1000"></textarea>
                     </div>
 
 
@@ -750,7 +750,7 @@
                             <div class="captcha-question p-2 rounded mr-3" >
                                 <span id="captcha-num1-contact">5</span> + <span id="captcha-num2-contact">3</span> = ?
                             </div>
-                            <input type="text" class="form-control bg-light border-0" id="captcha-answer-contact" placeholder="Enter answer" required>
+                            <input type="text" class="form-control bg-light border-0" id="captcha-answer-contact" placeholder="Enter answer" required maxlength="2" inputmode="numeric" autocomplete="off">
                             <button type="button" class="btn btn-outline-secondary btn-sm ml-2 px-4  py-2 " id="refresh-captcha-contact" title="Refresh">
                                 <i class="fas fa-sync-alt"></i>
                             </button>
@@ -1006,22 +1006,22 @@
 
     <script type="text/javascript" src="https://www.bwstays.com/js/scripts.min.js?v=7537fada"></script>
 
-    <script type="text/javascript" src="https://www.bwstays.com/data/rates.min.js?v=2e7a7755"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/data/rates.min.js?v=633df2f6"></script>
     <script type="text/javascript" src="https://www.bwstays.com/data/bookingdata.min.js?v=aa645397"></script>
     <script type="text/javascript" src="https://www.bwstays.com/data/closeddata.min.js?v=92616d47"></script>
     <script type="text/javascript" src="https://www.bwstays.com/data/pendingdata.min.js?v=2c4bf2f1"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.2/jspdf.plugin.autotable.min.js"></script>
 
-    <script type="text/javascript" src="https://www.bwstays.com/js/pdfgen.min.js?v=a45b12e0"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/js/pdfgen.min.js?v=56444957"></script>
 
-    <script type="text/javascript" src="https://www.bwstays.com/js/booking.min.js?v=f36303f0"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/js/booking.min.js?v=8936de99"></script>
 
-<script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.min.js?v=56cb74aa' + Date.now();document.body.appendChild(script);</script>  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.min.js?v=1433e229"></script>
+<script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.min.js?v=56cb74aa' + Date.now();document.body.appendChild(script);</script>  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.min.js?v=71b140e2"></script>
 
   <script  type="text/javascript"   src="https://www.bwstays.com/js/language.min.js?v=d8bf0fe7" ></script>
 
-    <script type="text/javascript"  src="https://www.bwstays.com/js/validations.min.js?v=ef97f6ba"></script>
+    <script type="text/javascript"  src="https://www.bwstays.com/js/validations.min.js?v=c89575c7"></script>
 
 
 
