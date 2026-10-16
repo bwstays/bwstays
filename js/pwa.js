@@ -185,7 +185,7 @@
 
   // ---- registration
   function register() {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (reg) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/', updateViaCache: 'none' }).then(function (reg) {
       if (reg.waiting && navigator.serviceWorker.controller) promptUpdate(reg.waiting);
       reg.addEventListener('updatefound', function () {
         var w = reg.installing;
