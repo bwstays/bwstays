@@ -6247,6 +6247,7 @@ search {
   font-size: 1.75rem;
   letter-spacing: 0.02em;
 }
+#contact-divider-1,
 #contact-divider-2,
 #contact-divider-3,
 #contact-divider-4,
@@ -6539,6 +6540,7 @@ search {
 }
 
 /* centred section headings share one short accent line; sub-headings share another */
+#contact-divider-1,
 #contact-divider-2,
 #contact-divider-3,
 #contact-divider-5 {
