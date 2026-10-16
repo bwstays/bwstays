@@ -88,7 +88,7 @@ s.src = url;
 var options = {
 "enabled":true,
 "chatButtonSetting":{
-	"backgroundColor":"#64a19d",
+	"backgroundColor":"#3f7f7b",
 	"borderRadius":"3",
 	"marginLeft": "10",
 	"marginRight": "5",
@@ -102,7 +102,7 @@ var options = {
 	"brandImg":"https://www.bwstays.com/assets/img/icons/bw.svg",
 	"welcomeText":"Hi there!\nHow can I help you?",
 	"messageText":"Hello, %0A I have a question about {{page_link}}",
-	"backgroundColor":"#64a19d",
+	"backgroundColor":"#3f7f7b",
 	"ctaText":"Chat with bw Team",
 	"borderRadius":"25",
 	"autoShow":false,
