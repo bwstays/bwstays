@@ -2,9 +2,9 @@
 <defs><clipPath id="r"><rect width="512" height="512" rx="96"/></clipPath></defs>
 <g clip-path="url(#r)">
 <rect width="512" height="512" fill="#ffffff"/>
-<path d="M0 0H512L0 512Z" fill="#111111"/>
+<path d="M0 0H512L0 512Z" fill="#454a4f"/>
 <path d="M512 0L0 512" stroke="#3f7f7b" stroke-width="16"/>
 <g transform="translate(256 256) scale(1.0) translate(-256 -256)">
 <path transform="translate(158 158) scale(1.2) translate(-142 -170)" d="M100 105V235M100 105H145A32.5 32.5 0 0 1 145 170H100M100 170H152A32.5 32.5 0 0 1 152 235H100" fill="none" stroke="#ffffff" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
-<path transform="translate(354 354) scale(1.2) translate(-360 -350)" d="M290 285L317 415L360 320L403 415L430 285" fill="none" stroke="#111111" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
-</g></g><rect x="8" y="8" width="496" height="496" rx="88" fill="none" stroke="#111111" stroke-width="16"/></svg>
+<path transform="translate(354 354) scale(1.2) translate(-360 -350)" d="M290 285L317 415L360 320L403 415L430 285" fill="none" stroke="#454a4f" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+</g></g><rect x="8" y="8" width="496" height="496" rx="88" fill="none" stroke="#454a4f" stroke-width="16"/></svg>
