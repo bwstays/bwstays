@@ -14,7 +14,9 @@
         email: 'bwstays@gmail.com'
     };
     // Estimate only: rates are as listed on the booking page; extra guests as per the site's occupancy rule.
-    var RATE = { perNight: 3999, includedAdults: 4, includedChildren: 1, includedTotal: 5, extraAdult: 1000, extraChild: 800, gst: 18 };
+    // data/rates.js (loaded before this file) is the single source of the rates; the fallback below only guards a failed load.
+    var R0 = global.bwRates || { perNight: 3999, includedAdults: 4, includedChildren: 1, extraAdultPerNight: 1000, extraChildPerNight: 800 };
+    var RATE = { perNight: R0.perNight, includedAdults: R0.includedAdults, includedChildren: R0.includedChildren, includedTotal: R0.includedAdults + R0.includedChildren, extraAdult: R0.extraAdultPerNight, extraChild: R0.extraChildPerNight };
     var TEAL = [63, 127, 123];
     var INK = [33, 37, 41];
     var MUTED = [108, 117, 125];
@@ -75,8 +77,7 @@
         var rows = [];
         if (myArray[2] && myArray[2].length) rows.push(villaRow('Villa Stay', myArray[2], nights));
         var subtotal = rows.reduce(function (s, r) { return s + r.amount; }, 0);
-        var tax = subtotal * RATE.gst / 100;
-        var total = subtotal + tax;
+        var total = subtotal; // fees are quoted inclusive of GST (Terms)
         var now = new Date();
         var ref = reference(now);
 
@@ -220,8 +221,11 @@
             text(amt, R, y, { align: 'right' });
             y += strong ? 7 : 5.5;
         }
-        totalRow('Subtotal', inr(subtotal), false);
-        totalRow('GST ' + RATE.gst + '%', inr(tax), false);
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(8);
+        pdf.setTextColor.apply(pdf, MUTED);
+        text('Extra bed per night: ' + inr(RATE.extraAdult) + ' per extra adult, ' + inr(RATE.extraChild) + ' per extra child (beyond ' + RATE.includedAdults + ' adults and ' + RATE.includedChildren + ' child).', R, y - 1, { align: 'right' });
+        y += 6;
         pdf.setDrawColor.apply(pdf, TEAL);
         pdf.setLineWidth(0.4);
         pdf.line(tx, y - 3, R, y - 3);
@@ -230,7 +234,7 @@
         pdf.setFont('helvetica', 'normal');
         pdf.setFontSize(8);
         pdf.setTextColor.apply(pdf, MUTED);
-        text('Estimate from the listed rate; the host confirms the final amount.', R, y, { align: 'right' });
+        text('Estimate from the listed rate, GST included; the host confirms the final amount.', R, y, { align: 'right' });
         y += 10;
 
         // ---- status box

@@ -297,3 +297,7 @@ GitHub Pages cannot set response headers: they are set in Cloudflare, see `docs/
 ### Structured data (generated)
 
 `node scripts/build-schema.mjs` (`--check` is part of `check.mjs`) writes the VacationRental block of the villa on `bwstays-booking.html` from the page itself (rate, up to N adults, beds, bath, amenity chips, gallery photos; address and coordinates from the home page LocalBusiness) and a BreadcrumbList on every place page (Home > Places to visit in Wayanad > place) and the booking page. Re-run it after changing the villa card, the amenity list or the gallery. No phone number or rating is published in the markup until a real one exists (the home and booking LocalBusiness `telephone` placeholder was removed).
+
+### Rates
+
+`data/rates.js` is the single source of the rates: nightly rate (INR 3,999, GST included), the 4 adults and 1 child included, the extra bed charges (INR 1,000 per extra adult, INR 800 per extra child, per night) and the 8-adult capacity. The request PDF (`js/pdfgen.js`) reads it (no GST line is added; the estimate is the nightly rate plus extra bed charges). The booking page card and its `rate-note`, `js/faq.js`, and the generated MCP, llms and structured data must agree with it: `build-faq.mjs`, `build-schema.mjs` and `generate-mcp.mjs` stop with an error when they do not (`check.mjs` runs them). To change a price: edit `data/rates.js`, the card in `bwstays-booking.html` and the numbers in `js/faq.js`, then run the build.

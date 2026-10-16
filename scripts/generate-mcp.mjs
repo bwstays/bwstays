@@ -60,6 +60,7 @@ function loadGlobals(file, names) {
 // ---------------------------------------------------------------- sources
 const { siteData } = loadGlobals('data/sitedata.js', ['siteData']);
 const { shopdata } = loadGlobals('data/shopdata.js', ['shopdata']);
+const { bwRates } = loadGlobals('data/rates.js', ['bwRates']);
 const { locations } = loadGlobals('data/nearbylocationsdata.js', ['locations']);
 // faq.js also wires up DOM handlers, so evaluate only the array literal.
 const faqSrc = read('js/faq.js').match(/const faqData\s*=\s*(\[[\s\S]*?\r?\n\]);/);
@@ -118,6 +119,13 @@ const bookingVillas = [...bookingHtml.matchAll(
   /<h5[^>]*class="mb-0"[^>]*>\s*(Villa Stay[^<]*)<\/h5>\s*<span class="price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/gi,
 )].map((m) => ({ name: m[1].trim().replace(/\s+/g, ' '), price: Number(m[2].replace(/,/g, '')) }));
 must(bookingVillas.length >= 1, 'bwstays-booking.html villa cards not found');
+must(bookingVillas[0].price === bwRates.perNight, `bwstays-booking.html shows INR ${bookingVillas[0].price} but data/rates.js says INR ${bwRates.perNight}`);
+const extraBed = {
+  included_in_nightly_rate: `${bwRates.includedAdults} adults and ${bwRates.includedChildren} child (0-12 years)`,
+  extra_adult_inr_per_night: bwRates.extraAdultPerNight,
+  extra_child_inr_per_night: bwRates.extraChildPerNight,
+  gst: 'Rates include GST (the Terms state fees are inclusive of 18% GST)',
+};
 const arrivalSlots = [...bookingHtml.matchAll(/<option[^>]*>\s*(\d{1,2}:\d{2} [AP]M - \d{1,2}:\d{2} [AP]M|After \d{1,2}:\d{2} [AP]M)\s*</g)]
   .map((m) => m[1]);
 
@@ -342,6 +350,7 @@ const properties = [
     beds: villaBeds,
     max_guests: `Up to ${villaMaxAdults} adults in the large room`,
     price_listed_on_booking_form_inr_per_night: bookingVillas[0]?.price ?? null,
+    extra_bed: extraBed,
     amenities: villaAmenities,
     pets_allowed: true,
   },
@@ -413,6 +422,7 @@ const resources = {
       is_a_request: 'The booking form sends a booking request by email. The dates are held only after the host confirms by email; dates already asked for show as Requested on the calendar and stay selectable.',
       arrival_windows: arrivalSlots,
       nightly_rate_on_booking_form_inr: bookingVillas.map((v) => ({ villa: v.name, inr_per_night: v.price })),
+      extra_bed: extraBed,
       payment_terms_quoted_from_site: termsParagraphs.slice(0, 5),
       contact: {
         email: EMAIL,
@@ -681,7 +691,8 @@ const tools = {
         input: { property: 'villa_stay' },
         output: {
           booking_form_inr_per_night: properties[0].price_listed_on_booking_form_inr_per_night,
-          gst: 'Terms state fees are inclusive of 18% GST',
+          extra_bed: extraBed,
+          gst: extraBed.gst,
           note: 'Rate as listed on the booking page.',
         },
       },

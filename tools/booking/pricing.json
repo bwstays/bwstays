@@ -8,7 +8,13 @@
       },
       "output": {
         "booking_form_inr_per_night": 3999,
-        "gst": "Terms state fees are inclusive of 18% GST",
+        "extra_bed": {
+          "included_in_nightly_rate": "4 adults and 1 child (0-12 years)",
+          "extra_adult_inr_per_night": 1000,
+          "extra_child_inr_per_night": 800,
+          "gst": "Rates include GST (the Terms state fees are inclusive of 18% GST)"
+        },
+        "gst": "Rates include GST (the Terms state fees are inclusive of 18% GST)",
         "note": "Rate as listed on the booking page."
       }
     }
