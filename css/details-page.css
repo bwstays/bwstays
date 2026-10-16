@@ -8037,3 +8037,24 @@ a.view-attraction:focus-visible {
 .bw-map-hint.show {
   opacity: 1;
 }
+
+/* Menu: the current page gets the same highlight bar as the section chosen with scroll-spy (.active), not an underline.
+   aria-current is used (not .active) because scroll-spy clears .active from every menu link while scrolling. */
+@media (min-width: 992px) {
+  #mainNav.navbar-shrink .nav-link[aria-current="page"] {
+    color: var(--bw-teal-text);
+    border-bottom: 0.25rem solid var(--bw-teal);
+  }
+  #mainNav:not(.navbar-shrink) .nav-link[aria-current="page"] {
+    color: #fff;
+    padding-bottom: 1.75rem;
+    border-bottom: 0.25rem solid var(--bw-teal-soft);
+  }
+}
+@media (max-width: 991.98px) {
+  #mainNav .nav-link[aria-current="page"] {
+    color: var(--bw-teal-text);
+    padding-left: 0.75rem;
+    border-left: 0.25rem solid var(--bw-teal);
+  }
+}
