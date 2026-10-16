@@ -47,10 +47,10 @@ for (const u of URLS) {
   }
   const cc = h.get('cache-control') || '';
   const age = Number((cc.match(/max-age=(\d+)/) || [])[1] || 0);
-  if (u.sw && (age > 0 && !/no-cache|no-store|must-revalidate/.test(cc))) problems.push(`sw.js is cacheable for ${age}s (${cc}); a new service worker can be delayed. Want no-cache / bypass.`);
-  if (u.sw && h.get('cf-cache-status') === 'HIT') problems.push('sw.js is served from the Cloudflare cache (HIT); add a cache bypass rule for /sw.js');
+  if (u.sw && age > 900 && !/no-cache|no-store|must-revalidate/.test(cc)) problems.push(`sw.js is cacheable for ${age}s (${cc}); a new service worker can be delayed. Want 15 minutes or less (no-cache / bypass is best).`);
+  if (u.sw && h.get('cf-cache-status') === 'HIT' && Number(h.get('age') || 0) > 900) problems.push('sw.js is served from the Cloudflare cache for a long time (HIT, age > 15 minutes); add a cache bypass rule for /sw.js');
   if (u.manifest && age > 86400) problems.push(`manifest.json is cacheable for ${age}s; want a day or less`);
-  if (u.html && age > 3600) problems.push(`HTML is cacheable in browsers for ${age}s; visitors will not see updates for that long`);
+  if (u.html && age > 900) problems.push(`HTML is cacheable in browsers for ${age}s; visitors will not see updates for that long`);
   console.log(`${u.url}  ${res.status}  ${problems.length ? 'ISSUES' : 'ok'}`);
   problems.forEach((p) => console.log('   - ' + p));
   missing += problems.length;
