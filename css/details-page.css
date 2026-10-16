@@ -8210,3 +8210,33 @@ select option:checked {
 .bw-search-box .bw-hint {
   color: rgba(255, 255, 255, 0.62);
 }
+
+/* Guest counters: a button at its limit is switched off, and the hint under the counter says why */
+.counter-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.bw-hint.at-limit {
+  color: #8a5a00;
+  font-weight: 600;
+}
+
+/* Forms on dark backgrounds (contact card on every page, the search page): hints, the captcha refresh button and its icon
+   must stay readable (they were grey on dark grey, 2.4:1) */
+.bg-dark .bw-hint,
+#contact-form .bw-hint {
+  color: rgba(255, 255, 255, 0.72);
+}
+#contact-form .btn-outline-secondary,
+.bg-dark form .btn-outline-secondary {
+  color: rgba(255, 255, 255, 0.88);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+#contact-form .btn-outline-secondary:hover,
+#contact-form .btn-outline-secondary:focus,
+.bg-dark form .btn-outline-secondary:hover,
+.bg-dark form .btn-outline-secondary:focus {
+  color: #fff;
+  background-color: var(--bw-teal);
+  border-color: var(--bw-teal);
+}
