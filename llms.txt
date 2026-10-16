@@ -34,6 +34,7 @@ Regulations and Policies
 - [Privacy](https://www.bwstays.com/footer.html#privacy): Information regarding the privacy policy of Black and White Stays.
 - [Terms & Conditions](https://www.bwstays.com/footer.html#tc): The terms and conditions applicable to guests.
 - [Cancellations & Refunds](https://www.bwstays.com/footer.html#cancellation): Cancellation and refund rules for standard and holiday stays.
+- [Frequently Asked Questions](https://www.bwstays.com/footer.html#faq): Answers about stays, booking, cancellations, workation and co-living.
 - [Cookies](https://www.bwstays.com/footer.html#cookies): Details about cookie usage on the website.
 - [Copyright & Disclaimer](https://www.bwstays.com/footer.html#disclaimer): Legal information regarding content and usage.
 Additional Information
@@ -60,7 +61,7 @@ Snapshot: 2026-10-16
 - [LLMFeed](https://www.bwstays.com/.well-known/mcp.llmfeed.json): the same capabilities in LLMFeed format
 - [Full text](https://www.bwstays.com/llms-full.txt): all page text, policies and data summaries
 - [about](https://www.bwstays.com/resources/about.json): Who Black and White Stays is, where it is, and how to reach it
-- [properties](https://www.bwstays.com/resources/properties.json): Villas offered by Black and White Stays with the rate and capacity the site publishes
+- [properties](https://www.bwstays.com/resources/properties.json): The villa stay offered by Black and White Stays, with the rate and capacity the booking page publishes
 - [amenities](https://www.bwstays.com/resources/amenities.json): Amenities listed on the booking page
 - [booking](https://www.bwstays.com/resources/booking.json): How to book, what the booking form asks for, and how to make contact
 - [policies](https://www.bwstays.com/resources/policies.json): Terms of service and privacy statement, quoted from footer.html
@@ -69,9 +70,9 @@ Snapshot: 2026-10-16
 - [food](https://www.bwstays.com/resources/food.json): Places to eat and drink in Wayanad (OpenStreetMap data), with driving distance from the stay
 - [distances](https://www.bwstays.com/resources/distances.json): Driving distance in km between 90 Wayanad places (null = not computed)
 - [charging_and_fuel](https://www.bwstays.com/resources/charging_and_fuel.json): EV charging stations and fuel stations around the stay, with straight-line distance from the stay
-- [help](https://www.bwstays.com/resources/help.json): Frequently asked questions shown on the site
+- [help](https://www.bwstays.com/resources/help.json): Frequently asked questions shown on the site (footer page, #faq)
 - [tool search_attractions](https://www.bwstays.com/tools/search/attractions.json): Look up attractions by category, distance, entry fee or rating (pre-computed)
-- [tool search_properties](https://www.bwstays.com/tools/search/properties.json): List the villas the site publishes
+- [tool search_properties](https://www.bwstays.com/tools/search/properties.json): The villa stay the booking page publishes
 - [tool search_food](https://www.bwstays.com/tools/search/food.json): Find places to eat near the stay by kind, diet or distance (pre-computed, OpenStreetMap data)
 - [tool nearby_places](https://www.bwstays.com/tools/search/nearby.json): The closest attractions to each place by driving distance (pre-computed)
 - [tool check_availability](https://www.bwstays.com/tools/booking/availability.json): Dates the site marks as booked or closed. Static snapshot - not live inventory.

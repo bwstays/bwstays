@@ -60,6 +60,7 @@ const lines = [BEGIN, '## Site data summary (generated; the MCP files hold the f
 
 lines.push('### Booking, availability and cancellation');
 lines.push(`- Booking page: ${SITE}/bwstays-booking.html. Dates can be chosen from today up to one year ahead; past dates are not selectable.`);
+lines.push('- The booking form sends a booking request by email. Dates are held only after the host confirms by email; dates already asked for show as Requested on the calendar.');
 lines.push(`- Availability data: ${availability.data_source}`);
 lines.push(`- Stay rule: ${availability.nights_rule}`);
 lines.push(
@@ -68,6 +69,17 @@ lines.push(
     : `- Booked ranges listed: ${availability.booked_ranges.length}; closed ranges listed: ${availability.closed_ranges.length}.`
 );
 lines.push(`- Cancellation, refund and date-change terms: ${SITE}/footer.html#cancellation`);
+lines.push('');
+
+const villa = json('resources/properties.json').content.properties[0];
+lines.push('### The villa');
+lines.push(`- ${villa.name}: the only stay offered. Book and see photos, the video tour and amenities on ${villa.page_url}.`);
+lines.push(`- Rate listed on the booking page: INR ${villa.price_listed_on_booking_form_inr_per_night} per night. Beds: ${villa.beds}. Capacity: ${villa.max_guests}.`);
+lines.push(`- Amenities: ${villa.amenities.join(', ')}. Pets allowed: ${villa.pets_allowed ? 'yes' : 'no'}.`, '');
+
+const faq = json('resources/help.json').content.faq;
+lines.push(`### Frequently asked questions (${SITE}/footer.html#faq)`);
+for (const f of faq) lines.push(`- Q: ${f.question} A: ${f.answer} (${f.url})`);
 lines.push('');
 
 lines.push('### Shopping places (listed on the site)');
