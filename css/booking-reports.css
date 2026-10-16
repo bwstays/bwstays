@@ -12,13 +12,13 @@
 }
 
 .btn-primary {
-    background-color: #64a19d !important;
-    border-color: #64a19d !important;
+    background-color: var(--bw-teal) !important;
+    border-color: var(--bw-teal) !important;
 }
 
 .btn-primary:hover {
-    background-color: #52857f !important;
-    border-color: #52857f !important;
+    background-color: var(--bw-teal-dark) !important;
+    border-color: var(--bw-teal-dark) !important;
 }
 
 .btn-success {
@@ -105,8 +105,8 @@
 }
 
 .pagination .page-item.active .page-link {
-    background-color: #64a19d;
-    border-color: #64a19d;
+    background-color: var(--bw-teal);
+    border-color: var(--bw-teal);
     color: #fff;
 }
 
