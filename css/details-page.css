@@ -2,6 +2,7 @@
   --bw-teal: #3f7f7b;       /* the one theme colour for fills: buttons, dropdowns, circles, selected days, pills (white text 4.6:1) */
   --bw-teal-dark: #2f6f6b;  /* hover, active and pressed */
   --bw-teal-soft: #8cc4c0;  /* focus rings and tints */
+  --bw-teal-text: #64a19d;  /* teal text and links on the page backgrounds; the only place the lighter teal is defined for text */
 }
 
 
@@ -8284,3 +8285,20 @@ body #language-selector option:hover {
 /* Bootstrap teal helpers follow the theme: underlines and dividers (.border-primary) and fills (.bg-primary) use the one fill teal */
 .border-primary { border-color: var(--bw-teal) !important; }
 .bg-primary { background-color: var(--bw-teal) !important; }
+
+/* "View Attractions" links: light theme teal on the dark rows, no underline on hover or focus */
+a.view-attraction,
+a.view-attraction:visited {
+  color: var(--bw-teal-text);
+  text-decoration: none;
+}
+a.view-attraction:hover,
+a.view-attraction:focus,
+a.view-attraction:active {
+  color: var(--bw-teal-soft);
+  text-decoration: none;
+}
+a.view-attraction:focus-visible {
+  outline: 2px solid var(--bw-teal-soft);
+  outline-offset: 2px;
+}
