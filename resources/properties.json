@@ -1,6 +1,6 @@
 {
   "name": "properties",
-  "description": "Villas offered by Black and White Stays with the rate and capacity the site publishes",
+  "description": "The villa stay offered by Black and White Stays, with the rate and capacity the booking page publishes",
   "content": {
     "count": 1,
     "properties": [
