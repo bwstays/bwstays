@@ -7907,15 +7907,6 @@ body #language-selector option:hover {
   box-shadow: 0 0 0 0.2rem rgba(63, 127, 123, 0.25);
   outline: none;
 }
-.guest-information select.form-control option {
-  background-color: #fff;
-  color: #2b3f3e;
-}
-.guest-information select.form-control option:checked,
-.guest-information select.form-control option:hover {
-  background: var(--bw-teal) linear-gradient(var(--bw-teal), var(--bw-teal));
-  color: #fff;
-}
 
 /* Bootstrap teal helpers follow the theme: underlines and dividers (.border-primary) and fills (.bg-primary) use the one fill teal */
 .border-primary { border-color: var(--bw-teal) !important; }
@@ -8142,4 +8133,62 @@ h1.h2 {
 .wa-chat-bubble,
 .wa-chat-bubble * {
   font-family: var(--bw-font) !important;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------
+   Dropdowns: the open list of EVERY select (language, currency, sort, arrival time, report filters) uses the theme teal
+   instead of the browser's blue and grey. Browsers with customizable selects (Chrome, Edge) get a styled list with
+   teal rows and a darker hover/selected row; the others keep their native list with teal option colours. */
+select option,
+select optgroup {
+  background-color: var(--bw-teal);
+  color: #fff;
+}
+select option:checked {
+  background: var(--bw-teal-dark) linear-gradient(var(--bw-teal-dark), var(--bw-teal-dark));
+  color: #fff;
+}
+@supports (appearance: base-select) {
+  select,
+  select::picker(select) {
+    appearance: base-select;
+  }
+  select::picker(select) {
+    padding: 4px;
+    background: var(--bw-teal);
+    border: 1px solid var(--bw-teal-dark);
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  }
+  select option {
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    background: transparent;
+    color: #fff;
+    font-size: var(--bw-fs-field);
+    letter-spacing: var(--bw-track);
+    cursor: pointer;
+  }
+  select option:hover,
+  select option:focus-visible {
+    background: var(--bw-teal-dark);
+    color: #fff;
+    outline: none;
+  }
+  select option:checked {
+    background: var(--bw-teal-dark);
+    color: #fff;
+    font-weight: 600;
+  }
+  select option::checkmark {
+    color: #fff;
+  }
+  select.currency-select,
+  select.currency-select::picker(select) {
+    appearance: base-select;
+  }
+  /* the currency dropdown draws its own arrow */
+  select.currency-select::picker-icon {
+    display: none;
+  }
 }
