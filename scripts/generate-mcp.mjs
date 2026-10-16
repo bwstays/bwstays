@@ -113,7 +113,9 @@ const villaAmenities = amenityChips;
 const cardFacts = bookingHtml.match(/(\d+)\s*Beds?[\s\S]{0,300}?Up to (\d+)\s*Adults?/i);
 must(cardFacts, 'bwstays-booking.html villa card facts not found');
 const villaBeds = Number(cardFacts[1]);
-const villaMaxAdults = Number(cardFacts[2]);
+const cardAdults = Number(cardFacts[2]); // adults included in the rate (shown on the card)
+must(cardAdults === bwRates.includedAdults, `bwstays-booking.html card says up to ${cardAdults} adults but data/rates.js includes ${bwRates.includedAdults}`);
+const villaMaxAdults = bwRates.maxAdults; // the large room sleeps up to this many with an extra bed
 
 const bookingVillas = [...bookingHtml.matchAll(
   /<h5[^>]*class="mb-0"[^>]*>\s*(Villa Stay[^<]*)<\/h5>\s*<span class="price-tag[^>]*>\s*(?:₹|&#8377;)\s*([\d,]+)\s*\/\s*night/gi,
