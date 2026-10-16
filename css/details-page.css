@@ -8209,3 +8209,19 @@ body .reviews-title > .border-bottom.border-primary,
 @media (min-width: 992px) {
   .bk-villa-left { align-self: flex-start; position: sticky; top: 90px; }
 }
+
+/* Floating buttons (go up, chat): same teal as the site's buttons and badges (#3f7f7b, WCAG AA with white) */
+#btn-back-to-top,
+#btn-chat {
+  background-color: #3f7f7b;
+  border-color: #3f7f7b;
+  color: #fff;
+}
+#btn-back-to-top:hover,
+#btn-back-to-top:focus,
+#btn-chat:hover,
+#btn-chat:focus {
+  background-color: #2f6f6b;
+  border-color: #2f6f6b;
+  color: #fff;
+}
