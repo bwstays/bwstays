@@ -1397,7 +1397,7 @@
 
 
 
-    <script type="text/javascript" src="https://www.bwstays.com/js/scripts.min.js?v=7537fada"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/js/scripts.min.js?v=a205525e"></script>
      <!--
     <script  type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvYg5kdXSgMv3NfO7UK2oZqNPE7P30rbkk&sensor=false&libraries=places"
@@ -1432,14 +1432,23 @@
 <script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.min.js?v=56cb74aa' + Date.now();document.body.appendChild(script);</script>
  <script       type="text/javascript"       src="https://www.bwstays.com/js/dynamic-foodmap.min.js?v=e3ef5086"     ></script>
  <script       type="text/javascript"       src="https://www.bwstays.com/js/dynamic-evgas.min.js?v=1a3b82d4"     ></script>
- <script type="text/javascript" src="https://www.bwstays.com/js/widgets.min.js?v=913ebcd9"></script>
+ <script type="bw-lazy" src="https://www.bwstays.com/js/widgets.min.js?v=913ebcd9"></script>
 
-  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.min.js?v=71b140e2" ></script>
+  <script  type="bw-lazy"   src="https://www.bwstays.com/js/chat.min.js?v=71b140e2" ></script>
   <script  type="text/javascript"   src="https://www.bwstays.com/js/language.min.js?v=d8bf0fe7" ></script>
 
 
    <script type="text/javascript"  src="https://www.bwstays.com/js/validations.min.js?v=83a714d7"></script>
    <script type="text/javascript" src="https://www.bwstays.com/js/pwa.min.js?v=9f12090c" defer data-cfasync="false"></script>
+<script>
+/* chat and weather/currency widgets (type="bw-lazy") load on the first scroll, tap or key press, or about 3 s after the page has loaded */
+(function(){var done=false;function go(){if(done)return;done=true;
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){removeEventListener(e,go)});
+document.querySelectorAll('script[type="bw-lazy"]').forEach(function(o){var s=document.createElement('script');s.src=o.src;s.async=false;document.body.appendChild(s)})}
+window.bwLoadLazy=go;
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){addEventListener(e,go,{passive:true,once:true})});
+addEventListener('load',function(){setTimeout(function(){('requestIdleCallback' in window)?requestIdleCallback(go,{timeout:2000}):go()},3000)})})();
+</script>
 </body>
 
 

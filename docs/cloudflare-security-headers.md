@@ -41,6 +41,12 @@ The service worker and the manifest must not stay stale, and visitors must see p
 3. HTML (the existing 4 hour rule): keep **Edge TTL 4 hours**, but set **Browser TTL to 5 minutes** (or "Respect origin"). Purge the cache after a deploy
    (Caching > Configuration > Purge Everything) to see changes at once.
 4. `/data/bookingdata*.js`, `/data/closeddata*.js`, `/data/pendingdata*.js` : Edge TTL 5 minutes (booking availability).
+5. **Versioned CSS, JS and fonts, long cache.** Every stylesheet and script is linked with `?v=<hash>` (`version-assets.mjs` changes the hash when a file changes), so a changed file is a new URL and a long cache is safe.
+   Expression: `(http.request.uri.query contains "v=" and (ends_with(http.request.uri.path, ".css") or ends_with(http.request.uri.path, ".js"))) or ends_with(http.request.uri.path, ".woff2")`.
+   Setting: Cache eligibility **Eligible for cache**, Edge TTL **1 year**, Browser TTL **1 year**. Put this rule above rule 4 and keep rule 4 (the booking availability files, which also carry `?v=`) later in the list so its 5 minute TTL wins.
+6. **Images, medium cache.** Image file names are not hashed, so do not give them a year: Edge TTL **30 days**, Browser TTL **7 days**. Expression: `ends_with(http.request.uri.path, ".webp") or ends_with(http.request.uri.path, ".avif") or ends_with(http.request.uri.path, ".png") or ends_with(http.request.uri.path, ".jpg") or ends_with(http.request.uri.path, ".svg") or ends_with(http.request.uri.path, ".ico")`.
+   When a photo is replaced under the same name, either purge that URL in Cloudflare or add `?v=2` to its `src` (the service worker also keeps images by URL, so a new query string is what makes returning visitors fetch the new file).
+7. Check afterwards with `curl -I https://www.bwstays.com/css/styles.min.css?v=x`: `cache-control: max-age=31536000` and `cf-cache-status: HIT` on the second request.
 
 ## 3. Other settings worth checking
 
