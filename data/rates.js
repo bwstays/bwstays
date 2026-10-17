@@ -3,7 +3,7 @@
 // (node scripts/build-faq.mjs, build-schema.mjs, generate-mcp.mjs, build-llms.mjs; check.mjs verifies they agree).
 var bwRates = {
   currency: 'INR',
-  perNight: 3999,          // the villa, per night
+  perNight: 2100,          // the villa, per night
   includedAdults: 4,       // included in the nightly rate
   includedChildren: 1,     // children 0-12 included in the nightly rate
   extraChildPerNight: 800,  // extra bed: each child beyond the included child, per night

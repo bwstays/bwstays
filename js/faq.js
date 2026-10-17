@@ -5,7 +5,7 @@ const faqData = [
     },
     {
         question: "What does the villa cost per night?",
-        answer: "The villa is listed at INR 3,999 per night on the booking page, for up to 4 adults and 1 child, and the rate includes GST. Each extra child (up to 4 children in all) is INR 800 per night. The final amount is confirmed by the host by email."
+        answer: "The villa is listed at INR 2,100 per night on the booking page, for up to 4 adults and 1 child, and the rate includes GST. Each extra child (up to 4 children in all) is INR 800 per night. The final amount is confirmed by the host by email."
     },
     {
         question: "How do I book the villa?",
@@ -49,6 +49,6 @@ const faqData = [
     },
     {
         question: "Summarize BW Stays Wayanad in one sentence",
-        answer: "Black and White Stays is a single villa in Kalpetta, Wayanad for staycations and workations, for up to 4 adults and 4 children, listed at INR 3,999 per night."
+        answer: "Black and White Stays is a single villa in Kalpetta, Wayanad for staycations and workations, for up to 4 adults and 4 children, listed at INR 2,100 per night."
     }
 ];
