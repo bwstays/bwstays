@@ -109,7 +109,7 @@ function createPlaceCard(place) {
                                 <a href="${knowmoreUrl}" class="text-decoration-none text-white stretched-link"><h3 class="h6 card-title mb-0" style="font-size: 0.85rem; word-wrap: break-word;">
                                      ${place.name}
                                 </h3></a>
-                                <a href="${place.map}" target="_new" rel="noopener" aria-label="${place.name} on Google Maps" class="ms-2" style="position: relative; z-index: 2; background: rgba(255,255,255,0.9); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); flex-shrink: 0;">
+                                <a ${place.map ? 'href="' + place.map + '"' : 'hidden'} target="_new" rel="noopener" aria-label="${place.name} on Google Maps" class="ms-2" style="position: relative; z-index: 2; background: rgba(255,255,255,0.9); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); flex-shrink: 0;">
                                     <i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
                                 </a>
                             </div>

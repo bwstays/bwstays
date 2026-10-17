@@ -156,7 +156,7 @@ rightArrow.addEventListener('mouseleave', () => {
           <span class="text-warning">★ ${currentItemData.rating}</span>
           <span class="text-white-50 ml-2">${currentItemData.distance}km from Kalpetta</span>
 		  <span class="text-white-50 ml-2">
-			<a href="${currentItemData.map}" target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
+			<a ${currentItemData.map ? 'href="' + currentItemData.map + '"' : 'hidden'} target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
 			<i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
 			</a>
 		  </span>
@@ -218,7 +218,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
               <div class="rating mb-2">
                   ${bwHas(item.rating) ? '<span class="text-warning">★ ' + item.rating + '</span>' : ''}
                   ${bwHas(item.distance) ? '<span class="text-white-50 ml-2 "> <span class="text-warning">' + item.distance + ' km </span> from Kalpetta</span>' : ''}
-                    <span class="text-white-50 ml-2"><a href="${currentItemData.map}" target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
+                    <span class="text-white-50 ml-2"><a ${currentItemData.map ? 'href="' + currentItemData.map + '"' : 'hidden'} target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
 				  			<i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
 						</a>
 						</span>
@@ -278,7 +278,7 @@ function updateRightColumnOnly() {
           ${bwHas(item.rating) ? '<span class="text-warning">★ ' + item.rating + '</span>' : ''}
           ${bwHas(item.distance) ? '<span class="text-white-50 ml-2">' + item.distance + 'km from Kalpetta</span>' : ''}
           <span class="text-white-50 ml-2">
-            <a href="${item.map}" target="_new" rel="noopener" aria-label="${item.name} on Google Maps" class="text-decoration-none text-white">
+            <a ${item.map ? 'href="' + item.map + '"' : 'hidden'} target="_new" rel="noopener" aria-label="${item.name} on Google Maps" class="text-decoration-none text-white">
               <i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
             </a>
           </span>
