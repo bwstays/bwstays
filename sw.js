@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '6c893ff951';
+const VERSION = '0ee7168174';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -52,10 +52,11 @@ const SHELL = [
   "/js/language.min.js?v=d8bf0fe7",
   "/js/legal-page.min.js?v=89020b58",
   "/js/map-guard.min.js?v=42197ca9",
+  "/js/nav.min.js?v=c830a937",
   "/js/pdfgen.min.js?v=f9275e49",
   "/js/promo-banner.min.js?v=56cb74aa",
   "/js/pwa.min.js?v=9f12090c",
-  "/js/scripts.min.js?v=a205525e",
+  "/js/scripts.min.js?v=0fa1129f",
   "/js/site-search.min.js?v=b67e0575",
   "/js/specrule.min.js?v=1f8a513f",
   "/js/testimonial.min.js?v=c59378fa",
@@ -66,7 +67,6 @@ const SHELL = [
   "/js/widgets.min.js?v=913ebcd9",
   "/manifest.json",
   "/offline.html",
-  "/vendor/bootstrap/bootstrap.bundle.min.js?v=4.5.3",
   "/vendor/jquery/jquery.easing.min.js?v=1.4.1",
   "/vendor/jquery/jquery.min.js?v=3.5.1",
   "/vendor/leaflet/leaflet-src.min.js?v=1.9.4",

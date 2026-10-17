@@ -26,7 +26,7 @@
                         // then let scroll-spy re-measure so the clicked menu item is highlighted.
                         var again = target.offset().top - 70;
                         var settle = function () {
-                            $("body").scrollspy("refresh");
+                            if (window.bwNav) bwNav.refreshSpy();
                             $(window).trigger("scroll");
                         };
                         if (Math.abs($(window).scrollTop() - again) > 4) {
@@ -41,12 +41,9 @@
         }
     });
     $(".js-scroll-trigger").click(function () {
-        $(".navbar-collapse").collapse("hide");
+        if (window.bwNav) bwNav.hideMenu();
     });
-    $("body").scrollspy({
-        target: "#mainNav",
-        offset: 100,
-    });
+    // scroll-spy and the menu collapse live in js/nav.js (the Bootstrap JavaScript bundle is no longer loaded)
     // The page's own menu item (aria-current, e.g. Search) shows the highlight bar only while no section item is
     // highlighted by scroll-spy, so exactly one item is highlighted at a time.
     var syncCurrent = function () {
