@@ -1317,8 +1317,8 @@ setTimeout(ldinsp, 0);
     <script type="text/javascript" src="https://www.bwstays.com/vendor/jquery/jquery.min.js?v=3.5.1" ></script>
     <script type="text/javascript" src="https://www.bwstays.com/vendor/jquery/jquery.easing.min.js?v=1.4.1"></script>
 
-    <script src="https://www.bwstays.com/vendor/leaflet/leaflet-src.min.js?v=1.9.4"></script>
-<script src="https://www.bwstays.com/js/map-guard.min.js?v=42197ca9"></script>
+    <script type="bw-lazy" src="https://www.bwstays.com/vendor/leaflet/leaflet-src.min.js?v=1.9.4"></script>
+<script type="bw-lazy" src="https://www.bwstays.com/js/map-guard.min.js?v=42197ca9"></script>
 
     <script type="text/javascript"  src="https://www.bwstays.com/vendor/bootstrap/bootstrap.bundle.min.js?v=4.5.3"></script>
 
@@ -1342,7 +1342,7 @@ setTimeout(ldinsp, 0);
 
 
 
-    <script type="text/javascript" src="https://www.bwstays.com/js/scripts.min.js?v=7537fada"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/js/scripts.min.js?v=a205525e"></script>
     <!--
     <script type="text/javascript" src="https://www.bwstays.com/js/specrule.min.js?v=1f8a513f"></script>
     -->
@@ -1360,14 +1360,23 @@ setTimeout(ldinsp, 0);
   <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/61ca2eec7dff3025fb51cf16daffc31e.js"></script>
 
 
-  <script  type="text/javascript"   src="https://www.bwstays.com/js/chat.min.js?v=71b140e2" ></script>
+  <script  type="bw-lazy"   src="https://www.bwstays.com/js/chat.min.js?v=71b140e2" ></script>
   <script  type="text/javascript"   src="https://www.bwstays.com/js/language.min.js?v=d8bf0fe7" ></script>
-<script type="text/javascript" src="https://www.bwstays.com/js/widgets.min.js?v=913ebcd9"></script>
+<script type="bw-lazy" src="https://www.bwstays.com/js/widgets.min.js?v=913ebcd9"></script>
 
 
 
     <script type="text/javascript"  src="https://www.bwstays.com/js/validations.min.js?v=83a714d7"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/pwa.min.js?v=9f12090c" defer data-cfasync="false"></script>
+<script>
+/* chat and weather/currency widgets (type="bw-lazy") load on the first scroll, tap or key press, or about 3 s after the page has loaded */
+(function(){var done=false;function go(){if(done)return;done=true;
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){removeEventListener(e,go)});
+document.querySelectorAll('script[type="bw-lazy"]').forEach(function(o){var s=document.createElement('script');s.src=o.src;s.async=false;document.body.appendChild(s)})}
+window.bwLoadLazy=go;
+['pointerdown','keydown','scroll','touchstart'].forEach(function(e){addEventListener(e,go,{passive:true,once:true})});
+addEventListener('load',function(){setTimeout(function(){('requestIdleCallback' in window)?requestIdleCallback(go,{timeout:2000}):go()},3000)})})();
+</script>
 </body>
 
 

@@ -105,6 +105,8 @@
     });
     emailObserver.observe(emailtag);
   }
+// the WhatsApp chat button loads on the first scroll, tap or key press, or a few seconds after the page has loaded
+function bwLoadWhatsapp() {
 var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?65929';
 var s = document.createElement('script');
 s.type = 'text/javascript';
@@ -139,13 +141,30 @@ s.onload = function() {
 };
 var x = document.getElementsByTagName('script')[0];
 x.parentNode.insertBefore(s, x);
+}
+(function () {
+  var started = false;
+  function start() {
+    if (started) return;
+    started = true;
+    bwLoadWhatsapp();
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (e) { window.addEventListener(e, start, { passive: true, once: true }); });
+  window.addEventListener('load', function () { setTimeout(start, 3500); });
+})();
 var iconURLPrefix = 'https://www.bwstays.com/';
 var bwlocations = [['<h6><a id="bwlocation" target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Location Kalpetta"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.6057872, 76.0833109, 2, iconURLPrefix+"assets/img/logo/bw.png","Black and White Stays"]];
 var element = document.getElementById('map');
 var bwFooterMapReady = false;
 // The footer map sits at the bottom of the page: create it (and fetch its tiles) only when it is about to be seen.
 function bwInitFooterMap() {
-  if (bwFooterMapReady || !element || typeof L === 'undefined') return;
+  if (bwFooterMapReady || !element) return;
+  if (typeof L === 'undefined') {
+    // Leaflet is a lazy script on some pages: ask for it and try again shortly
+    if (window.bwLoadLazy) window.bwLoadLazy();
+    if ((bwInitFooterMap.tries = (bwInitFooterMap.tries || 0) + 1) < 50) setTimeout(bwInitFooterMap, 100);
+    return;
+  }
   bwFooterMapReady = true;
   var map = L.map(element,{ zoomControl: false });
   let customIcon = {
