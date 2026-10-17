@@ -269,7 +269,7 @@ function updateRightColumnOnly() {
     const firstImage = itemImages[0];
     card.innerHTML = `
       <div class="card-img-container" style="height: 200px; overflow: hidden;">
-        <img title="Black and White Stays Service Villa"   loading="lazy"  alt="Places near to your stay " src="${firstImage}" class="card-img-top" alt="${item.name}"
+        <img title="${item.name}" loading="lazy" src="${firstImage}" class="card-img-top" alt="${item.name}"
              style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
       </div>
       <div class="card-body d-flex flex-column">
@@ -292,7 +292,7 @@ function updateRightColumnOnly() {
             ${bwHas(item.Contact) ? '<i class="fas fa-phone"></i> ' + item.Contact : ''}
           </small>
         </div>
-        <a href="${item.knowmore}"${/^https:\/\/www\.bwstays\.com\//.test(item.knowmore || '') ? '' : ' target="_blank" rel="noopener noreferrer"'} class="btn btn-primary btn-sm mt-auto" rel="dofollow" data-i18n="nav.km">Know More</a>
+        <a href="${item.knowmore}"${/^https:\/\/www\.bwstays\.com\//.test(item.knowmore || '') ? '' : ' target="_blank" rel="noopener noreferrer"'} class="btn btn-primary btn-sm mt-auto" rel="dofollow" title="Know more about ${item.name}" data-i18n="nav.km">Know More</a>
       </div>
     `;
     cardCol.appendChild(card);
