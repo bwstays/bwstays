@@ -17,7 +17,7 @@ const ALL = [
   ['x-frame-options', /sameorigin|deny/i, null, 'X-Frame-Options (or CSP frame-ancestors)'],
 ];
 const HTML_ONLY = [
-  ['content-security-policy', /frame-ancestors/i, null, "CSP header with frame-ancestors (the in-page meta CSP cannot set it)"],
+  ['content-security-policy', /default-src[^;]*'self'[\s\S]*frame-ancestors/i, null, "CSP header with default-src and frame-ancestors (scanners ignore the in-page meta CSP)"],
   ['cross-origin-opener-policy', /same-origin/i, null, 'Cross-Origin-Opener-Policy'],
 ];
 const URLS = [
