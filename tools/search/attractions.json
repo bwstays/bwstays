@@ -1478,7 +1478,7 @@
     "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 90 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
   },
   "metadata": {
-    "generated": "2026-10-16",
+    "generated": "2026-10-17",
     "version": "2.0.0",
     "type": "json",
     "source": "generated from site data",
