@@ -309,3 +309,7 @@ GitHub Pages cannot set response headers: they are set in Cloudflare, see `docs/
 ### Bootstrap CSS (trimmed)
 
 Pages load `css/bootstrap-lite.css` (about 28 KB), not the full `vendor/bootstrap/bootstrap.min.css` (160 KB, about 10% used). It is generated: `node scripts/build-bootstrap-lite.mjs` keeps every Bootstrap rule whose classes all appear in the site's own files (HTML, `js/*.js`, `data/*.js|json`), plus the classes Bootstrap's JavaScript adds (`SAFELIST` in the script). `check.mjs` fails when a page starts using a Bootstrap class that is not in the file: re-run the script (needs `npm i --no-save postcss`), then `minify-assets` and `version-assets`. A class built only by string concatenation must be written in full somewhere in the source or added to `SAFELIST`. The full vendor file stays in the repository as the source.
+
+### Menu and scroll-spy (no Bootstrap JavaScript)
+
+`js/nav.js` replaces the 84 KB Bootstrap JavaScript bundle: the menu button (`data-toggle="collapse"`, same classes and transition as Bootstrap 4) and the scroll-spy that sets `.active` on the menu link of the section being read (hash links of `#mainNav`). `js/scripts.js` calls `bwNav.hideMenu()` and `bwNav.refreshSpy()`. jQuery is still loaded for the other scripts. If a page needs another Bootstrap plugin (modal, dropdown, tooltip), add it here or load the bundle on that page.
