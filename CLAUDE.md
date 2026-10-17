@@ -305,3 +305,7 @@ GitHub Pages cannot set response headers: they are set in Cloudflare, see `docs/
 ### Maps and page scrolling
 
 `js/map-guard.js` is loaded right after `vendor/leaflet/leaflet-src.min.js` on every page that has a map. It is a Leaflet init hook, so it covers every map (all-locations, food, EV/fuel, footer) without touching their scripts: the mouse-wheel zoom is OFF until the visitor clicks or drags the map and goes OFF again when the pointer leaves, focus is lost or Escape is pressed; a wheel turn over an inactive map shows a short hint (`.bw-map-hint`). Dragging, +/- buttons, double click, pinch and keyboard zoom are unchanged. Add the script tag after leaflet on any new page with a map.
+
+### Bootstrap CSS (trimmed)
+
+Pages load `css/bootstrap-lite.css` (about 28 KB), not the full `vendor/bootstrap/bootstrap.min.css` (160 KB, about 10% used). It is generated: `node scripts/build-bootstrap-lite.mjs` keeps every Bootstrap rule whose classes all appear in the site's own files (HTML, `js/*.js`, `data/*.js|json`), plus the classes Bootstrap's JavaScript adds (`SAFELIST` in the script). `check.mjs` fails when a page starts using a Bootstrap class that is not in the file: re-run the script (needs `npm i --no-save postcss`), then `minify-assets` and `version-assets`. A class built only by string concatenation must be written in full somewhere in the source or added to `SAFELIST`. The full vendor file stays in the repository as the source.
