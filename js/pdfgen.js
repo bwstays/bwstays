@@ -15,7 +15,7 @@
     };
     // Estimate only: rates are as listed on the booking page; extra guests as per the site's occupancy rule.
     // data/rates.js (loaded before this file) is the single source of the rates; the fallback below only guards a failed load.
-    var R0 = global.bwRates || { perNight: 3999, includedAdults: 4, includedChildren: 1, extraChildPerNight: 800 };
+    var R0 = global.bwRates || { perNight: 2100, includedAdults: 4, includedChildren: 1, extraChildPerNight: 800 };
     var RATE = { perNight: R0.perNight, includedAdults: R0.includedAdults, includedChildren: R0.includedChildren, includedTotal: R0.includedAdults + R0.includedChildren, extraChild: R0.extraChildPerNight };
     var TEAL = [63, 127, 123];
     var INK = [33, 37, 41];

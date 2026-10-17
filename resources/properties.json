@@ -11,7 +11,7 @@
         "type": "Entire villa",
         "beds": 2,
         "max_guests": "Up to 4 adults and 4 children (booking limit)",
-        "price_listed_on_booking_form_inr_per_night": 3999,
+        "price_listed_on_booking_form_inr_per_night": 2100,
         "extra_bed": {
           "included_in_nightly_rate": "4 adults and 1 child (0-12 years)",
           "extra_child_inr_per_night": 800,
