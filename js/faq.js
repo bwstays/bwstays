@@ -5,7 +5,7 @@ const faqData = [
     },
     {
         question: "What does the villa cost per night?",
-        answer: "The villa is listed at INR 2,100 per night on the booking page, for up to 4 adults and 1 child, and the rate includes GST. Each extra child (up to 4 children in all) is INR 800 per night. The final amount is confirmed by the host by email."
+        answer: "The villa is listed at INR 2,100 per night on the booking page, for up to 4 adults and 1 child, and the rate includes GST. Each extra child (up to 4 children in all) is INR 400 per night. The final amount is confirmed by the host by email."
     },
     {
         question: "How do I book the villa?",
@@ -17,7 +17,7 @@ const faqData = [
     },
     {
         question: "How many people can stay in the villa?",
-        answer: "The villa takes up to 4 adults and up to 4 children (0 to 12 years); the booking page does not accept more. The nightly rate covers 4 adults and 1 child; each extra child is INR 800 per night (extra bed). The villa has 2 beds and 1 bathroom, a garden and private parking, and pets are allowed."
+        answer: "The villa takes up to 4 adults and up to 4 children (0 to 12 years); the booking page does not accept more. The nightly rate covers 4 adults and 1 child; each extra child is INR 400 per night (extra bed). The villa has 2 beds and 1 bathroom, a garden and private parking, and pets are allowed."
     },
     {
         question: "What amenities does the villa have?",
