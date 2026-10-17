@@ -6,7 +6,8 @@ window.addEventListener('load', function () {
   const sections = document.querySelectorAll('#loc .container .row.justify-content-center');
   let sectionIndex = 1;
   Object.keys(siteData).forEach((sectionType) => {
-    if (siteData[sectionType]) {
+    // `stays` is a placeholder category with no row; rows after the last category (Health & Wellness) are static
+    if (sectionType !== 'stays' && siteData[sectionType]) {
       initializeSection(sectionType, siteData[sectionType], sectionIndex);
       sectionIndex++;
     }
