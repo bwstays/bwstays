@@ -24,7 +24,7 @@
     ],
     "extra_bed": {
       "included_in_nightly_rate": "4 adults and 1 child (0-12 years)",
-      "extra_child_inr_per_night": 800,
+      "extra_child_inr_per_night": 400,
       "max_adults": 4,
       "max_children": 4,
       "gst": "Rates include GST (the Terms state fees are inclusive of 18% GST)"
