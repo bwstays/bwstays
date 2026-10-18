@@ -3,23 +3,23 @@
   "description": "Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay",
   "content": {
     "destination": "Wayanad, Kerala",
-    "count": 80,
+    "count": 67,
     "categories": {
       "plantation": {
         "label": "Plantations",
-        "count": 2
+        "count": 1
       },
       "waterfalls": {
         "label": "Waterfalls & Lakes",
-        "count": 8
+        "count": 7
       },
       "museums": {
         "label": "Museums & Crafts",
-        "count": 3
+        "count": 4
       },
       "romantic": {
         "label": "Romantic Spots & Viewpoints",
-        "count": 16
+        "count": 13
       },
       "culthist": {
         "label": "Cultural & Historical",
@@ -27,7 +27,7 @@
       },
       "trucking": {
         "label": "Trekking",
-        "count": 8
+        "count": 7
       },
       "wildlife": {
         "label": "Wildlife",
@@ -35,15 +35,11 @@
       },
       "farms": {
         "label": "Farm Visits",
-        "count": 4
+        "count": 3
       },
       "sporting": {
         "label": "Sporting",
-        "count": 3
-      },
-      "food": {
-        "label": "Food",
-        "count": 3
+        "count": 2
       },
       "tribal": {
         "label": "Tribal",
@@ -51,11 +47,11 @@
       },
       "cycling": {
         "label": "Cycling",
-        "count": 2
+        "count": 1
       },
       "shopping": {
         "label": "Shopping",
-        "count": 7
+        "count": 5
       },
       "pilgrimage": {
         "label": "Pilgrimage",
@@ -67,59 +63,27 @@
       }
     },
     "data_quality": {
-      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 92 places,  for 42). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
-      "descriptions_withheld": 2,
+      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 36). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
+      "descriptions_withheld": 0,
       "coordinates_withheld": 5,
-      "distances_withheld": 1,
-      "durations_withheld": 71,
+      "distances_withheld": 0,
+      "durations_withheld": 58,
       "excluded_after_fact_check": [
-        {
-          "name": "Coffee Plantation",
-          "reason": "Generic name; no identifiable attraction"
-        },
-        {
-          "name": "Sentinel Rock Waterfall",
-          "reason": "Duplicate of Soochipara Falls (Sentinel Rock is the same place)"
-        },
-        {
-          "name": "Kappikalam waterfalls",
-          "reason": "No source found; coordinates are 0.2 km from Kanthanpara Falls"
-        },
         {
           "name": "Kungichira Museum & Chira",
           "reason": "Planned museum near Periya; coordinates were copied from the Tea Museum"
-        },
-        {
-          "name": "Folklore Museum",
-          "reason": "Could not be located as a Wayanad attraction"
-        },
-        {
-          "name": "Mullanpara View Point",
-          "reason": "Record does not match its page (Karapuzha Dam) and its coordinates sit on Pookode Lake"
         },
         {
           "name": "Manjappara",
           "reason": "Could not be located in Wayanad (possibly a different Manjappara in Idukki)"
         },
         {
-          "name": "Lakkidi view point",
-          "reason": "Duplicate of Lakkidi Ghats View Point (trucking-20); same page and coordinates"
+          "name": "Kalpetta Food Spots",
+          "reason": "Navigation entry for the food page, not a place"
         },
         {
-          "name": "Bamboo Park",
-          "reason": "Placeholder record sharing another place's coordinates; unidentifiable"
-        },
-        {
-          "name": "Santhinatha Temple",
-          "reason": "No Santhinatha temple in Wayanad could be found"
-        },
-        {
-          "name": "Bevo Beverages ( Govt of Kerala )",
-          "reason": "Not an attraction: a BEVCO liquor outlet"
-        },
-        {
-          "name": "House Holds",
-          "reason": "Unidentifiable sub-entry of En Ooru with coordinates in Kalpetta town"
+          "name": "Restaurants",
+          "reason": "Navigation entry for the restaurants page, not a place"
         }
       ]
     },
@@ -132,7 +96,7 @@
         "description": "A rocky hill on the eastern edge of Kalpetta, near the Civil Station and the bypass road, climbed on foot for views over the town",
         "distance_from_stay_km": 3,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -156,37 +120,6 @@
         }
       },
       {
-        "id": "sporting-90",
-        "name": "Turf",
-        "category": "sporting",
-        "category_label": "Sporting",
-        "description": "Turf",
-        "distance_from_stay_km": 3,
-        "typical_visit_duration": null,
-        "rating": 4.5,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.633206251508627,
-          "longitude": 76.08336925584594
-        },
-        "map_url": "https://www.google.com/maps/place/DUGOUT+7's+FOOTBALL+TURF/@11.6294887,76.084043,17z",
-        "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "pilgrimage-2",
         "name": "Ananthanatha Swamy Jain",
         "category": "pilgrimage",
@@ -194,7 +127,7 @@
         "description": "Jain temple of Tirthankara Ananthanatha Swami on Puliyarmala hillock, about 5 km from Kalpetta",
         "distance_from_stay_km": 4,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -222,7 +155,7 @@
         "description": "A small Gandhi memorial museum and library at Puliyarmala, about 4 km from Kalpetta, beside the Ananthanatha Swamy Jain temple",
         "distance_from_stay_km": 4,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -243,63 +176,6 @@
         }
       },
       {
-        "id": "trucking-23",
-        "name": "Puliyarmala",
-        "category": "trucking",
-        "category_label": "Trekking",
-        "description": "Puliyarmala is a locality near Kalpetta, known for the Ananthanatha Swamy Jain temple and the Gandhi Memorial Museum",
-        "distance_from_stay_km": 4,
-        "typical_visit_duration": null,
-        "rating": 4.2,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.639978909862197,
-          "longitude": 76.08420612038587
-        },
-        "map_url": "https://www.google.com/maps/place/Puliyarmala%2C+Kainatty%2C+Kalpetta%2C+Kerala+673122/@11.6399549,76.0841509,17z",
-        "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": "OpenStreetMap relation/12716507",
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
-        "id": "food-60",
-        "name": "Kalpetta Food Spots",
-        "category": "food",
-        "category_label": "Food",
-        "description": "A guide to places to eat in and around Kalpetta, listed on the site's food page",
-        "distance_from_stay_km": 5,
-        "typical_visit_duration": null,
-        "rating": 4,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": null,
-        "page_url": "https://www.bwstays.com/all-fooding-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "cycling-49",
         "name": "Chundail Tea Estate",
         "category": "cycling",
@@ -307,7 +183,7 @@
         "description": "Tea plantations around Chundale, on the Kalpetta-Meppadi road, crossed by quiet estate roads used for drives and cycling",
         "distance_from_stay_km": 6,
         "typical_visit_duration": null,
-        "rating": 4.7,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Winter (October-February)"
@@ -327,84 +203,6 @@
         }
       },
       {
-        "id": "food-66",
-        "name": "LocalCuisine",
-        "category": "food",
-        "category_label": "Food",
-        "description": "A general section on Kerala and Wayanad food served at local eateries; individual eateries are listed on the food page",
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": null,
-        "rating": 4.5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": null,
-        "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
-        "id": "food-65",
-        "name": "Restaurants",
-        "category": "food",
-        "category_label": "Food",
-        "description": "A general section on restaurants near Kalpetta; individual eateries and their details are listed on the site's food page",
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": null,
-        "rating": 4.5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": null,
-        "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
-        "id": "shopping-79",
-        "name": "Spices",
-        "category": "shopping",
-        "category_label": "Shopping",
-        "description": "Try authentic Kerala spices at local market",
-        "distance_from_stay_km": 10,
-        "typical_visit_duration": null,
-        "rating": 4.5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://www.google.com/maps/search/?api=1&query=Spices+Kalpetta+Wayanad+Kerala",
-        "page_url": null,
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "sporting-70",
         "name": "Ziplines",
         "category": "sporting",
@@ -412,7 +210,7 @@
         "description": "Zip lines in Wayanad are offered at the Karapuzha Dam adventure park and at the 900 Kandi Skypark, each with its own ticket",
         "distance_from_stay_km": 10,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -440,7 +238,7 @@
         "description": "A non-profit bamboo centre at Thrikkaipetta, about 10 km from Kalpetta, with a bamboo nursery, craft workshop and shop",
         "distance_from_stay_km": 11,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -476,7 +274,7 @@
         "description": "Private museum on honey and beekeeping at Old Vythiri, run by Beecraft, with displays on bees and honey collection and a honey shop",
         "distance_from_stay_km": 12,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "All Season"
         ],
@@ -505,7 +303,7 @@
         "description": "Tea museum in the Achoor Estate of Harrisons Malayalam at Achoor, near Pozhuthana, on the history of tea growing in Wayanad",
         "distance_from_stay_km": 12,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -536,7 +334,7 @@
         "description": "Shiva temple at Thrikkaipatta near Meppadi, Wayanad, with shrines to Ganesha, Ayyappa and the serpent deities",
         "distance_from_stay_km": 12,
         "typical_visit_duration": null,
-        "rating": 3.9,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -567,7 +365,7 @@
         "description": "Natural freshwater lake at 770 m near Vythiri, about 12 km from Kalpetta, shaped roughly like the map of India, with boating",
         "distance_from_stay_km": 13,
         "typical_visit_duration": null,
-        "rating": 4.1,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -606,7 +404,7 @@
         "description": "Syriac Orthodox Marian pilgrim church at Meenangadi, known for the relic of St. Mary's girdle (Soonoro)",
         "distance_from_stay_km": 14,
         "typical_visit_duration": null,
-        "rating": 4.4,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -637,7 +435,7 @@
         "description": "Latin Catholic church of Our Lady of Lourdes at Pallikunnu, founded in 1908 by the French priest Fr. Jefreno",
         "distance_from_stay_km": 14,
         "typical_visit_duration": null,
-        "rating": 4.7,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -672,7 +470,7 @@
         "description": "Ficus tree with a chain around it beside the highway at Lakkidi, tied to the folk legend of the tribal guide Karinthandan",
         "distance_from_stay_km": 15,
         "typical_visit_duration": null,
-        "rating": 4.2,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -711,7 +509,7 @@
         "description": "Hill with a large monolithic rock about 5.5 km from Meenangadi, climbed on a steep 2 km trail through forest patches and tea gardens",
         "distance_from_stay_km": 15,
         "typical_visit_duration": null,
-        "rating": 4.2,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -750,7 +548,7 @@
         "description": "Kerala's first tribal heritage village, at Pookode near Vythiri, with traditional huts, performances and tribal craft stalls",
         "distance_from_stay_km": 16,
         "typical_visit_duration": null,
-        "rating": 4.1,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -789,7 +587,7 @@
         "description": "Earth dam 625 m long and 28 m high on the Karapuzha river, built for irrigation, with gardens and an adventure park",
         "distance_from_stay_km": 16,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -828,7 +626,7 @@
         "description": "Roadside viewpoint at the top of the Thamarassery ghat pass, about 700 m up and 5 km from Vythiri, overlooking the hairpin bends",
         "distance_from_stay_km": 16,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -859,7 +657,7 @@
         "description": "Wayanad's highest peak, about 2,100 m, near Meppadi; the guided trail passes a heart-shaped lake, Hridaya Thadakam",
         "distance_from_stay_km": 17,
         "typical_visit_duration": null,
-        "rating": 4.6,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -898,7 +696,7 @@
         "description": "Tea plantations around Ripon junction in Muppainad, near Meppadi, on the hill road south of Kalpetta",
         "distance_from_stay_km": 17,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -929,7 +727,7 @@
         "description": "Waterfall of about 100 ft on the Vaduvanchal road, 8 km from Meppadi, beside the Meppadi forest range",
         "distance_from_stay_km": 18,
         "typical_visit_duration": null,
-        "rating": 4.1,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -968,7 +766,7 @@
         "description": "A hill in Kottathara panchayat near Venniyode, about 991 m high, climbed at dawn for views over the Wayanad plateau",
         "distance_from_stay_km": 18,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -992,37 +790,6 @@
         }
       },
       {
-        "id": "cycling-81",
-        "name": "Rippon",
-        "category": "cycling",
-        "category_label": "Cycling",
-        "description": "Tea-estate country around Ripon near Meppadi in south Wayanad, where tea growing is the main work and the roads run through the gardens",
-        "distance_from_stay_km": 18,
-        "typical_visit_duration": null,
-        "rating": 4.7,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.535204719467869,
-          "longitude": 76.1789395934791
-        },
-        "map_url": "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
-        "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": "OpenStreetMap node/5114869818",
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "trucking-19",
         "name": "Cheengeri Hill",
         "category": "trucking",
@@ -1030,7 +797,7 @@
         "description": "Open rocky hill near Ambalavayal run by DTPC as a trekking spot, with views over the Karapuzha river and reservoir",
         "distance_from_stay_km": 20,
         "typical_visit_duration": null,
-        "rating": 4.6,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1061,7 +828,7 @@
         "description": "Jain temple of Parswanatha Swami on the slopes of Vellarimala near Koottamunda, known for its mirror-lined inner walls",
         "distance_from_stay_km": 20,
         "typical_visit_duration": null,
-        "rating": 4,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1089,7 +856,7 @@
         "description": "Kerala Agricultural University's research station at Ambalavayal, with a nursery open to visitors and the annual Pooppoli flower show",
         "distance_from_stay_km": 21,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "All Season"
         ],
@@ -1118,7 +885,7 @@
         "description": "Bamboo Forest Valentine's Park",
         "distance_from_stay_km": 21,
         "typical_visit_duration": null,
-        "rating": 3.2,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1149,7 +916,7 @@
         "description": "Earth dam and reservoir at the foot of the Banasura Hills, about 21 km from Kalpetta, with boating and islands in the reservoir",
         "distance_from_stay_km": 21,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1188,7 +955,7 @@
         "description": "Natural freshwater lake at Thariode, 3 km from Banasura Sagar Dam, home to DTPC's Wayanad Adventure Camp with a zipline over the water",
         "distance_from_stay_km": 21,
         "typical_visit_duration": null,
-        "rating": 4.1,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1223,7 +990,7 @@
         "description": "Mosque at Varambetta in Padinjarathara panchayat, described by Kerala Tourism as one of Wayanad's oldest, about 300 years old",
         "distance_from_stay_km": 21,
         "typical_visit_duration": null,
-        "rating": 4.8,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1254,7 +1021,7 @@
         "description": "Tribal village between Ambalavayal and Meppadi, surrounded on three sides by the Karapuzha reservoir, with a sunset viewpoint over the water",
         "distance_from_stay_km": 23,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1285,7 +1052,7 @@
         "description": "Three-tier forest waterfall near Meppadi, also called Sentinel Rock, about 23 km from Kalpetta; daily visitor numbers are capped",
         "distance_from_stay_km": 23,
         "typical_visit_duration": null,
-        "rating": 4.2,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1317,66 +1084,6 @@
         }
       },
       {
-        "id": "shopping-86",
-        "name": "Ali's wayanadan natural honey",
-        "category": "shopping",
-        "category_label": "Shopping",
-        "description": "Ali's Wayanadan Natural Honey is a brand of honey sourced from the Wayanad region of Kerala",
-        "distance_from_stay_km": 25,
-        "typical_visit_duration": null,
-        "rating": 5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.596827238325503,
-          "longitude": 76.21948657283083
-        },
-        "map_url": "https://www.google.com/maps/place/Ali's+WAYANADAN+NATURAL+HONEY/@11.5887419,76.2205747,17z",
-        "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
-        "id": "romantic-53",
-        "name": "Attamala View Point",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": "Attamala is a hill hamlet beside Chooralmala in Meppadi panchayat; no official tourist viewpoint is documented there",
-        "distance_from_stay_km": 25,
-        "typical_visit_duration": null,
-        "rating": 4.6,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.498498126983506,
-          "longitude": 76.17549155352333
-        },
-        "map_url": "https://www.google.com/maps/place/Attamala+View+Point/@11.4982826,76.175513,17z",
-        "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": "OpenStreetMap node/8674773179",
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "waterfalls-33",
         "name": "Meenmutty Falls",
         "category": "waterfalls",
@@ -1384,7 +1091,7 @@
         "description": "Three-tier waterfall about 5 km from Banasura Sagar Dam, with a total drop that DTPC gives as over 800 ft",
         "distance_from_stay_km": 25,
         "typical_visit_duration": null,
-        "rating": 4.2,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1416,37 +1123,6 @@
         }
       },
       {
-        "id": "romantic-54",
-        "name": "Sunrise valley",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": "A rocky viewpoint on the Meppadi side of Wayanad overlooking a forested valley; its exact location is not officially documented",
-        "distance_from_stay_km": 25,
-        "typical_visit_duration": null,
-        "rating": 4.4,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.5233771,
-          "longitude": 76.2140645
-        },
-        "map_url": "https://www.google.com/maps/place/Sunrise+Valley/@11.5231821,76.2142235,17z",
-        "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "romantic-58",
         "name": "900 Kandi",
         "category": "romantic",
@@ -1454,7 +1130,7 @@
         "description": "An adventure park in the forested 900 Kandi hills near Meppadi, with a glass-floored bridge, zip line, swings and off-road jeep rides",
         "distance_from_stay_km": 26,
         "typical_visit_duration": null,
-        "rating": 3.9,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1490,7 +1166,7 @@
         "description": "A skull-shaped granite rock formation near Ambalavayal, named after the comic hero the Phantom and reached by a short trek",
         "distance_from_stay_km": 26,
         "typical_visit_duration": null,
-        "rating": 3.9,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1521,7 +1197,7 @@
         "description": "Bhagavathy temple near Mananthavady where Durga is worshipped as Vana Durga, Bhadrakali and Jala Durga",
         "distance_from_stay_km": 27,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1556,7 +1232,7 @@
         "description": "Natural rock caves on Ambukuthi hills, 10 km from Sultan Bathery, with ancient engravings of human figures and animals",
         "distance_from_stay_km": 28,
         "typical_visit_duration": "2-3 Hours",
-        "rating": 4.1,
+        "rating": null,
         "best_seasons": [
           "Summer (November-March)"
         ],
@@ -1593,7 +1269,7 @@
         "description": "A Western Ghats hill range above Banasura Sagar Dam, climbed on a guided forest-department trek that needs prior permission",
         "distance_from_stay_km": 29,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1632,7 +1308,7 @@
         "description": "Memorial and museum at Mananthavady on the Kabani riverbank, where Pazhassi Raja was cremated in 1805",
         "distance_from_stay_km": 30,
         "typical_visit_duration": null,
-        "rating": 4.2,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1671,7 +1347,7 @@
         "description": "18th-century temple at Pulpally, one of the few in Kerala dedicated to Seetha Devi, with idols of Lava and Kusa",
         "distance_from_stay_km": 30,
         "typical_visit_duration": null,
-        "rating": 4.7,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1706,7 +1382,7 @@
         "description": "Bamboo rafting on the Kabini River at Kuruva Island, a forested river island near Mananthavady managed for visitors by DTPC Wayanad",
         "distance_from_stay_km": 31,
         "typical_visit_duration": "2 Hours",
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1738,37 +1414,6 @@
         }
       },
       {
-        "id": "waterfalls-36",
-        "name": "Cheeyambam waterfalls",
-        "category": "waterfalls",
-        "category_label": "Waterfalls & Lakes",
-        "description": "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing",
-        "distance_from_stay_km": 32,
-        "typical_visit_duration": null,
-        "rating": 4.3,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.766189025300932,
-          "longitude": 76.25203494478279
-        },
-        "map_url": "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
-        "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": "Shares coordinates with Chetalayam Falls and is likely the same place",
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "culthist-6",
         "name": "Sultan's Bathery Valmiki Ashram",
         "category": "culthist",
@@ -1776,7 +1421,7 @@
         "description": "Simple thatched hermitage near Pulpally that local tradition links to Sage Valmiki and to Sita's stay in the forest",
         "distance_from_stay_km": 32,
         "typical_visit_duration": null,
-        "rating": 4.8,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1804,7 +1449,7 @@
         "description": "A hilltop viewpoint near Vaduvanchal, reached by jeep track and a trek, known for its view of Meenmutty falls",
         "distance_from_stay_km": 33,
         "typical_visit_duration": null,
-        "rating": 3.9,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1835,7 +1480,7 @@
         "description": "Small seasonal waterfall in forest about 12 km from Sulthan Bathery, reached on foot; it runs low or dry in summer",
         "distance_from_stay_km": 34,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1893,7 +1538,7 @@
         "description": "Ancient Shiva temple about 8 km north-west of Mananthavady, ritually linked to the Thirunelli temple",
         "distance_from_stay_km": 36,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1922,13 +1567,13 @@
       },
       {
         "id": "wildlife-32",
-        "name": "Begur wildlife sanctuary",
+        "name": "Begur Forest Range",
         "category": "wildlife",
         "category_label": "Wildlife",
-        "description": "Showcases the rich cultural heritage and tribal artifacts of Wayanad",
+        "description": "A forest range of the North Wayanad Forest Division near Mananthavady and Tholpetty; it is not a separate wildlife sanctuary",
         "distance_from_stay_km": 37,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1959,7 +1604,7 @@
         "description": "Southern part of Wayanad Wildlife Sanctuary near Sulthan Bathery, visited by Forest Department jeep and bus safaris",
         "distance_from_stay_km": 38,
         "typical_visit_duration": null,
-        "rating": 3.9,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -1991,37 +1636,6 @@
         }
       },
       {
-        "id": "plantation-80",
-        "name": "Periya tea plantation",
-        "category": "plantation",
-        "category_label": "Plantations",
-        "description": "Lush greenery and tea plantations",
-        "distance_from_stay_km": 38,
-        "typical_visit_duration": null,
-        "rating": 4.5,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.840044094937126,
-          "longitude": 75.89842935307782
-        },
-        "map_url": "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
-        "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": "No source found for a visitor-facing estate by this name; verify before recommending",
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "trucking-15",
         "name": "Kuruwa Deep",
         "category": "trucking",
@@ -2029,7 +1643,7 @@
         "description": "950-acre protected river delta of forested islets in the east-flowing Kabani river, reached by raft",
         "distance_from_stay_km": 40,
         "typical_visit_duration": null,
-        "rating": 4.1,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2068,7 +1682,7 @@
         "description": "Ramayana-linked temple beside the Ponkuzhi river on the Sulthan Bathery-Mysore road, about 4 km from Muthanga",
         "distance_from_stay_km": 41,
         "typical_visit_duration": null,
-        "rating": 4.8,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2096,10 +1710,10 @@
         "name": "Munneswaran Kunnu",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": null,
+        "description": "Grassy hilltop near Thalappuzha in Mananthavady taluk, reached by a steep walk from Makkimala, with a small Shiva shrine on top",
         "distance_from_stay_km": 42,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2130,7 +1744,7 @@
         "description": "Boulder caves at about 1,740 m in the Brahmagiri Hills, reached on foot from Thirunelli and known for a large bird colony",
         "distance_from_stay_km": 42,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2161,7 +1775,7 @@
         "description": "A campus about 13 km from Mananthavady where the Wayanad Social Service Society runs a herbal garden, gene park and farm units",
         "distance_from_stay_km": 43,
         "typical_visit_duration": null,
-        "rating": 4,
+        "rating": null,
         "best_seasons": [
           "All Season"
         ],
@@ -2190,7 +1804,7 @@
         "description": "Ancient Maha Vishnu temple at Thirunelli, set in forest beside the Brahmagiri hills, about 32 km from Mananthavady",
         "distance_from_stay_km": 48,
         "typical_visit_duration": null,
-        "rating": 4.7,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2248,7 +1862,7 @@
         "description": "Sacred mountain stream from the Brahmagiri hills, about 1 km from Thirunelli temple, where devotees perform rites for ancestors",
         "distance_from_stay_km": 49,
         "typical_visit_duration": null,
-        "rating": 4.7,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2279,7 +1893,7 @@
         "description": "Guided forest trek of about 10 km from the Thirunelli forest camp to the Brahmagiri summit, about 1,608 m, on the Kerala-Karnataka border",
         "distance_from_stay_km": 50,
         "typical_visit_duration": null,
-        "rating": 4.5,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2318,7 +1932,7 @@
         "description": "Northern block of Wayanad Wildlife Sanctuary, east of Mananthavady near Thirunelli, visited on Forest Department jeep safaris",
         "distance_from_stay_km": 54.5,
         "typical_visit_duration": null,
-        "rating": 4,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2357,7 +1971,7 @@
         "description": "Waterfall on the Iruvanji river near Thiruvambady in Kozhikode district, about 15 km from Thiruvambady town",
         "distance_from_stay_km": null,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2412,7 +2026,7 @@
         "description": "Conservation garden near Periya in northern Wayanad, founded in 1981, that grows and restores native plants of the Western Ghats",
         "distance_from_stay_km": null,
         "typical_visit_duration": null,
-        "rating": 4.9,
+        "rating": null,
         "best_seasons": [
           "All Season"
         ],
@@ -2422,7 +2036,7 @@
           "longitude": 75.8486584
         },
         "map_url": "https://www.google.com/maps?q=11.821216,75.844855",
-        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
+        "page_url": "https://www.bwstays.com/bw-gurukula-botanical-sanctuary-wayanad.html",
         "district": null,
         "locality": "Alattil, near Mananthavady",
         "review_note": "North Wayanad; the stated 10 km from Kalpetta is doubtful",
@@ -2445,7 +2059,7 @@
         "description": "Waterfall of about 170 ft on the Lakshmana Tirtha river in the Brahmagiri Hills of Kodagu, Karnataka, near the Wayanad border",
         "distance_from_stay_km": null,
         "typical_visit_duration": null,
-        "rating": 4.3,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2473,32 +2087,6 @@
         }
       },
       {
-        "id": "romantic-75",
-        "name": "Muneeswaran Kunnu View point",
-        "category": "romantic",
-        "category_label": "Romantic Spots & Viewpoints",
-        "description": null,
-        "distance_from_stay_km": null,
-        "typical_visit_duration": null,
-        "rating": 4.5,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://www.google.com/maps?q=11.619638,76.084481",
-        "page_url": null,
-        "district": null,
-        "locality": null,
-        "review_note": "The real place is near Thalappuzha, more than 40 km away; stated coordinates are in Kalpetta",
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
         "id": "wildlife-29",
         "name": "Nagarhole wild life sanctuary",
         "category": "wildlife",
@@ -2506,7 +2094,7 @@
         "description": "Tiger reserve in Karnataka next to Wayanad's Tholpetty sanctuary, with Forest Department safaris from the Kabini, Veeranahosahalli and Nanachi gates",
         "distance_from_stay_km": null,
         "typical_visit_duration": null,
-        "rating": 4.1,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2525,35 +2113,6 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/838536067",
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
-        "id": "farms-74",
-        "name": "Pepper Farm",
-        "category": "farms",
-        "category_label": "Farm Visits",
-        "description": "Pepper is a traditional Wayanad crop grown on shade trees in coffee and mixed farms; this entry does not name a specific farm",
-        "distance_from_stay_km": null,
-        "typical_visit_duration": null,
-        "rating": 4.7,
-        "best_seasons": [
-          "All Season"
-        ],
-        "transport": "Public",
-        "coordinates": {
-          "latitude": 11.69283527987838,
-          "longitude": 76.1911296389339
-        },
-        "map_url": "https://www.google.com/maps/place/Pepper+Hub/@11.691632,76.191507,17z",
-        "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": null,
           "official_timing": null,
           "official_fee": null
         }
@@ -2614,7 +2173,7 @@
         "description": "Three waterfalls near Kodenchery in Kozhikode district, the tallest dropping about 75 m, within a few hundred metres of each other",
         "distance_from_stay_km": null,
         "typical_visit_duration": null,
-        "rating": 4.4,
+        "rating": null,
         "best_seasons": [
           "Summer (March-May)",
           "Monsoon (June-September)",
@@ -2659,6 +2218,42 @@
           "coordinate_source": null,
           "official_timing": null,
           "official_fee": null
+        }
+      },
+      {
+        "id": "museums-27",
+        "name": "Wayanad Heritage Museum",
+        "category": "museums",
+        "category_label": "Museums & Crafts",
+        "description": "Archaeological and heritage museum at Ambalavayal with tribal artefacts, hero stones and finds from the Neolithic age onwards",
+        "distance_from_stay_km": null,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": null,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Wayanad+Heritage+Museum+Ambalavayal",
+        "page_url": "https://www.bwstays.com/bw-folklore-museum-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": {
+            "value": "09:00-17:30",
+            "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 30, child INR 20; multi theatre INR 20; multimedia with show INR 50; photo shoot INR 1,000",
+            "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
+            "confidence": "high"
+          }
         }
       },
       {

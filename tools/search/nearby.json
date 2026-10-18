@@ -15,21 +15,6 @@
             "distance_km": 1
           },
           {
-            "id": 23,
-            "name": "Puliyarmala",
-            "distance_km": 1
-          },
-          {
-            "id": 90,
-            "name": "Turf",
-            "distance_km": 1
-          },
-          {
-            "id": 60,
-            "name": "Kalpetta Food Spots",
-            "distance_km": 3
-          },
-          {
             "id": 46,
             "name": "Mailadippara",
             "distance_km": 3
@@ -48,6 +33,21 @@
             "id": 10,
             "name": "Trikaipatta temple",
             "distance_km": 10
+          },
+          {
+            "id": 7,
+            "name": "Meenangadi Church and temple",
+            "distance_km": 12
+          },
+          {
+            "id": 43,
+            "name": "Karapuzha Dam",
+            "distance_km": 14
+          },
+          {
+            "id": 51,
+            "name": "Kurumbalakotta",
+            "distance_km": 14
           }
         ]
       }
@@ -165,11 +165,6 @@
             "distance_km": 3
           },
           {
-            "id": 74,
-            "name": "Pepper Farm",
-            "distance_km": 7
-          },
-          {
             "id": 64,
             "name": "Ambalavayal Farm",
             "distance_km": 8
@@ -198,6 +193,11 @@
             "id": 21,
             "name": "Edakkal Caves",
             "distance_km": 11
+          },
+          {
+            "id": 2,
+            "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
+            "distance_km": 12
           }
         ]
       }
@@ -225,21 +225,6 @@
             "distance_km": 9
           },
           {
-            "id": 23,
-            "name": "Puliyarmala",
-            "distance_km": 9
-          },
-          {
-            "id": 90,
-            "name": "Turf",
-            "distance_km": 10
-          },
-          {
-            "id": 60,
-            "name": "Kalpetta Food Spots",
-            "distance_km": 11
-          },
-          {
             "id": 46,
             "name": "Mailadippara",
             "distance_km": 11
@@ -248,6 +233,21 @@
             "id": 85,
             "name": "Bamboo Forest Valentine Park",
             "distance_km": 12
+          },
+          {
+            "id": 39,
+            "name": "Karlad chira wayanad",
+            "distance_km": 13
+          },
+          {
+            "id": 26,
+            "name": "Tea Museum wayanad",
+            "distance_km": 15
+          },
+          {
+            "id": 45,
+            "name": "Banasura Sagar Dam",
+            "distance_km": 16
           }
         ]
       }
@@ -265,19 +265,9 @@
             "distance_km": 11
           },
           {
-            "id": 36,
-            "name": "Cheeyambam waterfalls",
-            "distance_km": 15
-          },
-          {
             "id": 42,
             "name": "chetalayam falls",
             "distance_km": 15
-          },
-          {
-            "id": 74,
-            "name": "Pepper Farm",
-            "distance_km": 17
           },
           {
             "id": 82,
@@ -298,6 +288,16 @@
             "id": 97,
             "name": "Keluvaidyar, Kattikulam",
             "distance_km": 21
+          },
+          {
+            "id": 7,
+            "name": "Meenangadi Church and temple",
+            "distance_km": 22
+          },
+          {
+            "id": 8,
+            "name": "Pallikunnu church",
+            "distance_km": 22
           }
         ]
       }
@@ -345,9 +345,9 @@
             "distance_km": 10
           },
           {
-            "id": 60,
-            "name": "Kalpetta Food Spots",
-            "distance_km": 11
+            "id": 64,
+            "name": "Ambalavayal Farm",
+            "distance_km": 12
           }
         ]
       }
@@ -375,11 +375,6 @@
             "distance_km": 10
           },
           {
-            "id": 75,
-            "name": "Muneeswaran Kunnu View point",
-            "distance_km": 11
-          },
-          {
             "id": 84,
             "name": "Munneswaran Kunnu",
             "distance_km": 11
@@ -398,6 +393,11 @@
             "id": 15,
             "name": "Kuruwa Deep",
             "distance_km": 15
+          },
+          {
+            "id": 63,
+            "name": "Boys Town",
+            "distance_km": 16
           }
         ]
       }
@@ -413,11 +413,6 @@
             "id": 28,
             "name": "Wayanad wild life sanctuary Near to Muthanga",
             "distance_km": 4
-          },
-          {
-            "id": 74,
-            "name": "Pepper Farm",
-            "distance_km": 27
           },
           {
             "id": 50,
@@ -447,6 +442,11 @@
           {
             "id": 19,
             "name": "Cheengeri Hill",
+            "distance_km": 31
+          },
+          {
+            "id": 42,
+            "name": "chetalayam falls",
             "distance_km": 31
           }
         ]
@@ -720,11 +720,6 @@
             "distance_km": 16
           },
           {
-            "id": 81,
-            "name": "Rippon",
-            "distance_km": 16
-          },
-          {
             "id": 10,
             "name": "Trikaipatta temple",
             "distance_km": 17
@@ -748,6 +743,11 @@
             "id": 83,
             "name": "Neelarchalu",
             "distance_km": 18
+          },
+          {
+            "id": 46,
+            "name": "Mailadippara",
+            "distance_km": 19
           }
         ]
       }
@@ -763,11 +763,6 @@
             "id": 64,
             "name": "Ambalavayal Farm",
             "distance_km": 2
-          },
-          {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 6
           },
           {
             "id": 21,
@@ -798,6 +793,11 @@
             "id": 83,
             "name": "Neelarchalu",
             "distance_km": 9
+          },
+          {
+            "id": 10,
+            "name": "Trikaipatta temple",
+            "distance_km": 10
           }
         ]
       }
@@ -875,11 +875,6 @@
             "distance_km": 6
           },
           {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 8
-          },
-          {
             "id": 87,
             "name": "Kolagapara",
             "distance_km": 11
@@ -898,56 +893,11 @@
             "id": 43,
             "name": "Karapuzha Dam",
             "distance_km": 12
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 23,
-        "place": "Puliyarmala"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 2,
-            "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
-            "distance_km": 1
-          },
-          {
-            "id": 52,
-            "name": "Gandhi Museum",
-            "distance_km": 1
-          },
-          {
-            "id": 90,
-            "name": "Turf",
-            "distance_km": 1
-          },
-          {
-            "id": 46,
-            "name": "Mailadippara",
-            "distance_km": 3
-          },
-          {
-            "id": 8,
-            "name": "Pallikunnu church",
-            "distance_km": 9
-          },
-          {
-            "id": 59,
-            "name": "Uravu",
-            "distance_km": 10
-          },
-          {
-            "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 11
           },
           {
             "id": 10,
             "name": "Trikaipatta temple",
-            "distance_km": 11
+            "distance_km": 16
           }
         ]
       }
@@ -980,11 +930,6 @@
             "distance_km": 13
           },
           {
-            "id": 75,
-            "name": "Muneeswaran Kunnu View point",
-            "distance_km": 13
-          },
-          {
             "id": 84,
             "name": "Munneswaran Kunnu",
             "distance_km": 13
@@ -997,6 +942,11 @@
           {
             "id": 82,
             "name": "Bamboo Rafting",
+            "distance_km": 15
+          },
+          {
+            "id": 15,
+            "name": "Kuruwa Deep",
             "distance_km": 15
           }
         ]
@@ -1115,11 +1065,6 @@
             "distance_km": 4
           },
           {
-            "id": 74,
-            "name": "Pepper Farm",
-            "distance_km": 23
-          },
-          {
             "id": 50,
             "name": "Phantom rock",
             "distance_km": 23
@@ -1147,6 +1092,11 @@
           {
             "id": 19,
             "name": "Cheengeri Hill",
+            "distance_km": 27
+          },
+          {
+            "id": 42,
+            "name": "chetalayam falls",
             "distance_km": 27
           }
         ]
@@ -1375,11 +1325,6 @@
       "output": {
         "nearest": [
           {
-            "id": 53,
-            "name": "Attamala View Point",
-            "distance_km": 5
-          },
-          {
             "id": 58,
             "name": "900 Kandi",
             "distance_km": 8
@@ -1400,11 +1345,6 @@
             "distance_km": 20
           },
           {
-            "id": 81,
-            "name": "Rippon",
-            "distance_km": 20
-          },
-          {
             "id": 10,
             "name": "Trikaipatta temple",
             "distance_km": 22
@@ -1413,56 +1353,16 @@
             "id": 83,
             "name": "Neelarchalu",
             "distance_km": 23
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 36,
-        "place": "Cheeyambam waterfalls"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 42,
-            "name": "chetalayam falls",
-            "distance_km": 13
           },
           {
-            "id": 9,
-            "name": "Pulpally Sitadevi temple",
-            "distance_km": 15
-          },
-          {
-            "id": 74,
-            "name": "Pepper Farm",
-            "distance_km": 17
-          },
-          {
-            "id": 85,
-            "name": "Bamboo Forest Valentine Park",
-            "distance_km": 20
-          },
-          {
-            "id": 50,
-            "name": "Phantom rock",
+            "id": 59,
+            "name": "Uravu",
             "distance_km": 23
           },
           {
-            "id": 87,
-            "name": "Kolagapara",
+            "id": 49,
+            "name": "Chundail Tea Estate",
             "distance_km": 24
-          },
-          {
-            "id": 7,
-            "name": "Meenangadi Church and temple",
-            "distance_km": 25
-          },
-          {
-            "id": 64,
-            "name": "Ambalavayal Farm",
-            "distance_km": 26
           }
         ]
       }
@@ -1478,16 +1378,6 @@
             "id": 61,
             "name": "Tea Plantation wayanad",
             "distance_km": 4
-          },
-          {
-            "id": 81,
-            "name": "Rippon",
-            "distance_km": 5
-          },
-          {
-            "id": 54,
-            "name": "Sunrise valley",
-            "distance_km": 11
           },
           {
             "id": 83,
@@ -1510,9 +1400,19 @@
             "distance_km": 15
           },
           {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
+            "id": 18,
+            "name": "Chembra Peak",
             "distance_km": 16
+          },
+          {
+            "id": 58,
+            "name": "900 Kandi",
+            "distance_km": 17
+          },
+          {
+            "id": 64,
+            "name": "Ambalavayal Farm",
+            "distance_km": 18
           }
         ]
       }
@@ -1555,14 +1455,14 @@
             "distance_km": 15
           },
           {
-            "id": 23,
-            "name": "Puliyarmala",
-            "distance_km": 15
+            "id": 47,
+            "name": "Banasura Sagar Hills",
+            "distance_km": 16
           },
           {
-            "id": 90,
-            "name": "Turf",
-            "distance_km": 15
+            "id": 49,
+            "name": "Chundail Tea Estate",
+            "distance_km": 17
           }
         ]
       }
@@ -1675,19 +1575,9 @@
       "output": {
         "nearest": [
           {
-            "id": 36,
-            "name": "Cheeyambam waterfalls",
-            "distance_km": 13
-          },
-          {
             "id": 9,
             "name": "Pulpally Sitadevi temple",
             "distance_km": 15
-          },
-          {
-            "id": 74,
-            "name": "Pepper Farm",
-            "distance_km": 17
           },
           {
             "id": 85,
@@ -1713,6 +1603,16 @@
             "id": 64,
             "name": "Ambalavayal Farm",
             "distance_km": 26
+          },
+          {
+            "id": 19,
+            "name": "Cheengeri Hill",
+            "distance_km": 27
+          },
+          {
+            "id": 21,
+            "name": "Edakkal Caves",
+            "distance_km": 27
           }
         ]
       }
@@ -1755,14 +1655,14 @@
             "distance_km": 10
           },
           {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 11
-          },
-          {
             "id": 87,
             "name": "Kolagapara",
             "distance_km": 11
+          },
+          {
+            "id": 21,
+            "name": "Edakkal Caves",
+            "distance_km": 12
           }
         ]
       }
@@ -1885,16 +1785,6 @@
             "distance_km": 3
           },
           {
-            "id": 23,
-            "name": "Puliyarmala",
-            "distance_km": 3
-          },
-          {
-            "id": 90,
-            "name": "Turf",
-            "distance_km": 3
-          },
-          {
             "id": 49,
             "name": "Chundail Tea Estate",
             "distance_km": 9
@@ -1913,6 +1803,16 @@
             "id": 59,
             "name": "Uravu",
             "distance_km": 11
+          },
+          {
+            "id": 7,
+            "name": "Meenangadi Church and temple",
+            "distance_km": 12
+          },
+          {
+            "id": 26,
+            "name": "Tea Museum wayanad",
+            "distance_km": 13
           }
         ]
       }
@@ -1975,11 +1875,6 @@
       "output": {
         "nearest": [
           {
-            "id": 90,
-            "name": "Turf",
-            "distance_km": 6
-          },
-          {
             "id": 44,
             "name": "Pookode Lake",
             "distance_km": 7
@@ -2013,6 +1908,11 @@
             "id": 57,
             "name": "En ooru",
             "distance_km": 10
+          },
+          {
+            "id": 20,
+            "name": "Lakkidi Ghats",
+            "distance_km": 11
           }
         ]
       }
@@ -2050,11 +1950,6 @@
             "distance_km": 8
           },
           {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 9
-          },
-          {
             "id": 43,
             "name": "Karapuzha Dam",
             "distance_km": 10
@@ -2063,6 +1958,11 @@
             "id": 83,
             "name": "Neelarchalu",
             "distance_km": 12
+          },
+          {
+            "id": 59,
+            "name": "Uravu",
+            "distance_km": 15
           }
         ]
       }
@@ -2095,11 +1995,6 @@
             "distance_km": 14
           },
           {
-            "id": 23,
-            "name": "Puliyarmala",
-            "distance_km": 14
-          },
-          {
             "id": 13,
             "name": "Varampatta mosque",
             "distance_km": 14
@@ -2113,6 +2008,11 @@
             "id": 39,
             "name": "Karlad chira wayanad",
             "distance_km": 15
+          },
+          {
+            "id": 46,
+            "name": "Mailadippara",
+            "distance_km": 16
           }
         ]
       }
@@ -2127,16 +2027,6 @@
           {
             "id": 2,
             "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
-            "distance_km": 1
-          },
-          {
-            "id": 23,
-            "name": "Puliyarmala",
-            "distance_km": 1
-          },
-          {
-            "id": 90,
-            "name": "Turf",
             "distance_km": 1
           },
           {
@@ -2163,106 +2053,16 @@
             "id": 43,
             "name": "Karapuzha Dam",
             "distance_km": 14
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 53,
-        "place": "Attamala View Point"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 35,
-            "name": "Soochipara Water falls",
-            "distance_km": 5
           },
           {
-            "id": 58,
-            "name": "900 Kandi",
-            "distance_km": 10
+            "id": 51,
+            "name": "Kurumbalakotta",
+            "distance_km": 14
           },
           {
-            "id": 61,
-            "name": "Tea Plantation wayanad",
-            "distance_km": 21
-          },
-          {
-            "id": 18,
-            "name": "Chembra Peak",
-            "distance_km": 23
-          },
-          {
-            "id": 37,
-            "name": "Kanthanpara waterfalls",
-            "distance_km": 23
-          },
-          {
-            "id": 81,
-            "name": "Rippon",
-            "distance_km": 23
-          },
-          {
-            "id": 10,
-            "name": "Trikaipatta temple",
-            "distance_km": 24
-          },
-          {
-            "id": 83,
-            "name": "Neelarchalu",
-            "distance_km": 25
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 54,
-        "place": "Sunrise valley"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 81,
-            "name": "Rippon",
-            "distance_km": 7
-          },
-          {
-            "id": 61,
-            "name": "Tea Plantation wayanad",
-            "distance_km": 7
-          },
-          {
-            "id": 55,
-            "name": "Neelimala view point",
-            "distance_km": 10
-          },
-          {
-            "id": 37,
-            "name": "Kanthanpara waterfalls",
-            "distance_km": 11
-          },
-          {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 12
-          },
-          {
-            "id": 64,
-            "name": "Ambalavayal Farm",
+            "id": 87,
+            "name": "Kolagapara",
             "distance_km": 15
-          },
-          {
-            "id": 19,
-            "name": "Cheengeri Hill",
-            "distance_km": 17
-          },
-          {
-            "id": 83,
-            "name": "Neelarchalu",
-            "distance_km": 18
           }
         ]
       }
@@ -2275,16 +2075,6 @@
       "output": {
         "nearest": [
           {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 9
-          },
-          {
-            "id": 54,
-            "name": "Sunrise valley",
-            "distance_km": 10
-          },
-          {
             "id": 61,
             "name": "Tea Plantation wayanad",
             "distance_km": 12
@@ -2292,11 +2082,6 @@
           {
             "id": 64,
             "name": "Ambalavayal Farm",
-            "distance_km": 13
-          },
-          {
-            "id": 81,
-            "name": "Rippon",
             "distance_km": 13
           },
           {
@@ -2313,6 +2098,21 @@
             "id": 83,
             "name": "Neelarchalu",
             "distance_km": 15
+          },
+          {
+            "id": 21,
+            "name": "Edakkal Caves",
+            "distance_km": 17
+          },
+          {
+            "id": 87,
+            "name": "Kolagapara",
+            "distance_km": 18
+          },
+          {
+            "id": 50,
+            "name": "Phantom rock",
+            "distance_km": 18
           }
         ]
       }
@@ -2380,11 +2180,6 @@
             "distance_km": 8
           },
           {
-            "id": 53,
-            "name": "Attamala View Point",
-            "distance_km": 10
-          },
-          {
             "id": 37,
             "name": "Kanthanpara waterfalls",
             "distance_km": 17
@@ -2400,11 +2195,6 @@
             "distance_km": 20
           },
           {
-            "id": 90,
-            "name": "Turf",
-            "distance_km": 21
-          },
-          {
             "id": 59,
             "name": "Uravu",
             "distance_km": 21
@@ -2413,6 +2203,16 @@
             "id": 49,
             "name": "Chundail Tea Estate",
             "distance_km": 22
+          },
+          {
+            "id": 43,
+            "name": "Karapuzha Dam",
+            "distance_km": 23
+          },
+          {
+            "id": 46,
+            "name": "Mailadippara",
+            "distance_km": 23
           }
         ]
       }
@@ -2440,11 +2240,6 @@
             "distance_km": 10
           },
           {
-            "id": 23,
-            "name": "Puliyarmala",
-            "distance_km": 10
-          },
-          {
             "id": 19,
             "name": "Cheengeri Hill",
             "distance_km": 11
@@ -2455,64 +2250,19 @@
             "distance_km": 11
           },
           {
-            "id": 90,
-            "name": "Turf",
-            "distance_km": 11
-          },
-          {
             "id": 64,
             "name": "Ambalavayal Farm",
             "distance_km": 13
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 60,
-        "place": "Kalpetta Food Spots"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 2,
-            "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
-            "distance_km": 3
           },
           {
-            "id": 8,
-            "name": "Pallikunnu church",
-            "distance_km": 11
+            "id": 37,
+            "name": "Kanthanpara waterfalls",
+            "distance_km": 15
           },
           {
-            "id": 10,
-            "name": "Trikaipatta temple",
-            "distance_km": 11
-          },
-          {
-            "id": 7,
-            "name": "Meenangadi Church and temple",
-            "distance_km": 12
-          },
-          {
-            "id": 14,
-            "name": "Valliyoorkavu temple",
-            "distance_km": 26
-          },
-          {
-            "id": 13,
-            "name": "Varampatta mosque",
-            "distance_km": 27
-          },
-          {
-            "id": 9,
-            "name": "Pulpally Sitadevi temple",
-            "distance_km": 32
-          },
-          {
-            "id": 15,
-            "name": "Kuruwa Deep",
-            "distance_km": 34
+            "id": 50,
+            "name": "Phantom rock",
+            "distance_km": 15
           }
         ]
       }
@@ -2525,19 +2275,9 @@
       "output": {
         "nearest": [
           {
-            "id": 81,
-            "name": "Rippon",
-            "distance_km": 1
-          },
-          {
             "id": 37,
             "name": "Kanthanpara waterfalls",
             "distance_km": 4
-          },
-          {
-            "id": 54,
-            "name": "Sunrise valley",
-            "distance_km": 7
           },
           {
             "id": 49,
@@ -2555,14 +2295,24 @@
             "distance_km": 12
           },
           {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 13
-          },
-          {
             "id": 10,
             "name": "Trikaipatta temple",
             "distance_km": 14
+          },
+          {
+            "id": 18,
+            "name": "Chembra Peak",
+            "distance_km": 15
+          },
+          {
+            "id": 64,
+            "name": "Ambalavayal Farm",
+            "distance_km": 17
+          },
+          {
+            "id": 43,
+            "name": "Karapuzha Dam",
+            "distance_km": 17
           }
         ]
       }
@@ -2574,16 +2324,6 @@
       },
       "output": {
         "nearest": [
-          {
-            "id": 80,
-            "name": "Periya tea plantation",
-            "distance_km": 3
-          },
-          {
-            "id": 75,
-            "name": "Muneeswaran Kunnu View point",
-            "distance_km": 8
-          },
           {
             "id": 84,
             "name": "Munneswaran Kunnu",
@@ -2613,6 +2353,16 @@
             "id": 97,
             "name": "Keluvaidyar, Kattikulam",
             "distance_km": 22
+          },
+          {
+            "id": 32,
+            "name": "Begur wild life sanctuary",
+            "distance_km": 24
+          },
+          {
+            "id": 47,
+            "name": "Banasura Sagar Hills",
+            "distance_km": 26
           }
         ]
       }
@@ -2628,11 +2378,6 @@
             "id": 19,
             "name": "Cheengeri Hill",
             "distance_km": 2
-          },
-          {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 4
           },
           {
             "id": 21,
@@ -2663,106 +2408,11 @@
             "id": 7,
             "name": "Meenangadi Church and temple",
             "distance_km": 8
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 74,
-        "place": "Pepper Farm"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 87,
-            "name": "Kolagapara",
-            "distance_km": 7
           },
           {
-            "id": 7,
-            "name": "Meenangadi Church and temple",
-            "distance_km": 7
-          },
-          {
-            "id": 85,
-            "name": "Bamboo Forest Valentine Park",
-            "distance_km": 11
-          },
-          {
-            "id": 50,
-            "name": "Phantom rock",
+            "id": 10,
+            "name": "Trikaipatta temple",
             "distance_km": 12
-          },
-          {
-            "id": 43,
-            "name": "Karapuzha Dam",
-            "distance_km": 14
-          },
-          {
-            "id": 64,
-            "name": "Ambalavayal Farm",
-            "distance_km": 15
-          },
-          {
-            "id": 21,
-            "name": "Edakkal Caves",
-            "distance_km": 15
-          },
-          {
-            "id": 19,
-            "name": "Cheengeri Hill",
-            "distance_km": 16
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 75,
-        "place": "Muneeswaran Kunnu View point"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 63,
-            "name": "Boys Town",
-            "distance_km": 8
-          },
-          {
-            "id": 80,
-            "name": "Periya tea plantation",
-            "distance_km": 11
-          },
-          {
-            "id": 11,
-            "name": "Trishileri temple",
-            "distance_km": 11
-          },
-          {
-            "id": 24,
-            "name": "Mananthavady Pazhassi Tomb",
-            "distance_km": 13
-          },
-          {
-            "id": 14,
-            "name": "Valliyoorkavu temple",
-            "distance_km": 16
-          },
-          {
-            "id": 88,
-            "name": "Gurukula Botanical Sanctuary",
-            "distance_km": 20
-          },
-          {
-            "id": 97,
-            "name": "Keluvaidyar, Kattikulam",
-            "distance_km": 20
-          },
-          {
-            "id": 32,
-            "name": "Begur wild life sanctuary",
-            "distance_km": 23
           }
         ]
       }
@@ -2813,106 +2463,6 @@
             "id": 52,
             "name": "Gandhi Museum",
             "distance_km": 17
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 80,
-        "place": "Periya tea plantation"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 63,
-            "name": "Boys Town",
-            "distance_km": 3
-          },
-          {
-            "id": 88,
-            "name": "Gurukula Botanical Sanctuary",
-            "distance_km": 10
-          },
-          {
-            "id": 75,
-            "name": "Muneeswaran Kunnu View point",
-            "distance_km": 11
-          },
-          {
-            "id": 84,
-            "name": "Munneswaran Kunnu",
-            "distance_km": 11
-          },
-          {
-            "id": 24,
-            "name": "Mananthavady Pazhassi Tomb",
-            "distance_km": 17
-          },
-          {
-            "id": 11,
-            "name": "Trishileri temple",
-            "distance_km": 19
-          },
-          {
-            "id": 14,
-            "name": "Valliyoorkavu temple",
-            "distance_km": 19
-          },
-          {
-            "id": 97,
-            "name": "Keluvaidyar, Kattikulam",
-            "distance_km": 24
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 81,
-        "place": "Rippon"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 61,
-            "name": "Tea Plantation wayanad",
-            "distance_km": 1
-          },
-          {
-            "id": 37,
-            "name": "Kanthanpara waterfalls",
-            "distance_km": 5
-          },
-          {
-            "id": 54,
-            "name": "Sunrise valley",
-            "distance_km": 7
-          },
-          {
-            "id": 83,
-            "name": "Neelarchalu",
-            "distance_km": 12
-          },
-          {
-            "id": 55,
-            "name": "Neelimala view point",
-            "distance_km": 13
-          },
-          {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 14
-          },
-          {
-            "id": 10,
-            "name": "Trikaipatta temple",
-            "distance_km": 15
-          },
-          {
-            "id": 18,
-            "name": "Chembra Peak",
-            "distance_km": 16
           }
         ]
       }
@@ -2975,11 +2525,6 @@
       "output": {
         "nearest": [
           {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 7
-          },
-          {
             "id": 64,
             "name": "Ambalavayal Farm",
             "distance_km": 7
@@ -3013,6 +2558,11 @@
             "id": 87,
             "name": "Kolagapara",
             "distance_km": 12
+          },
+          {
+            "id": 50,
+            "name": "Phantom rock",
+            "distance_km": 12
           }
         ]
       }
@@ -3028,11 +2578,6 @@
             "id": 63,
             "name": "Boys Town",
             "distance_km": 8
-          },
-          {
-            "id": 80,
-            "name": "Periya tea plantation",
-            "distance_km": 11
           },
           {
             "id": 11,
@@ -3063,6 +2608,11 @@
             "id": 32,
             "name": "Begur wild life sanctuary",
             "distance_km": 23
+          },
+          {
+            "id": 82,
+            "name": "Bamboo Rafting",
+            "distance_km": 27
           }
         ]
       }
@@ -3074,11 +2624,6 @@
       },
       "output": {
         "nearest": [
-          {
-            "id": 74,
-            "name": "Pepper Farm",
-            "distance_km": 11
-          },
           {
             "id": 9,
             "name": "Pulpally Sitadevi temple",
@@ -3113,56 +2658,11 @@
             "id": 52,
             "name": "Gandhi Museum",
             "distance_km": 17
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 86,
-        "place": "Alis WAYANADAN NATURAL HONEY"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 64,
-            "name": "Ambalavayal Farm",
-            "distance_km": 4
           },
           {
-            "id": 19,
-            "name": "Cheengeri Hill",
-            "distance_km": 6
-          },
-          {
-            "id": 83,
-            "name": "Neelarchalu",
-            "distance_km": 7
-          },
-          {
-            "id": 21,
-            "name": "Edakkal Caves",
-            "distance_km": 8
-          },
-          {
-            "id": 55,
-            "name": "Neelimala view point",
-            "distance_km": 9
-          },
-          {
-            "id": 50,
-            "name": "Phantom rock",
-            "distance_km": 9
-          },
-          {
-            "id": 87,
-            "name": "Kolagapara",
-            "distance_km": 10
-          },
-          {
-            "id": 43,
-            "name": "Karapuzha Dam",
-            "distance_km": 11
+            "id": 15,
+            "name": "Kuruwa Deep",
+            "distance_km": 17
           }
         ]
       }
@@ -3195,16 +2695,6 @@
             "distance_km": 7
           },
           {
-            "id": 74,
-            "name": "Pepper Farm",
-            "distance_km": 7
-          },
-          {
-            "id": 86,
-            "name": "Alis WAYANADAN NATURAL HONEY",
-            "distance_km": 10
-          },
-          {
             "id": 21,
             "name": "Edakkal Caves",
             "distance_km": 11
@@ -3213,6 +2703,16 @@
             "id": 43,
             "name": "Karapuzha Dam",
             "distance_km": 11
+          },
+          {
+            "id": 83,
+            "name": "Neelarchalu",
+            "distance_km": 12
+          },
+          {
+            "id": 2,
+            "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
+            "distance_km": 15
           }
         ]
       }
@@ -3225,19 +2725,9 @@
       "output": {
         "nearest": [
           {
-            "id": 80,
-            "name": "Periya tea plantation",
-            "distance_km": 10
-          },
-          {
             "id": 63,
             "name": "Boys Town",
             "distance_km": 13
-          },
-          {
-            "id": 75,
-            "name": "Muneeswaran Kunnu View point",
-            "distance_km": 20
           },
           {
             "id": 84,
@@ -3263,56 +2753,16 @@
             "id": 11,
             "name": "Trishileri temple",
             "distance_km": 29
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "place_id": 90,
-        "place": "Turf"
-      },
-      "output": {
-        "nearest": [
-          {
-            "id": 2,
-            "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
-            "distance_km": 1
           },
           {
-            "id": 52,
-            "name": "Gandhi Museum",
-            "distance_km": 1
+            "id": 13,
+            "name": "Varampatta mosque",
+            "distance_km": 32
           },
           {
-            "id": 23,
-            "name": "Puliyarmala",
-            "distance_km": 1
-          },
-          {
-            "id": 46,
-            "name": "Mailadippara",
-            "distance_km": 3
-          },
-          {
-            "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 6
-          },
-          {
-            "id": 8,
-            "name": "Pallikunnu church",
-            "distance_km": 10
-          },
-          {
-            "id": 10,
-            "name": "Trikaipatta temple",
-            "distance_km": 11
-          },
-          {
-            "id": 59,
-            "name": "Uravu",
-            "distance_km": 11
+            "id": 33,
+            "name": "Meen Mutty Waterfalls",
+            "distance_km": 33
           }
         ]
       }

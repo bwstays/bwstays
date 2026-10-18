@@ -175,7 +175,7 @@
       "type": "resource",
       "method": "GET",
       "path": "https://www.bwstays.com/resources/distances.json",
-      "description": "Driving distance in km between 97 Wayanad places (null = not computed)"
+      "description": "Driving distance in km between 74 Wayanad places (null = not computed)"
     },
     {
       "name": "charging_and_fuel",

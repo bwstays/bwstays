@@ -59,24 +59,17 @@ const SAME_PLACE = [[20, 56], [34, 35], [36, 42], [2, 52]]; // 52 Gandhi Museum 
 // A record that is another record's place under a second name takes that record's distances
 // (alias -> canonical), even when the alias itself is withheld or excluded from publication.
 const ALIAS_OF = new Map([
-  [34, 35], // Sentinel Rock Waterfall = Soochipara Falls
-  [56, 20], // Lakkidi view point = Lakkidi Ghats View Point
-  [75, 84], // Muneeswaran Kunnu View point = Munneswaran Kunnu
+  // none at the moment: the duplicate records (Sentinel Rock, Lakkidi view point, Muneeswaran Kunnu) were removed on 2026-10-18
 ]);
 // Historical distances found wrong in the 2026-10-18 audit (they were routed from a coordinate that is
 // known to be wrong, or match no location at all); they become 0 = unknown instead of being kept.
 const DISCARD_LEGACY = new Map([
-  [1, 'no Santhinatha temple in Wayanad could be found; distances were from a road point'],
   [3, 'routed from a wrong coordinate (Kerala Tourism puts the temple about 20 km from Kalpetta)'],
   [6, 'routed from Sultan Bathery; the ashram is in Pulpally'],
-  [22, 'match no location (up to 48 km off)'],
   [27, 'match no location'],
-  [38, 'match no location; no such waterfall found'],
-  [62, 'generic record; match no location'],
   [71, 'placeholder stays record'],
   [72, 'placeholder stays record'],
   [73, 'placeholder stays record'],
-  [76, 'placeholder record; match no location'],
 ]);
 const sameGroup = (a, b) => SAME_PLACE.some((g) => g.includes(a) && g.includes(b));
 
