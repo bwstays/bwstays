@@ -31735,14 +31735,14 @@ Snapshot: 2026-10-18
 
 ### Shopping places (listed on the site)
 - Ali's wayanadan natural honey: Ali's Wayanadan Natural Honey is a brand of honey sourced from the Wayanad region of Kerala. (hours 09:00-20:00; 25 km from Kalpetta; map https://www.google.com/maps/place/Ali's+WAYANADAN+NATURAL+HONEY/@11.5887419,76.2205747,17z)
-- Bevo Beverages ( Govt of Kerala ): Bevo for all types of syrups and spirits (hours 10:00-21:00; closed Sun; 10 km from Kalpetta; map https://www.google.com/maps?q=11.619638,76.084481)
-- Spices: Try authentic Kerala spices at local market (hours 11:00-23:00; closed None; 10 km from Kalpetta; map https://www.google.com/maps/search/?api=1&query=Spices+Kalpetta+Wayanad+Kerala)
-- House Holds: Nesto. (hours 11:00-23:00; closed None; 10 km from Kalpetta; map https://www.google.com/maps?q=11.603319,76.083006)
+- Bevo Beverages ( Govt of Kerala ): Bevo for all types of syrups and spirits (hours 10:00-21:00; 10 km from Kalpetta; map https://www.google.com/maps?q=11.619638,76.084481)
+- Spices: Try authentic Kerala spices at local market (hours 11:00-23:00; 10 km from Kalpetta; map https://www.google.com/maps/search/?api=1&query=Spices+Kalpetta+Wayanad+Kerala)
+- House Holds: Nesto. (hours 11:00-23:00; 10 km from Kalpetta; map https://www.google.com/maps?q=11.603319,76.083006)
 - The Tribal Spot Near the Forest: Shopping place at Kunnathidavaka, Wayanad, Kerala. (map https://www.google.com/maps/search/?api=1&query=The+Tribal+Spot+Near+the+Forest+Kunnathidavaka+Wayanad+Kerala)
-- Government & Cooperative Trust Places: Shopping place at Pookode, Kunnathidavaka, Wayanad, Kerala. (map https://www.google.com/maps/search/?api=1&query=Government+%26+Cooperative+Trust+Places+Pookode%2C+Kunnathidavaka+Wayanad+Kerala)
-- Scheduled Tribe Cooperative Society Outlet: Shopping place at Kalloor, Wayanad, Kerala. (map https://www.google.com/maps/search/?api=1&query=Scheduled+Tribe+Cooperative+Society+Outlet+Kalloor+Wayanad+Kerala)
+- Government & Cooperative Trust Places: Handicraft and spice shops at the entrance of Pookode Lake, near Vythiri, in the DTPC-run lake area. (map https://www.google.com/maps/search/?api=1&query=Government+%26+Cooperative+Trust+Places+Pookode%2C+Kunnathidavaka+Wayanad+Kerala)
+- Scheduled Tribe Cooperative Society Outlet: Scheduled Tribes cooperative society at Kalloor near Sulthan Bathery that buys forest produce such as wild honey from tribal collectors. (map https://www.google.com/maps/search/?api=1&query=Scheduled+Tribe+Cooperative+Society+Outlet+Kalloor+Wayanad+Kerala)
 - Wayanad Heritage Museum Shop: Shopping place at Ambalavayal, Wayanad, Kerala. (map https://www.google.com/maps/search/?api=1&query=Wayanad+Heritage+Museum+Shop+Ambalavayal+Wayanad+Kerala)
-- Vanamoolika Herbals: Shopping place at Mullenkolly, Pulpally, Wayanad, Kerala. (map https://www.google.com/maps/search/?api=1&query=Vanamoolika+Herbals+Mullenkolly%2C+Pulpally+Wayanad+Kerala)
+- Vanamoolika Herbals: Wayanad farmers' and women's collective, started in 1991 to protect native medicinal plants, that grows and sells organic herbs and spices. (map https://www.google.com/maps/search/?api=1&query=Vanamoolika+Herbals+Mullenkolly%2C+Pulpally+Wayanad+Kerala)
 - Details that are not listed (hours, phone, rating) are not published; ask the host.
 
 ### EV charging near the stay
