@@ -1350,6 +1350,27 @@
         "review_note": null
       },
       {
+        "id": "health-97",
+        "name": "Keluvaidyar, Kattikulam",
+        "category": "health",
+        "category_label": "Health & Wellness",
+        "description": "Keluvaidyar is a traditional herbal healer of the Kurichya tribal community in Kattikulam, a town in the Mananthavady area of Wayanad. The blog reports that people travel to him from other cities, among others for asthma, diabetes and skin conditions such as psoriasis and eczema. Source: the Kallivalli blog post Tribal medicine and its practitioners (2014). Not medical advice; BWStays has not verified these reports. Address, timings, fees and contact are not published; the map position is the area, not the healer's door",
+        "distance_from_stay_km": 34,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [],
+        "transport": null,
+        "coordinates": {
+          "latitude": 11.8481113,
+          "longitude": 76.0634257
+        },
+        "map_url": null,
+        "page_url": "https://www.bwstays.com/bw-keluvaidyar-kattikulam-health-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
         "id": "pilgrimage-11",
         "name": "Trishileri temple ",
         "category": "pilgrimage",
@@ -1573,6 +1594,27 @@
         "review_note": null
       },
       {
+        "id": "health-96",
+        "name": "Vellanvaidyar, Thirunelli",
+        "category": "health",
+        "category_label": "Health & Wellness",
+        "description": "Vellanvaidyar is a traditional herbal healer of the Kurichya tribal community, described as practising at the foot of the Thirunelli temple in northern Wayanad. The blog reports that people travel to him for a range of ailments, among them asthma, diabetes and bone fractures. Source: the Kallivalli blog post Tribal medicine and its practitioners (2014). Not medical advice; BWStays has not verified these reports. Address, timings, fees and contact are not published; the map position is the area, not the healer's door",
+        "distance_from_stay_km": 48,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [],
+        "transport": null,
+        "coordinates": {
+          "latitude": 11.9098981,
+          "longitude": 75.994875
+        },
+        "map_url": null,
+        "page_url": "https://www.bwstays.com/bw-vellanvaidyar-thirunelli-health-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null
+      },
+      {
         "id": "pilgrimage-5",
         "name": "Papanasini River",
         "category": "pilgrimage",
@@ -1623,27 +1665,6 @@
         "review_note": null
       },
       {
-        "id": "health-97",
-        "name": "Keluvaidyar, Kattikulam",
-        "category": "health",
-        "category_label": "Health & Wellness",
-        "description": "Keluvaidyar is a traditional herbal healer of the Kurichya tribal community in Kattikulam, a town in the Mananthavady area of Wayanad. The blog reports that people travel to him from other cities, among others for asthma, diabetes and skin conditions such as psoriasis and eczema. Source: the Kallivalli blog post Tribal medicine and its practitioners (2014). Not medical advice; BWStays has not verified these reports. Address, timings, fees and contact are not published; the map position is the area, not the healer's door",
-        "distance_from_stay_km": 53,
-        "typical_visit_duration": null,
-        "rating": null,
-        "best_seasons": [],
-        "transport": null,
-        "coordinates": {
-          "latitude": 11.8481113,
-          "longitude": 76.0634257
-        },
-        "map_url": null,
-        "page_url": "https://www.bwstays.com/bw-keluvaidyar-kattikulam-health-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null
-      },
-      {
         "id": "wildlife-31",
         "name": "Tholpetty wild life sanctuary",
         "category": "wildlife",
@@ -1689,27 +1710,6 @@
         },
         "map_url": "https://www.google.com/maps/place/Sree+Thirunelli+Mahavishnu+Temple/@11.9116989,75.995828,17z",
         "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html",
-        "district": null,
-        "locality": null,
-        "review_note": null
-      },
-      {
-        "id": "health-96",
-        "name": "Vellanvaidyar, Thirunelli",
-        "category": "health",
-        "category_label": "Health & Wellness",
-        "description": "Vellanvaidyar is a traditional herbal healer of the Kurichya tribal community, described as practising at the foot of the Thirunelli temple in northern Wayanad. The blog reports that people travel to him for a range of ailments, among them asthma, diabetes and bone fractures. Source: the Kallivalli blog post Tribal medicine and its practitioners (2014). Not medical advice; BWStays has not verified these reports. Address, timings, fees and contact are not published; the map position is the area, not the healer's door",
-        "distance_from_stay_km": 67,
-        "typical_visit_duration": null,
-        "rating": null,
-        "best_seasons": [],
-        "transport": null,
-        "coordinates": {
-          "latitude": 11.9098981,
-          "longitude": 75.994875
-        },
-        "map_url": null,
-        "page_url": "https://www.bwstays.com/bw-vellanvaidyar-thirunelli-health-wayanad.html",
         "district": null,
         "locality": null,
         "review_note": null
