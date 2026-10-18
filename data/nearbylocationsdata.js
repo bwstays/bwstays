@@ -52,7 +52,7 @@ const locations = {
     "36": "Cheeyambam waterfalls",
     "37": "Kanthanpara waterfalls",
     "38": "Kappikalam waterfalls",
-    "39": "Karland chira wayanad",
+    "39": "Karlad chira wayanad",
     "40": "Arripara falls ",
     "41": "Irrupu falls ",
     "42": "chetalayam falls ",

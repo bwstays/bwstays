@@ -1368,7 +1368,11 @@
     "No official hours found; site says closed Sunday, aggregator says open all 7 days."
    ],
    "recommendation": "needs_field_visit",
-   "notes": "Identity real (Gandhi stayed in the boarding there in 1934, now museum). Confirm exact museum entrance and hours on site; temple phone is on the ahimsaiyatrai.com page."
+   "notes": "Page and data rewritten on 2026-10-18 to describe only the Gandhi Museum (it had Folklore Museum copy and the Ambalavayal Heritage Museum map link). Facts: memorial museum at Puliyarmala about 4 km from Kalpetta town, beside the Ananthanatha Swamy Jain temple, in the former boarding house where Gandhi rested (1934 per ahimsaiyatrai.com). Hours, fee, phone and exact position still unverified; needs a field visit.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tourist_attractions_in_Kalpetta",
+    "https://www.ahimsaiyatrai.com/2014/07/wayanad-ananthakrishnapuram.html"
+   ]
   },
   "53": {
    "name": "Attamala (hamlet, Chooralmala/Meppadi); no mapped view point",

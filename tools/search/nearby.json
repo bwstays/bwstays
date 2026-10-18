@@ -576,7 +576,7 @@
           },
           {
             "id": 39,
-            "name": "Karland chira wayanad",
+            "name": "Karlad chira wayanad",
             "distance_km": 9
           },
           {
@@ -1196,7 +1196,7 @@
           },
           {
             "id": 39,
-            "name": "Karland chira wayanad",
+            "name": "Karlad chira wayanad",
             "distance_km": 14
           }
         ]
@@ -1436,7 +1436,7 @@
           },
           {
             "id": 39,
-            "name": "Karland chira wayanad",
+            "name": "Karlad chira wayanad",
             "distance_km": 9
           },
           {
@@ -1620,7 +1620,7 @@
     {
       "input": {
         "place_id": 39,
-        "place": "Karland chira wayanad"
+        "place": "Karlad chira wayanad"
       },
       "output": {
         "nearest": [
@@ -1936,7 +1936,7 @@
           },
           {
             "id": 39,
-            "name": "Karland chira wayanad",
+            "name": "Karlad chira wayanad",
             "distance_km": 6
           },
           {
@@ -2026,7 +2026,7 @@
         "nearest": [
           {
             "id": 39,
-            "name": "Karland chira wayanad",
+            "name": "Karlad chira wayanad",
             "distance_km": 7
           },
           {
@@ -2206,7 +2206,7 @@
           },
           {
             "id": 39,
-            "name": "Karland chira wayanad",
+            "name": "Karlad chira wayanad",
             "distance_km": 15
           },
           {
