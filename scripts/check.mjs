@@ -114,6 +114,25 @@ const faqBuild = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-faq
 if (faqBuild.status !== 0) problems.push(`footer.html FAQ block is stale: ${(faqBuild.stderr || faqBuild.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const bsLite = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-bootstrap-lite.mjs'), '--check'], { encoding: 'utf8' });
 if (bsLite.status !== 0) problems.push(`css/bootstrap-lite.css is stale: ${(bsLite.stderr || bsLite.stdout).trim().split(String.fromCharCode(10))[0]}`);
+// place ids: unique across every category of data/sitedata.js, and every one listed in the distance matrix
+{
+  const load = (file, expr) => {
+    const ctx = vm.createContext({});
+    vm.runInContext(`${fs.readFileSync(path.join(ROOT, file), 'utf8')}
+;this.__v = ${expr};`, ctx, { filename: file });
+    return ctx.__v;
+  };
+  const siteData = load('data/sitedata.js', 'siteData');
+  const matrix = load('data/nearbylocationsdata.js', 'locations');
+  const owner = new Map();
+  for (const [category, rows] of Object.entries(siteData)) {
+    for (const r of rows) {
+      if (owner.has(r.id)) problems.push(`data/sitedata.js: id ${r.id} is used twice (${owner.get(r.id)} and ${category}: ${r.name}); use the next free id`);
+      else owner.set(r.id, `${category}: ${r.name}`);
+      if (!(r.id in matrix.names)) problems.push(`data/nearbylocationsdata.js: id ${r.id} (${category}: ${r.name}) is missing from locations.names; add it and run scripts/build-distances.mjs`);
+    }
+  }
+}
 const mcp = spawnSync(process.execPath, [path.join(ROOT, 'scripts/generate-mcp.mjs'), '--check'], { encoding: 'utf8' });
 if (mcp.status !== 0) problems.push(`MCP files are stale: ${(mcp.stderr || mcp.stdout).trim().split('\n').slice(-2).join(' | ')}`);
 

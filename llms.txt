@@ -70,7 +70,7 @@ Snapshot: 2026-10-18
 - [attractions](https://www.bwstays.com/resources/attractions.json): Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay
 - [location](https://www.bwstays.com/resources/location.json): Where the stay is and how far common destinations are
 - [food](https://www.bwstays.com/resources/food.json): Places to eat and drink in Wayanad (OpenStreetMap data), with driving distance from the stay
-- [distances](https://www.bwstays.com/resources/distances.json): Driving distance in km between 90 Wayanad places (null = not computed)
+- [distances](https://www.bwstays.com/resources/distances.json): Driving distance in km between 97 Wayanad places (null = not computed)
 - [charging_and_fuel](https://www.bwstays.com/resources/charging_and_fuel.json): EV charging stations and fuel stations around the stay, with straight-line distance from the stay
 - [help](https://www.bwstays.com/resources/help.json): Frequently asked questions shown on the site (footer page, #faq)
 - [tool search_attractions](https://www.bwstays.com/tools/search/attractions.json): Look up attractions by category, distance, entry fee or rating (pre-computed)

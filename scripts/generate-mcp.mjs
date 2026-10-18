@@ -496,7 +496,7 @@ const resources = {
     source: 'data/food-places.json',
   },
   distances: {
-    description: 'Driving distance in km between 90 Wayanad places (null = not computed)',
+    description: `Driving distance in km between ${placeIds.length} Wayanad places (null = not computed)`,
     content: {
       unit: 'km, fastest driving route on OpenStreetMap data, averaged over both directions, rounded',
       attribution: 'Routing data (c) OpenStreetMap contributors, ODbL',

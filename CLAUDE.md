@@ -313,3 +313,8 @@ Pages load `css/bootstrap-lite.css` (about 28 KB), not the full `vendor/bootstra
 ### Menu and scroll-spy (no Bootstrap JavaScript)
 
 `js/nav.js` replaces the 84 KB Bootstrap JavaScript bundle: the menu button (`data-toggle="collapse"`, same classes and transition as Bootstrap 4) and the scroll-spy that sets `.active` on the menu link of the section being read (hash links of `#mainNav`). `js/scripts.js` calls `bwNav.hideMenu()` and `bwNav.refreshSpy()`. jQuery is still loaded for the other scripts. If a page needs another Bootstrap plugin (modal, dropdown, tooltip), add it here or load the bundle on that page.
+
+### Place ids and the distance matrix
+
+Every place in `data/sitedata.js` has a numeric `id` that must be unique across ALL categories (`check.mjs` fails on a duplicate). Take the next free id (highest id + 1), not a number you assume. The same id must be listed in `locations.names` of `data/nearbylocationsdata.js`; then run `node scripts/build-distances.mjs` (OpenStreetMap routing) to fill its row and column. The matrix exists in three places: `data/nearbylocationsdata.js` (source, with its `.min` copy used by the pages) and the generated `resources/distances.json` and `tools/search/nearby.json` (`generate-mcp.mjs`); there is no spreadsheet copy. A place without a trusted coordinate keeps 0 (unknown) in its row; `locations.meta.places_without_trusted_coordinates` lists them with the reason, and `data/survey-coordinates.csv` is the field checklist. Existing cells are never rewritten by hand.
+
