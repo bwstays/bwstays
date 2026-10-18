@@ -62,6 +62,8 @@ jobs:
           # content the page scripts build is written into the HTML for crawlers that do not run JavaScript
           npm i --no-save playwright-core
           CHROME_PATH="$(command -v google-chrome || command -v chromium-browser || command -v chromium)" node scripts/prerender.mjs
+          # page text for AI assistants and the site chat, from the prerendered pages
+          node scripts/build-llms-full.mjs
           node scripts/build-sitemap.mjs
           node scripts/build-pwa.mjs
           node scripts/check.mjs
