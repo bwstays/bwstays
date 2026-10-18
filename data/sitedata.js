@@ -3,7 +3,7 @@ const siteData = {
     {
       id: 80,
       name: "Periya tea plantation",
-      description: "Lush greenery and tea plantations..",
+      description: "Lush greenery and tea plantations.",
       image: [
         "https://www.bwstays.com/assets/img/plantation/bw-periya-estate-wyanad.webp",
       ],
@@ -49,7 +49,7 @@ const siteData = {
     {
       id: 61,
       name: "Rippon Tea estate",
-      description: "L greenery and tea plantations near Meppadi.",
+      description: "Lush greenery and tea plantations near Meppadi.",
       image: [
         "https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp",
         "https://www.bwstays.com/assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp",
@@ -176,7 +176,7 @@ const siteData = {
       latlong: "11.677845397531414, 75.93568600923",
       map: "https://www.google.com/maps/place/Makkiyad+Meenmutty+Water+Falls/@11.7282012,75.8861335,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -219,7 +219,7 @@ const siteData = {
       latlong: "11.511709053469259, 76.1637670659447",
       map: "https://www.google.com/maps/place/Sentinel+Rock/@11.4951824,76.1608204,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -263,7 +263,7 @@ const siteData = {
       latlong: "11.51173007949638, 76.16378589573601",
       map: "https://www.google.com/maps/place/Soochipara+Waterfalls/@11.5115356,76.1637859,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -304,7 +304,7 @@ const siteData = {
       latlong: "11.766189025300932, 76.25203494478279",
       map: "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -349,7 +349,7 @@ const siteData = {
       latlong: "11.5239348, 76.1526896",
       map: "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -391,7 +391,7 @@ const siteData = {
       latlong: "11.524617527477, 76.15260365204358",
       map: "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -433,7 +433,7 @@ const siteData = {
       latlong: "11.43840307285013, 76.04597666931055",
       map: "https://www.google.com/maps/place/Arippara+Waterfalls/@11.4381875,76.0460625,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -475,7 +475,7 @@ const siteData = {
       latlong: "11.967284462093113, 75.98393572809631",
       map: "https://www.google.com/maps/place/Iruppu+Falls/@11.96706,75.9839414,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -518,7 +518,7 @@ const siteData = {
       latlong: "11.765721623585334, 76.25204562883619",
       map: "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -539,7 +539,7 @@ const siteData = {
     {
       id: 16,
       name: "Thusharagiri",
-      description: "Water fall down the Ghats of wayanad.",
+      description: "Waterfall down the Ghats of Wayanad.",
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-thusharagiri-falls-service-apartment.webp",
       ],
@@ -560,7 +560,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle.. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -857,7 +857,7 @@ const siteData = {
       latlong: "11.537907109786387, 76.02770162612713",
       map: "https://www.google.com/maps/place/Karapuzha+Reservoir/@11.6099276,76.1660561,17z",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -905,7 +905,7 @@ const siteData = {
       latlong: "11.6182113, 76.1722152",
       map: "https://www.google.com/maps/place/Karapuzha+Reservoir/@11.6099276,76.1660561,17z",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -958,7 +958,7 @@ const siteData = {
       map: "https://www.google.com/maps/place/Karlad+Lake/@11.6507106,75.9817005,17z",
 
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1008,7 +1008,7 @@ const siteData = {
       transport: "Public",
       rating: "4.1",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1036,7 +1036,7 @@ const siteData = {
       id: 45,
       name: "Banasura Sagar Dam",
       description:
-        "Opt for a speed or pedal boat to have an enthralling experience of the stupendous landscapes",
+        "Opt for a speed or pedal boat to have an enthralling experience of the stupendous landscapes.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-staycation-banasura-sagar-wayanad.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-resort-banasura-sagar-dam-homestay.webp",
@@ -1059,7 +1059,7 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1107,7 +1107,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1156,7 +1156,7 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1204,7 +1204,7 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1253,7 +1253,7 @@ const siteData = {
       transport: "Public",
       rating: "3.9",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1301,7 +1301,7 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1351,7 +1351,7 @@ const siteData = {
       transport: "Public",
       rating: "4.6",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1399,7 +1399,7 @@ const siteData = {
       transport: "Public",
       rating: "4.4",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1447,7 +1447,7 @@ const siteData = {
       transport: "Public",
       rating: "3.9",
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1497,7 +1497,7 @@ const siteData = {
       fee: "0",
       aliases: ["lakkidi", "lakkidi ghats", "lakkidi viewpoint"],
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1526,7 +1526,7 @@ const siteData = {
       id: 58,
       name: "900 Kandi",
       description:
-        "Welcome to the. Land of Bliss · Meet Kerala's longest hanging glass bridge.",
+        "Welcome to the Land of Bliss · Meet Kerala's longest hanging glass bridge.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-weekend-destination-glassbridge-wayanad.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp",
@@ -1590,7 +1590,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1639,7 +1639,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1688,7 +1688,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "Relax in our stunning villa overlooking the peaks of wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1815,7 +1815,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "Experience authentic Kerala living in our beautifully villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+        "Experience authentic Kerala living in our beautiful villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
       amenities: [
         "Air Conditioning",
         "Gourmet Kitchen",
@@ -1866,7 +1866,7 @@ const siteData = {
       fee: "Adult INR 30, child INR 20",
       aliases: [],
       content:
-        "Experience authentic Kerala living in our beautifully villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+        "Experience authentic Kerala living in our beautiful villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
       amenities: [
         "Air Conditioning",
         "Gourmet Kitchen",
@@ -1917,7 +1917,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "Experience authentic Kerala living in our beautifully villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+        "Experience authentic Kerala living in our beautiful villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
       amenities: [
         "Air Conditioning",
         "Gourmet Kitchen",
@@ -1969,7 +1969,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "Experience authentic Kerala living in our beautifully villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+        "Experience authentic Kerala living in our beautiful villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
       amenities: [
         "Air Conditioning",
         "Gourmet Kitchen",
@@ -2478,7 +2478,7 @@ const siteData = {
       id: 30,
       name: "Pakshipathalam",
       description:
-        "For bird lovers, this Pakshipathalam trek offers a myriad of bird species on its 7 km stretch in the deep forests of Wayanad. The Forest Resort at Lanternstay provides guided tours through various treks; thus, it is family friendly and the adventures here are always safe and enjoyable. On this stretch, there are possibilities to sighting some rare species, such as Malabar Grey Hornbill and migratory birds.",
+        "For bird lovers, this Pakshipathalam trek offers a myriad of bird species on its 7 km stretch in the deep forests of Wayanad. The Forest Resort at Lanternstay provides guided tours through various treks; thus, it is family friendly and the adventures here are always safe and enjoyable. On this stretch, there are possibilities of sighting some rare species, such as Malabar Grey Hornbill and migratory birds.",
       image: [
         "https://www.bwstays.com/assets/img/wildlife/bw-weekday-pakshipathalam-bird-sanctuary-wayanad.webp",
         "https://www.bwstays.com/assets/img/wildlife/bw-villas-pakshipathalam-wayanad.webp",
@@ -2632,7 +2632,7 @@ const siteData = {
       id: 88,
       name: "Gurukula Botanical Sanctuary",
       description:
-        "Gurukula Botanical Sanctuary hosts over 2,000 native plant species including around 100 native trees restored to their natural habitat, 500 herbs, shrubs.",
+        "Gurukula Botanical Sanctuary hosts over 2,000 native plant species including around 100 native trees restored to their natural habitat, 500 herbs and shrubs.",
       image: [
         "https://www.bwstays.com/assets/img/farm/bw-gurukula-botanical-sanctuary-wayanad.webp",
       ],
@@ -2929,7 +2929,7 @@ const siteData = {
       id: 60,
       name: "Kalpetta Food Spots",
       description:
-        "Try authentic Kerala dishes at local eateries and food stalls at kalpetta.",
+        "Try authentic Kerala dishes at local eateries and food stalls in Kalpetta.",
       image: [
         "https://www.bwstays.com/assets/img/food/bw-kalpetta-food-drinks-collage-all-images.webp",
       ],
@@ -3577,7 +3577,7 @@ const siteData = {
       latlong: "11.9116989, 75.995828",
       map: "https://www.google.com/maps/place/Sree+Thirunelli+Mahavishnu+Temple/@11.9116989,75.995828,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3618,7 +3618,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3658,7 +3658,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3678,7 +3678,7 @@ const siteData = {
       id: 5,
       name: "Papanasini River",
       description:
-        "Ancient temple stream to Lord Vishnu, nestled in the hills of Wayanad.",
+        "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-papanasini-wayanad-tourist.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-staycation-papanashini-wayanad.webp",
@@ -3701,7 +3701,7 @@ const siteData = {
       latlong: "11.911882611618777, 75.99584945767235",
       map: "https://www.google.com/maps/place/Sree+Thirunelli+Mahavishnu+Temple/@11.9116989,75.995828,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3720,7 +3720,7 @@ const siteData = {
       id: 7,
       name: "Meenangadi Church",
       description:
-        "Ancient Meenangadi Church  , nestled in the hills of Wayanad.",
+        "Ancient Meenangadi Church, nestled in the hills of Wayanad.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-staycation-meenagadhi-church-wayanad.webp",
       ],
@@ -3741,7 +3741,7 @@ const siteData = {
       latlong: "11.65965314607536, 76.17374499957178",
       map: "https://www.google.com/maps/place/St.+Peter's+%26+St.+Paul's+Jacobite+Syrian+Cathedral/@11.6590982,76.1735335,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3760,7 +3760,7 @@ const siteData = {
       id: 8,
       name: "Our Lady of Lourdes Shrine, Pallikunnu",
       description:
-        "Our Lady of Lourdes Shrine, Pallikunnu , nestled in the hills of Wayanad.",
+        "Our Lady of Lourdes Shrine, Pallikunnu, nestled in the hills of Wayanad.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-pallikunnu-church-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-workation-pallikkunnu-church-wayanad.webp",
@@ -3782,7 +3782,7 @@ const siteData = {
       latlong: "11.685229537534148, 76.05606037116382",
       map: "https://www.google.com/maps/place/OUR+LADY+OF+LOURDES+SHRINE%2C+PALLIKUNNU/@11.6850877,76.0560711,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3821,7 +3821,7 @@ const siteData = {
       latlong: "11.793030398758432, 76.16871715767236",
       map: "https://www.google.com/maps/place/Sree+Seethadevi+Lava+Kusha+Temple+Pulpally/@11.7928151,76.1686957,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3839,7 +3839,7 @@ const siteData = {
     {
       id: 10,
       name: "Trikaipatta temple",
-      description: "Trikaipatta temple , nestled in the hills of Wayanad.",
+      description: "Trikaipatta temple, nestled in the hills of Wayanad.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-trikaipattta-temple-wayanad.webp",
       ],
@@ -3860,7 +3860,7 @@ const siteData = {
       latlong: "11.6057586, 76.133523",
       map: "https://www.google.com/maps/place/Sree+Thrikkaipetta+Shiva+Temple/@11.606146,76.134439,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3901,7 +3901,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3944,7 +3944,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3988,7 +3988,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -4031,7 +4031,7 @@ const siteData = {
       fee: "0",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity..Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
