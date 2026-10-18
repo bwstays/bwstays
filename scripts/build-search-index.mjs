@@ -43,7 +43,7 @@ for (const a of attractions) {
     u: a.page_url ?? a.map_url ?? null,
     km: a.distance_from_stay_km ?? null,
     r: a.rating ?? null,
-    k: trim(a.review_note ?? ''),
+    k: trim([a.review_note ?? '', a.category === 'health' || /health/i.test(a.category_label ?? '') ? 'tribal medicine herbal healer vaidyan vaidyar ayurveda traditional healing kurichya' : ''].join(' ')),
   });
 }
 
