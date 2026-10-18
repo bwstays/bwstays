@@ -217,6 +217,34 @@
         }
       },
       {
+        "id": "museums-52",
+        "name": "Gandhi Museum",
+        "category": "museums",
+        "category_label": "Museums & Crafts",
+        "description": "A memorial museum at Puliyarmala, beside the Ananthanatha Swamy Jain temple, where Gandhi rested in 1934",
+        "distance_from_stay_km": 4,
+        "typical_visit_duration": "1-2 Hours",
+        "rating": 4.3,
+        "best_seasons": [
+          "Summer (March-May)",
+          "Monsoon (June-September)",
+          "Winter (October-February)"
+        ],
+        "transport": "Public",
+        "coordinates": null,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Gandhi+Museum+Puliyarmala+Kalpetta+Wayanad+Kerala",
+        "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html",
+        "district": null,
+        "locality": null,
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/10945867708",
+          "official_timing": null,
+          "official_fee": null
+        }
+      },
+      {
         "id": "trucking-23",
         "name": "Puliyarmala",
         "category": "trucking",
@@ -430,34 +458,6 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
-        }
-      },
-      {
-        "id": "museums-52",
-        "name": "Gandhi Museum",
-        "category": "museums",
-        "category_label": "Museums & Crafts",
-        "description": "Gandhi Museum",
-        "distance_from_stay_km": 12,
-        "typical_visit_duration": "1-2 Hours",
-        "rating": 4.3,
-        "best_seasons": [
-          "Summer (March-May)",
-          "Monsoon (June-September)",
-          "Winter (October-February)"
-        ],
-        "transport": "Public",
-        "coordinates": null,
-        "map_url": "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
-        "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html",
-        "district": null,
-        "locality": null,
-        "review_note": null,
-        "verification": {
-          "last_checked": "2026-10-18",
-          "coordinate_source": "OpenStreetMap node/10945867708",
           "official_timing": null,
           "official_fee": null
         }

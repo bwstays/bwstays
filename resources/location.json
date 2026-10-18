@@ -30,6 +30,11 @@
         "distance_km": 4
       },
       {
+        "name": "Gandhi Museum",
+        "category": "Museums & Crafts",
+        "distance_km": 4
+      },
+      {
         "name": "Puliyarmala",
         "category": "Trekking",
         "distance_km": 4
@@ -68,11 +73,6 @@
         "name": "Uravu",
         "category": "Tribal",
         "distance_km": 11
-      },
-      {
-        "name": "Gandhi Museum",
-        "category": "Museums & Crafts",
-        "distance_km": 12
       },
       {
         "name": "Honey Museum",
