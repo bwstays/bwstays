@@ -668,8 +668,9 @@
    "checked": "2026-10-18",
    "identity": "real",
    "coordinate": {
-    "status": "not_found",
-    "evidence": "Museum is real (Pozhuthana panchayat page: inside Achoor Estate of HML) but no museum or named feature in OSM. Stated point 11.60075,76.01486 lies in Achoor beside Govt HS Achoor (130 m from Achoor Dispensary node/7725963281), so the area is right but the exact building is unverified. OSRM Kalpetta->stated = 12.1 km, matches stated 12."
+    "status": "verified_stated",
+    "evidence": "Stated point reverse-geocodes (Nominatim) to Achoor, Pozhuthana, Vythiri; the panchayat page places the Tea Museum in Achoor Estate, Pozhuthana. Not mapped in OSM itself, so medium confidence. Trusted for routing since the Gandhi Museum no longer shares its point.",
+    "confidence": "medium"
    },
    "timing": {
     "value": "09:00-17:00 (one listing); 09:00-18:00 (2018 Onmanorama)",
@@ -906,7 +907,8 @@
     "Duplicate of id 35 (stated points 20 m apart)"
    ],
    "recommendation": "remove_or_rename_owner_decision",
-   "notes": "Keep the review exclusion; mention the alias on the Soochipara page."
+   "notes": "Keep the review exclusion; mention the alias on the Soochipara page. Same physical place as record 35: the distance matrix copies its distances (build-distances.mjs ALIAS_OF).",
+   "alias_of": 35
   },
   "35": {
    "name": "Soochipara Waterfalls (Sentinel Rock)",
@@ -1225,7 +1227,7 @@
     "lon": 75.9078861,
     "osm_ref": "node/7801507874",
     "offset_km": 0.15,
-    "evidence": "OSM 'Banasura Peak' 150 m from stated; reverse geocode Pulinjal, Mananthavady taluk. It is the summit, off-road by nature: trekkers start near the Meenmutty forest ticket counter (OSM parking node/3883233313 11.67549,75.93922) or the dam."
+    "evidence": "OSM node/7801507874 0.15 km away; listed in data/mcp-review.json coordinate_confirmations (a trek, routed to the nearest road)"
    },
    "timing": {
     "source_url": "https://www.treksandtrails.org/blog/banasura-hill-trek",
@@ -1348,13 +1350,9 @@
    "checked": "2026-10-18",
    "identity": "real",
    "coordinate": {
-    "status": "candidate",
-    "lat": 11.6244633,
-    "lon": 76.0922391,
-    "osm_ref": "node/10945867708",
-    "offset_km": 8.83,
-    "evidence": "The museum is not mapped in OSM. Sources say it is adjacent to the Jain temple (ahimsaiyatrai.com); OSM has one Jain temple in the Kalpetta-Kainatty area (node/10945867708, Kalpetta-Wayanad Bypass Road, Kainatti). Position is the temple, not the museum itself: low-medium confidence. Stated coordinate was the Wayanad Tea Museum point (Vythiri-Tharuvana road, Pozhuthana).",
-    "confidence": "low"
+    "status": "verified_stated",
+    "evidence": "Placed at the Ananthanatha Swamy Jain temple (record 2), beside which the museum stands (Wikipedia: Tourist attractions in Kalpetta; ahimsaiyatrai.com). It used to carry the Tea Museum coordinate.",
+    "confidence": "medium"
    },
    "timing": {
     "value": "09:00-17:00 daily (aggregator)",
@@ -1464,7 +1462,8 @@
     "Routed 15.9 km vs stated 16 fine."
    ],
    "recommendation": "remove_or_rename_owner_decision",
-   "notes": "Coordinate is correct; the issue is duplication only."
+   "notes": "Coordinate is correct; the issue is duplication only. Same physical place as record 20: the distance matrix copies its distances (build-distances.mjs ALIAS_OF).",
+   "alias_of": 20
   },
   "57": {
    "name": "Enn Ooru (Enna Ooru) Tribal Heritage Village, Pookode",
@@ -1810,7 +1809,8 @@
     "Steep 500 m final climb; 1.5-2 h trek from Thalappuzha."
    ],
    "recommendation": "needs_field_visit",
-   "notes": "Candidate coordinate left out until confirmed on the ground; do not use the Kalpetta point."
+   "notes": "Candidate coordinate left out until confirmed on the ground; do not use the Kalpetta point. Same physical place as record 84: the distance matrix copies its distances (build-distances.mjs ALIAS_OF).",
+   "alias_of": 84
   },
   "76": {
    "name": "Bamboo Park",
