@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '6938f09aaf';
+const VERSION = '98fec0ce0f';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -38,17 +38,17 @@ const SHELL = [
   "/css/new-page.min.css?v=f2e8abdc",
   "/css/page-404.min.css?v=f3100777",
   "/css/styles.min.css?v=42d28f62",
-  "/data/nearbylocationsdata.min.js?v=07ece56e",
+  "/data/nearbylocationsdata.min.js?v=cb73bda5",
   "/data/rates.min.js?v=efb37e01",
-  "/data/sitedata.min.js?v=c6a164c2",
+  "/data/sitedata.min.js?v=f03cbbbb",
   "/index.html",
   "/js/booking.min.js?v=d32180d1",
   "/js/chat.min.js?v=71b140e2",
   "/js/decode-email.js",
   "/js/dynamic-evgas.min.js?v=1a3b82d4",
   "/js/dynamic-foodmap.min.js?v=e3ef5086",
-  "/js/dynamic-nearby.min.js?v=d8b6c52f",
-  "/js/knowmore-place-dynamic.min.js?v=8fe88031",
+  "/js/dynamic-nearby.min.js?v=7d919a1b",
+  "/js/knowmore-place-dynamic.min.js?v=bec10669",
   "/js/language.min.js?v=d8bf0fe7",
   "/js/legal-page.min.js?v=89020b58",
   "/js/map-guard.min.js?v=42197ca9",
@@ -106,6 +106,7 @@ const PAGES = [
   "/bw-kappikalam-waterfall-wayanad.html",
   "/bw-karapuzha-dam-romantic-wayanad.html",
   "/bw-karland-lake-romantic-wayanad.html",
+  "/bw-keluvaidyar-kattikulam-health-wayanad.html",
   "/bw-kolagapara-trucking-wayanad.html",
   "/bw-koottamundu-glass-temple-pilgrimage-wayanad.html",
   "/bw-kurumbalakotta-romantic-wayanad.html",
@@ -150,6 +151,7 @@ const PAGES = [
   "/bw-uravu-bamboo-tribal-wayanad.html",
   "/bw-valliyoorkavu-temple-pilgrimage-wayanad.html",
   "/bw-varampatta-mosque-pilgrimage-wayanad.html",
+  "/bw-vellanvaidyar-thirunelli-health-wayanad.html",
   "/bw-ziplines-sporting-wayanad.html",
   "/bwstays-booking.html",
   "/footer.html",
@@ -210,6 +212,8 @@ const IMAGES = [
   "/assets/img/food/bw-stay-nearby-food-restaurant.webp",
   "/assets/img/food/bw-stays-hotel-wayanad-inn.webp",
   "/assets/img/health/bw-health-wellness-wayanad.webp",
+  "/assets/img/health/bw-keluvaidyar-kattikulam-tribal-healer-wayanad.webp",
+  "/assets/img/health/bw-vellanvaidyar-thirunelli-tribal-healer-wayanad.webp",
   "/assets/img/heritage/bw-homestay-shanthinatha-jain-temple-wayanad.webp",
   "/assets/img/heritage/bw-stays-chain-tree-service-apartment.webp",
   "/assets/img/heritage/bw-stays-chain-tree-wayanad-homestay.webp",

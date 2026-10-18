@@ -36,7 +36,7 @@ const LABELS = {
   plantation: 'Plantations', waterfalls: 'Waterfalls & lakes', museums: 'Museums & crafts',
   romantic: 'Viewpoints & romantic spots', culthist: 'Culture & history', trucking: 'Trekking',
   wildlife: 'Wildlife', farms: 'Farms', sporting: 'Adventure sports', tribal: 'Tribal heritage',
-  cycling: 'Cycling', shopping: 'Shopping', pilgrimage: 'Pilgrimage',
+  cycling: 'Cycling', shopping: 'Shopping', pilgrimage: 'Pilgrimage', health: 'Health & wellness',
 };
 const SKIP = new Set(['stays', 'food']); // food has its own map
 

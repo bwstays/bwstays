@@ -13,7 +13,7 @@ function getCurrentCatagoryId() {
     return catId;
 }
 function findPlaceById(id) {
-    const categories = ['plantation', 'waterfalls', 'museums', 'romantic', 'culthist', 'trucking', 'wildlife', 'farms', 'sporting', 'food', 'tribal', 'cycling', 'shopping','pilgrimage','stays'];
+    const categories = ['plantation', 'waterfalls', 'museums', 'romantic', 'culthist', 'trucking', 'wildlife', 'farms', 'sporting', 'food', 'tribal', 'cycling', 'shopping','pilgrimage','health','stays'];
      for (const category of categories) {
         if (siteData[category]) {
             const place = siteData[category].find(p => p.id === id);

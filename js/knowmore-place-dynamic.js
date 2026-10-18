@@ -154,8 +154,8 @@ rightArrow.addEventListener('mouseleave', () => {
       <div class="mb-3">
           <a href="#nearby-places" id="nearbyplaces" ><span class="text-warning">View places within 15 Kms from ${currentItemData.name}</span></a> </div>
       <div class="mb-3">
-          <span class="text-warning">★ ${currentItemData.rating}</span>
-          <span class="text-white-50 ml-2">${currentItemData.distance}km from Kalpetta</span>
+          ${bwHas(currentItemData.rating) ? '<span class="text-warning">★ ' + currentItemData.rating + '</span>' : ''}
+          ${bwHas(currentItemData.distance) ? '<span class="text-white-50 ml-2">' + currentItemData.distance + 'km from Kalpetta</span>' : ''}
 		  <span class="text-white-50 ml-2">
 			<a ${currentItemData.map ? 'href="' + currentItemData.map + '"' : 'hidden'} target="_new" rel="noopener" aria-label="${currentItemData.name} on Google Maps" class="text-decoration-none text-white">
 			<i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
@@ -165,12 +165,12 @@ rightArrow.addEventListener('mouseleave', () => {
       <div class="mb-3">
           <small class="text-white-50">
             <ul style="list-style:none;">
-            <li><i class="fas fa-clock"></i> Timing: ${currentItemData.timing}<br></li>
-            <li><i class="fas fa-car-side"></i> Transportation: ${currentItemData.transport}</li>
-            <li><i class="fas fa-cog"></i> Best Seasons to Visit: ${currentItemData.seasontovisit}</li>
+            ${bwHas(currentItemData.timing) ? '<li><i class="fas fa-clock"></i> Timing: ' + currentItemData.timing + '<br></li>' : ''}
+            ${bwHas(currentItemData.transport) ? '<li><i class="fas fa-car-side"></i> Transportation: ' + currentItemData.transport + '</li>' : ''}
+            ${bwHas(currentItemData.seasontovisit) ? '<li><i class="fas fa-cog"></i> Best Seasons to Visit: ' + currentItemData.seasontovisit + '</li>' : ''}
             <li><i class="fas fa-bell"></i> Type: ${currentItemData.type}</li>
-            <li><i class="fas fa-power-off"></i> Holiday: ${currentItemData.holidays}</li>
-            <li><i class="fas fa-phone"></i> Contact: ${currentItemData.Contact}</li>
+            ${bwHas(currentItemData.holidays) ? '<li><i class="fas fa-power-off"></i> Holiday: ' + currentItemData.holidays + '</li>' : ''}
+            ${bwHas(currentItemData.Contact) ? '<li><i class="fas fa-phone"></i> Contact: ' + currentItemData.Contact + '</li>' : ''}
             <li><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  width="20" height="20" src="https://www.bwstays.com/assets/img/icons/cloudy.webp"  />Weather: <span id="loctemperature"></span> </li>
             </ul>
         </small>
@@ -530,13 +530,13 @@ function initializeSection(sectionType, data, sectionIndex) {
     const tempContent = document.createElement('div');
     tempContent.className = 'tab-content-temp';
     tempContent.innerHTML = `
-      <h4 class="text-white mb-1" style="font-size: 1rem;">${currentItem.name} (${currentItem.rating}★)</h4>
+      <h4 class="text-white mb-1" style="font-size: 1rem;">${currentItem.name}${bwHas(currentItem.rating) ? ' (' + currentItem.rating + '★)' : ''}</h4>
       <p class="mb-1 text-white-50" style="font-size: 0.8rem; line-height: 1.2;">${currentItem.description.substring(0,50)}...</p>
       <div class="mb-1 text-white-50" style="font-size: 0.8rem;">
-        <i class="fas fa-times me-1" style="color: var(--bw-teal);"></i> Holiday: ${currentItem.holidays}
+        ${bwHas(currentItem.holidays) ? '<i class="fas fa-times me-1" style="color: var(--bw-teal);"></i> Holiday: ' + currentItem.holidays : ''}
       </div>
       <div class="mb-1 text-white-50" style="font-size: 0.8rem; ">
-        <i class="fas fa-clock me-1" style="color: var(--bw-teal);"></i> Timing: ${currentItem.timing}
+        ${bwHas(currentItem.timing) ? '<i class="fas fa-clock me-1" style="color: var(--bw-teal);"></i> Timing: ' + currentItem.timing : ''}
       </div>
       <a href="${currentItem.knowmore || '#'}" class="js-scroll-trigger view-attraction" style="font-size: 0.8rem;">View Attractions</a>`;
     tempContent.style.position = 'absolute';

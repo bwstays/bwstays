@@ -150,7 +150,7 @@ const CATEGORY_LABELS = {
   plantation: 'Plantations', waterfalls: 'Waterfalls & Lakes', museums: 'Museums & Crafts',
   romantic: 'Romantic Spots & Viewpoints', culthist: 'Cultural & Historical', trucking: 'Trekking',
   wildlife: 'Wildlife', farms: 'Farm Visits', sporting: 'Sporting', food: 'Food', tribal: 'Tribal',
-  cycling: 'Cycling', shopping: 'Shopping', pilgrimage: 'Pilgrimage',
+  cycling: 'Cycling', shopping: 'Shopping', pilgrimage: 'Pilgrimage', health: 'Health & Wellness',
 };
 // `stays` holds placeholder rows ("Sample", +91-000 000 0000) - never publish them.
 const SKIPPED_CATEGORIES = new Set(['stays']);
