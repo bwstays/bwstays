@@ -39,11 +39,13 @@ function getLocationIdByName(name) {
 function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
-     var loclength=Object.keys(locations.names).length;
     // a record that is another record's place under a second name (an alias) is not listed separately
     var aliases = (locations.meta && locations.meta.aliases_distances_copied_from) || {};
-    for (let i = 0; i < loclength; i++) {
-        if (aliases[i + 1]) continue;
+    // walk the ids that exist (ids are not contiguous once a record has been removed); index i is id - 1
+    var ids = Object.keys(locations.names).map(Number);
+    for (const id of ids) {
+        const i = id - 1;
+        if (aliases[id]) continue;
 			var value =locations.names[i+1];
            if ( distances[i]!=""  &&  distances[i] !== undefined &&  distances[i ] <= maxDistance && (i + 1) != locationId) {
 			if( distances[i]!="0")

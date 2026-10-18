@@ -42,7 +42,7 @@ const shopdata = {
       ],
       type: "honey",
       knowmore:
-        "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html",
+        "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html",
       duration: "1-2 Hours",
       www: "https://www.periatea.com/tourism/",
     },
@@ -140,7 +140,7 @@ const shopdata = {
 
       type: "honey",
       knowmore:
-        "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html",
+        "https://www.bwstays.com/all-locations-wayanad.html",
 
       duration: "1-2 Hours",
       www: "",
@@ -232,7 +232,7 @@ const shopdata = {
       ],
       type: "tribal",
       knowmore:
-        "https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html",
+        "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html",
 
       duration: "1-2 Hours",
       www: "",
@@ -316,7 +316,7 @@ const shopdata = {
         "authentic",
       ],
       type: "tribal",
-      knowmore: "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html",
+      knowmore: "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html",
 
       duration: "1-2 Hours",
       www: "",
@@ -403,7 +403,7 @@ const shopdata = {
         "authentic",
       ],
       type: "tribal",
-      knowmore: "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html",
+      knowmore: "https://www.bwstays.com/all-locations-wayanad.html",
 
       duration: "1-2 Hours",
       www: "",

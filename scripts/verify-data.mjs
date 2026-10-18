@@ -79,13 +79,14 @@ const ids = Object.keys(locations.names).map(Number);
 for (const p of places) if (!(p.id in locations.names)) errors.push(`${label(p)} (${p.category}) is missing from the distance matrix (data/nearbylocationsdata.js)`);
 for (const id of ids) if (!byId.has(id)) toReview.push(`matrix id ${id} ("${locations.names[id]}") has no record in data/sitedata.js: remove it from the matrix or restore the record`);
 let asym = 0, badRows = 0;
+const maxMatrixId = Math.max(...ids);
 for (const a of ids) {
   const row = locations.distances[a];
-  if (!row || row.length !== ids.length) { badRows++; continue; }
+  if (!row || row.length !== maxMatrixId) { badRows++; continue; } // index id-1, so rows are as long as the highest id
   if (row[a - 1] !== 0) errors.push(`matrix: ${a} is ${row[a - 1]} km from itself`);
   for (const b of ids) if (a < b && row[b - 1] !== locations.distances[b][a - 1]) asym++;
 }
-if (badRows) errors.push(`matrix: ${badRows} rows do not have ${ids.length} columns`);
+if (badRows) errors.push(`matrix: ${badRows} rows do not have ${maxMatrixId} columns`);
 if (asym) errors.push(`matrix: ${asym} pairs are not symmetric`);
 const untrusted = new Map((locations.meta?.places_without_trusted_coordinates ?? []).map((p) => [p.id, p.reason]));
 for (const [id, reason] of untrusted) {
