@@ -4049,7 +4049,7 @@ const siteData = {
   ],
   health: [
     {
-      id: 91,
+      id: 96,
       name: "Vellanvaidyar, Thirunelli",
       description: "Vellanvaidyar is a traditional herbal healer of the Kurichya tribal community, described as practising at the foot of the Thirunelli temple in northern Wayanad. The blog reports that people travel to him for a range of ailments, among them asthma, diabetes and bone fractures. Source: the Kallivalli blog post Tribal medicine and its practitioners (2014). Not medical advice; BWStays has not verified these reports. Address, timings, fees and contact are not published; the map position is the area, not the healer's door.",
       image: [
@@ -4077,7 +4077,7 @@ const siteData = {
       www: "",
     },
     {
-      id: 92,
+      id: 97,
       name: "Keluvaidyar, Kattikulam",
       description: "Keluvaidyar is a traditional herbal healer of the Kurichya tribal community in Kattikulam, a town in the Mananthavady area of Wayanad. The blog reports that people travel to him from other cities, among others for asthma, diabetes and skin conditions such as psoriasis and eczema. Source: the Kallivalli blog post Tribal medicine and its practitioners (2014). Not medical advice; BWStays has not verified these reports. Address, timings, fees and contact are not published; the map position is the area, not the healer's door.",
       image: [

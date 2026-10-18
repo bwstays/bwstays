@@ -51,7 +51,7 @@
     },
     {
       "name": "distances",
-      "description": "Driving distance in km between 90 Wayanad places (null = not computed)",
+      "description": "Driving distance in km between 97 Wayanad places (null = not computed)",
       "path": "/resources/distances.json"
     },
     {
