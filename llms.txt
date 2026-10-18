@@ -46,6 +46,8 @@ Additional Information
 - [Arripara falls - Black and White Wayanad Kalpetta](https://www.bwstays.com/bw-arripara-waterfall-wayanad.html): A tranquil waterfall ideal for relaxation.
 - [Nagarhole wild life sanctuary - Black and White Wayanad Kalpetta](https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html): A wildlife sanctuary known for its diverse flora and fauna.
 - [En Ooru Tribal - Black and White Wayanad Kalpetta](https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html): Insights into the local tribal culture.
+- [Vellanvaidyar Thirunelli Tribal Healer - Black and White Wayanad Kalpetta](https://www.bwstays.com/bw-vellanvaidyar-thirunelli-health-wayanad.html): A Kurichya tribal herbal healer near the Thirunelli temple, as reported by a 2014 blog; timings, fees and contact not published; not medical advice.
+- [Keluvaidyar Kattikulam Tribal Healer - Black and White Wayanad Kalpetta](https://www.bwstays.com/bw-keluvaidyar-kattikulam-health-wayanad.html): A Kurichya tribal herbal healer in Kattikulam, Mananthavady, as reported by a 2014 blog; timings, fees and contact not published; not medical advice.
 - [Neelarchalu Lake - Black and White Wayanad Kalpetta - BW Stays](https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html): A serene lake perfect for a peaceful retreat.
 - [Tholpetty wild life sanctuary - Black and White Wayanad Kalpetta](https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html): Another wildlife sanctuary to explore.
 - [Boys Town Farm - Black and White Wayanad Kalpetta - BW Stays](https://www.bwstays.com/bw-boys-town-farm-wayanad.html): A farm experience for visitors.
@@ -55,7 +57,7 @@ This structured summary provides a comprehensive overview of the offerings and a
 <!-- BEGIN GENERATED: site-data -->
 ## Machine-readable data (generated from the site data)
 
-Snapshot: 2026-10-17
+Snapshot: 2026-10-18
 
 - [Static MCP manifest](https://www.bwstays.com/mcp.json): 11 resources and 8 tools, pre-built JSON, no server
 - [LLMFeed](https://www.bwstays.com/.well-known/mcp.llmfeed.json): the same capabilities in LLMFeed format

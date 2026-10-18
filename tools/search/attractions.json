@@ -837,6 +837,34 @@
     },
     {
       "input": {
+        "category": "health"
+      },
+      "output": {
+        "label": "Health & Wellness",
+        "results": [
+          {
+            "name": "Keluvaidyar, Kattikulam",
+            "category": "Health & Wellness",
+            "distance_from_stay_km": 53,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-keluvaidyar-kattikulam-health-wayanad.html"
+          },
+          {
+            "name": "Vellanvaidyar, Thirunelli",
+            "category": "Health & Wellness",
+            "distance_from_stay_km": 67,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-vellanvaidyar-thirunelli-health-wayanad.html"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
         "max_distance_km": 10
       },
       "output": {
@@ -1473,12 +1501,13 @@
       "tribal",
       "cycling",
       "shopping",
-      "pilgrimage"
+      "pilgrimage",
+      "health"
     ],
-    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 90 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
+    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 92 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
   },
   "metadata": {
-    "generated": "2026-10-17",
+    "generated": "2026-10-18",
     "version": "2.0.0",
     "type": "json",
     "source": "generated from site data",

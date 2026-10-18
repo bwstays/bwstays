@@ -31681,10 +31681,28 @@ Powered by [wati.io](https://www.wati.io/?utm_source=shopify&utm_medium=chat_wid
 
 Standard dates: cancel 15 or more days before check-in for a full refund (less payment-gateway or bank charges), 7 to 14 days before for a 50% refund, and less than 7 days before or no-show for no refund. Holiday and peak-season stays (public holidays, festival weekends, 20 December to 5 January): 30 or more days before for a full refund, 15 to 29 days before for 50%, and less than 15 days before or no-show for no refund. You can move a confirmed booking once, free of charge, up to 7 days before check-in, subject to availability. Refunds are paid back to the original payment method within 7 to 10 working days. Full details: https://www.bwstays.com/footer.html#cancellation
 
+## Health & Wellness in Wayanad
+
+Traditional, tribal and wellness centres near Kalpetta. Each centre has its own page. Details are limited to what is published; nothing here is medical advice.
+
+### Vellanvaidyar, Thirunelli
+
+A traditional herbal healer of the Kurichya tribal community, described as practising at the foot of the Thirunelli temple, northern Wayanad (about 67 km from the villa by road, area of Thirunelli). A 2014 blog post reports that people come to him for ailments such as asthma, diabetes and bone fractures. Timings, fees and contact are not published. BWStays has not verified these reports.
+
+[Know More](https://www.bwstays.com/bw-vellanvaidyar-thirunelli-health-wayanad.html)
+
+### Keluvaidyar, Kattikulam
+
+A traditional herbal healer of the Kurichya tribal community in Kattikulam, Mananthavady, Wayanad (about 53 km from the villa by road, area of Kattikulam). A 2014 blog post reports that people travel to him from other cities for ailments such as asthma, diabetes and skin conditions. Timings, fees and contact are not published. BWStays has not verified these reports.
+
+[Know More](https://www.bwstays.com/bw-keluvaidyar-kattikulam-health-wayanad.html)
+
+Source: Tribal medicine and its practitioners, Kallivalli blog (2014): https://kallivalli.blogspot.com/2014/04/tribal-medicine-and-its-practitioners.html
+
 <!-- BEGIN GENERATED: site-data -->
 ## Site data summary (generated; the MCP files hold the full detail)
 
-Snapshot: 2026-10-17
+Snapshot: 2026-10-18
 
 ### Booking, availability and cancellation
 - Booking page: https://www.bwstays.com/bwstays-booking.html. Dates can be chosen from today up to one year ahead; past dates are not selectable.
