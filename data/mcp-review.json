@@ -111,6 +111,10 @@
     "trucking-17": {
       "osm": "node/10730971743",
       "note": "Brahmagiri peak: the stated coordinate is 0.1 km from the OpenStreetMap peak of the same name"
+    },
+    "romantic-47": {
+      "osm": "node/7801507874",
+      "note": "Banasura Sagar Hills (Banasura Hill trek): the stated coordinate is 0.15 km from the OpenStreetMap feature; a trek, so the road is the trailhead"
     }
   }
 }

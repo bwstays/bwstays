@@ -601,7 +601,7 @@ const siteData = {
       hrs: "2",
       fee: "0",
       aliases: [],
-      latlong: "11.600747990313033, 76.0148553711638",
+      latlong: "11.641044660114158, 76.08687012883617",
       map: "https://www.google.com/maps/search/?api=1&query=Gandhi+Museum+Puliyarmala+Kalpetta+Wayanad+Kerala",
 
       content:

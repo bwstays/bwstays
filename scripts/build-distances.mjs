@@ -55,7 +55,29 @@ const parse = (s) => {
 
 // Places that are genuinely one physical place under two records; shared
 // coordinates are therefore expected and fine.
-const SAME_PLACE = [[20, 56], [34, 35], [36, 42]];
+const SAME_PLACE = [[20, 56], [34, 35], [36, 42], [2, 52]]; // 52 Gandhi Museum stands beside 2, the Ananthanatha Swamy Jain temple
+// A record that is another record's place under a second name takes that record's distances
+// (alias -> canonical), even when the alias itself is withheld or excluded from publication.
+const ALIAS_OF = new Map([
+  [34, 35], // Sentinel Rock Waterfall = Soochipara Falls
+  [56, 20], // Lakkidi view point = Lakkidi Ghats View Point
+  [75, 84], // Muneeswaran Kunnu View point = Munneswaran Kunnu
+]);
+// Historical distances found wrong in the 2026-10-18 audit (they were routed from a coordinate that is
+// known to be wrong, or match no location at all); they become 0 = unknown instead of being kept.
+const DISCARD_LEGACY = new Map([
+  [1, 'no Santhinatha temple in Wayanad could be found; distances were from a road point'],
+  [3, 'routed from a wrong coordinate (Kerala Tourism puts the temple about 20 km from Kalpetta)'],
+  [6, 'routed from Sultan Bathery; the ashram is in Pulpally'],
+  [22, 'match no location (up to 48 km off)'],
+  [27, 'match no location'],
+  [38, 'match no location; no such waterfall found'],
+  [62, 'generic record; match no location'],
+  [71, 'placeholder stays record'],
+  [72, 'placeholder stays record'],
+  [73, 'placeholder stays record'],
+  [76, 'placeholder record; match no location'],
+]);
 const sameGroup = (a, b) => SAME_PLACE.some((g) => g.includes(a) && g.includes(b));
 
 const info = new Map(); // id -> {coord, untrusted: reason|null}
@@ -130,9 +152,11 @@ for (const a of ids) {
     if (a === b) continue;
     const oldVal = Number(old.distances?.[a]?.[b - 1] ?? 0) || 0;
     let v = 0;
-    if (idx.has(a) && idx.has(b)) {
-      const ab = meters(a, b);
-      const ba = meters(b, a);
+    const ca = ALIAS_OF.get(a) ?? a;
+    const cb = ALIAS_OF.get(b) ?? b;
+    if (ca !== cb && idx.has(ca) && idx.has(cb)) {
+      const ab = meters(ca, cb);
+      const ba = meters(cb, ca);
       if (ab != null && ba != null) {
         v = km((ab + ba) / 2);
         stats.fromRouting++;
@@ -141,7 +165,7 @@ for (const a of ids) {
         else stats.same++;
       }
     }
-    if (v === 0 && oldVal > 0) {
+    if (v === 0 && oldVal > 0 && !DISCARD_LEGACY.has(a) && !DISCARD_LEGACY.has(b) && ca !== cb) {
       // untrusted endpoint: keep the historical value only if both directions agree
       const rev = Number(old.distances?.[b]?.[a - 1] ?? 0) || 0;
       v = rev > 0 ? Math.round((oldVal + rev) / 2) : oldVal;
@@ -179,7 +203,10 @@ for (const p of trusted) {
   const d = net.distances[idx.get(p.id)][stayIdx];
   report.push({ id: p.id, name: p.name, from_stay_road_km: d == null ? null : km(d) });
 }
-const untrusted = [...info.values()].filter((p) => p.untrusted).map((p) => ({ id: p.id, name: p.name, reason: p.untrusted }));
+const untrusted = [...info.values()]
+  .filter((p) => p.untrusted && !(ALIAS_OF.has(p.id) && idx.has(ALIAS_OF.get(p.id))))
+  .map((p) => ({ id: p.id, name: p.name, reason: DISCARD_LEGACY.has(p.id) ? `${p.untrusted}; old distances discarded: ${DISCARD_LEGACY.get(p.id)}` : p.untrusted }));
+const aliases = Object.fromEntries([...ALIAS_OF].filter(([, c]) => idx.has(c)));
 
 console.log(`places: ${ids.length}  trusted coordinates: ${trusted.length}  untrusted: ${untrusted.length}`);
 console.log('pairs:', JSON.stringify(stats));
@@ -217,6 +244,7 @@ const meta = {
   method: 'OSRM driving distance on OpenStreetMap data, rounded to km, averaged over both directions',
   attribution: 'Routing data (c) OpenStreetMap contributors, ODbL',
   places_without_trusted_coordinates: untrusted,
+  aliases_distances_copied_from: aliases,
 };
 const body = `const locations = {
   names: ${JSON.stringify(names, null, 2).replace(/\n/g, '\n  ')},
