@@ -7,7 +7,7 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/plantation/bw-periya-estate-wyanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["09:30-16:30"],
       Contact: "+91-97459 47627",
       seasontovisit: [
@@ -21,7 +21,7 @@ const siteData = {
       map: "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Immerse yourself in aromatic spice plantations while staying in our cozy mountain cottage. Perfect for nature lovers and those interested in learning about Kerala's famous spices. Includes guided plantation walks and spice processing demonstrations.",
@@ -49,7 +49,7 @@ const siteData = {
     {
       id: 61,
       name: "Rippon Tea estate",
-      description: "Lush greenery and tea plantations near Meppadi.",
+      description: "Tea plantations around Ripon junction in Muppainad, near Meppadi, on the hill road south of Kalpetta.",
       image: [
         "https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp",
         "https://www.bwstays.com/assets/img/plantation/bw-stays-tea-vythiri-wayanad.webp",
@@ -57,9 +57,9 @@ const siteData = {
         "https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp",
         "https://www.bwstays.com/assets/img/plantation/bw-stays-estate-green-stay-kalpetta-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -71,10 +71,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Immerse yourself in aromatic spice plantations while staying in our cozy mountain cottage. Perfect for nature lovers and those interested in learning about Kerala's famous spices. Includes guided plantation walks and spice processing demonstrations.",
+        "The Rippon (Ripon) estate area lies around Ripon junction in Muppainad panchayat, about 7 km from Meppadi, with a tea factory and an estate bungalow. It is a working private plantation; no official visitor hours, factory-tour schedule or fee are published.",
       amenities: [
         "Mountain Views",
         "Spice Tours",
@@ -105,7 +105,7 @@ const siteData = {
         "https://www.bwstays.com/assets/img/plantation/bw-stays-coffee-estate-forest.webp",
       ],
       holidays: "Mon",
-      timing: ["09:00-17:00"],
+      timing: [],
       Contact: "+91-111 111 1111",
       seasontovisit: [
         "Summer (March-May)",
@@ -116,7 +116,7 @@ const siteData = {
       transport: "Public",
       rating: "4.0",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.758218103566884, 75.99955554569163",
       map: "https://www.google.com/maps/place/Coffee+plantation/@11.7415157,76.0020849,17z",
@@ -152,7 +152,7 @@ const siteData = {
       id: 33,
       name: "Meenmutty Falls",
       description:
-        "One of the largest and most spectacular waterfalls in Wayanad.",
+        "Three-tier waterfall about 5 km from Banasura Sagar Dam, with a total drop that DTPC gives as over 800 ft.",
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-homestay-wayanad.webp",
         "https://www.bwstays.com/assets/img/falls/bw-stays-meenmutty-waterfall-wayanad.webp",
@@ -161,7 +161,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["10:00-17:00"],
-      Contact: "+91 97472 68696",
+      Contact: "+91 85476 02722",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -176,7 +176,7 @@ const siteData = {
       latlong: "11.677845397531414, 75.93568600923",
       map: "https://www.google.com/maps/place/Makkiyad+Meenmutty+Water+Falls/@11.7282012,75.8861335,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "The first tier is a short walk from the parking ground, the second is reached by steps built over boulders, and the third needs a stream crossing over slippery rocks with ropes. The top gives views of Banasura Sagar Dam and the valleys. Do not confuse it with the Meenmutty falls near Meppadi, which is closed to visitors.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -202,7 +202,7 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-sentinal-waterfall-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["09:00-17:00"],
       Contact: "+91 85472 37513",
       seasontovisit: [
@@ -241,7 +241,7 @@ const siteData = {
       id: 35,
       name: "Soochipara Falls",
       description:
-        "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+        "Three-tier forest waterfall near Meppadi, also called Sentinel Rock, about 23 km from Kalpetta; daily visitor numbers are capped.",
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-service-apartment-soochipara-wayanad.webp",
         "https://www.bwstays.com/assets/img/falls/bw-homestay-soojipara-waterfalls-wayanad.avif",
@@ -263,7 +263,7 @@ const siteData = {
       latlong: "11.51173007949638, 76.16378589573601",
       map: "https://www.google.com/maps/place/Soochipara+Waterfalls/@11.5115356,76.1637859,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Soochipara falls in three tiers; the name comes from a needle-shaped cliff nearby that is used for rock climbing. DTPC limits entry to 500 visitors a day between 08:00 and 17:00, and tickets are sold at the counter only. Children under 10 enter free.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -287,9 +287,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/falls/black-and-white-chethalayam-falls-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91 85933 98771",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -299,7 +299,7 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.766189025300932, 76.25203494478279",
       map: "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
@@ -325,7 +325,7 @@ const siteData = {
       id: 37,
       name: "Kanthanpara Falls",
       description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+        "Waterfall of about 100 ft on the Vaduvanchal road, 8 km from Meppadi, beside the Meppadi forest range.",
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-kanthanpara-waterfalls-wayanad.webp",
         "https://www.bwstays.com/assets/img/falls/black-and-white-kanthanpara-falls-wayanad.webp",
@@ -349,7 +349,7 @@ const siteData = {
       latlong: "11.5239348, 76.1526896",
       map: "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Kanthanpara is a smaller waterfall, about 100 ft high, on the Vaduvanchal road 8 km from Meppadi and about 19 km from Kalpetta, close to the Meppadi range of the South Wayanad Forest Division. DTPC mentions an optional trek of about two hours along the Kanthanpara river.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -374,9 +374,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-homestay-kappikalam-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91 85933 98771",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -386,7 +386,7 @@ const siteData = {
       transport: "Public",
       rating: "4.1",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.524617527477, 76.15260365204358",
       map: "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
@@ -412,13 +412,13 @@ const siteData = {
       id: 40,
       name: "Arripara falls",
       description:
-        "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+        "Waterfall on the Iruvanji river near Thiruvambady in Kozhikode district, about 15 km from Thiruvambady town.",
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-arripa-falls-kalpetta.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91 85933 98771",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -428,12 +428,12 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.43840307285013, 76.04597666931055",
       map: "https://www.google.com/maps/place/Arippara+Waterfalls/@11.4381875,76.0460625,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Arippara drops in several levels over rock and boulders into natural pools, about 15 km from Thiruvambady and 12 km from Thusharagiri falls. Kerala Tourism advises visiting between November and May because the monsoon flow makes it risky.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -454,13 +454,13 @@ const siteData = {
       id: 41,
       name: "Irrupu falls ",
       description:
-        "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+        "Waterfall of about 170 ft on the Lakshmana Tirtha river in the Brahmagiri Hills of Kodagu, Karnataka, near the Wayanad border.",
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-irupu-falls-wayanad-inn.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91 85933 98771",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -470,12 +470,12 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.967284462093113, 75.98393572809631",
       map: "https://www.google.com/maps/place/Iruppu+Falls/@11.96706,75.9839414,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Iruppu falls about 170 ft from the Lakshmana Tirtha river; legend says Lakshmana shot an arrow into the hill to bring out the stream. The Rameshwara temple on the trail draws pilgrims, especially at Shivaratri. A walk of about 1 km leads to the falls, which Karnataka Tourism says are open all year; the flow is lowest from December to February.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -496,14 +496,14 @@ const siteData = {
       id: 42,
       name: "Chetalayam falls  ",
       description:
-        "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+        "Small seasonal waterfall in forest about 12 km from Sulthan Bathery, reached on foot; it runs low or dry in summer.",
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-chethalayam-waterfall-homestay.webp",
         "https://www.bwstays.com/assets/img/falls/black-and-white-chethalayam-falls-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91 85933 98771",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -513,12 +513,12 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.765721623585334, 76.25204562883619",
       map: "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Chethalayam is one of the smaller and less-visited falls of Wayanad, set in forest near Sulthan Bathery and reached by a trek through woodland. A cascade drops into a clear pool. It is seasonal: Kerala Tourism notes it dries up in summer, so it is best seen in or after the monsoon.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -539,13 +539,13 @@ const siteData = {
     {
       id: 16,
       name: "Thusharagiri",
-      description: "Waterfall down the Ghats of Wayanad.",
+      description: "Three waterfalls near Kodenchery in Kozhikode district, the tallest dropping about 75 m, within a few hundred metres of each other.",
       image: [
         "https://www.bwstays.com/assets/img/falls/bw-stays-thusharagiri-falls-service-apartment.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91 85933 98771",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -557,10 +557,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Thusharagiri+Waterfalls/@11.4728749,76.0541761,17z",
       rating: "4.4",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Discover Wayanad's famous majestic mountain accommodations, and traditional Kerala lifestyle. Perfect for those seeking tranquil waters and authentic local experiences.",
+        "Thusharagiri has three falls: Erattumukku, Mazhavil Chattom and Thumbithullumpara (Thenpara), 100-500 m apart. The tallest drops about 75 m. Forest trails lead to the upper falls. It is in Kozhikode district, about 50 km from Kozhikode city, and is managed with DTPC Kozhikode.",
       amenities: ["Waterfalls", "Lakes", "Canals", "Local Culture"],
       tags: [
         "kalpetta",
@@ -583,13 +583,13 @@ const siteData = {
     {
       id: 52,
       name: "Gandhi Museum",
-      description: "A memorial museum at Puliyarmala, beside the Ananthanatha Swamy Jain temple, where Gandhi rested in 1934.",
+      description: "A small Gandhi memorial museum and library at Puliyarmala, about 4 km from Kalpetta, beside the Ananthanatha Swamy Jain temple.",
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-stays-kalpetta-gandhi-museum.webp",
       ],
       holidays: "NA",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -599,13 +599,13 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.641044660114158, 76.08687012883617",
       map: "https://www.google.com/maps/search/?api=1&query=Gandhi+Museum+Puliyarmala+Kalpetta+Wayanad+Kerala",
 
       content:
-        "The Gandhi Museum is a memorial museum at Puliyarmala, about 4 km from Kalpetta town centre, beside the Ananthanatha Swamy Jain temple. It stands in the former boarding house where Mahatma Gandhi rested during his visit to Wayanad in 1934. Opening hours and entry fee are not published, so please check before you visit.",
+        "The museum occupies the boarding house near the Puliyarmala Jain temple where Mahatma Gandhi rested; Wikipedia records his visit to Kalpetta on 14 January 1934. It holds a memorial and a library about his life. No official opening hours, fee or contact are published.",
       amenities: ["Memorial museum", "Beside the Ananthanatha Swamy Jain temple"],
       tags: ["gandhi", "gandhi museum", "museum", "puliyarmala", "kalpetta", "jain temple", "heritage"],
 
@@ -622,9 +622,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-kunkichira-heritage-museum-at-periya-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -634,7 +634,7 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.600747990313033, 76.0148553711638",
       map: "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
@@ -670,13 +670,13 @@ const siteData = {
       id: 26,
       name: "Tea Museum",
       description:
-        "Displays tribal heritage and ancient artifacts from the region.",
+        "Tea museum in the Achoor Estate of Harrisons Malayalam at Achoor, near Pozhuthana, on the history of tea growing in Wayanad.",
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-stays-wayanad-tea-museum.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -686,13 +686,13 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.600747990313033, 76.0148553711638",
       map: "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
 
       content:
-        "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
+        "The museum covers about a century of tea growing in the region, with old machinery, tools and early photographs of the tea industry. Visitors can follow the process from green leaf to tea powder, taste several teas and buy Achoor estate tea on site. A 2018 news report says it occupies a renovated old tea factory on three floors.",
       amenities: [
         "WiFi",
         "Villa Architecture",
@@ -720,13 +720,13 @@ const siteData = {
     {
       id: 78,
       name: "Honey Museum",
-      description: "Varieties of honey displayed to taste and purchase.",
+      description: "Private museum on honey and beekeeping at Old Vythiri, run by Beecraft, with displays on bees and honey collection and a honey shop.",
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-stays-honey-museum-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "12",
       transport: "Public",
@@ -734,11 +734,11 @@ const siteData = {
       map: "https://www.google.com/maps/place/Honey+Museum+Wayanad/@11.5375153,76.0435405,17z",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
 
       content:
-        "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
+        "The museum, listed as the Beecraft Honey Museum at Old Vythiri, presents how honey is produced and gathered, with sections on honey bees and their habitat, and a tasting and sales area. Opening hours and fees differ between third-party listings and were not found on an official page.",
       amenities: [
         "WiFi",
         "Villa Architecture",
@@ -773,9 +773,9 @@ const siteData = {
         "https://www.bwstays.com/assets/img/museum/bw-stays-wayanad-heritage-homestay.webp",
         "https://www.bwstays.com/assets/img/museum/bw-stays-wayanad-heritage-museum.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["09:00-18:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -785,7 +785,7 @@ const siteData = {
       transport: "Public",
       rating: "3.9",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.748456154167792, 76.20383676709",
       map: "https://www.google.com/maps/place/Wayanad+Heritage+Museum%2C+Ambalavayal/@11.6193121,76.2106106,17z",
@@ -825,9 +825,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-stays-mullanpara-viewpoint-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["09:00-18:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -837,7 +837,7 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.537907109786387, 76.02770162612713",
       map: "https://www.google.com/maps/place/Karapuzha+Reservoir/@11.6099276,76.1660561,17z",
@@ -868,14 +868,14 @@ const siteData = {
     {
       id: 43,
       name: "Karapuzha Dam",
-      description: "Karapuzha Dam.",
+      description: "Earth dam 625 m long and 28 m high on the Karapuzha river, built for irrigation, with gardens and an adventure park.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-staycation-karapuzha-dam.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-service-apartment-wayanad-karappuzha-dam.webp",
       ],
       holidays: "NA",
       timing: ["09:00-18:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "+91 493 620 2246",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -890,7 +890,7 @@ const siteData = {
       latlong: "11.6182113, 76.1722152",
       map: "https://www.google.com/maps/place/Karapuzha+Reservoir/@11.6099276,76.1660561,17z",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Karapuzha is an earthen irrigation dam, 625 m long and 28 m high, on the Karapuzha river. The DTPC park beside the reservoir has landscaped gardens and walkways, a children's park, a watchtower, boating and paid rides such as a zipline, giant swing and VR zone. The reservoir area is also visited for birdwatching.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -920,14 +920,14 @@ const siteData = {
       id: 39,
       name: "Karlad Lake",
       description:
-        "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+        "Natural freshwater lake at Thariode, 3 km from Banasura Sagar Dam, home to DTPC's Wayanad Adventure Camp with a zipline over the water.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-stays-karlad-lake-wayanad-tourism.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-rooms-karlad-lake-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -937,13 +937,13 @@ const siteData = {
       transport: "Public",
       rating: "4.1",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.650035025731679, 75.9824076530733",
       map: "https://www.google.com/maps/place/Karlad+Lake/@11.6507106,75.9817005,17z",
 
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Karlad Lake is believed to have formed after a landslide about two centuries ago. DTPC's adventure camp here offers kayaking, a zipline across the lake, rock climbing, boating, bamboo rafting and nature walks, with life jackets and instructors on site. DTPC says children under 10 are not permitted (it appears to refer to the zipline).",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -971,14 +971,14 @@ const siteData = {
       id: 44,
       name: "Pookode Lake",
       description:
-        "Also known as Sentinel Rock Waterfalls, perfect for trekking and rock climbing.",
+        "Natural freshwater lake at 770 m near Vythiri, about 12 km from Kalpetta, shaped roughly like the map of India, with boating.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-vacation-pookode-lake-wayanad.webp",
       ],
       holidays: "NA",
       timing: ["09:00-18:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "+91 75938 92951",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -993,7 +993,7 @@ const siteData = {
       transport: "Public",
       rating: "4.1",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Pookode Lake lies at 770 m among forested hills near Vythiri and is said to resemble the map of India in outline. The Panamaram river, a tributary of the Kabini, rises here. Visitors can walk around the lake, hire pedal or row boats, see the aquarium and try the fish spa; tickets are sold at the counter only.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1021,7 +1021,7 @@ const siteData = {
       id: 45,
       name: "Banasura Sagar Dam",
       description:
-        "Opt for a speed or pedal boat to have an enthralling experience of the stupendous landscapes.",
+        "Earth dam and reservoir at the foot of the Banasura Hills, about 21 km from Kalpetta, with boating and islands in the reservoir.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-staycation-banasura-sagar-wayanad.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-resort-banasura-sagar-dam-homestay.webp",
@@ -1044,7 +1044,7 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "DTPC describes Banasura Sagar as the largest earth dam in India. It is named after Banasura, son of Mahabali, who by local lore did penance on the hills above. The reservoir has small islands formed when land was submerged. Visitors can take speed, pontoon or shikara boats, kayak, ride the zipline or walk in the small park; the Banasura Hill trek also starts nearby.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1071,13 +1071,13 @@ const siteData = {
       id: 46,
       name: "Mailadippara",
       description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+        "A rocky hill on the eastern edge of Kalpetta, near the Civil Station and the bypass road, climbed on foot for views over the town.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/black-and-white-mailadanpara-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1089,10 +1089,10 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Myladippara is a cliff-like hill just east of the Kalpetta Civil Station, next to the national highway bypass. It is reached by a short walk up from the road and is visited for its view over Kalpetta town. No official timing, fee or management body is published for it.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1120,13 +1120,13 @@ const siteData = {
       id: 47,
       name: "Banasura Sagar Hills",
       description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+        "A Western Ghats hill range above Banasura Sagar Dam, climbed on a guided forest-department trek that needs prior permission.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-villa-home-banasura-hills.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: ["07:30-11:00"],
+      Contact: "+91 493 629 8399",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1136,12 +1136,12 @@ const siteData = {
       latlong: "11.695175204242553, 75.90797008546211",
       map: "https://www.google.com/maps/place/Banasura+Hill/@11.694167,75.908056,17z",
       hrs: "2",
-      fee: "0",
+      fee: "Group of 5 INR 4,000 (INR 650 per extra person); students INR 2,500; foreigners INR 7,000",
       aliases: [],
       transport: "Public",
       rating: "4.3",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "DTPC Wayanad gives the hill as about 6,800 ft high, one of the highest ranges in the Western Ghats, with Banasura Sagar Dam at its foot. The trek follows the Meenmutty-Kattukunnu-Aanchola route and needs forest department permission; guides are available at Meenmutty falls. Entry is 07:30-11:00 for up to 75 people, offline booking only, ages 11+.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1172,9 +1172,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-holiday-longstay-manjapara-viewpoint.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1184,7 +1184,7 @@ const siteData = {
       latlong: "11.602130295485557, 76.19922151534472",
       map: "https://www.google.com/maps/place/Manjappara+View+Point/@11.6115748,76.2020084,17z",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       transport: "Public",
       rating: "4.5",
@@ -1217,13 +1217,13 @@ const siteData = {
       id: 50,
       name: "Phantom rock",
       description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+        "A skull-shaped granite rock formation near Ambalavayal, named after the comic hero the Phantom and reached by a short trek.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-resort-phanthom-rock-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1233,12 +1233,12 @@ const siteData = {
       latlong: "11.636687345789426, 76.20460141779273",
       map: "https://www.google.com/maps/place/Phantom+Rock/@11.636545,76.204627,17z",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       transport: "Public",
       rating: "3.9",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Phantom Rock is a natural rock outcrop near Ambalavayal whose shape resembles a human skull, which gave it the name of the comic-strip hero the Phantom. The last stretch is on foot along narrow trails; Edakkal Caves and Cheengeri hill are nearby. No official timing or fee is published.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1265,13 +1265,13 @@ const siteData = {
       id: 51,
       name: "Kurumbalakotta",
       description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+        "A hill in Kottathara panchayat near Venniyode, about 991 m high, climbed at dawn for views over the Wayanad plateau.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-weekend-kurumbalakotta-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1281,12 +1281,12 @@ const siteData = {
       latlong: "11.6963813, 76.0342789",
       map: "https://www.google.com/maps/place/Kurumbalakotta+Mala/@11.6968112,76.0344142,17z",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       transport: "Public",
       rating: "4.5",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Kurumbalakkotta is a monolithic hill of about 991 m in Kottathara panchayat, near Venniyode, reached from Kalpetta via Kambalakkad. Kerala Tourism describes a moderate trek through tall grass with no formal path, and the Kurumbalakkotta Bhagavathy temple on the way down. Wikipedia notes a large landslide on the hill in July 2024; check access locally.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1315,13 +1315,13 @@ const siteData = {
       id: 53,
       name: "Attamala View Point",
       description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+        "Attamala is a hill hamlet beside Chooralmala in Meppadi panchayat; no official tourist viewpoint is documented there.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-stays-attamala-resort-wayanad.avif",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["07:00-18:30"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1331,12 +1331,12 @@ const siteData = {
       latlong: "11.498498126983506, 76.17549155352333",
       map: "https://www.google.com/maps/place/Attamala+View+Point/@11.4982826,76.175513,17z",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       transport: "Public",
       rating: "4.6",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Attamala lies near Chooralmala and Mundakkai in Meppadi grama panchayat. It was struck by one of the 30 July 2024 landslides, and panchayat officials later described the ward as uninhabitable. No DTPC, Kerala Tourism or district page lists a viewpoint here; only a private homestay uses the name.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1363,13 +1363,13 @@ const siteData = {
       id: 54,
       name: "Sunrise valley",
       description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+        "A rocky viewpoint on the Meppadi side of Wayanad overlooking a forested valley; its exact location is not officially documented.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-stays-sunrise-valley-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1379,12 +1379,12 @@ const siteData = {
       latlong: "11.5233771, 76.2140645",
       map: "https://www.google.com/maps/place/Sunrise+Valley/@11.5231821,76.2142235,17z",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       transport: "Public",
       rating: "4.4",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Wikipedia's list of Kalpetta attractions places Sunrise Valley about 22 km away towards Meppadi. Travel blogs describe an exposed rock outcrop with a steep drop over forest, so care is needed at the edge. No official body lists timing, fee or access rules.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1411,13 +1411,13 @@ const siteData = {
       id: 55,
       name: "Neelimala view point",
       description:
-        "A picturesque waterfall surrounded by lush greenery and coffee plantations.",
+        "A hilltop viewpoint near Vaduvanchal, reached by jeep track and a trek, known for its view of Meenmutty falls.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-kalpetta-neelimala-view-point-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1427,12 +1427,12 @@ const siteData = {
       latlong: "11.5334912, 76.2278983",
       map: "https://www.google.com/maps/place/Neelimala+View+Point/@11.5366314,76.2291179,17z",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       transport: "Public",
       rating: "3.9",
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Neelimala, near Vaduvanchal, is named for the blue mist over the hills at dawn. Kerala Tourism describes a jeep ride followed by a trek past coffee plantations, grassland and boulders to a top that looks over Meenmutty falls and the Western Ghats. No official timing or fee is published, and access may be restricted by the forest department.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1465,9 +1465,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-lakkidi-view-point-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1479,7 +1479,7 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: ["lakkidi", "lakkidi ghats", "lakkidi viewpoint"],
       content:
         "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
@@ -1511,14 +1511,14 @@ const siteData = {
       id: 58,
       name: "900 Kandi",
       description:
-        "Welcome to the Land of Bliss · Meet Kerala's longest hanging glass bridge.",
+        "An adventure park in the forested 900 Kandi hills near Meppadi, with a glass-floored bridge, zip line, swings and off-road jeep rides.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-weekend-destination-glassbridge-wayanad.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-stays-900-thollayiram-kandi-wayanad.webp",
       ],
       holidays: "NA",
       timing: ["06:30-18:30"],
-      Contact: "+91 62385 76424/+91 97444 82007",
+      Contact: "+91 99474 60835",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1530,10 +1530,10 @@ const siteData = {
       transport: "Public",
       rating: "3.9",
       hrs: "3",
-      fee: "Adult INR 250, child INR 100; 4x4 jeep drive to top INR 1200",
+      fee: "Adult INR 250, child INR 100; zip line INR 350, zip cycling INR 250, adventure swing INR 100",
       aliases: ["900 kandi", "thollayiram kandi", "glass bridge"],
       content:
-        "Prepare for an adventure that plunges you deep into the heart of excitement and exploration.",
+        "DTPC lists Skypark at 900 Kandi as an eco-friendly adventure park set in forest and hills, with glass bridge walks, ziplining, tree-top trails, light trekking and off-road jeep rides. Entry is INR 250 for adults and INR 100 for children, with separate charges for the zip line, zip cycling, swing and rifle shooting. Bookings are offline only.",
       amenities: ["Mountain View", "Glass Bridge", "Yoga Classes", "Park"],
       tags: [
         "Ghats",
@@ -1554,13 +1554,13 @@ const siteData = {
     {
       id: 83,
       name: "Neelarchalu",
-      description: "Neelarchalu.",
+      description: "Tribal village between Ambalavayal and Meppadi, surrounded on three sides by the Karapuzha reservoir, with a sunset viewpoint over the water.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/black-and-white-nellarachal-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1572,10 +1572,10 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "Nellarachal sits within the Karapuzha Dam reservoir, which curves around it on three sides; the name likely comes from nellu (paddy), as parts of the reservoir were paddy fields. The Karapuzha viewpoint has bamboo seating facing the water for sunset. Local hosts arrange village experiences such as visits to Kurichya homes; Edakkal Caves is about 10 km away.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1603,13 +1603,13 @@ const siteData = {
     {
       id: 84,
       name: "Munneswaran Kunnu",
-      description: "Munneswaran Kunnu.",
+      description: "Grassy hilltop near Thalappuzha in Mananthavady taluk, reached by a steep walk from Makkimala, with a small Shiva shrine on top.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-villa-holiday-munnewaram-hill.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["07:00-18:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1621,10 +1621,10 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
+        "The track to the top starts at the Makkimala tribal settlement, about 5 km from Thalappuzha town, and ends with a steep climb of roughly 500 m over grassland. The summit, around 950 to 1,000 m high, has a small Shiva shrine and views over north-eastern Wayanad; it is often called the 'Vagamon of Wayanad'.",
       amenities: [
         "Mountain View",
         "Private Pool",
@@ -1656,7 +1656,7 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-workation-bamboo-park-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["07:00-18:00"],
       Contact: "+91-7591933369",
       seasontovisit: [
@@ -1670,7 +1670,7 @@ const siteData = {
       transport: "Public",
       rating: "3.2",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Relax in our stunning villa overlooking the peaks of Wayanad. Enjoy seafood, yoga sessions, and explore the famous Chembra cliff. Easy access to local spice shops and traditional ayurvedic centers.",
@@ -1701,13 +1701,13 @@ const siteData = {
     {
       id: 75,
       name: "Muneeswaran Kunnu View point",
-      description: "Sample",
+      description: "Grassy hilltop near Thalappuzha in Mananthavady taluk, reached by a steep walk from Makkimala, with a small Shiva shrine on top.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-muneeswarankunnu-muneeswaran-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["10:00-21:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "10",
       transport: "Public",
@@ -1715,10 +1715,10 @@ const siteData = {
       map: "https://www.google.com/maps?q=11.619638,76.084481",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
+        "The track to the top starts at the Makkimala tribal settlement, about 5 km from Thalappuzha town, and ends with a steep climb of roughly 500 m over grassland. The summit, around 950 to 1,000 m high, has a small Shiva shrine and views over north-eastern Wayanad; it is often called the 'Vagamon of Wayanad'.",
       amenities: ["Market Access", "Spice Tasting", "Recipe Cards"],
       tags: [
         "spice shopping",
@@ -1742,9 +1742,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-workation-bamboo-park-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["10:00-21:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "10",
       transport: "Public",
@@ -1752,7 +1752,7 @@ const siteData = {
       map: "https://www.google.com/maps?q=11.619638,76.084481",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
@@ -1778,14 +1778,14 @@ const siteData = {
       id: 6,
       name: "Sultan's Bathery Valmiki Ashram",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Simple thatched hermitage near Pulpally that local tradition links to Sage Valmiki and to Sita's stay in the forest.",
       image: [
         "https://www.bwstays.com/assets/img/heritage/bw-stays-valmiki-ashramam-tourist.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
+      holidays: "NA",
+      timing: [],
       map: "https://www.google.com/maps/place/Valmiki+Ashramam+Munippara/@11.7787456,76.1955915,17z",
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1797,10 +1797,10 @@ const siteData = {
       latlong: "11.778971412702218, 76.19547348280202",
       map: "https://www.google.com/maps/place/Valmiki+Ashramam+Munippara/@11.7787456,76.1955915,17z",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Experience authentic Kerala living in our beautiful villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+        "Local belief holds that Sage Valmiki sheltered Sita here and that Lava and Kusa were born here. The site, at Ashramamkolli in Amarakuni on the Pulpally route, is a thatched hut with mud walls that Nayaka tribal families rebuild each year; visitors come to pray and meditate. It ties in with the Seetha Devi Lava Kusa temple at Pulpally.",
       amenities: [
         "Air Conditioning",
         "Gourmet Kitchen",
@@ -1829,14 +1829,14 @@ const siteData = {
       id: 24,
       name: "Mananthavady Pazhassi Tomb",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Memorial and museum at Mananthavady on the Kabani riverbank, where Pazhassi Raja was cremated in 1805.",
       image: [
         "https://www.bwstays.com/assets/img/heritage/bw-stays-pazhassi-tomb-wayanad-resort.webp",
         "https://www.bwstays.com/assets/img/heritage/bw-workation-pazhassi-tomb-wayanad.webp",
       ],
       holidays: "Mon",
       timing: ["09:00-17:30"],
-      Contact: "+91-000 000 0000",
+      Contact: "+91 75938 92958",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1851,7 +1851,7 @@ const siteData = {
       fee: "Adult INR 30, child INR 20",
       aliases: [],
       content:
-        "Experience authentic Kerala living in our beautiful villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+        "Pazhassi Raja, ruler of the former Kottayam kingdom, fought the East India Company from 1793 until his death in 1805 and was cremated here. The tomb was turned into a museum in 1996 and holds relics linked to him, including a sword. The Kerala State Archaeology Department manages the site. Tickets are sold at the counter only.",
       amenities: [
         "Air Conditioning",
         "Gourmet Kitchen",
@@ -1880,14 +1880,14 @@ const siteData = {
       id: 25,
       name: "Chain Tree",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Ficus tree with a chain around it beside the highway at Lakkidi, tied to the folk legend of the tribal guide Karinthandan.",
       image: [
         "https://www.bwstays.com/assets/img/heritage/bw-stays-chain-tree-service-apartment.webp",
         "https://www.bwstays.com/assets/img/heritage/bw-stays-chain-tree-wayanad-homestay.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1899,10 +1899,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Karinthandan+Temple/@11.519098,76.020907,17z",
       rating: "4.2",
       hrs: "2",
-      fee: "0",
+      fee: "No entry fee",
       aliases: [],
       content:
-        "Experience authentic Kerala living in our beautiful villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
+        "Local legend says a tribal youth, Karinthandan, showed a British engineer the route up the ghat into Wayanad and was then killed so the engineer could take the credit; his restless spirit was later said to be chained to this tree by a priest. A small shrine is kept at the tree. It stands by the road at Lakkidi, about 15 km from Kalpetta; entry is free.",
       amenities: [
         "Air Conditioning",
         "Gourmet Kitchen",
@@ -1937,9 +1937,9 @@ const siteData = {
         "https://www.bwstays.com/assets/img/heritage/bw-stays-shanthinatha-jain-temple-wayanad.webp",
         "https://www.bwstays.com/assets/img/heritage/bw-homestay-shanthinatha-jain-temple-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["08:00-17:30"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       latlong: "11.6788328, 76.0221398",
       map: "https://www.google.com/maps/place/Shanthinatha+Swamy+Jain+Temple/@11.6788328,76.0221398,17z",
       seasontovisit: [
@@ -1951,7 +1951,7 @@ const siteData = {
       transport: "Public",
       rating: "4.4",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Experience authentic Kerala living in our beautiful villa. Enjoy traditional Kerala cuisine, spice shopping opportunities, and serene hill station views. Perfect for travelers seeking a quieter, more relaxed stay with quick access to city amenities.",
@@ -1985,14 +1985,14 @@ const siteData = {
       id: 15,
       name: "Kuruwa Deep",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "950-acre protected river delta of forested islets in the east-flowing Kabani river, reached by raft.",
       image: [
         "https://www.bwstays.com/assets/img/trucking/bw-kuruva-island-wayanad-2.webp",
         "https://www.bwstays.com/assets/img/trucking/bw-kuruva-island-wayanad.webp",
       ],
       holidays: "NA",
       timing: ["09:00-15:30"],
-      Contact: "+91-000 000 0000",
+      Contact: "+91 75938 92956",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2007,7 +2007,7 @@ const siteData = {
       fee: "Adult INR 220, student INR 100 (foreigner INR 440)",
       aliases: [],
       content:
-        "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+        "Kuruva is a protected cluster of islands in the Kabani river. Visitor entry is capped at 488 people per day, tickets are sold offline only, and rafting, kayaking and paddling are offered inside. Entry 09:00-15:30, activities to 16:30.",
       amenities: [
         "physical exertion",
         "hiking",
@@ -2032,13 +2032,13 @@ const siteData = {
       id: 17,
       name: "Brahmagiri",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Guided forest trek of about 10 km from the Thirunelli forest camp to the Brahmagiri summit, about 1,608 m, on the Kerala-Karnataka border.",
       image: [
         "https://www.bwstays.com/assets/img/trucking/bw-service-villa-brahmagiri-hills-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: ["07:30-09:30"],
+      Contact: "+91 85476 02511",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2050,10 +2050,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Brahmagiri/@11.9322003,75.9940526,17z",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "Group of 5 INR 3,500 incl. guide (INR 700 per extra person); single adult INR 1,300 incl. guide; foreigners INR 7,000 for 5",
       aliases: [],
       content:
-        "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+        "The Brahmagiri hills lie between Wayanad and Kodagu. The guided trek starts at the forest department camp at Thirunelli and takes a little over 3 hours to the summit, through forest with small waterfalls and wildlife. Morning slots only; students must be over 15. The Thirunelli temple stands on the lower slope.",
       amenities: [
         "physical exertion",
         "hiking",
@@ -2078,14 +2078,14 @@ const siteData = {
       id: 18,
       name: "Chembra Peak",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Wayanad's highest peak, about 2,100 m, near Meppadi; the guided trail passes a heart-shaped lake, Hridaya Thadakam.",
       image: [
         "https://www.bwstays.com/assets/img/trucking/bw-destination-chembra-wayanad.webp",
         "https://www.bwstays.com/assets/img/trucking/bw-homestay-chembra-wayanad.webp",
       ],
       holidays: "NA",
       timing: ["07:00-15:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "+91 493 628 2001",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2100,7 +2100,7 @@ const siteData = {
       fee: "Entry INR 50 (foreigner INR 80); guided trek INR 4,000 for up to 5 people, INR 800 per extra person",
       aliases: ["chembra", "chembra peak", "chembra trek"],
       content:
-        "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+        "Chembra rises about 2,100 m above sea level south of Kalpetta near Meppadi. The trail passes the heart-shaped Hridaya Thadakam lake. Treks are guided and need forest-department permission, are limited to 88 people, and the upper half of the route is restricted because of wildlife.",
       amenities: [
         "physical exertion",
         "hiking",
@@ -2124,13 +2124,13 @@ const siteData = {
     {
       id: 19,
       name: "Cheengeri Hill",
-      description: "Popular trekking destination with breathtaking views.",
+      description: "Open rocky hill near Ambalavayal run by DTPC as a trekking spot, with views over the Karapuzha river and reservoir.",
       image: [
         "https://www.bwstays.com/assets/img/trucking/bw-weekend-destination-cheengeri-hills.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["06:00-17:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2142,10 +2142,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Cheengeri+Mala+Trekking/@11.6191686,76.1992997,17z",
       rating: "4.6",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+        "Cheengeri is a gently sloping hill with little forest cover, about 2 km from Ambalavayal on the road from Sultan Bathery to Kaduvakuzhi. DTPC runs it as an authorised trekking and camping spot with ropes on the rocky upper section; mornings are recommended. It is open through the year.",
       amenities: [
         "physical exertion",
         "hiking",
@@ -2171,16 +2171,16 @@ const siteData = {
       id: 20,
       name: "Lakkidi Ghats View Point",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Roadside viewpoint at the top of the Thamarassery ghat pass, about 700 m up and 5 km from Vythiri, overlooking the hairpin bends.",
       image: [
         "https://www.bwstays.com/assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-vacation-ghats-viewpoint-kalpetta.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-villa-rooms-ghats-wayanad.webp",
         "https://www.bwstays.com/assets/img/romantic/bw-stays-ghats-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2192,10 +2192,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Lakkidi+View+Point/@11.5121995,76.0189339,17z",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+        "Lakkidi sits at about 700 m (2,296 ft) at the crest of the Thamarassery ghat and is known as the gateway of Wayanad. The view looks down over the hairpin road and valley towards Kozhikode. The Chain Tree, linked to the legend of the tribal guide Karinthandan, is nearby. It is a roadside stop with no ticket listed.",
       amenities: [
         "physical exertion",
         "hiking",
@@ -2221,7 +2221,7 @@ const siteData = {
       id: 21,
       name: "Edakkal Caves",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Natural rock caves on Ambukuthi hills, 10 km from Sultan Bathery, with ancient engravings of human figures and animals.",
       image: [
         "https://www.bwstays.com/assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp",
         "https://www.bwstays.com/assets/img/trucking/bw-homestay-kerala-wayanad-edakkal-caves.webp",
@@ -2241,7 +2241,7 @@ const siteData = {
       fee: "Adult INR 50, child INR 30",
       aliases: ["edakkal", "edakkal caves", "cave"],
       content:
-        "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+        "The caves are two natural rock formations about 1,200 ft up the Ambukuthi hills, formed by a split in a huge rock and found in 1895. Their walls carry ancient engravings and scripts, and the site was occupied several times, the oldest phase dating to the Stone Age. A steep climb leads up; daily visitors are capped at 1,920.",
       amenities: [
         "physical exertion",
         "hiking",
@@ -2267,13 +2267,13 @@ const siteData = {
       id: 23,
       name: "Puliyarmala",
       description:
-        "Ancient rock shelter with prehistoric carvings and inscriptions.",
+        "Puliyarmala is a locality near Kalpetta, known for the Ananthanatha Swamy Jain temple and the Gandhi Memorial Museum.",
       image: [
         "https://www.bwstays.com/assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2283,7 +2283,7 @@ const siteData = {
       transport: "Public",
       rating: "4.2",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.639978909862197, 76.08420612038587",
       map: "https://www.google.com/maps/place/Puliyarmala%2C+Kainatty%2C+Kalpetta%2C+Kerala+673122/@11.6399549,76.0841509,17z",
@@ -2312,13 +2312,13 @@ const siteData = {
     {
       id: 87,
       name: "Kolagapara",
-      description: "Ancient rock shelter ",
+      description: "Hill with a large monolithic rock about 5.5 km from Meenangadi, climbed on a steep 2 km trail through forest patches and tea gardens.",
       image: [
         "https://www.bwstays.com/assets/img/trucking/bw-service-villa-kolagappara-wayanad.webp",
       ],
       holidays: "NA",
       timing: ["06:00-18:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2328,12 +2328,12 @@ const siteData = {
       transport: "Public",
       rating: "4.2",
       hrs: "2",
-      fee: "0",
+      fee: "No entry fee",
       aliases: [],
       latlong: "11.656161744533218, 76.19452691872974",
       map: "https://www.google.com/maps/place/Kolagappara/@11.6507437,76.191415,17z",
       content:
-        "Stops for sightseeing, photography, and sometimes camping. Rocky trails, river crossings, and steep ascents. Ranges from mountain biking to long-distance touring",
+        "The roughly 2 km climb to the top is steep in places and passes forest patches and tea plantations rich in plants and birds. The summit gives views of the surrounding hills and, on clear days, Krishnagiri cricket stadium. Local buses run from Meenangadi and Sulthan Bathery; DTPC Kalpetta can arrange guided visits to nearby tribal settlements.",
       amenities: [
         "physical exertion",
         "hiking",
@@ -2361,13 +2361,13 @@ const siteData = {
       id: 28,
       name: "Muthanga Wildlife Sanctuary",
       description:
-        "Sanctuary with elephants, deer, and a variety of birds in their natural habitat.",
+        "Southern part of Wayanad Wildlife Sanctuary near Sulthan Bathery, visited by Forest Department jeep and bus safaris.",
       image: [
         "https://www.bwstays.com/assets/img/wildlife/bw-food-stay-muthanga-wildlife-wayanad.webp",
       ],
-      holidays: "None",
-      timing: ["06:00-19:00"],
-      Contact: "+91-333 333 3333",
+      holidays: "NA",
+      timing: ["06:00-10:00","15:00-18:00"],
+      Contact: "+91 99472 71015",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2379,11 +2379,11 @@ const siteData = {
       map: "https://www.google.com/maps/place/Muthanga+Wildlife+Santuary/@11.6715785,76.3687811,17z",
       rating: "3.9",
       hrs: "2",
-      fee: "0",
+      fee: "Bus safari INR 350 adult, INR 175 child/student, INR 700 foreigner; jeep INR 2,100 for 4",
       aliases: [],
 
       content:
-        "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+        "Wayanad Wildlife Sanctuary (344 sq km, declared 1973) is in two separate blocks; Muthanga is the southern one, adjoining Bandipur (Karnataka) and Mudumalai (Tamil Nadu), and is part of Project Elephant. Elephants, gaur, deer, langurs and occasionally tigers are seen. Visitors may enter only the outer tourism zone on Forest Department safaris; jeeps are hired at the gate and seats are limited per slot.",
       amenities: [
         "Wildlife Viewing",
         "Spice Plantations",
@@ -2412,13 +2412,13 @@ const siteData = {
       id: 29,
       name: "Nagarhole wild life sanctuary",
       description:
-        "Sanctuary with elephants, deer, and a variety of birds in their natural habitat.",
+        "Tiger reserve in Karnataka next to Wayanad's Tholpetty sanctuary, with Forest Department safaris from the Kabini, Veeranahosahalli and Nanachi gates.",
       image: [
         "https://www.bwstays.com/assets/img/wildlife/bw-homestays-nagarhole-wayanad-wildlife-sanctuary.webp",
       ],
-      holidays: "None",
+      holidays: "NA",
       timing: ["07:00-17:00"],
-      Contact: "+91-333 333 3333",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2430,10 +2430,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Nagarahole+national+park+Safari/@11.9922612,76.0667218,17z",
       rating: "4.1",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+        "Nagarahole adjoins the Tholpetty block of Wayanad Wildlife Sanctuary in the north of the district. The Karnataka Forest Department runs bus, jeep and boat safaris from several gates, including Kakanakote on the Kabini backwaters and Nanachi in Kodagu. Safari times and fares were revised from June 2025; check them before travelling.",
       amenities: [
         "Wildlife Viewing",
         "Spice Plantations",
@@ -2463,14 +2463,14 @@ const siteData = {
       id: 30,
       name: "Pakshipathalam",
       description:
-        "For bird lovers, this Pakshipathalam trek offers a myriad of bird species on its 7 km stretch in the deep forests of Wayanad. The Forest Resort at Lanternstay provides guided tours through various treks; thus, it is family friendly and the adventures here are always safe and enjoyable. On this stretch, there are possibilities of sighting some rare species, such as Malabar Grey Hornbill and migratory birds.",
+        "Boulder caves at about 1,740 m in the Brahmagiri Hills, reached on foot from Thirunelli and known for a large bird colony.",
       image: [
         "https://www.bwstays.com/assets/img/wildlife/bw-weekday-pakshipathalam-bird-sanctuary-wayanad.webp",
         "https://www.bwstays.com/assets/img/wildlife/bw-villas-pakshipathalam-wayanad.webp",
       ],
-      holidays: "None",
+      holidays: "NA",
       timing: ["07:00-17:00"],
-      Contact: "+91-333 333 3333",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2482,10 +2482,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Pakshipathalam/@11.9380375,75.9616406,17z",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+        "Pakshipathalam is reached only on foot from Thirunelli, a trek of about 3-4 hours each way through deciduous forest, streams and rocky stretches. The caves hold a large bird colony, including the Edible Nest Swiftlet, and gaur, elephants and Malabar giant squirrels live around it. Local lore links the caves to Garuda and the Pandavas. Prior permission from the Forest Department is needed.",
       amenities: [
         "Wildlife Viewing",
         "Spice Plantations",
@@ -2514,13 +2514,13 @@ const siteData = {
       id: 31,
       name: "Tholpetty wild life sanctuary",
       description:
-        "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+        "Northern block of Wayanad Wildlife Sanctuary, east of Mananthavady near Thirunelli, visited on Forest Department jeep safaris.",
       image: [
         "https://www.bwstays.com/assets/img/wildlife/bw-team-event-tholpetty-wildlife-sanctuary-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-10:00", "15:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: ["06:00-10:00","15:00-18:00"],
+      Contact: "+91 493 525 0853",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2532,10 +2532,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Tholpetty+Range+-+Wayanad+Wildlife+Sanctuary/@11.944135,76.0648063,17z",
       rating: "4.0",
       hrs: "2",
-      fee: "0",
+      fee: "Jeep safari INR 2,100 for 4, INR 2,410 for 5, INR 2,725 for 6; foreigners INR 4,200-4,800",
       aliases: [],
       content:
-        "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
+        "Tholpetty is the northern of the two blocks of Wayanad Wildlife Sanctuary and borders Nagarahole in Karnataka. Forest Department jeep safaris in the outer tourist zone may show elephants, gaur, deer, langurs and, rarely, tigers, leopards and bears. Jeeps are booked at the counter (offline only).",
       amenities: [
         "Wildlife Viewing",
         "Spice Plantations",
@@ -2569,9 +2569,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/wildlife/bw-kerala-begur-wildlife-sanctuary-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2583,7 +2583,7 @@ const siteData = {
       map: "https://www.google.com/maps/place/Begur+reserve+forest+road/@11.8489486,76.0884256,17z",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Experience Kerala's rich biodiversity at Western Ghats. Home to elephants, tigers, and exotic birds. Nearby spice plantations offer guided tours and shopping opportunities. Ideal for nature lovers and adventure seekers.",
@@ -2617,7 +2617,7 @@ const siteData = {
       id: 88,
       name: "Gurukula Botanical Sanctuary",
       description:
-        "Gurukula Botanical Sanctuary hosts over 2,000 native plant species including around 100 native trees restored to their natural habitat, 500 herbs and shrubs.",
+        "Conservation garden near Periya in northern Wayanad, founded in 1981, that grows and restores native plants of the Western Ghats.",
       image: [
         "https://www.bwstays.com/assets/img/farm/bw-gurukula-botanical-sanctuary-wayanad.webp",
       ],
@@ -2631,10 +2631,10 @@ const siteData = {
       map: "https://www.google.com/maps?q=11.821216,75.844855",
       rating: "4.9",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
+        "Founded by Wolfgang Theuerkauf in 1981 at the edge of a rainforest reserve, the sanctuary grows rare and threatened Western Ghats plants, among them ferns, mosses, balsams, orchids, aroids and gingers, and reintroduces them into the wild. Botanical day tours are offered Monday to Saturday in several languages, including English and Malayalam.",
       amenities: ["agritourism", "educational", "recreational", "working farm"],
       tags: [
         "Family Farm Day",
@@ -2656,13 +2656,13 @@ const siteData = {
       id: 64,
       name: "Ambalavayal",
       description:
-        "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+        "Kerala Agricultural University's research station at Ambalavayal, with a nursery open to visitors and the annual Pooppoli flower show.",
       image: [
         "https://www.bwstays.com/assets/img/farm/bw-stays-rars-wayanad-ambalavayal.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["09:00-16:30"],
-      Contact: "+91-4936 260 421",
+      Contact: "+91 4936 260421",
       seasontovisit: ["All Season"],
       distance: "21",
       transport: "Public",
@@ -2670,10 +2670,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/RARS+Ambalavayal/@11.6157899,76.214236,17z",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
+        "The farm was set up by the Madras government in 1945 under the post-war Wayanad colonisation scheme, became a horticultural research station in 1966 and passed to Kerala Agricultural University after 1972. Tourists may visit its nursery of roses and ornamental plants and buy planting material. It hosts the Pooppoli flower festival around January.",
       amenities: ["agritourism", "educational", "recreational", "working farm"],
       tags: [
         "Family Farm Day",
@@ -2691,11 +2691,11 @@ const siteData = {
     {
       id: 63,
       name: "Boys Town",
-      description: "Experience spice cultivation and farm life in Wayanad.",
+      description: "A campus about 13 km from Mananthavady where the Wayanad Social Service Society runs a herbal garden, gene park and farm units.",
       image: [
         "https://www.bwstays.com/assets/img/farm/bw-stays-boys-town-farm-wayanad.webp",
       ],
-      holidays: "None",
+      holidays: "NA",
       timing: ["08:00-18:00"],
       Contact: "+91-444 444 4444",
       seasontovisit: ["All Season"],
@@ -2705,10 +2705,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Boys+Town%2C+Kerala/@11.8401763,75.9187422,17z",
       rating: "4.0",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
+        "At Boys Town near Thalappuzha, the Wayanad Social Service Society (founded 1974) runs a herbal garden, a nature care centre, a sericulture unit and a permaculture centre. Its Gene Park for medicinal plants grew out of an Indo-Danish project. No visiting hours or fee are published by an official source.",
       amenities: ["agritourism", "educational", "recreational", "working farm"],
       tags: [
         "Family Farm Day",
@@ -2727,11 +2727,11 @@ const siteData = {
     {
       id: 74,
       name: "Pepper Farm",
-      description: "Experience spice cultivation and farm life in Wayanad.",
+      description: "Pepper is a traditional Wayanad crop grown on shade trees in coffee and mixed farms; this entry does not name a specific farm.",
       image: [
         "https://www.bwstays.com/assets/img/farm/bw-stays-pepper-farm-wayanad.webp",
       ],
-      holidays: "None",
+      holidays: "NA",
       timing: ["08:00-18:00"],
       Contact: "+91-444 444 4444",
       seasontovisit: ["All Season"],
@@ -2741,10 +2741,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Pepper+Hub/@11.691632,76.191507,17z",
       rating: "4.7",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        " farm visit provided a practical understanding of modern and traditional farming methods. It helped reinforce concepts related to agriculture and sustainability.",
+        "No official or third-party source identifies a visitor 'Pepper Farm' or 'Pepper Hub' at this location. Until the farm is named and confirmed on the ground, no timing, fee or contact should be published.",
       amenities: ["agritourism", "educational", "recreational", "working farm"],
       tags: [
         "Family Farm Day",
@@ -2767,13 +2767,13 @@ const siteData = {
       id: 82,
       name: "Bamboo Rafting",
       description:
-        "Bamboo rafting in Wayanad Kerala to a day of hiking or trekking. River guide, safety gear incl",
+        "Bamboo rafting on the Kabini River at Kuruva Island, a forested river island near Mananthavady managed for visitors by DTPC Wayanad.",
       image: [
         "https://www.bwstays.com/assets/img/sports/bw-stay-bamboo-sport-rafting-wayanad.webp",
       ],
       holidays: "Mon",
       timing: ["09:00-16:30"],
-      Contact: "+91-75938 92956",
+      Contact: "+91 75938 92956",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2785,10 +2785,10 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       hrs: "2",
-      fee: "600 INR",
+      fee: "Rafting INR 100 adult, INR 50 child (20 min); Kuruva Island entry INR 220 adult, INR 100 student, INR 440 foreigner",
       aliases: [],
       content:
-        "Explore Kerala's pristine waters by kayak. Paddle through narrow canals, observe local wildlife, and visit village spice gardens. A perfect combination of adventure and cultural immersion for quiet travel enthusiasts.",
+        "Visitors reach Kuruva Island, an uninhabited forested island of about 950 acres in the Kabini, by fibre boat or bamboo raft. DTPC lists 20-minute rafting rides as well as kayaking and paddling. Booking is offline only, the daily number of visitors is capped, and the island closes in the monsoon (June to September).",
       amenities: [
         "Kayak Equipment",
         "Safety Gear",
@@ -2816,13 +2816,13 @@ const siteData = {
     {
       id: 70,
       name: "Ziplines",
-      description: "Ziplines.",
+      description: "Zip lines in Wayanad are offered at the Karapuzha Dam adventure park and at the 900 Kandi Skypark, each with its own ticket.",
       image: [
         "https://www.bwstays.com/assets/img/sports/bw-stay-zipline-vytiri-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2834,10 +2834,10 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Explore Kerala's pristine waters by kayak. Paddle through narrow canals, observe local wildlife, and visit village spice gardens. A perfect combination of adventure and cultural immersion for quiet travel enthusiasts.",
+        "DTPC lists a zip line at Karapuzha Dam (INR 390, riders 40 kg+, park open 09:00-18:00, with a giant swing at INR 280) and at Skypark, 900 Kandi (INR 350). Other private zip lines operate around Vythiri and Karlad but have no official listing. This entry should point to a specific operator.",
       amenities: [
         "Kayak Equipment",
         "Safety Gear",
@@ -2868,8 +2868,8 @@ const siteData = {
         "https://www.bwstays.com/assets/img/sports/bw-green-grass-football-wayanad.webp",
       ],
       holidays: "NA",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2881,7 +2881,7 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Explore Kerala's pristine waters by kayak. Paddle through narrow canals, observe local wildlife, and visit village spice gardens. A perfect combination of adventure and cultural immersion for quiet travel enthusiasts.",
@@ -2914,13 +2914,13 @@ const siteData = {
       id: 60,
       name: "Kalpetta Food Spots",
       description:
-        "Try authentic Kerala dishes at local eateries and food stalls in Kalpetta.",
+        "A guide to places to eat in and around Kalpetta, listed on the site's food page.",
       image: [
         "https://www.bwstays.com/assets/img/food/bw-kalpetta-food-drinks-collage-all-images.webp",
       ],
-      holidays: "None",
+      holidays: "NA",
       timing: ["11:00-23:00"],
-      Contact: "+91-555 555 5555",
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "5",
       transport: "Public",
@@ -2928,10 +2928,10 @@ const siteData = {
       map: "",
       rating: "4",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Learn to prepare authentic Kerala dishes using traditional spices and techniques. Our cooking classes include market visits for spice selection, hands-on cooking, and enjoying the meal you've prepared.",
+        "This entry is a section of the site rather than a single venue. The food page lists individual eateries with their own details; hours and phones belong to each place, not to the section.",
       amenities: [
         "Cooking Equipment",
         "Recipe Book",
@@ -2956,13 +2956,13 @@ const siteData = {
       id: 65,
       name: "Restaurants",
       description:
-        "Showcases the rich cultural heritage and tribal artifacts of Wayanad.",
+        "A general section on restaurants near Kalpetta; individual eateries and their details are listed on the site's food page.",
       image: [
         "https://www.bwstays.com/assets/img/food/bw-stays-hotel-wayanad-inn.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "10",
       transport: "Public",
@@ -2970,10 +2970,10 @@ const siteData = {
       map: "",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Learn to prepare authentic Kerala dishes using traditional spices and techniques. Our cooking classes include market visits for spice selection, hands-on cooking, and enjoying the meal you've prepared.",
+        "This entry does not describe a single venue. Opening hours, prices and phone numbers belong to each listed restaurant.",
       amenities: [
         "Cooking Equipment",
         "Recipe Book",
@@ -2997,13 +2997,13 @@ const siteData = {
       id: 66,
       name: "LocalCuisine",
       description:
-        "Try authentic Kerala dishes at local eateries and food stalls.",
+        "A general section on Kerala and Wayanad food served at local eateries; individual eateries are listed on the food page.",
       image: [
         "https://www.bwstays.com/assets/img/food/bw-stays-hotel-wayanad-inn.webp",
       ],
-      holidays: "None",
+      holidays: "NA",
       timing: ["11:00-23:00"],
-      Contact: "+91-555 555 5555",
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "10",
       transport: "Public",
@@ -3011,10 +3011,10 @@ const siteData = {
       map: "",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Learn to prepare authentic Kerala dishes using traditional spices and techniques. Our cooking classes include market visits for spice selection, hands-on cooking, and enjoying the meal you've prepared.",
+        "This entry does not describe a single venue. Opening hours and phone numbers belong to each listed eatery.",
       amenities: [
         "Cooking Equipment",
         "Recipe Book",
@@ -3040,16 +3040,16 @@ const siteData = {
     {
       id: 59,
       name: "Uravu",
-      description: "Uravu",
+      description: "A non-profit bamboo centre at Thrikkaipetta, about 10 km from Kalpetta, with a bamboo nursery, craft workshop and shop.",
       image: [
         "https://www.bwstays.com/assets/img/tribal/bw-bamboo-uravu-thrikkaipetta-wayanad.webp",
         "https://www.bwstays.com/assets/img/tribal/bw-workation-uravu-thrikkaipetta-bamboo-wayanad-1.webp",
         "https://www.bwstays.com/assets/img/tribal/bw-stay-uravu-thrikkaipetta-wayanad-factory.webp",
         "https://www.bwstays.com/assets/img/tribal/bw-service-apartment-uravu-thrikkaipetta-bamboo-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: ["09:30-18:30"],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3061,10 +3061,10 @@ const siteData = {
       transport: "Public",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "No entry fee",
       aliases: [],
       content:
-        "Tucked away in the lush hills of Kerala, Wayanad is home to some of India's most vibrant and resilient tribal communities",
+        "Uravu has worked since 1996 to revive bamboo crafts and livelihoods in Thrikkaipetta, the 'bamboo village'. Visitors can walk the bamboo plantations, take a guided tour of the processing workshop and buy furniture and handicrafts; a second outlet is near Pookode Lake. Kerala Tourism (August 2024) gives daily opening 09:30-18:30, no entry fee.",
       amenities: [
         "Tribal Communities",
         "Tribal History",
@@ -3089,13 +3089,13 @@ const siteData = {
     {
       id: 57,
       name: "En ooru",
-      description: "En ooru",
+      description: "Kerala's first tribal heritage village, at Pookode near Vythiri, with traditional huts, performances and tribal craft stalls.",
       image: [
         "https://www.bwstays.com/assets/img/tribal/bw-homestay-en-ooru-tribal-heritage-village-wayanad.webp",
       ],
       holidays: "NA",
       timing: ["09:00-17:00 (Mon-Fri)", "09:00-18:00 (Sat, Sun, holidays)"],
-      Contact: "+91-000 000 0000",
+      Contact: "+91 62380 71371",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3110,7 +3110,7 @@ const siteData = {
       fee: "Adult INR 50 (camera INR 150, shuttle INR 40)",
       aliases: [],
       content:
-        "Tucked away in the lush hills of Kerala, Wayanad is home to some of India's most vibrant and resilient tribal communities",
+        "Enooru at Pookode, about 5.6 km from Vythiri bus stand, presents the customs, architecture and crafts of Wayanad's tribal communities. Visitors see traditional huts, an amphitheatre with tribal music and dance, and stalls selling tribal medicines, handicrafts and products. A shuttle jeep runs up to the village; tickets are sold offline only.",
       amenities: [
         "Tribal Communities",
         "Tribal History",
@@ -3138,13 +3138,13 @@ const siteData = {
     {
       id: 81,
       name: "Rippon",
-      description: "Rippon Tea estate.",
+      description: "Tea-estate country around Ripon near Meppadi in south Wayanad, where tea growing is the main work and the roads run through the gardens.",
       image: [
         "https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3156,10 +3156,10 @@ const siteData = {
       transport: "Public",
       rating: "4.7",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Cycling in Wayanad is a fantastic way to explore the lush landscapes, rolling hills, and serene villages of this scenic region in Kerala. ",
+        "Ripon lies in the Meppadi area, where tea cultivation is the main economic activity and most residents work on the estates. The site lists it as a cycling area; no official source gives routes, hours or fees for cycling here.",
       amenities: [
         "expansive tea estates",
         "rustic mud trails",
@@ -3185,16 +3185,16 @@ const siteData = {
     {
       id: 49,
       name: "Chundail Tea Estate",
-      description: "Chundail Tea Estate",
+      description: "Tea plantations around Chundale, on the Kalpetta-Meppadi road, crossed by quiet estate roads used for drives and cycling.",
       image: [
         "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp",
         "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.webp",
         "https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp",
         "https://www.bwstays.com/assets/img/cycling/bw-hotel-stays-chundale-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: ["Summer (March-May)", "Winter (October-February)"],
       distance: "6",
       latlong: "11.6076643, 76.1350769",
@@ -3202,10 +3202,10 @@ const siteData = {
       transport: "Public",
       rating: "4.7",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "Cycling in Wayanad is a fantastic way to explore the lush landscapes, rolling hills, and serene villages of this scenic region in Kerala. ",
+        "Chundale, a few kilometres south of Kalpetta, is surrounded by tea estates; Harrisons Malayalam lists a Chundale Estate (Chundale Post, 673 123) among its Wayanad gardens. These are working private plantations, so visitors keep to public roads unless an estate offers a tour. No visitor hours or fees are published.",
       amenities: [
         "expansive tea estates",
         "rustic mud trails",
@@ -3264,9 +3264,9 @@ const siteData = {
       name: "Bevo Beverages ( Govt of Kerala )",
       description: "Bevo for all types of syrups and spirits",
       image: ["https://www.bwstays.com/assets/img/shopping/cyrup.webp"],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["10:00-21:00"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "10",
       transport: "Public",
@@ -3274,7 +3274,7 @@ const siteData = {
       map: "https://www.google.com/maps?q=11.619638,76.084481",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
@@ -3303,9 +3303,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/shopping/bw-whole-spices-wholesale-kalpetta-wayanad.webp",
       ],
-      holidays: "None",
+      holidays: "NA",
       timing: ["11:00-23:00"],
-      Contact: "+91-555 555 5555",
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "10",
       transport: "Public",
@@ -3313,7 +3313,7 @@ const siteData = {
       map: "https://www.google.com/maps/search/?api=1&query=Spices+Kalpetta+Wayanad+Kerala",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
@@ -3341,9 +3341,9 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/shopping/bw-shopping-nesto-wayanad.webp",
       ],
-      holidays: "None",
+      holidays: "NA",
       timing: ["11:00-23:00"],
-      Contact: "+91-555 555 5555",
+      Contact: "",
       seasontovisit: ["All Season"],
       distance: "10",
       transport: "Public",
@@ -3351,7 +3351,7 @@ const siteData = {
       map: "https://www.google.com/maps?q=11.603319,76.083006",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
         "Authentic spice shopping experiences across Wayanad. Visit local markets, spice gardens, and processing centers. Learn about cardamom, pepper, cinnamon, and other exotic spices that make Kerala cuisine special.",
@@ -3379,7 +3379,7 @@ const siteData = {
       "image": [
         "https://www.bwstays.com/assets/img/tribal/bw-homestay-en-ooru-tribal-heritage-village-wayanad.webp"
       ],
-      "holidays": "",
+      "holidays": "NA",
       "timing": [],
       "Contact": "",
       "seasontovisit": [],
@@ -3407,11 +3407,11 @@ const siteData = {
     {
       "id": 92,
       "name": "Government & Cooperative Trust Places",
-      "description": "Shopping place at Pookode, Kunnathidavaka, Wayanad, Kerala.",
+      "description": "Handicraft and spice shops at the entrance of Pookode Lake, near Vythiri, in the DTPC-run lake area.",
       "image": [
         "https://www.bwstays.com/assets/img/shopping/photo-coming-soon.svg"
       ],
-      "holidays": "",
+      "holidays": "NA",
       "timing": [],
       "Contact": "",
       "seasontovisit": [],
@@ -3423,7 +3423,7 @@ const siteData = {
       "hrs": "",
       "fee": "",
       "aliases": [],
-      "content": "Government & Cooperative Trust Places is a shopping place at Pookode, Kunnathidavaka, Wayanad, Kerala. Opening hours, contact details and photos will be added once they are confirmed.",
+      "content": "Pookode Lake, about 3 km south of Vythiri and 15 km from Kalpetta, is run by DTPC Wayanad within the South Wayanad forest division. A shop at the entrance sells handmade soap, Ayurvedic products and crafts, and there is a handicrafts and spices emporium among the lake's facilities.",
       "amenities": [],
       "tags": [
         "shopping",
@@ -3439,11 +3439,11 @@ const siteData = {
     {
       "id": 93,
       "name": "Scheduled Tribe Cooperative Society Outlet",
-      "description": "Shopping place at Kalloor, Wayanad, Kerala.",
+      "description": "Scheduled Tribes cooperative society at Kalloor near Sulthan Bathery that buys forest produce such as wild honey from tribal collectors.",
       "image": [
         "https://www.bwstays.com/assets/img/shopping/photo-coming-soon.svg"
       ],
-      "holidays": "",
+      "holidays": "NA",
       "timing": [],
       "Contact": "",
       "seasontovisit": [],
@@ -3455,7 +3455,7 @@ const siteData = {
       "hrs": "",
       "fee": "",
       "aliases": [],
-      "content": "Scheduled Tribe Cooperative Society Outlet is a shopping place at Kalloor, Wayanad, Kerala. Opening hours, contact details and photos will be added once they are confirmed.",
+      "content": "The Sulthan Bathery Scheduled Tribes Cooperative Society at Kallur has been described as the largest tribal society in Kerala; it procures wild honey gathered from rock-bee hives, largely by Kattunayakan collectors. No source confirms a retail outlet, its hours or contact.",
       "amenities": [],
       "tags": [
         "shopping",
@@ -3475,7 +3475,7 @@ const siteData = {
       "image": [
         "https://www.bwstays.com/assets/img/shopping/photo-coming-soon.svg"
       ],
-      "holidays": "",
+      "holidays": "NA",
       "timing": [],
       "Contact": "",
       "seasontovisit": [],
@@ -3503,11 +3503,11 @@ const siteData = {
     {
       "id": 95,
       "name": "Vanamoolika Herbals",
-      "description": "Shopping place at Mullenkolly, Pulpally, Wayanad, Kerala.",
+      "description": "Wayanad farmers' and women's collective, started in 1991 to protect native medicinal plants, that grows and sells organic herbs and spices.",
       "image": [
         "https://www.bwstays.com/assets/img/shopping/photo-coming-soon.svg"
       ],
-      "holidays": "",
+      "holidays": "NA",
       "timing": [],
       "Contact": "",
       "seasontovisit": [],
@@ -3519,7 +3519,7 @@ const siteData = {
       "hrs": "",
       "fee": "",
       "aliases": [],
-      "content": "Vanamoolika Herbals is a shopping place at Mullenkolly, Pulpally, Wayanad, Kerala. Opening hours, contact details and photos will be added once they are confirmed.",
+      "content": "Vanamoolika began in 1991 when a group of 14 farmers came together to safeguard native medicinal plants; it has trained around 250 women to grow and market them. It supplies organic spices, rice and coffee to buyers abroad through a sister company, Indian Organic Farmers' Producer Company. Whether it runs a shop at Mullankolly/Pulpally is not confirmed.",
       "amenities": [],
       "tags": [
         "shopping",
@@ -3539,15 +3539,15 @@ const siteData = {
       id: 4,
       name: "Tirunelli",
       description:
-        "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
+        "Ancient Maha Vishnu temple at Thirunelli, set in forest beside the Brahmagiri hills, about 32 km from Mananthavady.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-tirunelli-temple-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-thirunelli-temple_wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-thirunelli-temple-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["05:30-12:30", "17:00-19:30"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3557,12 +3557,12 @@ const siteData = {
       transport: "Public",
       rating: "4.7",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.9116989, 75.995828",
       map: "https://www.google.com/maps/place/Sree+Thirunelli+Mahavishnu+Temple/@11.9116989,75.995828,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "The temple is dedicated to Vishnu in his four-armed form and is also called Sahyamala Kshetram and 'Kashi of the South'. It has granite pillars and stone aqueducts that bring water from the hills. Devotees perform rites for ancestors at the Papanasini stream, about 1 km away, and the temple pond Panchatheertham holds a rock called Vishnupada.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3582,13 +3582,13 @@ const siteData = {
       id: 2,
       name: "Ananthanatha Swamy Jain",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Jain temple of Tirthankara Ananthanatha Swami on Puliyarmala hillock, about 5 km from Kalpetta.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-anantha-swami-jain-temple-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-97442 82118",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       latlong: "11.641044660114158, 76.08687012883617",
       map: "https://www.google.com/maps/place/Ananthanatha+Swamy+Jain+Temple/@11.6409028,76.0868594,17z",
       seasontovisit: [
@@ -3600,10 +3600,10 @@ const siteData = {
       transport: "Public",
       rating: "4.3",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "The temple is dedicated to Ananthanatha Swami, a Jain Tirthankara. It is believed to have first stood in old Kalpetta (Kalpavathy) and was moved to the Puliyarmala hillock by Mandappa Gowder in 1931. DTPC Wayanad notes that the main idol of the Sultan Bathery Jain temple is now kept here.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3622,13 +3622,13 @@ const siteData = {
       id: 3,
       name: "Koottamundu Glass Temple Wayanad",
       description:
-        "Historic Koottamundu Glass Temple Wayanad with beautiful architecture and cultural significance.",
+        "Jain temple of Parswanatha Swami on the slopes of Vellarimala near Koottamunda, known for its mirror-lined inner walls.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-workation-jain-glass-temple-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["09:00-18:30"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3640,10 +3640,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Koottamundu%2C+Kottappadi+part%2C+Kerala/@11.5706902,76.087051,17z",
       rating: "4.0",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "The temple, about 20 km from Kalpetta, is dedicated to Parswanatha Swami. Its sanctum holds icons of Parswanatha Swami and Padmavathi Devi, and mirrors on the inner walls reflect the idols in repeating patterns, which gives it the name Glass Temple.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3663,15 +3663,15 @@ const siteData = {
       id: 5,
       name: "Papanasini River",
       description:
-        "Ancient temple dedicated to Lord Vishnu, nestled in the hills of Wayanad.",
+        "Sacred mountain stream from the Brahmagiri hills, about 1 km from Thirunelli temple, where devotees perform rites for ancestors.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-papanasini-wayanad-tourist.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-staycation-papanashini-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-papanasini-thirunelli-wayanad.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["05:30-12:30", "17:00-19:30"],
-      Contact: "+91-000 000 0000",
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3681,12 +3681,12 @@ const siteData = {
       transport: "Public",
       rating: "4.7",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.911882611618777, 75.99584945767235",
       map: "https://www.google.com/maps/place/Sree+Thirunelli+Mahavishnu+Temple/@11.9116989,75.995828,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "Papanasini flows down from Brahmagiri near the Thirunelli Maha Vishnu temple. By tradition its water washes away sins, and devotees bathe in it and offer rites (bali, pinda) for ancestors on its banks. It is reached on foot from the temple.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3705,13 +3705,13 @@ const siteData = {
       id: 7,
       name: "Meenangadi Church",
       description:
-        "Ancient Meenangadi Church, nestled in the hills of Wayanad.",
+        "Syriac Orthodox Marian pilgrim church at Meenangadi, known for the relic of St. Mary's girdle (Soonoro).",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-staycation-meenagadhi-church-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3721,12 +3721,12 @@ const siteData = {
       transport: "Public",
       rating: "4.4",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.65965314607536, 76.17374499957178",
       map: "https://www.google.com/maps/place/St.+Peter's+%26+St.+Paul's+Jacobite+Syrian+Cathedral/@11.6590982,76.1735335,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "St. Mary's church at Meenangadi belongs to the Syriac Orthodox Church and was consecrated on 1 February 1958. It holds the Holy Soonoro (girdle of St. Mary), installed in 1991, and relics of Patriarch Ignatius Elias III. Its main feast is the eight-day lent and Nativity of St. Mary feast, 1 to 8 September.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3745,14 +3745,14 @@ const siteData = {
       id: 8,
       name: "Our Lady of Lourdes Shrine, Pallikunnu",
       description:
-        "Our Lady of Lourdes Shrine, Pallikunnu, nestled in the hills of Wayanad.",
+        "Latin Catholic church of Our Lady of Lourdes at Pallikunnu, founded in 1908 by the French priest Fr. Jefreno.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-pallikunnu-church-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-workation-pallikkunnu-church-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: ["07:00-19:00"],
+      Contact: "+91 493 628 6623",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3762,12 +3762,12 @@ const siteData = {
       transport: "Public",
       rating: "4.7",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.685229537534148, 76.05606037116382",
       map: "https://www.google.com/maps/place/OUR+LADY+OF+LOURDES+SHRINE%2C+PALLIKUNNU/@11.6850877,76.0560711,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "The church, known as Pallikunnu Church, was established in 1908 by Fr. Jefreno, a French priest, and follows some local Hindu customs. Its annual festival runs for three days from 10 February. DTPC lists it as about 10 km from Kalpetta.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3785,13 +3785,13 @@ const siteData = {
     {
       id: 9,
       name: "Pulpally Sitadevi temple",
-      description: "Pulpally Sitadevi temple, nestled in the hills of Wayanad.",
+      description: "18th-century temple at Pulpally, one of the few in Kerala dedicated to Seetha Devi, with idols of Lava and Kusa.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-seetha-lava-kusha-temple-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: ["05:00-12:30","17:30-19:30"],
+      Contact: "+91 493 624 1175",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3801,12 +3801,12 @@ const siteData = {
       transport: "Public",
       rating: "4.7",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.793030398758432, 76.16871715767236",
       map: "https://www.google.com/maps/place/Sree+Seethadevi+Lava+Kusha+Temple+Pulpally/@11.7928151,76.1686957,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "The temple stands about 280 m from Pulpally bus stand and is managed by the Malabar Devaswom Board, with a member of the Kuppathode family as trustee. It is one of the few temples in Kerala dedicated to Seetha, and it also has idols of her sons Lava and Kusa, linking it to local Ramayana traditions.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3824,13 +3824,13 @@ const siteData = {
     {
       id: 10,
       name: "Trikaipatta temple",
-      description: "Trikaipatta temple, nestled in the hills of Wayanad.",
+      description: "Shiva temple at Thrikkaipatta near Meppadi, Wayanad, with shrines to Ganesha, Ayyappa and the serpent deities.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-trikaipattta-temple-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3840,12 +3840,12 @@ const siteData = {
       transport: "Public",
       rating: "3.9",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       latlong: "11.6057586, 76.133523",
       map: "https://www.google.com/maps/place/Sree+Thrikkaipetta+Shiva+Temple/@11.606146,76.134439,17z",
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "Kerala Tourism lists the temple as dedicated to Lord Shiva, with idols of Ganesha, Ayyappa and Naga (serpent god). The name Thrikkaipatta is explained as 'bands on three hands' in Malayalam. No official timings or history are published.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3864,14 +3864,14 @@ const siteData = {
       id: 11,
       name: "Trishileri temple ",
       description:
-        "Historic Trishileri temple  with beautiful architecture and cultural significance.",
+        "Ancient Shiva temple about 8 km north-west of Mananthavady, ritually linked to the Thirunelli temple.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-workation-trishilerry-temple-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-trishilerry-temple-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["05:30-12:30", "17:00-19:30"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: ["06:00-12:30","17:00-19:30"],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3883,10 +3883,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/V228+JJ9+Thrissilery+Shiva+Temple%2C+Thrissilery+Rd%2C+Thrishilery%2C+Kerala+670646/@11.8514777,76.0165694,17z",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "Kerala Tourism calls it one of the oldest temples in Kerala, with Lord Shiva as presiding deity. Ancestral rites at Thirunelli are traditionally completed with an offering here, and a small Jala Durga shrine stands in a water body fed from the Papanasini at Thirunelli. The annual festival falls in Meenam (March-April).",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3906,15 +3906,15 @@ const siteData = {
       id: 12,
       name: "Sita Lav Kush Temple ponkuzhy",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Ramayana-linked temple beside the Ponkuzhi river on the Sulthan Bathery-Mysore road, about 4 km from Muthanga.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-lava-kush-ponkuzhi-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-seetha-lava-kusha-temple-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-lav-kush-temple-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3926,10 +3926,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Ponkuzhi+temple+and+Seeta+Rama+temple/@11.6887172,76.3922179,17z",
       rating: "4.8",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "Kerala Tourism lists the Ponkuzhi Sree Rama temple, where Rama, Sita, Lakshmana and Hanuman are worshipped, and a Seetha Devi-Hanuman temple at the same spot. Both are tiled-roof Kerala-style shrines by the Ponkuzhi river. Local myth says the temple pond was formed by Sita's tears.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3949,16 +3949,16 @@ const siteData = {
       id: 13,
       name: "Varampatta mosque",
       description:
-        "Historic Varampatta mosque with beautiful architecture and cultural significance.",
+        "Mosque at Varambetta in Padinjarathara panchayat, described by Kerala Tourism as one of Wayanad's oldest, about 300 years old.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-korome-mosque-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-varambetta-mosque-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-workation-korome-mosque-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-wayanad-varambetta-mosque.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: [],
+      Contact: "",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -3970,10 +3970,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Varambetta+Makham+%E0%B4%B5%E0%B4%BE%E0%B4%B0%E0%B4%BE%E0%B4%AE%E0%B5%8D%E0%B4%AA%E0%B4%B1%E0%B5%8D%E0%B4%B1+%E0%B4%AE%E0%B4%96%E0%B4%BE%E0%B4%82/@11.6898764,75.9589507,17z",
       rating: "4.8",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "Kerala Tourism lists Varambetta as one of the oldest mosques in the district, about 300 years old by traditional estimate, around 15 km from Kalpetta. A Kerala Tourism festival brochure places it in Padinjarathara panchayat and lists an annual festival (nercha) in late March.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -3992,16 +3992,16 @@ const siteData = {
       id: 14,
       name: "Valliyoorkavu temple",
       description:
-        "Temple associated with the epic Ramayana, located in a serene setting.",
+        "Bhagavathy temple near Mananthavady where Durga is worshipped as Vana Durga, Bhadrakali and Jala Durga.",
       image: [
         "https://www.bwstays.com/assets/img/pilgrimage/bw-valliyurkavu-bhagavathy-temple-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-resort-valliyurkavu-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-valliyoorkavu-homestay-wayanad.webp",
         "https://www.bwstays.com/assets/img/pilgrimage/bw-valliyoorkavu-bhagavathy-temple-wayanad.webp",
       ],
-      holidays: "Sun",
-      timing: ["09:00-17:00"],
-      Contact: "+91-000 000 0000",
+      holidays: "NA",
+      timing: ["06:00-12:30","17:30-20:00"],
+      Contact: "+91 493 524 0084",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -4013,10 +4013,10 @@ const siteData = {
       map: "https://www.google.com/maps/place/Valliyoorkavu%2C+Mananthavady%2C+Kerala+670645/@11.8039844,76.0290366,17z",
       rating: "4.5",
       hrs: "2",
-      fee: "0",
+      fee: "",
       aliases: [],
       content:
-        "natural beauty but also for its cultural and religious diversity. Pilgrimage sites of different faiths often attract visitors from all communities.",
+        "The temple dates to the 14th century and is known for a 14-day festival in Meenam (March-April) that starts when the sword of Valliyooramma is brought from Pandikkadavu; tribal chieftains hoist the flag on the seventh day. It is about 4 km from Mananthavady bus stand.",
       amenities: [
         "Tribal Religion",
         "Nature Worship",
@@ -4040,7 +4040,7 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/health/bw-keluvaidyar-kattikulam-tribal-healer-wayanad.webp",
       ],
-      holidays: "",
+      holidays: "NA",
       timing: [],
       Contact: "",
       seasontovisit: [],
@@ -4068,7 +4068,7 @@ const siteData = {
       image: [
         "https://www.bwstays.com/assets/img/health/bw-vellanvaidyar-thirunelli-tribal-healer-wayanad.webp",
       ],
-      holidays: "",
+      holidays: "NA",
       timing: [],
       Contact: "",
       seasontovisit: [],

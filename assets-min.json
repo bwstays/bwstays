@@ -1,5 +1,5 @@
 {
-  "css/bootstrap-lite.css": "09c3db6846af",
+  "css/bootstrap-lite.css": "e59bbe94cf01",
   "css/details-page.css": "145d11230059",
   "css/maps.css": "c3a77def87bd",
   "css/new-page.css": "d8af789de46b",
@@ -10,7 +10,7 @@
   "data/nearbylocationsdata.js": "d6d18b88e4fb",
   "data/pendingdata.js": "ae2cc6e90baa",
   "data/rates.js": "220cdeb10b53",
-  "data/sitedata.js": "094b36969df3",
+  "data/sitedata.js": "628d2a79cbe5",
   "js/booking.js": "79bb533c325d",
   "js/chat.js": "25a20fa9a350",
   "js/dynamic-evgas.js": "a6fb24589720",

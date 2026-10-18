@@ -239,8 +239,14 @@ const straightKm = (lat, lng) => {
 const count = (arr, key) => arr.reduce((m, x) => m.set(key(x), (m.get(key(x)) ?? 0) + 1), new Map());
 const descCount = count(attractions, (a) => a.description);
 const pointCount = count(attractions, (a) => (a.coordinates ? `${a.coordinates.latitude},${a.coordinates.longitude}` : ''));
-const reliability = { descriptions_withheld: 0, coordinates_withheld: 0, distances_withheld: 0 };
+const durationCount = count(attractions, (a) => a.typical_visit_duration ?? '');
+const reliability = { descriptions_withheld: 0, coordinates_withheld: 0, distances_withheld: 0, durations_withheld: 0 };
 for (const a of attractions) {
+  // the same visit duration on many unrelated places is a template default, not a fact
+  if (a.typical_visit_duration && durationCount.get(a.typical_visit_duration) > 2) {
+    reliability.durations_withheld++;
+    a.typical_visit_duration = null;
+  }
   if (!a.description || descCount.get(a.description) > 1) {
     if (a.description) reliability.descriptions_withheld++;
     a.description = null;

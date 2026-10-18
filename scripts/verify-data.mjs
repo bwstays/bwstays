@@ -109,7 +109,7 @@ const minutes = (s) => {
 const sameList = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
 const norm = (s) => String(s ?? '').trim().toLowerCase();
 const noHoliday = (s) => ['', 'na', 'n/a', 'none', 'all day', 'nil'].includes(norm(s));
-const numbers = (s) => [...new Set(String(s ?? '').replace(/,/g, '').match(/\d+(?:\.\d+)?/g) ?? [])].map(Number).sort((a, b) => a - b);
+const numbers = (s) => /^\s*(no (entry )?fee|free)/i.test(String(s ?? '')) ? [0] : [...new Set(String(s ?? '').replace(/,/g, '').match(/\d+(?:\.\d+)?/g) ?? [])].map(Number).sort((a, b) => a - b);
 const lineText = (html, re) => {
   const m = html.match(re);
   return m ? m[1].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim() : null;
