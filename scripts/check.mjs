@@ -104,6 +104,8 @@ const prerender = spawnSync(process.execPath, [path.join(ROOT, 'scripts/prerende
 if (prerender.status !== 0) problems.push(`prerender is incomplete: ${(prerender.stderr || prerender.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const llms = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-llms.mjs'), '--check'], { encoding: 'utf8' });
 if (llms.status !== 0) problems.push(`llms.txt / llms-full.txt are stale: ${(llms.stderr || llms.stdout).trim().split(String.fromCharCode(10))[0]}`);
+const llmsFull = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-llms-full.mjs'), '--check'], { encoding: 'utf8' });
+if (llmsFull.status !== 0) problems.push(`llms-full.txt page text is stale: ${(llmsFull.stderr || llmsFull.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const llmfeed = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-llmfeed.mjs'), '--check'], { encoding: 'utf8' });
 if (llmfeed.status !== 0) problems.push(`LLMFeed is stale: ${(llmfeed.stderr || llmfeed.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const audit = spawnSync(process.execPath, [path.join(ROOT, 'scripts/audit-site.mjs'), '--strict'], { encoding: 'utf8' });

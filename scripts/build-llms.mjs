@@ -2,7 +2,8 @@
 /**
  * Keeps llms.txt and llms-full.txt in step with the site's data.
  *
- * The two files are written by hand (page summaries, cancellation policy, ...). This script owns
+ * llms.txt is written by hand; the body of llms-full.txt is the page text written by
+ * scripts/build-llms-full.mjs. This script owns
  * ONE block at the end of each, between
  *     <!-- BEGIN GENERATED: site-data -->   and   <!-- END GENERATED: site-data -->
  * and rewrites only that block from the same sources the Static MCP files use, so the text an AI

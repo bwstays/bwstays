@@ -254,7 +254,8 @@ node scripts/probe-coords.mjs 3 6  # read-only OpenStreetMap lookup for places w
 ```
 
 - `check.mjs` verifies that the sitemap lists every indexable page and that the LLMFeed is current. The sitemap `lastmod` ignores site-wide edits (asset versions, plumbing, the same change committed page by page); the monthly workflow checks out full history so dates stay correct.
-- `llms.txt` and `llms-full.txt` are hand-written except for the block between `BEGIN/END GENERATED: site-data`, which `build-llms.mjs` rewrites from the MCP data (booking rules, shopping places, EV and fuel stations). The site chat reads `llms-full.txt`.
+- `llms.txt` is hand-written except for the block between `BEGIN/END GENERATED: site-data`, which `build-llms.mjs` rewrites from the MCP data (booking rules, shopping places, EV and fuel stations); `llms-full.txt` ends with the same kind of block.
+- The rest of `llms-full.txt` is generated: `node scripts/build-llms-full.mjs` (`--check` is part of `check.mjs`) turns every page in `sitemap.txt` (as committed, so after `prerender.mjs`) into Markdown, with the shared contact/about/footer blocks written once. It leaves out redirect pages, the guest review cards and placeholder phone numbers, and keeps the generated block. Re-run it after changing any page text or prerendering. The site chat reads `llms-full.txt`.
 - `data/mcp-review.json` `coordinate_confirmations` lists hills/peaks whose coordinate is far from a road but matches an OpenStreetMap feature; `build-distances.mjs` trusts those.
 - The two survey CSVs are the field checklist for issues #101 and #102. Never copy hours, phone numbers or coordinates from Google Maps into OpenStreetMap (licence).
 
