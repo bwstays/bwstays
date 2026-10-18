@@ -42,7 +42,7 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
      var loclength=Object.keys(locations.names).length;
     for (let i = 0; i < loclength; i++) {
 			var value =locations.names[i+1];
-           if ( distances[i]!=""  &&  distances[i] !== undefined &&  distances[i ] <= maxDistance && i != locationId) {
+           if ( distances[i]!=""  &&  distances[i] !== undefined &&  distances[i ] <= maxDistance && (i + 1) != locationId) {
 			if( distances[i]!="0")
 			{
 					var thisId=findPlaceById(i+1);
@@ -95,6 +95,10 @@ function renderNearbyPlaces() {
 	nearbyCardsContainer.innerHTML = cardHTMLArray.join('');
 }
 var iconURLPrefix = 'https://www.bwstays.com/';
+// true when a data field holds a real value (empty, "NA" and missing values are not shown on cards)
+function bwNearbyHas(v) {
+    return v !== undefined && v !== null && String(v).trim() !== '' && !/^(na|n\/a)$/i.test(String(v).trim());
+}
 function createPlaceCard(place) {
     const imageUrl = place.image || iconURLPrefix+'assets/img/villa1/demo-image-02.webp';
     const knowmoreUrl = place.knowmore || '#';
@@ -113,12 +117,12 @@ function createPlaceCard(place) {
                                     <i class="fas fa-map-marker-alt" style="color: var(--bw-teal);"></i>
                                 </a>
                             </div>
-                            <div class="text-white mb-1" style="font-size: 0.85rem;">Time: ${place.timing}</div>
-                            <div class="mb-1">
+                            ${bwNearbyHas(place.timing) ? `<div class="text-white mb-1" style="font-size: 0.85rem;">Time: ${place.timing}</div>` : ''}
+                            ${bwNearbyHas(place.rating) ? `<div class="mb-1">
                                 <span class="text-white" style="font-size: 0.85rem;">
                                     <i class="fas fa-star" style="color: var(--bw-teal);"></i> Rating: <span class="text-warning">${place.rating}</span>
                                 </span>
-                            </div>
+                            </div>` : ''}
                             <small class="distance-text" style="color: #a8a8a8;">
                                 <i class="fas fa-road me-1" style="color: var(--bw-teal);"></i> Distance:  <span class="text-warning">${place.distance} km </span>
                             </small>

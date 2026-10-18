@@ -61,6 +61,8 @@
     price: ['rate', 'night'], cost: ['rate', 'night'], cheap: ['rate'], tariff: ['rate'],
     pet: ['pets'], dog: ['pets'], zipline: ['adventure', 'sporting'], rafting: ['adventure', 'sporting'],
     museum: ['museums'], lake: ['dam'], dam: ['lake'], cycle: ['cycling'], bike: ['cycling'],
+    healer: ['health', 'wellness', 'tribal'], vaidyan: ['health', 'wellness', 'healer'], vaidyar: ['health', 'wellness', 'healer'], vaidya: ['health', 'healer'],
+    herbal: ['health', 'wellness', 'tribal'], ayurveda: ['health', 'wellness'], ayurvedic: ['health', 'wellness'], medicine: ['health', 'tribal'], treatment: ['health', 'wellness'],
     contact: ['phone', 'email'], terms: ['policies', 'privacy'], privacy: ['policies']
   };
   function variants(word) {
