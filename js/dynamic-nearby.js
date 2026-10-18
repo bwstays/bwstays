@@ -40,7 +40,10 @@ function getNearbyPlaces(locationId, maxDistance = maxDistance) {
     const nearbyPlaces = [];
     const distances = locations.distances[locationId];
      var loclength=Object.keys(locations.names).length;
+    // a record that is another record's place under a second name (an alias) is not listed separately
+    var aliases = (locations.meta && locations.meta.aliases_distances_copied_from) || {};
     for (let i = 0; i < loclength; i++) {
+        if (aliases[i + 1]) continue;
 			var value =locations.names[i+1];
            if ( distances[i]!=""  &&  distances[i] !== undefined &&  distances[i ] <= maxDistance && (i + 1) != locationId) {
 			if( distances[i]!="0")
