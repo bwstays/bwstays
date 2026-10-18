@@ -20,11 +20,6 @@
         "distance_km": 3
       },
       {
-        "name": "Turf",
-        "category": "Sporting",
-        "distance_km": 3
-      },
-      {
         "name": "Ananthanatha Swamy Jain",
         "category": "Pilgrimage",
         "distance_km": 4
@@ -35,34 +30,9 @@
         "distance_km": 4
       },
       {
-        "name": "Puliyarmala",
-        "category": "Trekking",
-        "distance_km": 4
-      },
-      {
-        "name": "Kalpetta Food Spots",
-        "category": "Food",
-        "distance_km": 5
-      },
-      {
         "name": "Chundail Tea Estate",
         "category": "Cycling",
         "distance_km": 6
-      },
-      {
-        "name": "LocalCuisine",
-        "category": "Food",
-        "distance_km": 10
-      },
-      {
-        "name": "Restaurants",
-        "category": "Food",
-        "distance_km": 10
-      },
-      {
-        "name": "Spices",
-        "category": "Shopping",
-        "distance_km": 10
       },
       {
         "name": "Ziplines",
@@ -88,9 +58,39 @@
         "name": "Trikaipatta temple",
         "category": "Pilgrimage",
         "distance_km": 12
+      },
+      {
+        "name": "Pookode Lake",
+        "category": "Romantic Spots & Viewpoints",
+        "distance_km": 13
+      },
+      {
+        "name": "Meenangadi Church",
+        "category": "Pilgrimage",
+        "distance_km": 14
+      },
+      {
+        "name": "Our Lady of Lourdes Shrine, Pallikunnu",
+        "category": "Pilgrimage",
+        "distance_km": 14
+      },
+      {
+        "name": "Chain Tree",
+        "category": "Cultural & Historical",
+        "distance_km": 15
+      },
+      {
+        "name": "Kolagapara",
+        "category": "Trekking",
+        "distance_km": 15
+      },
+      {
+        "name": "En ooru",
+        "category": "Tribal",
+        "distance_km": 16
       }
     ],
-    "nearby_places_indexed": 97,
+    "nearby_places_indexed": 74,
     "local_shopping": [
       {
         "name": "Coffee Plantation",
@@ -99,7 +99,7 @@
         "distance_from_stay_km": 7,
         "rating": 4,
         "map_url": "https://www.google.com/maps/place/Coffee+plantation/@11.7415157,76.0020849,17z",
-        "page_url": "https://www.bwstays.com/bw-coffee-plantation-plantation-wayanad.html"
+        "page_url": "https://www.bwstays.com/all-locations-wayanad.html"
       },
       {
         "name": "Rippon Tea estate",
@@ -189,7 +189,7 @@
         "distance_from_stay_km": 22,
         "rating": 4.1,
         "map_url": "https://www.google.com/maps/place/Kanthanpara+Waterfalls/@11.5239348,76.1526896,17z",
-        "page_url": "https://www.bwstays.com/bw-kappikalam-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/all-locations-wayanad.html"
       },
       {
         "name": "Sentinel Rock Waterfall",
@@ -198,7 +198,7 @@
         "distance_from_stay_km": 23,
         "rating": 4,
         "map_url": "https://www.google.com/maps/place/Sentinel+Rock/@11.4951824,76.1608204,17z",
-        "page_url": "https://www.bwstays.com/bw-sentinel-rock-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html"
       },
       {
         "name": "Soochipara Falls",
@@ -225,7 +225,7 @@
         "distance_from_stay_km": 32,
         "rating": 4.3,
         "map_url": "https://www.google.com/maps/place/Chethalayam+Waterfalls/@11.7654958,76.2520349,17z",
-        "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html"
       },
       {
         "name": "Chetalayam falls  ",
@@ -252,7 +252,7 @@
         "distance_from_stay_km": 38,
         "rating": 4.5,
         "map_url": "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
-        "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html"
+        "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
       },
       {
         "name": "Meenmutty Falls",

@@ -13,19 +13,10 @@
             "name": "Rippon Tea estate",
             "category": "Plantations",
             "distance_from_stay_km": 17,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
-          },
-          {
-            "name": "Periya tea plantation",
-            "category": "Plantations",
-            "distance_from_stay_km": 38,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": "No source found for a visitor-facing estate by this name; verify before recommending",
-            "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html"
           }
         ]
       }
@@ -41,7 +32,7 @@
             "name": "Kanthanpara Falls",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": 18,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html"
@@ -50,7 +41,7 @@
             "name": "Soochipara Falls",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": 23,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html"
@@ -59,25 +50,16 @@
             "name": "Meenmutty Falls",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": 25,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html"
           },
           {
-            "name": "Cheeyambam waterfalls",
-            "category": "Waterfalls & Lakes",
-            "distance_from_stay_km": 32,
-            "rating": 4.3,
-            "district": "Wayanad",
-            "note": "Shares coordinates with Chetalayam Falls and is likely the same place",
-            "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html"
-          },
-          {
             "name": "Chetalayam falls  ",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": 34,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html"
@@ -86,7 +68,7 @@
             "name": "Arripara falls",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": null,
-            "rating": 4.3,
+            "rating": null,
             "district": "Kozhikode",
             "note": "Aripara Falls is in Kozhikode district, not Wayanad",
             "page_url": "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html"
@@ -95,7 +77,7 @@
             "name": "Irrupu falls ",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": null,
-            "rating": 4.3,
+            "rating": null,
             "district": "Kodagu (Karnataka)",
             "note": "Iruppu Falls is in Kodagu, Karnataka; the Brahmagiri trek needs a Karnataka Forest permit and guide",
             "page_url": "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html"
@@ -104,7 +86,7 @@
             "name": "Thusharagiri",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": null,
-            "rating": 4.4,
+            "rating": null,
             "district": "Kozhikode",
             "note": "Thusharagiri Falls is in Kozhikode district, not Wayanad",
             "page_url": "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html"
@@ -123,7 +105,7 @@
             "name": "Gandhi Museum",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 4,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
@@ -132,7 +114,7 @@
             "name": "Honey Museum",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 12,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
@@ -141,10 +123,19 @@
             "name": "Tea Museum",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 12,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html"
+          },
+          {
+            "name": "Wayanad Heritage Museum",
+            "category": "Museums & Crafts",
+            "distance_from_stay_km": null,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-folklore-museum-wayanad.html"
           }
         ]
       }
@@ -160,7 +151,7 @@
             "name": "Mailadippara",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 3,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html"
@@ -169,7 +160,7 @@
             "name": "Pookode Lake",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 13,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html"
@@ -178,7 +169,7 @@
             "name": "Karapuzha Dam",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 16,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
@@ -187,7 +178,7 @@
             "name": "Kurumbalakotta",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 18,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html"
@@ -196,7 +187,7 @@
             "name": "Bamboo Forest Valentine's Park",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 21,
-            "rating": 3.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html"
@@ -205,7 +196,7 @@
             "name": "Banasura Sagar Dam",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 21,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html"
@@ -214,7 +205,7 @@
             "name": "Karlad Lake",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 21,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html"
@@ -223,34 +214,16 @@
             "name": "Neelarchalu",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 23,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html"
           },
           {
-            "name": "Attamala View Point",
-            "category": "Romantic Spots & Viewpoints",
-            "distance_from_stay_km": 25,
-            "rating": 4.6,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html"
-          },
-          {
-            "name": "Sunrise valley",
-            "category": "Romantic Spots & Viewpoints",
-            "distance_from_stay_km": 25,
-            "rating": 4.4,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html"
-          },
-          {
             "name": "900 Kandi",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 26,
-            "rating": 3.9,
+            "rating": null,
             "district": "Wayanad",
             "note": "Stated coordinates are about 7.5 km from the real location",
             "page_url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html"
@@ -259,7 +232,7 @@
             "name": "Phantom rock",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 26,
-            "rating": 3.9,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html"
@@ -268,7 +241,7 @@
             "name": "Banasura Sagar Hills",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 29,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html"
@@ -277,7 +250,7 @@
             "name": "Neelimala view point",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 33,
-            "rating": 3.9,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html"
@@ -286,19 +259,10 @@
             "name": "Munneswaran Kunnu",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 42,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html"
-          },
-          {
-            "name": "Muneeswaran Kunnu View point",
-            "category": "Romantic Spots & Viewpoints",
-            "distance_from_stay_km": null,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": "The real place is near Thalappuzha, more than 40 km away; stated coordinates are in Kalpetta",
-            "page_url": null
           }
         ]
       }
@@ -314,7 +278,7 @@
             "name": "Chain Tree",
             "category": "Cultural & Historical",
             "distance_from_stay_km": 15,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html"
@@ -323,7 +287,7 @@
             "name": "Mananthavady Pazhassi Tomb",
             "category": "Cultural & Historical",
             "distance_from_stay_km": 30,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html"
@@ -332,7 +296,7 @@
             "name": "Sultan's Bathery Valmiki Ashram",
             "category": "Cultural & Historical",
             "distance_from_stay_km": 32,
-            "rating": 4.8,
+            "rating": null,
             "district": "Wayanad",
             "note": "Located in Pulpally rather than Sultan Bathery",
             "page_url": "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html"
@@ -348,19 +312,10 @@
         "label": "Trekking",
         "results": [
           {
-            "name": "Puliyarmala",
-            "category": "Trekking",
-            "distance_from_stay_km": 4,
-            "rating": 4.2,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html"
-          },
-          {
             "name": "Kolagapara",
             "category": "Trekking",
             "distance_from_stay_km": 15,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
@@ -369,7 +324,7 @@
             "name": "Lakkidi Ghats View Point",
             "category": "Trekking",
             "distance_from_stay_km": 16,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
@@ -378,7 +333,7 @@
             "name": "Chembra Peak",
             "category": "Trekking",
             "distance_from_stay_km": 17,
-            "rating": 4.6,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
@@ -387,7 +342,7 @@
             "name": "Cheengeri Hill",
             "category": "Trekking",
             "distance_from_stay_km": 20,
-            "rating": 4.6,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html"
@@ -396,7 +351,7 @@
             "name": "Edakkal Caves",
             "category": "Trekking",
             "distance_from_stay_km": 28,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html"
@@ -405,7 +360,7 @@
             "name": "Kuruwa Deep",
             "category": "Trekking",
             "distance_from_stay_km": 40,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html"
@@ -414,7 +369,7 @@
             "name": "Brahmagiri",
             "category": "Trekking",
             "distance_from_stay_km": 50,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html"
@@ -430,10 +385,10 @@
         "label": "Wildlife",
         "results": [
           {
-            "name": "Begur wildlife sanctuary",
+            "name": "Begur Forest Range",
             "category": "Wildlife",
             "distance_from_stay_km": 37,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html"
@@ -442,7 +397,7 @@
             "name": "Muthanga Wildlife Sanctuary",
             "category": "Wildlife",
             "distance_from_stay_km": 38,
-            "rating": 3.9,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html"
@@ -451,7 +406,7 @@
             "name": "Pakshipathalam",
             "category": "Wildlife",
             "distance_from_stay_km": 42,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-pakshipathalam-wildlife-sanctuary-wayanad.html"
@@ -460,7 +415,7 @@
             "name": "Tholpetty wild life sanctuary",
             "category": "Wildlife",
             "distance_from_stay_km": 54.5,
-            "rating": 4,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html"
@@ -469,7 +424,7 @@
             "name": "Nagarhole wild life sanctuary",
             "category": "Wildlife",
             "distance_from_stay_km": null,
-            "rating": 4.1,
+            "rating": null,
             "district": "Mysuru/Kodagu (Karnataka)",
             "note": "Nagarhole is a national park in Karnataka, not a Wayanad sanctuary",
             "page_url": "https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html"
@@ -488,7 +443,7 @@
             "name": "Ambalavayal",
             "category": "Farm Visits",
             "distance_from_stay_km": 21,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html"
@@ -497,7 +452,7 @@
             "name": "Boys Town",
             "category": "Farm Visits",
             "distance_from_stay_km": 43,
-            "rating": 4,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-boys-town-farm-wayanad.html"
@@ -506,19 +461,10 @@
             "name": "Gurukula Botanical Sanctuary",
             "category": "Farm Visits",
             "distance_from_stay_km": null,
-            "rating": 4.9,
+            "rating": null,
             "district": "Wayanad",
             "note": "North Wayanad; the stated 10 km from Kalpetta is doubtful",
-            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
-          },
-          {
-            "name": "Pepper Farm",
-            "category": "Farm Visits",
-            "distance_from_stay_km": null,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
+            "page_url": "https://www.bwstays.com/bw-gurukula-botanical-sanctuary-wayanad.html"
           }
         ]
       }
@@ -531,19 +477,10 @@
         "label": "Sporting",
         "results": [
           {
-            "name": "Turf",
-            "category": "Sporting",
-            "distance_from_stay_km": 3,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html"
-          },
-          {
             "name": "Ziplines",
             "category": "Sporting",
             "distance_from_stay_km": 10,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ziplines-sporting-wayanad.html"
@@ -552,47 +489,10 @@
             "name": "Bamboo Rafting",
             "category": "Sporting",
             "distance_from_stay_km": 31,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html"
-          }
-        ]
-      }
-    },
-    {
-      "input": {
-        "category": "food"
-      },
-      "output": {
-        "label": "Food",
-        "results": [
-          {
-            "name": "Kalpetta Food Spots",
-            "category": "Food",
-            "distance_from_stay_km": 5,
-            "rating": 4,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/all-fooding-wayanad.html"
-          },
-          {
-            "name": "LocalCuisine",
-            "category": "Food",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
-          },
-          {
-            "name": "Restaurants",
-            "category": "Food",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
           }
         ]
       }
@@ -608,7 +508,7 @@
             "name": "Uravu",
             "category": "Tribal",
             "distance_from_stay_km": 11,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html"
@@ -617,7 +517,7 @@
             "name": "En ooru",
             "category": "Tribal",
             "distance_from_stay_km": 16,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
@@ -636,19 +536,10 @@
             "name": "Chundail Tea Estate",
             "category": "Cycling",
             "distance_from_stay_km": 6,
-            "rating": 4.7,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
-          },
-          {
-            "name": "Rippon",
-            "category": "Cycling",
-            "distance_from_stay_km": 18,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
           }
         ]
       }
@@ -660,24 +551,6 @@
       "output": {
         "label": "Shopping",
         "results": [
-          {
-            "name": "Spices",
-            "category": "Shopping",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": null
-          },
-          {
-            "name": "Ali's wayanadan natural honey",
-            "category": "Shopping",
-            "distance_from_stay_km": 25,
-            "rating": 5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html"
-          },
           {
             "name": "Government & Cooperative Trust Places",
             "category": "Shopping",
@@ -737,7 +610,7 @@
             "name": "Ananthanatha Swamy Jain",
             "category": "Pilgrimage",
             "distance_from_stay_km": 4,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
@@ -746,7 +619,7 @@
             "name": "Trikaipatta temple",
             "category": "Pilgrimage",
             "distance_from_stay_km": 12,
-            "rating": 3.9,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html"
@@ -755,7 +628,7 @@
             "name": "Meenangadi Church",
             "category": "Pilgrimage",
             "distance_from_stay_km": 14,
-            "rating": 4.4,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html"
@@ -764,7 +637,7 @@
             "name": "Our Lady of Lourdes Shrine, Pallikunnu",
             "category": "Pilgrimage",
             "distance_from_stay_km": 14,
-            "rating": 4.7,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
@@ -773,7 +646,7 @@
             "name": "Koottamundu Glass Temple Wayanad",
             "category": "Pilgrimage",
             "distance_from_stay_km": 20,
-            "rating": 4,
+            "rating": null,
             "district": "Wayanad",
             "note": "Stated coordinates conflict with the ~20 km road distance in Kerala Tourism",
             "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html"
@@ -782,7 +655,7 @@
             "name": "Varampatta mosque",
             "category": "Pilgrimage",
             "distance_from_stay_km": 21,
-            "rating": 4.8,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
@@ -791,7 +664,7 @@
             "name": "Valliyoorkavu temple",
             "category": "Pilgrimage",
             "distance_from_stay_km": 27,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-valliyoorkavu-temple-pilgrimage-wayanad.html"
@@ -800,7 +673,7 @@
             "name": "Pulpally Sitadevi temple",
             "category": "Pilgrimage",
             "distance_from_stay_km": 30,
-            "rating": 4.7,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html"
@@ -809,7 +682,7 @@
             "name": "Trishileri temple ",
             "category": "Pilgrimage",
             "distance_from_stay_km": 36,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-trishileri-temple-pilgrimage-wayanad.html"
@@ -818,7 +691,7 @@
             "name": "Sita Lav Kush Temple ponkuzhy",
             "category": "Pilgrimage",
             "distance_from_stay_km": 41,
-            "rating": 4.8,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html"
@@ -827,7 +700,7 @@
             "name": "Tirunelli",
             "category": "Pilgrimage",
             "distance_from_stay_km": 48,
-            "rating": 4.7,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
@@ -836,7 +709,7 @@
             "name": "Papanasini River",
             "category": "Pilgrimage",
             "distance_from_stay_km": 49,
-            "rating": 4.7,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html"
@@ -882,25 +755,16 @@
             "name": "Mailadippara",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 3,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html"
           },
           {
-            "name": "Turf",
-            "category": "Sporting",
-            "distance_from_stay_km": 3,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html"
-          },
-          {
             "name": "Ananthanatha Swamy Jain",
             "category": "Pilgrimage",
             "distance_from_stay_km": 4,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
@@ -909,70 +773,25 @@
             "name": "Gandhi Museum",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 4,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
           },
           {
-            "name": "Puliyarmala",
-            "category": "Trekking",
-            "distance_from_stay_km": 4,
-            "rating": 4.2,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html"
-          },
-          {
-            "name": "Kalpetta Food Spots",
-            "category": "Food",
-            "distance_from_stay_km": 5,
-            "rating": 4,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/all-fooding-wayanad.html"
-          },
-          {
             "name": "Chundail Tea Estate",
             "category": "Cycling",
             "distance_from_stay_km": 6,
-            "rating": 4.7,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
           },
           {
-            "name": "LocalCuisine",
-            "category": "Food",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
-          },
-          {
-            "name": "Restaurants",
-            "category": "Food",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
-          },
-          {
-            "name": "Spices",
-            "category": "Shopping",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": null
-          },
-          {
             "name": "Ziplines",
             "category": "Sporting",
             "distance_from_stay_km": 10,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ziplines-sporting-wayanad.html"
@@ -990,25 +809,16 @@
             "name": "Mailadippara",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 3,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html"
           },
           {
-            "name": "Turf",
-            "category": "Sporting",
-            "distance_from_stay_km": 3,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html"
-          },
-          {
             "name": "Ananthanatha Swamy Jain",
             "category": "Pilgrimage",
             "distance_from_stay_km": 4,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html"
@@ -1017,70 +827,25 @@
             "name": "Gandhi Museum",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 4,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
           },
           {
-            "name": "Puliyarmala",
-            "category": "Trekking",
-            "distance_from_stay_km": 4,
-            "rating": 4.2,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html"
-          },
-          {
-            "name": "Kalpetta Food Spots",
-            "category": "Food",
-            "distance_from_stay_km": 5,
-            "rating": 4,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/all-fooding-wayanad.html"
-          },
-          {
             "name": "Chundail Tea Estate",
             "category": "Cycling",
             "distance_from_stay_km": 6,
-            "rating": 4.7,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
           },
           {
-            "name": "LocalCuisine",
-            "category": "Food",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
-          },
-          {
-            "name": "Restaurants",
-            "category": "Food",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
-          },
-          {
-            "name": "Spices",
-            "category": "Shopping",
-            "distance_from_stay_km": 10,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": null
-          },
-          {
             "name": "Ziplines",
             "category": "Sporting",
             "distance_from_stay_km": 10,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ziplines-sporting-wayanad.html"
@@ -1089,7 +854,7 @@
             "name": "Uravu",
             "category": "Tribal",
             "distance_from_stay_km": 11,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html"
@@ -1098,7 +863,7 @@
             "name": "Honey Museum",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 12,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
@@ -1107,7 +872,7 @@
             "name": "Tea Museum",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 12,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html"
@@ -1116,7 +881,7 @@
             "name": "Trikaipatta temple",
             "category": "Pilgrimage",
             "distance_from_stay_km": 12,
-            "rating": 3.9,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html"
@@ -1125,7 +890,7 @@
             "name": "Pookode Lake",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 13,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html"
@@ -1134,7 +899,7 @@
             "name": "Meenangadi Church",
             "category": "Pilgrimage",
             "distance_from_stay_km": 14,
-            "rating": 4.4,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html"
@@ -1143,7 +908,7 @@
             "name": "Our Lady of Lourdes Shrine, Pallikunnu",
             "category": "Pilgrimage",
             "distance_from_stay_km": 14,
-            "rating": 4.7,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
@@ -1152,7 +917,7 @@
             "name": "Chain Tree",
             "category": "Cultural & Historical",
             "distance_from_stay_km": 15,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html"
@@ -1161,7 +926,7 @@
             "name": "Kolagapara",
             "category": "Trekking",
             "distance_from_stay_km": 15,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html"
@@ -1170,7 +935,7 @@
             "name": "En ooru",
             "category": "Tribal",
             "distance_from_stay_km": 16,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html"
@@ -1179,7 +944,7 @@
             "name": "Karapuzha Dam",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 16,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html"
@@ -1188,7 +953,7 @@
             "name": "Lakkidi Ghats View Point",
             "category": "Trekking",
             "distance_from_stay_km": 16,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html"
@@ -1197,7 +962,7 @@
             "name": "Chembra Peak",
             "category": "Trekking",
             "distance_from_stay_km": 17,
-            "rating": 4.6,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
@@ -1206,7 +971,7 @@
             "name": "Rippon Tea estate",
             "category": "Plantations",
             "distance_from_stay_km": 17,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
@@ -1215,7 +980,7 @@
             "name": "Kanthanpara Falls",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": 18,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html"
@@ -1224,25 +989,16 @@
             "name": "Kurumbalakotta",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 18,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html"
           },
           {
-            "name": "Rippon",
-            "category": "Cycling",
-            "distance_from_stay_km": 18,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
-          },
-          {
             "name": "Cheengeri Hill",
             "category": "Trekking",
             "distance_from_stay_km": 20,
-            "rating": 4.6,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html"
@@ -1251,7 +1007,7 @@
             "name": "Koottamundu Glass Temple Wayanad",
             "category": "Pilgrimage",
             "distance_from_stay_km": 20,
-            "rating": 4,
+            "rating": null,
             "district": "Wayanad",
             "note": "Stated coordinates conflict with the ~20 km road distance in Kerala Tourism",
             "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html"
@@ -1260,7 +1016,7 @@
             "name": "Ambalavayal",
             "category": "Farm Visits",
             "distance_from_stay_km": 21,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html"
@@ -1269,7 +1025,7 @@
             "name": "Bamboo Forest Valentine's Park",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 21,
-            "rating": 3.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html"
@@ -1278,7 +1034,7 @@
             "name": "Banasura Sagar Dam",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 21,
-            "rating": 4.3,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html"
@@ -1287,7 +1043,7 @@
             "name": "Karlad Lake",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 21,
-            "rating": 4.1,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html"
@@ -1296,7 +1052,7 @@
             "name": "Varampatta mosque",
             "category": "Pilgrimage",
             "distance_from_stay_km": 21,
-            "rating": 4.8,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
@@ -1305,7 +1061,7 @@
             "name": "Neelarchalu",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 23,
-            "rating": 4.5,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html"
@@ -1314,46 +1070,19 @@
             "name": "Soochipara Falls",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": 23,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html"
           },
           {
-            "name": "Ali's wayanadan natural honey",
-            "category": "Shopping",
-            "distance_from_stay_km": 25,
-            "rating": 5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html"
-          },
-          {
-            "name": "Attamala View Point",
-            "category": "Romantic Spots & Viewpoints",
-            "distance_from_stay_km": 25,
-            "rating": 4.6,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html"
-          },
-          {
             "name": "Meenmutty Falls",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": 25,
-            "rating": 4.2,
+            "rating": null,
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html"
-          },
-          {
-            "name": "Sunrise valley",
-            "category": "Romantic Spots & Viewpoints",
-            "distance_from_stay_km": 25,
-            "rating": 4.4,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html"
           }
         ]
       }
@@ -1363,143 +1092,7 @@
         "top_rated": true
       },
       "output": {
-        "results": [
-          {
-            "name": "Ali's wayanadan natural honey",
-            "category": "Shopping",
-            "distance_from_stay_km": 25,
-            "rating": 5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html"
-          },
-          {
-            "name": "Gurukula Botanical Sanctuary",
-            "category": "Farm Visits",
-            "distance_from_stay_km": null,
-            "rating": 4.9,
-            "district": "Wayanad",
-            "note": "North Wayanad; the stated 10 km from Kalpetta is doubtful",
-            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
-          },
-          {
-            "name": "Varampatta mosque",
-            "category": "Pilgrimage",
-            "distance_from_stay_km": 21,
-            "rating": 4.8,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
-          },
-          {
-            "name": "Sultan's Bathery Valmiki Ashram",
-            "category": "Cultural & Historical",
-            "distance_from_stay_km": 32,
-            "rating": 4.8,
-            "district": "Wayanad",
-            "note": "Located in Pulpally rather than Sultan Bathery",
-            "page_url": "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html"
-          },
-          {
-            "name": "Sita Lav Kush Temple ponkuzhy",
-            "category": "Pilgrimage",
-            "distance_from_stay_km": 41,
-            "rating": 4.8,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html"
-          },
-          {
-            "name": "Chundail Tea Estate",
-            "category": "Cycling",
-            "distance_from_stay_km": 6,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
-          },
-          {
-            "name": "Our Lady of Lourdes Shrine, Pallikunnu",
-            "category": "Pilgrimage",
-            "distance_from_stay_km": 14,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
-          },
-          {
-            "name": "Rippon",
-            "category": "Cycling",
-            "distance_from_stay_km": 18,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
-          },
-          {
-            "name": "Pulpally Sitadevi temple",
-            "category": "Pilgrimage",
-            "distance_from_stay_km": 30,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html"
-          },
-          {
-            "name": "Tirunelli",
-            "category": "Pilgrimage",
-            "distance_from_stay_km": 48,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
-          },
-          {
-            "name": "Papanasini River",
-            "category": "Pilgrimage",
-            "distance_from_stay_km": 49,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html"
-          },
-          {
-            "name": "Pepper Farm",
-            "category": "Farm Visits",
-            "distance_from_stay_km": null,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html"
-          },
-          {
-            "name": "Chembra Peak",
-            "category": "Trekking",
-            "distance_from_stay_km": 17,
-            "rating": 4.6,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
-          },
-          {
-            "name": "Cheengeri Hill",
-            "category": "Trekking",
-            "distance_from_stay_km": 20,
-            "rating": 4.6,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html"
-          },
-          {
-            "name": "Attamala View Point",
-            "category": "Romantic Spots & Viewpoints",
-            "distance_from_stay_km": 25,
-            "rating": 4.6,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html"
-          }
-        ]
+        "results": []
       }
     }
   ],
@@ -1522,7 +1115,7 @@
       "pilgrimage",
       "health"
     ],
-    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 92 places,  for 42). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
+    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 36). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
   },
   "metadata": {
     "generated": "2026-10-18",
