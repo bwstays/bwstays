@@ -583,11 +583,11 @@ const siteData = {
     {
       id: 52,
       name: "Gandhi Museum",
-      description: "Gandhi Museum.",
+      description: "A memorial museum at Puliyarmala, beside the Ananthanatha Swamy Jain temple, where Gandhi rested in 1934.",
       image: [
         "https://www.bwstays.com/assets/img/museum/bw-stays-kalpetta-gandhi-museum.webp",
       ],
-      holidays: "Sun",
+      holidays: "NA",
       timing: ["09:00-17:00"],
       Contact: "+91-000 000 0000",
       seasontovisit: [
@@ -595,34 +595,19 @@ const siteData = {
         "Monsoon (June-September)",
         "Winter (October-February)",
       ],
-      distance: "12",
+      distance: "4",
       transport: "Public",
       rating: "4.3",
       hrs: "2",
       fee: "0",
       aliases: [],
       latlong: "11.600747990313033, 76.0148553711638",
-      map: "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
+      map: "https://www.google.com/maps/search/?api=1&query=Gandhi+Museum+Puliyarmala+Kalpetta+Wayanad+Kerala",
 
       content:
-        "Stay in a beautifully restored service apartment in the heart of Wayanad. Explore nearby spice markets, traditional shopping, and historic landmarks. Walking distance to Spice market and local eateries serving authentic Kerala dishes.",
-      amenities: [
-        "WiFi",
-        "Villa Architecture",
-        "museums",
-        "Central Location",
-        "Guided Tours",
-      ],
-      tags: [
-        "heritage",
-        "colonial",
-        "kalpetta",
-        "spice markets",
-        "art",
-        "historic",
-        "jain temple",
-        "kerala dishes",
-      ],
+        "The Gandhi Museum is a memorial museum at Puliyarmala, about 4 km from Kalpetta town centre, beside the Ananthanatha Swamy Jain temple. It stands in the former boarding house where Mahatma Gandhi rested during his visit to Wayanad in 1934. Opening hours and entry fee are not published, so please check before you visit.",
+      amenities: ["Memorial museum", "Beside the Ananthanatha Swamy Jain temple"],
+      tags: ["gandhi", "gandhi museum", "museum", "puliyarmala", "kalpetta", "jain temple", "heritage"],
 
       type: "Museums & Crafts",
       knowmore: "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html",
