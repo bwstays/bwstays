@@ -318,3 +318,19 @@ Pages load `css/bootstrap-lite.css` (about 28 KB), not the full `vendor/bootstra
 
 Every place in `data/sitedata.js` has a numeric `id` that must be unique across ALL categories (`check.mjs` fails on a duplicate). Take the next free id (highest id + 1), not a number you assume. The same id must be listed in `locations.names` of `data/nearbylocationsdata.js`; then run `node scripts/build-distances.mjs` (OpenStreetMap routing) to fill its row and column. The matrix exists in three places: `data/nearbylocationsdata.js` (source, with its `.min` copy used by the pages) and the generated `resources/distances.json` and `tools/search/nearby.json` (`generate-mcp.mjs`); there is no spreadsheet copy. A place without a trusted coordinate keeps 0 (unknown) in its row; `locations.meta.places_without_trusted_coordinates` lists them with the reason, and `data/survey-coordinates.csv` is the field checklist. Existing cells are never rewritten by hand.
 
+### Data quality loop (keeping the place data correct and sourced)
+
+The facts about Wayanad places (coordinates, distance from Kalpetta, timing, fee, holiday, identity) are kept honest by a loop that finds problems automatically and fixes them only with evidence and review. Nothing changes `main` by itself.
+
+```
+node scripts/verify-data.mjs                 # offline audit (seconds); also run by check.mjs with --strict (integrity errors fail)
+node scripts/verify-data.mjs --online        # + OSRM routes, OpenStreetMap objects, dead source links
+node scripts/verify-data.mjs --online --out data-quality-report.md
+```
+
+- `data/verification.json` is the provenance registry: per place id the date checked, the OpenStreetMap object, official timing/fee with `source_url` and `confidence` (high/medium = official source, low = third party and never applied to the site). `generate-mcp.mjs` publishes the medium/high facts as `verification` on every attraction in `resources/attractions.json`, so AI assistants can see where a fact comes from and when it was checked.
+- `.github/workflows/verify-data.yml` runs the online audit every Monday and creates or updates ONE issue "Data quality report" (sections ERRORS, TO REVIEW, PENDING, MISSING, STALE). It commits nothing.
+- `/verify-data [focus]` (`.claude/commands/verify-data.md`) is one careful pass: read the report, research the items that can be settled, fix `data/sitedata.js` and the page text, record evidence in `data/verification.json`, rebuild, and open a pull request on a branch `data/verify-YYYY-MM-DD`. To run it repeatedly while a Claude Code session is open: `/loop 1d /verify-data`. Running it unattended in GitHub Actions needs an Anthropic API key (a paid service) and is not enabled.
+- Rules: sources are OpenStreetMap (coordinates) and official pages (DTPC Wayanad, Kerala Tourism, Forest Department, the place's own site); never copy coordinates, hours or phone numbers from Google Maps; no guesses; a conflict between sources is left for the owner; ids are never changed and a new place takes the next free id; existing matrix cells are never edited by hand (`build-distances.mjs` recomputes them); renames, removals and review exclusions are owner decisions.
+- Discoverability by AI assistants is not something a site can force. What helps, and is maintained here: accurate sourced facts, `llms.txt` / `llms-full.txt`, the MCP and LLMFeed files, structured data, sitemaps, and the `verification` provenance. Keep them regenerated and committed.
+

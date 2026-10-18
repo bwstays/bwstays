@@ -146,7 +146,13 @@
         "page_url": "https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/10945867708",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "sporting-90",
@@ -171,7 +177,13 @@
         "page_url": "https://www.bwstays.com/bw-football-turf-sporting-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-2",
@@ -196,7 +208,13 @@
         "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "trucking-23",
@@ -221,7 +239,13 @@
         "page_url": "https://www.bwstays.com/bw-puliyarmala-trucking-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap relation/12716507",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "food-60",
@@ -241,7 +265,13 @@
         "page_url": "https://www.bwstays.com/all-fooding-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "cycling-49",
@@ -262,7 +292,13 @@
         "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/485874633",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "food-66",
@@ -282,7 +318,13 @@
         "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "food-65",
@@ -302,7 +344,13 @@
         "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "shopping-79",
@@ -322,7 +370,13 @@
         "page_url": null,
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "sporting-70",
@@ -344,7 +398,13 @@
         "page_url": "https://www.bwstays.com/bw-ziplines-sporting-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "tribal-59",
@@ -366,7 +426,13 @@
         "page_url": "https://www.bwstays.com/bw-uravu-bamboo-tribal-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "museums-52",
@@ -388,7 +454,13 @@
         "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/10945867708",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "museums-78",
@@ -411,7 +483,13 @@
         "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "museums-26",
@@ -433,7 +511,13 @@
         "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-10",
@@ -458,7 +542,13 @@
         "page_url": "https://www.bwstays.com/bw-trikaipatta-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-44",
@@ -483,7 +573,21 @@
         "page_url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/3842111629",
+          "official_timing": {
+            "value": "09:00-18:00 (boating 09:00-17:00)",
+            "source_url": "https://www.dtpcwayanad.com/destination/pookode-lake-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 40, child INR 30; boats 2-seater 300, 4-seater 450, 7-seat 700",
+            "source_url": "https://www.dtpcwayanad.com/destination/pookode-lake-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "pilgrimage-7",
@@ -508,7 +612,13 @@
         "page_url": "https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/6726433194",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-8",
@@ -533,7 +643,13 @@
         "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/1184388847",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "culthist-25",
@@ -558,7 +674,21 @@
         "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": {
+            "value": "daytime, every day",
+            "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "No entry fee",
+            "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
+            "confidence": "medium"
+          }
+        }
       },
       {
         "id": "trucking-87",
@@ -583,7 +713,21 @@
         "page_url": "https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/3903464482",
+          "official_timing": {
+            "value": "06:00-18:00",
+            "source_url": "https://www.keralatourism.org/destination/kolagappara-wayanad-unexplored/779/",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "0 (no entry fee)",
+            "source_url": "https://www.keralatourism.org/destination/kolagappara-wayanad-unexplored/779/",
+            "confidence": "medium"
+          }
+        }
       },
       {
         "id": "tribal-57",
@@ -608,7 +752,21 @@
         "page_url": "https://www.bwstays.com/bw-en-ooru-tribal-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/1154334820",
+          "official_timing": {
+            "value": "Mon-Fri 09:00-17:00; Sat, Sun, public holidays 09:00-18:00",
+            "source_url": "https://www.dtpcwayanad.com/destination/enooru-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 50; camera INR 150; shuttle jeep INR 40 (up and down); tickets for age above 3; offline booking only",
+            "source_url": "https://www.dtpcwayanad.com/destination/enooru-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "romantic-43",
@@ -633,7 +791,21 @@
         "page_url": "https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/810414624",
+          "official_timing": {
+            "value": "09:00-18:00",
+            "source_url": "https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 30, child (under 15) INR 10; zipline INR 390, VR zone INR 170-199",
+            "source_url": "https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "trucking-20",
@@ -658,7 +830,13 @@
         "page_url": "https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "trucking-18",
@@ -683,7 +861,17 @@
         "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/11160287105",
+          "official_timing": {
+            "value": "entry 07:00-15:00 (DTPC lists end as '12:00 AM', likely a typo); permission from Meppadi Forest Range office",
+            "source_url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": null
+        }
       },
       {
         "id": "plantation-61",
@@ -708,7 +896,13 @@
         "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/7996478577",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "waterfalls-37",
@@ -733,7 +927,21 @@
         "page_url": "https://www.bwstays.com/bw-kanthanpara-waterfall-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/762820946",
+          "official_timing": {
+            "value": "09:00-16:30",
+            "source_url": "https://www.dtpcwayanad.com/destination/kanthanpara-waterfalls-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 40, child INR 30, photo shoot INR 1,000",
+            "source_url": "https://www.dtpcwayanad.com/destination/kanthanpara-waterfalls-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "romantic-51",
@@ -758,7 +966,13 @@
         "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/14241148801",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "cycling-81",
@@ -783,7 +997,13 @@
         "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/5114869818",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "trucking-19",
@@ -808,7 +1028,13 @@
         "page_url": "https://www.bwstays.com/bw-cheengeri-hill-trucking-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/809949597",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-3",
@@ -830,7 +1056,13 @@
         "page_url": "https://www.bwstays.com/bw-koottamundu-glass-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": "Stated coordinates conflict with the ~20 km road distance in Kerala Tourism"
+        "review_note": "Stated coordinates conflict with the ~20 km road distance in Kerala Tourism",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "farms-64",
@@ -853,7 +1085,13 @@
         "page_url": "https://www.bwstays.com/bw-ambalavayal-farm-rars-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap relation/11358512",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-85",
@@ -878,7 +1116,13 @@
         "page_url": "https://www.bwstays.com/bw-bamboo-forest-valentine-park-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-45",
@@ -903,7 +1147,21 @@
         "page_url": "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/9815272512",
+          "official_timing": {
+            "value": "09:00-17:30",
+            "source_url": "https://www.dtpcwayanad.com/destination/banasura-sagar-dam-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 40, child INR 20; speed boat INR 1,000 (5), pontoon INR 2,000, kayak INR 250-450, zipline INR 350",
+            "source_url": "https://www.dtpcwayanad.com/destination/banasura-sagar-dam-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "romantic-39",
@@ -928,7 +1186,17 @@
         "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/2641052916",
+          "official_timing": {
+            "value": "09:00-17:00 (zipline)",
+            "source_url": "https://www.keralatourism.org/adventure-tourism/zip-line/karlad-lake",
+            "confidence": "medium"
+          },
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-13",
@@ -953,7 +1221,13 @@
         "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-83",
@@ -978,7 +1252,13 @@
         "page_url": "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/12518415709",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "waterfalls-35",
@@ -1003,7 +1283,21 @@
         "page_url": "https://www.bwstays.com/bw-soochipara-waterfall-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/7428736620",
+          "official_timing": {
+            "value": "08:00-17:00 (entry capped at 500 visitors)",
+            "source_url": "https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "Adult INR 150, student INR 50, foreigner INR 300",
+            "source_url": "https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "shopping-86",
@@ -1026,7 +1320,13 @@
         "page_url": "https://www.bwstays.com/bw-ali-wayanadan-honey-shopping-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-53",
@@ -1051,7 +1351,13 @@
         "page_url": "https://www.bwstays.com/bw-attamala-view-point-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/8674773179",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "waterfalls-33",
@@ -1076,7 +1382,21 @@
         "page_url": "https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/7436711305",
+          "official_timing": {
+            "value": "10:00-17:00 (DTPC page text 'Entry Time'); a search snippet showed 08:30-16:30",
+            "source_url": "https://www.dtpcwayanad.com/destination/banasura-meenmutty-waterfalls-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "Adult INR 100, student INR 50, foreigner INR 200, still camera INR 53, video INR 301",
+            "source_url": "https://www.dtpcwayanad.com/destination/banasura-meenmutty-waterfalls-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "romantic-54",
@@ -1101,7 +1421,13 @@
         "page_url": "https://www.bwstays.com/bw-sunrise-valley-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-58",
@@ -1123,7 +1449,21 @@
         "page_url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": "Stated coordinates are about 7.5 km from the real location"
+        "review_note": "Stated coordinates are about 7.5 km from the real location",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": {
+            "value": "06:30-18:30 daily",
+            "source_url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 250; child INR 100; rifle 50; adventure swing 100; zip line 350; zip cycling 250; offline booking only. Jeep from Kalladi is extra (third-party about INR 200 per person)",
+            "source_url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "romantic-50",
@@ -1148,7 +1488,13 @@
         "page_url": "https://www.bwstays.com/bw-phanthom-rock-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/5871738165",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-14",
@@ -1173,7 +1519,13 @@
         "page_url": "https://www.bwstays.com/bw-valliyoorkavu-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/257535811",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "trucking-21",
@@ -1196,7 +1548,21 @@
         "page_url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/3922124554",
+          "official_timing": {
+            "value": "08:30-16:00",
+            "source_url": "https://www.dtpcwayanad.com/destination/edakkal-caves-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 50, child INR 30; photo shoot INR 1000",
+            "source_url": "https://www.dtpcwayanad.com/destination/edakkal-caves-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "romantic-47",
@@ -1221,7 +1587,13 @@
         "page_url": "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/7801507874",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "culthist-24",
@@ -1246,7 +1618,21 @@
         "page_url": "https://www.bwstays.com/bw-mananthavady-pazhassi-tomb-heritage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/257532518",
+          "official_timing": {
+            "value": "09:00-17:30 (DTPC); 09:00-17:00 (Kerala Tourism via search)",
+            "source_url": "https://www.dtpcwayanad.com/destination/pazhassi-smarakam-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "Adult INR 30, child INR 20; photo shoot INR 1000 (one travel source gives 20/10)",
+            "source_url": "https://www.dtpcwayanad.com/destination/pazhassi-smarakam-wayanad",
+            "confidence": "medium"
+          }
+        }
       },
       {
         "id": "pilgrimage-9",
@@ -1271,7 +1657,13 @@
         "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/803024071",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "sporting-82",
@@ -1296,7 +1688,17 @@
         "page_url": "https://www.bwstays.com/bw-bamboo-rafting-sporting-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/491307142",
+          "official_timing": {
+            "value": "09:00-16:30",
+            "source_url": "https://www.keralatourism.org/malabar/kuruva-island/205",
+            "confidence": "medium"
+          },
+          "official_fee": null
+        }
       },
       {
         "id": "waterfalls-36",
@@ -1321,7 +1723,13 @@
         "page_url": "https://www.bwstays.com/bw-cheeyambam-waterfall-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": "Shares coordinates with Chetalayam Falls and is likely the same place"
+        "review_note": "Shares coordinates with Chetalayam Falls and is likely the same place",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "culthist-6",
@@ -1343,7 +1751,13 @@
         "page_url": "https://www.bwstays.com/bw-sultan-batthery-valmiki-ashram-heritage-wayanad.html",
         "district": null,
         "locality": "Pulpally",
-        "review_note": "Located in Pulpally rather than Sultan Bathery"
+        "review_note": "Located in Pulpally rather than Sultan Bathery",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-55",
@@ -1368,7 +1782,13 @@
         "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/6341290685",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "waterfalls-42",
@@ -1393,7 +1813,13 @@
         "page_url": "https://www.bwstays.com/bw-chetalayam-waterfall-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "health-97",
@@ -1414,7 +1840,13 @@
         "page_url": "https://www.bwstays.com/bw-keluvaidyar-kattikulam-health-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/12498728159",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-11",
@@ -1439,7 +1871,13 @@
         "page_url": "https://www.bwstays.com/bw-trishileri-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/258498245",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "wildlife-32",
@@ -1464,7 +1902,13 @@
         "page_url": "https://www.bwstays.com/bw-begur-wildlife-sanctuary-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/7471611262",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "wildlife-28",
@@ -1489,7 +1933,21 @@
         "page_url": "https://www.bwstays.com/bw-muthanga-wildlife-sanctuary-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/5276780907",
+          "official_timing": {
+            "value": "06:00-10:00 and 15:00-18:00 (DTPC); Kerala Tourism jeep safari 07:00-10:00 and 15:00-17:00",
+            "source_url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "Bus: adult INR 350, child/student 175, foreigner 700; jeep INR 2,100 (4 persons); camera 45. Kerala Tourism lists entry INR 110 adult plus jeep",
+            "source_url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
+            "confidence": "medium"
+          }
+        }
       },
       {
         "id": "plantation-80",
@@ -1514,7 +1972,13 @@
         "page_url": "https://www.bwstays.com/bw-periya-tea-estate-plantation-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": "No source found for a visitor-facing estate by this name; verify before recommending"
+        "review_note": "No source found for a visitor-facing estate by this name; verify before recommending",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "trucking-15",
@@ -1539,7 +2003,21 @@
         "page_url": "https://www.bwstays.com/bw-kuruwa-deep-trucking-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/395115911",
+          "official_timing": {
+            "value": "09:00-15:30 entry (activities until 16:30; 488-visitor cap); seasonal monsoon closure reported",
+            "source_url": "https://www.dtpcwayanad.com/destination/kuruva-island-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 220, foreigner INR 440, student INR 100 (rafting INR 100/50 extra)",
+            "source_url": "https://www.dtpcwayanad.com/destination/kuruva-island-wayanad",
+            "confidence": "high"
+          }
+        }
       },
       {
         "id": "pilgrimage-12",
@@ -1564,7 +2042,13 @@
         "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/389644407",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-84",
@@ -1589,7 +2073,13 @@
         "page_url": "https://www.bwstays.com/bw-munneswaran-kunnu-romantic-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/5921135766",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "wildlife-30",
@@ -1614,7 +2104,13 @@
         "page_url": "https://www.bwstays.com/bw-pakshipathalam-wildlife-sanctuary-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "farms-63",
@@ -1637,7 +2133,13 @@
         "page_url": "https://www.bwstays.com/bw-boys-town-farm-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/961552971",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-4",
@@ -1662,7 +2164,17 @@
         "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/142761196",
+          "official_timing": {
+            "value": "05:30-12:00, 17:30-20:00",
+            "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": null
+        }
       },
       {
         "id": "health-96",
@@ -1683,7 +2195,13 @@
         "page_url": "https://www.bwstays.com/bw-vellanvaidyar-thirunelli-health-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/2640251422",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "pilgrimage-5",
@@ -1708,7 +2226,13 @@
         "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/1227957970",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "trucking-17",
@@ -1733,7 +2257,21 @@
         "page_url": "https://www.bwstays.com/bw-brahmagiri-trucking-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/10730971743",
+          "official_timing": {
+            "value": "slots 07:30, 08:00, 08:30, 09:00; entry 09:30",
+            "source_url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "INR 700 + INR 600 guide = INR 1300 per adult; group of 5 INR 3500 incl. guide; foreigners INR 7000 per 5",
+            "source_url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
+            "confidence": "medium"
+          }
+        }
       },
       {
         "id": "wildlife-31",
@@ -1758,7 +2296,21 @@
         "page_url": "https://www.bwstays.com/bw-tholpetty-wildlife-sanctuary-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/11044649105",
+          "official_timing": {
+            "value": "06:00-10:00 and 15:00-18:00 (DTPC); Kerala Tourism 07:00-10:00 and 15:00-17:00",
+            "source_url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "Jeep INR 2,100 (4 persons), 2,410 (5), 2,725 (6); foreigners 4,200/4,500/4,800. Kerala Tourism: entry INR 110 adult. Site says 0",
+            "source_url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
+            "confidence": "medium"
+          }
+        }
       },
       {
         "id": "waterfalls-40",
@@ -1783,7 +2335,13 @@
         "page_url": "https://www.bwstays.com/bw-arripara-waterfall-wayanad.html",
         "district": "Kozhikode",
         "locality": null,
-        "review_note": "Aripara Falls is in Kozhikode district, not Wayanad"
+        "review_note": "Aripara Falls is in Kozhikode district, not Wayanad",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/6342847856",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "shopping-92",
@@ -1801,7 +2359,13 @@
         "page_url": null,
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "farms-88",
@@ -1824,7 +2388,17 @@
         "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
         "district": null,
         "locality": "Alattil, near Mananthavady",
-        "review_note": "North Wayanad; the stated 10 km from Kalpetta is doubtful"
+        "review_note": "North Wayanad; the stated 10 km from Kalpetta is doubtful",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap way/741563818",
+          "official_timing": {
+            "value": "09:00-16:00 (botanical day tours)",
+            "source_url": "https://gbsanctuary.org/daytour/",
+            "confidence": "medium"
+          },
+          "official_fee": null
+        }
       },
       {
         "id": "waterfalls-41",
@@ -1849,7 +2423,13 @@
         "page_url": "https://www.bwstays.com/bw-irrupu-waterfall-wayanad.html",
         "district": "Kodagu (Karnataka)",
         "locality": null,
-        "review_note": "Iruppu Falls is in Kodagu, Karnataka; the Brahmagiri trek needs a Karnataka Forest permit and guide"
+        "review_note": "Iruppu Falls is in Kodagu, Karnataka; the Brahmagiri trek needs a Karnataka Forest permit and guide",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/838536660",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "romantic-75",
@@ -1869,7 +2449,13 @@
         "page_url": null,
         "district": null,
         "locality": null,
-        "review_note": "The real place is near Thalappuzha, more than 40 km away; stated coordinates are in Kalpetta"
+        "review_note": "The real place is near Thalappuzha, more than 40 km away; stated coordinates are in Kalpetta",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "wildlife-29",
@@ -1894,7 +2480,17 @@
         "page_url": "https://www.bwstays.com/bw-nagarhole-wildlife-sanctuary-wayanad.html",
         "district": "Mysuru/Kodagu (Karnataka)",
         "locality": null,
-        "review_note": "Nagarhole is a national park in Karnataka, not a Wayanad sanctuary"
+        "review_note": "Nagarhole is a national park in Karnataka, not a Wayanad sanctuary",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/838536067",
+          "official_timing": {
+            "value": "Safari 06:00-08:00, 08:15-10:15, 14:15-16:15, 16:30-18:30 at Nanachi (Kutta) gate (Karnataka FD revision, 1 Jun 2025)",
+            "source_url": "https://www.outlooktraveller.com/News/nagarahole-tiger-reserve-revises-safari-timings-and-entry-fees",
+            "confidence": "medium"
+          },
+          "official_fee": null
+        }
       },
       {
         "id": "farms-74",
@@ -1917,7 +2513,13 @@
         "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "shopping-93",
@@ -1935,7 +2537,13 @@
         "page_url": null,
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "shopping-91",
@@ -1953,7 +2561,13 @@
         "page_url": null,
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "waterfalls-16",
@@ -1978,7 +2592,13 @@
         "page_url": "https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html",
         "district": "Kozhikode",
         "locality": null,
-        "review_note": "Thusharagiri Falls is in Kozhikode district, not Wayanad"
+        "review_note": "Thusharagiri Falls is in Kozhikode district, not Wayanad",
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": "OpenStreetMap node/3265690824",
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "shopping-95",
@@ -1996,7 +2616,13 @@
         "page_url": null,
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": null,
+          "official_fee": null
+        }
       },
       {
         "id": "shopping-94",
@@ -2014,7 +2640,21 @@
         "page_url": null,
         "district": null,
         "locality": null,
-        "review_note": null
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-18",
+          "coordinate_source": null,
+          "official_timing": {
+            "value": "09:00-17:30",
+            "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "Adults INR 30, children INR 20 (DTPC page; other sites list INR 20 and 10)",
+            "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
+            "confidence": "medium"
+          }
+        }
       }
     ]
   },

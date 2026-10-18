@@ -170,6 +170,7 @@ const DATA = [
   "/data/map-places.json",
   "/data/mcp-review.json",
   "/data/search-index.json",
+  "/data/verification.json",
   "/lang/ar.json",
   "/lang/en.json",
   "/lang/es.json",

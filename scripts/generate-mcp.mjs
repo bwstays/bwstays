@@ -185,6 +185,10 @@ must(attractions.length > 50, 'attraction extraction produced too few rows');
 // Records stay in data/sitedata.js because each attraction page renders by id;
 // the review only changes what is published to AI consumers.
 const reviewEntries = JSON.parse(read('data/mcp-review.json')).entries;
+// provenance of the facts (data/verification.json, kept up to date by scripts/verify-data.mjs): only
+// medium/high confidence official sources are published, with the link and the date they were checked
+const verificationFile = fs.existsSync(path.join(ROOT, 'data/verification.json')) ? JSON.parse(read('data/verification.json')).places : {};
+const officialFact = (f) => (f && f.value && f.source_url && ['high', 'medium'].includes(f.confidence) ? { value: f.value, source_url: f.source_url, confidence: f.confidence } : null);
 const excluded = [];
 const knownIds = new Set(attractions.map((a) => a.id));
 for (const id of Object.keys(reviewEntries)) {
@@ -196,6 +200,15 @@ for (let i = attractions.length - 1; i >= 0; i--) {
   a.district = rv?.district ?? null;
   a.locality = rv?.locality ?? null;
   a.review_note = rv?.note ?? null;
+  const vr = verificationFile[Number(a.id.split('-').pop())];
+  a.verification = vr
+    ? {
+        last_checked: vr.checked ?? null,
+        coordinate_source: vr.coordinate?.osm_ref ? `OpenStreetMap ${vr.coordinate.osm_ref}` : null,
+        official_timing: officialFact(vr.timing),
+        official_fee: officialFact(vr.fee),
+      }
+    : null;
   if (!rv) continue;
   if (rv.exclude) {
     excluded.unshift({ name: a.name.trim(), reason: rv.exclude });

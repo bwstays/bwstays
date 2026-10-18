@@ -133,6 +133,12 @@ if (bsLite.status !== 0) problems.push(`css/bootstrap-lite.css is stale: ${(bsLi
     }
   }
 }
+const dataAudit = spawnSync(process.execPath, [path.join(ROOT, 'scripts/verify-data.mjs'), '--strict'], { encoding: 'utf8' });
+if (dataAudit.status !== 0) {
+  const nl = String.fromCharCode(10);
+  const errs = dataAudit.stdout.split(nl).filter((l) => l.startsWith('- ')).slice(0, 5).join(' | ');
+  problems.push(`scripts/verify-data.mjs found integrity errors: ${errs}`);
+}
 const mcp = spawnSync(process.execPath, [path.join(ROOT, 'scripts/generate-mcp.mjs'), '--check'], { encoding: 'utf8' });
 if (mcp.status !== 0) problems.push(`MCP files are stale: ${(mcp.stderr || mcp.stdout).trim().split('\n').slice(-2).join(' | ')}`);
 
