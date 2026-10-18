@@ -55,11 +55,6 @@
         "distance_km": 10
       },
       {
-        "name": "Rippon",
-        "category": "Cycling",
-        "distance_km": 10
-      },
-      {
         "name": "Spices",
         "category": "Shopping",
         "distance_km": 10
@@ -68,11 +63,6 @@
         "name": "Ziplines",
         "category": "Sporting",
         "distance_km": 10
-      },
-      {
-        "name": "Rippon Tea estate",
-        "category": "Plantations",
-        "distance_km": 11
       },
       {
         "name": "Uravu",
@@ -87,6 +77,16 @@
       {
         "name": "Honey Museum",
         "category": "Museums & Crafts",
+        "distance_km": 12
+      },
+      {
+        "name": "Tea Museum",
+        "category": "Museums & Crafts",
+        "distance_km": 12
+      },
+      {
+        "name": "Trikaipatta temple",
+        "category": "Pilgrimage",
         "distance_km": 12
       }
     ],

@@ -12,7 +12,7 @@
           {
             "name": "Rippon Tea estate",
             "category": "Plantations",
-            "distance_from_stay_km": 11,
+            "distance_from_stay_km": 17,
             "rating": 4.5,
             "district": "Wayanad",
             "note": null,
@@ -220,6 +220,15 @@
             "page_url": "https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html"
           },
           {
+            "name": "Neelarchalu",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 23,
+            "rating": 4.5,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html"
+          },
+          {
             "name": "Attamala View Point",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 25,
@@ -247,15 +256,6 @@
             "page_url": "https://www.bwstays.com/bw-900-kandi-romantic-wayanad.html"
           },
           {
-            "name": "Neelimala view point",
-            "category": "Romantic Spots & Viewpoints",
-            "distance_from_stay_km": 26,
-            "rating": 3.9,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html"
-          },
-          {
             "name": "Phantom rock",
             "category": "Romantic Spots & Viewpoints",
             "distance_from_stay_km": 26,
@@ -272,6 +272,15 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-banasura-sagar-hills-romantic-wayanad.html"
+          },
+          {
+            "name": "Neelimala view point",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 33,
+            "rating": 3.9,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html"
           },
           {
             "name": "Munneswaran Kunnu",
@@ -542,7 +551,7 @@
           {
             "name": "Bamboo Rafting",
             "category": "Sporting",
-            "distance_from_stay_km": null,
+            "distance_from_stay_km": 31,
             "rating": 4.5,
             "district": "Wayanad",
             "note": null,
@@ -635,7 +644,7 @@
           {
             "name": "Rippon",
             "category": "Cycling",
-            "distance_from_stay_km": 10,
+            "distance_from_stay_km": 18,
             "rating": 4.7,
             "district": "Wayanad",
             "note": null,
@@ -815,6 +824,15 @@
             "page_url": "https://www.bwstays.com/bw-sita-lav-kush-temple-pilgrimage-wayanad.html"
           },
           {
+            "name": "Tirunelli",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 48,
+            "rating": 4.7,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
+          },
+          {
             "name": "Papanasini River",
             "category": "Pilgrimage",
             "distance_from_stay_km": 49,
@@ -822,15 +840,6 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html"
-          },
-          {
-            "name": "Tirunelli",
-            "category": "Pilgrimage",
-            "distance_from_stay_km": 64,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
           }
         ]
       }
@@ -942,15 +951,6 @@
             "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
           },
           {
-            "name": "Rippon",
-            "category": "Cycling",
-            "distance_from_stay_km": 10,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
-          },
-          {
             "name": "Spices",
             "category": "Shopping",
             "distance_from_stay_km": 10,
@@ -1050,15 +1050,6 @@
             "page_url": "https://www.bwstays.com/bw-restaurants-food-wayanad.html"
           },
           {
-            "name": "Rippon",
-            "category": "Cycling",
-            "distance_from_stay_km": 10,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
-          },
-          {
             "name": "Spices",
             "category": "Shopping",
             "distance_from_stay_km": 10,
@@ -1075,15 +1066,6 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-ziplines-sporting-wayanad.html"
-          },
-          {
-            "name": "Rippon Tea estate",
-            "category": "Plantations",
-            "distance_from_stay_km": 11,
-            "rating": 4.5,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
           },
           {
             "name": "Uravu",
@@ -1212,6 +1194,15 @@
             "page_url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html"
           },
           {
+            "name": "Rippon Tea estate",
+            "category": "Plantations",
+            "distance_from_stay_km": 17,
+            "rating": 4.5,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
+          },
+          {
             "name": "Kanthanpara Falls",
             "category": "Waterfalls & Lakes",
             "distance_from_stay_km": 18,
@@ -1228,6 +1219,15 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html"
+          },
+          {
+            "name": "Rippon",
+            "category": "Cycling",
+            "distance_from_stay_km": 18,
+            "rating": 4.7,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
           },
           {
             "name": "Cheengeri Hill",
@@ -1291,6 +1291,15 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Neelarchalu",
+            "category": "Romantic Spots & Viewpoints",
+            "distance_from_stay_km": 23,
+            "rating": 4.5,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-neelarchalu-lake-romantic-wayanad.html"
           },
           {
             "name": "Soochipara Falls",
@@ -1401,15 +1410,6 @@
             "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
           },
           {
-            "name": "Rippon",
-            "category": "Cycling",
-            "distance_from_stay_km": 10,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
-          },
-          {
             "name": "Our Lady of Lourdes Shrine, Pallikunnu",
             "category": "Pilgrimage",
             "distance_from_stay_km": 14,
@@ -1417,6 +1417,15 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
+          },
+          {
+            "name": "Rippon",
+            "category": "Cycling",
+            "distance_from_stay_km": 18,
+            "rating": 4.7,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-rippon-teaestate-cycling-wayanad.html"
           },
           {
             "name": "Pulpally Sitadevi temple",
@@ -1428,6 +1437,15 @@
             "page_url": "https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html"
           },
           {
+            "name": "Tirunelli",
+            "category": "Pilgrimage",
+            "distance_from_stay_km": 48,
+            "rating": 4.7,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
+          },
+          {
             "name": "Papanasini River",
             "category": "Pilgrimage",
             "distance_from_stay_km": 49,
@@ -1435,15 +1453,6 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-papanasini-river-temple-pilgrimage-wayanad.html"
-          },
-          {
-            "name": "Tirunelli",
-            "category": "Pilgrimage",
-            "distance_from_stay_km": 64,
-            "rating": 4.7,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-tirunelli-temple-pilgrimage-wayanad.html"
           },
           {
             "name": "Pepper Farm",
@@ -1504,7 +1513,7 @@
       "pilgrimage",
       "health"
     ],
-    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 76 of 92 places, 09:00-17:00 for 48). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
+    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 71 of 92 places, 09:00-17:00 for 44). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
   },
   "metadata": {
     "generated": "2026-10-18",
