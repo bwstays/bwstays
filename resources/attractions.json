@@ -200,10 +200,7 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": {
-          "latitude": 11.641044660114158,
-          "longitude": 76.08687012883617
-        },
+        "coordinates": null,
         "map_url": "https://www.google.com/maps/place/Ananthanatha+Swamy+Jain+Temple/@11.6409028,76.0868594,17z",
         "page_url": "https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html",
         "district": null,
@@ -239,7 +236,7 @@
         "review_note": null,
         "verification": {
           "last_checked": "2026-10-18",
-          "coordinate_source": "OpenStreetMap node/10945867708",
+          "coordinate_source": null,
           "official_timing": null,
           "official_fee": null
         }
@@ -506,7 +503,10 @@
           "Winter (October-February)"
         ],
         "transport": "Public",
-        "coordinates": null,
+        "coordinates": {
+          "latitude": 11.600747990313033,
+          "longitude": 76.0148553711638
+        },
         "map_url": "https://www.google.com/maps/place/Wayanad+Tea+Museum/@11.6005956,76.0148661,17z",
         "page_url": "https://www.bwstays.com/bw-tea-museum-wayanad.html",
         "district": null,
