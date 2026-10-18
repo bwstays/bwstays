@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = 'a81ac63900';
+const VERSION = '6b28369aee';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -40,7 +40,7 @@ const SHELL = [
   "/css/styles.min.css?v=42d28f62",
   "/data/nearbylocationsdata.min.js?v=a154f064",
   "/data/rates.min.js?v=efb37e01",
-  "/data/sitedata.min.js?v=8584dfd2",
+  "/data/sitedata.min.js?v=0781001f",
   "/index.html",
   "/js/booking.min.js?v=d32180d1",
   "/js/chat.min.js?v=71b140e2",
@@ -211,7 +211,6 @@ const IMAGES = [
   "/assets/img/food/bw-kalpetta-food-drinks-collage-all-images.webp",
   "/assets/img/food/bw-stay-nearby-food-restaurant.webp",
   "/assets/img/food/bw-stays-hotel-wayanad-inn.webp",
-  "/assets/img/health/bw-health-wellness-wayanad.webp",
   "/assets/img/health/bw-keluvaidyar-kattikulam-tribal-healer-wayanad.webp",
   "/assets/img/health/bw-vellanvaidyar-thirunelli-tribal-healer-wayanad.webp",
   "/assets/img/heritage/bw-homestay-shanthinatha-jain-temple-wayanad.webp",
