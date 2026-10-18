@@ -29,7 +29,7 @@ const faqData = [
     },
     {
         question: "Where is the villa located?",
-        answer: "In Kalpetta, Wayanad, Kerala (PIN 673121), close to the city center. The Places to visit page lists attractions with their driving distance from Kalpetta (https://www.bwstays.com/all-locations-wayanad.html), and the Places to eat page lists restaurants and cafes (https://www.bwstays.com/all-fooding-wayanad.html)."
+        answer: "In Kalpetta, Wayanad, Kerala (PIN 673121), close to the city centre. The Places to visit page lists attractions with their driving distance from Kalpetta (https://www.bwstays.com/all-locations-wayanad.html), and the Places to eat page lists restaurants and cafes (https://www.bwstays.com/all-fooding-wayanad.html)."
     },
     {
         question: "Which places can I visit near the villa?",
