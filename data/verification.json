@@ -82,7 +82,19 @@
     "value": "05:30-12:00, 17:30-20:00",
     "closed_days": "none (open every day)",
     "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "conflict": true,
+    "note": "Kerala Tourism 05:30-12:30 and 17:30-20:30; DTPC 05:30-12:00 and 17:30-20:00 (listed beside office phone numbers); the site says 05:30-12:30 and 17:00-19:30. The temple office or Malabar Devaswom Board should confirm.",
+    "alternatives": [
+     {
+      "value": "05:30-12:30, 17:30-20:30",
+      "source_url": "https://www.keralatourism.org/thalassery/pazhassi/tirunelli-temple"
+     },
+     {
+      "value": "05:30-12:00, 17:30-20:00",
+      "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad"
+     }
+    ]
    },
    "fee": {
     "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad (no fee stated)",
@@ -267,12 +279,8 @@
    "checked": "2026-10-18",
    "identity": "real",
    "coordinate": {
-    "status": "corrected",
-    "lat": 11.688012,
-    "lon": 76.392086,
-    "osm_ref": "way/389644407",
-    "offset_km": 0.8,
-    "evidence": "Kerala Tourism temple page states coordinates 11.688012, 76.392086 on the Sulthan Bathery-Mysore road (OSM road way/389644407 passes at 11.68792,76.39218). This is the Kerala Tourism coordinate, not an OSM node: no temple is mapped in OSM within 1.5 km. Offset from stated 0.8 km."
+    "status": "unverified",
+    "evidence": "way/389644407 is the Kozhikode-Kollegal highway (OSM highway=trunk), not the temple. Kerala Tourism publishes 11.688012, 76.392086 for the temple but that is not an OpenStreetMap coordinate and is not applied."
    },
    "timing": {
     "source_url": "https://keralatourism.org/temples/wayanad/ponkuzhi-rama",
@@ -286,7 +294,7 @@
     "Site name 'Sita Lav Kush Temple' is wrong: the Ponkuzhi temple is a Rama/Sita/Lakshmana/Hanuman shrine; the Lava-Kusa temple is Pulpally (#9)",
     "Stated point is 0.8 km off the roadside temple"
    ],
-   "recommendation": "update_coordinate",
+   "recommendation": "needs_field_visit",
    "notes": "Coordinate source is not OSM; confirm on ground and add to OSM. OSRM to the Kerala Tourism point 42.1 km vs stated 41."
   },
   "13": {
@@ -420,12 +428,16 @@
     "value": "slots 07:30, 08:00, 08:30, 09:00; entry 09:30",
     "closed_days": "not listed",
     "source_url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "conflict": true,
+    "note": "DTPC lists trek slots, not opening hours; the site shows 09:00-17:00. Owner to confirm."
    },
    "fee": {
     "value": "INR 700 + INR 600 guide = INR 1300 per adult; group of 5 INR 3500 incl. guide; foreigners INR 7000 per 5",
     "source_url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "conflict": true,
+    "note": "DTPC figures are inconsistent (INR 700 + 600 guide = 1,300 per adult, but 3,500 per group of 5). Owner to confirm."
    },
    "anomalies": [
     "Coordinate is the summit, not where a road user arrives (Thirunelli forest camp, not located in OSM)",
@@ -448,15 +460,15 @@
     "evidence": "OSM node 'Chembra Trekking Starting Point' (tourism=attraction) 11.55630,76.08325. Stated point = OSM way/1149213707 'Chembra Peak Heart Lake' (11.54730,76.08278), 1.0 km S of the trailhead. Peak node/5215512955 is at 11.51227,76.08964 (4.0 km S of stated)."
    },
    "timing": {
-    "value": "entry 07:00-15:00 (DTPC lists end as '12:00 AM', likely a typo); permission from Meppadi Forest Range office",
-    "closed_days": "not listed",
+    "value": "07:00-15:00 entry; trekking needs forest-department permission; the second half of the trek is restricted because of wildlife",
+    "closed_days": "none listed (All days)",
     "source_url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad",
-    "confidence": "medium"
+    "confidence": "high"
    },
    "fee": {
-    "value": "INR 50 (Indian), INR 80 (foreigner) per DTPC; other sources quote group charges up to INR 4000 per 5",
+    "value": "Entry INR 50, foreigner INR 80; guided trek INR 4,000 for up to 5 people plus INR 800 per additional person",
     "source_url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad",
-    "confidence": "low"
+    "confidence": "high"
    },
    "anomalies": [
     "Stated coordinate is the lake (trek end point), not the arrival point; it is 783 m from the nearest road in OSRM",
@@ -709,12 +721,16 @@
     "value": "06:00-10:00 and 15:00-18:00 (DTPC); Kerala Tourism jeep safari 07:00-10:00 and 15:00-17:00",
     "closed_days": "none stated; closure mid-March to mid-April reported by secondary sources (low)",
     "source_url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "conflict": true,
+    "note": "DTPC 06:00-10:00 and 15:00-18:00; Kerala Tourism jeep safari 07:00-10:00 and 15:00-17:00. Two official sources disagree."
    },
    "fee": {
     "value": "Bus: adult INR 350, child/student 175, foreigner 700; jeep INR 2,100 (4 persons); camera 45. Kerala Tourism lists entry INR 110 adult plus jeep",
     "source_url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "conflict": true,
+    "note": "DTPC bus INR 350 adult; Kerala Tourism entry INR 110 plus jeep. Two official sources disagree."
    },
    "anomalies": [
     "Site timing 06:00-19:00 and fee 0 are wrong; entry closes when the vehicle quota for the slot is full"
@@ -737,7 +753,9 @@
    "timing": {
     "value": "Safari 06:00-08:00, 08:15-10:15, 14:15-16:15, 16:30-18:30 at Nanachi (Kutta) gate (Karnataka FD revision, 1 Jun 2025)",
     "source_url": "https://www.outlooktraveller.com/News/nagarahole-tiger-reserve-revises-safari-timings-and-entry-fees",
-    "confidence": "medium"
+    "confidence": "low",
+    "conflict": true,
+    "note": "Karnataka Forest Department safari times; Nagarhole is in Karnataka, not Wayanad (owner decision on keeping it)."
    },
    "fee": {
     "value": "Veeranahosahalli gate: bus INR 600 adult / 300 child, jeep INR 1,000 per head (2025 revision). Site says 0",
@@ -794,12 +812,16 @@
     "value": "06:00-10:00 and 15:00-18:00 (DTPC); Kerala Tourism 07:00-10:00 and 15:00-17:00",
     "closed_days": "none stated; closure mid-March to mid-April reported by secondary sources (low)",
     "source_url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "conflict": true,
+    "note": "DTPC 06:00-10:00 and 15:00-18:00; Kerala Tourism 07:00-10:00 and 15:00-17:00. Two official sources disagree."
    },
    "fee": {
     "value": "Jeep INR 2,100 (4 persons), 2,410 (5), 2,725 (6); foreigners 4,200/4,500/4,800. Kerala Tourism: entry INR 110 adult. Site says 0",
     "source_url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "conflict": true,
+    "note": "DTPC jeep INR 2,100 (4 persons); Kerala Tourism entry INR 110 adult. Two official sources disagree."
    },
    "anomalies": [
     "Site km 54.5 vs OSRM 48.0 (6.5 km, 12%); OSRM to the OSM sanctuary node 49.6",
@@ -841,9 +863,10 @@
     "evidence": "OSM 'Banasuramala Meenmutty Waterfalls' 260 m from stated; parking node/3883233313 11.67549,75.93922; road way/384969171. OSRM Kalpetta->parking 26.4 km vs stated 25 and DTPC 25."
    },
    "timing": {
-    "value": "10:00-17:00 (DTPC page text 'Entry Time'); a search snippet showed 08:30-16:30",
+    "value": "10:00-17:00",
     "source_url": "https://www.dtpcwayanad.com/destination/banasura-meenmutty-waterfalls-wayanad",
-    "confidence": "medium"
+    "confidence": "high",
+    "note": "a search snippet that showed 08:30-16:30 is not on the DTPC page"
    },
    "fee": {
     "value": "Adult INR 100, student INR 50, foreigner INR 200, still camera INR 53, video INR 301",
@@ -1243,12 +1266,13 @@
    "checked": "2026-10-18",
    "identity": "ambiguous",
    "coordinate": {
-    "status": "new",
+    "status": "candidate",
     "lat": 11.57785,
     "lon": 76.053,
     "osm_ref": "way/485874633",
     "offset_km": 9.54,
-    "evidence": "Stated 11.60766,76.13508 reverse-geocodes to Pulinkandi Colony (Thrikkaipetta) and is the Uravu/zipline point (ids 59/70), not a tea estate. OSM has 'Chundale Tea Factory' (way/485874633), 'Chundale Estate' (node/8874523317 11.58062,76.04606; way/892560381 farmland) and 'chellode, tea factory' (node/8831440529 11.57025,76.05366). Site photos are named 'chundale-cycling', so the Chundale estate is meant; the 'Ripon Tea Factory' map link in the data is a copy of the previous cycling place."
+    "evidence": "Stated 11.60766,76.13508 reverse-geocodes to Pulinkandi Colony (Thrikkaipetta) and is the Uravu/zipline point (ids 59/70), not a tea estate. OSM has 'Chundale Tea Factory' (way/485874633), 'Chundale Estate' (node/8874523317 11.58062,76.04606; way/892560381 farmland) and 'chellode, tea factory' (node/8831440529 11.57025,76.05366). Site photos are named 'chundale-cycling', so the Chundale estate is meant; the 'Ripon Tea Factory' map link in the data is a copy of the previous cycling place.",
+    "confidence": "low"
    },
    "anomalies": [
     "Coordinate shared with Uravu (59) and Ziplines (70)",
@@ -1324,12 +1348,13 @@
    "checked": "2026-10-18",
    "identity": "real",
    "coordinate": {
-    "status": "new",
+    "status": "candidate",
     "lat": 11.6244633,
     "lon": 76.0922391,
     "osm_ref": "node/10945867708",
     "offset_km": 8.83,
-    "evidence": "The museum is not mapped in OSM. Sources say it is adjacent to the Jain temple (ahimsaiyatrai.com); OSM has one Jain temple in the Kalpetta-Kainatty area (node/10945867708, Kalpetta-Wayanad Bypass Road, Kainatti). Position is the temple, not the museum itself: low-medium confidence. Stated coordinate was the Wayanad Tea Museum point (Vythiri-Tharuvana road, Pozhuthana)."
+    "evidence": "The museum is not mapped in OSM. Sources say it is adjacent to the Jain temple (ahimsaiyatrai.com); OSM has one Jain temple in the Kalpetta-Kainatty area (node/10945867708, Kalpetta-Wayanad Bypass Road, Kainatti). Position is the temple, not the museum itself: low-medium confidence. Stated coordinate was the Wayanad Tea Museum point (Vythiri-Tharuvana road, Pozhuthana).",
+    "confidence": "low"
    },
    "timing": {
     "value": "09:00-17:00 daily (aggregator)",
@@ -1384,12 +1409,12 @@
    "checked": "2026-10-18",
    "identity": "real",
    "coordinate": {
-    "status": "corrected",
+    "status": "verified_stated",
     "lat": 11.5334912,
     "lon": 76.2278983,
     "osm_ref": "node/6341290685",
-    "offset_km": 0.39,
-    "evidence": "OSM tourism=viewpoint 'Neelimala viewpoint' (Calicut-Vythiri-Gudalur Road, Valavil, Chitragiri, Vaduvanchal). Stated point is on a residential road 0.39 km NNE."
+    "offset_km": 0,
+    "evidence": "OSM tourism=viewpoint named Neelimala viewpoint; the site coordinate was moved to it on 2026-10-18 (was 0.39 km away)"
    },
    "timing": {
     "value": "09:00-17:00 (third-party; some say morning slots only)",
@@ -1485,7 +1510,9 @@
    "fee": {
     "value": "Adult INR 250; child INR 100; rifle 50; adventure swing 100; zip line 350; zip cycling 250; offline booking only. Jeep from Kalladi is extra (third-party about INR 200 per person)",
     "source_url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
-    "confidence": "high"
+    "confidence": "low",
+    "conflict": true,
+    "note": "The site also states a 4x4 jeep ride to the top at INR 1,200; the DTPC page mentions jeep rides but gives no price. Owner to confirm or remove."
    },
    "duration_hours": 3,
    "anomalies": [
@@ -2046,12 +2073,12 @@
    "checked": "2026-10-18",
    "identity": "real",
    "coordinate": {
-    "status": "corrected",
-    "lat": 11.8223462,
-    "lon": 75.8490354,
+    "status": "verified_stated",
+    "lat": 11.8227559,
+    "lon": 75.8486584,
     "osm_ref": "way/741563818",
-    "offset_km": 0.47,
-    "evidence": "OSM leisure=nature_reserve \"Gurukula Botanical Sanctuary\", access=private, website gbsanctuary.org; Nominatim address \"kolymannu, Mananthavady\". Stated coord is 0.47 km west of the area centre."
+    "offset_km": 0,
+    "evidence": "OSM leisure=nature_reserve Gurukula Botanical Sanctuary, access=private, website gbsanctuary.org; site coordinate moved to it on 2026-10-18"
    },
    "timing": {
     "value": "09:00-16:00 (botanical day tours)",
@@ -2161,12 +2188,14 @@
    "timing": {
     "value": "09:00-17:30",
     "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "note": "These are the Wayanad Heritage Museum figures; the shop record (id 94) is not identified. Owner decision."
    },
    "fee": {
     "value": "Adults INR 30, children INR 20 (DTPC page; other sites list INR 20 and 10)",
     "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
-    "confidence": "medium"
+    "confidence": "low",
+    "note": "These are the Wayanad Heritage Museum figures; the shop record (id 94) is not identified. Owner decision."
    },
    "anomalies": [
     "Shop within the museum unverified; museum is DTPC-run"

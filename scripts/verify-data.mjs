@@ -147,6 +147,9 @@ for (const [id, e] of Object.entries(regPlaces)) {
     if (off > 0.3) pending.push(`${label(p)}: coordinate evidence ${c.osm_ref} is ${off.toFixed(2)} km from the site's coordinate (${p.latlong}); proposed ${c.lat}, ${c.lon}. ${c.evidence ?? ''}`.trim());
   }
   for (const key of ['timing', 'fee']) {
+    if (e[key]?.conflict) toReview.push(`${label(p)}: ${key} sources disagree (owner decision): ${e[key].note}`);
+  }
+  for (const key of ['timing', 'fee']) {
     const f = e[key];
     if (!f || !f.value || !['high', 'medium'].includes(f.confidence)) continue;
     const mine = key === 'timing' ? minutes(f.value) : numbers(f.value);
