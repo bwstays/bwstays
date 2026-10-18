@@ -67,7 +67,7 @@
       }
     },
     "data_quality": {
-      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 71 of 92 places, 09:00-17:00 for 44). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
+      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 70 of 92 places, 09:00-17:00 for 43). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
       "descriptions_withheld": 34,
       "coordinates_withheld": 5,
       "distances_withheld": 1,
@@ -866,11 +866,15 @@
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/11160287105",
           "official_timing": {
-            "value": "entry 07:00-15:00 (DTPC lists end as '12:00 AM', likely a typo); permission from Meppadi Forest Range office",
+            "value": "07:00-15:00 entry; trekking needs forest-department permission; the second half of the trek is restricted because of wildlife",
             "source_url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad",
-            "confidence": "medium"
+            "confidence": "high"
           },
-          "official_fee": null
+          "official_fee": {
+            "value": "Entry INR 50, foreigner INR 80; guided trek INR 4,000 for up to 5 people plus INR 800 per additional person",
+            "source_url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad",
+            "confidence": "high"
+          }
         }
       },
       {
@@ -1387,9 +1391,9 @@
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/7436711305",
           "official_timing": {
-            "value": "10:00-17:00 (DTPC page text 'Entry Time'); a search snippet showed 08:30-16:30",
+            "value": "10:00-17:00",
             "source_url": "https://www.dtpcwayanad.com/destination/banasura-meenmutty-waterfalls-wayanad",
-            "confidence": "medium"
+            "confidence": "high"
           },
           "official_fee": {
             "value": "Adult INR 100, student INR 50, foreigner INR 200, still camera INR 53, video INR 301",
@@ -1458,11 +1462,7 @@
             "source_url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
             "confidence": "high"
           },
-          "official_fee": {
-            "value": "Adult INR 250; child INR 100; rifle 50; adventure swing 100; zip line 350; zip cycling 250; offline booking only. Jeep from Kalladi is extra (third-party about INR 200 per person)",
-            "source_url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
-            "confidence": "high"
-          }
+          "official_fee": null
         }
       },
       {
@@ -1775,8 +1775,8 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.53679433721778,
-          "longitude": 76.22909644232763
+          "latitude": 11.5334912,
+          "longitude": 76.2278983
         },
         "map_url": "https://www.google.com/maps/place/Neelimala+View+Point/@11.5366314,76.2291179,17z",
         "page_url": "https://www.bwstays.com/bw-neelimala-view-point-romantic-wayanad.html",
@@ -1937,16 +1937,8 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/5276780907",
-          "official_timing": {
-            "value": "06:00-10:00 and 15:00-18:00 (DTPC); Kerala Tourism jeep safari 07:00-10:00 and 15:00-17:00",
-            "source_url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
-            "confidence": "medium"
-          },
-          "official_fee": {
-            "value": "Bus: adult INR 350, child/student 175, foreigner 700; jeep INR 2,100 (4 persons); camera 45. Kerala Tourism lists entry INR 110 adult plus jeep",
-            "source_url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
-            "confidence": "medium"
-          }
+          "official_timing": null,
+          "official_fee": null
         }
       },
       {
@@ -2045,7 +2037,7 @@
         "review_note": null,
         "verification": {
           "last_checked": "2026-10-18",
-          "coordinate_source": "OpenStreetMap way/389644407",
+          "coordinate_source": null,
           "official_timing": null,
           "official_fee": null
         }
@@ -2168,11 +2160,7 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap way/142761196",
-          "official_timing": {
-            "value": "05:30-12:00, 17:30-20:00",
-            "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad",
-            "confidence": "medium"
-          },
+          "official_timing": null,
           "official_fee": null
         }
       },
@@ -2261,16 +2249,8 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/10730971743",
-          "official_timing": {
-            "value": "slots 07:30, 08:00, 08:30, 09:00; entry 09:30",
-            "source_url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
-            "confidence": "medium"
-          },
-          "official_fee": {
-            "value": "INR 700 + INR 600 guide = INR 1300 per adult; group of 5 INR 3500 incl. guide; foreigners INR 7000 per 5",
-            "source_url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
-            "confidence": "medium"
-          }
+          "official_timing": null,
+          "official_fee": null
         }
       },
       {
@@ -2300,16 +2280,8 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/11044649105",
-          "official_timing": {
-            "value": "06:00-10:00 and 15:00-18:00 (DTPC); Kerala Tourism 07:00-10:00 and 15:00-17:00",
-            "source_url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
-            "confidence": "medium"
-          },
-          "official_fee": {
-            "value": "Jeep INR 2,100 (4 persons), 2,410 (5), 2,725 (6); foreigners 4,200/4,500/4,800. Kerala Tourism: entry INR 110 adult. Site says 0",
-            "source_url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
-            "confidence": "medium"
-          }
+          "official_timing": null,
+          "official_fee": null
         }
       },
       {
@@ -2381,8 +2353,8 @@
         ],
         "transport": "Public",
         "coordinates": {
-          "latitude": 11.821216,
-          "longitude": 75.844855
+          "latitude": 11.8227559,
+          "longitude": 75.8486584
         },
         "map_url": "https://www.google.com/maps?q=11.821216,75.844855",
         "page_url": "https://www.bwstays.com/bw-pepper-farm-wayanad.html",
@@ -2484,11 +2456,7 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/838536067",
-          "official_timing": {
-            "value": "Safari 06:00-08:00, 08:15-10:15, 14:15-16:15, 16:30-18:30 at Nanachi (Kutta) gate (Karnataka FD revision, 1 Jun 2025)",
-            "source_url": "https://www.outlooktraveller.com/News/nagarahole-tiger-reserve-revises-safari-timings-and-entry-fees",
-            "confidence": "medium"
-          },
+          "official_timing": null,
           "official_fee": null
         }
       },
@@ -2644,16 +2612,8 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": null,
-          "official_timing": {
-            "value": "09:00-17:30",
-            "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
-            "confidence": "medium"
-          },
-          "official_fee": {
-            "value": "Adults INR 30, children INR 20 (DTPC page; other sites list INR 20 and 10)",
-            "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
-            "confidence": "medium"
-          }
+          "official_timing": null,
+          "official_fee": null
         }
       }
     ]
