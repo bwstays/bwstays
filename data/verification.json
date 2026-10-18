@@ -1,0 +1,2229 @@
+{
+ "_comment": "Provenance of the facts in data/sitedata.js, one entry per place id. Seeded 2026-10-18 from a research pass (OpenStreetMap via Nominatim/Overpass, official DTPC/Kerala Tourism pages); read by scripts/verify-data.mjs. Never copy coordinates, hours or phone numbers from Google Maps. A missing field means not verified. confidence: high/medium = official source; low = third party, not applied to the site.",
+ "generated": "2026-10-18",
+ "places": {
+  "1": {
+   "name": "Santhinatha Temple (no such place found in Wayanad)",
+   "checked": "2026-10-18",
+   "identity": "not_found",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No Santhinatha/Shanthinatha place_of_worship in OSM within the Wayanad bbox (Nominatim + Overpass name search); web search finds only Karnataka temples (Shanthigrama, Dharwad). Stated point is a residential road at Mottakkunnu, Venniyodu (Nominatim reverse way/621407031)."
+   },
+   "anomalies": [
+    "Place could not be identified; page text is generic filler",
+    "stated_km 17 has no checkable target"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Jain temples actually in Wayanad: Ananthanatha (Puliyarmala), Sultan Bathery Jain Temple, Koottamunda glass temple, Mananthavady Adhishwara. Owner to decide whether this record meant one of them."
+  },
+  "2": {
+   "name": "Ananthanatha Swami Jain Temple, Puliyarmala",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.64104466,
+    "lon": 76.08687013,
+    "offset_km": 0,
+    "evidence": "Area-level only: stated point is in Ananthakrishnapuram/Puliyarmala (Kainatti) on the Kalpetta-Mananthavady road, 40 m from Krishna Gowder Hall (way/1105134786). Kerala Tourism: temple on Puliyar Mala, ~5 km from Kalpetta; OSRM 4.7 km agrees. The temple building is not mapped at that spot in OSM. OSM way/890156945 labelled 'Ananthanatha Swami Jain Temple' is at 11.7055,76.1041 (Palakkamoola, 7.4 km away, tagged religion=hindu): likely a different or mislabeled object. Also node/10945867708 'jain temple' at 11.6245,76.0922 (Kainatti bypass road) is unexplained."
+   },
+   "timing": {
+    "value": "05:30-11:30, 18:00-21:00",
+    "source_url": "https://jainmandir.org/Temple/Sri-Ananthanathaswami-Jain-Temple,-Puliyarmala,--Kalpetta,-District-Wayanad-(Kerala)",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.keralatourism.org/wayanad/ananthanatha-swami-temple.php (no fee stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Site timing 09:00-17:00 closed Sun is unsupported; a Jain directory lists morning and evening sessions (seen via search snippet, page itself not fetchable)"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Confirm the temple gate coordinate on the ground and add it to OSM."
+  },
+  "3": {
+   "name": "Koottamunda Glass Temple (Parswanatha Swami Jain Temple), Vellarimala",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Kerala Tourism: Jain temple of Parswanatha Swami on the slopes of Vellarimala, ~20 km from Kalpetta. No OSM feature by that name (Nominatim/Overpass). Stated point is on Calicut-Vythiri-Gudalur Road at Chundale (way/30778559), 3.8 km from Kalpetta, which contradicts the 20 km. OSM node Vellarimala (11.4514,76.1433) is a locality tagged Kozhikode, not a temple position."
+   },
+   "timing": {
+    "source_url": "https://www.keralatourism.org/wayanad/glass-temple-koottamunda.php (no timings)",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.keralatourism.org/wayanad/glass-temple-koottamunda.php (no fee stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Stated coordinate is ~3.8 km from Kalpetta but stated road distance is 20 km (coordinate wrong, already withheld)",
+    "Temple not mapped in OSM"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Site spelling 'Koottamundu'; Kerala Tourism uses 'Koottamunda'."
+  },
+  "4": {
+   "name": "Thirunelli Maha Vishnu Temple",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.9117072,
+    "lon": 75.9958468,
+    "osm_ref": "way/142761196",
+    "offset_km": 0.01,
+    "evidence": "OSM way 'Thirunelli Vishnu Kshetram' (place_of_worship, wikidata Q7785405) centre 11.91171,75.99585; stated point within ~10 m."
+   },
+   "timing": {
+    "value": "05:30-12:00, 17:30-20:00",
+    "closed_days": "none (open every day)",
+    "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad (no fee stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "stated_km 64 vs OSRM 48.3 (diff 15.7 km, 32%): stated figure is wrong; sister record #5 says 49",
+    "Site timing 05:30-12:30/17:00-19:30 and closed Sun not supported: DTPC says open every day; Kerala Tourism evening session to 20:30 per search snippet"
+   ],
+   "recommendation": "keep",
+   "notes": "Only the km figure needs fixing (use about 48-49). DTPC hours may be office hours."
+  },
+  "5": {
+   "name": "Papanasini (Papanashini) stream, Thirunelli",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.911882611,
+    "lon": 75.995849451,
+    "osm_ref": "way/1227957970",
+    "offset_km": 0.2,
+    "evidence": "Stream OSM way 'Papanashini thodu' centre 11.91099,75.99417 (0.2 km W of stated). Stated point = Thirunelli temple (18 m from #4), where the sacred stream and Panchatheertham pond are visited."
+   },
+   "timing": {
+    "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad (none stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Practically the same location as #4 (18 m apart); a feature of the Thirunelli visit, not a separate attraction",
+    "stated_km 49 vs OSRM 47.7 fine"
+   ],
+   "recommendation": "keep",
+   "notes": "DTPC: Papanasini surrounds the temple. No separate timing."
+  },
+  "6": {
+   "name": "Valmiki Ashramam, Pulpally (not Sultan Bathery)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Tradition places Valmiki Ashramam in Pulpally (Ashramamkolli, Amarakuni hamlet, per Outlook Traveller seen via search). No OSM feature found. Stated point is a residential road at Oottykavala, Adikolly (Pulpally panchayat; Amarakuni school way/799322528 is 0.7 km away): region plausible, exact site unverifiable."
+   },
+   "anomalies": [
+    "Name says Sultan Bathery but the place is Pulpally",
+    "Coordinate cannot be confirmed from OSM"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Do not use the stated coordinate for distances until verified on site."
+  },
+  "7": {
+   "name": "Meenangadi church (which church is unclear)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.65965315,
+    "lon": 76.173745,
+    "osm_ref": "node/6726433194",
+    "offset_km": 0.06,
+    "evidence": "Stated point is in a cluster on Kalpetta-Sulthan Bathery Rd: St Peter's Orthodox Valiya Palli (node/6726433194, 55 m), St Peter & St Paul Jacobite Cathedral (node/9019418309, 70 m). St Mary's Soonoro Syriac Orthodox church (node/7057382234, 11.65933,76.16761) is 0.66 km W and is the Marian pilgrim centre listed by Wikipedia (no coordinates taken from Wikipedia)."
+   },
+   "anomalies": [
+    "Record has no church name; Kerala Tourism/DTPC 'Pallikunnu church, Meenangadi' is the Lourdes church (see #8), so #7 could be a mislabel or duplicate of #8"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Owner should name the intended church (likely St Mary's Soonoro pilgrim centre or St Peter's)."
+  },
+  "8": {
+   "name": "Our Lady of Lourdes Church (Pallikkunnu Church), Pallikunnu",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.6851453,
+    "lon": 76.056069,
+    "osm_ref": "way/1184388847",
+    "offset_km": 0.01,
+    "evidence": "OSM 'Lourde Matha Church' (place_of_worship, Kambalakkad-Eachome road, Pallikkunnu) 11.68515,76.05607; stated within ~10 m. OSRM 13.2 km vs Kerala Tourism 14 km."
+   },
+   "timing": {
+    "source_url": "https://www.dtpcwayanad.com/destination/pallikunnu-church-wayanad",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.dtpcwayanad.com/destination/pallikunnu-church-wayanad (none stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Kerala Tourism and DTPC say the church is 'at Meenangadi' (wrong; OSM puts it at Pallikkunnu/Eachome)",
+    "DTPC says 10 km, Kerala Tourism 14 km from Kalpetta"
+   ],
+   "recommendation": "keep",
+   "notes": "DTPC lists 07:00-19:00 under office details only; church hours unverified."
+  },
+  "9": {
+   "name": "Sree Seetha Devi Lava Kusa Temple, Pulpally",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.7930304,
+    "lon": 76.16871716,
+    "osm_ref": "way/803024071",
+    "offset_km": 0.03,
+    "evidence": "OSM way 'seetha devi lava kusha temple' (and way/804586165, same temple) at 11.79280,76.16878; offset about 0.03 km."
+   },
+   "timing": {
+    "value": "05:00-12:30, 17:30-19:30 (DTPC, possibly office hours); OSM volunteer tag Mo-Fr 09:00-12:00,13:30-18:30; Sa 09:00-17:00",
+    "closed_days": "none",
+    "source_url": "https://www.dtpcwayanad.com/destination/seethadevi-lava-kusa-temple-wayanad",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.dtpcwayanad.com/destination/seethadevi-lava-kusa-temple-wayanad (none stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Site closed Sun unsupported; DTPC says all days",
+    "DTPC: 280 m from Pulpally bus stand"
+   ],
+   "recommendation": "keep",
+   "notes": "Hours conflict between DTPC and OSM tag; call the temple."
+  },
+  "10": {
+   "name": "Thrikkaipatta (Thrikkaipetta) Shiva Temple",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.6057586,
+    "lon": 76.133523,
+    "offset_km": 0,
+    "evidence": "Kerala Tourism lists Thrikkaipatta Shiva Temple on the Kalpetta-Bathery route. Stated point is on Muttil-Meppadi Road, Kappamkolly (way/326375913) in Thrikkaipetta village (village office way/858588503 about 0.8 km SW). No OSM temple found within 1.8 km (Overpass). OSRM 12.4 km agrees with 12-13 km web figures."
+   },
+   "timing": {
+    "source_url": "https://www.keralatourism.org/wayanad/thrikaipatta-shiva-temple.php",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.keralatourism.org/wayanad/thrikaipatta-shiva-temple.php (none stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Stated point is on a road, not at a mapped temple"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Area correct, exact gate unverified."
+  },
+  "11": {
+   "name": "Thrissilery Shiva Temple (Trishileri)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.8515577,
+    "lon": 76.0165204,
+    "osm_ref": "way/258498245",
+    "offset_km": 0.02,
+    "evidence": "OSM way 'Thrissilery Shiva Temple' 11.85156,76.01652; stated within ~0.02 km. Kerala Tourism: 19 km from Thirunelli, turn off at Kartikulam."
+   },
+   "timing": {
+    "source_url": "https://www.keralatourism.org/wayanad/thrissilery-shiva-temple.php",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.keralatourism.org/wayanad/thrissilery-shiva-temple.php (none stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Spelling: Thrissilery is the common and OSM form"
+   ],
+   "recommendation": "keep",
+   "notes": "Site timing 05:30-12:30/17:00-19:30 is identical to Thirunelli and unsupported."
+  },
+  "12": {
+   "name": "Ponkuzhi Sree Rama Temple (Ponkuzhi, Muthanga)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "corrected",
+    "lat": 11.688012,
+    "lon": 76.392086,
+    "osm_ref": "way/389644407",
+    "offset_km": 0.8,
+    "evidence": "Kerala Tourism temple page states coordinates 11.688012, 76.392086 on the Sulthan Bathery-Mysore road (OSM road way/389644407 passes at 11.68792,76.39218). This is the Kerala Tourism coordinate, not an OSM node: no temple is mapped in OSM within 1.5 km. Offset from stated 0.8 km."
+   },
+   "timing": {
+    "source_url": "https://keralatourism.org/temples/wayanad/ponkuzhi-rama",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://keralatourism.org/temples/wayanad/ponkuzhi-rama (none stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Site name 'Sita Lav Kush Temple' is wrong: the Ponkuzhi temple is a Rama/Sita/Lakshmana/Hanuman shrine; the Lava-Kusa temple is Pulpally (#9)",
+    "Stated point is 0.8 km off the roadside temple"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Coordinate source is not OSM; confirm on ground and add to OSM. OSRM to the Kerala Tourism point 42.1 km vs stated 41."
+  },
+  "13": {
+   "name": "Varambetta Juma Masjid (Varambetta Mosque)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.69008127,
+    "lon": 75.95892924,
+    "offset_km": 0,
+    "evidence": "Varambetta village confirmed (Varambetta Govt High School way/842415707 at 11.6905,75.9574, 0.16 km W; stated point on the Neripara secondary road). The mosque itself is not mapped in OSM (only Vellamunda Juma Masjid, 3.6 km NE, a different mosque). Area-level only."
+   },
+   "timing": {
+    "source_url": "https://www.keralatourism.org/wayanad/varambetta-mosque-kalpetta.php",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.keralatourism.org/wayanad/varambetta-mosque-kalpetta.php (none stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "stated_km 21 vs OSRM 25.1 (diff 4.1 km, 20%)",
+    "Kerala Tourism site says 15 km, its festival PDF says 22 km from Kalpetta New Bus Stand (Padinjarathara panchayat)",
+    "Spelling: Varambetta (site: Varampatta)"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Annual festival 21-25 March per Kerala Tourism PDF."
+  },
+  "14": {
+   "name": "Valliyoorkavu Bhagavathy Temple, Mananthavady",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.8024969,
+    "lon": 76.0299728,
+    "osm_ref": "way/257535811",
+    "offset_km": 0.03,
+    "evidence": "OSM way 'Thazhekavu' (place_of_worship, Mananthavady-Koyilery-Panamaram Rd) 11.80225,76.02987 within 0.03 km of stated; Kerala Tourism page coordinates 11.804459, 76.030037 (0.25 km N), so OSM name Thazhekavu is probably the lower shrine of the complex (unverified)."
+   },
+   "timing": {
+    "value": "06:00-12:30, 17:30-20:00 (DTPC, possibly office hours)",
+    "closed_days": "none stated",
+    "source_url": "https://www.dtpcwayanad.com/destination/valliyoorkavu-bhagavathy-temple-wayanad",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.dtpcwayanad.com/destination/valliyoorkavu-bhagavathy-temple-wayanad (none stated)",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "DTPC and wayanad.gov.in say 24 km from Kalpetta vs stated 27 / OSRM 27.4 (3 km diff, acceptable)"
+   ],
+   "recommendation": "keep",
+   "notes": "Annual festival in Meenam (March-April)."
+  },
+  "15": {
+   "name": "Kuruva Island (Kuruvadweep)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.821667,
+    "lon": 76.092222,
+    "osm_ref": "node/395115911",
+    "offset_km": 0.2,
+    "evidence": "OSM node 'Kuruva Island' (tourism=picnic_site) 11.82249,76.09388 (0.2 km from stated); Nominatim way/491307150 island 11.8216,76.0923 matches stated within ~0.02 km. Entry gates are Palvelicham and Pakkom, not the island centre."
+   },
+   "timing": {
+    "value": "09:00-15:30 entry (activities until 16:30; 488-visitor cap); seasonal monsoon closure reported",
+    "closed_days": "not listed on DTPC",
+    "source_url": "https://www.dtpcwayanad.com/destination/kuruva-island-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 220, foreigner INR 440, student INR 100 (rafting INR 100/50 extra)",
+    "source_url": "https://www.dtpcwayanad.com/destination/kuruva-island-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "stated_km 40 vs OSRM 31.3 (diff 8.7 km, 22%); OSM node snaps 264 m from the road (33.3 km). Which gate is meant is undefined",
+    "Site timing 09:00-16:00 closed Sun and fee 0 are wrong; entry is paid",
+    "Site spelling 'Kuruwa Deep'"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Pick the gate used for driving (Pakkom or Palvelicham) and recompute; fee is wrong on site."
+  },
+  "16": {
+   "name": "Thusharagiri Waterfalls (Kozhikode district, not Wayanad)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.47297946,
+    "lon": 76.05414413,
+    "osm_ref": "node/3265690824",
+    "offset_km": 0.3,
+    "evidence": "OSM: Thusharagiri village node 11.47093,76.05203 and boundary relation/12673682, both in Thamarassery, Kozhikode. Stated point is on a Thusharagiri road (way/1412811088), 0.3 km from the village node; the falls themselves are not mapped by name."
+   },
+   "timing": {
+    "value": "06:00-18:00 or 08:00-17:00 (sources conflict)",
+    "source_url": "https://traveltriangle.com/kerala-tourism/kozhikode/places-to-visit/thusharagiri-waterfall/timings",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "INR 30 adult (sources vary 30-40)",
+    "source_url": "https://traveltriangle.com/kerala-tourism/kozhikode/places-to-visit/thusharagiri-waterfall/entry-fees",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Located in Kozhikode district, outside Wayanad",
+    "Timing and fee only from third-party travel sites"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Keep only if the site wants nearby-district attractions; label the district."
+  },
+  "17": {
+   "name": "Brahmagiri Hills trek (summit), Thirunelli",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.9328929,
+    "lon": 75.9940526,
+    "osm_ref": "node/10730971743",
+    "offset_km": 0.09,
+    "evidence": "OSM peak node 'Brahmagiri' 11.93213,75.99435; stated within ~0.09 km. Summit is about 9-10 km of trail from the road; trek starts at the Forest Department camp at Thirunelli (DTPC: 650 m from Thirunelli bus stand)."
+   },
+   "timing": {
+    "value": "slots 07:30, 08:00, 08:30, 09:00; entry 09:30",
+    "closed_days": "not listed",
+    "source_url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "INR 700 + INR 600 guide = INR 1300 per adult; group of 5 INR 3500 incl. guide; foreigners INR 7000 per 5",
+    "source_url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
+    "confidence": "medium"
+   },
+   "anomalies": [
+    "Coordinate is the summit, not where a road user arrives (Thirunelli forest camp, not located in OSM)",
+    "Site timing 09:00-17:00 and fee 0 are wrong; booking and guide are mandatory",
+    "10 km trek; 'a little more than 3 hours' to summit (DTPC)"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Add a trailhead coordinate (Thirunelli forest camp) for road distances; keep the summit for the map."
+  },
+  "18": {
+   "name": "Chembra Peak (trek via Meppadi forest range)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "corrected",
+    "lat": 11.5563005,
+    "lon": 76.0832491,
+    "osm_ref": "node/11160287105",
+    "offset_km": 1.01,
+    "evidence": "OSM node 'Chembra Trekking Starting Point' (tourism=attraction) 11.55630,76.08325. Stated point = OSM way/1149213707 'Chembra Peak Heart Lake' (11.54730,76.08278), 1.0 km S of the trailhead. Peak node/5215512955 is at 11.51227,76.08964 (4.0 km S of stated)."
+   },
+   "timing": {
+    "value": "entry 07:00-15:00 (DTPC lists end as '12:00 AM', likely a typo); permission from Meppadi Forest Range office",
+    "closed_days": "not listed",
+    "source_url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "INR 50 (Indian), INR 80 (foreigner) per DTPC; other sources quote group charges up to INR 4000 per 5",
+    "source_url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Stated coordinate is the lake (trek end point), not the arrival point; it is 783 m from the nearest road in OSRM",
+    "Trek beyond the heart-shaped lake is restricted for wildlife (DTPC)",
+    "Site fee 0 and 05:00-13:00 timing unsupported"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "OSRM Kalpetta to trailhead 16.7 km (stated 17, Kerala Tourism 17 km). Keep the lake as a separate map point if desired."
+  },
+  "19": {
+   "name": "Cheengeri Hills (Cheengeri Mala), Ambalavayal",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.61935481,
+    "lon": 76.19931731,
+    "osm_ref": "way/809949597",
+    "offset_km": 0.3,
+    "evidence": "OSM 'cheengeri Hill Road' (way/809949597, 11.61695,76.19883) 0.3 km from stated; Nominatim reverse puts the stated point on it. Summit or ticket counter not named in OSM."
+   },
+   "timing": {
+    "value": "Trek 06:00-12:00, sightseeing to 16:00 (travel blogs; conflicting)",
+    "source_url": "https://www.dtpcwayanad.com/adventure/cheengeri-hills",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "INR 80 adult / 50 child trek (blog); IndiaHikes INR 100/60",
+    "source_url": "https://indiahikes.com/documented-trek/cheengeri-hills-trek",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "DTPC page gives no timing or fee; third-party sources conflict",
+    "Site fee 0 likely wrong"
+   ],
+   "recommendation": "keep",
+   "notes": "OSRM 21.8 vs stated 20 acceptable."
+  },
+  "20": {
+   "name": "Lakkidi View Point (Thamarassery ghat road)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.51239399,
+    "lon": 76.01895536,
+    "offset_km": 0,
+    "evidence": "Stated point is on the Wayanad Road trunk (way/380916467) at the Lakkidi ghat; Nominatim reverse places it in Adivaram, Thamarassery, Kozhikode district (district boundary at the ghat). No OSM viewpoint node found by name (Overpass query failed)."
+   },
+   "anomalies": [
+    "Viewpoint may be on the Kozhikode side of the district line"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Chain Tree (#25) is 0.8 km away."
+  },
+  "21": {
+   "name": "Edakkal Caves",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.6268407,
+    "lon": 76.234269,
+    "osm_ref": "node/3922124554",
+    "offset_km": 0.6,
+    "evidence": "OSM locality node 'Edakkal Caves' 11.63088,76.23067 (0.6 km NW of stated). Stated point lies on OSM 'Edakkal Caves Road' (pedestrian way/389046686), plausible approach and ticket area."
+   },
+   "timing": {
+    "value": "08:30-16:00",
+    "closed_days": "Monday",
+    "source_url": "https://www.dtpcwayanad.com/destination/edakkal-caves-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 50, child INR 30; photo shoot INR 1000",
+    "source_url": "https://www.dtpcwayanad.com/destination/edakkal-caves-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "stated_km 28 vs OSRM 24.9 (diff 3.1 km, 12%): within tolerance",
+    "Site timing 09:30-16:30 differs from DTPC 08:30-16:00; fee '50-70' (70 = jeep shuttle per travel sites, unverified)",
+    "DTPC: entry capped at 1,920 visitors"
+   ],
+   "recommendation": "keep",
+   "notes": "Site duration (4 h) not sourced."
+  },
+  "22": {
+   "name": "Karapuzha Dam (record named 'Mullanpara View Point')",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "new",
+    "lat": 11.618083,
+    "lon": 76.1739607,
+    "osm_ref": "node/11024911793",
+    "offset_km": 18.26,
+    "evidence": "Record page is Karapuzha Dam; its timing (09:00-18:00) and distance (16) match the dam; stated coordinate sits on Pookode Lake Road near Mullanpara, 18 km from the dam. OSM dam node 11.61808,76.17396 / way/810414624 dam. OSRM Kalpetta to dam 16.3 km (DTPC says 18 km). Park entrance not mapped by name."
+   },
+   "timing": {
+    "value": "09:00-18:00",
+    "closed_days": "not listed",
+    "source_url": "https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 30, child (<15) INR 10 (rides extra)",
+    "source_url": "https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "Name and coordinate mismatch with the page (already excluded in review)",
+    "A Mullanpara viewpoint (Vythiri side) exists only per a hotel listing; no official source",
+    "Site fee 0 is wrong"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Rename to Karapuzha Dam with the new coordinate, or restore a true Mullanpara point with a verified coordinate."
+  },
+  "23": {
+   "name": "Puliyarmala (hill/locality, Kainatti) - no trek source found",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.63997891,
+    "lon": 76.08420612,
+    "osm_ref": "relation/12716507",
+    "offset_km": 0,
+    "evidence": "Puliyarmala is a locality (OSM boundary relation centre 11.6383,76.0757, 0.95 km W of stated). Stated point on Munderi Road, Ananthakrishnapuram, 0.3 km from #2 (Jain temple on Puliyar Mala). No trekking trail, viewpoint or entry fee found in any source."
+   },
+   "anomalies": [
+    "Category 'trucking' unsupported; the only documented attraction on Puliyar Mala is the Jain temple (#2)",
+    "stated_km 4 vs OSRM 5.2 fine"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Likely a duplicate of #2 in practice."
+  },
+  "24": {
+   "name": "Pazhassi Raja Tomb and Museum (Pazhassi Smarakam), Mananthavady",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.8013942,
+    "lon": 76.0006489,
+    "osm_ref": "way/257532518",
+    "offset_km": 0.01,
+    "evidence": "OSM way 'Pazhasi Raja' (historic=tomb) 11.80144,76.00061; stated within ~0.01 km."
+   },
+   "timing": {
+    "value": "09:00-17:30 (DTPC); 09:00-17:00 (Kerala Tourism via search)",
+    "closed_days": "Monday (Kerala Tourism)",
+    "source_url": "https://www.dtpcwayanad.com/destination/pazhassi-smarakam-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Adult INR 30, child INR 20; photo shoot INR 1000 (one travel source gives 20/10)",
+    "source_url": "https://www.dtpcwayanad.com/destination/pazhassi-smarakam-wayanad",
+    "confidence": "medium"
+   },
+   "anomalies": [
+    "Site says closed Sun and fee 0: closure is Monday and entry is paid",
+    "DTPC page distance '59 km from Mananthavady bus stand' is implausible (typo)"
+   ],
+   "recommendation": "keep",
+   "notes": "Museum beside the tomb run by Kerala Archaeology Dept."
+  },
+  "25": {
+   "name": "Chain Tree, Lakkidi",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.519303,
+    "lon": 76.02092846,
+    "offset_km": 0,
+    "evidence": "Stated point is on the Wayanad Road trunk (way/857443558) in Lakkidi, Vythiri; DTPC: Chain Tree 250 m from Lakkidi bus stand. No OSM feature named Chain Tree found (Nominatim/Overpass). Area-level only."
+   },
+   "timing": {
+    "value": "daytime, every day",
+    "closed_days": "none",
+    "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "No entry fee",
+    "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
+    "confidence": "medium"
+   },
+   "anomalies": [
+    "Site timing 09:00-17:00 closed Sun is not supported (public roadside tree and shrine)"
+   ],
+   "recommendation": "keep",
+   "notes": "Legend of Karinthandan is oral tradition."
+  },
+  "26": {
+   "name": "Wayanad Tea Museum (Harrisons Malayalam Ltd, Achoor Estate, Pozhuthana)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Museum is real (Pozhuthana panchayat page: inside Achoor Estate of HML) but no museum or named feature in OSM. Stated point 11.60075,76.01486 lies in Achoor beside Govt HS Achoor (130 m from Achoor Dispensary node/7725963281), so the area is right but the exact building is unverified. OSRM Kalpetta->stated = 12.1 km, matches stated 12."
+   },
+   "timing": {
+    "value": "09:00-17:00 (one listing); 09:00-18:00 (2018 Onmanorama)",
+    "source_url": "https://onmanorama.com/news/kerala/2018/10/12/tea-museum-wayanad.html",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "INR 50 adult, INR 30 child 8-12 (2018 report); site says 0",
+    "source_url": "https://onmanorama.com/news/kerala/2018/10/12/tea-museum-wayanad.html",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Site fee 0 conflicts with reported INR 50 entry",
+    "Site description text ('tribal heritage and ancient artifacts') does not describe a tea museum",
+    "Coordinate identical to Gandhi Museum (52) and Kungichira Museum (89): at least two of the three are wrong (Kunkichira Museum is mapped in OSM at way/1094670110, 11.76826,75.83218)"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Official panchayat page https://pozhuthanapanchayat.lsgkerala.gov.in/en/node/48 gives no hours/fee. Contact number listed on that page: +91 94960 48341."
+  },
+  "27": {
+   "name": "Folklore Museum",
+   "checked": "2026-10-18",
+   "identity": "not_found",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No folklore museum in Wayanad found in OSM or in DTPC/Kerala Tourism lists. Stated point 11.74846,76.20384 reverse-geocodes to Paplassery/Chundakkolly (Sulthanbathery), a residential area with no museum. Site text 'Pookonth House, Kuthirivallu' could not be found anywhere; the site's own map link points at Wayanad Heritage Museum, Ambalavayal."
+   },
+   "anomalies": [
+    "The only 'Folklore Museum' known in Kerala is in Kochi (Thaliath), not Wayanad",
+    "Likely intended place is Wayanad Heritage Museum, Ambalavayal (DTPC: 09:00-17:30, adult INR 30, child INR 20, about 12 km from Sulthan Bathery; not found in OSM by name)",
+    "Site km 21 vs OSRM 27.5 km from stated point"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "If owner means Wayanad Heritage Museum, rename and take hours/fee from https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad, then geocode the building on OSM."
+  },
+  "28": {
+   "name": "Muthanga Wildlife Sanctuary (Wayanad Wildlife Sanctuary, Muthanga Range)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.67201,
+    "lon": 76.36868,
+    "osm_ref": "node/5276780907",
+    "offset_km": 0.03,
+    "evidence": "OSM 'Muthanga wild life sanctuary entrance' 30 m from stated; also node/11043950405 attraction. OSRM 38.7 vs stated 38."
+   },
+   "timing": {
+    "value": "06:00-10:00 and 15:00-18:00 (DTPC); Kerala Tourism jeep safari 07:00-10:00 and 15:00-17:00",
+    "closed_days": "none stated; closure mid-March to mid-April reported by secondary sources (low)",
+    "source_url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Bus: adult INR 350, child/student 175, foreigner 700; jeep INR 2,100 (4 persons); camera 45. Kerala Tourism lists entry INR 110 adult plus jeep",
+    "source_url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
+    "confidence": "medium"
+   },
+   "anomalies": [
+    "Site timing 06:00-19:00 and fee 0 are wrong; entry closes when the vehicle quota for the slot is full"
+   ],
+   "recommendation": "keep",
+   "notes": "Coordinate fine; correct the timing and fee fields. KT page https://www.keralatourism.org/ecotourism/trekking-programs/muthanga-jeep-safari/28"
+  },
+  "29": {
+   "name": "Nagarahole Tiger Reserve / Rajiv Gandhi National Park (Karnataka)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.9930757,
+    "lon": 76.0679436,
+    "osm_ref": "node/838536067",
+    "offset_km": 0.58,
+    "evidence": "Stated point is at Nagarahole hamlet, Ponnampete taluk, Kodagu, Karnataka (Nominatim reverse). Nearby node/838536796 'Nagarahole National Park'."
+   },
+   "timing": {
+    "value": "Safari 06:00-08:00, 08:15-10:15, 14:15-16:15, 16:30-18:30 at Nanachi (Kutta) gate (Karnataka FD revision, 1 Jun 2025)",
+    "source_url": "https://www.outlooktraveller.com/News/nagarahole-tiger-reserve-revises-safari-timings-and-entry-fees",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Veeranahosahalli gate: bus INR 600 adult / 300 child, jeep INR 1,000 per head (2025 revision). Site says 0",
+    "source_url": "https://www.outlooktraveller.com/News/nagarahole-tiger-reserve-revises-safari-timings-and-entry-fees",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Not in Wayanad: it is in Karnataka (Kodagu/Mysuru)",
+    "Site km 52 vs OSRM 56.5 (4.5 km, 8.7%)",
+    "Site timing 07:00-17:00 and fee 0 not supported"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Existing review already withholds distance. Keep only as a nearby place in Karnataka with Karnataka FD rules."
+  },
+  "30": {
+   "name": "Pakshipathalam (Brahmagiri Hills, Thirunelli)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Not mapped in OSM (no cave/peak/attraction named Pakshipathalam; Nominatim empty). Stated 11.93824,75.96157 is inside forest in Mananthavady taluk, 4.76 km straight line from Thirunelli Temple (way/142761196, 11.91169,75.99584), consistent with Kerala Tourism '7 km trek from Thirunelly, 3-4 h one way' but not verifiable; it is 3 km west of Brahmagiri peak (node/10730971743, 11.93213,75.99435)."
+   },
+   "timing": {
+    "closed_days": "Reports of February-May closure for fire risk (unofficial)",
+    "source_url": "https://www.keralatourism.org/destination/pakshipathalam-wayanad/298/",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.keralatourism.org/destination/pakshipathalam-wayanad/298/",
+    "confidence": "low"
+   },
+   "duration_hours": 7,
+   "anomalies": [
+    "Trek only: about 7 km one way, 3-4 h each way, so a visit is about 7 h, not 2 h",
+    "Needs prior permission from North Wayanad Divisional Forest Officer (unofficial sources); site timing 07:00-17:00 unsupported",
+    "Altitude 1,740 m (Kerala Tourism)"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Keep coordinate untrusted for road distances. Thirunelli Temple (11.91169,75.99584) is the road access point if a drivable coordinate is needed."
+  },
+  "31": {
+   "name": "Tholpetty Wildlife Sanctuary (Wayanad Wildlife Sanctuary, Tholpetty Range)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "corrected",
+    "lat": 11.9516864,
+    "lon": 76.0599344,
+    "osm_ref": "node/11044649105",
+    "offset_km": 0.82,
+    "evidence": "OSM 'Tholpetty Wildlife Sanctuary' attraction node is 0.82 km N of stated, which sits on Tholpetty village (node/1670570469). OSRM Kalpetta->OSM node 49.6 km, ->stated 48.0 km."
+   },
+   "timing": {
+    "value": "06:00-10:00 and 15:00-18:00 (DTPC); Kerala Tourism 07:00-10:00 and 15:00-17:00",
+    "closed_days": "none stated; closure mid-March to mid-April reported by secondary sources (low)",
+    "source_url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Jeep INR 2,100 (4 persons), 2,410 (5), 2,725 (6); foreigners 4,200/4,500/4,800. Kerala Tourism: entry INR 110 adult. Site says 0",
+    "source_url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
+    "confidence": "medium"
+   },
+   "anomalies": [
+    "Site km 54.5 vs OSRM 48.0 (6.5 km, 12%); OSRM to the OSM sanctuary node 49.6",
+    "Site timing 09:00-10:00 and 15:00-17:00 differs from official 06:00-10:00 / 15:00-18:00",
+    "Fee 0 wrong"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "DTPC gives about 24 km from Mananthavady bus stand. Confirm km by driving; about 50 km if the OSM node is adopted."
+  },
+  "32": {
+   "name": "Begur Forest Range (Wayanad Wildlife Sanctuary, North Wayanad)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.8471619,
+    "lon": 76.0829091,
+    "osm_ref": "node/7471611262",
+    "offset_km": 0.64,
+    "evidence": "OSM 'Begur Reserve Forest' (park) 640 m from stated. OSRM 36.6 vs stated 37 agree."
+   },
+   "anomalies": [
+    "Begur is a forest range of Wayanad WLS, not a separately named sanctuary with a ticketed entry in DTPC/Kerala Tourism lists",
+    "Site timing 09:00-17:00 unsupported by any official source"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Travel blogs say guided drives/walks via Kerala Forest Dept, no fixed schedule found. Treat as reserve forest area until FD confirms a visitor facility."
+  },
+  "33": {
+   "name": "Banasura Meenmutty Waterfalls (Kappikalam/Vellamunda side, not the Meppadi Meenmutty)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.6775701,
+    "lon": 75.9380945,
+    "osm_ref": "node/7436711305",
+    "offset_km": 0.26,
+    "evidence": "OSM 'Banasuramala Meenmutty Waterfalls' 260 m from stated; parking node/3883233313 11.67549,75.93922; road way/384969171. OSRM Kalpetta->parking 26.4 km vs stated 25 and DTPC 25."
+   },
+   "timing": {
+    "value": "10:00-17:00 (DTPC page text 'Entry Time'); a search snippet showed 08:30-16:30",
+    "source_url": "https://www.dtpcwayanad.com/destination/banasura-meenmutty-waterfalls-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Adult INR 100, student INR 50, foreigner INR 200, still camera INR 53, video INR 301",
+    "source_url": "https://www.dtpcwayanad.com/destination/banasura-meenmutty-waterfalls-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "A second, different Meenmutty falls near Meppadi (OSM node/6756920457 11.5284,76.2367; Kerala Tourism says 29 km from Kalpetta) is, per DTPC, viewpoint-only/closed; the site coordinate correctly uses the Banasura one",
+    "Site timing 09:00-17:00 differs by 1 h from DTPC"
+   ],
+   "recommendation": "keep",
+   "notes": "About 2 km trek to tiered falls; offline ticket booking only."
+  },
+  "34": {
+   "name": "Soochipara Falls (Sentinel Rock Waterfalls)",
+   "checked": "2026-10-18",
+   "identity": "duplicate_of_35",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.5112151,
+    "lon": 76.1634288,
+    "osm_ref": "node/7428736620",
+    "offset_km": 0.07,
+    "evidence": "Stated point is 66 m from the Soochipara node; same fall."
+   },
+   "timing": {
+    "value": "08:00-17:00",
+    "source_url": "https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Adult INR 150, student INR 50, foreigner INR 300",
+    "source_url": "https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "Duplicate of id 35 (stated points 20 m apart)"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Keep the review exclusion; mention the alias on the Soochipara page."
+  },
+  "35": {
+   "name": "Soochipara Waterfalls (Sentinel Rock)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.5112151,
+    "lon": 76.1634288,
+    "osm_ref": "node/7428736620",
+    "offset_km": 0.07,
+    "evidence": "OSM 'Soochipara Water Falls' 69 m from stated (second node/3883232140 also within 0.3 km). OSRM 22.0 km vs stated 23 and DTPC 23."
+   },
+   "timing": {
+    "value": "08:00-17:00 (entry capped at 500 visitors)",
+    "closed_days": "not stated; two travel blogs say closed March-June (low)",
+    "source_url": "https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Adult INR 150, student INR 50, foreigner INR 300",
+    "source_url": "https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "Site timing 08:00-16:00 differs from DTPC 08:00-17:00",
+    "OSRM Soochipara->Kanthanpara = 20.2 km although only 1.8 km apart in a straight line: not a coordinate error. Both coordinates are confirmed by OSM features; they sit in different valleys reached by different spur roads that meet near Meppadi, and the Soochipara point snaps 450 m from the nearest routed road (last access track not routed)"
+   ],
+   "recommendation": "keep",
+   "notes": "Coordinates for 35 and 37 are both confirmed by OSM features."
+  },
+  "36": {
+   "name": "Cheeyambam waterfalls",
+   "checked": "2026-10-18",
+   "identity": "duplicate_of_42",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No waterfall named Cheeyambam in OSM, DTPC or Kerala Tourism. Cheeyambam is a village at 11.7639,76.1952 (5.4 km west of the stated point). Stated point is 20 m from id 42 (Chetalayam), so it is the same place under another name. It is 2.4 km from Chethalayam Forest Office (node/10102859423) and 0.9 km from OSM 'Wayanad Wildlife Sanctuary' attraction node/11044640306."
+   },
+   "anomalies": [
+    "Shares coordinate with id 42",
+    "No source for a falls named Cheeyambam"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Merge into Chethalayam Falls (id 42)."
+  },
+  "37": {
+   "name": "Kanthanpara Waterfalls",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.5235522,
+    "lon": 76.1528461,
+    "osm_ref": "way/762820946",
+    "offset_km": 0.05,
+    "evidence": "OSM 'Kanthanpara Waterfalls' attraction polygon centre 46 m from stated; access road way/621397623. (A second OSM node/11044761405 at 11.50983,76.15339 is 1.5 km SSW and looks mis-placed.) OSRM 17.7 vs stated 18 and DTPC 19."
+   },
+   "timing": {
+    "value": "09:00-16:30",
+    "source_url": "https://www.dtpcwayanad.com/destination/kanthanpara-waterfalls-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 40, child INR 30, photo shoot INR 1,000",
+    "source_url": "https://www.dtpcwayanad.com/destination/kanthanpara-waterfalls-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "Site fee '40 INR' matches adult only",
+    "DTPC: on Vaduvanchal road, 8 km from Meppadi"
+   ],
+   "recommendation": "keep",
+   "notes": "Short road distance to Kalpetta, long to Soochipara: see id 35."
+  },
+  "38": {
+   "name": "Kappikalam waterfalls",
+   "checked": "2026-10-18",
+   "identity": "not_found",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Stated point is 76 m from Kanthanpara (id 37), nothing named Kappikalam there. Kappikalam is a locality/panchayat at 11.6625,75.9208 near Banasura/Meenmutty (relation/12714447), where the Banasura Meenmutty falls (id 33) also lie; no source names a separate Kappikalam falls."
+   },
+   "anomalies": [
+    "Coordinate duplicates Kanthanpara",
+    "Possibly a local name for the Banasura Meenmutty falls (the Kuttiyamvayal-Kappikalam road leads there) but unverified"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Keep excluded."
+  },
+  "39": {
+   "name": "Karlad (Karalad) Lake",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.65098,
+    "lon": 75.98299,
+    "osm_ref": "node/2641052916",
+    "offset_km": 0.12,
+    "evidence": "OSM 'Karalad Lake' attraction 123 m from stated."
+   },
+   "timing": {
+    "value": "09:00-17:00 (zipline)",
+    "closed_days": "not stated",
+    "source_url": "https://www.keralatourism.org/adventure-tourism/zip-line/karlad-lake",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Zipline about INR 250-350 per ride; entry fee unverified (a blog says INR 20)",
+    "source_url": "https://www.keralatourism.org/adventure-tourism/zip-line/karlad-lake",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Site km 21 vs OSRM 16.9 (4.1 km, 19%); Kerala Tourism says 20-22 km from Kalpetta",
+    "Zipline season October-March; may be off in monsoon"
+   ],
+   "recommendation": "keep",
+   "notes": "Verify the real road distance; OSRM may use a shorter minor road."
+  },
+  "40": {
+   "name": "Arippara Waterfalls (Kozhikode district)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.43808,
+    "lon": 76.0464,
+    "osm_ref": "node/6342847856",
+    "offset_km": 0.06,
+    "evidence": "OSM 'Arippara Waterfall' 58 m from stated. Nominatim reverse: Nellipoyil, Thamarassery, Kozhikode district."
+   },
+   "timing": {
+    "source_url": "https://www.keralatourism.org/destination/arippara-waterfalls-a-tranquil-escape-in-keralas-wilderness-unique/719",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://www.keralatourism.org/destination/arippara-waterfalls-a-tranquil-escape-in-keralas-wilderness-unique/719",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Not in Wayanad (Kozhikode); 15 km from Thiruvambady",
+    "Site spelling 'Arripara'"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Coordinate is correct; the district is the issue. OSRM 36.4 vs stated 37 agree."
+  },
+  "41": {
+   "name": "Iruppu (Irpu) Falls, Brahmagiri, Kodagu (Karnataka)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.9667954,
+    "lon": 75.9839484,
+    "osm_ref": "node/838536660",
+    "offset_km": 0.05,
+    "evidence": "OSM 'Iruppu Falls' 54 m from stated; reverse geocodes to Manchalli, Ponnampete taluk, Kodagu, Karnataka."
+   },
+   "timing": {
+    "value": "sunrise to sunset (Karnataka Tourism); about 08:00-17:00 per a visitor",
+    "source_url": "https://karnatakatourism.org/experiences/brahmagiri-sanctuary-experience",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "INR 50 per person (blogs)",
+    "source_url": "https://muddietrails.com/blog/iruppu-falls-coorg/",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "In Karnataka, not Wayanad; nearest town Srimangala 10 km",
+    "Site km 60 vs OSRM 59.9 agree"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "As in the review note: the Brahmagiri trek beyond needs a Karnataka FD permit."
+  },
+  "42": {
+   "name": "Chethalayam Falls (Kidanganad, near Sulthan Bathery)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Falls not mapped in OSM. Local features: Chethalayam Forest Office node/10102859423 (11.7485,76.2382), 'chethalayam thodu' stream way/1217048363 (11.7439,76.2386), FHC Chethalayam. Stated 11.76572,76.25205 is in Sulthanbathery taluk, 2.4 km NNE of the village with no OSM feature there. An unofficial butterfly-survey page lists 11.7434,76.2392, matching the OSM stream/forest-office area (not used as a source)."
+   },
+   "timing": {
+    "closed_days": "falls dry up in summer",
+    "source_url": "https://keralatourism.org/wayanad/waterfalls-wayanad.php",
+    "confidence": "low"
+   },
+   "fee": {
+    "source_url": "https://keralatourism.org/wayanad/waterfalls-wayanad.php",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Kerala Tourism: about 12 km from Sulthan Bathery; Incredible India 11 km",
+    "Stated coordinate shares its point with id 36 and is unverified",
+    "OSRM Kalpetta->stated 34.4 km; site says 34 (id 42) and 32 (id 36)",
+    "Site timing 09:00-17:00 unsupported (blogs say 06:00-17:00); about 4 km trek per one source"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Candidate arrival point: Chethalayam Forest Office node/10102859423 (11.7485,76.2382), about 2.4 km from stated. Do not use for road distances until confirmed."
+  },
+  "43": {
+   "name": "Karapuzha Dam (Karapuzha Reservoir and Adventure Park)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.6181128,
+    "lon": 76.1739816,
+    "osm_ref": "way/810414624",
+    "offset_km": 0.19,
+    "evidence": "OSM dam way and node/11024911793 within 190 m. OSRM 16.1-16.3 vs stated 16; DTPC says 18 km."
+   },
+   "timing": {
+    "value": "09:00-18:00",
+    "source_url": "https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 30, child (under 15) INR 10; zipline INR 390, VR zone INR 170-199",
+    "source_url": "https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "Site fee 0 wrong",
+    "DTPC distance 18 km vs 16 km on site/OSRM (2 km)"
+   ],
+   "recommendation": "keep",
+   "notes": "Closed days not stated."
+  },
+  "44": {
+   "name": "Pookode Lake",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.54029,
+    "lon": 76.0271,
+    "osm_ref": "node/3842111629",
+    "offset_km": 0.24,
+    "evidence": "OSM attraction node and lake way/298999606 (11.54233,76.02727) within 240 m; parking way/1334724336 at 11.5431,76.0304. OSRM 12.0 vs stated 13; DTPC 12."
+   },
+   "timing": {
+    "value": "09:00-18:00 (boating 09:00-17:00)",
+    "source_url": "https://www.dtpcwayanad.com/destination/pookode-lake-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 40, child INR 30; boats 2-seater 300, 4-seater 450, 7-seat 700",
+    "source_url": "https://www.dtpcwayanad.com/destination/pookode-lake-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "Site timing 09:00-17:00 and fee 0 are wrong"
+   ],
+   "recommendation": "keep",
+   "notes": "Closed days not stated."
+  },
+  "45": {
+   "name": "Banasura Sagar Dam",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.6712202,
+    "lon": 75.9564734,
+    "osm_ref": "node/9815272512",
+    "offset_km": 0.18,
+    "evidence": "OSM dam node 180 m from stated; OSRM to dam 24.4-24.5 km vs stated 21 (DTPC 21)."
+   },
+   "timing": {
+    "value": "09:00-17:30",
+    "source_url": "https://www.dtpcwayanad.com/destination/banasura-sagar-dam-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 40, child INR 20; speed boat INR 1,000 (5), pontoon INR 2,000, kayak INR 250-450, zipline INR 350",
+    "source_url": "https://www.dtpcwayanad.com/destination/banasura-sagar-dam-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "Site timing opens 06:00; DTPC 09:00",
+    "OSRM 24.4 vs 21 stated (3.4 km, 16%), below threshold; DTPC and site agree on 21"
+   ],
+   "recommendation": "keep",
+   "notes": "Offline booking only."
+  },
+  "46": {
+   "name": "Mailadippara (Myladippara) hill, Kalpetta",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.62446,
+    "lon": 76.09224,
+    "osm_ref": "node/10945867708",
+    "offset_km": 0.01,
+    "evidence": "OSM 'jain temple' at the hilltop is 9 m from stated; sources say the summit has a Jain temple and pond, east of the Civil Station. OSRM 3.1 vs stated 3."
+   },
+   "duration_hours": 1.5,
+   "anomalies": [
+    "No official hours/fee; about 40 min climb from the base (Wanderlog reviews), temple sometimes closed",
+    "Do not confuse with 'Mailadipara Colony' node/10038847849 at 11.44,75.92 (Kozhikode)"
+   ],
+   "recommendation": "keep",
+   "notes": "duration_hours is an estimate from a 40 min climb each way (low confidence); fee and timing unverified."
+  },
+  "47": {
+   "name": "Banasura Hill / Banasura Peak (trek)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.6938099,
+    "lon": 75.9078861,
+    "osm_ref": "node/7801507874",
+    "offset_km": 0.15,
+    "evidence": "OSM 'Banasura Peak' 150 m from stated; reverse geocode Pulinjal, Mananthavady taluk. It is the summit, off-road by nature: trekkers start near the Meenmutty forest ticket counter (OSM parking node/3883233313 11.67549,75.93922) or the dam."
+   },
+   "timing": {
+    "source_url": "https://www.treksandtrails.org/blog/banasura-hill-trek",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "Forest permit and guide required (about INR 500 per person per blogs)",
+    "source_url": "https://www.treksandtrails.org/blog/banasura-hill-trek",
+    "confidence": "low"
+   },
+   "duration_hours": 7,
+   "anomalies": [
+    "A trek needing FD permission and a licensed guide, not a drop-in 09:00-17:00 attraction",
+    "Duration about 7 h return (operator listing), not 2 h",
+    "Site km 29 unverified; use the trailhead (Meenmutty parking) for road distance: 26.4 km by OSRM"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Keep the peak as the feature but publish the trailhead as the arrival coordinate. Permit: North Wayanad Forest Division, Mananthavady (unofficial sources)."
+  },
+  "48": {
+   "name": "Manjappara View Point (Ambalavayal)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "offset_km": 1.18,
+    "evidence": "A Manjappara locality exists in Wayanad (relation/12717276, Ambalavayal, centre 11.6031,76.2063; bus stop node/12518378198 at 11.60413,76.20981; Sahya Ayurvedic Hospital way/1107457481), so the review exclusion 'only in Idukki' is wrong. But no viewpoint is mapped in OSM and no official source names it. Stated 11.60213,76.19922 is 1.2 km west of the locality bus stop (reverse geocode: Cheengavallam)."
+   },
+   "anomalies": [
+    "Manjappara (Idukki, near Nedumkandam) is a different place; the Wayanad one is a village near Ambalavayal",
+    "Viewpoint existence rests on one travel-guide article (Agoda) with no location detail"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Candidate: Manjappara village bus stop node/12518378198. OSRM Kalpetta->bus stop 23.4 km vs stated 23 matches."
+  },
+  "49": {
+   "name": "Chundale tea estates (Chundale/Chellode, Vythiri taluk)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "new",
+    "lat": 11.57785,
+    "lon": 76.053,
+    "osm_ref": "way/485874633",
+    "offset_km": 9.54,
+    "evidence": "Stated 11.60766,76.13508 reverse-geocodes to Pulinkandi Colony (Thrikkaipetta) and is the Uravu/zipline point (ids 59/70), not a tea estate. OSM has 'Chundale Tea Factory' (way/485874633), 'Chundale Estate' (node/8874523317 11.58062,76.04606; way/892560381 farmland) and 'chellode, tea factory' (node/8831440529 11.57025,76.05366). Site photos are named 'chundale-cycling', so the Chundale estate is meant; the 'Ripon Tea Factory' map link in the data is a copy of the previous cycling place."
+   },
+   "anomalies": [
+    "Coordinate shared with Uravu (59) and Ziplines (70)",
+    "Name spelling 'Chundail' vs OSM/Kerala 'Chundale'",
+    "A cycling tour at Chellotte Estate, Chundale was reported by Onmanorama (2017) but no current access/fee info",
+    "OSRM Kalpetta->Chundale tea factory 7.3 km vs stated 6"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Medium-low confidence: estate land is large; choose the gate/factory once the owner says which estate is the cycling start. Km should become about 7."
+  },
+  "50": {
+   "name": "Phantom Rock (Cheengeri Mala), Ambalavayal",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.6372602,
+    "lon": 76.2031316,
+    "osm_ref": "node/5871738165",
+    "offset_km": 0.17,
+    "evidence": "OSM 'Phantom Rock' attraction 172 m from stated. DTPC Cheengeri trekking centre (way/858043447) is 1.8 km SW."
+   },
+   "timing": {
+    "value": "09:00-17:00 (blog)",
+    "source_url": "https://muddietrails.com/blog/best-places-to-visit-in-wayanad-for-3-days/",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "Free (blog)",
+    "source_url": "https://muddietrails.com/blog/best-places-to-visit-in-wayanad-for-3-days/",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Site km 26 vs OSRM 23.1 (3 km, 12%); Kerala Tourism says about 13 km from Kalpetta and Airbnb 17 km, so the sources disagree",
+    "Last 500 m on foot",
+    "Kerala Tourism page https://www.keralatourism.org/wayanad/phantom-rock-kalpetta.php gives no hours/fee"
+   ],
+   "recommendation": "keep",
+   "notes": "Use OSRM 23 km; ask the DTPC Cheengeri centre for hours."
+  },
+  "51": {
+   "name": "Kurumbalakkotta (View Point / Kurumbalakotta Mala)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "corrected",
+    "lat": 11.6963813,
+    "lon": 76.0342789,
+    "osm_ref": "node/14241148801",
+    "offset_km": 0.64,
+    "evidence": "OSM tourism=viewpoint 'Kurumbalakkotta View Point'. Stated point is on an unnamed road (Eachome) 0.64 km west of it. Village centre node/12926119770 at 11.68876,76.03382."
+   },
+   "timing": {
+    "value": "06:00-17:00 (third-party)",
+    "source_url": "https://muddietrails.com/blog/best-places-to-visit-in-wayanad-for-3-days/",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "No ticket price found; jeep to the top about INR 600 return (third-party reviews)",
+    "source_url": "https://wanderlog.com/place/details/744424/kurumbalakotta-view-point",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Stated coord 0.64 km from OSM viewpoint; routed 18.3 km vs stated 18, consistent.",
+    "Site says closed Sunday, no source supports a weekly closure.",
+    "Private vehicles cannot reach the top; access is by jeep or short trek (third-party)."
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Official timing/fee not found. 2 h duration on site is unverified."
+  },
+  "52": {
+   "name": "Gandhi Museum (Gandhi Smarakam), Puliyarmala/Kainatty, Kalpetta, beside the Ananthanatha Swamy Jain temple",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "new",
+    "lat": 11.6244633,
+    "lon": 76.0922391,
+    "osm_ref": "node/10945867708",
+    "offset_km": 8.83,
+    "evidence": "The museum is not mapped in OSM. Sources say it is adjacent to the Jain temple (ahimsaiyatrai.com); OSM has one Jain temple in the Kalpetta-Kainatty area (node/10945867708, Kalpetta-Wayanad Bypass Road, Kainatti). Position is the temple, not the museum itself: low-medium confidence. Stated coordinate was the Wayanad Tea Museum point (Vythiri-Tharuvana road, Pozhuthana)."
+   },
+   "timing": {
+    "value": "09:00-17:00 daily (aggregator)",
+    "closed_days": "none listed",
+    "source_url": "https://yappe.in/kerala/kalpetta/gandhi-museum/698172",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Stated coordinate belongs to the Wayanad Tea Museum (Pozhuthana), 8.8 km from the Jain temple area; this is why it was shared with the Tea Museum record.",
+    "Stated 12 km; routed distance to the Jain temple is 3.1 km (OSRM). Sources say 4-5 km from Kalpetta town.",
+    "No official hours found; site says closed Sunday, aggregator says open all 7 days."
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Identity real (Gandhi stayed in the boarding there in 1934, now museum). Confirm exact museum entrance and hours on site; temple phone is on the ahimsaiyatrai.com page."
+  },
+  "53": {
+   "name": "Attamala (hamlet, Chooralmala/Meppadi); no mapped view point",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.4987192,
+    "lon": 76.1756093,
+    "osm_ref": "node/8674773179",
+    "offset_km": 0.03,
+    "evidence": "Stated point is on a residential road in Attamala, 28 m from OSM place=hamlet Attamala. No viewpoint feature with this name exists in OSM; the exact lookout is not identified."
+   },
+   "anomalies": [
+    "Attamala lies next to the 2024 Chooralmala-Mundakkai landslide area; current public access to any lookout is unverified.",
+    "No official source found for a viewpoint of this name."
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Coordinate fixes the hamlet only. Routed 24.3 vs stated 25 fine."
+  },
+  "54": {
+   "name": "Sunrise Valley Viewpoint (Muppainad, per one third-party source)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No OSM feature named Sunrise Valley in Wayanad. Stated point is on an unnamed residential road in Vythiri taluk, 1.9 km WSW of Neelimala viewpoint. A blog places it in Muppainad village, 7 km from Vaduvanchal, 28 km from Kalpetta (thewoodsresorts.com). The hotel 'Welcare Sunrise Valley resort' (Vaduvanchal) is a different thing."
+   },
+   "anomalies": [
+    "Site description says 'picturesque waterfall' but the name refers to a viewpoint.",
+    "Stated 25 km vs blog 28 km vs routed 23.6 km to stated point."
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Cannot establish a coordinate from OSM or official sources. Keep the existing point as unverified."
+  },
+  "55": {
+   "name": "Neelimala Viewpoint (Neelimalai), Vaduvanchal",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "corrected",
+    "lat": 11.5334912,
+    "lon": 76.2278983,
+    "osm_ref": "node/6341290685",
+    "offset_km": 0.39,
+    "evidence": "OSM tourism=viewpoint 'Neelimala viewpoint' (Calicut-Vythiri-Gudalur Road, Valavil, Chitragiri, Vaduvanchal). Stated point is on a residential road 0.39 km NNE."
+   },
+   "timing": {
+    "value": "09:00-17:00 (third-party; some say morning slots only)",
+    "source_url": "https://www.tourtravelworld.com/india/wayanad/neelimala-view-point.htm",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "Free entry reported by one source, INR 30-50 by another; shared jeep INR 500-700; forest permission advised",
+    "source_url": "https://www.tourtravelworld.com/india/wayanad/neelimala-view-point.htm",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Routed 33.9 km (OSRM from OSM viewpoint) vs stated 26 km: stated figure is too low by about 8 km.",
+    "Several sources say forest-department permission is needed; access may be restricted."
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Update distance to about 34 km. Official timing/fee not found."
+  },
+  "56": {
+   "name": "Lakkidi View Point",
+   "checked": "2026-10-18",
+   "identity": "duplicate_of_Lakkidi Ghats View Point (trucking-20)",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.5118372,
+    "lon": 76.0188295,
+    "osm_ref": "node/3029306446",
+    "offset_km": 0.06,
+    "evidence": "OSM tourism=viewpoint 'Lakkidi viewpoint Wayanad churam'; stated coordinate is 63 m away."
+   },
+   "timing": {
+    "value": "Open during daytime, all days (Chain Tree page); some blogs 09:00-17:00",
+    "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "None (DTPC Chain Tree page; the viewpoint is not named separately)",
+    "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Duplicate of the Lakkidi Ghats View Point record (same coordinate, same page); keep excluded.",
+    "Routed 15.9 km vs stated 16 fine."
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Coordinate is correct; the issue is duplication only."
+  },
+  "57": {
+   "name": "Enn Ooru (Enna Ooru) Tribal Heritage Village, Pookode",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.5290731,
+    "lon": 76.0160236,
+    "osm_ref": "way/1154334820",
+    "offset_km": 0.11,
+    "evidence": "OSM tourism=theme_park 'Enna Ooru Tribal Heritage Village' (opening_hours Mo-Su 09:00-17:00, operator Dept of Tribal Development). Visitors park and buy tickets at the foot: way/1334969118 parking 11.5323,76.0247 and ticket node/12347965266 11.5328,76.0250 (1.09 km east), then take a shuttle uphill."
+   },
+   "timing": {
+    "value": "Mon-Fri 09:00-17:00; Sat, Sun, public holidays 09:00-18:00",
+    "closed_days": "none listed (DTPC); village sometimes closes in June-July monsoon (enooru.co.in)",
+    "source_url": "https://www.dtpcwayanad.com/destination/enooru-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 50; camera INR 150; shuttle jeep INR 40 (up and down); tickets for age above 3; offline booking only",
+    "source_url": "https://www.dtpcwayanad.com/destination/enooru-wayanad",
+    "confidence": "high"
+   },
+   "anomalies": [
+    "Site says closed Sunday and 09:00-17:00; DTPC says open daily, weekends to 18:00.",
+    "Site fee 0; real fee INR 50.",
+    "enooru.co.in gives 09:00-16:30 and child INR 20; sources disagree, DTPC preferred.",
+    "Routed 15.0 km vs stated 16 fine (to ticket counter 13.1 km)."
+   ],
+   "recommendation": "keep",
+   "notes": "Coordinate is the village; consider the ticket/parking point as the arrival point. Site duration 2 h unverified; enooru.co.in says plan for a lot of walking."
+  },
+  "58": {
+   "name": "900 Kandi (Thollayiram Kandi), Skypark / eco park, Meppadi",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "The park is not mapped in OSM (no name match; Overpass was unavailable, Nominatim finds nothing). Stated point (11.4967,76.1051) reverse-geocodes to resort 'Cardomom hills' on the Anakkampoyil-Kalladi-Meppadi tunnel road, 3.3 km WSW of Kalladi village (node/3842228214, 11.51058,76.13203), which is the base where private vehicles stop before the 4x4 jeep climb (wanderlog.com). DTPC says 11.2 km from Meppadi bus stand. Real summit coordinate unverified."
+   },
+   "timing": {
+    "value": "06:30-18:30 daily",
+    "source_url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
+    "confidence": "high"
+   },
+   "fee": {
+    "value": "Adult INR 250; child INR 100; rifle 50; adventure swing 100; zip line 350; zip cycling 250; offline booking only. Jeep from Kalladi is extra (third-party about INR 200 per person)",
+    "source_url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
+    "confidence": "high"
+   },
+   "duration_hours": 3,
+   "anomalies": [
+    "Site: closed 'All Day' and 09:00-18:00; DTPC: open daily 06:30-18:30.",
+    "Stated coordinate is not the park (review note: about 7.5 km off).",
+    "Stated 26 km; the Kalladi base is 17.3 km by road from Kalpetta bus stand and the park is further up; real figure unverified.",
+    "The DTPC page names the attraction 'Skypark'; zip line, zip cycling and giant swing are inside the park (relevant to id 70)."
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Fastest fix: record GPS at the park ticket counter and add it to OSM. Until then the arrival base Kalladi (11.5106,76.1320) can serve as an approximate access point. Duration 3 h is the site figure; a third-party guide suggests 2-3 h."
+  },
+  "59": {
+   "name": "Uravu Indigenous Science & Technology Study Centre (Uravu Eco Links), Thrikkaipetta",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Uravu is not mapped in OSM (searches for Uravu/bamboo found nothing; Overpass unavailable). Stated point is on Muttil-Meppadi Road at Kappamkolly, 1.08 km NNE of Thrikkaipetta village office (way/858588503, 11.5983,76.1324): plausible for the village but not confirmed as the centre. It also equals the Chundail Tea Estate and zipline coordinates, so it looks like a copied default."
+   },
+   "timing": {
+    "source_url": "https://uravu.in/",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Shares coordinate with 49 Chundail Tea Estate and 70 Ziplines; only Uravu can be linked to this locality (Thrikkaipetta).",
+    "No visiting hours or fee published (uravu.in and uravubamboogrove.com say contact the office)."
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Address: Thrikkaipetta P.O., Wayanad 673577. Site says closed Sunday: unverified."
+  },
+  "60": {
+   "name": "Kalpetta Food Spots",
+   "checked": "2026-10-18",
+   "identity": "generic_section",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No coordinate on site; a collection of eateries, not one place. Content text is a copied cooking-class blurb."
+   },
+   "anomalies": [
+    "Description/amenities (cooking classes, spice kit) do not match the title."
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Food places are covered by data/food-places.json; do not assign a coordinate."
+  },
+  "61": {
+   "name": "Rippon (Ripon) tea estate area, Kalpetta-Meppadi road; Ripon Tea Factory per site map label",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.534836,
+    "lon": 76.174984,
+    "osm_ref": "node/7996478577",
+    "offset_km": 0.13,
+    "evidence": "Stated point is on a tertiary road in 'Rippon 52', 134 m from GHS Ripon (OSM node/7996478577). No OSM feature named Ripon tea factory/estate; nearest OSM tea factory way/859673805 'Mele arapetta tea factory' (11.5390,76.1586) is 1.7 km west. Verified as locality only."
+   },
+   "anomalies": [
+    "Routed 16.4 km vs stated 11 km: stated is too low by about 5.5 km.",
+    "Site text says 'near Meppadi' and describes a spice plantation stay: copied text.",
+    "Record 71 bwstays uses this same Rippon coordinate.",
+    "No public visiting hours found for a Rippon estate or factory."
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Change distance to about 16-17 km. The estate is a private working plantation; public visits unverified."
+  },
+  "62": {
+   "name": "Coffee Plantation",
+   "checked": "2026-10-18",
+   "identity": "generic_section",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Generic name. Stated point is a residential road in Dwaraka, Mananthavady, far from the stated 7 km."
+   },
+   "anomalies": [
+    "Stated 7 km vs a point in Mananthavady (about 30 km by road): impossible.",
+    "Text is a copied spice-plantation blurb."
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Keep excluded as the review file says."
+  },
+  "63": {
+   "name": "Boys Town (Wayanad Social Service Society), near Thalappuzha/Mananthavady",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.8420313,
+    "lon": 75.9207674,
+    "osm_ref": "way/961552971",
+    "offset_km": 0.17,
+    "evidence": "Stated point is at the Wayanad Social Service Society building (node/8894621503), Hill Highway, Ambayathode; 0.17 km from OSM Boys town hostel and about 0.1 km from the water tank way/800614105."
+   },
+   "timing": {
+    "source_url": "https://keralatourism.org/wayanad/boys-town-mananthavady.php",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Kerala Tourism lists herbal garden, nature care centre, sericulture, permaculture centre and Gene Park (not a single farm); no hours or fee given.",
+    "Routed 43.6 km agrees with stated 43."
+   ],
+   "recommendation": "keep",
+   "notes": "Wayanad Social Service Society runs the centres; contact before visiting. 'Farm visit' text is generic."
+  },
+  "64": {
+   "name": "Regional Agricultural Research Station (RARS), Ambalavayal, Kerala Agricultural University",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.616591,
+    "lon": 76.214475,
+    "osm_ref": "relation/11358512",
+    "offset_km": 0.72,
+    "evidence": "Nominatim reverse puts the stated point inside the RARS Ambalavayal polygon (bbox 11.605-11.619, 76.205-76.220); polygon centre 11.61367,76.20853."
+   },
+   "timing": {
+    "source_url": "https://keralatourism.org/wayanad/rars-agriculture-institution.php",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Tourists may visit the nursery and buy plants; no official hours found; office phones on rarsamb.kau.in.",
+    "Routed 22.0 vs stated 21 fine.",
+    "Not the same as the Wayanad Heritage Museum in Ambalavayal (DTPC: 09:00-17:30, adult INR 30, child INR 20)."
+   ],
+   "recommendation": "keep",
+   "notes": "Stated point is inside the station."
+  },
+  "65": {
+   "name": "Restaurants",
+   "checked": "2026-10-18",
+   "identity": "generic_section",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Generic section; no coordinate on site."
+   },
+   "anomalies": [
+    "Description text (tribal museum / cooking classes) does not match."
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Covered by food-places data."
+  },
+  "66": {
+   "name": "LocalCuisine",
+   "checked": "2026-10-18",
+   "identity": "generic_section",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Generic section; no coordinate. Its page URL is the En Ooru page (id 57)."
+   },
+   "anomalies": [
+    "Page link points to bw-en-ooru-tribal-wayanad.html, same as id 57."
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Covered by food-places data."
+  },
+  "67": {
+   "name": "House Holds",
+   "checked": "2026-10-18",
+   "identity": "not_found",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Site description is 'Nesto' (a supermarket chain). Stated point is Lalith Mahal Auditorium, Kalpetta-Wayanad Bypass Road. No Nesto in OSM. Page link is a bare Google Maps coordinate."
+   },
+   "anomalies": [
+    "Name 'House Holds' vs description 'Nesto': name/type mismatch.",
+    "Text is a spice-shopping blurb."
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Keep excluded."
+  },
+  "70": {
+   "name": "Zipline operator unspecified (site map label 'Longest Zipline, Sky cycle & Giant Swing', which matches the 900 Kandi Skypark activities)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Several Wayanad ziplines exist (Pozhuthana MuddyBoots, Karlad Lake, Chundel, Teenzania Lakkidi, 900 Kandi). The site record shares Uravu's coordinate. The activity set (zip line, zip cycling, adventure swing) matches 900 Kandi Skypark, so it is likely a duplicate of id 58, unconfirmed."
+   },
+   "timing": {
+    "value": "09:00-17:00 typical for zipline activities",
+    "closed_days": "none",
+    "source_url": "https://www.keralatourism.org/adventure-tourism/zip-line/chundel",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "INR 350 zip line at 900 Kandi (DTPC); one blog INR 250",
+    "source_url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Shares coordinate with 49 Chundail Tea Estate and 59 Uravu (a copied default).",
+    "Text describes kayaking, not zipline.",
+    "Stated 10 km is not credible for 900 Kandi (base 17 km, park further)."
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Either merge into 58 or name the specific operator, then locate it."
+  },
+  "71": {
+   "name": "BW Stays villa, Kalpetta",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "new",
+    "lat": 11.605787,
+    "lon": 76.083311,
+    "offset_km": 13.04,
+    "evidence": "Per instruction, the site's own villa coordinate. The stated record holds the Rippon Tea Factory point (11.5352,76.1789), 13.0 km away, with stated 0 km and a Rippon page URL."
+   },
+   "anomalies": [
+    "Stated coordinate and map link are Rippon's, not Kalpetta's.",
+    "Page link is the Rippon cycling page."
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Placeholder 'stays' record."
+  },
+  "72": {
+   "name": "Mananthavady (town)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "new",
+    "lat": 11.8010338,
+    "lon": 76.0056565,
+    "osm_ref": "node/589983022",
+    "offset_km": 21.92,
+    "evidence": "OSM place=town Mananthavady. Stated point is in Kalpetta (shared with 73 and 75). Routed 30.5 km from Kalpetta bus stand, not 10."
+   },
+   "anomalies": [
+    "Stated 10 km vs routed 30.5 km.",
+    "Stated coordinate is Kalpetta's."
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Placeholder 'stays' record."
+  },
+  "73": {
+   "name": "Sulthan Bathery (Sultan Bathery) town",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "new",
+    "lat": 11.6631885,
+    "lon": 76.259553,
+    "osm_ref": "node/393111659",
+    "offset_km": 19.65,
+    "evidence": "OSM place=town Sultan Bathery. Stated point is in Kalpetta. Routed 24.9 km."
+   },
+   "anomalies": [
+    "Stated 10 km vs routed 24.9 km.",
+    "Stated coordinate is Kalpetta's."
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Placeholder 'stays' record."
+  },
+  "74": {
+   "name": "Unidentified (site map label 'Pepper Hub')",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No 'Pepper Hub' or pepper farm in OSM or in searched sources. Stated point is on Mylambadi Road at Moonanakuzhy (village node/9512700919, 1.04 km SW); nothing confirms a farm there. Pepper Trail and Pepper Grove are hotels at Sulthan Bathery, not this."
+   },
+   "anomalies": [
+    "Routed 19.9 km vs stated 10 km: stated too low by about 10 km.",
+    "Text is a copied farm-visit blurb."
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Cannot identify the operator; coordinate unverified."
+  },
+  "75": {
+   "name": "Muneeswaran Kunnu (hill with small Siva temple), Makkimala, Thavinhal/Thalappuzha",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No OSM feature named Muneeswaran. Sources place it at Makkimala (tribal settlement, Thavinhal 670644); OSM has the Makkimala ration shop at 11.8672,75.9503. Closest mapped lookout is an unnamed tourism=viewpoint node/8748077521 (11.86893,75.96271, Thalasseri-Bavali Road, 1.3 km east of Makkimala): plausible but not confirmed. Stated point is in Kalpetta (copy of the Mananthavady record), 30.7 km away from that candidate."
+   },
+   "timing": {
+    "value": "07:00-18:00 daily (Wanderlog, abadhotels); Onmanorama 2020 says 08:00-18:00",
+    "closed_days": "none",
+    "source_url": "https://www.abadhotels.com/blogs/muneeswaran-kunnu-view-point.html",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "INR 45 adult, INR 25 child (user reviews, possibly outdated)",
+    "source_url": "https://wanderlog.com/place/details/2529922",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Stated coordinate is in Kalpetta, 30 km from the real place; routed distance to the candidate viewpoint is 43.4 km vs stated 10.",
+    "One source puts the trailhead at Padinjarathara, which conflicts with Makkimala sources.",
+    "Steep 500 m final climb; 1.5-2 h trek from Thalappuzha."
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Candidate coordinate left out until confirmed on the ground; do not use the Kalpetta point."
+  },
+  "76": {
+   "name": "Bamboo Park",
+   "checked": "2026-10-18",
+   "identity": "not_found",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Stated coordinate is identical to id 77 (Bevco record) and lies 0.1 km from an OSM clothes shop (Wild Craft Store, node/7515020679). No OSM feature named Bamboo Park exists in Wayanad (name search for \"bamboo\" finds only Bamboo Corporation office node/10304098653 in Mananthavady, a government office)."
+   },
+   "anomalies": [
+    "Placeholder: same coordinate/desc/timing as 77; description is about spice shopping, unrelated to a park",
+    "stated 10 km, no routable trusted coordinate"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Cannot be identified as a real attraction. Nothing ties it to a real bamboo park (not verified)."
+  },
+  "77": {
+   "name": "Kerala State Beverages Corporation (BEVCO) outlet, Kalpetta",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "new",
+    "lat": 11.6261704,
+    "lon": 76.0907534,
+    "osm_ref": "node/14094359002",
+    "offset_km": 0.98,
+    "evidence": "OSM node name=Bevco shop=alcohol, Kalpetta-Wayanad Bypass Road, Kainatti. Stated coord (11.6197,76.0847) is a different shop (Wild Craft Store). Which BEVCO outlet the site means is unknown; this is the only one tagged in OSM at Kalpetta."
+   },
+   "anomalies": [
+    "Not an attraction: government liquor retail outlet",
+    "Copied coordinate shared with id 76",
+    "OSRM from OSM node: 3.2 km (stated 10)"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Not a visitor attraction or shopping destination; recommend removing from places list. If kept, use node/14094359002 (3.2 km by road)."
+  },
+  "78": {
+   "name": "Honey Museum (Beecraft), Old Vythiri",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Honey Museum is not mapped in OSM (no name match). Address per travel listings: Beecraft Building, Old Vythiri, Kunnathidavaka, Vythiri 673576. Stated coord 11.5375,76.0435 is in the Old Vythiri area (nearest OSM: Stream View Holiday Villas 0.1 km, anganwadi 0.07 km), plausible but cannot be confirmed from OSM. OSRM 11.9 km matches stated 12."
+   },
+   "timing": {
+    "value": "09:30-20:30 (one resort blog); another listing says 08:30-21:00",
+    "closed_days": "none listed; holiday hours may differ",
+    "source_url": "https://thewoodsresorts.com/blogs/honey-museum-in-wayanad",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "INR 30 adult, INR 20 child (one resort blog, unofficial)",
+    "source_url": "https://thewoodsresorts.com/blogs/honey-museum-in-wayanad",
+    "confidence": "low"
+   },
+   "duration_hours": 2.5,
+   "anomalies": [
+    "Site timing 09:00-17:00, closed Sun and fee 0 conflict with the blog (open daily to 20:30, paid ticket)"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "No official source found. Visit time \"at least 2-3 hours\" is from the blog. Verify fee and hours by phone or on site; consider adding the museum to OSM."
+  },
+  "79": {
+   "name": "Spices",
+   "checked": "2026-10-18",
+   "identity": "generic_section",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No coordinate; generic spice-shopping section, not a single place."
+   },
+   "anomalies": [
+    "No coordinates; generic"
+   ],
+   "recommendation": "keep",
+   "notes": "Generic category entry for spice shopping; nothing to verify as a single place."
+  },
+  "80": {
+   "name": "Unidentified (Periya/Varayal tea estate)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Stated coord is in Varayal village (Periya panchayat, Mananthavady): milk society 0.1 km, post office 0.12 km. OSM has no tea estate named Periya there. Nearest OSM tea features: Parisons Tea Estate way/815470954 (11.8347,75.9678), Priyadarshini Tea Factory way/1123284968 (11.8607,75.9911), WAM Tea factory way/943429196 (11.8176,75.9421); none is at the stated point."
+   },
+   "anomalies": [
+    "stated 38 km vs OSRM 46.1 km (+8.1 km, 21%): exceeds 4 km",
+    "No visitable plantation named Periya found online (Kerala Tourism lists Priyadarshini Tea Environs near Mananthavady, 08:30-16:30, INR 30, from a search snippet only)"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Owner should say which estate is meant. Candidate if it is the community estate: Priyadarshini Tea Environs (not confirmed)."
+  },
+  "81": {
+   "name": "Rippon (Ripon), Meppadi",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.535205,
+    "lon": 76.17894,
+    "osm_ref": "node/5114869818",
+    "offset_km": 0.45,
+    "evidence": "Stated point is 0.45 km from Puthukkad Junction (node/5114869818) and 0.6 km from GHS Ripon, inside Rippon village. Rippon village place node/7128096624 (11.5390,76.1683) is 1.2 km west. No OSM feature for a tea estate cycling start point."
+   },
+   "anomalies": [
+    "stated 10 km vs OSRM 17.7 km (+7.7 km, 77%): a third-party listing says Rippon Tea Factory is 18 km from Kalpetta",
+    "No official cycling product found"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Coordinate is acceptable for the village; correct stated_km to about 18 km. Cycling hours and fee unverified (no official source)."
+  },
+  "82": {
+   "name": "Bamboo rafting, Kuruva Island (Kuruvadweep), Kabini River",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "corrected",
+    "lat": 11.8226516,
+    "lon": 76.0898492,
+    "osm_ref": "way/491307142",
+    "offset_km": 9.68,
+    "evidence": "Stated coord (11.8089,76.0020) is in the centre of Mananthavady town (colony and library within 0.25 km), not on a river. Site text (\"950-acre protected river delta\") describes Kuruva Island. OSM: DMC Kuruva Office way/491307142 (opening_hours Mo-Fr 08:00-17:00, wayanadtourism.org), Kuruva float ferry way/491308986, island way/491307150. Alternative rafting site: Pozhuthana (Vythiri river) near Peringoda, not Kuruva."
+   },
+   "timing": {
+    "value": "09:00-16:30",
+    "closed_days": "Monday; closed during monsoon June to September",
+    "source_url": "https://www.keralatourism.org/malabar/kuruva-island/205",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "unverified: site says INR 600 and the page says INR 100; a third-party guide lists INR 220 Indian entry (unofficial)",
+    "source_url": "https://www.stayvista.com/blog/kuruva-island-kuruvadweep-ferry-timings-fee-monsoon-closure/",
+    "confidence": "low"
+   },
+   "duration_hours": 3,
+   "anomalies": [
+    "stated 10 km vs OSRM 31.4 km from corrected point (stated coord routed 31.7)",
+    "Site says closed Sunday; Kerala Tourism says closed Monday",
+    "Site fee INR 600 and INR 100 on the page conflict; no official figure found",
+    "Place is seasonal (Oct-May)"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Use the Kuruva entry (DMC office) coordinate and 31 km. Duration \"at least 3 hours\" per Kerala Tourism. If the owner meant Pozhuthana rafting instead, entry is near Peringoda (about 9:00-18:00 per https://pozhuthanapanchayat.lsgkerala.gov.in/en/node/28)."
+  },
+  "83": {
+   "name": "Nellarachal (Karapuzha reservoir viewpoint)",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.60151625745816,
+    "lon": 76.17700752883617,
+    "osm_ref": "node/12518415709",
+    "offset_km": 0.59,
+    "evidence": "Name \"Neelarchalu\" = Nellarachal (Kerala Tourism https://www.keralatourism.org/destination/nellarachal-wayanad-unexplored/761/, a peninsula in Karapuzha reservoir between Ambalavayal and Meppadi). OSM Nellarachal neighbourhood node 11.59625,76.17733 is 0.59 km from the stated point, which lies on the reservoir shore. Viewpoint itself not tagged in OSM."
+   },
+   "timing": {
+    "value": "Open 24 h; recommended 05:30-19:00, sunset 17:15-18:30 (blog)",
+    "source_url": "https://www.wayanadn.com/nellarachal-viewpoint-wayanad/",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "0 (free, blog); Kerala Tourism says the adjoining dam garden is ticketed, no amount",
+    "source_url": "https://www.wayanadn.com/nellarachal-viewpoint-wayanad/",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Site name Neelarchalu is a misspelling of Nellarachal; the review exclusion \"no place by this name\" is superseded",
+    "stated 49 km vs OSRM 22.7 km (blog: 21 km): stated km wrong"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Keep coordinate; rename to Nellarachal and set km to about 22. Not Neelimala (different viewpoint near Meppadi)."
+  },
+  "84": {
+   "name": "Muneeswaran Kunnu (Muneeshwaran Kunnu), Puthiyidam, Thalappuzha",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.863748932136927,
+    "lon": 75.9589761534138,
+    "osm_ref": "node/5921135766",
+    "offset_km": 0.08,
+    "evidence": "OSM tourism=attraction \"muneeshweram kunnu entry point\" is 0.08 km from the stated coordinate."
+   },
+   "timing": {
+    "value": "08:00-18:00 (travel guide, hill entry window)",
+    "source_url": "https://www.abadhotels.com/blogs/muneeswaran-kunnu-view-point.html",
+    "confidence": "low"
+   },
+   "duration_hours": 2,
+   "recommendation": "keep",
+   "notes": "Hours from a travel guide only (taken from a search summary); temple puja hours not published. Fee unverified. Duration is the site default."
+  },
+  "85": {
+   "name": "Bamboo Forest Valentine's Park, Nadavayal",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Not mapped in OSM. Listing address 'Ozanam Bhavan Road, 670721' matches the Nadavayal PIN (OSM Nadavayal tags 670721); stated coord is 0.62 km from Nadavayal junction facilities and 0.65 km from the village node (11.7411,76.1191), so the area is plausible but the point is unverified."
+   },
+   "timing": {
+    "source_url": "https://wanderlog.com/place/details/740070/bamboo-forest-valentines-park",
+    "confidence": "low"
+   },
+   "fee": {
+    "value": "0 per one aggregator; another source says INR 50 per hour and INR 100 (reviewers)",
+    "source_url": "https://wanderlog.com/place/details/740070/bamboo-forest-valentines-park",
+    "confidence": "low"
+   },
+   "duration_hours": 2,
+   "anomalies": [
+    "An aggregator lists the park as permanently closed: unverified, needs a phone or field check",
+    "Fee conflicts across sources"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Verify the park still operates before keeping it. Hours not taken from the aggregator (Google-derived)."
+  },
+  "86": {
+   "name": "Ali's Wayanadan Natural Honey (shop)",
+   "checked": "2026-10-18",
+   "identity": "not_found",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No OSM feature named Ali's or a honey shop in the area. Stated coord is 0.55 km from the Neerchal ward centre and 0.63 km from Narikkund bus stop (Ambalavayal side). The shop could not be found online."
+   },
+   "anomalies": [
+    "Private shop not findable in any source; stated km 25 matches OSRM 25.4"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Private business; verify owner and phone and add to OSM after a field visit."
+  },
+  "87": {
+   "name": "Kolagappara (Kolagapara) hill",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.656161744533218,
+    "lon": 76.19452691872974,
+    "osm_ref": "node/3903464482",
+    "offset_km": 0.32,
+    "evidence": "OSM natural=peak Kolagappara (ele tag 0, unreliable) 0.32 km away; Kolagappara Junction node/340355485 is 2.2 km east. Stated coordinate sits near a Panda Foods factory site 0.26 km away on the approach, i.e. the hill base."
+   },
+   "timing": {
+    "value": "06:00-18:00",
+    "source_url": "https://www.keralatourism.org/destination/kolagappara-wayanad-unexplored/779/",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "0 (no entry fee)",
+    "source_url": "https://www.keralatourism.org/destination/kolagappara-wayanad-unexplored/779/",
+    "confidence": "medium"
+   },
+   "anomalies": [
+    "Kerala Tourism says about 5.5 km from Meenangadi, steep ascent of about 2 km; trek duration not stated",
+    "stated 15 km vs OSRM 17.2: ok"
+   ],
+   "recommendation": "keep",
+   "notes": "Site closed-day Sun not confirmed by Kerala Tourism (none listed)."
+  },
+  "88": {
+   "name": "Gurukula Botanical Sanctuary, Kolymannu/Periya, Mananthavady",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "corrected",
+    "lat": 11.8223462,
+    "lon": 75.8490354,
+    "osm_ref": "way/741563818",
+    "offset_km": 0.47,
+    "evidence": "OSM leisure=nature_reserve \"Gurukula Botanical Sanctuary\", access=private, website gbsanctuary.org; Nominatim address \"kolymannu, Mananthavady\". Stated coord is 0.47 km west of the area centre."
+   },
+   "timing": {
+    "value": "09:00-16:00 (botanical day tours)",
+    "closed_days": "Sunday (tours Monday to Saturday)",
+    "source_url": "https://gbsanctuary.org/daytour/",
+    "confidence": "medium"
+   },
+   "anomalies": [
+    "stated 10 km vs OSRM 55.3-56.8 km (+45 km): Periya side of the district, not near Kalpetta",
+    "OSM access=private: visits by day tour only; booking process not described",
+    "Site holiday \"None\" conflicts with Monday-Saturday tours"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Set distance to about 55 km. Fee and tour duration not published on the sanctuary page."
+  },
+  "89": {
+   "name": "Kunkichira Museum (Kunkichira Heritage Museum, planned), Kunjome, Thondernadu",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "new",
+    "lat": 11.7682598,
+    "lon": 75.8321761,
+    "osm_ref": "way/1094670110",
+    "offset_km": 27.25,
+    "evidence": "OSM way tourism=museum name=Kunkichira Museum, wikidata Q134957425, address Kunjome (Thondernadu panchayat), Mananthavady. Stated coord was copied from the Tea Museum area, 27 km away. Kunkichira colony hamlet node/10026087426 is 0.1 km away."
+   },
+   "anomalies": [
+    "Project not confirmed open: Keralam Museum (Interactive Museum of Cultural History) issued a consultancy RFP on 7 Oct 2022 for setting it up (https://www.museumkeralam.org/pdfs/RFP-Notification.pdf); a Hindu headline \"Work on Kumkichira heritage museum begins\" is cited on Wikipedia (undated)",
+    "Page title says \"at Periya\": Kunjome is in Thondernadu, about 8 km from Periya",
+    "stated 12 km vs OSRM 48.6 km from corrected point"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Planned museum, no verified opening hours or fee; do not present as open. Coordinate is the OSM museum building."
+  },
+  "90": {
+   "name": "Football turf, Kalpetta (unidentified)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No named turf at stated coord; nearest OSM pitch is \"Dugout\" way/1419314070 (leisure=pitch, artificial_turf) at 11.6296,76.0843, 0.41 km away. Not confirmed to be the one meant."
+   },
+   "anomalies": [
+    "Generic name; stated 3 km vs OSRM 5.0 km (+2 km, 67%)",
+    "Turf operator and hours unknown"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Confirm which turf the page describes; Dugout is only a candidate."
+  },
+  "91": {
+   "name": "The Tribal Spot Near the Forest",
+   "checked": "2026-10-18",
+   "identity": "not_found",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Not found in OSM or on the web. Kunnathidavaka is a village near Vythiri (Wikipedia). Likely auto-generated record."
+   },
+   "anomalies": [
+    "No online trace of this shop",
+    "Record has no km or hours"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Unidentifiable; remove unless the owner has the shop details."
+  },
+  "92": {
+   "name": "Government and cooperative trust places (generic)",
+   "checked": "2026-10-18",
+   "identity": "generic_section",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Generic heading (Pookode, Kunnathidavaka), not a single shop."
+   },
+   "anomalies": [
+    "Not a specific place"
+   ],
+   "recommendation": "remove_or_rename_owner_decision",
+   "notes": "Generic section name; could be replaced by a real outlet such as Enn Ooru tribal market at Pookode (way/1335884632, 11.5297,76.0154), only if the owner agrees."
+  },
+  "93": {
+   "name": "Scheduled Tribe Cooperative Society outlet (unidentified)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "No Kalloor outlet found. Candidates at Pookode (Enn Ooru Tribal Heritage Village, way/1154334820): Nanma ST Kudumbasree Tribal Products node/12361598711 (11.5297,76.0152), Tribal Medicine Shop node/12361598708, Enn Ooru Tribal Market way/1335884632. Not confirmed as this record."
+   },
+   "timing": {
+    "value": "09:00-17:00 (OSM opening_hours on Enn Ooru village)",
+    "source_url": "https://www.openstreetmap.org/way/1154334820",
+    "confidence": "low"
+   },
+   "anomalies": [
+    "Candidate only; the Kalloor ward is a different area from the Enn Ooru site"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "If it means the Enn Ooru shops, hours 09:00-17:00 come from the OSM tag on the village (Department of Tribal Development)."
+  },
+  "94": {
+   "name": "Wayanad Heritage Museum, Ambalavayal (museum shop not verified)",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Wayanad Heritage Museum is not mapped in OSM under that name (Nominatim and Overpass name search returned nothing); Ambalavayal village node/3903463417 (11.6192,76.2120). A museum shop is not mentioned on the DTPC page."
+   },
+   "timing": {
+    "value": "09:00-17:30",
+    "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
+    "confidence": "medium"
+   },
+   "fee": {
+    "value": "Adults INR 30, children INR 20 (DTPC page; other sites list INR 20 and 10)",
+    "source_url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
+    "confidence": "medium"
+   },
+   "anomalies": [
+    "Shop within the museum unverified; museum is DTPC-run"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Museum identity ok, shop unverified. Add the museum to OSM from a field survey."
+  },
+  "95": {
+   "name": "Vanamoolika Herbals / Vanamoolika Organic, Pulpally",
+   "checked": "2026-10-18",
+   "identity": "ambiguous",
+   "coordinate": {
+    "status": "not_found",
+    "evidence": "Vanamoolika is a real women-run herbal cooperative at Pulpally (Mullankolly area per Bharatpedia; Arab News and The News Minute). Not mapped in OSM (no name match, Nominatim empty). Pulpally village node/3177030978; Mullenkolly road way/616850682 (11.8071,76.1749)."
+   },
+   "anomalies": [
+    "No street address or hours found",
+    "Whether it has a retail counter is unverified"
+   ],
+   "recommendation": "needs_field_visit",
+   "notes": "Real organisation (https://www.thenewsminute.com/amp/story/kerala/how-wayanad-spice-exporter-gained-popularity-among-european-food-producers-133088, https://www.arabnews.com/news/476621). Visit to confirm shop and location."
+  },
+  "96": {
+   "name": "Vellanvaidyar, Thirunelli",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.9098981,
+    "lon": 75.994875,
+    "osm_ref": "node/2640251422",
+    "offset_km": 0,
+    "evidence": "Stated coordinate equals OSM place=village Thirunelli (Mananthavady taluk): area centre only, as expected."
+   },
+   "anomalies": [
+    "OSRM 47.7 km: the stated 67 km is wrong (about 48 km)"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Area confirmed; correct stated_km to about 48. Healer identity and hours not checked (out of scope)."
+  },
+  "97": {
+   "name": "Keluvaidyar, Kattikulam",
+   "checked": "2026-10-18",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.8481113,
+    "lon": 76.0634257,
+    "osm_ref": "node/12498728159",
+    "offset_km": 0,
+    "evidence": "Stated coordinate equals OSM bus stop \"Kattikulam\" on Thalassery-Bavali Road (Kattikkulam, Mananthavady). Locality centre (relation/12712807) is 0.68 km away."
+   },
+   "anomalies": [
+    "OSRM 33.7 km: the stated 53 km is wrong (about 34 km)"
+   ],
+   "recommendation": "update_coordinate",
+   "notes": "Area confirmed; correct stated_km to about 34. Healer identity and hours not checked (out of scope)."
+  }
+ }
+}

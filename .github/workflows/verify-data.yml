@@ -1,0 +1,61 @@
+name: Verify place data
+
+# Weekly audit of the Wayanad place data (scripts/verify-data.mjs): integrity of the ids and the
+# distance matrix, page text vs data, stated distances vs fresh OSRM routes, the OpenStreetMap
+# objects and official source links recorded in data/verification.json.
+# Nothing is committed or pushed: the result is written to ONE open issue titled
+# "Data quality report" (created or updated), which is the work list for the next fix
+# (run `/verify-data` in Claude Code, or fix by hand, then open a pull request).
+# Free: public OpenStreetMap Nominatim + OSRM, no API keys.
+on:
+  schedule:
+    - cron: '23 3 * * 1'   # 03:23 UTC every Monday
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: verify-data
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run the audit
+        id: audit
+        run: |
+          # integrity errors (duplicate ids, a broken matrix) fail the job; everything else is a report
+          set +e
+          node scripts/verify-data.mjs --online --strict --out data-quality-report.md 2> audit.log
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat audit.log
+          exit 0
+
+      - name: Create or update the "Data quality report" issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create data-quality --color 1d76db --description "Wayanad data audit" --force || true
+          # GitHub issue bodies are limited to 65,536 characters
+          { echo "_Automatic weekly audit, $(date -u +%F). Not a bug report: it is the work list for the next data fix. See CLAUDE.md, section Data quality loop._"; echo; head -c 60000 data-quality-report.md; } > body.md
+          number=$(gh issue list --label data-quality --state open --json number --jq '.[0].number // empty')
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file body.md
+          else
+            gh issue create --title "Data quality report" --label data-quality --body-file body.md
+          fi
+
+      - name: Fail the job on integrity errors
+        if: steps.audit.outputs.status != '0'
+        run: |
+          echo "verify-data found integrity errors (see the issue and the log above)"
+          exit 1
