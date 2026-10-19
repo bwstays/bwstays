@@ -63,7 +63,7 @@
       }
     },
     "data_quality": {
-      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 36). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
+      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 37). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
       "descriptions_withheld": 0,
       "coordinates_withheld": 5,
       "distances_withheld": 0,
@@ -1294,7 +1294,7 @@
             "confidence": "high"
           },
           "official_fee": {
-            "value": "Group of 5: Indian adults INR 4000 (+INR 650 per extra person), students INR 2500 (+INR 350), foreigners INR 7000 (+INR 1250); still camera INR 53, video camera INR 301. Offline booking only; age 11+.",
+            "value": "Group of 5: Indian adults INR 4000 (+INR 650 per extra person), students INR 2500 (+INR 350), foreigners INR 7000 (+INR 1250); still camera INR 53, video camera INR 301. Offline booking only. DTPC: \"The trek is advisable for people aged 11-plus.\"",
             "source_url": "https://www.dtpcwayanad.com/destination/banasura-hills-wayanad",
             "confidence": "high"
           }
@@ -1823,7 +1823,11 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap way/142761196",
-          "official_timing": null,
+          "official_timing": {
+            "value": "05:30-12:00, 17:30-20:00",
+            "source_url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad",
+            "confidence": "medium"
+          },
           "official_fee": null
         }
       },
