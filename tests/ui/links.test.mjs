@@ -342,7 +342,13 @@ async function click(page, st, l, errors, kind, how = 'script') {
     const tryClick = async () => { await waitScrollIdle(page); await page.locator(`[data-uitest="${l.i}"]`).click({ timeout: 5000, noWaitAfter: true }); };
     try {
       // once more after the page has stopped moving (smooth scrolling from the previous click)
-      await tryClick().catch(async (e) => { if (/ERR_ABORTED|net::/.test(e.message)) throw e; if (how === 'phone') await openPhoneMenu(page); await tryClick(); });
+      await tryClick().catch(async (e) => {
+        if (/ERR_ABORTED|net::/.test(e.message)) throw e;
+        // cards lift on hover: move the mouse off them so the target stays still, then try again
+        await page.mouse.move(0, 0).catch(() => {});
+        if (how === 'phone') await openPhoneMenu(page);
+        await tryClick();
+      });
     } catch (e) {
       const msg = e.message.split('\n').find((x) => /intercepts|not visible|outside of the viewport|not stable|detached|Timeout/i.test(x)) || e.message.split('\n')[0];
       if (!/ERR_ABORTED|net::/.test(e.message)) {
