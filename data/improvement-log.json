@@ -275,6 +275,27 @@
    "data_missing": 47,
    "data_stale": 0,
    "dtpc_differs": 0
+  },
+  {
+   "at": "2026-10-19T12:42:47.086Z",
+   "cycle": 5,
+   "loop": "cycle-end",
+   "note": "enrich: Gurukula phone (own site), Chain Tree / Pakshipathalam evidence; gate: full link test (8 batches, 0 broken) and 4-browser test (0 broken, 272/276 clean) run in the foreground; cycle started on owner's override of the no-progress guard",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_report_at": "2026-10-19T12:37:50.495Z",
+   "compat_broken": 0,
+   "compat_look": 4,
+   "small_targets": 25,
+   "small_text": 0,
+   "compat_report_at": "2026-10-19T12:42:00.182Z",
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 47,
+   "data_stale": 0,
+   "dtpc_differs": 0
   }
  ]
 }
