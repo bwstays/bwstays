@@ -55,7 +55,10 @@ if (links?.run?.only?.length) {
   row.links_partial_run = true;
 } else if (links) { row.links_broken = links.failures.length; row.links_look = links.warnings.length; row.clicks = links.stats.clicked; row.links_report_at = links.run?.finished ?? null; }
 const compat = readJson('tests/ui/results/compat-report.json');
-if (compat) {
+if (compat && /--page|--browsers|--sizes/.test(compat.run?.command ?? '')) {
+  for (const k of ['compat_broken', 'compat_look', 'small_targets', 'small_text']) row[k] = lastFull(k);
+  row.compat_partial_run = true;
+} else if (compat) {
   row.compat_broken = compat.results.filter((r) => r.status === 'broken').length;
   row.compat_look = compat.results.filter((r) => r.status === 'look').length;
   const count = (what) => compat.results.reduce((n, r) => n + r.problems.filter((p) => p.what.startsWith(what)).reduce((m, p) => m + (Number((p.detail.match(/^(\d+)/) || [])[1]) || 1), 0), 0);

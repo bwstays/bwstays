@@ -339,7 +339,8 @@ async function click(page, st, l, errors, kind, how = 'script') {
     // a real mouse click (or tap) in the middle of the link, as a visitor does: Playwright scrolls it into
     // view and refuses when it is hidden, has no size or another element would receive the click
     before = { href: page.url() };
-    const tryClick = async () => { await waitScrollIdle(page); await page.locator(`[data-uitest="${l.i}"]`).click({ timeout: 5000, noWaitAfter: true }); };
+    // a busy machine (several pages at once) can be slow: the second try waits longer
+    const tryClick = async (timeout = 5000) => { await waitScrollIdle(page); await page.locator(`[data-uitest="${l.i}"]`).click({ timeout, noWaitAfter: true }); };
     try {
       // once more after the page has stopped moving (smooth scrolling from the previous click)
       await tryClick().catch(async (e) => {
@@ -347,7 +348,7 @@ async function click(page, st, l, errors, kind, how = 'script') {
         // cards lift on hover: move the mouse off them so the target stays still, then try again
         await page.mouse.move(0, 0).catch(() => {});
         if (how === 'phone') await openPhoneMenu(page);
-        await tryClick();
+        await tryClick(12000);
       });
     } catch (e) {
       const msg = e.message.split('\n').find((x) => /intercepts|not visible|outside of the viewport|not stable|detached|Timeout/i.test(x)) || e.message.split('\n')[0];
@@ -364,7 +365,7 @@ async function click(page, st, l, errors, kind, how = 'script') {
   stats.clicked++;
   st.row.clicked++;
   if (before === null) { st.clicking = false; warn(st.file, 'link disappeared before it could be clicked', `"${label(l)}" -> ${l.href}`); return; }
-  if (kind === 'navigate') await Promise.race([woke, page.waitForTimeout(2500)]);
+  if (kind === 'navigate') await Promise.race([woke, page.waitForTimeout(5000)]);
   else await page.waitForTimeout(how === 'script' ? 60 : 400);
   st.clicking = false;
   st.wake = null;

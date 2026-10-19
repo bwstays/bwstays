@@ -52,7 +52,13 @@
    },
    "timing": {
     "source_url": "https://www.keralatourism.org/wayanad/glass-temple-koottamunda.php (no timings)",
-    "confidence": "low"
+    "confidence": "low",
+    "shown_on_site": false,
+    "removed_from_site": "2026-10-19",
+    "removed_value": [
+     "09:00-18:30"
+    ],
+    "removed_reason": "Only low-confidence or no evidence (travel blogs, guesses); an official source is needed before it is shown."
    },
    "fee": {
     "source_url": "https://www.keralatourism.org/wayanad/glass-temple-koottamunda.php (no fee stated)",
@@ -827,7 +833,13 @@
     "value": "Trek 06:00-12:00, sightseeing to 16:00 (travel blogs; conflicting)",
     "source_url": null,
     "confidence": "low",
-    "note": "The DTPC adventure page (https://www.dtpcwayanad.com/adventure/cheengeri-hills) publishes no timing or fee (checked 2026-10-19); the value is from travel blogs."
+    "note": "The DTPC adventure page (https://www.dtpcwayanad.com/adventure/cheengeri-hills) publishes no timing or fee (checked 2026-10-19); the value is from travel blogs.",
+    "shown_on_site": false,
+    "removed_from_site": "2026-10-19",
+    "removed_value": [
+     "06:00-17:00"
+    ],
+    "removed_reason": "Only low-confidence or no evidence (travel blogs, guesses); an official source is needed before it is shown."
    },
    "fee": {
     "value": "INR 80 adult / 50 child trek (blog); IndiaHikes INR 100/60",
@@ -1659,12 +1671,19 @@
     "evidence": "OSM 'Arippara Waterfall' 58 m from stated. Nominatim reverse: Nellipoyil, Thamarassery, Kozhikode district."
    },
    "timing": {
-    "source_url": "https://www.keralatourism.org/destination/arippara-waterfalls-a-tranquil-escape-in-keralas-wilderness-unique/719",
-    "confidence": "low"
+    "source_url": "https://www.dtpckozhikode.com/destination/arippara-waterfalls",
+    "confidence": "high",
+    "value": "10:00-17:00, all days",
+    "closed_days": "none (all days)",
+    "checked": "2026-10-19",
+    "source_says": "All days: 10:00 AM - 05:00 PM"
    },
    "fee": {
-    "source_url": "https://www.keralatourism.org/destination/arippara-waterfalls-a-tranquil-escape-in-keralas-wilderness-unique/719",
-    "confidence": "low"
+    "source_url": "https://www.dtpckozhikode.com/destination/arippara-waterfalls",
+    "confidence": "high",
+    "value": "Adults INR 10, children INR 5; offline booking only",
+    "checked": "2026-10-19",
+    "source_says": "Adults: ₹10 · Kids: ₹5 · Only offline booking is available"
    },
    "anomalies": [
     "Not in Wayanad (Kozhikode); 15 km from Thiruvambady",
@@ -1683,7 +1702,14 @@
     "Contact +91 85933 98771 is shared with ids 36, 41, 42 and has no official source; remove.",
     "Timing 09:00-17:00, holiday 'Sun' and fee '0' are placeholders.",
     "Distance 37 km from Kalpetta looks short for a place 15 km beyond Thiruvambady; re-check the road distance."
-   ]
+   ],
+   "contact": {
+    "value": "+91 94969 24566 (ticket counter)",
+    "source_url": "https://www.dtpckozhikode.com/destination/arippara-waterfalls",
+    "confidence": "high",
+    "checked": "2026-10-19",
+    "source_says": "Ticket Counter +91 94969 24566"
+   }
   },
   "41": {
    "name": "Iruppu Falls (Lakshmana Tirtha Falls), Kodagu, Karnataka",
@@ -2424,7 +2450,15 @@
    "audit_flags": [
     "Generic section, not a place: timing 11:00-23:00, fee, rating and contact '+91-555 555 5555' are placeholders and should be removed.",
     "Content describes cooking classes with market visits that the site does not offer (template)."
-   ]
+   ],
+   "timing": {
+    "shown_on_site": false,
+    "removed_from_site": "2026-10-19",
+    "removed_value": [
+     "11:00-23:00"
+    ],
+    "removed_reason": "Only low-confidence or no evidence (travel blogs, guesses); an official source is needed before it is shown."
+   }
   },
   "61": {
    "name": "Rippon (Ripon) tea estate, Muppainad, near Meppadi",
@@ -2471,7 +2505,13 @@
    },
    "timing": {
     "source_url": "https://keralatourism.org/wayanad/boys-town-mananthavady.php",
-    "confidence": "low"
+    "confidence": "low",
+    "shown_on_site": false,
+    "removed_from_site": "2026-10-19",
+    "removed_value": [
+     "08:00-18:00"
+    ],
+    "removed_reason": "Only low-confidence or no evidence (travel blogs, guesses); an official source is needed before it is shown."
    },
    "anomalies": [
     "Kerala Tourism lists herbal garden, nature care centre, sericulture, permaculture centre and Gene Park (not a single farm); no hours or fee given.",
@@ -2506,7 +2546,13 @@
    },
    "timing": {
     "source_url": "https://keralatourism.org/wayanad/rars-agriculture-institution.php",
-    "confidence": "low"
+    "confidence": "low",
+    "shown_on_site": false,
+    "removed_from_site": "2026-10-19",
+    "removed_value": [
+     "09:00-16:30"
+    ],
+    "removed_reason": "Only low-confidence or no evidence (travel blogs, guesses); an official source is needed before it is shown."
    },
    "anomalies": [
     "Tourists may visit the nursery and buy plants; no official hours found; office phones on rarsamb.kau.in.",
@@ -2807,7 +2853,13 @@
    "timing": {
     "value": "08:00-18:00 (travel guide, hill entry window)",
     "source_url": "https://www.abadhotels.com/blogs/muneeswaran-kunnu-view-point.html",
-    "confidence": "low"
+    "confidence": "low",
+    "shown_on_site": false,
+    "removed_from_site": "2026-10-19",
+    "removed_value": [
+     "07:00-18:00"
+    ],
+    "removed_reason": "Only low-confidence or no evidence (travel blogs, guesses); an official source is needed before it is shown."
    },
    "duration_hours": 2,
    "recommendation": "keep",
@@ -2833,7 +2885,13 @@
    },
    "timing": {
     "source_url": "https://wanderlog.com/place/details/740070/bamboo-forest-valentines-park",
-    "confidence": "low"
+    "confidence": "low",
+    "shown_on_site": false,
+    "removed_from_site": "2026-10-19",
+    "removed_value": [
+     "07:00-18:00"
+    ],
+    "removed_reason": "Only low-confidence or no evidence (travel blogs, guesses); an official source is needed before it is shown."
    },
    "fee": {
     "value": "0 per one aggregator; another source says INR 50 per hour and INR 100 (reviewers)",

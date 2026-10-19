@@ -63,7 +63,7 @@
       }
     },
     "data_quality": {
-      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 34). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
+      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 40). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
       "descriptions_withheld": 0,
       "coordinates_withheld": 5,
       "distances_withheld": 0,
@@ -2006,8 +2006,16 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/6342847856",
-          "official_timing": null,
-          "official_fee": null
+          "official_timing": {
+            "value": "10:00-17:00, all days",
+            "source_url": "https://www.dtpckozhikode.com/destination/arippara-waterfalls",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adults INR 10, children INR 5; offline booking only",
+            "source_url": "https://www.dtpckozhikode.com/destination/arippara-waterfalls",
+            "confidence": "high"
+          }
         }
       },
       {
