@@ -1,0 +1,202 @@
+{
+ "_comment": "DTPC Wayanad page (slug under https://www.dtpcwayanad.com/destination/ or /adventure/) -> place ids in data/sitedata.js. Read by scripts/check-dtpc.mjs. mapping: sure | uncertain. not_on_site: DTPC pages with no BWStays place (candidates for new places, owner decision).",
+ "checked": "2026-10-19",
+ "pages": {
+  "900-kandi-wayanad": {
+   "ids": [
+    58
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad"
+  },
+  "banasura-hills-wayanad": {
+   "ids": [
+    47
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/banasura-hills-wayanad"
+  },
+  "banasura-meenmutty-waterfalls-wayanad": {
+   "ids": [
+    33
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/banasura-meenmutty-waterfalls-wayanad"
+  },
+  "banasura-sagar-dam-wayanad": {
+   "ids": [
+    45
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/banasura-sagar-dam-wayanad"
+  },
+  "brahmagiri-hills-wayanad": {
+   "ids": [
+    17
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad"
+  },
+  "chain-tree-lakkidi-wayanad": {
+   "ids": [
+    25
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad"
+  },
+  "chembra-peak-wayanad": {
+   "ids": [
+    18
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad"
+  },
+  "edakkal-caves-wayanad": {
+   "ids": [
+    21
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/edakkal-caves-wayanad"
+  },
+  "enooru-wayanad": {
+   "ids": [
+    57
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/enooru-wayanad"
+  },
+  "kanthanpara-waterfalls-wayanad": {
+   "ids": [
+    37
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/kanthanpara-waterfalls-wayanad"
+  },
+  "karapuzha-dam-wayanad": {
+   "ids": [
+    43
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad"
+  },
+  "karlad-lake": {
+   "ids": [
+    39
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/adventure/karlad-lake"
+  },
+  "cheengeri-hills": {
+   "ids": [
+    19
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/adventure/cheengeri-hills"
+  },
+  "kuruva-island-wayanad": {
+   "ids": [
+    15,
+    82
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/kuruva-island-wayanad",
+   "skip": [
+    "timing"
+   ],
+   "note": "DTPC lists activity times (rafting 09:00-16:30, kayaking 09:00-15:30), not island entry hours; timings are compared by hand."
+  },
+  "muthanga-wildlife-sanctuary-wayanad": {
+   "ids": [
+    28
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad"
+  },
+  "pallikunnu-church-wayanad": {
+   "ids": [
+    8
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/pallikunnu-church-wayanad"
+  },
+  "pazhassi-smarakam-wayanad": {
+   "ids": [
+    24
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/pazhassi-smarakam-wayanad"
+  },
+  "pookode-lake-wayanad": {
+   "ids": [
+    44
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/pookode-lake-wayanad"
+  },
+  "seethadevi-lava-kusa-temple-wayanad": {
+   "ids": [
+    9
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/seethadevi-lava-kusa-temple-wayanad"
+  },
+  "soochipara-waterfalls-wayanad": {
+   "ids": [
+    35
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad"
+  },
+  "thirunelli-temple-wayanad": {
+   "ids": [
+    4
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad",
+   "note": "Papanasini (5) is the stream near the temple; the temple hours do not apply to it."
+  },
+  "tholpetty-wildlife-sanctuary-wayanad": {
+   "ids": [
+    31
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad"
+  },
+  "valliyoorkavu-bhagavathy-temple-wayanad": {
+   "ids": [
+    14
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/valliyoorkavu-bhagavathy-temple-wayanad"
+  },
+  "wayanad-heritage-museum-wayanad": {
+   "ids": [
+    27
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad"
+  }
+ },
+ "not_on_site": [
+  {
+   "slug": "jain-temple-wayanad",
+   "url": "https://www.dtpcwayanad.com/destination/jain-temple-wayanad",
+   "place": "Jain Temple, Sultan Bathery (13th century, ASI protected)"
+  },
+  {
+   "slug": "kambamala-ecotourism-wayanad",
+   "url": "https://www.dtpcwayanad.com/destination/kambamala-ecotourism-wayanad",
+   "place": "Kambamala Ecotourism (KFDC stay)"
+  },
+  {
+   "slug": "korome-mosque-wayanad",
+   "url": "https://www.dtpcwayanad.com/destination/korome-mosque-wayanad",
+   "place": "Korome Mosque"
+  },
+  {
+   "slug": "priyadarshini-hills-wayanad",
+   "url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
+   "place": "Priyadarshini Hills (Priyadharshini Tea Environs)"
+  }
+ ]
+}

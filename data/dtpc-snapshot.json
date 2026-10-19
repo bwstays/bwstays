@@ -1,0 +1,528 @@
+{
+ "_comment": "What DTPC Wayanad published, as read by scripts/check-dtpc.mjs. Compared on the next run to report what DTPC changed.",
+ "fetched": "2026-10-19",
+ "pages": {
+  "cheengeri-hills": {
+   "url": "https://www.dtpcwayanad.com/adventure/cheengeri-hills",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [],
+   "title": "Cheengeri Hills"
+  },
+  "karlad-lake": {
+   "url": "https://www.dtpcwayanad.com/adventure/karlad-lake",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [],
+   "title": "Karlad Lake"
+  },
+  "kayaking": {
+   "url": "https://www.dtpcwayanad.com/adventure/kayaking",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [],
+   "title": "Kayaking"
+  },
+  "trekking": {
+   "url": "https://www.dtpcwayanad.com/adventure/trekking",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [],
+   "title": "Trekking"
+  },
+  "900-kandi-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/900-kandi-wayanad",
+   "timing": [
+    "06:30 AM to 06:30 PM"
+   ],
+   "fee": [
+    "Adult - Rs.250/-",
+    "Children - Rs.100/-",
+    "Rifle - Rs.50/-",
+    "Adventure swing - Rs.100/-",
+    "Zip line - Rs.350/-",
+    "Zip cycling - Rs.250/-"
+   ],
+   "contact": [
+    "+91 99474 60835, 95264 81745"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Skypark"
+  },
+  "banasura-hills-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/banasura-hills-wayanad",
+   "timing": [
+    "07:30 AM to 11:00 AM (entry 75 pax)"
+   ],
+   "fee": [
+    "Adult - Rs.4000 (5 pax)",
+    "Additional- Rs.650/pax",
+    "Students - Rs.2500 (5 pax)",
+    "Additional - Rs.350/pax",
+    "Foreigners - Rs.7000 (5 pax)",
+    "Additional - Rs.1250/pax",
+    "Camera - Rs.53 (still)",
+    "Camera - Rs.301 (video)"
+   ],
+   "contact": [
+    "+91 493 629 8399, +91 85476 02722"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Banasura Hills"
+  },
+  "banasura-meenmutty-waterfalls-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/banasura-meenmutty-waterfalls-wayanad",
+   "timing": [
+    "10:00 AM to 05:00 PM"
+   ],
+   "fee": [
+    "Adult - Rs.100/-",
+    "Students - Rs.50/-",
+    "Foreigner - Rs.200/-",
+    "Camera Still - Rs.53/-",
+    "Camera Video - Rs.301/-"
+   ],
+   "contact": [
+    "+91 85476 02722"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Banasura Meenmutty Waterfalls"
+  },
+  "banasura-sagar-dam-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/banasura-sagar-dam-wayanad",
+   "timing": [
+    "09:00 AM to 05:30 PM"
+   ],
+   "fee": [
+    "Adult - Rs.40/-",
+    "Child - Rs.20/-",
+    "Speed Boat - Rs.1000/- (5 pax)",
+    "Pontoon boat - Rs.2000/- (20 pax)",
+    "Kayaking - Rs.450/- (2 pax ½ hr), Rs.250/- (single seater½ hr)",
+    "Korakil - Rs.600/- (4 pax)",
+    "Zenopi - Rs.750/- (3 pax)",
+    "Sikara - Rs.1200/- (6 pax)",
+    "Zipline - Rs.350/- (1 pax)",
+    "Photography - Rs.50/- (still), Rs.1000/- (videography)",
+    "Van service - Rs.25/- (up & down)"
+   ],
+   "contact": [
+    "+91 493 627 3460"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Banasura Sagar Dam"
+  },
+  "brahmagiri-hills-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/brahmagiri-hills-wayanad",
+   "timing": [
+    "07:30 AM, 08:00 AM, 08:30 AM, 09:00 AM",
+    "09:30 AM"
+   ],
+   "fee": [
+    "Adult - Rs.700 (+ 600 guide fee = 1300)/pax",
+    "Adult - Rs.3500 (5 pax incl guide fee)",
+    "Students (only age above 15 allowed)",
+    "Additional - Rs.700/pax",
+    "Foreigners - Rs.7000 (5 pax)",
+    "Foreigner Additional - Rs.1500/pax"
+   ],
+   "contact": [
+    "+91 85476 02511, 85476 02506"
+   ],
+   "info": [
+    "Online booking is available"
+   ],
+   "title": "Brahmagiri Hills"
+  },
+  "chain-tree-lakkidi-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [
+    "Temple Committee Member",
+    "+91 70343 21001",
+    "No entry fee",
+    "All days: Open during daytime"
+   ],
+   "title": "Chain Tree, Lakkidi"
+  },
+  "chembra-peak-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/chembra-peak-wayanad",
+   "timing": [
+    "07:00 AM to 03:00 PM (entry time)",
+    "07:00 AM to 12:00 AM Trekking (Up to 88 pax)"
+   ],
+   "fee": [
+    "Visit - Rs.50/-",
+    "Foreigners visit - Rs.80/-",
+    "Trekking - Rs.4000 (5 pax)",
+    "Additional - Rs.800/pax",
+    "Students - Rs.1000 (5 pax)",
+    "Additional - Rs.200/pax",
+    "Foreigners - Rs.8000 (5 pax)",
+    "Additional - Rs.1600/pax",
+    "Camera Still - Rs.53/-",
+    "Video Camera - Rs.301/-"
+   ],
+   "contact": [
+    "+91 493 628 2001"
+   ],
+   "info": [
+    "All days:",
+    "Only offline booking is available"
+   ],
+   "title": "Chembra Peak"
+  },
+  "edakkal-caves-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/edakkal-caves-wayanad",
+   "timing": [
+    "08:30 AM to 04:00 PM (upto 1920 pax)",
+    "(All Monday Holiday)"
+   ],
+   "fee": [
+    "Adult - Rs.50/-",
+    "Child - Rs.30/-",
+    "Photo shoot - Rs.1000/-"
+   ],
+   "contact": [
+    "+91 493 621 5339, +91 94466 02134, 94460 52134"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Edakkal Caves"
+  },
+  "enooru-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/enooru-wayanad",
+   "timing": [],
+   "fee": [
+    "Adult - Rs.50/-",
+    "Camera - Rs.150/-",
+    "Shuttle service jeep - Rs.40/- (up & down)",
+    "Special jeep - Rs.320/- (8-seater)",
+    "Special tavera - Rs.490/- (7-seater)"
+   ],
+   "contact": [],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "EnOoru"
+  },
+  "jain-temple-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/jain-temple-wayanad",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [
+    "All Days: 08:00 AM - 12:00 PM",
+    "02:00 PM - 06:00 PM"
+   ],
+   "title": "Jain Temple"
+  },
+  "kambamala-ecotourism-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/kambamala-ecotourism-wayanad",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [
+    "+91 79077 49143",
+    "+91 82898 21600"
+   ],
+   "title": "Kambamala Ecotourism"
+  },
+  "kanthanpara-waterfalls-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/kanthanpara-waterfalls-wayanad",
+   "timing": [
+    "09:00 AM to 04:30 PM"
+   ],
+   "fee": [
+    "Adult - Rs.40/-",
+    "Child - Rs.30/-",
+    "Photo shoot - Rs.1000/-"
+   ],
+   "contact": [
+    "+91 493 621 5342, +91 75938 92953"
+   ],
+   "info": [],
+   "title": "Kanthanpara Waterfalls"
+  },
+  "karapuzha-dam-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad",
+   "timing": [
+    "09:00 AM to 06:00 PM"
+   ],
+   "fee": [
+    "Adult - Rs.30/-",
+    "Child - Rs.10/- (below age 15)",
+    "Zipline - Rs.390/- (40kg+)",
+    "Space Tower - Rs.250/-",
+    "Giant Swing - Rs.280/- (40kg+)",
+    "Twister - Rs.180/-",
+    "Flying Chair - Rs.130/-",
+    "Trumbo in Park - Rs.80/- (Max weight 40kg)",
+    "Flying Cinema - Rs.180/-",
+    "VR Zone - Rs.199/- (single), Rs.180/- (double), Rs.170/- (six-seater)"
+   ],
+   "contact": [
+    "+91 493 620 2246, 624 7276"
+   ],
+   "info": [],
+   "title": "Karapuzha Dam"
+  },
+  "korome-mosque-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/korome-mosque-wayanad",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [
+    "Office Number",
+    "+ 91 94972 09528",
+    "All Days: 09:00 AM - 06:00 PM"
+   ],
+   "title": "Korome Mosque"
+  },
+  "kuruva-island-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/kuruva-island-wayanad",
+   "timing": [
+    "1.",
+    "Rafting (Adults)",
+    "20 mins",
+    "100",
+    "09:00 AM to 04:30 PM",
+    "2.",
+    "Rafting (Children)",
+    "50",
+    "3.",
+    "Kayaking (2 Persons)",
+    "09:00 AM to 03:30 PM (Upto 488 pax)"
+   ],
+   "fee": [
+    "Adults: Rs. 220/-",
+    "Foreigners: Rs. 440/-",
+    "Students: Rs. 100/-"
+   ],
+   "contact": [
+    "+91 75938 92956"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Kuruva Island"
+  },
+  "muthanga-wildlife-sanctuary-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
+   "timing": [
+    "06:00 AM to 10:00 AM & 03:00 PM to 06:00 PM",
+    "(Morning Trip 8 Bus, 8 Jeep)",
+    "(Evening Trip 6 Bus, 7Jeep)",
+    "[After filling these vehicles ticket will be closed]",
+    "Cerambi stay Available"
+   ],
+   "fee": [
+    "Bus",
+    "Adult - Rs.350/-",
+    "Child - Rs. 175/-",
+    "Student - Rs. 175/-",
+    "Foreigners - Rs. 700/-",
+    "Camera - Rs. 45/-",
+    "Video Camera - Rs. 255/-",
+    "Jeep",
+    "Indian - Rs.2100 (4 pax) | Rs.2410 (5 pax) | Rs.2725 (6 Pax)",
+    "Foreigner - Rs.4200 (4 Pax) | Rs.4500 (5 Pax) | Rs.4800 (6 Pax)"
+   ],
+   "contact": [
+    "+91 99472 71015"
+   ],
+   "info": [
+    "Online booking available"
+   ],
+   "title": "Muthanga Wildlife Sanctuary"
+  },
+  "pallikunnu-church-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/pallikunnu-church-wayanad",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [
+    "Office Number",
+    "+ 91 493 628 6623",
+    "All Days: 07:00 AM - 07:00 PM"
+   ],
+   "title": "Pallikunnu Church"
+  },
+  "pazhassi-smarakam-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/pazhassi-smarakam-wayanad",
+   "timing": [
+    "09:00 AM to 05:30 PM"
+   ],
+   "fee": [
+    "Adult - Rs.30/-",
+    "Child - Rs.20/-",
+    "Photo shoot - Rs.1000/-"
+   ],
+   "contact": [
+    "+91 75938 92958"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Pazhassi Smarakam"
+  },
+  "pookode-lake-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/pookode-lake-wayanad",
+   "timing": [
+    "09:00 AM to 06:00 PM",
+    "09:00 AM to 05:00 PM (boat time)"
+   ],
+   "fee": [
+    "Adult - Rs.40/-",
+    "Child - Rs.30/-",
+    "2 seat boat - Rs.300/-",
+    "4 seat boat - Rs.450/-",
+    "7 seat row boat - Rs.700/-",
+    "Photo shoot - Rs.1000/-"
+   ],
+   "contact": [
+    "+91 75938 92951, 93872 95184"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Pookode Lake"
+  },
+  "priyadarshini-hills-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
+   "timing": [
+    "09:00 AM to 05:00PM"
+   ],
+   "fee": [
+    "Adult - Rs.100/-",
+    "Child - Rs.50/-",
+    "Room - Rs.3360 (with GST) | Rs. 2800 (with GST) | Rs.2240/- (with GST) | Rs.1120/- (with GST)"
+   ],
+   "contact": [
+    "+91 94957 47900"
+   ],
+   "info": [
+    "Per Person: ₹30",
+    "All days: 08:30 AM - 04:30 PM",
+    "Only offline booking is available"
+   ],
+   "title": "Priyadarshini Hills"
+  },
+  "seethadevi-lava-kusa-temple-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/seethadevi-lava-kusa-temple-wayanad",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [
+    "Office Number",
+    "+ 91 493 624 1175",
+    "All Days: 05:00 AM - 12:30 PM",
+    "05:30 PM - 07:30 PM"
+   ],
+   "title": "Seethadevi Lava Kusa Temple"
+  },
+  "soochipara-waterfalls-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad",
+   "timing": [
+    "08:00 AM to 05:00 PM (upto 500 pax)"
+   ],
+   "fee": [
+    "Adult - Rs.150/-",
+    "Child - Nil (above 10 Age to Below 13 Age-50)",
+    "Students - Rs.50/-",
+    "Foreigner - Rs.300/-"
+   ],
+   "contact": [
+    "+91 85472 37513"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Soochipara Waterfalls"
+  },
+  "thirunelli-temple-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/thirunelli-temple-wayanad",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [
+    "Office Number",
+    "+ 91 493 521 0201",
+    "+91 85473 36201",
+    "All Days: 05:30 AM - 12:00 PM",
+    "05:30 PM - 08:00 PM"
+   ],
+   "title": "Thirunelli Temple"
+  },
+  "tholpetty-wildlife-sanctuary-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/tholpetty-wildlife-sanctuary-wayanad",
+   "timing": [
+    "06:00 AM to 10:00 AM & 03:00 PM to 06:00 PM",
+    "Cerambi stay Available",
+    "Dormitory stay available (Bevur)"
+   ],
+   "fee": [
+    "Indian",
+    "Jeep - Rs.2100 (4 Pax) | Rs.2410 (5 Pax) | Rs.2725 (6 Pax)",
+    "Foreign",
+    "Jeep – Rs.4200 (4 Pax) | Rs.4500 (5 Pax) | Rs.4800 (6 Pax)"
+   ],
+   "contact": [
+    "+91 493 525 0853",
+    "+91 79075 43321, 99462 50853"
+   ],
+   "info": [
+    "Online booking available"
+   ],
+   "title": "Tholpetty Wildlife Sanctuary"
+  },
+  "valliyoorkavu-bhagavathy-temple-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/valliyoorkavu-bhagavathy-temple-wayanad",
+   "timing": [],
+   "fee": [],
+   "contact": [],
+   "info": [
+    "Office Number",
+    "+91 493 524 0084",
+    "All Days: 06:00 AM - 12:30 PM",
+    "05:30 PM - 08:00 PM"
+   ],
+   "title": "Valliyoorkavu Bhagavathy Temple"
+  },
+  "wayanad-heritage-museum-wayanad": {
+   "url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad",
+   "timing": [
+    "09:00 AM to 05:30 PM"
+   ],
+   "fee": [
+    "Adult - Rs.30/-",
+    "Child - Rs.20/-",
+    "Multi Theatre - Rs.20/pax (min 500)",
+    "Multi Media with show - Rs.50/- (30 ticket+20)",
+    "Photo shoot - Rs.1000/-"
+   ],
+   "contact": [
+    "+91 493 629 4668, +91 75938 92955"
+   ],
+   "info": [
+    "Only offline booking is available"
+   ],
+   "title": "Wayanad Heritage Museum"
+  }
+ }
+}
