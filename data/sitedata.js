@@ -2038,7 +2038,7 @@ const siteData = {
       ],
       holidays: "Sun",
       timing: ["09:00-16:00"],
-      Contact: "",
+      Contact: "+91 702 509 7426",
       seasontovisit: ["All Season"],
       distance: "57",
       transport: "Public",

@@ -1067,7 +1067,7 @@
   },
   "25": {
    "name": "Chain Tree (Changala Maram), Lakkidi",
-   "checked": "2026-10-18",
+   "checked": "2026-10-19",
    "identity": "real",
    "coordinate": {
     "status": "verified_stated",
@@ -1080,12 +1080,14 @@
     "value": "daytime, every day",
     "closed_days": "none",
     "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
-    "confidence": "medium"
+    "confidence": "high",
+    "quote": "All days: Open during daytime"
    },
    "fee": {
     "value": "No entry fee",
     "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
-    "confidence": "medium"
+    "confidence": "high",
+    "quote": "No entry fee"
    },
    "anomalies": [
     "Site timing 09:00-17:00 closed Sun is not supported (public roadside tree and shrine)"
@@ -1119,6 +1121,13 @@
      "verdict": "match",
      "dtpc_says": "No entry fee"
     }
+   },
+   "contact": {
+    "value": null,
+    "candidate": "+91 70343 21001",
+    "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
+    "quote": "Temple Committee Member",
+    "note": "DTPC lists this mobile with the label \"Temple Committee Member\". Not shown on the site until the owner decides (the label may be a template leftover)."
    }
   },
   "26": {
@@ -1319,7 +1328,7 @@
   },
   "30": {
    "name": "Pakshipathalam (Brahmagiri Hills, Thirunelli)",
-   "checked": "2026-10-18",
+   "checked": "2026-10-19",
    "identity": "real",
    "coordinate": {
     "status": "not_found",
@@ -1352,7 +1361,14 @@
     "Site timing 07:00-17:00 and fee '0' are not sourced; the trek needs Forest Department permission and a permit fee (amount not published officially). DTPC's Brahmagiri Hills trek (INR 1,300 incl. guide) is a different trek - do not copy its fee.",
     "Contact '+91-333 333 3333' is a placeholder.",
     "Category 'wildlife' is arguable; it is a trekking destination."
-   ]
+   ],
+   "access": {
+    "value": "Prior permission from the Forest Department is needed",
+    "quote": "prior permission from Forest Department is necessary to visit the place",
+    "source_url": "https://www.keralatourism.org/wayanad/pakshipathalam-brahmagiri-hills.php",
+    "confidence": "medium",
+    "contact_lead": "DFO Wayanad (North), Mananthavady, 04935 240233 (Kerala Forest Department staff directory); no official page links it to Pakshipathalam, so it is not shown."
+   }
   },
   "31": {
    "name": "Tholpetty Wildlife Sanctuary (Tholpetty range of Wayanad Wildlife Sanctuary)",
@@ -2983,7 +2999,7 @@
   },
   "88": {
    "name": "Gurukula Botanical Sanctuary, near Periya, Mananthavady taluk",
-   "checked": "2026-10-18",
+   "checked": "2026-10-19",
    "identity": "real",
    "coordinate": {
     "status": "verified_stated",
@@ -2997,7 +3013,8 @@
     "value": "09:00-16:00 (botanical day tours)",
     "closed_days": "Sunday (tours Monday to Saturday)",
     "source_url": "https://gbsanctuary.org/daytour/",
-    "confidence": "medium"
+    "confidence": "high",
+    "quote": "The garden is open to the public Monday to Saturday from 9 AM to 4 PM"
    },
    "anomalies": [
     "stated 10 km vs OSRM 55.3-56.8 km (+45 km): Periya side of the district, not near Kalpetta",
@@ -3015,7 +3032,20 @@
     "Page file name 'bw-pepper-farm-wayanad.html' and content ('farm visit... modern and traditional farming methods') describe a farm, not a botanical sanctuary.",
     "description figures ('around 100 native trees... 500 herbs and shrubs') are not confirmed; 'over 2,000 plant species' is supported by Rainforest Concern. Area differs between sources (32 ha to 75 acres), so do not publish an area.",
     "fee '0' (no fee published by the sanctuary) and contact '+91-444 444 4444' are template values."
-   ]
+   ],
+   "contact": {
+    "value": "+91 702 509 7426",
+    "source_url": "https://gbsanctuary.org/contact/",
+    "quote": "Tel: +91 702 509 7426",
+    "confidence": "high",
+    "note": "The sanctuary's own site. Email on the same page is behind Cloudflare email protection (not recorded)."
+   },
+   "fee": {
+    "value": null,
+    "source_url": "https://gbsanctuary.org/daytour/",
+    "note": "not published by the sanctuary's site",
+    "confidence": "high"
+   }
   },
   "89": {
    "name": "Kunkichira Museum (Kunkichira Heritage Museum, planned), Kunjome, Thondernadu",
