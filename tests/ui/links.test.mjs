@@ -190,10 +190,12 @@ async function testPage(file) {
         const exists = await page.evaluate((h) => !!(document.getElementById(h) || document.getElementsByName(h)[0]) || h === 'top', hash);
         if (exists) { await click(page, st, l, errors, 'hash'); continue; }
         // not an id: the page script may map it (footer.html#tc -> #section-tc); it must scroll somewhere
-        await page.evaluate(() => window.scrollTo(0, 0));
+        // instant reset (the site scrolls smoothly), then give the smooth scroll up to 3 s on a slow machine
+        await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+        await page.waitForFunction(() => window.scrollY === 0, null, { timeout: 3000 }).catch(() => {});
         await click(page, st, l, errors, 'hash');
-        await page.waitForTimeout(700);
-        if (!(await page.evaluate(() => window.scrollY > 50))) fail(file, 'link to a missing section on the same page', `"${label(l)}" -> #${hash}`);
+        const moved = await page.waitForFunction(() => window.scrollY > 50, null, { timeout: 3000, polling: 100 }).then(() => true, () => false);
+        if (!moved) fail(file, 'link to a missing section on the same page', `"${label(l)}" -> #${hash}`);
         continue;
       }
       if (!/^https?:/i.test(l.abs)) { warn(file, 'link with an unusual scheme', `"${label(l)}" -> ${href}`); continue; }
@@ -298,8 +300,7 @@ async function hashWorks(f, hash) {
   const page = await newPage();
   try {
     await page.goto(`${SITE}/${f}#${encodeURIComponent(hash)}`, { waitUntil: 'load', timeout: 45000 });
-    await page.waitForTimeout(1800);
-    return await page.evaluate(() => window.scrollY > 50);
+    return await page.waitForFunction(() => window.scrollY > 50, null, { timeout: 5000, polling: 100 }).then(() => true, () => false);
   } catch { return false; } finally { await page.close().catch(() => {}); }
 }
 const pending = [];
