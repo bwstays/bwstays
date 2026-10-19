@@ -67,6 +67,26 @@ body #contact-form label {
         align-items: center;
         min-height: 24px;
     }
+    /* the phone rule that makes .border-bottom a 50 px divider line must not squeeze the guest form card */
+    #guestinformation.border-bottom {
+        width: auto !important;
+        margin: 0 0 1rem !important;
+    }
+    /* checkboxes (select villa, accept terms) at least 24 x 24 px */
+    .form-check {
+        padding-left: 2.25rem;
+    }
+    .form-check > .form-check-input {
+        width: 24px;
+        height: 24px;
+        margin-top: 0;
+        margin-left: -2.25rem;
+    }
+    .form-check > .form-check-label {
+        min-height: 24px;
+        display: inline-flex;
+        align-items: center;
+    }
     a[aria-label$="on Google Maps"],
     .social-icon,
     #linkedin, #twitter, #facebook, #instagram, #youtube,

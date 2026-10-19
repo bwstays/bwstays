@@ -266,7 +266,7 @@ npm install                             # once: playwright-core and postcss from
 node tests/ui/links.test.mjs            # every page in Chrome, every link clicked; --external also requests outside links
 ```
 
-`tests/ui/README.md` lists the checks. Pages are served from the git-tracked files with case-sensitive paths, as on GitHub Pages. `.github/workflows/ui-tests.yml` runs it on every push and pull request, and with `--external` on Mondays. Report: `tests/ui/results/links-report.md` (not committed).
+`tests/ui/README.md` lists the checks. Pages are served from the git-tracked files with case-sensitive paths, as on GitHub Pages. `.github/workflows/ui-tests.yml` runs it on every push and pull request, and with `--external` on Mondays. Report: `tests/ui/results/links-report.md` (not committed). When long jobs get stopped, `node tests/ui/run-batches.mjs` runs both UI tests in short batches and combines them into one full report (see the README).
 
 ### Browsers and screen sizes
 
