@@ -212,6 +212,27 @@
    "data_missing": 47,
    "data_stale": 0,
    "dtpc_differs": 0
+  },
+  {
+   "at": "2026-10-19T10:50:39.071Z",
+   "cycle": 2,
+   "loop": "cycle-end",
+   "note": "merged on owner's instruction; local UI gate stopped (low memory), CI ui-tests run on push; browser test carried into cycle 3 gate",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_partial_run": true,
+   "compat_broken": 0,
+   "compat_look": 28,
+   "small_targets": 557,
+   "small_text": 48,
+   "compat_partial_run": true,
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 47,
+   "data_stale": 0,
+   "dtpc_differs": 0
   }
  ]
 }
