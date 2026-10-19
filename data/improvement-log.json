@@ -254,6 +254,27 @@
    "data_missing": 47,
    "data_stale": 0,
    "dtpc_differs": 0
+  },
+  {
+   "at": "2026-10-19T11:40:12.469Z",
+   "cycle": 4,
+   "loop": "cycle-end",
+   "note": "ui: map credit and Eatery links 24 px on phones (Chrome phone look-at 4 -> 1); data: DTPC 0 differences; enrich research still running (moves to cycle 5); merged on owner's instruction, full UI tests not run (low memory)",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_partial_run": true,
+   "compat_broken": 0,
+   "compat_look": 28,
+   "small_targets": 557,
+   "small_text": 48,
+   "compat_partial_run": true,
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 47,
+   "data_stale": 0,
+   "dtpc_differs": 0
   }
  ]
 }
