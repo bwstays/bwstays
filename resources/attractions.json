@@ -63,7 +63,7 @@
       }
     },
     "data_quality": {
-      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 37). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
+      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 34). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
       "descriptions_withheld": 0,
       "coordinates_withheld": 5,
       "distances_withheld": 0,
@@ -291,8 +291,16 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": null,
-          "official_timing": null,
-          "official_fee": null
+          "official_timing": {
+            "value": "09:30-18:30, Monday to Friday (weekend hours not published)",
+            "source_url": "https://www.honeymuseum.in/contact.html",
+            "confidence": "medium"
+          },
+          "official_fee": {
+            "value": "INR 30 (guided tour)",
+            "source_url": "https://www.honeymuseum.in/themuseum.html",
+            "confidence": "medium"
+          }
         }
       },
       {
@@ -322,7 +330,11 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": null,
-          "official_timing": null,
+          "official_timing": {
+            "value": "09:00-18:00, daily",
+            "source_url": "https://www.keralatourism.org/faq/are-there-multiple-tea-tasting-experience-centres-in-munnar-and-other-areas",
+            "confidence": "medium"
+          },
           "official_fee": null
         }
       },
@@ -2196,8 +2208,16 @@
         "verification": {
           "last_checked": "2026-10-18",
           "coordinate_source": "OpenStreetMap node/3265690824",
-          "official_timing": null,
-          "official_fee": null
+          "official_timing": {
+            "value": "06:00-18:00, all days",
+            "source_url": "https://www.dtpckozhikode.com/destination/thusharagiri-waterfalls",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "INR 30 per person; offline booking only",
+            "source_url": "https://www.dtpckozhikode.com/destination/thusharagiri-waterfalls",
+            "confidence": "high"
+          }
         }
       },
       {

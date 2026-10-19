@@ -65,6 +65,48 @@
    "data_stale": 0,
    "dtpc_differs": 0,
    "links_partial_run": true
+  },
+  {
+   "at": "2026-10-19T07:32:39.735Z",
+   "cycle": 1,
+   "loop": "ui",
+   "note": "CSS block: text >= 11 px, phone targets >= 24 px. Combinations without problems 60 -> 200 / 276.",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_partial_run": true,
+   "compat_broken": 0,
+   "compat_look": 76,
+   "small_targets": 557,
+   "small_text": 48,
+   "compat_report_at": "2026-10-19T07:32:24.237Z",
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 50,
+   "data_stale": 0,
+   "dtpc_differs": 0
+  },
+  {
+   "at": "2026-10-19T07:33:49.454Z",
+   "cycle": 1,
+   "loop": "enrich",
+   "note": "3 places enriched from official sources (Thusharagiri, Honey Museum, Tea Museum); Gandhi Museum and Lakkidi: nothing official.",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_partial_run": true,
+   "compat_broken": 0,
+   "compat_look": 76,
+   "small_targets": 557,
+   "small_text": 48,
+   "compat_report_at": "2026-10-19T07:32:24.237Z",
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 48,
+   "data_stale": 0,
+   "dtpc_differs": 0
   }
  ]
 }
