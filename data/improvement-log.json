@@ -107,6 +107,27 @@
    "data_missing": 48,
    "data_stale": 0,
    "dtpc_differs": 0
+  },
+  {
+   "at": "2026-10-19T08:35:40.828Z",
+   "cycle": 1,
+   "loop": "cycle-end",
+   "note": "Merged bf8ead26. Gate: checks pass, browser test 0 broken, link test 3 timing flakes under load (all 3 pages pass on re-run twice).",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_partial_run": true,
+   "compat_broken": 0,
+   "compat_look": 76,
+   "small_targets": 557,
+   "small_text": 48,
+   "compat_report_at": "2026-10-19T08:31:10.739Z",
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 48,
+   "data_stale": 0,
+   "dtpc_differs": 0
   }
  ]
 }
