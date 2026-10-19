@@ -322,7 +322,7 @@ const siteData = {
         "https://www.bwstays.com/assets/img/falls/bw-stays-thusharagiri-falls-service-apartment.webp",
       ],
       holidays: "NA",
-      timing: [],
+      timing: ["06:00-18:00"],
       Contact: "",
       seasontovisit: [
         "Summer (March-May)",
@@ -335,7 +335,7 @@ const siteData = {
       map: "https://www.google.com/maps/place/Thusharagiri+Waterfalls/@11.4728749,76.0541761,17z",
       rating: "",
       hrs: "2",
-      fee: "",
+      fee: "INR 30 per person",
       aliases: [],
       content:
         "Thusharagiri has three falls: Erattumukku, Mazhavil Chattom and Thumbithullumpara (Thenpara), 100-500 m apart. The tallest drops about 75 m. Forest trails lead to the upper falls. It is in Kozhikode district, about 50 km from Kozhikode city, and is managed with DTPC Kozhikode.",
@@ -453,7 +453,7 @@ const siteData = {
         "https://www.bwstays.com/assets/img/museum/bw-stays-wayanad-tea-museum.webp",
       ],
       holidays: "NA",
-      timing: [],
+      timing: ["09:00-18:00"],
       Contact: "",
       seasontovisit: [
         "Summer (March-May)",
@@ -503,8 +503,8 @@ const siteData = {
         "https://www.bwstays.com/assets/img/museum/bw-stays-honey-museum-wayanad.webp",
       ],
       holidays: "NA",
-      timing: [],
-      Contact: "",
+      timing: ["09:30-18:30 (Mon-Fri)"],
+      Contact: "+91 92070 79001",
       seasontovisit: ["All Season"],
       distance: "12",
       transport: "Public",
@@ -512,7 +512,7 @@ const siteData = {
       map: "https://www.google.com/maps/place/Honey+Museum+Wayanad/@11.5375153,76.0435405,17z",
       rating: "",
       hrs: "2",
-      fee: "",
+      fee: "INR 30 (guided tour)",
       aliases: [],
 
       content:

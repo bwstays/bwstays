@@ -852,6 +852,7 @@ Distance: 14 km
 [Kurumbalakotta](https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html)
 Distance: 14 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 15 km
 [Kolagapara](https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html)
 Time: 06:00-18:00
@@ -863,6 +864,8 @@ Time: 09:00-18:00
 Distance: 17 km
 
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+
+Time: 09:30-18:30 (Mon-Fri)
 
 Distance: 17 km
 
@@ -989,6 +992,7 @@ Public
 ###### Thusharagiri
 31km from Kalpetta
 Three waterfalls near Kodenchery in Kozhikode district, the tallest dropping about 75 m, within a fe...
+06:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
 
@@ -1028,6 +1032,7 @@ Public
 
 #### Nearby Places
 [Thusharagiri](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
+Time: 06:00-18:00
 Distance: 7 km
 
 #### Food & Dining
@@ -1679,6 +1684,7 @@ Distance: 6 km
 Time: 07:30-11:00
 Distance: 11 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 14 km
 [Kurumbalakotta](https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html)
 Distance: 14 km
@@ -2148,12 +2154,15 @@ Distance: 3 km
 Time: 09:00-17:00 (Mon-Fri),09:00-18:00 (Sat, Sun, holidays)
 Distance: 4 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+Time: 09:30-18:30 (Mon-Fri)
 Distance: 5 km
 [Chundail Tea Estate](https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html)
 Distance: 10 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 14 km
 [Thusharagiri](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
+Time: 06:00-18:00
 Distance: 16 km
 [Mailadippara](https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html)
 Distance: 17 km
@@ -2543,6 +2552,7 @@ Public
 ###### Thusharagiri
 31km from Kalpetta
 Three waterfalls near Kodenchery in Kozhikode district, the tallest dropping about 75 m, within a fe...
+06:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
 
@@ -2668,6 +2678,7 @@ Public
 Time: 09:00-18:00
 Distance: 7 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 8 km
 [Tea Plantation wayanad](https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html)
 Distance: 8 km
@@ -2936,14 +2947,17 @@ Distance: 4 km
 [Lakkidi Ghats](https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html)
 Distance: 5 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+Time: 09:30-18:30 (Mon-Fri)
 Distance: 5 km
 [Chundail Tea Estate](https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html)
 Distance: 10 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 14 km
 [Mailadippara](https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html)
 Distance: 18 km
 [Thusharagiri](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
+Time: 06:00-18:00
 Distance: 19 km
 [Ananthanatha Swamy Jain Temple Puliyarmala](https://www.bwstays.com/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html)
 Distance: 20 km
@@ -3006,13 +3020,16 @@ Public
 ###### Tea Museum
 12km from Kalpetta
 Tea museum in the Achoor Estate of Harrisons Malayalam at Achoor, near Pozhuthana, on the history of...
+09:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-tea-museum-wayanad.html)
 
 ###### Honey Museum
 12km from Kalpetta
 Private museum on honey and beekeeping at Old Vythiri, run by Beecraft, with displays on bees and ho...
+09:30-18:30 (Mon-Fri)
 Public
++91 92070 79001
 [Know More](https://www.bwstays.com/bw-honey-museum-wayanad.html)
 
 ##### Nearby Public/Private EV Charging Station
@@ -3165,13 +3182,13 @@ Wayanad
 
 ##### Honey Museum
 12 km from Kalpetta
-- Timing: not published
+- Timing: 9:30 am – 6:30 pm (Mon–Fri)
 - Transportation: Public
 - Seasons to Visit: Summer (February-May), Monsoon (June-September), Winter (October-January)
 - Type: Museum
-- Fee: not published
+- Fee: INR 30 (guided tour)
 - Holiday: NA
-- Contact: not published
+- Contact: +91 92070 79001
 Honey Museum: The museum, listed as the Beecraft Honey Museum at Old Vythiri, presents how honey is produced and gathered, with sections on honey bees and their habitat, and a tasting and sales area. Opening hours and fees differ between third-party listings and were not found on an official page.
 
 Sources: [en.wikipedia.org](https://en.wikipedia.org/wiki/List_of_museums_in_Kerala), [thewoodsresorts.com](https://thewoodsresorts.com/blogs/honey-museum-in-wayanad), [curlytales.com](https://curlytales.com/india/travel/did-you-know-asias-largest-honey-museum-is-in-wayanad/amp/).
@@ -3191,6 +3208,7 @@ Public
 ###### Tea Museum
 12km from Kalpetta
 Tea museum in the Achoor Estate of Harrisons Malayalam at Achoor, near Pozhuthana, on the history of...
+09:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-tea-museum-wayanad.html)
 
@@ -3247,6 +3265,7 @@ Distance: 5 km
 [Lakkidi Ghats](https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html)
 Distance: 6 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 11 km
 [Mailadippara](https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html)
 Distance: 14 km
@@ -3255,6 +3274,7 @@ Distance: 17 km
 [Gandhi Museum](https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html)
 Distance: 17 km
 [Thusharagiri](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
+Time: 06:00-18:00
 Distance: 20 km
 [Karlad chira wayanad](https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html)
 Time: 09:00-17:00
@@ -3340,6 +3360,7 @@ Public
 ###### Thusharagiri
 31km from Kalpetta
 Three waterfalls near Kodenchery in Kozhikode district, the tallest dropping about 75 m, within a fe...
+06:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
 
@@ -3456,6 +3477,7 @@ Public
 ###### Thusharagiri
 31km from Kalpetta
 Three waterfalls near Kodenchery in Kozhikode district, the tallest dropping about 75 m, within a fe...
+06:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
 
@@ -3913,6 +3935,7 @@ Distance: 6 km
 [Varampatta mosque](https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html)
 Distance: 9 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 9 km
 [Meen Mutty Waterfalls](https://www.bwstays.com/bw-meenmutty-waterfall-wayanad.html)
 Time: 10:00-17:00
@@ -3931,6 +3954,7 @@ Distance: 17 km
 Time: 09:00-18:00
 Distance: 20 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+Time: 09:30-18:30 (Mon-Fri)
 Distance: 20 km
 
 #### Food & Dining
@@ -4565,6 +4589,8 @@ Distance: 16 km
 
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
 
+Time: 09:00-18:00
+
 Distance: 19 km
 
 #### Food & Dining
@@ -4846,12 +4872,15 @@ Distance: 4 km
 Time: 09:00-17:00 (Mon-Fri),09:00-18:00 (Sat, Sun, holidays)
 Distance: 5 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+Time: 09:30-18:30 (Mon-Fri)
 Distance: 6 km
 [Chundail Tea Estate](https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html)
 Distance: 11 km
 [Thusharagiri](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
+Time: 06:00-18:00
 Distance: 15 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 15 km
 [Mailadippara](https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html)
 Distance: 18 km
@@ -5041,13 +5070,16 @@ Distance: 11 km
 [Meenangadi Church and temple](https://www.bwstays.com/bw-meenangadi-church-pilgrimage-wayanad.html)
 Distance: 12 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 13 km
 [Karapuzha Dam](https://www.bwstays.com/bw-karapuzha-dam-romantic-wayanad.html)
 Time: 09:00-18:00
 Distance: 14 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+Time: 09:30-18:30 (Mon-Fri)
 Distance: 14 km
 [Pookode Lake](https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html)
+
 Time: 09:00-18:00
 
 Distance: 15 km
@@ -5707,6 +5739,7 @@ Public
 ###### Thusharagiri
 31km from Kalpetta
 Three waterfalls near Kodenchery in Kozhikode district, the tallest dropping about 75 m, within a fe...
+06:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
 
@@ -5757,6 +5790,7 @@ Distance: 9 km
 Time: 07:30-11:00
 Distance: 11 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 16 km
 [Kurumbalakotta](https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html)
 Distance: 16 km
@@ -6712,6 +6746,7 @@ Distance: 12 km
 Time: 09:00-17:00
 Distance: 13 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 15 km
 [Varampatta mosque](https://www.bwstays.com/bw-varampatta-mosque-pilgrimage-wayanad.html)
 Distance: 16 km
@@ -7380,12 +7415,14 @@ Distance: 3 km
 Time: 09:00-17:00 (Mon-Fri),09:00-18:00 (Sat, Sun, holidays)
 Distance: 3 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+Time: 09:30-18:30 (Mon-Fri)
 Distance: 3 km
 [Lakkidi Ghats](https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html)
 Distance: 4 km
 [Chundail Tea Estate](https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html)
 Distance: 7 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 11 km
 [Mailadippara](https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html)
 Distance: 15 km
@@ -7394,9 +7431,12 @@ Distance: 17 km
 [Gandhi Museum](https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html)
 Distance: 17 km
 [Thusharagiri](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
+Time: 06:00-18:00
 Distance: 19 km
 [Karlad chira wayanad](https://www.bwstays.com/bw-karland-lake-romantic-wayanad.html)
+
 Time: 09:00-17:00
+
 Distance: 20 km
 
 #### Food & Dining
@@ -7973,6 +8013,7 @@ Public
 ###### Thusharagiri
 31km from Kalpetta
 Three waterfalls near Kodenchery in Kozhikode district, the tallest dropping about 75 m, within a fe...
+06:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-thusharagiri-waterfall-wayanad.html)
 
@@ -8067,13 +8108,16 @@ Public
 ###### Tea Museum
 12km from Kalpetta
 Tea museum in the Achoor Estate of Harrisons Malayalam at Achoor, near Pozhuthana, on the history of...
+09:00-18:00
 Public
 [Know More](https://www.bwstays.com/bw-tea-museum-wayanad.html)
 
 ###### Honey Museum
 12km from Kalpetta
 Private museum on honey and beekeeping at Old Vythiri, run by Beecraft, with displays on bees and ho...
+09:30-18:30 (Mon-Fri)
 Public
++91 92070 79001
 [Know More](https://www.bwstays.com/bw-honey-museum-wayanad.html)
 
 ###### Wayanad Heritage Museum
@@ -8135,6 +8179,7 @@ Distance: 14 km
 [Kurumbalakotta](https://www.bwstays.com/bw-kurumbalakotta-romantic-wayanad.html)
 Distance: 14 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 15 km
 [Kolagapara](https://www.bwstays.com/bw-kolagapara-trucking-wayanad.html)
 Time: 06:00-18:00
@@ -8143,6 +8188,8 @@ Distance: 15 km
 Time: 09:00-18:00
 Distance: 17 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+
+Time: 09:30-18:30 (Mon-Fri)
 
 Distance: 17 km
 
@@ -8292,7 +8339,7 @@ Wayanad
 
 ##### Tea Museum
 12 km from Kalpetta
-- Timing: not published
+- Timing: 9:00 am – 6:00 pm
 - Transportation: Public
 - Seasons to Visit: Summer (February-May), Monsoon (June-September), Winter (October-January)
 - Type: Museum
@@ -8318,7 +8365,9 @@ Public
 ###### Honey Museum
 12km from Kalpetta
 Private museum on honey and beekeeping at Old Vythiri, run by Beecraft, with displays on bees and ho...
+09:30-18:30 (Mon-Fri)
 Public
++91 92070 79001
 [Know More](https://www.bwstays.com/bw-honey-museum-wayanad.html)
 
 ###### Wayanad Heritage Museum
@@ -8372,6 +8421,7 @@ Distance: 9 km
 Time: 09:00-18:00
 Distance: 11 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+Time: 09:30-18:30 (Mon-Fri)
 Distance: 11 km
 [Mailadippara](https://www.bwstays.com/bw-mailadippara-romantic-wayanad.html)
 Distance: 13 km
@@ -8388,6 +8438,7 @@ Distance: 15 km
 [Pallikunnu church](https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html)
 Time: 07:00-19:00
 Distance: 15 km
+
 [Lakkidi Ghats](https://www.bwstays.com/bw-lakkidi-ghats-view-point-wayanad.html)
 
 Distance: 15 km
@@ -8549,11 +8600,11 @@ Wayanad
 
 ##### Thusharagiri falls
 34 km from Kalpetta
-- Timing: not published
+- Timing: 6:00 am – 6:00 pm
 - Transportation: Public
 - Seasons to Visit: Summer (February-May), Monsoon (June-September), Winter (October-January)
 - Type: Falls
-- Fee: not published
+- Fee: INR 30 per person
 - Holiday: NA
 - Contact: not published
 Thusharagiri: Thusharagiri has three falls: Erattumukku, Mazhavil Chattom and Thumbithullumpara (Thenpara), 100-500 m apart. The tallest drops about 75 m. Forest trails lead to the upper falls. It is in Kozhikode district, about 50 km from Kozhikode city, and is managed with DTPC Kozhikode.
@@ -8650,6 +8701,7 @@ Distance: 19 km
 Time: 09:00-17:00 (Mon-Fri),09:00-18:00 (Sat, Sun, holidays)
 Distance: 19 km
 [Honey Museum](https://www.bwstays.com/bw-honey-museum-wayanad.html)
+Time: 09:30-18:30 (Mon-Fri)
 Distance: 20 km
 
 #### Food & Dining
@@ -9662,6 +9714,7 @@ Distance: 16 km
 Time: 09:00-17:30
 Distance: 17 km
 [Tea Museum wayanad](https://www.bwstays.com/bw-tea-museum-wayanad.html)
+Time: 09:00-18:00
 Distance: 17 km
 
 #### Food & Dining

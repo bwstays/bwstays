@@ -47,8 +47,13 @@ if (argv.includes('--show')) { show(); process.exit(0); }
 const readJson = (p) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8')); } catch { return null; } };
 const row = { at: new Date().toISOString(), cycle: opt('--cycle') ? Number(opt('--cycle')) : null, loop: opt('--loop') ?? null, note: opt('--note') ?? null };
 
+// only a run over all pages counts; after a partial run (--page) the last full numbers are carried forward
+const lastFull = (k) => [...log.rows].reverse().find((r) => typeof r[k] === 'number')?.[k];
 const links = readJson('tests/ui/results/links-report.json');
-if (links) { row.links_broken = links.failures.length; row.links_look = links.warnings.length; row.clicks = links.stats.clicked; row.links_report_at = links.run?.finished ?? null; }
+if (links?.run?.only?.length) {
+  for (const k of ['links_broken', 'links_look', 'clicks']) row[k] = lastFull(k);
+  row.links_partial_run = true;
+} else if (links) { row.links_broken = links.failures.length; row.links_look = links.warnings.length; row.clicks = links.stats.clicked; row.links_report_at = links.run?.finished ?? null; }
 const compat = readJson('tests/ui/results/compat-report.json');
 if (compat) {
   row.compat_broken = compat.results.filter((r) => r.status === 'broken').length;
