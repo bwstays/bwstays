@@ -1,0 +1,43 @@
+name: UI tests
+
+# Every link on every page clicked in Chrome (tests/ui/links.test.mjs).
+# Pushes and pull requests check the site's own links; the Monday run also requests outside links.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '30 3 * * 1'
+  workflow_dispatch:
+    inputs:
+      external:
+        description: 'Also check outside links'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-audit --no-fund
+      - name: Click every link on every page
+        run: |
+          extra=""
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.external }}" = "true" ]; then extra="--external"; fi
+          CHROME_PATH="$(command -v google-chrome || command -v chromium-browser || command -v chromium)" node tests/ui/links.test.mjs $extra
+      - name: Report
+        if: always()
+        run: cat tests/ui/results/links-report.md >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: links-report
+          path: tests/ui/results/
