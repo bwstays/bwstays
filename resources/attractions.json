@@ -499,17 +499,17 @@
         "locality": null,
         "review_note": null,
         "verification": {
-          "last_checked": "2026-10-18",
+          "last_checked": "2026-10-19",
           "coordinate_source": null,
           "official_timing": {
             "value": "daytime, every day",
             "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
-            "confidence": "medium"
+            "confidence": "high"
           },
           "official_fee": {
             "value": "No entry fee",
             "source_url": "https://www.dtpcwayanad.com/destination/chain-tree-lakkidi-wayanad",
-            "confidence": "medium"
+            "confidence": "high"
           }
         }
       },
@@ -1773,7 +1773,7 @@
         "locality": null,
         "review_note": null,
         "verification": {
-          "last_checked": "2026-10-18",
+          "last_checked": "2026-10-19",
           "coordinate_source": null,
           "official_timing": null,
           "official_fee": null
@@ -2065,12 +2065,12 @@
         "locality": "Alattil, near Mananthavady",
         "review_note": "North Wayanad; the stated 10 km from Kalpetta is doubtful",
         "verification": {
-          "last_checked": "2026-10-18",
+          "last_checked": "2026-10-19",
           "coordinate_source": "OpenStreetMap way/741563818",
           "official_timing": {
             "value": "09:00-16:00 (botanical day tours)",
             "source_url": "https://gbsanctuary.org/daytour/",
-            "confidence": "medium"
+            "confidence": "high"
           },
           "official_fee": null
         }
