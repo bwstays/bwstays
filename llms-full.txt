@@ -3007,7 +3007,7 @@ Public
 12km from Kalpetta
 Kungichira Museum & Chira....
 Public
-[Know More](https://www.bwstays.com/bw-kunkichira-heritage-museum-at-periya-wayanad.html)
+[Know More](https://www.bwstays.com/all-locations-wayanad.html)
 
 ###### Tea Museum
 12km from Kalpetta
@@ -3192,7 +3192,7 @@ Public
 12km from Kalpetta
 Kungichira Museum & Chira....
 Public
-[Know More](https://www.bwstays.com/bw-kunkichira-heritage-museum-at-periya-wayanad.html)
+[Know More](https://www.bwstays.com/all-locations-wayanad.html)
 
 ###### Tea Museum
 12km from Kalpetta
@@ -6575,7 +6575,7 @@ Black and White Stays One day Trails|Workation and Staycation|Villa Stays|Holida
 
 ## Pallikunnu church Wayanad Pilgrimage Wayanad Kalpetta
 
-URL: https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-Wayanad.html
+URL: https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html
 
 Latin Catholic church of Our Lady of Lourdes at Pallikunnu, founded in 1908 by the French priest Fr. Jefreno.
 
@@ -8077,7 +8077,7 @@ Opening hours and entry fee are not published, so please check before you visit.
 12km from Kalpetta
 Kungichira Museum & Chira....
 Public
-[Know More](https://www.bwstays.com/bw-kunkichira-heritage-museum-at-periya-wayanad.html)
+[Know More](https://www.bwstays.com/all-locations-wayanad.html)
 
 ###### Tea Museum
 12km from Kalpetta
@@ -8328,7 +8328,7 @@ Public
 12km from Kalpetta
 Kungichira Museum & Chira....
 Public
-[Know More](https://www.bwstays.com/bw-kunkichira-heritage-museum-at-periya-wayanad.html)
+[Know More](https://www.bwstays.com/all-locations-wayanad.html)
 
 ###### Honey Museum
 12km from Kalpetta
@@ -9893,7 +9893,7 @@ Food and place data © [OpenStreetMap contributors](https://www.openstreetmap.or
 <!-- BEGIN GENERATED: site-data -->
 ## Site data summary (generated; the MCP files hold the full detail)
 
-Snapshot: 2026-10-18
+Snapshot: 2026-10-19
 
 ### Booking, availability and cancellation
 - Booking page: https://www.bwstays.com/bwstays-booking.html. Dates can be chosen from today up to one year ahead; past dates are not selectable.

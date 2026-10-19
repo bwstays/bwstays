@@ -259,6 +259,15 @@ node scripts/probe-coords.mjs 3 6  # read-only OpenStreetMap lookup for places w
 - `data/mcp-review.json` `coordinate_confirmations` lists hills/peaks whose coordinate is far from a road but matches an OpenStreetMap feature; `build-distances.mjs` trusts those.
 - The two survey CSVs are the field checklist for issues #101 and #102. Never copy hours, phone numbers or coordinates from Google Maps into OpenStreetMap (licence).
 
+### UI tests (every link clicked)
+
+```
+npm install                             # once: playwright-core and postcss from package.json (node_modules is not committed)
+node tests/ui/links.test.mjs            # every page in Chrome, every link clicked; --external also requests outside links
+```
+
+`tests/ui/README.md` lists the checks. Pages are served from the git-tracked files with case-sensitive paths, as on GitHub Pages. `.github/workflows/ui-tests.yml` runs it on every push and pull request, and with `--external` on Mondays. Report: `tests/ui/results/links-report.md` (not committed).
+
 ### Build-time prerender
 
 ```

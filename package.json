@@ -1,0 +1,15 @@
+{
+  "name": "bwstays",
+  "private": true,
+  "description": "Build, check and test tools for www.bwstays.com (the site itself is static; nothing here is published to visitors)",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test:links": "node tests/ui/links.test.mjs",
+    "test:links:external": "node tests/ui/links.test.mjs --external",
+    "prerender": "node scripts/prerender.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.64.0",
+    "postcss": "8.5.30"
+  }
+}

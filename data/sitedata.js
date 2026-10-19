@@ -439,7 +439,7 @@ const siteData = {
 
       type: "Museums & Crafts",
       knowmore:
-        "https://www.bwstays.com/bw-kunkichira-heritage-museum-at-periya-wayanad.html",
+        "https://www.bwstays.com/all-locations-wayanad.html",
 
       duration: "1-2 Hours",
       www: "",
