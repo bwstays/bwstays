@@ -5,7 +5,7 @@ visitors see; the folder only holds test code.
 
 ```
 npm install                                     # once, in the project folder (Chrome itself must be installed)
-node tests/ui/links.test.mjs                    # every page, every link clicked (about 8 minutes)
+node tests/ui/links.test.mjs                    # every page, every link clicked (about 15 minutes)
 node tests/ui/links.test.mjs --external         # + request every outside link (about 11 minutes)
 node tests/ui/links.test.mjs --page index.html,footer.html
 node tests/ui/links.test.mjs --concurrency 2    # fewer pages at a time (default 4) when memory is short
@@ -40,6 +40,7 @@ For each published page (redirect pages are checked without a browser):
 |---|---|
 | Page loads | not 200 |
 | Every `<a href>` is clicked (after the page scripts have built their lists) | a click starts no navigation, or leads to a page that does not exist |
+| Menu items, Know More / View Attractions buttons and nearby-place cards are also clicked with the real mouse (scrolled into view), and the menu is opened with its Menu button and every item tapped at phone size (390 px) | the link is hidden or covered, or the click does not lead to its page |
 | Link to another page of the site | the page does not exist, or its `#section` is not on that page once rendered (a `#name` the page script maps, like `footer.html#tc`, must scroll the page) |
 | `#section` link on the same page | no element with that id, and clicking does not scroll anywhere |
 | `#` / `javascript:` links (menus, toggles) | clicking throws a JavaScript error |

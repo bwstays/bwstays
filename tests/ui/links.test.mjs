@@ -181,41 +181,47 @@ async function testPage(file) {
     // anchors that links from other pages can jump to
     anchorsByFile.set(file, new Set(await page.evaluate(() => [...document.querySelectorAll('[id],a[name]')].map((e) => e.id || e.getAttribute('name')))));
 
-    const links = await page.evaluate(() => [...document.querySelectorAll('a[href]')].map((a, i) => {
-      a.setAttribute('data-uitest', String(i));
-      return { i, href: a.getAttribute('href'), abs: a.href, target: a.target, text: (a.innerText || '').trim(), aria: a.getAttribute('aria-label') || '', title: a.title || '', img: a.querySelector('img')?.alt || '' };
-    }));
+    const links = await page.evaluate(listLinks);
     stats.links += links.length;
     row.links = links.length;
+    row.clicks = [];
+    const mine = () => failures.reduce((n, x) => n + (x.page === file), 0);
 
     for (const l of links) {
-      const href = l.href.trim();
-      if (/^(mailto|tel|sms):/i.test(href)) { checkContactLink(file, l); continue; }
-      if (/^javascript:/i.test(href) || href === '#' || href === '') { await click(page, st, l, errors, 'action'); continue; }
-      if (/^data:/i.test(href)) { warn(file, 'data: link', label(l)); continue; }
-      const sameDoc = href.startsWith('#') || (isSiteUrl(l.abs) && pageKey(l.abs) === pageKey(page.url()) && new URL(l.abs).hash);
-      if (sameDoc) {
-        const hash = decodeURIComponent(new URL(l.abs).hash.slice(1));
-        const exists = await page.evaluate((h) => !!(document.getElementById(h) || document.getElementsByName(h)[0]) || h === 'top', hash);
-        if (exists) { await click(page, st, l, errors, 'hash'); continue; }
-        // not an id: the page script may map it (footer.html#tc -> #section-tc); it must scroll somewhere
-        // instant reset (the site scrolls smoothly), then give the smooth scroll up to 3 s on a slow machine
-        await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
-        await page.waitForFunction(() => window.scrollY === 0, null, { timeout: 3000 }).catch(() => {});
-        await click(page, st, l, errors, 'hash');
-        const moved = await page.waitForFunction(() => window.scrollY > 50, null, { timeout: 3000, polling: 100 }).then(() => true, () => false);
-        if (!moved) fail(file, 'link to a missing section on the same page', `"${label(l)}" -> #${hash}`);
-        continue;
-      }
-      if (!/^https?:/i.test(l.abs)) { warn(file, 'link with an unusual scheme', `"${label(l)}" -> ${href}`); continue; }
-      await click(page, st, l, errors, 'navigate');
-      if (isSiteUrl(l.abs)) addInternal(file, l);
-      else if (!checkWhatsApp(file, l)) { if (!externalLinks.has(l.abs)) externalLinks.set(l.abs, []); externalLinks.get(l.abs).push({ page: file, text: label(l) }); }
+      const rec = { cat: l.cat, text: label(l), href: l.abs || l.href, how: 'script', ok: true };
+      row.clicks.push(rec);
+      l.rec = rec;
+      const before = mine();
+      await checkLink(page, st, l, errors);
+      if (mine() > before) { rec.ok = false; rec.note = failures.filter((x) => x.page === file).slice(before - mine()).map((x) => x.what).join('; '); }
     }
-    // outside scripts (CDN libraries, widgets) are blocked in the test, so an error may only mean that
+
+    // what a visitor does: real mouse clicks on the menu, Know More buttons and nearby-place cards
+    // (scrolled into view; fails when the link is hidden or covered by something else)
+    for (const l of links.filter((x) => REAL_CLICK.has(x.cat) && !x.decorative)) {
+      const rec = { cat: l.cat, text: label(l), href: l.abs || l.href, how: 'mouse', ok: true };
+      row.clicks.push(rec);
+      const before = mine();
+      await click(page, st, l, errors, kindOf(page, l), 'mouse');
+      if (mine() > before) { rec.ok = false; rec.note = failures.filter((x) => x.page === file).slice(before - mine()).map((x) => x.what).join('; '); }
+    }
     for (const e of [...new Set(errors)]) {
       if (st.blockedScripts.size) warn(file, 'JavaScript error, possibly because outside scripts are blocked in the test', `${e} (blocked: ${[...st.blockedScripts].join(', ')})`);
       else fail(file, 'JavaScript error on the page', e);
+    }
+    errors.length = 0;
+
+    // the menu on a phone: open it with the menu button, then tap each item
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${SITE}/${file}`, { waitUntil: 'load', timeout: 45000 });
+    await page.waitForTimeout(800);
+    const phoneLinks = (await page.evaluate(listLinks)).filter((x) => x.cat === 'menu' && !x.decorative);
+    for (const l of phoneLinks) {
+      const rec = { cat: 'menu', text: label(l), href: l.abs || l.href, how: 'phone', ok: true };
+      row.clicks.push(rec);
+      const before = mine();
+      await click(page, st, l, errors, kindOf(page, l), 'phone');
+      if (mine() > before) { rec.ok = false; rec.note = failures.filter((x) => x.page === file).slice(before - mine()).map((x) => x.what).join('; '); }
     }
   } catch (e) {
     fail(file, 'test could not run on the page', e.message.split('\n')[0]);
@@ -226,31 +232,134 @@ async function testPage(file) {
   }
 }
 
-/** Click one link (a script click: hidden menu links and links under overlays are clicked too). */
-async function click(page, st, l, errors, kind) {
+const REAL_CLICK = new Set(['menu', 'knowmore', 'nearby']);
+
+/** Every link of the page, numbered (data-uitest) and sorted into the part of the page it is in. */
+function listLinks() {
+  return [...document.querySelectorAll('a[href]')].map((a, i) => {
+    a.setAttribute('data-uitest', String(i));
+    const href = a.getAttribute('href') || '';
+    const text = (a.innerText || '').replace(/\s+/g, ' ').trim();
+    const cat = a.closest('#mainNav') ? 'menu'
+      : a.closest('#nearby-cards, #nearby-places') ? 'nearby'
+      : (a.getAttribute('data-i18n') === 'nav.km' || /^(know more|view attractions|attractions)$/i.test(text)) ? 'knowmore'
+      : a.closest('footer') ? 'footer'
+      : a.closest('#testimonial, #signup') ? 'contact'
+      : href.startsWith('#') ? 'in-page'
+      : 'content';
+    // an image link beside a card's title link, hidden from screen readers and keyboard: the title link covers it
+    const decorative = a.getAttribute('aria-hidden') === 'true' || a.getAttribute('tabindex') === '-1';
+    return { i, cat, decorative, href, abs: a.href, target: a.target, text, aria: a.getAttribute('aria-label') || '', title: a.title || '', img: a.querySelector('img')?.alt || '' };
+  });
+}
+
+/** 'navigate' for a link to another page, 'hash' for a #section on this page, 'action' for # / javascript:. */
+function kindOf(page, l) {
+  const href = l.href.trim();
+  if (/^javascript:/i.test(href) || href === '#' || href === '') return 'action';
+  if (href.startsWith('#') || (isSiteUrl(l.abs) && pageKey(l.abs) === pageKey(page.url()) && new URL(l.abs).hash)) return 'hash';
+  return 'navigate';
+}
+
+/** All checks for one link (script click). */
+async function checkLink(page, st, l, errors) {
+  const file = st.file;
+  {
+    {
+      const href = l.href.trim();
+      if (/^(mailto|tel|sms):/i.test(href)) { checkContactLink(file, l); return; }
+      if (/^javascript:/i.test(href) || href === '#' || href === '') { await click(page, st, l, errors, 'action'); return; }
+      if (/^data:/i.test(href)) { warn(file, 'data: link', label(l)); return; }
+      const sameDoc = href.startsWith('#') || (isSiteUrl(l.abs) && pageKey(l.abs) === pageKey(page.url()) && new URL(l.abs).hash);
+      if (sameDoc) {
+        const hash = decodeURIComponent(new URL(l.abs).hash.slice(1));
+        const exists = await page.evaluate((h) => !!(document.getElementById(h) || document.getElementsByName(h)[0]) || h === 'top', hash);
+        if (exists) { await click(page, st, l, errors, 'hash'); return; }
+        // not an id: the page script may map it (footer.html#tc -> #section-tc); it must scroll somewhere
+        // instant reset (the site scrolls smoothly), then give the smooth scroll up to 3 s on a slow machine
+        await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+        await page.waitForFunction(() => window.scrollY === 0, null, { timeout: 3000 }).catch(() => {});
+        await click(page, st, l, errors, 'hash');
+        const moved = await page.waitForFunction(() => window.scrollY > 50, null, { timeout: 3000, polling: 100 }).then(() => true, () => false);
+        if (!moved) fail(file, 'link to a missing section on the same page', `"${label(l)}" -> #${hash}`);
+        return;
+      }
+      if (!/^https?:/i.test(l.abs)) { warn(file, 'link with an unusual scheme', `"${label(l)}" -> ${href}`); return; }
+      await click(page, st, l, errors, 'navigate');
+      if (isSiteUrl(l.abs)) addInternal(file, l);
+      else if (!checkWhatsApp(file, l)) { if (!externalLinks.has(l.abs)) externalLinks.set(l.abs, []); externalLinks.get(l.abs).push({ page: file, text: label(l) }); }
+    }
+  }
+}
+
+/** Wait until the page stops scrolling (the site scrolls smoothly to #sections). */
+async function waitScrollIdle(page) {
+  let last = -1;
+  for (let i = 0; i < 30; i++) {
+    const y = await page.evaluate(() => window.scrollY).catch(() => 0);
+    if (y === last) return;
+    last = y;
+    await page.waitForTimeout(120);
+  }
+}
+
+/** Open the phone menu (menu button) if it is closed; the menu items are hidden until then. */
+async function openPhoneMenu(page) {
+  const open = await page.evaluate(() => document.getElementById('navbarResponsive')?.classList.contains('show') ?? true);
+  if (open) return;
+  // the "Menu" button (data-toggle=collapse); the decorative .menuBtn bars beside it do nothing
+  const btn = page.locator('#mainNav [data-toggle="collapse"]:visible').first();
+  await btn.click({ timeout: 3000 }).catch(() => {});
+  await page.waitForFunction(() => document.getElementById('navbarResponsive')?.classList.contains('show') && !document.querySelector('#navbarResponsive.collapsing'), null, { timeout: 3000 }).catch(() => {});
+}
+
+/** Click one link: 'script' (every link, also hidden menu links), 'mouse' (a visitor's click) or 'phone' (menu at phone size). */
+async function click(page, st, l, errors, kind, how = 'script') {
   const nErr = errors.length;
+  if (how === 'phone') await openPhoneMenu(page);
   st.captured = null;
   st.expect = l.abs.replace(/#.*$/, '');
   st.clicking = true;
   const woke = new Promise((r) => { st.wake = r; });
   let before;
-  try {
-    before = await page.evaluate((i) => {
-      const a = document.querySelector(`[data-uitest="${i}"]`);
-      if (!a) return null;
-      const b = { href: location.href };
-      a.click();
-      return b;
-    }, l.i);
-  } catch (e) {
-    // a click that navigated the page itself before evaluate returned
-    before = { href: '' };
+  if (how === 'script') {
+    try {
+      before = await page.evaluate((i) => {
+        const a = document.querySelector(`[data-uitest="${i}"]`);
+        if (!a) return null;
+        const b = { href: location.href };
+        a.click();
+        return b;
+      }, l.i);
+    } catch (e) {
+      // a click that navigated the page itself before evaluate returned
+      before = { href: '' };
+    }
+  } else {
+    // a real mouse click (or tap) in the middle of the link, as a visitor does: Playwright scrolls it into
+    // view and refuses when it is hidden, has no size or another element would receive the click
+    before = { href: page.url() };
+    const tryClick = async () => { await waitScrollIdle(page); await page.locator(`[data-uitest="${l.i}"]`).click({ timeout: 5000, noWaitAfter: true }); };
+    try {
+      // once more after the page has stopped moving (smooth scrolling from the previous click)
+      await tryClick().catch(async (e) => { if (/ERR_ABORTED|net::/.test(e.message)) throw e; if (how === 'phone') await openPhoneMenu(page); await tryClick(); });
+    } catch (e) {
+      const msg = e.message.split('\n').find((x) => /intercepts|not visible|outside of the viewport|not stable|detached|Timeout/i.test(x)) || e.message.split('\n')[0];
+      if (!/ERR_ABORTED|net::/.test(e.message)) {
+        st.clicking = false;
+        st.wake = null;
+        stats.clicked++;
+        st.row.clicked++;
+        fail(st.file, how === 'phone' ? 'menu item cannot be tapped on a phone' : 'link cannot be clicked with the mouse (hidden or covered)', `[${l.cat}] "${label(l)}" -> ${l.href}: ${msg.trim().slice(0, 160)}`);
+        return;
+      }
+    }
   }
   stats.clicked++;
   st.row.clicked++;
   if (before === null) { st.clicking = false; warn(st.file, 'link disappeared before it could be clicked', `"${label(l)}" -> ${l.href}`); return; }
   if (kind === 'navigate') await Promise.race([woke, page.waitForTimeout(2500)]);
-  else await page.waitForTimeout(60);
+  else await page.waitForTimeout(how === 'script' ? 60 : 400);
   st.clicking = false;
   st.wake = null;
   if (errors.length > nErr) fail(st.file, 'clicking the link throws an error', `"${label(l)}" -> ${l.href}: ${errors.slice(nErr).join('; ')}`);
@@ -274,10 +383,16 @@ async function click(page, st, l, errors, kind) {
   if (!st.captured && now !== before.href) await page.goto(before.href, { waitUntil: 'load' }).then(() => page.waitForTimeout(800)).then(() => page.evaluate(() => [...document.querySelectorAll('a[href]')].forEach((a, i) => a.setAttribute('data-uitest', String(i))))).catch(() => {});
 }
 
+/** A problem found after the click (target page, #section): the link's record and its mouse/phone clicks are not ok. */
+function markBad(r, note) {
+  const row = pageRows.find((x) => x.file === r.page);
+  for (const c of row?.clicks ?? []) if (c.href === r.href) { c.ok = false; c.note = c.note ? `${c.note}; ${note}` : note; }
+}
+
 function addInternal(page, l) {
   const key = pageKey(l.abs);
   if (!internalTargets.has(key)) internalTargets.set(key, []);
-  internalTargets.get(key).push({ page, text: label(l), href: l.abs, hash: decodeURIComponent(new URL(l.abs).hash.slice(1)) });
+  internalTargets.get(key).push({ page, text: label(l), href: l.abs, hash: decodeURIComponent(new URL(l.abs).hash.slice(1)), rec: l.rec });
 }
 
 const t0 = Date.now();
@@ -292,7 +407,7 @@ await pool(pages, CONCURRENCY, async (f, i) => {
 const toRender = [];
 for (const [key, refs] of internalTargets) {
   const f = fileFor(key, files);
-  if (!f) { for (const r of refs) fail(r.page, 'link to a page that does not exist (404)', `"${r.text}" -> ${r.href}`); continue; }
+  if (!f) { for (const r of refs) { fail(r.page, 'link to a page that does not exist (404)', `"${r.text}" -> ${r.href}`); markBad(r, 'page does not exist (404)'); } continue; }
   if (f.endsWith('.html') && refs.some((r) => r.hash) && !anchorsByFile.has(f)) toRender.push(f);
 }
 // pages linked with a #section that this run did not open (e.g. --page): render them for their anchors
@@ -333,7 +448,7 @@ for (const [key, refs] of internalTargets) {
   }
 }
 await pool([...aliasChecks.keys()], CONCURRENCY, async (k) => { const [f, h] = [k.slice(0, k.indexOf('#')), k.slice(k.indexOf('#') + 1)]; aliasChecks.set(k, await hashWorks(f, h)); });
-for (const [k, r] of pending) if (!aliasChecks.get(k)) fail(r.page, 'link to a missing section on another page', `"${r.text}" -> ${r.href}`);
+for (const [k, r] of pending) if (!aliasChecks.get(k)) { fail(r.page, 'link to a missing section on another page', `"${r.text}" -> ${r.href}`); markBad(r, 'section missing on the target page'); }
 await browser.close();
 
 // ---------------------------------------------------------------- outside links (optional)
