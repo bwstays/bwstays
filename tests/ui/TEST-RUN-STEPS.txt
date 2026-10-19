@@ -1,0 +1,135 @@
+BWSTAYS LINK TEST - HOW TO RUN IT BY HAND (Windows Command Prompt)
+=====================================================================
+
+What the test does
+------------------
+Opens every published page of www.bwstays.com in Google Chrome and clicks every
+link on it. It reports links that lead nowhere, pages that do not exist, missing
+#sections, missing images/scripts/styles, broken redirect pages and JavaScript
+errors. With --external it also checks the links to outside websites.
+
+The pages are taken from this folder (the files committed to git), not from the
+live site, so run it BEFORE pushing to catch problems before visitors see them.
+
+
+1. ONE-TIME SETUP
+-----------------
+You need:
+  - Google Chrome, installed in the normal place
+    (C:\Program Files\Google\Chrome\Application\chrome.exe)
+  - Node.js (the same one used for the build scripts; check with:  node -v)
+
+Open a Command Prompt (Start > type "cmd" > Enter) and run:
+
+  cd /d C:\personal\mybusi\land_homestay\kalpatta\bwstays\bwstays
+  npm install
+
+"npm install" reads package.json and installs playwright-core (and postcss) into
+the folder node_modules. It is not committed to git. Run it again only after
+deleting node_modules or after package.json changes.
+
+
+2. RUN THE TEST
+---------------
+Always start in the project folder:
+
+  cd /d C:\personal\mybusi\land_homestay\kalpatta\bwstays\bwstays
+
+Then one of:
+
+  node tests\ui\links.test.mjs
+      Every page, every link clicked. About 9 minutes.
+
+  node tests\ui\links.test.mjs --external
+      Same, plus every outside link requested over the internet. About 11 minutes.
+
+  node tests\ui\links.test.mjs --page index.html,footer.html
+      Only the pages named (comma separated, no spaces). A few seconds.
+
+  node tests\ui\links.test.mjs --concurrency 2
+      Opens 2 pages at a time instead of 4. Use it when the computer is short
+      of memory; it takes longer.
+
+Short forms:  npm run test:links      npm run test:links:external
+
+While it runs you see "10/89 pages", "20/89 pages", ... Do not close the window.
+
+
+3. READ THE RESULT
+------------------
+The last line says:
+  PASS: no broken links          (exit code 0)
+  FAIL: N broken                 (exit code 1, the first problems are listed above it)
+
+Exit code of the last command:   echo %errorlevel%
+
+Reports (overwritten by every run, not committed to git):
+
+  start tests\ui\results\links-report.html     the report in the browser
+  notepad tests\ui\results\links-report.md     the same as plain text
+  tests\ui\results\links-report.json           the same as data
+
+The HTML report has: the verdict, totals (pages, links found, links clicked,
+outside links, duration), "Broken", "To look at", a table of every page,
+the outside link results (with --external), the run details (date, command,
+Chrome and Node versions) and what each check covers.
+
+To keep a run, copy the three files before the next run, for example:
+  mkdir C:\bwstays-test-runs\2026-10-19
+  copy tests\ui\results\*.* C:\bwstays-test-runs\2026-10-19\
+
+To make the HTML again from a saved JSON file:
+  node tests\ui\report-html.mjs C:\bwstays-test-runs\2026-10-19\links-report.json
+
+
+4. WHAT THE RESULTS MEAN
+------------------------
+Broken (must be fixed):
+  - link to a page that does not exist (404)
+  - link to a missing section on the same / another page
+  - clicking the link does nothing, or leads to a missing page
+  - clicking the link throws an error / JavaScript error on the page
+  - broken resource (404): an image, script, style, icon or page address is missing
+  - redirect target does not exist
+  - outside link is broken (only with --external)
+
+To look at (not counted as broken):
+  - phone or WhatsApp link with a placeholder number (e.g. 919999999999)
+  - click opens a different address than the link shows
+  - outside link could not be verified: the site refused automated requests
+    (403/429), timed out, or is a social site. Open it in a browser to check.
+  - JavaScript error, possibly because outside scripts are blocked in the test
+    (the test does not load outside scripts such as chart libraries or widgets)
+
+Note: paths are checked with exact upper/lower case, as GitHub Pages does.
+"...-Wayanad.html" is not the same page as "...-wayanad.html" on the live site,
+even though Windows opens both.
+
+
+5. IF SOMETHING GOES WRONG
+--------------------------
+"playwright-core is not installed in ..."
+    You are not in the project folder, or "npm install" was not run there.
+    Run the two commands from step 1.
+
+"npm is not recognized" / "node is not recognized"
+    Node.js is not installed or not on the PATH. Install it from nodejs.org
+    (LTS) and open a new Command Prompt.
+
+Chrome is not found / browser does not start
+    Tell the test where Chrome is, then run it again:
+      set CHROME_PATH=C:\path\to\chrome.exe
+
+The run stops or the computer becomes slow
+    Close other programs and use  --concurrency 2
+
+A link works in your browser but the test says broken
+    Open the HTML report, find the page and link, and check the exact address
+    (upper/lower case, #section name). Report it if the link really works.
+
+
+6. AUTOMATIC RUNS ON GITHUB
+---------------------------
+The same test runs on GitHub for every push and pull request
+(Actions tab > "UI tests"), and every Monday with --external.
+The report is in the run summary and can be downloaded as "links-report".
