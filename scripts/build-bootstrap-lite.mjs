@@ -39,7 +39,7 @@ function walk(dir, out = []) {
     const p = path.join(dir, name);
     const rel = path.relative(ROOT, p).replace(/\\/g, '/');
     if (fs.statSync(p).isDirectory()) {
-      if (/^(node_modules|\.git|\.github|vendor|scripts|docs|assets|apps-script|resources|tools|setup|\.well-known)$/.test(name)) continue;
+      if (/^(node_modules|\.git|\.github|vendor|scripts|docs|assets|apps-script|resources|tools|setup|tests|\.well-known)$/.test(name)) continue;
       walk(p, out);
     } else if (/\.(html|js|json)$/.test(name) && !/\.min\./.test(name) && !/^(sw\.js|mcp\.json|assets-min\.json)$/.test(name) && !/^data\/(search-index|map-places)\.json$/.test(rel)) {
       out.push(p);
