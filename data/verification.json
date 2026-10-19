@@ -261,7 +261,7 @@
   },
   "8": {
    "name": "Our Lady of Lourdes Church (Pallikunnu Church)",
-   "checked": "2026-10-18",
+   "checked": "2026-10-19",
    "identity": "real",
    "coordinate": {
     "status": "verified_stated",
@@ -314,11 +314,24 @@
     "fee": {
      "verdict": "DTPC silent"
     }
+   },
+   "contact": {
+    "value": "+91 493 628 6623",
+    "source_url": "https://www.calicutdiocese.org/lourdu-matha-church-pallikunnunorth-wayanad/",
+    "quote": "Lourdu Matha Church Wayanad – 673 121 Ph : 04936-286623",
+    "also": "DTPC \"Office Number + 91 493 628 6623\"",
+    "confidence": "high"
+   },
+   "mass_times": {
+    "value": "Sun 06:30, 08:15, 10:30; Mon-Fri 07:00 (first Friday also 17:30); Sat 07:00, 10:30, 17:30",
+    "source_url": "https://www.calicutdiocese.org/lourdu-matha-church-pallikunnunorth-wayanad/",
+    "confidence": "high",
+    "note": "Service times from the Archdiocese of Calicut, not opening hours (opening hours 07:00-19:00 from DTPC)."
    }
   },
   "9": {
    "name": "Sree Seetha Devi Lava Kusa Temple, Pulpally",
-   "checked": "2026-10-18",
+   "checked": "2026-10-19",
    "identity": "real",
    "coordinate": {
     "status": "verified_stated",
@@ -372,6 +385,13 @@
     "fee": {
      "verdict": "DTPC silent"
     }
+   },
+   "contact": {
+    "value": "+91 493 624 1175",
+    "source_url": "https://www.keralatourism.org/1000festivals//assets/uploads/pdf/1516017467-0.pdf",
+    "quote": "Contact: Pulpally Devaswom Phone: +91-4936-241175",
+    "also": "DTPC \"Office Number + 91 493 624 1175\"",
+    "confidence": "high"
    }
   },
   "10": {
@@ -409,7 +429,7 @@
   },
   "11": {
    "name": "Thrissilery Shiva Temple (Sree Thrissilery Mahadeva Temple)",
-   "checked": "2026-10-18",
+   "checked": "2026-10-19",
    "identity": "real",
    "coordinate": {
     "status": "verified_stated",
@@ -444,7 +464,14 @@
     "Holiday 'Sun' unsourced.",
     "Site content is boilerplate.",
     "Festival month (Meenam) comes from a Kerala Tourism festival listing via search; confirm before publishing."
-   ]
+   ],
+   "contact": {
+    "value": "+91 493 525 0325",
+    "source_url": "https://www.keralatourism.org/1000festivals/index.php/preview/festival_info?fest_id=895",
+    "quote": "Thrissileri PO Kattikulam Wayanad - 670646 Phone : +91-4935-250325",
+    "confidence": "medium",
+    "note": "Kerala Tourism festival entry \"Annual Festival, Mahadeva Temple, Thrissileri\"; the office holding the number is not named. Owner may confirm by a call."
+   }
   },
   "12": {
    "name": "Ponkuzhi Sree Rama Temple / Seetha Devi-Hanuman Temple, Ponkuzhi",
@@ -518,7 +545,7 @@
   },
   "14": {
    "name": "Valliyoorkavu Bhagavathy Temple",
-   "checked": "2026-10-18",
+   "checked": "2026-10-19",
    "identity": "real",
    "coordinate": {
     "status": "verified_stated",
@@ -532,7 +559,13 @@
     "value": "06:00-12:30 and 17:30-20:00",
     "closed_days": "none (all days)",
     "source_url": "https://www.dtpcwayanad.com/destination/valliyoorkavu-bhagavathy-temple-wayanad",
-    "confidence": "high"
+    "confidence": "high",
+    "alternative": {
+     "value": "06:00-12:00 and 17:30-20:00",
+     "source_url": "https://www.keralatourism.org/thalassery/pazhassi/valliyoor-kavu",
+     "quote": "Temple Timings: 6.00 am to 12.00 noon & 5.30 pm to 8.00 pm"
+    },
+    "conflict_note": "Kerala Tourism says the morning ends 12:00, DTPC 12:30. DTPC is the owner-chosen reference, so the site keeps 12:30."
    },
    "fee": {
     "source_url": "https://www.dtpcwayanad.com/destination/valliyoorkavu-bhagavathy-temple-wayanad (none stated)",

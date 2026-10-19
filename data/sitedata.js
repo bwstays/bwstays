@@ -2972,7 +2972,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["06:00-12:30","17:00-19:30"],
-      Contact: "",
+      Contact: "+91 493 525 0325",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
