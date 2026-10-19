@@ -233,6 +233,27 @@
    "data_missing": 47,
    "data_stale": 0,
    "dtpc_differs": 0
+  },
+  {
+   "at": "2026-10-19T11:32:36.233Z",
+   "cycle": 3,
+   "loop": "cycle-end",
+   "note": "enrich: Thrissilery phone (medium), 3 contacts/timings confirmed; data: DTPC 0 differences; merged on owner's instruction, local UI tests stopped (low memory), CI ui-tests on push; UI loop deferred",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_partial_run": true,
+   "compat_broken": 0,
+   "compat_look": 28,
+   "small_targets": 557,
+   "small_text": 48,
+   "compat_partial_run": true,
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 47,
+   "data_stale": 0,
+   "dtpc_differs": 0
   }
  ]
 }
