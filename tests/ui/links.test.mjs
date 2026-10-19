@@ -23,6 +23,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { renderReport } from './lib/report-html.mjs';
 import { ROOT, SITE, deployedFiles, isSiteUrl, fileFor, pageKey, launchChrome, serveSite, pool } from './lib/site.mjs';
 
 const argv = process.argv.slice(2);
@@ -46,6 +47,7 @@ const anchorsByFile = new Map(); // file -> Set of ids/names once rendered
 const internalTargets = new Map(); // page key -> [{page, text, href, hash}]
 const externalLinks = new Map(); // url -> [{page, text}]
 const stats = { pages: 0, links: 0, clicked: 0, redirects: 0 };
+const pageRows = []; // one row per page for the HTML report
 
 const label = (l) => (l.text || l.aria || l.title || l.img || '(no text)').replace(/\s+/g, ' ').trim().slice(0, 60);
 const isPlaceholderNumber = (digits) => /(\d)\1{6,}/.test(digits) || /^0+$/.test(digits);
@@ -132,7 +134,11 @@ await serveSite(context, files, {
 
 async function testPage(file) {
   const target = redirectTarget(file);
+  const row = { file, kind: target ? 'redirect' : 'page', title: '', links: 0, clicked: 0, resources: 0, ms: 0 };
+  pageRows.push(row);
+  const started = Date.now();
   if (target) {
+    row.target = target;
     stats.redirects++;
     if (!isSiteUrl(target)) warn(file, 'redirects off the site', target);
     else if (!fileFor(target, files)) fail(file, 'redirect target does not exist', target);
@@ -140,7 +146,7 @@ async function testPage(file) {
     return;
   }
   const page = await newPage();
-  const st = { file, clicking: false, captured: null, wake: null, blockedScripts: new Set() };
+  const st = { file, row, clicking: false, captured: null, wake: null, blockedScripts: new Set() };
   states.set(page, st);
   page.on('popup', (p) => { popupOwner.set(p, st); p.once('close', () => popupOwner.delete(p)); });
   const errors = [];
@@ -150,6 +156,7 @@ async function testPage(file) {
     if (!resp || resp.status() !== 200) { fail(file, 'page does not load', `status ${resp?.status()}`); return; }
     await page.waitForTimeout(1200); // page scripts build the lists after load
     stats.pages++;
+    row.title = await page.title().catch(() => '');
 
     // resources the page references (lazy images included, which a load alone would not request)
     const res = await page.evaluate(() => {
@@ -167,6 +174,7 @@ async function testPage(file) {
     for (const [kind, u] of res) {
       if (seenRes.has(u) || !isSiteUrl(u)) continue;
       seenRes.add(u);
+      row.resources++;
       if (!fileFor(u, files)) fail(file, 'broken resource (404)', `${kind} ${u}`);
     }
 
@@ -178,6 +186,7 @@ async function testPage(file) {
       return { i, href: a.getAttribute('href'), abs: a.href, target: a.target, text: (a.innerText || '').trim(), aria: a.getAttribute('aria-label') || '', title: a.title || '', img: a.querySelector('img')?.alt || '' };
     }));
     stats.links += links.length;
+    row.links = links.length;
 
     for (const l of links) {
       const href = l.href.trim();
@@ -211,6 +220,7 @@ async function testPage(file) {
   } catch (e) {
     fail(file, 'test could not run on the page', e.message.split('\n')[0]);
   } finally {
+    row.ms = Date.now() - started;
     states.delete(page);
     await page.close().catch(() => {});
   }
@@ -237,6 +247,7 @@ async function click(page, st, l, errors, kind) {
     before = { href: '' };
   }
   stats.clicked++;
+  st.row.clicked++;
   if (before === null) { st.clicking = false; warn(st.file, 'link disappeared before it could be clicked', `"${label(l)}" -> ${l.href}`); return; }
   if (kind === 'navigate') await Promise.race([woke, page.waitForTimeout(2500)]);
   else await page.waitForTimeout(60);
@@ -270,6 +281,8 @@ function addInternal(page, l) {
 }
 
 const t0 = Date.now();
+const startedAt = new Date().toISOString();
+const chromeVersion = browser.version();
 await pool(pages, CONCURRENCY, async (f, i) => {
   await testPage(f);
   if ((i + 1) % 10 === 0) console.log(`  ${i + 1}/${pages.length} pages`);
@@ -378,7 +391,18 @@ for (const [title, list] of [['Broken', failures], ['To look at', warnings]]) {
 }
 fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(path.join(OUT_DIR, 'links-report.md'), lines.join('\n'));
-fs.writeFileSync(path.join(OUT_DIR, 'links-report.json'), JSON.stringify({ stats, failures, warnings, external: externalResults }, null, 1));
+const report = {
+  run: {
+    started: startedAt, finished: new Date().toISOString(), seconds: Math.round((Date.now() - t0) / 1000),
+    command: `node tests/ui/links.test.mjs ${argv.join(' ')}`.trim(), external: EXTERNAL, concurrency: CONCURRENCY, only: ONLY ?? null,
+    node: process.version, chrome: chromeVersion, platform: `${process.platform} ${process.arch}`,
+  },
+  stats: { ...stats, siteTargets: internalTargets.size, outsideLinks: externalLinks.size, outsideChecked: EXTERNAL },
+  pages: pageRows.sort((a, b) => a.file.localeCompare(b.file)),
+  failures, warnings, external: externalResults,
+};
+fs.writeFileSync(path.join(OUT_DIR, 'links-report.json'), JSON.stringify(report, null, 1));
+fs.writeFileSync(path.join(OUT_DIR, 'links-report.html'), renderReport(report));
 
 console.log(`pages ${stats.pages} (+${stats.redirects} redirects), links ${stats.links}, clicks ${stats.clicked}, outside links ${externalLinks.size}${EXTERNAL ? ' checked' : ''}`);
 for (const [what, items] of group(failures)) {
@@ -387,5 +411,5 @@ for (const [what, items] of group(failures)) {
   if (items.length > 8) console.log(`   ... ${items.length - 8} more in tests/ui/results/links-report.md`);
 }
 for (const [what, items] of group(warnings)) console.log(`look at: ${what}: ${items.length}`);
-console.log(failures.length ? `FAIL: ${failures.length} broken (report: tests/ui/results/links-report.md)` : 'PASS: no broken links');
+console.log(failures.length ? `FAIL: ${failures.length} broken (report: tests/ui/results/links-report.html)` : 'PASS: no broken links (report: tests/ui/results/links-report.html)');
 process.exit(failures.length ? 1 : 0);

@@ -52,7 +52,7 @@ For each published page (redirect pages are checked without a browser):
 "To look at" (not failures): placeholder phone or WhatsApp numbers, a click that opens a different
 address than the link shows, outside links that could not be verified.
 
-Results: `tests/ui/results/links-report.md` (readable) and `links-report.json` (not committed).
+Results (not committed): `tests/ui/results/links-report.html` (verdict, totals, broken, to look at, every page, outside links, run details), `links-report.md` and `links-report.json`. `node tests/ui/report-html.mjs [report.json]` rebuilds the HTML from a saved JSON. Step-by-step instructions for a manual run on Windows: `tests/ui/TEST-RUN-STEPS.txt`.
 Exit code 1 when anything is broken.
 
 The workflow `.github/workflows/ui-tests.yml` runs it on every push and pull request and, with
