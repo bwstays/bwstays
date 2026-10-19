@@ -296,6 +296,27 @@
    "data_missing": 47,
    "data_stale": 0,
    "dtpc_differs": 0
+  },
+  {
+   "at": "2026-10-19T13:44:18.060Z",
+   "cycle": 6,
+   "loop": "cycle-end",
+   "note": "ui: booking guest form was 50 px wide on phones (fields 18 px) - fixed; checkboxes 24 px; 276/276 browser combinations clean; links 0 broken (8 batches); new tests/ui/run-batches.mjs",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6855,
+   "links_report_at": "2026-10-19T13:39:16.952Z",
+   "compat_broken": 0,
+   "compat_look": 0,
+   "small_targets": 0,
+   "small_text": 0,
+   "compat_report_at": "2026-10-19T13:43:14.084Z",
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 47,
+   "data_stale": 0,
+   "dtpc_differs": 0
   }
  ]
 }
