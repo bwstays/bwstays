@@ -59,7 +59,7 @@ if (compat) {
   row.compat_report_at = compat.run?.finished ?? null;
 }
 const vd = spawnSync(process.execPath, [path.join(ROOT, 'scripts/verify-data.mjs')], { encoding: 'utf8' });
-const m = (vd.stdout || '').match(/errors (\d+) \| to review (\d+) \| pending (\d+) \| missing (\d+) \| stale (\d+)/);
+const m = `${vd.stdout || ''}${vd.stderr || ''}`.match(/errors (\d+) \| to review (\d+) \| pending (\d+) \| missing (\d+) \| stale (\d+)/);
 if (m) { row.data_errors = +m[1]; row.data_review = +m[2]; row.data_pending = +m[3]; row.data_missing = +m[4]; row.data_stale = +m[5]; }
 const dt = spawnSync(process.execPath, [path.join(ROOT, 'scripts/check-dtpc.mjs'), '--offline'], { encoding: 'utf8' });
 const d = (dt.stdout || '').match(/\*\*Differs: (\d+)\*\*/);

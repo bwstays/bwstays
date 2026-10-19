@@ -1,0 +1,26 @@
+{
+ "_comment": "One row per loop pass (scripts/loop-metrics.mjs). Lower numbers are better except clicks and places.",
+ "rows": [
+  {
+   "at": "2026-10-19T07:16:55.278Z",
+   "cycle": 0,
+   "loop": "baseline",
+   "note": "Before the loops. Links: full run 12:01-12:43, 6856 clicks, 1 flaky failure fixed in the test. Browsers: 23 pages x 4 browsers x 3 sizes.",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_report_at": "2026-10-19T07:15:40.768Z",
+   "compat_broken": 0,
+   "compat_look": 216,
+   "small_targets": 2013,
+   "small_text": 1448,
+   "compat_report_at": "2026-10-19T07:11:47.547Z",
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 50,
+   "data_stale": 0,
+   "dtpc_differs": 0
+  }
+ ]
+}
