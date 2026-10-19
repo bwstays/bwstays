@@ -221,7 +221,8 @@ if (ONLINE) {
         if (!f) { toReview.push(`${label(p)}: OpenStreetMap object ${ref} no longer exists or was not returned`); continue; }
         if (c.lat != null) {
           const off = hav([Number(f.lat), Number(f.lon)], [c.lat, c.lon]);
-          if (off > 0.5) toReview.push(`${label(p)}: registry coordinate is ${off.toFixed(2)} km from OpenStreetMap ${ref} ("${f.name ?? f.display_name?.split(',')[0]}")`);
+          // a reviewed access point (parking, ticket counter, approach road) may lie up to 2 km from the feature
+          if (off > (c.access_point ? 2 : 0.5)) toReview.push(`${label(p)}: registry coordinate is ${off.toFixed(2)} km from OpenStreetMap ${ref} ("${f.name ?? f.display_name?.split(',')[0]}")`);
         }
       }
       await sleep(1100);

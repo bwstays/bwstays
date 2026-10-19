@@ -15,8 +15,10 @@
    },
    "timing": {
     "value": "05:30-11:30, 18:00-21:00",
-    "source_url": "https://jainmandir.org/Temple/Sri-Ananthanathaswami-Jain-Temple,-Puliyarmala,--Kalpetta,-District-Wayanad-(Kerala)",
-    "confidence": "low"
+    "source_url": null,
+    "confidence": "low",
+    "dead_source": "https://jainmandir.org/Temple/Sri-Ananthanathaswami-Jain-Temple,-Puliyarmala,--Kalpetta,-District-Wayanad-(Kerala)",
+    "note": "The only source (jainmandir.org) answers 404 since 2026-10-19; timing stays not published on the site."
    },
    "fee": {
     "source_url": "https://www.keralatourism.org/wayanad/ananthanatha-swami-temple.php (no fee stated)",
@@ -888,7 +890,9 @@
     "lon": 76.234269,
     "osm_ref": "node/3922124554",
     "offset_km": 0.6,
-    "evidence": "OSM locality node 'Edakkal Caves' 11.63088,76.23067 (0.6 km NW of stated). Stated point lies on OSM 'Edakkal Caves Road' (pedestrian way/389046686), plausible approach and ticket area."
+    "evidence": "OSM locality node 'Edakkal Caves' 11.63088,76.23067 (0.6 km NW of stated). Stated point lies on OSM 'Edakkal Caves Road' (pedestrian way/389046686), plausible approach and ticket area.",
+    "access_point": true,
+    "access_note": "OSM reverse (2026-10-19): Edakkal Caves Road (pedestrian), the walk up to the caves; the cave node is 0.60 km up the hill."
    },
    "timing": {
     "value": "08:30-16:00",
@@ -2480,7 +2484,9 @@
     "lon": 76.214475,
     "osm_ref": "relation/11358512",
     "offset_km": 0.72,
-    "evidence": "Nominatim reverse puts the stated point inside the RARS Ambalavayal polygon (bbox 11.605-11.619, 76.205-76.220); polygon centre 11.61367,76.20853."
+    "evidence": "Nominatim reverse puts the stated point inside the RARS Ambalavayal polygon (bbox 11.605-11.619, 76.205-76.220); polygon centre 11.61367,76.20853.",
+    "access_point": true,
+    "access_note": "OSM reverse (2026-10-19): inside the RARS Ambalavayal campus; the relation centre is 0.72 km away."
    },
    "timing": {
     "source_url": "https://keralatourism.org/wayanad/rars-agriculture-institution.php",
@@ -2728,7 +2734,9 @@
     "lon": 76.17700752883617,
     "osm_ref": "node/12518415709",
     "offset_km": 0.59,
-    "evidence": "Name \"Neelarchalu\" = Nellarachal (Kerala Tourism https://www.keralatourism.org/destination/nellarachal-wayanad-unexplored/761/, a peninsula in Karapuzha reservoir between Ambalavayal and Meppadi). OSM Nellarachal neighbourhood node 11.59625,76.17733 is 0.59 km from the stated point, which lies on the reservoir shore. Viewpoint itself not tagged in OSM."
+    "evidence": "Name \"Neelarchalu\" = Nellarachal (Kerala Tourism https://www.keralatourism.org/destination/nellarachal-wayanad-unexplored/761/, a peninsula in Karapuzha reservoir between Ambalavayal and Meppadi). OSM Nellarachal neighbourhood node 11.59625,76.17733 is 0.59 km from the stated point, which lies on the reservoir shore. Viewpoint itself not tagged in OSM.",
+    "access_point": true,
+    "access_note": "OSM reverse (2026-10-19): on the Nellarachal road; the Nellarachal place node is 0.59 km away."
    },
    "timing": {
     "value": "Open 24 h; recommended 05:30-19:00, sunset 17:15-18:30 (blog)",
