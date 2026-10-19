@@ -37,7 +37,8 @@ small,
     font-size: 11px;
 }
 small .bw-count,
-.bw-hint .bw-count {
+.bw-hint .bw-count,
+.bw-search-tabs .bw-map-pill .bw-count {
     font-size: 11px;
 }
 body #contact-form label {

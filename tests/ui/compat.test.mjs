@@ -186,6 +186,8 @@ function measure({ phone }) {
   if (phone) {
     for (const e of document.querySelectorAll('a[href], button, select, input:not([type=hidden])')) {
       if (!visible(e) || e.closest('#navbarResponsive:not(.show)')) continue;
+      // a decorative duplicate (an image link hidden from screen readers and keyboard, covered by the card's title link)
+      if (e.getAttribute('aria-hidden') === 'true' && e.getAttribute('tabindex') === '-1') continue;
       const b = e.getBoundingClientRect();
       // a link inside a sentence is exempt (WCAG 2.5.8 inline exception)
       const inline = e.tagName === 'A' && getComputedStyle(e).display === 'inline' && e.parentElement && /^(P|LI|TD|SPAN|SMALL)$/.test(e.parentElement.tagName) && e.parentElement.textContent.trim().length > e.textContent.trim().length + 10;
