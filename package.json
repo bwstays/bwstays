@@ -6,7 +6,11 @@
     "check": "node scripts/check.mjs",
     "test:links": "node tests/ui/links.test.mjs",
     "test:links:external": "node tests/ui/links.test.mjs --external",
-    "prerender": "node scripts/prerender.mjs"
+    "prerender": "node scripts/prerender.mjs",
+    "test:browsers": "node tests/ui/compat.test.mjs",
+    "test:browsers:all": "node tests/ui/compat.test.mjs --all",
+    "check:dtpc": "node scripts/check-dtpc.mjs",
+    "loop:metrics": "node scripts/loop-metrics.mjs --show"
   },
   "devDependencies": {
     "playwright-core": "1.64.0",

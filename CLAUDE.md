@@ -268,6 +268,16 @@ node tests/ui/links.test.mjs            # every page in Chrome, every link click
 
 `tests/ui/README.md` lists the checks. Pages are served from the git-tracked files with case-sensitive paths, as on GitHub Pages. `.github/workflows/ui-tests.yml` runs it on every push and pull request, and with `--external` on Mondays. Report: `tests/ui/results/links-report.md` (not committed).
 
+### Browsers and screen sizes
+
+`node tests/ui/compat.test.mjs` opens one page of each kind (`--all`: every page) in Chrome, Edge, Firefox and WebKit (Safari's engine) at phone 390 px, tablet 820 px and desktop 1366 px. Broken: sideways scrolling, images not loading, JavaScript errors, phone menu not opening. To look at: tap targets under 24 x 24 px on phones, text under 11 px. Report with a grid and screenshots: `tests/ui/results/compat-report.html`. Firefox and WebKit are Playwright's builds: `npx playwright-core install firefox webkit` once.
+
+### DTPC Wayanad check and the improvement loops
+
+- `node scripts/check-dtpc.mjs` fetches every DTPC Wayanad page (www.dtpcwayanad.com, 1 request per second), reads its Entry Time / Ticket Fare / Contact blocks and compares them with `data/sitedata.js` through `data/dtpc-map.json` (DTPC page -> place ids). `data/dtpc-snapshot.json` keeps what DTPC said, so the next run reports what DTPC changed. `--offline` compares with the snapshot only. It changes nothing. The owner chose DTPC Wayanad as the reference for timings, fees and contacts (2026-10-19).
+- Loops (slash commands in `.claude/commands/`): `/improve-links`, `/improve-data`, `/improve-enrich`, `/improve-ui`, and `/improve-cycle`, which runs the four one after another on a branch `improve/cycle-<n>`, gates on `check.mjs` + both UI tests, merges to main and pushes. Run them back to back with `/loop /improve-cycle`. Owner decisions (removals, renames, conflicts between non-DTPC sources, new places) are never taken by a loop; they are listed.
+- `node scripts/loop-metrics.mjs --cycle <n> --loop <name>` appends a scoreboard row to `data/improvement-log.json` (links broken, browser problems, tap targets, small text, data errors / to review / missing, DTPC differences); `--show` prints the table and the trend.
+
 ### Build-time prerender
 
 ```

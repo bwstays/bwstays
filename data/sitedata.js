@@ -154,7 +154,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["09:00-16:30"],
-      Contact: "+91 75938 92953",
+      Contact: "+91 493 621 5342, +91 75938 92953",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -553,7 +553,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["09:00-17:30"],
-      Contact: "+91 493 629 4668",
+      Contact: "+91 493 629 4668, +91 75938 92955",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -709,7 +709,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["09:00-18:00"],
-      Contact: "+91 75938 92951",
+      Contact: "+91 75938 92951, +91 93872 95184",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -857,7 +857,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["07:30-11:00"],
-      Contact: "+91 493 629 8399",
+      Contact: "+91 493 629 8399, +91 85476 02722",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1103,7 +1103,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["06:30-18:30"],
-      Contact: "+91 99474 60835",
+      Contact: "+91 99474 60835, +91 95264 81745",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1499,7 +1499,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["07:30-09:30"],
-      Contact: "+91 85476 02511",
+      Contact: "+91 85476 02511, +91 85476 02506",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -1689,7 +1689,7 @@ const siteData = {
       ],
       holidays: "Mon",
       timing: ["08:30-16:00"],
-      Contact: "+91 493 621 5339",
+      Contact: "+91 493 621 5339, +91 94466 02134, +91 94460 52134",
       seasontovisit: [
         "Summer (November-March)",
       ],
@@ -1935,7 +1935,7 @@ const siteData = {
       ],
       holidays: "NA",
       timing: ["06:00-10:00","15:00-18:00"],
-      Contact: "+91 493 525 0853",
+      Contact: "+91 493 525 0853, +91 79075 43321, +91 99462 50853",
       seasontovisit: [
         "Summer (March-May)",
         "Monsoon (June-September)",
@@ -2647,7 +2647,7 @@ const siteData = {
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-thirunelli-temple-wayanad.webp",
       ],
       holidays: "NA",
-      timing: ["05:30-12:30", "17:00-19:30"],
+      timing: ["05:30-12:00", "17:30-20:00"],
       Contact: "",
       seasontovisit: [
         "Summer (March-May)",
@@ -2771,7 +2771,7 @@ const siteData = {
         "https://www.bwstays.com/assets/img/pilgrimage/bw-stays-papanasini-thirunelli-wayanad.webp",
       ],
       holidays: "NA",
-      timing: ["05:30-12:30", "17:00-19:30"],
+      timing: [],
       Contact: "",
       seasontovisit: [
         "Summer (March-May)",
