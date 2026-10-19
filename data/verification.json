@@ -640,14 +640,26 @@
     "evidence": "OSM: Thusharagiri village node 11.47093,76.05203 and boundary relation/12673682, both in Thamarassery, Kozhikode. Stated point is on a Thusharagiri road (way/1412811088), 0.3 km from the village node; the falls themselves are not mapped by name."
    },
    "timing": {
-    "value": "06:00-18:00 or 08:00-17:00 (sources conflict)",
-    "source_url": "https://traveltriangle.com/kerala-tourism/kozhikode/places-to-visit/thusharagiri-waterfall/timings",
-    "confidence": "low"
+    "value": "06:00-18:00, all days",
+    "source_url": "https://www.dtpckozhikode.com/destination/thusharagiri-waterfalls",
+    "confidence": "high",
+    "closed_days": "none (all days)",
+    "checked": "2026-10-19",
+    "source_says": "All days: 06:00 AM - 06:00 PM",
+    "alternatives": [
+     {
+      "value": "08:00-16:00 (visiting time of the forest trek package)",
+      "source_url": "https://www.keralatourism.org/ecotourism/trekking-programs/thusharagiri-trek-waterfalls/42",
+      "source_says": "Visiting time: 08.00 A.M to 04.00 P.M"
+     }
+    ]
    },
    "fee": {
-    "value": "INR 30 adult (sources vary 30-40)",
-    "source_url": "https://traveltriangle.com/kerala-tourism/kozhikode/places-to-visit/thusharagiri-waterfall/entry-fees",
-    "confidence": "low"
+    "value": "INR 30 per person; offline booking only",
+    "source_url": "https://www.dtpckozhikode.com/destination/thusharagiri-waterfalls",
+    "confidence": "high",
+    "checked": "2026-10-19",
+    "source_says": "Per Person: ₹30 · Only offline booking is available"
    },
    "anomalies": [
     "Located in Kozhikode district, outside Wayanad",
@@ -1074,9 +1086,13 @@
     "confidence": "medium"
    },
    "timing": {
-    "value": "09:00-17:00 (one listing); 09:00-18:00 (2018 Onmanorama)",
-    "source_url": "https://onmanorama.com/news/kerala/2018/10/12/tea-museum-wayanad.html",
-    "confidence": "low"
+    "value": "09:00-18:00, daily",
+    "source_url": "https://www.keralatourism.org/faq/are-there-multiple-tea-tasting-experience-centres-in-munnar-and-other-areas",
+    "confidence": "medium",
+    "closed_days": "none (open daily)",
+    "checked": "2026-10-19",
+    "source_says": "The museum is open daily from 09:00 A.M. to 06:00 P.M.",
+    "note": "Kerala Tourism FAQ, \"Wayanad Tea Museum, Achoor\" (undated). Fee not published by an official source."
    },
    "fee": {
     "value": "INR 50 adult, INR 30 child 8-12 (2018 report); site says 0",
@@ -2634,15 +2650,20 @@
     "evidence": "Honey Museum is not mapped in OSM (no name match). Address per travel listings: Beecraft Building, Old Vythiri, Kunnathidavaka, Vythiri 673576. Stated coord 11.5375,76.0435 is in the Old Vythiri area (nearest OSM: Stream View Holiday Villas 0.1 km, anganwadi 0.07 km), plausible but cannot be confirmed from OSM. OSRM 11.9 km matches stated 12."
    },
    "timing": {
-    "value": "09:30-20:30 (one resort blog); another listing says 08:30-21:00",
-    "closed_days": "none listed; holiday hours may differ",
-    "source_url": "https://thewoodsresorts.com/blogs/honey-museum-in-wayanad",
-    "confidence": "low"
+    "value": "09:30-18:30, Monday to Friday (weekend hours not published)",
+    "closed_days": "not stated",
+    "source_url": "https://www.honeymuseum.in/contact.html",
+    "confidence": "medium",
+    "checked": "2026-10-19",
+    "source_says": "Opening Hour Mon-Fri 9:30AM - 6:30PM",
+    "note": "Operator's own site (BeeCraft Honey Museum, Old Vythiri)."
    },
    "fee": {
-    "value": "INR 30 adult, INR 20 child (one resort blog, unofficial)",
-    "source_url": "https://thewoodsresorts.com/blogs/honey-museum-in-wayanad",
-    "confidence": "low"
+    "value": "INR 30 (guided tour)",
+    "source_url": "https://www.honeymuseum.in/themuseum.html",
+    "confidence": "medium",
+    "checked": "2026-10-19",
+    "source_says": "For a nominal fee of 30 rupees, visitors embark on a guided tour led by a knowledgeable honey expert"
    },
    "duration_hours": 2.5,
    "anomalies": [
@@ -2659,7 +2680,14 @@
     "content ('restored service apartment... spice market') is template text unrelated to the museum.",
     "holidays 'Sun', fee '0' and contact '+91-000 000 0000' are template values; fee '0' is likely wrong (a blog reports Rs 20 adults).",
     "Third-party hours conflict (curlytales 8:30 am to 9 pm; muddietrails 9:30 am to 12 pm), so no timing is given. 'Asia's largest honey museum' is a blog claim only; do not publish."
-   ]
+   ],
+   "contact": {
+    "value": "+91 92070 79001",
+    "source_url": "https://www.honeymuseum.in/",
+    "confidence": "medium",
+    "checked": "2026-10-19",
+    "source_says": "Phone Number +91 92 0707 9001"
+   }
   },
   "82": {
    "name": "Bamboo rafting at Kuruva Island (Kuruvadweep), Kabini River",
