@@ -4,7 +4,9 @@ BWSTAYS LINK TEST - HOW TO RUN IT BY HAND (Windows Command Prompt)
 What the test does
 ------------------
 Opens every published page of www.bwstays.com in Google Chrome and clicks every
-link on it. It reports links that lead nowhere, pages that do not exist, missing
+link on it. Menu items, "Know More" / "View Attractions" buttons and the
+nearby-place cards are also clicked with the real mouse, as a visitor does, and
+the menu is opened with its Menu button and every item tapped at phone size. It reports links that lead nowhere, pages that do not exist, missing
 #sections, missing images/scripts/styles, broken redirect pages and JavaScript
 errors. With --external it also checks the links to outside websites.
 
@@ -38,10 +40,10 @@ Always start in the project folder:
 Then one of:
 
   node tests\ui\links.test.mjs
-      Every page, every link clicked. About 9 minutes.
+      Every page, every link clicked. About 15 minutes.
 
   node tests\ui\links.test.mjs --external
-      Same, plus every outside link requested over the internet. About 11 minutes.
+      Same, plus every outside link requested over the internet. About 17 minutes.
 
   node tests\ui\links.test.mjs --page index.html,footer.html
       Only the pages named (comma separated, no spaces). A few seconds.
@@ -70,7 +72,9 @@ Reports (overwritten by every run, not committed to git):
   tests\ui\results\links-report.json           the same as data
 
 The HTML report has: the verdict, totals (pages, links found, links clicked,
-outside links, duration), "Broken", "To look at", a table of every page,
+outside links, duration), "Broken", "To look at", "Clicks by kind of link"
+(menu, Know More, nearby places, ... with script, mouse and phone results),
+a table of every page, the menu / Know More / nearby clicks of every page,
 the outside link results (with --external), the run details (date, command,
 Chrome and Node versions) and what each check covers.
 
@@ -89,6 +93,8 @@ Broken (must be fixed):
   - link to a missing section on the same / another page
   - clicking the link does nothing, or leads to a missing page
   - clicking the link throws an error / JavaScript error on the page
+  - link cannot be clicked with the mouse (hidden or covered)
+  - menu item cannot be tapped on a phone
   - broken resource (404): an image, script, style, icon or page address is missing
   - redirect target does not exist
   - outside link is broken (only with --external)

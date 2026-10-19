@@ -6,9 +6,12 @@ const SITE = 'https://www.bwstays.com';
 const num = (n) => (typeof n === 'number' ? n.toLocaleString('en-IN') : '–');
 const dur = (s) => (typeof s === 'number' ? (s >= 60 ? `${Math.floor(s / 60)} min ${s % 60} s` : `${s} s`) : '–');
 
+const KIND = { menu: 'Menu', knowmore: 'Know More / View Attractions', nearby: 'Nearby places', 'in-page': 'Section links (#)', content: 'Page content', contact: 'Contact block', footer: 'Footer' };
+
 const CHECKS = [
   ['Page loads', 'Every published page opens in Chrome with status 200.'],
   ['Every link is clicked', 'After the page scripts have built their lists, each link is clicked; it must start a navigation (or open a tab) to exactly its address.'],
+  ['Menu, Know More and nearby places', 'Also clicked with the real mouse, scrolled into view, as a visitor does (fails when hidden or covered); the menu is also opened with the Menu button and each item tapped at phone size.'],
   ['Links to other pages', 'The page must exist on GitHub Pages (case-sensitive, git-tracked files only). A #section on it must exist once that page is rendered, or the page must scroll to it.'],
   ['#section links on the same page', 'An element with that id must exist, or clicking must scroll the page to the section.'],
   ['Menus and toggles (#, javascript:)', 'Clicking must not throw a JavaScript error.'],
@@ -92,6 +95,38 @@ export function renderReport(report, fallback = {}) {
       <div class="scroll"><table class="pages"><thead><tr><th>Page</th><th>Title</th><th class="n">Links</th><th class="n">Clicked</th><th class="n">Files</th><th class="n">Broken</th><th class="n">Look at</th><th class="n">Time</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div></section>`
     : `<section id="pages"><h2>Pages</h2><p class="muted">This run was made before the test recorded figures per page; the next run adds a table of every page (links, clicks, files, time).</p></section>`;
 
+  // clicks by kind of link, and the menu / Know More / nearby clicks of every page
+  const withClicks = (report.pages ?? []).filter((p) => p.clicks?.length);
+  let kindsSection = '', clickDetails = '';
+  if (withClicks.length) {
+    const kinds = new Map(Object.keys(KIND).map((k) => [k, { links: 0, script: [0, 0], mouse: [0, 0], phone: [0, 0] }]));
+    for (const p of withClicks) for (const c of p.clicks) {
+      const k = kinds.get(c.cat) ?? kinds.get('content');
+      if (c.how === 'script') k.links++;
+      const slot = k[c.how] ?? k.script;
+      slot[0]++;
+      if (!c.ok) slot[1]++;
+    }
+    const cell = ([n, bad]) => (n ? `${num(n - bad)} / ${num(n)}${bad ? ` <span class="tag bad">${bad} failed</span>` : ' <span class="tag good">ok</span>'}` : '<span class="muted">–</span>');
+    kindsSection = `<section id="kinds"><h2>Clicks by kind of link</h2>
+      <p class="muted">Every link is clicked by script (also links hidden in a closed menu). Menu items, Know More buttons and nearby-place cards are also clicked with the mouse, as a visitor does (scrolled into view; fails when hidden or covered), and the menu is opened and tapped at phone size (390 px).</p>
+      <div class="scroll"><table><thead><tr><th>Kind</th><th class="n">Links</th><th class="n">Script click: worked / clicked</th><th class="n">Mouse click</th><th class="n">Phone tap</th></tr></thead><tbody>${
+        [...kinds.entries()].filter(([, v]) => v.links || v.mouse[0] || v.phone[0]).map(([k, v]) => `<tr><td><b>${esc(KIND[k])}</b></td><td class="n">${num(v.links)}</td><td class="n">${cell(v.script)}</td><td class="n">${cell(v.mouse)}</td><td class="n">${cell(v.phone)}</td></tr>`).join('')
+      }</tbody></table></div></section>`;
+    const HOW = { script: 'script', mouse: 'mouse', phone: 'phone' };
+    clickDetails = `<section id="clicks"><h2>Menu, Know More and nearby clicks per page</h2>
+      <p class="muted">Open a page to see each of these links, how it was clicked and the result. All other links of the page are counted in the tables above.</p>
+      ${withClicks.map((p) => {
+        const list = p.clicks.filter((c) => ['menu', 'knowmore', 'nearby'].includes(c.cat));
+        const bad = list.filter((c) => !c.ok).length;
+        const count = (cat) => { const l = list.filter((c) => c.cat === cat); return l.length ? `${KIND[cat]} ${l.filter((c) => c.ok).length}/${l.length}` : ''; };
+        return `<details class="group ${bad ? 'broken' : 'pass'}"><summary><span class="count">${bad ? `${bad} failed` : 'ok'}</span> ${esc(p.file)} <span class="muted small">· ${[count('menu'), count('knowmore'), count('nearby')].filter(Boolean).join(' · ')}</span></summary>
+          <div class="scroll"><table><thead><tr><th>Kind</th><th>Link</th><th>Goes to</th><th>Click</th><th>Result</th></tr></thead><tbody>${
+            list.map((c) => `<tr><td>${esc(KIND[c.cat])}</td><td>${esc(c.text)}</td><td class="url">${esc(String(c.href).replace(`${SITE}/`, ''))}</td><td>${esc(HOW[c.how] ?? c.how)}</td><td>${c.ok ? '<span class="tag good">worked</span>' : `<span class="tag bad">failed</span> ${esc(c.note ?? '')}`}</td></tr>`).join('')
+          }</tbody></table></div></details>`;
+      }).join('')}</section>`;
+  }
+
   const ext = report.external?.length
     ? `<section id="outside"><h2>Outside links <span class="pill">${report.external.length}</span></h2>
       <div class="scroll"><table><thead><tr><th>Address</th><th>Result</th><th>Detail</th><th class="n">Linked from</th></tr></thead><tbody>${
@@ -142,6 +177,8 @@ details.group{border:1px solid var(--line);border-radius:8px;margin:8px 0;paddin
 details.group summary{cursor:pointer;padding:10px 0;font-weight:600}
 details.group .count{display:inline-block;min-width:2.2em;text-align:center;border-radius:999px;padding:0 8px;margin-right:6px;background:var(--warn-bg);color:var(--warn)}
 details.group.broken .count{background:var(--bad-bg);color:var(--bad)}
+details.group.pass .count{background:var(--good-bg);color:var(--good)}
+.small{font-weight:400;font-size:.85rem}
 details.group ul{margin:0 0 12px;padding:0;list-style:none}
 details.group li{padding:6px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:4px 14px}
 details.group .detail{overflow-wrap:anywhere;color:var(--text)}
@@ -161,11 +198,13 @@ pre{background:var(--code);padding:12px 14px;border-radius:8px;overflow-x:auto;f
   </div>
   <span class="verdict ${pass ? 'good' : 'bad'}">${pass ? 'PASS · no broken links' : `FAIL · ${failures.length} broken`}</span>
 </header>
-<nav aria-label="Sections"><a href="#broken">Broken</a><a href="#look">To look at</a><a href="#pages">Pages</a>${ext ? '<a href="#outside">Outside links</a>' : ''}<a href="#run">Run details</a><a href="#checks">What is checked</a><a href="#again">Run it again</a></nav>
+<nav aria-label="Sections"><a href="#broken">Broken</a><a href="#look">To look at</a>${kindsSection ? '<a href="#kinds">Clicks by kind</a>' : ''}<a href="#pages">Pages</a>${clickDetails ? '<a href="#clicks">Menu, Know More, nearby</a>' : ''}${ext ? '<a href="#outside">Outside links</a>' : ''}<a href="#run">Run details</a><a href="#checks">What is checked</a><a href="#again">Run it again</a></nav>
 <div class="cards">${cards}</div>
 ${issueSection('broken', 'Broken', failures, 'broken')}
 ${issueSection('look', 'To look at', warnings, 'look')}
+${kindsSection}
 ${pagesSection}
+${clickDetails}
 ${ext}
 <section id="run"><h2>Run details</h2><div class="scroll"><table class="kv"><tbody>${details}</tbody></table></div></section>
 <section id="checks"><h2>What is checked</h2><ul class="checks">${CHECKS.map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('')}</ul></section>
@@ -173,8 +212,8 @@ ${ext}
 <p class="muted">In a Command Prompt (steps in tests\\ui\\TEST-RUN-STEPS.txt):</p>
 <pre>cd /d C:\\personal\\mybusi\\land_homestay\\kalpatta\\bwstays\\bwstays
 npm install
-node tests\\ui\\links.test.mjs              (site links, about 9 minutes)
-node tests\\ui\\links.test.mjs --external   (also outside links, about 11 minutes)
+node tests\\ui\\links.test.mjs              (site links, about 15 minutes)
+node tests\\ui\\links.test.mjs --external   (also outside links, about 17 minutes)
 start tests\\ui\\results\\links-report.html</pre>
 </section>
 </div>
