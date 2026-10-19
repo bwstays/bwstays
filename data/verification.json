@@ -1671,12 +1671,19 @@
     "evidence": "OSM 'Arippara Waterfall' 58 m from stated. Nominatim reverse: Nellipoyil, Thamarassery, Kozhikode district."
    },
    "timing": {
-    "source_url": "https://www.keralatourism.org/destination/arippara-waterfalls-a-tranquil-escape-in-keralas-wilderness-unique/719",
-    "confidence": "low"
+    "source_url": "https://www.dtpckozhikode.com/destination/arippara-waterfalls",
+    "confidence": "high",
+    "value": "10:00-17:00, all days",
+    "closed_days": "none (all days)",
+    "checked": "2026-10-19",
+    "source_says": "All days: 10:00 AM - 05:00 PM"
    },
    "fee": {
-    "source_url": "https://www.keralatourism.org/destination/arippara-waterfalls-a-tranquil-escape-in-keralas-wilderness-unique/719",
-    "confidence": "low"
+    "source_url": "https://www.dtpckozhikode.com/destination/arippara-waterfalls",
+    "confidence": "high",
+    "value": "Adults INR 10, children INR 5; offline booking only",
+    "checked": "2026-10-19",
+    "source_says": "Adults: ₹10 · Kids: ₹5 · Only offline booking is available"
    },
    "anomalies": [
     "Not in Wayanad (Kozhikode); 15 km from Thiruvambady",
@@ -1695,7 +1702,14 @@
     "Contact +91 85933 98771 is shared with ids 36, 41, 42 and has no official source; remove.",
     "Timing 09:00-17:00, holiday 'Sun' and fee '0' are placeholders.",
     "Distance 37 km from Kalpetta looks short for a place 15 km beyond Thiruvambady; re-check the road distance."
-   ]
+   ],
+   "contact": {
+    "value": "+91 94969 24566 (ticket counter)",
+    "source_url": "https://www.dtpckozhikode.com/destination/arippara-waterfalls",
+    "confidence": "high",
+    "checked": "2026-10-19",
+    "source_says": "Ticket Counter +91 94969 24566"
+   }
   },
   "41": {
    "name": "Iruppu Falls (Lakshmana Tirtha Falls), Kodagu, Karnataka",
