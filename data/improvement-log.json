@@ -191,6 +191,27 @@
    "data_missing": 47,
    "data_stale": 0,
    "dtpc_differs": 0
+  },
+  {
+   "at": "2026-10-19T08:49:50.253Z",
+   "cycle": 2,
+   "loop": "ui",
+   "note": "Search counts 11 px; test exempts decorative covered image links. 200 -> 248 / 276 combinations clean. (full browser run: 248 clean, 28 to look at; element counts not kept, a later partial run overwrote the report)",
+   "links_broken": 0,
+   "links_look": 73,
+   "clicks": 6856,
+   "links_partial_run": true,
+   "compat_broken": 0,
+   "compat_look": 28,
+   "small_targets": null,
+   "small_text": null,
+   "compat_report_at": "2026-10-19T08:49:39.770Z",
+   "data_errors": 0,
+   "data_review": 3,
+   "data_pending": 0,
+   "data_missing": 47,
+   "data_stale": 0,
+   "dtpc_differs": 0
   }
  ]
 }
