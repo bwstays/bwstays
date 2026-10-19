@@ -464,7 +464,7 @@
         "locality": null,
         "review_note": null,
         "verification": {
-          "last_checked": "2026-10-18",
+          "last_checked": "2026-10-19",
           "coordinate_source": "OpenStreetMap way/1184388847",
           "official_timing": {
             "value": "07:00-19:00",
@@ -1226,7 +1226,7 @@
         "locality": null,
         "review_note": null,
         "verification": {
-          "last_checked": "2026-10-18",
+          "last_checked": "2026-10-19",
           "coordinate_source": "OpenStreetMap way/257535811",
           "official_timing": {
             "value": "06:00-12:30 and 17:30-20:00",
@@ -1376,7 +1376,7 @@
         "locality": null,
         "review_note": null,
         "verification": {
-          "last_checked": "2026-10-18",
+          "last_checked": "2026-10-19",
           "coordinate_source": "OpenStreetMap way/803024071",
           "official_timing": {
             "value": "05:00-12:30 and 17:30-19:30",
@@ -1567,7 +1567,7 @@
         "locality": null,
         "review_note": null,
         "verification": {
-          "last_checked": "2026-10-18",
+          "last_checked": "2026-10-19",
           "coordinate_source": "OpenStreetMap way/258498245",
           "official_timing": {
             "value": "06:00-12:30 and 17:00-19:30",
