@@ -60,7 +60,9 @@ body #contact-form label {
     #disc, #privacy, #tc, #tc-1, #cancel-policy, #cooki,
     #linkedin, #twitter, #facebook, #instagram, #youtube,
     a.text-primary.font-weight-bold,
-    a.ml-3 {
+    a.ml-3,
+    .col-12.mb-4 > a,
+    .leaflet-control-attribution a {
         display: inline-flex;
         align-items: center;
         min-height: 24px;
