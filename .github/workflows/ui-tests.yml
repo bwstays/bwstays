@@ -1,13 +1,11 @@
 name: UI tests
 
 # Every link on every page clicked in Chrome (tests/ui/links.test.mjs).
-# Pushes and pull requests check the site's own links; the Monday run also requests outside links.
+# Pushes and pull requests check the site's own links; a manual run with 'external' also requests outside links.
 on:
   push:
     branches: [main]
   pull_request:
-  schedule:
-    - cron: '30 3 * * 1'
   workflow_dispatch:
     inputs:
       external:
