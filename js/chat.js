@@ -477,7 +477,7 @@
         parts.push('Cancellations: 15 or more days before check-in is a full refund (less payment charges), 7 to 14 days before is 50%, and under 7 days or no-show is no refund. Holiday and peak-season stays need 30 days for a full refund and 15 days for 50%. Full policy: https://www.bwstays.com/footer.html#cancellation');
       }
       if(wantsCheckin){
-        parts.push('Standard check-in is around 2 PM, check-out by 11 AM. Exact timings vary by property – we\'ll share specific details once you book.');
+        parts.push('Check-in is from 2 PM and check-out is by 11 AM.');
       }
       if(wantsAttractions){
         parts.push('Discover more hidden gems and local favorites in our comprehensive attraction guides throughout the site.');

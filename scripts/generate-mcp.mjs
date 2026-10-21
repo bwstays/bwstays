@@ -375,6 +375,8 @@ const properties = [
     extra_bed: extraBed,
     amenities: villaAmenities,
     pets_allowed: true,
+    check_in_from: bwRates.checkIn,
+    check_out_by: bwRates.checkOut,
   },
 ];
 

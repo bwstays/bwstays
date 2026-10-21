@@ -19,54 +19,59 @@
         "url": "https://www.bwstays.com/footer.html#faq-3"
       },
       {
+        "question": "What are the check-in and check-out times?",
+        "answer": "Check-in from 2 PM, check-out by 11 AM.",
+        "url": "https://www.bwstays.com/footer.html#faq-4"
+      },
+      {
         "question": "How can I check availability?",
         "answer": "The calendar on the booking page shows booked and closed dates (dates already requested may show as Requested), and you can choose dates from today up to one year ahead. A requested date is not confirmed yet. The host confirms every booking by email.",
-        "url": "https://www.bwstays.com/footer.html#faq-4"
+        "url": "https://www.bwstays.com/footer.html#faq-5"
       },
       {
         "question": "How many people can stay in the villa?",
         "answer": "The villa takes up to 4 adults and up to 4 children (0 to 12 years); the booking page does not accept more. The nightly rate covers 4 adults and 1 child; each extra child is INR 400 per night (extra bed). The villa has 2 beds and 1 bathroom, a garden and private parking, and pets are allowed.",
-        "url": "https://www.bwstays.com/footer.html#faq-5"
+        "url": "https://www.bwstays.com/footer.html#faq-6"
       },
       {
         "question": "What amenities does the villa have?",
         "answer": "EV charging, private parking, eco-friendly, premium utensils, a kitchen set, bonfire and music, television, online games, high-speed WiFi, security, pet friendly, bathroom amenities, air conditioning, a mountain view and a garden.",
-        "url": "https://www.bwstays.com/footer.html#faq-6"
+        "url": "https://www.bwstays.com/footer.html#faq-7"
       },
       {
         "question": "Is the villa suitable for a workation?",
         "answer": "High-speed WiFi and air conditioning are listed among the villa amenities, so it suits remote work. The WiFi speed is not published, so ask the host if you need a specific bandwidth.",
-        "url": "https://www.bwstays.com/footer.html#faq-7"
+        "url": "https://www.bwstays.com/footer.html#faq-8"
       },
       {
         "question": "Where is the villa located?",
         "answer": "In Kalpetta, Wayanad, Kerala (PIN 673121), close to the city centre. The Places to visit page lists attractions with their driving distance from Kalpetta (https://www.bwstays.com/all-locations-wayanad.html), and the Places to eat page lists restaurants and cafes (https://www.bwstays.com/all-fooding-wayanad.html).",
-        "url": "https://www.bwstays.com/footer.html#faq-8"
+        "url": "https://www.bwstays.com/footer.html#faq-9"
       },
       {
         "question": "Which places can I visit near the villa?",
         "answer": "The site lists waterfalls, view points, lakes, temples, museums, plantations, wildlife sanctuaries and treks around Wayanad, each with a page showing timings, rating and distance from Kalpetta. Nearby EV charging stations and fuel stations are shown on each place page. Start at https://www.bwstays.com/all-locations-wayanad.html",
-        "url": "https://www.bwstays.com/footer.html#faq-9"
+        "url": "https://www.bwstays.com/footer.html#faq-10"
       },
       {
         "question": "Is there EV charging near the villa?",
         "answer": "EV charging is listed among the villa amenities. Every place page also shows nearby public and private charging stations and fuel stations on a map; their positions are approximate.",
-        "url": "https://www.bwstays.com/footer.html#faq-10"
+        "url": "https://www.bwstays.com/footer.html#faq-11"
       },
       {
         "question": "Can I use the website without internet?",
         "answer": "Yes, partly. The website can be installed on a phone (Add to Home Screen) and keeps the pages you have opened, the places, food, charging and fuel lists and the policies available offline. Live availability, sending a booking request, the chat assistant, the weather and the currency rates need an internet connection.",
-        "url": "https://www.bwstays.com/footer.html#faq-11"
+        "url": "https://www.bwstays.com/footer.html#faq-12"
       },
       {
         "question": "What is the concept behind Black and White Stays?",
         "answer": "Colive, Cowork and Coplay: a villa in Kalpetta for staying with family or friends, working remotely, and exploring Wayanad.",
-        "url": "https://www.bwstays.com/footer.html#faq-12"
+        "url": "https://www.bwstays.com/footer.html#faq-13"
       },
       {
         "question": "Summarize BW Stays Wayanad in one sentence",
         "answer": "Black and White Stays is a single villa in Kalpetta, Wayanad for staycations and workations, for up to 4 adults and 4 children, listed at INR 2,100 per night.",
-        "url": "https://www.bwstays.com/footer.html#faq-13"
+        "url": "https://www.bwstays.com/footer.html#faq-14"
       }
     ]
   },

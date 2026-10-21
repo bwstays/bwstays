@@ -12,6 +12,10 @@ const faqData = [
         answer: "Open the booking page, choose your check-in and check-out dates on the calendar, select the villa, enter your details and send the request. A booking is a request: your dates are held only after the host confirms by email. A one-page summary of your request can be saved as a PDF. Booking page: https://www.bwstays.com/bwstays-booking.html"
     },
     {
+        question: "What are the check-in and check-out times?",
+        answer: "Check-in from 2 PM, check-out by 11 AM."
+    },
+    {
         question: "How can I check availability?",
         answer: "The calendar on the booking page shows booked and closed dates (dates already requested may show as Requested), and you can choose dates from today up to one year ahead. A requested date is not confirmed yet. The host confirms every booking by email."
     },

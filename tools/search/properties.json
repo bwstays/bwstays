@@ -40,7 +40,9 @@
               "Mountain View",
               "Garden"
             ],
-            "pets_allowed": true
+            "pets_allowed": true,
+            "check_in_from": "14:00",
+            "check_out_by": "11:00"
           }
         ]
       }
@@ -83,7 +85,9 @@
               "Mountain View",
               "Garden"
             ],
-            "pets_allowed": true
+            "pets_allowed": true,
+            "check_in_from": "14:00",
+            "check_out_by": "11:00"
           }
         ]
       }
@@ -126,7 +130,9 @@
               "Mountain View",
               "Garden"
             ],
-            "pets_allowed": true
+            "pets_allowed": true,
+            "check_in_from": "14:00",
+            "check_out_by": "11:00"
           }
         ]
       }

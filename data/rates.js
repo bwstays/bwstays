@@ -9,5 +9,7 @@ var bwRates = {
   extraChildPerNight: 400,  // extra bed: each child beyond the included child, per night
   maxAdults: 4,            // booking limit: adults
   maxChildren: 4,          // booking limit: children (0-12 years)
-  gstIncluded: true
+  gstIncluded: true,
+  checkIn: '14:00',        // check-in from (24 h); the booking page and FAQ say 2 PM
+  checkOut: '11:00'        // check-out by (24 h); the booking page and FAQ say 11 AM
 };

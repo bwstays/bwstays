@@ -69,6 +69,10 @@ function put(file, begin, end, block) {
   }
   if (rate !== rates.perNight) throw new Error(`build-schema: the booking page shows INR ${rate} but data/rates.js says INR ${rates.perNight}`);
   if (cardAdults !== rates.maxAdults) throw new Error(`build-schema: the booking page card says up to ${cardAdults} adults but data/rates.js allows ${rates.maxAdults}`);
+  // "14:00" -> "2 PM": the wording the booking page uses
+  const clock = (t) => { const [h, m] = t.split(':').map(Number); return `${h % 12 || 12}${m ? ':' + String(m).padStart(2, '0') : ''} ${h < 12 ? 'AM' : 'PM'}`; };
+  const times = `Check-in from ${clock(rates.checkIn)}, check-out by ${clock(rates.checkOut)}`;
+  if (!html.includes(times)) throw new Error(`build-schema: the booking page should say "${times}" (data/rates.js)`);
   const rental = {
     '@context': 'https://schema.org',
     '@type': 'VacationRental',
@@ -83,6 +87,8 @@ function put(file, begin, end, block) {
     address: business.address,
     priceRange: `INR ${rate} per night`,
     availableLanguage: ['en'],
+    checkinTime: `${rates.checkIn}:00`,
+    checkoutTime: `${rates.checkOut}:00`,
     petsAllowed: pets,
     containsPlace: {
       '@type': 'Accommodation',
