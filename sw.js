@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = 'e7810bf137';
+const VERSION = 'd7164f3c7f';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -31,7 +31,7 @@ const SHELL = [
   "/assets/img/pwa/icon-96.png",
   "/assets/img/pwa/icon-maskable-512.png",
   "/bwstays-booking.html",
-  "/css/bootstrap-lite.min.css?v=720fbe78",
+  "/css/bootstrap-lite.min.css?v=c3c65f85",
   "/css/details-page.min.css?v=30ed3f54",
   "/css/fontawesome.min.css?v=1652393e",
   "/css/maps.min.css?v=cef28474",
@@ -222,7 +222,6 @@ const IMAGES = [
   "/assets/img/heritage/bw-stays-pazhassi-tomb-wayanad-resort.webp",
   "/assets/img/heritage/bw-stays-valmiki-ashramam-tourist.webp",
   "/assets/img/heritage/bw-workation-pazhassi-tomb-wayanad.webp",
-  "/assets/img/icons/aami12-16-512.webp",
   "/assets/img/icons/apple/apple-touch-icon-114x114.png",
   "/assets/img/icons/apple/apple-touch-icon-120x120.png",
   "/assets/img/icons/apple/apple-touch-icon-144x144.png",
@@ -330,7 +329,6 @@ const IMAGES = [
   "/assets/img/trucking/bw-service-villa-brahmagiri-hills-wayanad.webp",
   "/assets/img/trucking/bw-service-villa-kolagappara-wayanad.webp",
   "/assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp",
-  "/assets/img/trucking/bw-stays-ghats-wayanad.webp",
   "/assets/img/trucking/bw-weekend-destination-cheengeri-hills.webp",
   "/assets/img/villa1/black-and-white-wayanad-mist.webp",
   "/assets/img/villa1/bw-destination-chembra-wayanad.webp",
