@@ -7843,6 +7843,14 @@ body .reviews-title > .border-bottom.border-primary,
   color: #3d4b4b;
 }
 .bk-amenities i { width: 20px; text-align: center; color: var(--bw-teal-text); font-size: 1rem; flex: none; }
+/* Good to know: the facts guests (and AI assistants) look for before booking */
+.bk-facts { margin: 14px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.bk-fact { padding: 10px 12px; border: 1px solid #e3ecec; border-radius: 8px; background: #fbfdfd; }
+.bk-fact dt { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; font-weight: 600; color: #2f3e46; }
+.bk-fact dt i { width: 20px; text-align: center; color: var(--bw-teal-text); font-size: 1rem; flex: none; }
+.bk-fact dd { margin: 0 0 0 30px; color: #6c757d; line-height: 1.6; font-size: var(--bw-fs-text, 0.95rem); }
+.bk-fact a { color: var(--bw-teal); text-decoration: underline; display: inline-block; min-height: 24px; }
+.bk-note { margin: 10px 0 0; color: #6c757d; font-size: 0.8rem; }
 @media (max-width: 575.98px) {
   .bk-showcase { padding: 16px; }
   .bk-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 110px; }
