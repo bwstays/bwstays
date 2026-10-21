@@ -6,7 +6,7 @@ Wayanad Villa Stay|Kerala Hill Station Experience|Stays
 Overview
 Black and White Stays offers a villa stay in Kalpetta, Wayanad, Kerala (one villa; up to 4 adults and 4 children). The location is ideal for staycations and workations, providing a serene environment for tourists and vacationers.
 Accommodation Options
-- [Black & White](https://www.bwstays.com/index.html): A premier choice for travelers seeking a unique stay experience in Wayanad, offering various types of accommodations.
+- [Black & White](https://www.bwstays.com/): A premier choice for travelers seeking a unique stay experience in Wayanad, offering various types of accommodations.
 - [No Title](https://www.bwstays.com/all-locations-wayanad.html): Additional information about the accommodations available.
 Attractions and Activities
 - [Discover](https://www.bwstays.com/#loc): Explore the various attractions and activities available in Wayanad.
@@ -56,7 +56,7 @@ This structured summary provides a comprehensive overview of the offerings and a
 <!-- BEGIN GENERATED: site-data -->
 ## Machine-readable data (generated from the site data)
 
-Snapshot: 2026-10-19
+Snapshot: 2026-10-21
 
 - [Static MCP manifest](https://www.bwstays.com/mcp.json): 11 resources and 8 tools, pre-built JSON, no server
 - [LLMFeed](https://www.bwstays.com/.well-known/mcp.llmfeed.json): the same capabilities in LLMFeed format

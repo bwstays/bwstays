@@ -451,7 +451,7 @@ const resources = {
         whatsapp_link: WHATSAPP_LINK,
         phone: null,
         phone_note: 'The site masks its phone number and its WhatsApp link uses a placeholder-pattern number, so neither is published here. Use email or the booking page.',
-        contact_form: `${SITE}/index.html#signup`,
+        contact_form: `${SITE}/#signup`,
       },
     },
     source: 'bwstays-booking.html, footer.html, index.html',

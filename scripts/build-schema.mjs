@@ -101,7 +101,7 @@ function put(file, begin, end, block) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/index.html` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: 'Book your stay', item: `${SITE}/bwstays-booking.html` },
     ],
   }));
@@ -118,7 +118,7 @@ for (const f of fs.readdirSync(ROOT).filter((x) => x.endsWith('.html'))) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/index.html` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
       { '@type': 'ListItem', position: 2, name: 'Places to visit in Wayanad', item: `${SITE}/all-locations-wayanad.html` },
       { '@type': 'ListItem', position: 3, name: String(attraction.name).replace(/\s+/g, ' ').trim(), item: `${SITE}/${f}` },
     ],

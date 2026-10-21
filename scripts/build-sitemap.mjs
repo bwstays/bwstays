@@ -113,7 +113,7 @@ const index = `<?xml version="1.0" encoding="UTF-8"?>
 if (CHECK) {
   const want = new Set(entries.map((e) => e.url));
   const text = fs.existsSync(prevFile) ? fs.readFileSync(prevFile, 'utf8') : '';
-  const have = new Set([...text.matchAll(/<loc>(https:\/\/www\.bwstays\.com\/[^<]+\.html)<\/loc>/g)].map((m) => m[1]));
+  const have = new Set([...text.matchAll(/<loc>(https:\/\/www\.bwstays\.com\/(?:[^<]+\.html)?)<\/loc>/g)].map((m) => m[1]));
   const missing = [...want].filter((u) => !have.has(u));
   const extra = [...have].filter((u) => !want.has(u));
   if (missing.length || extra.length) {
