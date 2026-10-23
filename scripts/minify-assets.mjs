@@ -38,13 +38,23 @@ if (fs.existsSync(rep)) for (const f of fs.readdirSync(rep)) if (f.endsWith('.ht
 
 const sha = (file) => crypto.createHash('sha1').update(fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n')).digest('hex').slice(0, 12);
 
-// sources referenced by the pages
+// sources referenced by the pages, directly or in a <!--bundle ...--> list (scripts/build-bundles.mjs)
 const sources = new Set();
+const BUNDLE_LIST_RE = /<!--bundle\s+([^>]*?)\s*-->/g;
+const LISTED_RE = /^((?:css|js|data)\/[A-Za-z0-9_\-.]+?)(\.min)?\.(css|js)$/;
 for (const p of pages) {
   const html = fs.readFileSync(p, 'utf8');
   for (const m of html.matchAll(REF_RE)) {
     const rel = `${m[3]}.${m[5]}`;
     if (!SKIP.has(rel) && fs.existsSync(path.join(ROOT, rel))) sources.add(rel);
+  }
+  for (const b of html.matchAll(BUNDLE_LIST_RE)) {
+    for (const item of b[1].split(/\s+/)) {
+      const m = item.match(LISTED_RE);
+      if (!m) continue; // vendor files are already minified
+      const rel = `${m[1]}.${m[3]}`;
+      if (!SKIP.has(rel) && fs.existsSync(path.join(ROOT, rel))) sources.add(rel);
+    }
   }
 }
 const list = [...sources].sort();
@@ -94,3 +104,11 @@ for (const p of pages) {
   if (out !== html) { fs.writeFileSync(p, out); changed++; }
 }
 console.log(`minified ${list.length} files: ${(before / 1024).toFixed(0)} KB -> ${(after / 1024).toFixed(0)} KB; re-pointed ${changed} pages`);
+
+// rebuild the bundles from the fresh .min files (scripts/build-bundles.mjs)
+const bundles = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-bundles.mjs')], { cwd: ROOT, encoding: 'utf8' });
+process.stdout.write(bundles.stdout);
+if (bundles.status !== 0) {
+  process.stderr.write(bundles.stderr);
+  process.exit(1);
+}

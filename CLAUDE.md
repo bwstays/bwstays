@@ -229,6 +229,22 @@ node scripts/check.mjs               # syntax, JSON, JSON-LD, duplicate ids, MCP
 
 `js/` and `css/` are edited directly and are the source of truth. The old unminified copies (`scripts/*.js`, `styles/`, `scripts/min.ps1`) were removed because they were stale and re-running the minify script would have overwritten later fixes. `scripts/` now holds only the Node build and check scripts. The pages load minified copies (`name.min.css`, `name.min.js`, `data/name.min.js`, each with a `.map` source map, so browser dev tools show the readable source). Edit only the readable files. After changing anything under `css/`, `js/` or `data/*.js`, run `node scripts/minify-assets.mjs` (rebuilds the `.min` files and points the pages at them) and then `node scripts/version-assets.mjs` (fresh `?v=` hashes). `check.mjs` fails if a `.min` file is older than its source. To go back to the unminified files, check out the tag `restore-before-speed-pass`.
 
+### CSS/JS bundles (fewer requests per page)
+
+Pages load bundles, not the separate `.min` files: each run of stylesheets in `<head>` and each run of consecutive local scripts with the same loading attributes is one file in `css/bundle/` or `js/bundle/` (about 50 -> 30 requests per page, 2026-10-23). The sources and their `.min` copies are unchanged and still the only files you edit; a bundle is just those `.min` files joined, with an index source map so dev tools show the readable sources.
+
+- In the HTML each bundle is a comment listing its files, then the one tag that loads it:
+  `<!--bundle css/fontawesome.min.css css/styles.min.css ...-->` `<link ... href=".../css/bundle/b-<hash>.min.css?v=...">` `<!--/bundle-->`.
+  The comment is the source of truth: to add, drop or reorder a file on a page, edit the list (keep the order the code needs) and run the build. The tag's other attributes (defer, `type="bw-lazy"`) are kept. The bundle name is a hash of the list, so pages with the same list share one file.
+- `node scripts/minify-assets.mjs` builds the bundles as its last step (`scripts/build-bundles.mjs`), so the usual sequence is unchanged: minify-assets, version-assets, build-pwa. `check.mjs` runs `build-bundles.mjs --check`; unused bundle files are deleted.
+- New page: write normal `<link>`/`<script>` tags, then `node scripts/build-bundles.mjs --migrate` turns runs of them into bundle blocks. Never bundled: other sites' files, the availability data (`data/bookingdata`, `closeddata`, `pendingdata`, fetched fresh), tags with `id`/`onload`/other extra attributes, and scripts separated by an inline script or any other element (order and timing stay as written).
+- The UI tests serve git-tracked files only: `git add` new bundle files before running them.
+- To go back to separate files: tag `restore-before-bundling`.
+
+### WhatsApp button
+
+`js/scripts.js` adds a plain WhatsApp button (`.bw-wa-btn`, bottom left, `css/styles.css`). The third-party WATI widget (its script and font) loads only when the button is tapped and then opens its chat box at once (`autoShow`), so no page view pays for it otherwise. The widget's phone number is still the placeholder `99999 99999` in `bwLoadWhatsapp` until the real number is published.
+
 ### Progressive Web App (installable, works offline)
 
 ```

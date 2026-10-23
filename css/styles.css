@@ -345,3 +345,26 @@ main:focus {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* WhatsApp button (js/scripts.js): stands in for the third-party chat widget until it is tapped */
+.bw-wa-btn {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1030;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--bw-teal);
+  color: #fff;
+  font-size: 28px;
+  line-height: 52px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.bw-wa-btn:hover { background: var(--bw-teal-dark); }
+.bw-wa-btn:focus-visible { outline: 3px solid var(--bw-teal-soft); outline-offset: 2px; }
+.bw-wa-btn.is-loading { opacity: 0.7; cursor: progress; }
+@media print { .bw-wa-btn { display: none; } }

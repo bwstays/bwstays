@@ -102,8 +102,9 @@
     });
     emailObserver.observe(emailtag);
   }
-// the WhatsApp chat button loads on the first scroll, tap or key press, or a few seconds after the page has loaded
-function bwLoadWhatsapp() {
+// WhatsApp chat: the page shows a plain button; the third-party widget (script + its font) loads only when the
+// visitor taps it, and then opens its chat box straight away (autoShow). Saves those requests on every page view.
+function bwLoadWhatsapp(openNow) {
 var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?65929';
 var s = document.createElement('script');
 s.type = 'text/javascript';
@@ -129,25 +130,39 @@ var options = {
 	"backgroundColor":"#3f7f7b",
 	"ctaText":"Chat with bw Team",
 	"borderRadius":"25",
-	"autoShow":false,
+	"autoShow":!!openNow,
 	"phoneNumber":"99999 99999"
 }
 };
 s.onload = function() {
 	CreateWhatsappChatWidget(options);
+	var btn = document.getElementById('bw-wa-btn');
+	if (btn) btn.remove();
+};
+s.onerror = function() {
+	var btn = document.getElementById('bw-wa-btn');
+	if (btn) { btn.disabled = false; btn.classList.remove('is-loading'); }
 };
 var x = document.getElementsByTagName('script')[0];
 x.parentNode.insertBefore(s, x);
 }
 (function () {
-  var started = false;
-  function start() {
-    if (started) return;
-    started = true;
-    bwLoadWhatsapp();
-  }
-  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (e) { window.addEventListener(e, start, { passive: true, once: true }); });
-  window.addEventListener('load', function () { setTimeout(start, 3500); });
+  if (document.getElementById('bw-wa-btn')) return;
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.id = 'bw-wa-btn';
+  btn.className = 'bw-wa-btn';
+  btn.setAttribute('aria-label', 'Chat with us on WhatsApp');
+  btn.title = 'Chat on WhatsApp';
+  btn.innerHTML = '<i class="fab fa-whatsapp" aria-hidden="true"></i>';
+  btn.addEventListener('click', function () {
+    if (btn.disabled) return;
+    btn.disabled = true;
+    btn.classList.add('is-loading');
+    bwLoadWhatsapp(true);
+  });
+  function add() { document.body.appendChild(btn); }
+  if (document.body) add(); else document.addEventListener('DOMContentLoaded', add);
 })();
 var iconURLPrefix = 'https://www.bwstays.com/';
 var bwlocations = [['<h6><a id="bwlocation" target="_blank" href="https://www.bwstays.com" title="Black and White Stays">Black and White Stays</a></h6><a target="_blank" href="https://www.bwstays.com" title="Black and White Stays"><img title="Black and White Stays Service Villa"  alt="Black and White Stays Location Kalpetta"  src="https://www.bwstays.com/assets/img/logo/pin-drop.png" width="300" ></a>', 11.6057872, 76.0833109, 2, iconURLPrefix+"assets/img/logo/bw.png","Black and White Stays"]];

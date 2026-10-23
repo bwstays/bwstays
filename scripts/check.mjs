@@ -96,6 +96,8 @@ const ver = spawnSync(process.execPath, [path.join(ROOT, 'scripts/version-assets
 if (ver.status !== 0) problems.push(`asset versions are stale: ${(ver.stderr || ver.stdout).trim().split('\n')[0]}`);
 const minified = spawnSync(process.execPath, [path.join(ROOT, 'scripts/minify-assets.mjs'), '--check'], { encoding: 'utf8' });
 if (minified.status !== 0) problems.push(`minified assets are stale: ${(minified.stderr || minified.stdout).trim().split(String.fromCharCode(10))[0]}`);
+const bundles = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-bundles.mjs'), '--check'], { encoding: 'utf8' });
+if (bundles.status !== 0) problems.push(`CSS/JS bundles are stale: ${(bundles.stderr || bundles.stdout).trim().split(String.fromCharCode(10)).slice(0, 2).join(' ')}`);
 const pwa = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-pwa.mjs'), '--check'], { encoding: 'utf8' });
 if (pwa.status !== 0) problems.push(`service worker is stale: ${(pwa.stderr || pwa.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const sitemap = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-sitemap.mjs'), '--check'], { encoding: 'utf8' });
