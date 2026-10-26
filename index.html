@@ -375,8 +375,8 @@ setTimeout(ldinsp, 0);
     "closes": "23:59"
   },
  "sameAs": [
-     "https://x.com/bwstays/",
-     "https://www.linkedin.com/in/blackandwhitestays/",
+     "https://x.com/bwstays",
+     "https://www.linkedin.com/in/blackandwhitestays",
      "https://www.instagram.com/bwstays",
      "https://www.youtube.com/@bwstays"
   ]
@@ -387,10 +387,8 @@ setTimeout(ldinsp, 0);
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
-  "@type": [
-    "WebSite",
-    "Organization"
-  ],
+  "@type": "Organization",
+  "@id": "https://www.bwstays.com/#organization",
   "name": "bwstays",
   "alternateName": "black and white stays",
   "logo": "https://www.bwstays.com/assets/img/icons/bw.svg",
@@ -410,11 +408,23 @@ setTimeout(ldinsp, 0);
     "addressCountry": "IN"
   },
   "sameAs": [
-    "https://www.linkedin.com/in/blackandwhitestays/",
-    "https://www.bwstays.com",
-    "https://bwstays.com",
-    "https://x.com/bwstays"
-  ],
+    "https://x.com/bwstays",
+    "https://www.linkedin.com/in/blackandwhitestays",
+    "https://www.instagram.com/bwstays",
+    "https://www.youtube.com/@bwstays"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "@id": "https://www.bwstays.com/#website",
+  "name": "bwstays",
+  "alternateName": "black and white stays",
+  "url": "https://www.bwstays.com",
+  "publisher": { "@id": "https://www.bwstays.com/#organization" },
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
