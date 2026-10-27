@@ -28,8 +28,8 @@
   var mapGen = 0;             // bumps on every redraw, so a late route answer for an old map is ignored
   var NEAR_KM = 12;           // road km: closer than this is "around Kalpetta" whatever the direction
   // must-see places (owner's choice, by place id in data/sitedata.js): a trip that matches them always includes
-  // them, from the first day. 18 Chembra Peak, 44 Pookode Lake.
-  var MUST_SEE = [18, 44];
+  // them, from the first day. 18 Chembra Peak, 44 Pookode Lake, 21 Edakkal Caves, 45 Banasura Sagar Dam.
+  var MUST_SEE = [18, 44, 21, 45];
   var AREAS = [
     { key: 'c', label: 'Around Kalpetta', towns: 'within ' + NEAR_KM + ' km' },
     { key: 'n', label: 'North', towns: 'Mananthavady, Thirunelli' },
