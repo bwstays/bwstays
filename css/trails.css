@@ -277,6 +277,20 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
 .tr-tile-big { font-size: 1.5rem; font-weight: 700; line-height: 1; color: #fff; }
 .tr-tile-label { font-weight: 600; color: #fff; font-size: 0.92rem; }
 .tr-tile-sub { font-size: 0.78rem; color: rgba(255, 255, 255, 0.6); line-height: 1.25; }
+.tr-tile.has-img { padding: 0 0 0.5rem; overflow: hidden; }
+.tr-tile.has-img > :not(.tr-tile-img) { margin-left: 0.7rem; margin-right: 0.7rem; }
+.tr-tile-img {
+  display: block;
+  align-self: stretch;
+  height: 58px;
+  margin-bottom: 0.35rem;
+  background: #333 center / cover no-repeat;
+  filter: grayscale(0.35) brightness(0.85);
+}
+.tr-tile.has-img i { margin-top: -26px; width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 50%; background: #1f1f1f; border: 1px solid #3a3a3a; position: relative; }
+.tr-tile.has-img[aria-pressed="true"] .tr-tile-img { filter: none; }
+.tr-tile.has-img[aria-pressed="true"] i { background: var(--bw-teal); border-color: var(--bw-teal); color: #fff; }
+.tr-stop-meta i { color: #64a19d; margin-right: 2px; }
 .tr-tile:hover { border-color: var(--bw-teal-soft); }
 .tr-tile:focus-visible { outline: 2px solid var(--bw-teal-soft); outline-offset: 2px; }
 .tr-tile[aria-pressed="true"] { background: rgba(63, 127, 123, 0.28); border-color: var(--bw-teal); }
@@ -337,3 +351,23 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
 @media print {
   .tr-dir, .tr-day-nav { display: none !important; }
 }
+
+/* day cards: same height in a row, the Google Maps button at the bottom of each */
+.tr-days { align-items: stretch; }
+.tr-day { display: flex; flex-direction: column; }
+.tr-day > .tr-portlet-body { flex: 1; display: flex; flex-direction: column; }
+.tr-day-body { flex: 1; display: flex; flex-direction: column; }
+.tr-day-body .tr-day-foot { margin-top: auto; padding-top: 0.6rem; }
+.tr-day-body .tr-day-nav { align-self: flex-start; }
+
+/* fewer days than chosen */
+.tr-shortfall {
+  margin: 0 0 1.25rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: rgba(224, 136, 58, 0.14);
+  border: 1px solid rgba(224, 136, 58, 0.6);
+  color: #f3d9c2;
+}
+.tr-shortfall p { margin: 0 0 0.4rem; }
+.tr-shortfall p i { color: #e8a96b; }

@@ -302,10 +302,17 @@ function bwRenderPlaceMap(data) {
         });
         paint();
     }
-    function add(key, label, onClick) {
+    function add(key, label, onClick, iconName) {
         var b = document.createElement('button');
         b.type = 'button';
-        b.textContent = label;
+        if (iconName) {
+            var i = document.createElement('i');
+            i.className = 'fas ' + iconName;
+            i.setAttribute('aria-hidden', 'true');
+            b.appendChild(i);
+            b.appendChild(document.createTextNode(' '));
+        }
+        b.appendChild(document.createTextNode(label));
         b.addEventListener('click', onClick);
         buttons[key] = b;
         bar.appendChild(b);
@@ -319,7 +326,7 @@ function bwRenderPlaceMap(data) {
         add(c.key, c.label + ' (' + c.count + ')', function () {
             shown[c.key] = !shown[c.key];
             apply();
-        });
+        }, c.icon);
     });
     element1.parentNode.insertBefore(bar, element1);
     apply();

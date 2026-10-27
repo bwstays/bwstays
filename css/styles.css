@@ -345,3 +345,6 @@ main:focus {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* the icon of a type of place (data/categories.js): home "Discover" titles and place pages */
+.bw-cat-icon { color: #64a19d; margin-right: 0.15em; }

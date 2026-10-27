@@ -40,6 +40,39 @@ function versionOf(rel) {
 // absolute site URLs and root-relative ones, in src="" / href="" only
 const URL_RE = /((?:src|href)\s*=\s*["'])((?:https:\/\/www\.bwstays\.com\/)?((?:css|js|data|styles)\/[A-Za-z0-9_\-./]+\.(?:css|js)))(\?[^"']*)?(["'])/g;
 
+// Font files (assets/fonts/**.woff2) get a version too: they are cached for a year, so a rebuilt icon subset
+// (scripts/build-fontawesome.py) must have a new URL or visitors keep the old glyphs and new icons show blank.
+// Versioned in the url() of the stylesheets under css/ (done first, so those stylesheets' own hashes include
+// it) and in href="" (the font preload tags in the pages). Hashed as bytes, unlike the text files above.
+const fontHash = new Map();
+function fontVersionOf(rel) {
+  if (!fontHash.has(rel)) {
+    const abs = path.join(ROOT, rel);
+    fontHash.set(rel, fs.existsSync(abs) ? crypto.createHash('sha1').update(fs.readFileSync(abs)).digest('hex').slice(0, 8) : null);
+  }
+  return fontHash.get(rel);
+}
+const CSS_FONT_RE = /url\((["']?)((?:\.\.\/)+)(assets\/fonts\/[A-Za-z0-9_\-./]+\.woff2)(\?[^"')]*)?\1\)/g;
+const HTML_FONT_RE = /((?:href)\s*=\s*["'])((?:https:\/\/www\.bwstays\.com\/)?(assets\/fonts\/[A-Za-z0-9_\-./]+\.woff2))(\?[^"']*)?(["'])/g;
+let fontRefs = 0;
+const staleFonts = [];
+for (const f of fs.readdirSync(path.join(ROOT, 'css')).filter((n) => n.endsWith('.css'))) {
+  const abs = path.join(ROOT, 'css', f);
+  const src = fs.readFileSync(abs, 'utf8');
+  const out = src.replace(CSS_FONT_RE, (all, q, up, rel, query) => {
+    const v = fontVersionOf(rel);
+    if (!v) return all;
+    fontRefs++;
+    if ((query ?? '') === `?v=${v}`) return all;
+    staleFonts.push(`css/${f}: ${rel}`);
+    return `url(${q}${up}${rel}?v=${v}${q})`;
+  });
+  if (out !== src && !CHECK) {
+    fs.writeFileSync(abs, out);
+    hashCache.delete(`css/${f}`);
+  }
+}
+
 const pages = [];
 for (const f of fs.readdirSync(ROOT)) if (f.endsWith('.html')) pages.push(f);
 if (fs.existsSync(path.join(ROOT, 'reports'))) {
@@ -60,6 +93,13 @@ for (const page of pages) {
     if ((query ?? '') === wanted) return all;
     stale.push(`${page}: ${rel}`);
     return `${pre}${full}${wanted}${quote}`;
+  }).replace(HTML_FONT_RE, (all, pre, full, rel, query, quote) => {
+    const v = fontVersionOf(rel);
+    if (!v) return all;
+    fontRefs++;
+    if ((query ?? '') === `?v=${v}`) return all;
+    staleFonts.push(`${page}: ${rel}`);
+    return `${pre}${full}?v=${v}${quote}`;
   });
   if (out !== src) {
     changedFiles++;
@@ -67,6 +107,7 @@ for (const page of pages) {
   }
 }
 
+stale.push(...staleFonts);
 if (CHECK) {
   if (stale.length) {
     console.error(`stale asset versions (${stale.length}); run: node scripts/version-assets.mjs`);
@@ -75,5 +116,5 @@ if (CHECK) {
   }
   console.log(`asset versions current (${refs} references in ${pages.length} pages)`);
 } else {
-  console.log(`versioned ${refs} references; updated ${changedFiles} of ${pages.length} pages`);
+  console.log(`versioned ${refs} references and ${fontRefs} font references; updated ${changedFiles} of ${pages.length} pages`);
 }

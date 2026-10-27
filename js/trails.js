@@ -270,9 +270,6 @@
     return box;
   }
 
-  var ICONS = { plantation: 'fa-leaf', waterfalls: 'fa-water', museums: 'fa-landmark', romantic: 'fa-mountain', culthist: 'fa-monument',
-    trucking: 'fa-hiking', wildlife: 'fa-paw', farms: 'fa-tractor', sporting: 'fa-running', tribal: 'fa-feather-alt',
-    pilgrimage: 'fa-place-of-worship', health: 'fa-spa', shopping: 'fa-shopping-bag', cycling: 'fa-bicycle', food: 'fa-utensils' };
   var DAYS = [
     { key: 2, label: '2 days', sub: 'A weekend' },
     { key: 3, label: '3 days', sub: 'A long weekend' },
@@ -284,11 +281,16 @@
     { key: 'balanced', label: 'Balanced', sub: '4 places a day', icon: 'fa-walking' },
     { key: 'packed', label: 'Packed', sub: '5 places a day, early start', icon: 'fa-bolt' },
   ];
+  function catIcon(key) {
+    var c = categories.filter(function (x) { return x.key === key; })[0];
+    return c ? c.icon : 'fa-map-marker-alt';
+  }
   function icon(name) { return el('i', { class: 'fas ' + name, 'aria-hidden': 'true' }); }
 
   // a tile: a big button with an icon, a title and one line of help; aria-pressed shows it is chosen
   function tile(t, pressed, onclick) {
-    return el('button', { type: 'button', class: 'tr-tile', 'aria-pressed': String(pressed), onclick: onclick }, [
+    return el('button', { type: 'button', class: 'tr-tile' + (t.img ? ' has-img' : ''), 'aria-pressed': String(pressed), onclick: onclick }, [
+      t.img ? el('span', { class: 'tr-tile-img', style: 'background-image:url(' + t.img + ')' }) : null,
       t.icon ? icon(t.icon) : (t.big ? el('span', { class: 'tr-tile-big', text: t.big }) : null),
       el('span', { class: 'tr-tile-label', text: t.label }),
       t.sub ? el('span', { class: 'tr-tile-sub', text: t.sub }) : null,
@@ -328,7 +330,7 @@
         AREAS.map(function (a) { return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.towns }, state.areas.indexOf(a.key) >= 0, function () { state.must = false; toggle(state.areas, a.key); update(); }); }))));
     steps.appendChild(step(3, 'fa-heart', 'What do you enjoy?', 'Leave "Everything" on, or pick as many as you like.',
       [tile({ icon: 'fa-th-large', label: 'Everything', sub: places.length + ' places' }, !state.interests.length, function () { state.interests = []; update(); })].concat(
-        categories.map(function (c) { return tile({ icon: ICONS[c.key] || 'fa-map-marker-alt', label: c.name, sub: c.count + (c.count === 1 ? ' place' : ' places') }, state.interests.indexOf(c.key) >= 0, function () { toggle(state.interests, c.key); update(); }); })), 'tr-tiles-small'));
+        categories.map(function (c) { return tile({ icon: c.icon, img: c.img, label: c.name, sub: c.count + (c.count === 1 ? ' place' : ' places') }, state.interests.indexOf(c.key) >= 0, function () { toggle(state.interests, c.key); update(); }); })), 'tr-tiles-small'));
     steps.appendChild(step(4, 'fa-tachometer-alt', 'How full should each day be?', 'Each day is planned for about 9 hours, driving included.',
       PACES.map(function (x) { return tile({ icon: x.icon, label: x.label, sub: x.sub }, state.pace === x.key, function () { state.pace = x.key; update(); }); }), 'tr-tiles-pace'));
     body.appendChild(steps);
@@ -473,7 +475,7 @@
         el('div', { class: 'tr-stop-main' }, [
           el('span', { class: 'tr-leg', id: 'tr-leg-' + i + '-' + legAt[j], text: legText(way.w, legAt[j]) }),
           el('a', { class: 'tr-stop-name', href: p.url, text: p.name }),
-          el('span', { class: 'tr-stop-meta', text: meta.join(' · ') }),
+          el('span', { class: 'tr-stop-meta' }, [icon(catIcon(p.cat)), ' ' + meta.join(' · ')]),
         ]),
         el('div', { class: 'tr-stop-tools' }, [
           dirLink(p, p.name),
@@ -486,7 +488,7 @@
       if (lunch && lunch.at === j) list.appendChild(lunchRow(day, i, lunch, legAt.lunch ? { id: 'tr-leg-' + i + '-' + legAt.lunch, text: legText(way.w, legAt.lunch) } : null));
       prev = p;
     });
-    var body = el('div', {}, [
+    var body = el('div', { class: 'tr-day-body' }, [
       day.stops.length ? list : el('p', { class: 'tr-empty', text: 'No stops left for this day.' }),
       day.stops.length ? el('p', { class: 'tr-day-foot' }, [
         el('span', { id: 'tr-leg-' + i + '-' + legAt.end, text: legText(way.w, legAt.end) }),
@@ -497,7 +499,9 @@
     ]);
     var badge = el('span', { class: 'tr-day-badge', style: 'background:' + COLORS[i % COLORS.length], text: String(i + 1) });
     var sub = a.label + ' (' + a.towns + ') · ' + day.stops.length + ' stops · about ' + st.km + ' km, ' + fmtH(st.drive) + ' driving, ' + fmtH(st.total) + ' in all';
-    return portlet('tr-day-' + (i + 1), 'Day ' + (i + 1), sub, body, { badge: badge });
+    var box = portlet('tr-day-' + (i + 1), 'Day ' + (i + 1), sub, body, { badge: badge });
+    box.classList.add('tr-day');
+    return box;
   }
 
   function mapPortlet() {
@@ -558,6 +562,22 @@
     return bar;
   }
 
+  // why the trail has fewer days than chosen, and the choices that would give more
+  function shortfall() {
+    var excluded = store('bwTrailsExcluded') || [];
+    var fixes = [];
+    if (state.interests.length) fixes.push(el('button', { type: 'button', class: 'tr-btn', onclick: function () { state.interests = []; update(); } }, [icon('fa-th-large'), ' Use all interests']));
+    if (state.areas.length) fixes.push(el('button', { type: 'button', class: 'tr-btn', onclick: function () { state.areas = []; update(); } }, [icon('fa-globe-asia'), ' Use all of Wayanad']));
+    if (excluded.length) fixes.push(el('button', { type: 'button', class: 'tr-btn', onclick: function () { store('bwTrailsExcluded', []); update(); } }, [icon('fa-undo'), ' Bring back ' + excluded.length + ' skipped place' + (excluded.length > 1 ? 's' : '')]));
+    var why = plan.length
+      ? 'Your choices have enough places for ' + plan.length + ' of the ' + state.days + ' days you picked.'
+      : 'No places match these choices.';
+    return el('div', { class: 'tr-shortfall', role: 'status' }, [
+      el('p', {}, [icon('fa-info-circle'), ' ' + why + (fixes.length ? ' For more days:' : ' Pick fewer days.')]),
+      fixes.length ? el('div', { class: 'tr-actions' }, fixes) : null,
+    ]);
+  }
+
   // ------------------------------------------------------------ render
   function render() {
     root.innerHTML = '';
@@ -567,9 +587,8 @@
     var days = el('div', { class: 'tr-days', id: 'tr-days' });
     if (!plan.length) {
       days.appendChild(el('p', { class: 'tr-empty', text: 'No places match these choices. Add an area or an interest, or bring back skipped places.' }));
-    } else if (plan.length < state.days) {
-      root.appendChild(el('p', { class: 'tr-note', text: 'Only ' + plan.length + ' day(s) of places match these choices; add areas or interests for a longer trip.' }));
     }
+    if (plan.length < state.days) root.appendChild(shortfall());
     root.appendChild(printHead());
     plan.forEach(function (d, i) { days.appendChild(dayPortlet(d, i)); });
     root.appendChild(days);
@@ -731,6 +750,8 @@
     state.must = q.get('focus') === 'highlights' && !state.areas.length;
   }
   function update() {
+    hidden = hidden.filter(function (id) { return !/^tr-(day|lunch)-/.test(id); });
+    store('bwTrailsHidden', hidden);
     try { history.replaceState(null, '', location.pathname + '?' + toQuery() + location.hash); } catch (e) { /* file:// */ }
     buildPlan();
     render();
@@ -752,7 +773,8 @@
   fetch('https://www.bwstays.com/data/map-places.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {
-      categories = (data.categories || []).map(function (c) { return { key: c.key, name: c.label, count: c.count, label: c.label + ' (' + c.count + ')' }; });
+      // label, icon and photo of each type of place come from data/categories.js (through map-places.json)
+      categories = (data.categories || []).map(function (c) { return { key: c.key, name: c.label, count: c.count, icon: c.icon || 'fa-map-marker-alt', img: c.img, label: c.label + ' (' + c.count + ')' }; });
       places = (data.places || []).filter(function (p) { return p.lat && p.lon && p.url; }).map(function (p) {
         var item = siteItem(p.id);
         p.hrs = item && item.hrs;

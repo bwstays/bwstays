@@ -32,12 +32,9 @@ const locations = load('data/nearbylocationsdata.js', 'locations');
 const review = JSON.parse(read('data/mcp-review.json')).entries;
 const untrusted = new Set((locations.meta?.places_without_trusted_coordinates ?? []).map((p) => p.id));
 
-const LABELS = {
-  plantation: 'Plantations', waterfalls: 'Waterfalls & lakes', museums: 'Museums & crafts',
-  romantic: 'Viewpoints & romantic spots', culthist: 'Culture & history', trucking: 'Trekking',
-  wildlife: 'Wildlife', farms: 'Farms', sporting: 'Adventure sports', tribal: 'Tribal heritage',
-  cycling: 'Cycling', shopping: 'Shopping', pilgrimage: 'Pilgrimage', health: 'Health & wellness',
-};
+// labels, icons and photos of the types of place: data/categories.js (the one source for every page)
+const CATEGORIES = load('data/categories.js', 'bwCategories');
+const LABELS = Object.fromEntries(Object.entries(CATEGORIES).map(([k, c]) => [k, c.label]));
 const SKIP = new Set(['stays', 'food']); // food has its own map
 
 const places = [];
@@ -77,7 +74,7 @@ for (const [cat, rows] of Object.entries(siteData)) {
 places.sort((a, b) => a.label.localeCompare(b.label) || a.name.localeCompare(b.name));
 
 const categories = Object.entries(LABELS)
-  .map(([key, label]) => ({ key, label, count: places.filter((p) => p.cat === key).length }))
+  .map(([key, label]) => ({ key, label, icon: CATEGORIES[key].icon, img: SITE + CATEGORIES[key].img, count: places.filter((p) => p.cat === key).length }))
   .filter((c) => c.count > 0);
 const out = {
   generated: new Date().toISOString().slice(0, 10),

@@ -168,7 +168,7 @@ rightArrow.addEventListener('mouseleave', () => {
             ${bwHas(currentItemData.timing) ? '<li><i class="fas fa-clock"></i> Timing: ' + currentItemData.timing + '<br></li>' : ''}
             ${bwHas(currentItemData.transport) ? '<li><i class="fas fa-car-side"></i> Transportation: ' + currentItemData.transport + '</li>' : ''}
             ${bwHas(currentItemData.seasontovisit) ? '<li><i class="fas fa-cog"></i> Best Seasons to Visit: ' + currentItemData.seasontovisit + '</li>' : ''}
-            <li><i class="fas fa-bell"></i> Type: ${currentItemData.type}</li>
+            <li><i class="fas ${bwCatOf(currentcatId).icon}"></i> Type: ${bwCatOf(currentcatId).label || currentItemData.type}</li>
             ${bwHas(currentItemData.holidays) ? '<li><i class="fas fa-power-off"></i> Holiday: ' + currentItemData.holidays + '</li>' : ''}
             ${bwHas(currentItemData.Contact) ? '<li><i class="fas fa-phone"></i> Contact: ' + currentItemData.Contact + '</li>' : ''}
             <li><img title="Black and White Stays Service Villa"  alt="Black and White Stays Wayanad"  width="20" height="20" src="https://www.bwstays.com/assets/img/icons/cloudy.webp"  />Weather: <span id="loctemperature"></span> </li>
@@ -189,7 +189,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
   rightColumnHead.className = 'border-bottom border-primary text-center mb-4';
   rightColumnHead.style ='width:100%;margin:0 auto';
   rightColumnHead.innerHTML = `
-      <h5 class="text-white">${currentItemData.type} Places</h5>  `;
+      <h5 class="text-white"><i class="fas ${bwCatOf(currentcatId).icon} bw-cat-icon" aria-hidden="true"></i> ${bwCatOf(currentcatId).label || currentItemData.type} Places</h5>  `;
   const rightColumn = document.createElement('div');
   rightColumn.className = 'col-lg-6';
   rightColumn.style.padding = '1rem';
@@ -411,6 +411,12 @@ function updateLeftColumnContentForKnowMore() {
   leftColumnContainer.appendChild(imgContainer);
 }
 
+// the shared label and icon (data/categories.js) of the category at this index of siteData
+function bwCatOf(catIndex) {
+  const key = Object.keys(siteData)[catIndex];
+  return (typeof bwCategories !== 'undefined' && bwCategories[key]) || { icon: 'fa-map-marker-alt', label: '' };
+}
+
 function initializeSection(sectionType, data, sectionIndex) {
   let sectionContainer;
   let sectionTitle;
@@ -467,7 +473,17 @@ function initializeSection(sectionType, data, sectionIndex) {
   textContainer.innerHTML = '';
   const titleElement = document.createElement('h3');
   titleElement.className = 'h4 text-white';
-  titleElement.textContent = sectionTitle;
+  // the label and icon of the type of place: data/categories.js, the same on every page
+  const cat = typeof bwCategories !== 'undefined' ? bwCategories[sectionType] : null;
+  if (cat) {
+    const ic = document.createElement('i');
+    ic.className = 'fas ' + cat.icon + ' bw-cat-icon';
+    ic.setAttribute('aria-hidden', 'true');
+    titleElement.appendChild(ic);
+    titleElement.appendChild(document.createTextNode(' ' + cat.label));
+  } else {
+    titleElement.textContent = sectionTitle;
+  }
   //alert(sectionIndex);
   //titleElement.setAttribute('data-i18n','disc.item'+sectionIndex);
 
