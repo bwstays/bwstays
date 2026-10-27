@@ -346,5 +346,19 @@ main:focus {
   }
 }
 
-/* the icon of a type of place (data/categories.js): home "Discover" titles and place pages */
-.bw-cat-icon { color: #64a19d; margin-right: 0.15em; }
+/* the icon of a type of place (data/categories.js): home "Discover" titles and place pages, in the same round
+   badge as the trails planner tiles (.tr-tile-visual), so a type looks the same on every page */
+.bw-cat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9em;
+  height: 1.9em;
+  margin-right: 0.45em;
+  border-radius: 50%;
+  background: #1c1c1c;
+  border: 1px solid #3a3a3a;
+  color: var(--bw-teal-soft);
+  font-size: 0.8em;
+  vertical-align: middle;
+}
