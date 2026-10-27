@@ -4,6 +4,7 @@
  *   data/map-places.json      places with a trusted coordinate, category, image and road km from Kalpetta
  *   locations (nearbylocationsdata.js)  road km between places (0 = unknown, then straight line x 1.4)
  *   siteData (sitedata.js)    hours to spend (hrs), timing, weekly holiday
+ *   data/food-places.json     places to eat (OpenStreetMap): one lunch suggestion a day, near the stop reached around midday
  * Every block is a portlet the visitor can collapse or remove; removed portlets and stops can be restored.
  * The choice is kept in the URL (?days=3&areas=n,e&interests=waterfalls&pace=balanced) so a trail can be shared.
  */
@@ -34,6 +35,9 @@
   ];
 
   var places = [];
+  var food = [];              // places to eat, loaded after the plan is shown
+  var LUNCH_AFTER_H = 3.5;    // lunch after the stop reached about 3.5 h into the day (about noon)
+  var LUNCH_KINDS = ['restaurant', 'food_court', 'fast_food', 'cafe'];
   var categories = [];
   var state = { days: 2, areas: [], interests: [], pace: 'balanced' };
   var plan = [];              // [{ area, stops: [place] }]
@@ -246,11 +250,62 @@
     return portlet('tr-presets', 'Ready-made trails', 'Pick one, then change anything above', grid);
   }
 
+  // the stop after which to have lunch, and the nearest place to eat to it (restaurants first, then
+  // food courts, fast food, cafes, bakeries); straight-line km, so "about"
+  function lunchFor(stops) {
+    if (!food.length || !stops.length) return null;
+    var t = 0, prev = BASE, at = stops.length - 1;
+    for (var j = 0; j < stops.length; j++) {
+      t += roadKm(prev, stops[j]) / KMH + hoursAt(stops[j]);
+      prev = stops[j];
+      if (t >= LUNCH_AFTER_H) { at = j; break; }
+    }
+    var near = null;
+    food.forEach(function (f) {
+      var km = straightKm(stops[at], f);
+      var rank = LUNCH_KINDS.indexOf(f.kind) >= 0 ? LUNCH_KINDS.indexOf(f.kind) : LUNCH_KINDS.length;
+      var score = km + rank * 1.5;   // a restaurant 1.5 km farther beats a cafe
+      if (km <= 10 && (!near || score < near.score)) near = { f: f, km: km, score: score };
+    });
+    return { at: at, place: near && near.f, km: near && near.km };
+  }
+  function lunchRow(day, i, lunch) {
+    var id = 'tr-lunch-' + (i + 1);
+    var stop = day.stops[lunch.at];
+    var main;
+    if (lunch.place) {
+      var f = lunch.place;
+      var meta = [String(f.kind || '').replace('shop:', '').replace('_', ' ')];
+      if (f.cuisine && f.cuisine.length) meta.push(f.cuisine.join(', '));
+      if (f.vegetarian === true || f.vegetarian === 'yes' || f.vegetarian === 'only') meta.push('vegetarian options');
+      if (f.opening_hours) meta.push('open ' + f.opening_hours);
+      main = el('div', { class: 'tr-stop-main' }, [
+        el('span', { class: 'tr-leg', text: 'Lunch: about ' + (Math.round(lunch.km * 10) / 10) + ' km from ' + stop.name + ' (straight line)' }),
+        el('a', { class: 'tr-stop-name', href: f.osm_url, target: '_blank', rel: 'noopener', text: f.name || 'Place to eat' }),
+        el('span', { class: 'tr-stop-meta', text: meta.join(' · ') }),
+      ]);
+    } else {
+      main = el('div', { class: 'tr-stop-main' }, [
+        el('span', { class: 'tr-leg', text: 'Lunch' }),
+        el('span', { class: 'tr-stop-meta', text: 'No place to eat is listed within 10 km of ' + stop.name + ' on OpenStreetMap: carry lunch or eat in the nearest town.' }),
+      ]);
+    }
+    return el('li', { class: 'tr-stop tr-lunch', id: id }, [
+      el('span', { class: 'tr-lunch-icon', 'aria-hidden': 'true', html: '&#127860;' }),
+      main,
+      el('button', {
+        type: 'button', class: 'tr-portlet-btn', title: 'Remove the lunch stop', 'aria-label': 'Remove the lunch stop from day ' + (i + 1), text: '×',
+        onclick: function () { hidden.push(id); store('bwTrailsHidden', hidden); render(); },
+      }),
+    ]);
+  }
+
   function dayPortlet(day, i) {
     var st = dayStats(day.stops);
     var a = areaInfo(day.area);
     var list = el('ol', { class: 'tr-stops' });
     var prev = BASE;
+    var lunch = hidden.indexOf('tr-lunch-' + (i + 1)) < 0 ? lunchFor(day.stops) : null;
     day.stops.forEach(function (p, j) {
       var item = siteItem(p.id) || {};
       var meta = [p.label, 'about ' + fmtH(hoursAt(p)) + ' there'];
@@ -268,6 +323,7 @@
           onclick: function () { removedStops.push({ day: i, place: p, index: j }); day.stops.splice(j, 1); render(); },
         }),
       ]));
+      if (lunch && lunch.at === j) list.appendChild(lunchRow(day, i, lunch));
       prev = p;
     });
     var body = el('div', {}, [
@@ -296,6 +352,7 @@
       'Opening hours and weekly holidays are shown where the place page has them; check the place page before you go, as they change.',
       'Driving times are estimates at about ' + KMH + ' km/h on hill roads; leave early on days with more than 80 km.',
       'Use × on a stop to skip it, or on any box to hide it. Hidden boxes come back from the bar at the top.',
+      'Lunch is the nearest place to eat on OpenStreetMap to the stop you reach around midday; check that it is open. Missing hours or places can be added on OpenStreetMap.',
       'Copy the link to share the trail; it opens with the same days, areas, interests and pace.',
     ].forEach(function (t) { ul.appendChild(el('li', { text: t })); });
     return portlet('tr-tips', 'Good to know', '', ul);
@@ -309,7 +366,7 @@
     if (!items.length) { bar.hidden = true; return bar; }
     bar.appendChild(el('span', { text: 'Hidden:' }));
     hidden.forEach(function (id) {
-      var name = labels[id] || id.replace('tr-day-', 'Day ');
+      var name = labels[id] || (id.indexOf('tr-lunch-') === 0 ? 'Lunch, day ' + id.slice(9) : id.replace('tr-day-', 'Day '));
       bar.appendChild(el('button', {
         type: 'button', class: 'tr-restore', text: '+ ' + name,
         onclick: function () { hidden.splice(hidden.indexOf(id), 1); store('bwTrailsHidden', hidden); render(); },
@@ -427,6 +484,11 @@
       });
       fromQuery();
       update();
+      // places to eat come second so the trail shows at once; the lunch rows appear when they arrive
+      return fetch('https://www.bwstays.com/data/food-places.json').then(function (r) { return r.json(); }).then(function (f) {
+        food = (f.places || []).filter(function (x) { return x.lat && x.lon; });
+        render();
+      }).catch(function () { /* no lunch suggestions */ });
     })
     .catch(function () {
       root.innerHTML = '';
