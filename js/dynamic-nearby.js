@@ -111,7 +111,7 @@ function createPlaceCard(place) {
     return `
         <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
             <div class="card nearby-card h-100 border-0 position-relative" style="border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s ease;">${typeof bwCategoryChip === 'function' ? bwCategoryChip(place.category) : ''}<div class="card-img-top">
-                    <a href="${knowmoreUrl}" tabindex="-1" aria-hidden="true" class="text-decoration-none text-white"><img title="Black and White Stays Service Villa" src="${imageUrl}" class="img-fluid" alt="${place.name}"  loading="lazy"  style="width: 100%; height: 160px; object-fit: cover;"></a> </div>
+                    <a href="${knowmoreUrl}" tabindex="-1" aria-hidden="true" class="text-decoration-none text-white"><img title="Black and White Stays Service Villa" src="${imageUrl}" class="img-fluid" alt="${place.name}" width="400" height="160" loading="lazy" decoding="async" style="width: 100%; height: 160px; object-fit: cover;"></a> </div>
                 <div class="card-body p-3">
                     <div class="d-flex">
                         <div style="flex: 1;">

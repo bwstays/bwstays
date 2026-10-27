@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '9899dfa1c0';
+const VERSION = '39b225a4c5';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -49,8 +49,8 @@ const SHELL = [
   "/js/decode-email.js",
   "/js/dynamic-evgas.min.js?v=50b2f3a7",
   "/js/dynamic-foodmap.min.js?v=653630ee",
-  "/js/dynamic-nearby.min.js?v=900150d1",
-  "/js/knowmore-place-dynamic.min.js?v=2b3bfa65",
+  "/js/dynamic-nearby.min.js?v=e753183e",
+  "/js/knowmore-place-dynamic.min.js?v=28724ddd",
   "/js/language.min.js?v=d8bf0fe7",
   "/js/legal-page.min.js?v=89020b58",
   "/js/map-guard.min.js?v=42197ca9",

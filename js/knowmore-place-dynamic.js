@@ -114,6 +114,8 @@ rightArrow.addEventListener('mouseleave', () => {
     img.src = src;
     img.alt = currentItemData.name;
     img.className = 'img-fluid';
+    img.width = 800; // the slider box is 400px high: the attributes only reserve the space (no layout shift)
+    img.height = 400;
     img.style.width = '100%';
     img.style.height = '100%';
     img.style.objectFit = 'cover';
@@ -211,7 +213,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
       const firstImage = itemImages[0];
       card.innerHTML = `
           <div class="card-img-container" style="height: 200px; overflow: hidden; position: relative;">${typeof bwCategoryChip === 'function' ? bwCategoryChip(Object.keys(siteData)[currentcatId]) : ''}
-              <img title="Black and White Stays Service Villa"  alt=${item.name} src="${firstImage}"   loading="lazy"  class="card-img-top" alt="${item.name}"
+              <img title="Black and White Stays Service Villa" src="${firstImage}" width="400" height="200" loading="lazy" decoding="async" class="card-img-top" alt="${item.name}"
                    style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
           </div>
           <div class="card-body d-flex flex-column">
@@ -270,7 +272,7 @@ function updateRightColumnOnly() {
     const firstImage = itemImages[0];
     card.innerHTML = `
       <div class="card-img-container" style="height: 200px; overflow: hidden; position: relative;">${typeof bwCategoryChip === 'function' ? bwCategoryChip(Object.keys(siteData)[currentcatId]) : ''}
-        <img title="${item.name}" loading="lazy" src="${firstImage}" class="card-img-top" alt="${item.name}"
+        <img title="${item.name}" loading="lazy" decoding="async" src="${firstImage}" width="400" height="200" class="card-img-top" alt="${item.name}"
              style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
       </div>
       <div class="card-body d-flex flex-column">
@@ -351,6 +353,8 @@ function updateLeftColumnContentForKnowMore() {
     img.src = src;
     img.alt = currentItemData.name;
     img.className = 'img-fluid';
+    img.width = 800; // the slider box is 400px high: the attributes only reserve the space (no layout shift)
+    img.height = 400;
     img.style.width = '100%';
     img.style.height = '100%';
     img.style.objectFit = 'cover';
