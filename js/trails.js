@@ -398,36 +398,42 @@
   function lunchRow(day, i, lunch, leg) {
     var id = 'tr-lunch-' + (i + 1);
     var stop = day.stops[lunch.at];
-    var main;
-    if (lunch.place) {
-      var f = lunch.place;
-      var meta = [String(f.kind || '').replace('shop:', '').replace('_', ' ')];
+    var f = lunch.place;
+    var meta = [];
+    if (f) {
+      meta.push(String(f.kind || '').replace('shop:', '').replace('_', ' '));
       if (f.cuisine && f.cuisine.length) meta.push(f.cuisine.join(', '));
       if (f.vegetarian === true || f.vegetarian === 'yes' || f.vegetarian === 'only') meta.push('vegetarian options');
       if (f.opening_hours) meta.push('open ' + f.opening_hours);
-      main = el('div', { class: 'tr-stop-main' }, [
-        el('span', leg ? { class: 'tr-leg', id: leg.id, text: leg.text } : { class: 'tr-leg', text: 'Lunch near ' + stop.name }),
-        el('a', { class: 'tr-stop-name', href: f.osm_url, target: '_blank', rel: 'noopener', text: f.name || 'Place to eat' }),
-        el('span', { class: 'tr-stop-meta', text: meta.join(' · ') }),
-      ]);
-    } else {
-      main = el('div', { class: 'tr-stop-main' }, [
-        el('span', { class: 'tr-leg', text: 'Lunch' }),
-        el('span', { class: 'tr-stop-meta', text: 'No place to eat is listed within 10 km of ' + stop.name + ' on OpenStreetMap: carry lunch or eat in the nearest town.' }),
-      ]);
     }
-    return el('li', { class: 'tr-stop tr-lunch', id: id }, [
-      el('span', { class: 'tr-lunch-icon', 'aria-hidden': 'true' }, [icon('fa-utensils')]),
-      main,
-      el('div', { class: 'tr-stop-tools' }, [
-        lunch.place ? dirLink(lunch.place, lunch.place.name || 'the lunch stop') : null,
-        el('button', {
-          type: 'button', class: 'tr-portlet-btn', title: 'Remove the lunch stop', 'aria-label': 'Remove the lunch stop from day ' + (i + 1), text: '×',
-          onclick: function () { hidden.push(id); store('bwTrailsHidden', hidden); render(); },
-        }),
+    return stopRow({
+      cls: 'tr-lunch', id: id,
+      pic: el('div', { class: 'tr-stop-pic tr-lunch-pic', 'aria-hidden': 'true' }, [icon('fa-utensils')]),
+      name: f ? el('a', { class: 'tr-stop-name', href: f.osm_url, target: '_blank', rel: 'noopener', text: f.name || 'Place to eat' }) : el('span', { class: 'tr-stop-name', text: 'Lunch' }),
+      pill: 'Lunch',
+      metaIcon: 'fa-utensils',
+      meta: f ? meta.join(' · ') : 'No place to eat is listed within 10 km of ' + stop.name + ' on OpenStreetMap: carry lunch or eat in the nearest town.',
+      leg: f && leg ? leg : null,
+      dir: f ? dirLink(f, f.name || 'the lunch stop') : null,
+      remove: el('button', {
+        type: 'button', class: 'tr-portlet-btn tr-stop-x', title: 'Remove the lunch stop', 'aria-label': 'Remove the lunch stop from day ' + (i + 1), text: '×',
+        onclick: function () { hidden.push(id); store('bwTrailsHidden', hidden); render(); },
+      }),
+    });
+  }
+  // one layout for every row of a day: photo (with the stop number) | name, type and time, distance | Go and x
+  function stopRow(r) {
+    return el('li', r.id ? { class: 'tr-stop' + (r.cls ? ' ' + r.cls : ''), id: r.id } : { class: 'tr-stop' + (r.cls ? ' ' + r.cls : '') }, [
+      r.pic,
+      el('div', { class: 'tr-stop-main' }, [
+        el('div', { class: 'tr-stop-title' }, [r.name, r.pill ? el('span', { class: 'tr-pill', text: r.pill }) : null]),
+        el('span', { class: 'tr-stop-meta' }, [icon(r.metaIcon), el('span', { text: r.meta })]),
+        r.leg ? el('span', { class: 'tr-leg' }, [icon('fa-car-side'), el('span', { id: r.leg.id, text: r.leg.text })]) : null,
       ]),
+      el('div', { class: 'tr-stop-tools' }, [r.dir, r.remove]),
     ]);
   }
+
 
   // the day's drive: the villa, the stops in order with the lunch place after its stop, the villa again;
   // each waypoint after the first has a leg (distance from the one before), shown in the list and the map
@@ -435,8 +441,8 @@
     var lunch = hidden.indexOf('tr-lunch-' + (i + 1)) < 0 ? lunchFor(day.stops) : null;
     var w = [{ pt: BASE, name: 'the villa' }];
     day.stops.forEach(function (p, j) {
-      w.push({ pt: p, name: p.name, stop: j, prefix: (j + 1) + '. ' });
-      if (lunch && lunch.at === j && lunch.place) w.push({ pt: lunch.place, name: lunch.place.name || 'the lunch stop', lunch: true, prefix: 'Lunch: ' });
+      w.push({ pt: p, name: p.name, stop: j, prefix: '' });
+      if (lunch && lunch.at === j && lunch.place) w.push({ pt: lunch.place, name: lunch.place.name || 'the lunch stop', lunch: true, prefix: '' });
     });
     if (day.stops.length) w.push({ pt: BASE, name: 'the villa', end: true, prefix: 'Back to the villa: ' });
     return { w: w, lunch: lunch };
@@ -471,24 +477,25 @@
     way.w.forEach(function (x, k) { if (k) legAt[x.lunch ? 'lunch' : x.end ? 'end' : x.stop] = k; });
     day.stops.forEach(function (p, j) {
       var item = siteItem(p.id) || {};
-      var meta = [p.must ? 'Must-see' : '', p.label, 'about ' + fmtH(hoursAt(p)) + ' there'].filter(Boolean);
+      var meta = [p.label, 'about ' + fmtH(hoursAt(p)) + ' there'];
       if (Array.isArray(item.timing) && item.timing.length) meta.push('open ' + item.timing.join(', '));
       if (item.holidays && !/^(na|none|-)$/i.test(item.holidays)) meta.push('closed ' + item.holidays);
-      list.appendChild(el('li', { class: 'tr-stop' }, [
-        el('img', { src: p.img, alt: '', loading: 'lazy', decoding: 'async', width: '72', height: '54' }),
-        el('div', { class: 'tr-stop-main' }, [
-          el('span', { class: 'tr-leg', id: 'tr-leg-' + i + '-' + legAt[j], text: legText(way.w, legAt[j]) }),
-          el('a', { class: 'tr-stop-name', href: p.url, text: p.name }),
-          el('span', { class: 'tr-stop-meta' }, [icon(catIcon(p.cat)), ' ' + meta.join(' · ')]),
+      list.appendChild(stopRow({
+        pic: el('div', { class: 'tr-stop-pic' }, [
+          el('img', { src: p.img, alt: '', loading: 'lazy', decoding: 'async', width: '72', height: '54' }),
+          el('span', { class: 'tr-stop-num', style: 'background:' + COLORS[i % COLORS.length], text: String(j + 1) }),
         ]),
-        el('div', { class: 'tr-stop-tools' }, [
-          dirLink(p, p.name),
-          el('button', {
-            type: 'button', class: 'tr-portlet-btn', title: 'Remove this stop', 'aria-label': 'Remove ' + p.name + ' from day ' + (i + 1), text: '×',
-            onclick: function () { removedStops.push({ day: i, place: p, index: j }); day.stops.splice(j, 1); render(); },
-          }),
-        ]),
-      ]));
+        name: el('a', { class: 'tr-stop-name', href: p.url, text: p.name }),
+        pill: p.must ? 'Must-see' : null,
+        metaIcon: catIcon(p.cat),
+        meta: meta.join(' · '),
+        leg: { id: 'tr-leg-' + i + '-' + legAt[j], text: legText(way.w, legAt[j]) },
+        dir: dirLink(p, p.name),
+        remove: el('button', {
+          type: 'button', class: 'tr-portlet-btn tr-stop-x', title: 'Remove this stop', 'aria-label': 'Remove ' + p.name + ' from day ' + (i + 1), text: '×',
+          onclick: function () { removedStops.push({ day: i, place: p, index: j }); day.stops.splice(j, 1); render(); },
+        }),
+      }));
       if (lunch && lunch.at === j) list.appendChild(lunchRow(day, i, lunch, legAt.lunch ? { id: 'tr-leg-' + i + '-' + legAt.lunch, text: legText(way.w, legAt.lunch) } : null));
       prev = p;
     });
