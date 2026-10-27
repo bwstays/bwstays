@@ -5,6 +5,7 @@
   "css/new-page.css": "ab96463f4d41",
   "css/page-404.css": "c9a93996d756",
   "css/styles.css": "5e329d47a5bd",
+  "css/trails.css": "77e5558d3276",
   "data/bookingdata.js": "6c7bcd61d74f",
   "data/closeddata.js": "0d24ff068790",
   "data/nearbylocationsdata.js": "b81abc0bd728",
@@ -29,8 +30,8 @@
   "js/specrule.js": "3329b7510cb0",
   "js/testimonial.js": "809abf211383",
   "js/total-booking-reports.js": "d9ae980be345",
+  "js/trails.js": "152846be8408",
   "js/validations.js": "94b9344e7666",
   "js/way_food_loc.js": "f3844f3cb582",
-  "js/wayanad_kalpetta_trait-one.js": "a9d219d61190",
   "js/widgets.js": "94e944eaac67"
 }
