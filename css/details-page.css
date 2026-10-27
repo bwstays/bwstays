@@ -2706,7 +2706,7 @@ a.text-black:focus {
 
 #signup .text-center h2 {
   font-variant: normal !important;
-  letter-spacing: normal !important;
+  letter-spacing: 0.02em !important;   /* the same as the other section titles (#testimonial h2, footer h3) */
   display: block !important;
   padding: 0 !important;
 }
