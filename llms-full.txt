@@ -412,11 +412,17 @@ URL: https://www.bwstays.com/all-locations-wayanad.html
 
 Wayanad holidays and vacations - Black and White Stays - all nearby locations to visit in Wayanad with family and friends
 
+### Discover your Leisure
+Wayanad, in the Western Ghats of north-east Kerala, has peaks, waterfalls, lakes, wildlife sanctuaries, temples, churches and tea estates within a day's drive of Kalpetta. This page lists more than 70 of them in 15 groups, including 14 viewpoints, lakes and dams, 12 places of worship, 7 waterfalls and 7 trekking spots, each with its road distance from Kalpetta. Use the filters to show one kind of place on the map, and open a place for its timings, entry fee and how to get there. Timings and fees follow official sources such as DTPC Wayanad, but they change, so check before you go.
+
 ## Places to Eat in Kalpetta, Wayanad | Black & White Workations
 
 URL: https://www.bwstays.com/all-fooding-wayanad.html
 
 Stays bwstays Staycations Workations Service Hotels Restaurants Food Camping Resorts sightseeing homestay Tourist Vacation Kerala Wayanad Kalpetta
+
+### Discover Local Food & Dining Spots at Kalpetta
+Kalpetta is the headquarters town of Wayanad district, and there are plenty of places to eat within easy reach of the villa. This list has 183 of them: about 115 restaurants, 31 bakeries, 22 caf&eacute;s, and a few fast-food stalls, food courts and bars, each with its road distance from the villa. Tap a name to see it on the map. Opening hours and phone numbers appear only where they are recorded. If something is missing or out of date, you can correct it on OpenStreetMap, where this list comes from.
 
 ## 900 Kandi Glass Bridge, Wayanad | Black & White Workations
 
@@ -6535,6 +6541,9 @@ URL: https://www.bwstays.com/bw-one-day-trails-kalpetta-wayanad.html
 
 Black and White Stays One day Trails|Workation and Staycation|Villa Stays|Holiday with your family in a pool villa at Kalpetta City Center
 
+### Discover your Leisure
+Kalpetta is in the middle of Wayanad, so most of the district is a day trip from the villa. Pookode Lake is about 13 km away and Chembra Peak about 17 km. Banasura Sagar Dam and Soochipara Falls are both under 25 km, and Edakkal Caves is about 28 km. Muthanga Wildlife Sanctuary (about 38 km) and Kuruva Island (about 40 km) make longer days out. Pick two or three places in the same direction, start early, and use the map below to plan the route.
+
 ## Lourdes Shrine, Pallikunnu, Wayanad | Black & White Workations
 
 URL: https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html
@@ -9811,9 +9820,12 @@ URL: https://www.bwstays.com/search.html
 Search places to visit, restaurants, bakeries and answers around Kalpetta, Wayanad.
 
 ### Search Wayanad
-Places to visit, restaurants, cafes, bakeries and answers to common questions.
+Search more than 70 places to visit, 183 places to eat, and answers to common questions about staying at Black & White Workations in Kalpetta. Type a place, a kind of food or a question, then sort the results by best match, nearest first or name.
+
 All 0 Places 0 Food 0 FAQ 0 Pages 0
+
 Sort by
+
 Food and place data © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).
 
 <!-- BEGIN GENERATED: site-data -->
