@@ -205,3 +205,35 @@
   .tr-days { grid-template-columns: 1fr; }
   .tr-map { height: 320px; }
 }
+
+/* print / save as PDF: the trail only, on white */
+.tr-print-head { display: none; }
+body.tr-printing .tr-map { width: 680px; height: 460px; }
+@media print {
+  @page { margin: 12mm; }
+  body > *:not(.trails-page) { display: none !important; }
+  body, .trails-page { background: #fff !important; color: #000 !important; }
+  .trails-page { padding: 0 !important; }
+  .trails-page h1, .trails-intro, .tr-hidden, #tr-plan, #tr-presets, #tr-tips, .tr-print-bar, .tr-note,
+  .tr-portlet-btn, .leaflet-control-zoom { display: none !important; }
+  .tr-print-head { display: block; margin-bottom: 10px; color: #000; }
+  .tr-print-head h2 { font-size: 20pt; margin: 0 0 4px; color: #000; }
+  .tr-print-head p { margin: 0 0 3px; font-size: 10pt; color: #222; }
+  .tr-print-brand { font-weight: 700; letter-spacing: 0.04em; }
+  .tr-print-link { font-size: 8.5pt; color: #555 !important; word-break: break-all; }
+  .tr-days { display: block; }
+  .tr-portlet { background: #fff; border: 1px solid #bbb; break-inside: avoid; page-break-inside: avoid; margin-bottom: 10px; }
+  .tr-portlet.is-collapsed .tr-portlet-body { display: block; }
+  .tr-portlet-head { background: #f2f2f2; border-bottom: 1px solid #ccc; }
+  .tr-portlet-title, .tr-stop-name { color: #000 !important; }
+  .tr-portlet-sub, .tr-stop-meta, .tr-day-foot, .tr-route-km { color: #333 !important; }
+  .tr-leg { color: #2f6f6b !important; }
+  .tr-stop { border-top-color: #ddd; break-inside: avoid; }
+  .tr-lunch { background: #fff4ea; }
+  .tr-lunch .tr-leg { color: #a2581a !important; }
+  .tr-stop-name { text-decoration: none; }
+  .tr-day-badge, .tr-legend i, .tr-num { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #tr-map-box { break-before: page; }
+  .tr-map { width: 680px !important; height: 460px !important; }
+  .leaflet-container { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

@@ -8,6 +8,8 @@
  * The map draws each day's road route from the public OSRM server (OpenStreetMap data), one request per day, at
  * most one a second, kept in the browser for a week; until a route arrives, or if it cannot be loaded, a dashed
  * line shows the order of the stops.
+ * "Print / Save as PDF" prints the trail only (css/trails.css @media print): a summary header, the days and the
+ * map; the browser's print dialog saves it as a PDF.
  * Every block is a portlet the visitor can collapse or remove; removed portlets and stops can be restored.
  * The choice is kept in the URL (?days=3&areas=n,e&interests=waterfalls&pace=balanced) so a trail can be shared.
  */
@@ -51,6 +53,7 @@
   var removedStops = [];      // [{ day, place, index }]
   var hidden = [];            // portlet ids
   var map = null;
+  var tiles = null;
 
   // ------------------------------------------------------------ helpers
   function el(tag, attrs, children) {
@@ -237,6 +240,7 @@
     var excluded = store('bwTrailsExcluded') || [];
     body.appendChild(el('div', { class: 'tr-actions' }, [
       el('button', { type: 'button', class: 'tr-btn', text: 'Copy link to this trail', onclick: copyLink }),
+      el('button', { type: 'button', class: 'tr-btn', text: 'Print / Save as PDF', onclick: printTrail }),
       excluded.length ? el('button', {
         type: 'button', class: 'tr-btn is-ghost', text: 'Bring back ' + excluded.length + ' skipped place' + (excluded.length > 1 ? 's' : ''),
         onclick: function () { store('bwTrailsExcluded', []); update(); },
@@ -411,8 +415,14 @@
     } else if (plan.length < state.days) {
       root.appendChild(el('p', { class: 'tr-note', text: 'Only ' + plan.length + ' day(s) of places match these choices; add areas or interests for a longer trip.' }));
     }
+    root.appendChild(printHead());
     plan.forEach(function (d, i) { days.appendChild(dayPortlet(d, i)); });
     root.appendChild(days);
+    if (plan.length) {
+      root.appendChild(el('div', { class: 'tr-actions tr-print-bar' }, [
+        el('button', { type: 'button', class: 'tr-btn', text: 'Print / Save as PDF', onclick: printTrail }),
+      ]));
+    }
     if (plan.length) root.appendChild(mapPortlet());
     root.appendChild(tipsPortlet());
     drawMap();
@@ -425,7 +435,7 @@
     var box = document.getElementById('tr-map');
     if (!box || typeof L === 'undefined' || document.getElementById('tr-map-box').hidden) return;
     map = L.map(box, { scrollWheelZoom: false });
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors, routes OSRM', maxZoom: 18 }).addTo(map);
+    tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors, routes OSRM', maxZoom: 18 }).addTo(map);
     var bounds = [[BASE.lat, BASE.lon]];
     L.marker([BASE.lat, BASE.lon], { title: 'Black & White Workations (the villa)' }).addTo(map).bindPopup('<strong>Black &amp; White Workations</strong><br>Kalpetta: every day starts here');
     plan.forEach(function (d, i) {
@@ -480,6 +490,48 @@
     var note = document.getElementById('tr-route-' + (job.day + 1));
     if (note) note.textContent = 'road route about ' + route.km + ' km';
   }
+
+  // ------------------------------------------------------------ print
+  function printHead() {
+    var names = function (list, all) { return list.length ? list.join(', ') : all; };
+    var areas = names(state.areas.map(function (k) { return areaInfo(k).label; }), 'all areas');
+    var ints = names(state.interests.map(function (k) {
+      var c = categories.filter(function (x) { return x.key === k; })[0];
+      return c ? c.label.replace(/ \(\d+\)$/, '') : k;
+    }), 'everything');
+    var km = plan.reduce(function (a, d) { return a + dayStats(d.stops).km; }, 0);
+    return el('div', { class: 'tr-print-head', 'aria-hidden': 'true' }, [
+      el('p', { class: 'tr-print-brand', text: 'Black & White Workations · Kalpetta, Wayanad' }),
+      el('h2', { text: plan.length + '-day Wayanad trail' }),
+      el('p', { text: 'Areas: ' + areas + ' · Interests: ' + ints + ' · Pace: ' + state.pace + ' · about ' + km + ' km in all' }),
+      el('p', { text: 'Every day starts and ends at the villa in Kalpetta. Check opening hours on each place page before you go. Printed ' + new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }) + '.' }),
+      el('p', { class: 'tr-print-link', text: location.origin + location.pathname + '?' + toQuery() }),
+    ]);
+  }
+  // load every photo and fit the map to the printed width before the print dialog opens
+  function printTrail() {
+    root.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+    document.body.classList.add('tr-printing');
+    var done = false;
+    function go() {
+      if (done) return;
+      done = true;
+      window.print();
+    }
+    if (map) {
+      map.invalidateSize();
+      var b = [];
+      map.eachLayer(function (l) { if (l.getLatLng) b.push(l.getLatLng()); });
+      if (b.length) map.fitBounds(b, { padding: [20, 20], maxZoom: 12 });
+      if (tiles) tiles.once('load', function () { setTimeout(go, 300); });
+    }
+    setTimeout(go, 2500);   // do not wait for the tiles for ever
+  }
+  window.addEventListener('afterprint', function () {
+    if (!document.body.classList.contains('tr-printing')) return;
+    document.body.classList.remove('tr-printing');
+    if (map) setTimeout(function () { map.invalidateSize(); }, 100);
+  });
 
   // ------------------------------------------------------------ state
   function toggle(arr, k) { var i = arr.indexOf(k); if (i >= 0) arr.splice(i, 1); else arr.push(k); }
