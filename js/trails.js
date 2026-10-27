@@ -1,10 +1,13 @@
 /*
  * Trails planner (bw-one-day-trails-kalpetta-wayanad.html).
- * Builds 2, 3 or 5 day trips from the villa in Kalpetta, by area and by interest, from the site's own data:
+ * Builds 2, 3, 5 or 7 day trips from the villa in Kalpetta, by area and by interest, from the site's own data:
  *   data/map-places.json      places with a trusted coordinate, category, image and road km from Kalpetta
  *   locations (nearbylocationsdata.js)  road km between places (0 = unknown, then straight line x 1.4)
  *   siteData (sitedata.js)    hours to spend (hrs), timing, weekly holiday
  *   data/food-places.json     places to eat (OpenStreetMap): one lunch suggestion a day, near the stop reached around midday
+ * The map draws each day's road route from the public OSRM server (OpenStreetMap data), one request per day, at
+ * most one a second, kept in the browser for a week; until a route arrives, or if it cannot be loaded, a dashed
+ * line shows the order of the stops.
  * Every block is a portlet the visitor can collapse or remove; removed portlets and stops can be restored.
  * The choice is kept in the URL (?days=3&areas=n,e&interests=waterfalls&pace=balanced) so a trail can be shared.
  */
@@ -17,7 +20,10 @@
   var DAY_HOURS = 9;          // leave about 8:30, back by about 17:30
   var KMH = 28;               // average driving speed on Wayanad roads (estimate)
   var PACE = { relaxed: 3, balanced: 4, packed: 5 };
-  var COLORS = ['#3f9f99', '#e0883a', '#8e6cc9', '#3f7fc9', '#c9506b'];
+  var COLORS = ['#3f9f99', '#e0883a', '#8e6cc9', '#3f7fc9', '#c9506b', '#b8a13a', '#5fae5b'];
+  var OSRM = 'https://router.project-osrm.org/route/v1/driving/';
+  var ROUTE_DAYS = 7;         // keep a loaded route this many days in the browser
+  var mapGen = 0;             // bumps on every redraw, so a late route answer for an old map is ignored
   var NEAR_KM = 12;           // road km: closer than this is "around Kalpetta" whatever the direction
   var AREAS = [
     { key: 'c', label: 'Around Kalpetta', towns: 'within ' + NEAR_KM + ' km' },
@@ -32,6 +38,7 @@
     { title: '3-day wildlife & heritage', text: 'Sanctuaries, museums and history.', days: 3, areas: [], interests: ['wildlife', 'museums', 'culthist', 'tribal'], pace: 'balanced' },
     { title: '3-day trekking & adventure', text: 'Peaks, hills, caves and adventure sports.', days: 3, areas: [], interests: ['trucking', 'sporting', 'romantic'], pace: 'packed' },
     { title: '5-day all of Wayanad', text: 'A bit of everything, one area a day.', days: 5, areas: [], interests: [], pace: 'balanced' },
+    { title: '7-day slow Wayanad', text: 'A week at an easy pace: every area, three stops a day.', days: 7, areas: [], interests: [], pace: 'relaxed' },
   ];
 
   var places = [];
@@ -210,7 +217,7 @@
     var body = el('div');
     body.appendChild(el('div', { class: 'tr-field' }, [
       el('span', { class: 'tr-label', text: 'How many days' }),
-      chips([{ key: 2, label: '2 days' }, { key: 3, label: '3 days' }, { key: 5, label: '5 days' }],
+      chips([{ key: 2, label: '2 days' }, { key: 3, label: '3 days' }, { key: 5, label: '5 days' }, { key: 7, label: '7 days' }],
         function (k) { return state.days === k; }, function (k) { state.days = k; update(); }),
     ]));
     body.appendChild(el('div', { class: 'tr-field' }, [
@@ -339,9 +346,10 @@
     var body = el('div', {}, [
       el('div', { class: 'tr-map', id: 'tr-map', role: 'region', 'aria-label': 'Map of the trail' }),
       el('div', { class: 'tr-legend' }, plan.map(function (d, i) {
-        return el('span', {}, [el('i', { style: 'background:' + COLORS[i % COLORS.length] }), 'Day ' + (i + 1)]);
+        return el('span', {}, [el('i', { style: 'background:' + COLORS[i % COLORS.length] }), 'Day ' + (i + 1) + ' ',
+          el('small', { class: 'tr-route-km', id: 'tr-route-' + (i + 1) })]);
       })),
-      el('p', { class: 'tr-note', text: 'Lines show the order of the stops, not the roads. Map data © OpenStreetMap contributors.' }),
+      el('p', { class: 'tr-note', text: 'Solid lines follow the roads (routes from OSRM on OpenStreetMap data); a dashed line shows the order of the stops while a route loads or if it cannot be loaded. Map data © OpenStreetMap contributors.' }),
     ]);
     return portlet('tr-map-box', 'Trail map', 'Numbered stops, one colour per day', body);
   }
@@ -411,11 +419,13 @@
   }
 
   function drawMap() {
+    mapGen++;
+    var routeQueue = [];
     if (map) { map.remove(); map = null; }
     var box = document.getElementById('tr-map');
     if (!box || typeof L === 'undefined' || document.getElementById('tr-map-box').hidden) return;
     map = L.map(box, { scrollWheelZoom: false });
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 18 }).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors, routes OSRM', maxZoom: 18 }).addTo(map);
     var bounds = [[BASE.lat, BASE.lon]];
     L.marker([BASE.lat, BASE.lon], { title: 'Black & White Workations (the villa)' }).addTo(map).bindPopup('<strong>Black &amp; White Workations</strong><br>Kalpetta: every day starts here');
     plan.forEach(function (d, i) {
@@ -430,9 +440,45 @@
         bounds.push([p.lat, p.lon]);
       });
       line.push([BASE.lat, BASE.lon]);
-      L.polyline(line, { color: color, weight: 3, opacity: 0.85, dashArray: '6 6' }).addTo(map);
+      var dashed = L.polyline(line, { color: color, weight: 3, opacity: 0.85, dashArray: '6 6' }).addTo(map);
+      routeQueue.push({ day: i, pts: line, dashed: dashed, color: color });
     });
     map.fitBounds(bounds, { padding: [25, 25], maxZoom: 12 });
+    loadRoutes(routeQueue, mapGen);
+  }
+
+  // road routes, one day at a time and at most one request a second (the public OSRM server's limit)
+  function routeKey(pts) { return 'bwRoute:' + pts.map(function (p) { return p[0].toFixed(4) + ',' + p[1].toFixed(4); }).join(';'); }
+  function cachedRoute(pts) {
+    var hit = store(routeKey(pts));
+    return hit && hit.t > Date.now() - ROUTE_DAYS * 864e5 ? hit : null;
+  }
+  function loadRoutes(queue, gen) {
+    var job = queue.shift();
+    if (!job || gen !== mapGen || !map) return;
+    var hit = cachedRoute(job.pts);
+    if (hit) { drawRoute(job, hit, gen); loadRoutes(queue, gen); return; }
+    var url = OSRM + job.pts.map(function (p) { return p[1].toFixed(5) + ',' + p[0].toFixed(5); }).join(';') + '?overview=full&geometries=geojson';
+    fetch(url).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+      var r = j && j.code === 'Ok' && j.routes && j.routes[0];
+      if (r) {
+        var route = { t: Date.now(), km: Math.round(r.distance / 1000), h: r.duration / 3600,
+          line: r.geometry.coordinates.map(function (c) { return [Math.round(c[1] * 1e5) / 1e5, Math.round(c[0] * 1e5) / 1e5]; }) };
+        store(routeKey(job.pts), route);
+        drawRoute(job, route, gen);
+      }
+    }).catch(function () { /* keep the dashed line */ }).then(function () {
+      setTimeout(function () { loadRoutes(queue, gen); }, 1100);
+    });
+  }
+  function drawRoute(job, route, gen) {
+    if (gen !== mapGen || !map) return;
+    map.removeLayer(job.dashed);
+    L.polyline(route.line, { color: '#000', weight: 7, opacity: 0.35 }).addTo(map);
+    L.polyline(route.line, { color: job.color, weight: 4, opacity: 0.95 }).addTo(map)
+      .bindTooltip('Day ' + (job.day + 1) + ': road route about ' + route.km + ' km, ' + fmtH(route.h) + ' driving (OSRM)', { sticky: true });
+    var note = document.getElementById('tr-route-' + (job.day + 1));
+    if (note) note.textContent = 'road route about ' + route.km + ' km';
   }
 
   // ------------------------------------------------------------ state
@@ -448,7 +494,7 @@
   function fromQuery() {
     var q = new URLSearchParams(location.search);
     var d = Number(q.get('days'));
-    if ([2, 3, 5].indexOf(d) >= 0) state.days = d;
+    if ([2, 3, 5, 7].indexOf(d) >= 0) state.days = d;
     if (q.get('areas')) state.areas = q.get('areas').split(',').filter(function (k) { return areaInfo(k); });
     if (q.get('interests')) state.interests = q.get('interests').split(',').filter(function (k) { return categories.some(function (c) { return c.key === k; }); });
     if (PACE[q.get('pace')]) state.pace = q.get('pace');

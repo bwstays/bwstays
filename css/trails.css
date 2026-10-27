@@ -195,6 +195,7 @@
 .tr-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.6rem; font-size: 0.85rem; }
 .tr-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
 
+.tr-route-km { color: rgba(255, 255, 255, 0.6); }
 .tr-tips { margin: 0; padding-left: 1.1rem; color: rgba(255, 255, 255, 0.75); }
 .tr-tips li { margin-bottom: 0.35rem; }
 
