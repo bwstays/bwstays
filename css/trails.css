@@ -435,3 +435,17 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
   .tr-stop { grid-template-columns: 60px minmax(0, 1fr) 52px; gap: 0.55rem; padding: 0.6rem 0.35rem; }
   .tr-stop-pic { width: 60px; height: 46px; }
 }
+
+/* typography: the site's shared scale and letter-spacing (css/details-page.css: --bw-font, --bw-track,
+   --bw-fs-title, .btn), so this page reads like the others */
+.trails-page h1 { font-size: 2rem; font-weight: 600; letter-spacing: var(--bw-track, 1px); }
+.trails-page button, .trails-page .tr-btn, .trails-page .tr-dir { font-family: var(--bw-font); letter-spacing: var(--bw-track, 1px); }
+.tr-portlet-title { font-size: var(--bw-fs-title, 1.25rem); font-weight: 600; letter-spacing: var(--bw-track, 1px); }
+.tr-step-title { font-size: 1.1rem; letter-spacing: var(--bw-track, 1px); }
+.trails-page .tr-btn, .trails-page .tr-dir, .trails-page .tr-day-nav { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.15rem; }
+.trails-page .tr-stop-tools .tr-dir { font-size: 0.72rem; letter-spacing: 0.1rem; }
+.tr-pill, .tr-preset-days { letter-spacing: 0.1rem; }
+@media (max-width: 575.98px) {
+  .trails-page h1 { font-size: 1.5rem; }
+  .tr-portlet-title { font-size: 1.1rem; }
+}
