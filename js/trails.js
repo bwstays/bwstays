@@ -31,14 +31,14 @@
   // them, from the first day. 18 Chembra Peak, 44 Pookode Lake, 21 Edakkal Caves, 45 Banasura Sagar Dam.
   var MUST_SEE = [18, 44, 21, 45];
   var AREAS = [
-    { key: 'c', label: 'Around Kalpetta', towns: 'within ' + NEAR_KM + ' km' },
-    { key: 'n', label: 'North', towns: 'Mananthavady, Thirunelli' },
-    { key: 'e', label: 'East', towns: 'Sultan Bathery, Ambalavayal' },
-    { key: 's', label: 'South', towns: 'Meppadi, Chembra, Vythiri' },
-    { key: 'w', label: 'West', towns: 'Banasura, Padinjarathara' },
+    { key: 'c', label: 'Around Kalpetta', towns: 'within ' + NEAR_KM + ' km', side: 'within ' + NEAR_KM + ' km' },
+    { key: 'n', label: 'North', towns: 'Mananthavady, Thirunelli', side: 'Mananthavady' },
+    { key: 'e', label: 'East', towns: 'Sultan Bathery, Ambalavayal', side: 'Sultan Bathery' },
+    { key: 's', label: 'South', towns: 'Meppadi, Chembra, Vythiri', side: 'Meppadi, Vythiri' },
+    { key: 'w', label: 'West', towns: 'Banasura, Padinjarathara', side: 'Banasura' },
   ];
   var PRESETS = [
-    { title: '2-day highlights: Chembra, Pookode, Banasura & Edakkal', text: 'All four must-see places in two days, with places along the way.', days: 2, areas: [], interests: [], pace: 'balanced', must: true },
+    { title: '2-day must-see highlights', text: 'Chembra Peak, Pookode Lake, Banasura Sagar Dam and Edakkal Caves, with places along the way.', days: 2, areas: [], interests: [], pace: 'balanced', must: true },
     { title: '2-day weekend: waterfalls & viewpoints', text: 'Falls, lakes and view points close to Kalpetta.', days: 2, areas: [], interests: ['waterfalls', 'romantic'], pace: 'balanced' },
     { title: '2-day pilgrim trail', text: 'Temples, churches and mosques across the district.', days: 2, areas: [], interests: ['pilgrimage', 'culthist'], pace: 'balanced' },
     { title: '3-day wildlife & heritage', text: 'Sanctuaries, museums and history.', days: 3, areas: [], interests: ['wildlife', 'museums', 'culthist', 'tribal'], pace: 'balanced' },
@@ -271,15 +271,15 @@
   }
 
   var DAYS = [
-    { key: 2, label: '2 days', sub: 'A weekend' },
-    { key: 3, label: '3 days', sub: 'A long weekend' },
+    { key: 2, label: '2 days', sub: 'Weekend' },
+    { key: 3, label: '3 days', sub: 'Long weekend' },
     { key: 5, label: '5 days', sub: 'Most of Wayanad' },
-    { key: 7, label: '7 days', sub: 'A slow week' },
+    { key: 7, label: '7 days', sub: 'Slow week' },
   ];
   var PACES = [
-    { key: 'relaxed', label: 'Relaxed', sub: '3 places a day, more time at each', icon: 'fa-coffee' },
+    { key: 'relaxed', label: 'Relaxed', sub: '3 places a day', icon: 'fa-coffee' },
     { key: 'balanced', label: 'Balanced', sub: '4 places a day', icon: 'fa-walking' },
-    { key: 'packed', label: 'Packed', sub: '5 places a day, early start', icon: 'fa-bolt' },
+    { key: 'packed', label: 'Packed', sub: '5 places a day', icon: 'fa-bolt' },
   ];
   function catIcon(key) {
     var c = categories.filter(function (x) { return x.key === key; })[0];
@@ -289,13 +289,20 @@
 
   // a tile: a big button with an icon, a title and one line of help; aria-pressed shows it is chosen
   function tile(t, pressed, onclick) {
-    return el('button', { type: 'button', class: 'tr-tile' + (t.img ? ' has-img' : ''), 'aria-pressed': String(pressed), onclick: onclick }, [
-      t.img ? el('span', { class: 'tr-tile-img', style: 'background-image:url(' + t.img + ')' }) : null,
-      t.icon ? icon(t.icon) : (t.big ? el('span', { class: 'tr-tile-big', text: t.big }) : null),
-      el('span', { class: 'tr-tile-label', text: t.label }),
-      t.sub ? el('span', { class: 'tr-tile-sub', text: t.sub }) : null,
+    // every tile has the same shape and size: a round picture on the left (the category photo, an icon or
+    // the number of days) and a title with one line of help on the right
+    var visual = el('span', t.img ? { class: 'tr-tile-visual has-img', style: 'background-image:url(' + t.img + ')' } : { class: 'tr-tile-visual' }, [
+      t.big ? el('span', { class: 'tr-tile-big', text: t.big }) : t.icon ? icon(t.icon) : null,
+    ]);
+    return el('button', { type: 'button', class: 'tr-tile', 'aria-pressed': String(pressed), onclick: onclick, title: t.label + (t.sub ? ': ' + t.sub : '') }, [
+      visual,
+      el('span', { class: 'tr-tile-text' }, [
+        el('span', { class: 'tr-tile-label', text: t.label }),
+        t.sub ? el('span', { class: 'tr-tile-sub', text: t.sub }) : null,
+      ]),
     ]);
   }
+
   function step(n, iconName, title, help, tiles, cls) {
     return el('div', { class: 'tr-step' }, [
       el('div', { class: 'tr-step-head' }, [
@@ -304,9 +311,6 @@
       ]),
       el('div', { class: 'tr-tiles ' + (cls || ''), role: 'group', 'aria-label': title }, tiles),
     ]);
-  }
-  function mustNames() {
-    return places.filter(function (p) { return p.must; }).map(function (p) { return p.name.replace(/ (Peak|Lake|Caves|Sagar Dam)$/, ''); }).join(', ');
   }
   function summaryText() {
     var area = state.must ? 'Must-see highlights' : state.areas.length ? state.areas.map(function (k) { return areaInfo(k).label; }).join(', ') : 'All of Wayanad';
@@ -323,16 +327,16 @@
     body.appendChild(el('p', { class: 'tr-planner-intro', text: 'Choose in the four steps below; your trail further down changes as soon as you tap. Every day starts and ends at the villa in Kalpetta.' }));
     var steps = el('div', { class: 'tr-steps' });
     steps.appendChild(step(1, 'fa-calendar-alt', 'How many days do you have?', 'One day for each part of Wayanad.',
-      DAYS.map(function (d) { return tile({ big: String(d.key), label: 'days', sub: d.sub }, state.days === d.key, function () { state.days = d.key; update(); }); }), 'tr-tiles-days'));
+      DAYS.map(function (d) { return tile({ big: String(d.key), label: d.key + ' days', sub: d.sub }, state.days === d.key, function () { state.days = d.key; update(); }); })));
     steps.appendChild(step(2, 'fa-map-marked-alt', 'Which part of Wayanad?', '"All of Wayanad" gives one area a day; "Must-see highlights" fits the must-see places into the fewest days first; or pick areas.',
-      [tile({ icon: 'fa-globe-asia', label: 'All of Wayanad', sub: 'One area a day' }, !state.areas.length && !state.must, function () { state.areas = []; state.must = false; update(); }),
-        tile({ icon: 'fa-star', label: 'Must-see highlights', sub: mustNames() + ' first' }, state.must, function () { state.areas = []; state.must = true; update(); })].concat(
-        AREAS.map(function (a) { return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.towns }, state.areas.indexOf(a.key) >= 0, function () { state.must = false; toggle(state.areas, a.key); update(); }); }))));
+      [tile({ icon: 'fa-globe-asia', label: 'All of Wayanad', sub: 'Every area' }, !state.areas.length && !state.must, function () { state.areas = []; state.must = false; update(); }),
+        tile({ icon: 'fa-star', label: 'Must-see highlights', sub: 'Top ' + places.filter(function (p) { return p.must; }).length + ' places first' }, state.must, function () { state.areas = []; state.must = true; update(); })].concat(
+        AREAS.map(function (a) { return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.side }, state.areas.indexOf(a.key) >= 0, function () { state.must = false; toggle(state.areas, a.key); update(); }); }))));
     steps.appendChild(step(3, 'fa-heart', 'What do you enjoy?', 'Leave "Everything" on, or pick as many as you like.',
       [tile({ icon: 'fa-th-large', label: 'Everything', sub: places.length + ' places' }, !state.interests.length, function () { state.interests = []; update(); })].concat(
-        categories.map(function (c) { return tile({ icon: c.icon, img: c.img, label: c.name, sub: c.count + (c.count === 1 ? ' place' : ' places') }, state.interests.indexOf(c.key) >= 0, function () { toggle(state.interests, c.key); update(); }); })), 'tr-tiles-small'));
+        categories.map(function (c) { return tile({ icon: c.icon, img: c.img, label: c.short, sub: c.count + (c.count === 1 ? ' place' : ' places') }, state.interests.indexOf(c.key) >= 0, function () { toggle(state.interests, c.key); update(); }); }))));
     steps.appendChild(step(4, 'fa-tachometer-alt', 'How full should each day be?', 'Each day is planned for about 9 hours, driving included.',
-      PACES.map(function (x) { return tile({ icon: x.icon, label: x.label, sub: x.sub }, state.pace === x.key, function () { state.pace = x.key; update(); }); }), 'tr-tiles-pace'));
+      PACES.map(function (x) { return tile({ icon: x.icon, label: x.label, sub: x.sub }, state.pace === x.key, function () { state.pace = x.key; update(); }); })));
     body.appendChild(steps);
 
     var excluded = store('bwTrailsExcluded') || [];
@@ -774,7 +778,7 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       // label, icon and photo of each type of place come from data/categories.js (through map-places.json)
-      categories = (data.categories || []).map(function (c) { return { key: c.key, name: c.label, count: c.count, icon: c.icon || 'fa-map-marker-alt', img: c.img, label: c.label + ' (' + c.count + ')' }; });
+      categories = (data.categories || []).map(function (c) { return { key: c.key, name: c.label, short: c.short || c.label, count: c.count, icon: c.icon || 'fa-map-marker-alt', img: c.img, label: c.label + ' (' + c.count + ')' }; });
       places = (data.places || []).filter(function (p) { return p.lat && p.lon && p.url; }).map(function (p) {
         var item = siteItem(p.id);
         p.hrs = item && item.hrs;

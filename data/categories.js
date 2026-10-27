@@ -4,7 +4,7 @@
  * ("Type", "... Places"), the all-locations map filters, the trails planner (through data/map-places.json,
  * written by scripts/build-map-data.mjs from this file).
  *
- * Keys are the category keys of data/sitedata.js. The photos are the ones the home page shows for each row.
+ * Keys are the category keys of data/sitedata.js; `short` is an optional shorter name for small tiles. The photos are the ones the home page shows for each row.
  * After a change: node scripts/build-map-data.mjs, node scripts/minify-assets.mjs, node scripts/version-assets.mjs,
  * node scripts/prerender.mjs; a new icon also needs python scripts/build-fontawesome.py.
  */
@@ -12,7 +12,7 @@ const bwCategories = {
   plantation: { label: 'Plantations', icon: 'fa-leaf', img: 'assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp' },
   waterfalls: { label: 'Waterfalls & Lakes', icon: 'fa-water', img: 'assets/img/falls/bw-stays-thusharagiri-falls-service-apartment.webp' },
   museums: { label: 'Museums & Crafts', icon: 'fa-landmark', img: 'assets/img/museum/bw-stays-wayanad-heritage-museum.webp' },
-  romantic: { label: 'Viewpoints & Romantic Spots', icon: 'fa-mountain', img: 'assets/img/romantic/bw-kalpetta-neelimala-view-point-wayanad.webp' },
+  romantic: { label: 'Viewpoints & Romantic Spots', short: 'Viewpoints', icon: 'fa-mountain', img: 'assets/img/romantic/bw-kalpetta-neelimala-view-point-wayanad.webp' },
   culthist: { label: 'Culture & History', icon: 'fa-monument', img: 'assets/img/heritage/bw-stays-chain-tree-service-apartment.webp' },
   trucking: { label: 'Trekking', icon: 'fa-hiking', img: 'assets/img/trucking/bw-staycation-edakkal-caves-wayanad.webp' },
   wildlife: { label: 'Wildlife', icon: 'fa-paw', img: 'assets/img/wildlife/bw-weekday-pakshipathalam-bird-sanctuary-wayanad.webp' },

@@ -74,7 +74,7 @@ for (const [cat, rows] of Object.entries(siteData)) {
 places.sort((a, b) => a.label.localeCompare(b.label) || a.name.localeCompare(b.name));
 
 const categories = Object.entries(LABELS)
-  .map(([key, label]) => ({ key, label, icon: CATEGORIES[key].icon, img: SITE + CATEGORIES[key].img, count: places.filter((p) => p.cat === key).length }))
+  .map(([key, label]) => ({ key, label, ...(CATEGORIES[key].short ? { short: CATEGORIES[key].short } : {}), icon: CATEGORIES[key].icon, img: SITE + CATEGORIES[key].img, count: places.filter((p) => p.cat === key).length }))
   .filter((c) => c.count > 0);
 const out = {
   generated: new Date().toISOString().slice(0, 10),
