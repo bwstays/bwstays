@@ -222,8 +222,11 @@ for (const f of pages) {
   const edits = [];
   for (const { t, els, rendered } of snapshots) {
     els.forEach((el, i) => {
-      const snap = (rendered[i] || '').replace(/\s+\n/g, '\n').trim();
-      if (!snap) return;
+      // a container its script does not rebuild still holds the old markers: drop them so they never nest
+      const snap = (rendered[i] || '').split(BEGIN).join('').split(END).join('').replace(/\s+\n/g, '\n').trim();
+      // an empty render clears an earlier prerender (e.g. the last other place of a category was removed),
+      // unless the page had script errors, when empty may just mean the script failed
+      if (!snap && (errors.length || !html.slice(el.openEnd, el.closeStart).includes(BEGIN))) return;
       edits.push({ el, t, snap });
     });
   }
