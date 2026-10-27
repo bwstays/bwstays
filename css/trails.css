@@ -1,0 +1,203 @@
+/* Trails planner page (bw-one-day-trails-kalpetta-wayanad.html): controls, ready-made trails and removable portlets */
+.trails-page {
+  padding: 120px 0 3rem;
+  background: #111;
+  color: #e6e6e6;
+}
+.trails-page h1 {
+  font-size: 1.9rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+.trails-intro {
+  max-width: 46rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+/* portlet: a card with a title bar, collapse and remove buttons */
+.tr-portlet {
+  background: #1b1b1b;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+.tr-portlet-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.9rem;
+  background: #222;
+  border-bottom: 1px solid #2e2e2e;
+}
+.tr-portlet.is-collapsed .tr-portlet-head { border-bottom: 0; }
+.tr-portlet-title {
+  flex: 1;
+  margin: 0;
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 600;
+}
+.tr-portlet-sub {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2px;
+}
+.tr-portlet-btn {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  background: transparent;
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.tr-portlet-btn:hover, .tr-portlet-btn:focus-visible { background: var(--bw-teal); border-color: var(--bw-teal); color: #fff; outline: none; }
+.tr-portlet-body { padding: 0.9rem; }
+.tr-portlet.is-collapsed .tr-portlet-body { display: none; }
+
+/* controls */
+.tr-field { margin-bottom: 0.9rem; }
+.tr-label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.4rem;
+}
+.tr-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tr-chip {
+  border: 1px solid #444;
+  background: #262626;
+  color: #ddd;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  min-height: 34px;
+}
+.tr-chip[aria-pressed="true"] { background: var(--bw-teal); border-color: var(--bw-teal); color: #fff; }
+.tr-chip:hover { border-color: var(--bw-teal-soft); }
+.tr-chip:focus-visible { outline: 2px solid var(--bw-teal-soft); outline-offset: 2px; }
+.tr-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem; }
+.tr-btn {
+  border: 0;
+  border-radius: 6px;
+  padding: 0.5rem 1.1rem;
+  background: var(--bw-teal);
+  color: #fff;
+  cursor: pointer;
+  min-height: 38px;
+}
+.tr-btn:hover { background: var(--bw-teal-dark); }
+.tr-btn.is-ghost { background: transparent; border: 1px solid #555; color: #ddd; }
+.tr-note { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin: 0.5rem 0 0; }
+
+/* ready-made trails */
+.tr-presets { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.7rem; }
+.tr-preset {
+  text-align: left;
+  border: 1px solid #333;
+  background: #232323;
+  color: #eee;
+  border-radius: 8px;
+  padding: 0.75rem 0.85rem;
+  cursor: pointer;
+}
+.tr-preset:hover, .tr-preset:focus-visible { border-color: var(--bw-teal); outline: none; }
+.tr-preset strong { display: block; color: #fff; }
+.tr-preset span { font-size: 0.85rem; color: rgba(255, 255, 255, 0.65); }
+
+/* hidden portlets bar */
+.tr-hidden {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.tr-hidden[hidden] { display: none; }
+.tr-restore {
+  border: 1px dashed #666;
+  background: transparent;
+  color: #ddd;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+}
+.tr-restore:hover { border-color: var(--bw-teal-soft); color: #fff; }
+
+/* day portlets */
+.tr-days { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0 1.25rem; }
+.tr-day-badge {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+}
+.tr-stops { list-style: none; margin: 0; padding: 0; }
+.tr-stop {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.6rem 0;
+  border-top: 1px solid #2a2a2a;
+}
+.tr-stop:first-child { border-top: 0; padding-top: 0; }
+.tr-stop img {
+  flex: none;
+  width: 72px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #2a2a2a;
+}
+.tr-stop-main { flex: 1; min-width: 0; }
+.tr-stop-name { color: #fff; font-weight: 600; text-decoration: none; }
+.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
+.tr-stop-meta { display: block; font-size: 0.83rem; color: rgba(255, 255, 255, 0.62); margin-top: 2px; }
+.tr-leg { display: block; font-size: 0.78rem; color: #8cc4c0; }
+.tr-stop .tr-portlet-btn { width: 28px; height: 28px; font-size: 0.95rem; }
+.tr-day-foot { margin-top: 0.6rem; font-size: 0.82rem; color: rgba(255, 255, 255, 0.55); }
+.tr-empty { color: rgba(255, 255, 255, 0.7); margin: 0; }
+
+/* map */
+.tr-map { height: 420px; border-radius: 8px; }
+.tr-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  font: 700 12px/20px sans-serif;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.tr-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.6rem; font-size: 0.85rem; }
+.tr-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
+
+.tr-tips { margin: 0; padding-left: 1.1rem; color: rgba(255, 255, 255, 0.75); }
+.tr-tips li { margin-bottom: 0.35rem; }
+
+@media (max-width: 575.98px) {
+  .trails-page { padding-top: 100px; }
+  .trails-page h1 { font-size: 1.45rem; }
+  .tr-days { grid-template-columns: 1fr; }
+  .tr-map { height: 320px; }
+}
