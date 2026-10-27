@@ -232,49 +232,83 @@
     return box;
   }
 
-  function chips(list, selected, onToggle) {
-    var wrap = el('div', { class: 'tr-chips', role: 'group' });
-    list.forEach(function (item) {
-      wrap.appendChild(el('button', {
-        type: 'button', class: 'tr-chip', 'aria-pressed': String(selected(item.key)), text: item.label,
-        title: item.title || '', onclick: function () { onToggle(item.key); },
-      }));
-    });
-    return wrap;
+  var ICONS = { plantation: 'fa-leaf', waterfalls: 'fa-water', museums: 'fa-landmark', romantic: 'fa-mountain', culthist: 'fa-monument',
+    trucking: 'fa-hiking', wildlife: 'fa-paw', farms: 'fa-tractor', sporting: 'fa-running', tribal: 'fa-feather-alt',
+    pilgrimage: 'fa-place-of-worship', health: 'fa-spa', shopping: 'fa-shopping-bag', cycling: 'fa-bicycle', food: 'fa-utensils' };
+  var DAYS = [
+    { key: 2, label: '2 days', sub: 'A weekend' },
+    { key: 3, label: '3 days', sub: 'A long weekend' },
+    { key: 5, label: '5 days', sub: 'Most of Wayanad' },
+    { key: 7, label: '7 days', sub: 'A slow week' },
+  ];
+  var PACES = [
+    { key: 'relaxed', label: 'Relaxed', sub: '3 places a day, more time at each', icon: 'fa-coffee' },
+    { key: 'balanced', label: 'Balanced', sub: '4 places a day', icon: 'fa-walking' },
+    { key: 'packed', label: 'Packed', sub: '5 places a day, early start', icon: 'fa-bolt' },
+  ];
+  function icon(name) { return el('i', { class: 'fas ' + name, 'aria-hidden': 'true' }); }
+
+  // a tile: a big button with an icon, a title and one line of help; aria-pressed shows it is chosen
+  function tile(t, pressed, onclick) {
+    return el('button', { type: 'button', class: 'tr-tile', 'aria-pressed': String(pressed), onclick: onclick }, [
+      t.icon ? icon(t.icon) : (t.big ? el('span', { class: 'tr-tile-big', text: t.big }) : null),
+      el('span', { class: 'tr-tile-label', text: t.label }),
+      t.sub ? el('span', { class: 'tr-tile-sub', text: t.sub }) : null,
+    ]);
+  }
+  function step(n, iconName, title, help, tiles, cls) {
+    return el('div', { class: 'tr-step' }, [
+      el('div', { class: 'tr-step-head' }, [
+        el('span', { class: 'tr-step-num', text: String(n) }),
+        el('div', {}, [el('h3', { class: 'tr-step-title' }, [icon(iconName), ' ' + title]), el('p', { class: 'tr-step-help', text: help })]),
+      ]),
+      el('div', { class: 'tr-tiles ' + (cls || ''), role: 'group', 'aria-label': title }, tiles),
+    ]);
+  }
+  function summaryText() {
+    var area = state.areas.length ? state.areas.map(function (k) { return areaInfo(k).label; }).join(', ') : 'All of Wayanad';
+    var ints = state.interests.length ? state.interests.map(function (k) {
+      var c = categories.filter(function (x) { return x.key === k; })[0];
+      return c ? c.name : k;
+    }).join(', ') : 'Everything';
+    var pace = PACES.filter(function (x) { return x.key === state.pace; })[0];
+    return [state.days + ' days', area, ints, (pace ? pace.label : state.pace) + ' pace'];
   }
 
   function controls() {
     var body = el('div');
-    body.appendChild(el('div', { class: 'tr-field' }, [
-      el('span', { class: 'tr-label', text: 'How many days' }),
-      chips([{ key: 2, label: '2 days' }, { key: 3, label: '3 days' }, { key: 5, label: '5 days' }, { key: 7, label: '7 days' }],
-        function (k) { return state.days === k; }, function (k) { state.days = k; update(); }),
-    ]));
-    body.appendChild(el('div', { class: 'tr-field' }, [
-      el('span', { class: 'tr-label', text: 'Which part of Wayanad (none = all)' }),
-      chips(AREAS.map(function (a) { return { key: a.key, label: a.label + ': ' + a.towns }; }),
-        function (k) { return state.areas.indexOf(k) >= 0; }, function (k) { toggle(state.areas, k); update(); }),
-    ]));
-    body.appendChild(el('div', { class: 'tr-field' }, [
-      el('span', { class: 'tr-label', text: 'Interests (none = everything)' }),
-      chips(categories, function (k) { return state.interests.indexOf(k) >= 0; }, function (k) { toggle(state.interests, k); update(); }),
-    ]));
-    body.appendChild(el('div', { class: 'tr-field' }, [
-      el('span', { class: 'tr-label', text: 'Pace' }),
-      chips([{ key: 'relaxed', label: 'Relaxed (3 stops a day)' }, { key: 'balanced', label: 'Balanced (4)' }, { key: 'packed', label: 'Packed (5)' }],
-        function (k) { return state.pace === k; }, function (k) { state.pace = k; update(); }),
-    ]));
+    body.appendChild(el('p', { class: 'tr-planner-intro', text: 'Choose in the four steps below; your trail further down changes as soon as you tap. Every day starts and ends at the villa in Kalpetta.' }));
+    var steps = el('div', { class: 'tr-steps' });
+    steps.appendChild(step(1, 'fa-calendar-alt', 'How many days do you have?', 'One day for each part of Wayanad.',
+      DAYS.map(function (d) { return tile({ big: String(d.key), label: 'days', sub: d.sub }, state.days === d.key, function () { state.days = d.key; update(); }); }), 'tr-tiles-days'));
+    steps.appendChild(step(2, 'fa-map-marked-alt', 'Which part of Wayanad?', 'Leave "All of Wayanad" on, or pick one or more areas.',
+      [tile({ icon: 'fa-globe-asia', label: 'All of Wayanad', sub: 'Every area' }, !state.areas.length, function () { state.areas = []; update(); })].concat(
+        AREAS.map(function (a) { return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.towns }, state.areas.indexOf(a.key) >= 0, function () { toggle(state.areas, a.key); update(); }); }))));
+    steps.appendChild(step(3, 'fa-heart', 'What do you enjoy?', 'Leave "Everything" on, or pick as many as you like.',
+      [tile({ icon: 'fa-th-large', label: 'Everything', sub: places.length + ' places' }, !state.interests.length, function () { state.interests = []; update(); })].concat(
+        categories.map(function (c) { return tile({ icon: ICONS[c.key] || 'fa-map-marker-alt', label: c.name, sub: c.count + (c.count === 1 ? ' place' : ' places') }, state.interests.indexOf(c.key) >= 0, function () { toggle(state.interests, c.key); update(); }); })), 'tr-tiles-small'));
+    steps.appendChild(step(4, 'fa-tachometer-alt', 'How full should each day be?', 'Each day is planned for about 9 hours, driving included.',
+      PACES.map(function (x) { return tile({ icon: x.icon, label: x.label, sub: x.sub }, state.pace === x.key, function () { state.pace = x.key; update(); }); }), 'tr-tiles-pace'));
+    body.appendChild(steps);
+
     var excluded = store('bwTrailsExcluded') || [];
-    body.appendChild(el('div', { class: 'tr-actions' }, [
-      el('button', { type: 'button', class: 'tr-btn', text: 'Copy link to this trail', onclick: copyLink }),
-      el('button', { type: 'button', class: 'tr-btn', text: 'Print / Save as PDF', onclick: printTrail }),
-      excluded.length ? el('button', {
-        type: 'button', class: 'tr-btn is-ghost', text: 'Bring back ' + excluded.length + ' skipped place' + (excluded.length > 1 ? 's' : ''),
-        onclick: function () { store('bwTrailsExcluded', []); update(); },
-      }) : null,
+    var sum = summaryText();
+    body.appendChild(el('div', { class: 'tr-summary' }, [
+      el('p', { class: 'tr-summary-text' }, [icon('fa-route'), ' Your trail: '].concat(sum.map(function (t, k) {
+        return el('strong', { text: t + (k < sum.length - 1 ? ' · ' : '') });
+      }))),
+      el('div', { class: 'tr-actions' }, [
+        el('button', { type: 'button', class: 'tr-btn', onclick: scrollToDays }, [icon('fa-arrow-down'), ' See my trail']),
+        el('button', { type: 'button', class: 'tr-btn is-ghost', onclick: copyLink }, [icon('fa-link'), ' Copy link']),
+        el('button', { type: 'button', class: 'tr-btn is-ghost', onclick: printTrail }, [icon('fa-print'), ' Print / PDF']),
+        excluded.length ? el('button', {
+          type: 'button', class: 'tr-btn is-ghost', text: 'Bring back ' + excluded.length + ' skipped place' + (excluded.length > 1 ? 's' : ''),
+          onclick: function () { store('bwTrailsExcluded', []); update(); },
+        }) : null,
+      ]),
+      el('p', { class: 'tr-note', id: 'tr-copy-note', 'aria-live': 'polite' }),
     ]));
-    body.appendChild(el('p', { class: 'tr-note', id: 'tr-copy-note', 'aria-live': 'polite' }));
-    return portlet('tr-plan', 'Plan your trail', 'Days start and end at the villa in Kalpetta', body);
+    return portlet('tr-plan', 'Build your own trail', '4 quick choices', body);
   }
 
   function presets() {
@@ -283,9 +317,9 @@
       grid.appendChild(el('button', {
         type: 'button', class: 'tr-preset',
         onclick: function () { state = { days: p.days, areas: p.areas.slice(), interests: p.interests.slice(), pace: p.pace }; update(); scrollToDays(); },
-      }, [el('strong', { text: p.title }), el('span', { text: p.text })]));
+      }, [el('span', { class: 'tr-preset-days', text: p.days + ' days' }), el('strong', { text: p.title.replace(/^\d-day (.)/, function (m, c) { return c.toUpperCase(); }) }), el('span', { text: p.text })]));
     });
-    return portlet('tr-presets', 'Ready-made trails', 'Pick one, then change anything above', grid);
+    return portlet('tr-presets', 'Quick start: a ready-made trail', 'Tap one to see it, then change anything you like below', grid);
   }
 
   // the stop after which to have lunch, and the nearest place to eat to it (restaurants first, then
@@ -335,12 +369,15 @@
       ]);
     }
     return el('li', { class: 'tr-stop tr-lunch', id: id }, [
-      el('span', { class: 'tr-lunch-icon', 'aria-hidden': 'true', html: '&#127860;' }),
+      el('span', { class: 'tr-lunch-icon', 'aria-hidden': 'true' }, [icon('fa-utensils')]),
       main,
-      el('button', {
-        type: 'button', class: 'tr-portlet-btn', title: 'Remove the lunch stop', 'aria-label': 'Remove the lunch stop from day ' + (i + 1), text: '×',
-        onclick: function () { hidden.push(id); store('bwTrailsHidden', hidden); render(); },
-      }),
+      el('div', { class: 'tr-stop-tools' }, [
+        lunch.place ? dirLink(lunch.place, lunch.place.name || 'the lunch stop') : null,
+        el('button', {
+          type: 'button', class: 'tr-portlet-btn', title: 'Remove the lunch stop', 'aria-label': 'Remove the lunch stop from day ' + (i + 1), text: '×',
+          onclick: function () { hidden.push(id); store('bwTrailsHidden', hidden); render(); },
+        }),
+      ]),
     ]);
   }
 
@@ -360,6 +397,19 @@
     var from = w[k - 1], to = w[k];
     if (roadKmByOsrm != null) return to.prefix + 'about ' + roadKmByOsrm + ' km by road from ' + from.name;
     return to.prefix + 'about ' + roadKm(from.pt, to.pt) + ' km from ' + from.name + (knownKm(from.pt, to.pt) ? '' : ' (estimate)');
+  }
+
+  function directionsUrl(pt) {
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + pt.lat.toFixed(6) + ',' + pt.lon.toFixed(6) + '&travelmode=driving';
+  }
+  // the whole day in Google Maps: from the villa, through every stop (and lunch) in order, back to the villa
+  function dayDirectionsUrl(way) {
+    var mid = way.slice(1, -1).map(function (x) { return x.pt.lat.toFixed(6) + ',' + x.pt.lon.toFixed(6); }).join('|');
+    var b = BASE.lat.toFixed(6) + ',' + BASE.lon.toFixed(6);
+    return 'https://www.google.com/maps/dir/?api=1&origin=' + b + '&destination=' + b + (mid ? '&waypoints=' + encodeURIComponent(mid) : '') + '&travelmode=driving';
+  }
+  function dirLink(pt, name) {
+    return el('a', { class: 'tr-dir', href: directionsUrl(pt), target: '_blank', rel: 'noopener nofollow', title: 'Directions to ' + name, 'aria-label': 'Directions to ' + name }, [icon('fa-directions'), el('span', { text: 'Go' })]);
   }
 
   function dayPortlet(day, i) {
@@ -383,10 +433,13 @@
           el('a', { class: 'tr-stop-name', href: p.url, text: p.name }),
           el('span', { class: 'tr-stop-meta', text: meta.join(' · ') }),
         ]),
-        el('button', {
-          type: 'button', class: 'tr-portlet-btn', title: 'Remove this stop', 'aria-label': 'Remove ' + p.name + ' from day ' + (i + 1), text: '×',
-          onclick: function () { removedStops.push({ day: i, place: p, index: j }); day.stops.splice(j, 1); render(); },
-        }),
+        el('div', { class: 'tr-stop-tools' }, [
+          dirLink(p, p.name),
+          el('button', {
+            type: 'button', class: 'tr-portlet-btn', title: 'Remove this stop', 'aria-label': 'Remove ' + p.name + ' from day ' + (i + 1), text: '×',
+            onclick: function () { removedStops.push({ day: i, place: p, index: j }); day.stops.splice(j, 1); render(); },
+          }),
+        ]),
       ]));
       if (lunch && lunch.at === j) list.appendChild(lunchRow(day, i, lunch, legAt.lunch ? { id: 'tr-leg-' + i + '-' + legAt.lunch, text: legText(way.w, legAt.lunch) } : null));
       prev = p;
@@ -395,8 +448,10 @@
       day.stops.length ? list : el('p', { class: 'tr-empty', text: 'No stops left for this day.' }),
       day.stops.length ? el('p', { class: 'tr-day-foot' }, [
         el('span', { id: 'tr-leg-' + i + '-' + legAt.end, text: legText(way.w, legAt.end) }),
-        '. Road km from OpenStreetMap; the map replaces them with the road route when it loads. Times are estimates.',
+        '. Road km; times are estimates.',
       ]) : null,
+      day.stops.length ? el('a', { class: 'tr-btn tr-day-nav', href: dayDirectionsUrl(way.w), target: '_blank', rel: 'noopener nofollow' },
+        [icon('fa-route'), ' Open day ' + (i + 1) + ' in Google Maps']) : null,
     ]);
     var badge = el('span', { class: 'tr-day-badge', style: 'background:' + COLORS[i % COLORS.length], text: String(i + 1) });
     var sub = a.label + ' (' + a.towns + ') · ' + day.stops.length + ' stops · about ' + st.km + ' km, ' + fmtH(st.drive) + ' driving, ' + fmtH(st.total) + ' in all';
@@ -410,7 +465,7 @@
         return el('span', {}, [el('i', { style: 'background:' + COLORS[i % COLORS.length] }), 'Day ' + (i + 1) + ' ',
           el('small', { class: 'tr-route-km', id: 'tr-route-' + (i + 1) })]);
       })),
-      el('p', { class: 'tr-note', text: 'Solid lines follow the roads (routes from OSRM on OpenStreetMap data); a dashed line shows the order of the stops while a route loads or if it cannot be loaded. Map data © OpenStreetMap contributors.' }),
+      el('p', { class: 'tr-note', text: 'The lines are the driving routes (OSRM on OpenStreetMap data). Tap a pin for directions. Map data © OpenStreetMap contributors.' }),
     ]);
     return portlet('tr-map-box', 'Trail map', 'Numbered stops, one colour per day', body);
   }
@@ -420,6 +475,7 @@
     [
       'Opening hours and weekly holidays are shown where the place page has them; check the place page before you go, as they change.',
       'Driving times are estimates at about ' + KMH + ' km/h on hill roads; leave early on days with more than 80 km.',
+      'Tap "Go" next to a place for directions from where you are, or "Open day in Google Maps" for the whole day in order.',
       'Use × on a stop to skip it, or on any box to hide it. Hidden boxes come back from the bar at the top.',
       'Lunch is the nearest place to eat on OpenStreetMap to the stop you reach around midday; check that it is open. Missing hours or places can be added on OpenStreetMap.',
       'Copy the link to share the trail; it opens with the same days, areas, interests and pace.',
@@ -464,8 +520,8 @@
   function render() {
     root.innerHTML = '';
     root.appendChild(hiddenBar());
-    root.appendChild(controls());
     root.appendChild(presets());
+    root.appendChild(controls());
     var days = el('div', { class: 'tr-days', id: 'tr-days' });
     if (!plan.length) {
       days.appendChild(el('p', { class: 'tr-empty', text: 'No places match these choices. Add an area or an interest, or bring back skipped places.' }));
@@ -503,18 +559,21 @@
       way.forEach(function (x) {
         if (!x.lunch) return;
         L.marker([x.pt.lat, x.pt.lon], { title: 'Day ' + (i + 1) + ': lunch at ' + x.name,
-          icon: L.divIcon({ className: '', html: '<div class="tr-num tr-num-lunch" style="background:' + color + '">&#127860;</div>', iconSize: [24, 24], iconAnchor: [12, 12] }) })
-          .addTo(map).bindPopup('<strong>Day ' + (i + 1) + ', lunch</strong><br>' + x.name);
+          icon: L.divIcon({ className: '', html: '<div class="tr-num tr-num-lunch" style="background:' + color + '"><i class="fas fa-utensils"></i></div>', iconSize: [24, 24], iconAnchor: [12, 12] }) })
+          .addTo(map).bindPopup('<strong>Day ' + (i + 1) + ', lunch</strong><br>' + x.name + '<br>' +
+            '<a target="_blank" rel="noopener nofollow" href="' + directionsUrl(x.pt) + '">Directions</a>');
         bounds.push([x.pt.lat, x.pt.lon]);
       });
       d.stops.forEach(function (p, j) {
         var icon = L.divIcon({ className: '', html: '<div class="tr-num" style="background:' + color + '">' + (j + 1) + '</div>', iconSize: [24, 24], iconAnchor: [12, 12] });
         L.marker([p.lat, p.lon], { icon: icon, title: 'Day ' + (i + 1) + ': ' + p.name }).addTo(map)
-          .bindPopup('<strong>Day ' + (i + 1) + ', stop ' + (j + 1) + '</strong><br><a href="' + p.url + '">' + p.name + '</a>');
+          .bindPopup('<strong>Day ' + (i + 1) + ', stop ' + (j + 1) + '</strong><br><a href="' + p.url + '">' + p.name + '</a><br>' +
+            '<a target="_blank" rel="noopener nofollow" href="' + directionsUrl(p) + '">Directions</a>');
         bounds.push([p.lat, p.lon]);
       });
-      var dashed = L.polyline(line, { color: color, weight: 3, opacity: 0.85, dashArray: '6 6' }).addTo(map);
-      routeQueue.push({ day: i, pts: line, way: way, dashed: dashed, color: color, visit: dayStats(d.stops).visit, area: areaInfo(d.area), stops: d.stops.length });
+      routeQueue.push({ day: i, pts: line, way: way, color: color, visit: dayStats(d.stops).visit, area: areaInfo(d.area), stops: d.stops.length });
+      var note = document.getElementById('tr-route-' + (i + 1));
+      if (note) note.textContent = 'loading the road route…';
     });
     map.fitBounds(bounds, { padding: [25, 25], maxZoom: 12 });
     loadRoutes(routeQueue, mapGen);
@@ -541,13 +600,17 @@
         store(routeKey(job.pts), route);
         drawRoute(job, route, gen);
       }
-    }).catch(function () { /* keep the dashed line */ }).then(function () {
+      else routeFailed(job);
+    }).catch(function () { routeFailed(job); }).then(function () {
       setTimeout(function () { loadRoutes(queue, gen); }, 1100);
     });
   }
+  function routeFailed(job) {
+    var note = document.getElementById('tr-route-' + (job.day + 1));
+    if (note) note.textContent = 'road route not available now: use "Open day ' + (job.day + 1) + ' in Google Maps"';
+  }
   function drawRoute(job, route, gen) {
     if (gen !== mapGen || !map) return;
-    map.removeLayer(job.dashed);
     L.polyline(route.line, { color: '#000', weight: 7, opacity: 0.35 }).addTo(map);
     L.polyline(route.line, { color: job.color, weight: 4, opacity: 0.95 }).addTo(map)
       .bindTooltip('Day ' + (job.day + 1) + ': road route about ' + route.km + ' km, ' + fmtH(route.h) + ' driving (OSRM)', { sticky: true });
@@ -645,7 +708,7 @@
   fetch('https://www.bwstays.com/data/map-places.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {
-      categories = (data.categories || []).map(function (c) { return { key: c.key, label: c.label + ' (' + c.count + ')' }; });
+      categories = (data.categories || []).map(function (c) { return { key: c.key, name: c.label, count: c.count, label: c.label + ' (' + c.count + ')' }; });
       places = (data.places || []).filter(function (p) { return p.lat && p.lon && p.url; }).map(function (p) {
         var item = siteItem(p.id);
         p.hrs = item && item.hrs;

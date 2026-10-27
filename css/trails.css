@@ -1,9 +1,11 @@
 /* Trails planner page (bw-one-day-trails-kalpetta-wayanad.html): controls, ready-made trails and removable portlets */
 .trails-page {
   padding: 120px 0 3rem;
-  background: #111;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.62) 0%, rgba(10, 10, 10, 0.84) 480px, rgba(10, 10, 10, 0.93) 100%),
+    #111 url("https://www.bwstays.com/assets/img/bg-masthead.webp") center top / cover no-repeat fixed;
   color: #e6e6e6;
 }
+.trails-page h1, .trails-intro { text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7); }
 .trails-page h1 {
   font-size: 1.9rem;
   letter-spacing: 0.02em;
@@ -13,13 +15,14 @@
 }
 .trails-intro {
   max-width: 46rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 1.5rem;
 }
 
 /* portlet: a card with a title bar, collapse and remove buttons */
 .tr-portlet {
-  background: #1b1b1b;
+  background: rgba(27, 27, 27, 0.94);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
   border: 1px solid #2e2e2e;
   border-radius: 10px;
   margin-bottom: 1.25rem;
@@ -65,29 +68,6 @@
 .tr-portlet.is-collapsed .tr-portlet-body { display: none; }
 
 /* controls */
-.tr-field { margin-bottom: 0.9rem; }
-.tr-label {
-  display: block;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 0.4rem;
-}
-.tr-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.tr-chip {
-  border: 1px solid #444;
-  background: #262626;
-  color: #ddd;
-  border-radius: 999px;
-  padding: 0.35rem 0.85rem;
-  font-size: 0.9rem;
-  cursor: pointer;
-  min-height: 34px;
-}
-.tr-chip[aria-pressed="true"] { background: var(--bw-teal); border-color: var(--bw-teal); color: #fff; }
-.tr-chip:hover { border-color: var(--bw-teal-soft); }
-.tr-chip:focus-visible { outline: 2px solid var(--bw-teal-soft); outline-offset: 2px; }
 .tr-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem; }
 .tr-btn {
   border: 0;
@@ -103,7 +83,18 @@
 .tr-note { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin: 0.5rem 0 0; }
 
 /* ready-made trails */
-.tr-presets { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.7rem; }
+.tr-presets { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 0.7rem; }
+.tr-preset-days {
+  display: inline-block;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff !important;
+  background: var(--bw-teal);
+  border-radius: 999px;
+  padding: 1px 8px;
+  margin-bottom: 0.35rem;
+}
 .tr-preset {
   text-align: left;
   border: 1px solid #333;
@@ -240,4 +231,109 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
   #tr-map-box { break-before: page; }
   .tr-map { width: 680px !important; height: 460px !important; }
   .leaflet-container { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* planner: four numbered steps of tiles, then a summary bar */
+.tr-planner-intro { margin: 0 0 1rem; color: rgba(255, 255, 255, 0.78); }
+.tr-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
+.tr-step { min-width: 0; }
+.tr-step-head { display: flex; gap: 0.7rem; align-items: flex-start; margin-bottom: 0.6rem; }
+.tr-step-num {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bw-teal);
+  color: #fff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.tr-step-title { margin: 0; font-size: 1.05rem; color: #fff; font-weight: 600; }
+.tr-step-title i { color: var(--bw-teal-soft); margin-right: 2px; }
+.tr-step-help { margin: 2px 0 0; font-size: 0.84rem; color: rgba(255, 255, 255, 0.6); }
+.tr-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; }
+.tr-tiles-days { grid-template-columns: repeat(4, 1fr); }
+.tr-tiles-pace { grid-template-columns: repeat(3, 1fr); }
+.tr-tiles-small { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+.tr-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+  min-height: 64px;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: #242424;
+  color: #e6e6e6;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.tr-tile i { color: var(--bw-teal-soft); font-size: 1.05rem; margin-bottom: 2px; }
+.tr-tile-big { font-size: 1.5rem; font-weight: 700; line-height: 1; color: #fff; }
+.tr-tile-label { font-weight: 600; color: #fff; font-size: 0.92rem; }
+.tr-tile-sub { font-size: 0.78rem; color: rgba(255, 255, 255, 0.6); line-height: 1.25; }
+.tr-tile:hover { border-color: var(--bw-teal-soft); }
+.tr-tile:focus-visible { outline: 2px solid var(--bw-teal-soft); outline-offset: 2px; }
+.tr-tile[aria-pressed="true"] { background: rgba(63, 127, 123, 0.28); border-color: var(--bw-teal); }
+.tr-tile[aria-pressed="true"] i, .tr-tile[aria-pressed="true"] .tr-tile-sub { color: #d7efed; }
+.tr-tile[aria-pressed="true"]::after {
+  content: "\2713";
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bw-teal);
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+.tr-summary {
+  margin-top: 1.2rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 8px;
+  background: rgba(63, 127, 123, 0.16);
+  border: 1px solid rgba(63, 127, 123, 0.55);
+}
+.tr-summary-text { margin: 0 0 0.5rem; color: rgba(255, 255, 255, 0.85); }
+.tr-summary-text i { color: var(--bw-teal-soft); }
+.tr-summary-text strong { color: #fff; font-weight: 600; }
+
+/* directions on every place and for the whole day */
+.tr-stop-tools { flex: none; display: flex; gap: 0.35rem; align-items: flex-start; }
+.tr-dir {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 0.55rem;
+  border-radius: 6px;
+  background: var(--bw-teal);
+  color: #fff !important;
+  font-size: 0.82rem;
+  text-decoration: none !important;
+}
+.tr-dir:hover, .tr-dir:focus-visible { background: var(--bw-teal-dark); outline: none; }
+.tr-day-nav { display: inline-flex; align-items: center; gap: 6px; margin-top: 0.6rem; text-decoration: none !important; color: #fff !important; }
+.tr-num-lunch i { font-size: 11px; color: #fff; }
+.tr-lunch-icon i { font-size: 1.4rem; color: #e8a96b; }
+
+@media (max-width: 991.98px) {
+  .tr-steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 575.98px) {
+  .tr-tiles-days { grid-template-columns: repeat(2, 1fr); }
+  .tr-tiles-pace { grid-template-columns: 1fr; }
+  .tr-tiles, .tr-tiles-small { grid-template-columns: repeat(2, 1fr); }
+  .trails-page { background-attachment: scroll; background-size: 100% 100%, auto 700px; background-position: 0 0, center top; }
+}
+@media print {
+  .tr-dir, .tr-day-nav { display: none !important; }
 }
