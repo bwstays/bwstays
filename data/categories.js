@@ -25,3 +25,12 @@ const bwCategories = {
   pilgrimage: { label: 'Pilgrimage', icon: 'fa-place-of-worship', img: 'assets/img/pilgrimage/bw-staycation-meenagadhi-church-wayanad.webp' },
   health: { label: 'Health & Wellness', icon: 'fa-spa', img: 'assets/img/health/bw-keluvaidyar-kattikulam-tribal-healer-wayanad.webp' },
 };
+
+// The type label on a place card's photo: the round icon badge and the type's name (place pages: the
+// "Locations Nearby" cards in js/dynamic-nearby.js and the same-type cards in js/knowmore-place-dynamic.js).
+function bwCategoryChip(key) {
+  const c = bwCategories[key];
+  if (!c) return '';
+  const label = c.label.replace(/&/g, '&amp;');
+  return '<span class="bw-cat-chip"><i class="fas ' + c.icon + ' bw-cat-icon" aria-hidden="true"></i>' + label + '</span>';
+}

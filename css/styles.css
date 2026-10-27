@@ -362,3 +362,27 @@ main:focus {
   font-size: 0.8em;
   vertical-align: middle;
 }
+
+/* the type label on a place card's photo (bwCategoryChip in data/categories.js): place pages, nearby and same-type cards */
+.bw-cat-chip {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  max-width: calc(100% - 16px);
+  padding: 3px 10px 3px 3px;
+  border-radius: 999px;
+  background: rgba(20, 20, 20, 0.82);
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: var(--bw-track, 1px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+.bw-cat-chip .bw-cat-icon { margin-right: 0; font-size: 0.78rem; flex: none; }

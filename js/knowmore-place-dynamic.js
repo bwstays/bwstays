@@ -210,7 +210,7 @@ $("#nearby-places h2").text("Locations Nearby " + currentItemData.name);
       const itemImages = Array.isArray(item.image) ? item.image : [item.image];
       const firstImage = itemImages[0];
       card.innerHTML = `
-          <div class="card-img-container" style="height: 200px; overflow: hidden;">
+          <div class="card-img-container" style="height: 200px; overflow: hidden; position: relative;">${typeof bwCategoryChip === 'function' ? bwCategoryChip(Object.keys(siteData)[currentcatId]) : ''}
               <img title="Black and White Stays Service Villa"  alt=${item.name} src="${firstImage}"   loading="lazy"  class="card-img-top" alt="${item.name}"
                    style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
           </div>
@@ -269,7 +269,7 @@ function updateRightColumnOnly() {
     const itemImages = Array.isArray(item.image) ? item.image : [item.image];
     const firstImage = itemImages[0];
     card.innerHTML = `
-      <div class="card-img-container" style="height: 200px; overflow: hidden;">
+      <div class="card-img-container" style="height: 200px; overflow: hidden; position: relative;">${typeof bwCategoryChip === 'function' ? bwCategoryChip(Object.keys(siteData)[currentcatId]) : ''}
         <img title="${item.name}" loading="lazy" src="${firstImage}" class="card-img-top" alt="${item.name}"
              style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s ease;">
       </div>
