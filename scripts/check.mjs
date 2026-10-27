@@ -114,6 +114,8 @@ const schemaBuild = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-
 if (schemaBuild.status !== 0) problems.push(`structured data is stale: ${(schemaBuild.stderr || schemaBuild.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const faqBuild = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-faq.mjs'), '--check'], { encoding: 'utf8' });
 if (faqBuild.status !== 0) problems.push(`footer.html FAQ block is stale: ${(faqBuild.stderr || faqBuild.stdout).trim().split(String.fromCharCode(10))[0]}`);
+const roadNear = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-road-near.mjs'), '--check'], { encoding: 'utf8' });
+if (roadNear.status !== 0) problems.push(`data/road-near.json is stale: ${(roadNear.stderr || roadNear.stdout).trim().split(String.fromCharCode(10))[0]}`);
 const bsLite = spawnSync(process.execPath, [path.join(ROOT, 'scripts/build-bootstrap-lite.mjs'), '--check'], { encoding: 'utf8' });
 if (bsLite.status !== 0) problems.push(`css/bootstrap-lite.css is stale: ${(bsLite.stderr || bsLite.stdout).trim().split(String.fromCharCode(10))[0]}`);
 // place ids: unique across every category of data/sitedata.js, and every one listed in the distance matrix

@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '280d84d1d8';
+const VERSION = '713089a77d';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -38,7 +38,7 @@ const SHELL = [
   "/css/new-page.min.css?v=834ed0c8",
   "/css/page-404.min.css?v=f3100777",
   "/css/styles.min.css?v=42d28f62",
-  "/css/trails.min.css?v=76d72379",
+  "/css/trails.min.css?v=400f74e4",
   "/data/nearbylocationsdata.min.js?v=9149dccf",
   "/data/rates.min.js?v=7b5dbd01",
   "/data/sitedata.min.js?v=e3ab1b3e",
@@ -46,8 +46,8 @@ const SHELL = [
   "/js/booking.min.js?v=d32180d1",
   "/js/chat.min.js?v=a27b96c6",
   "/js/decode-email.js",
-  "/js/dynamic-evgas.min.js?v=1a3b82d4",
-  "/js/dynamic-foodmap.min.js?v=e3ef5086",
+  "/js/dynamic-evgas.min.js?v=50b2f3a7",
+  "/js/dynamic-foodmap.min.js?v=653630ee",
   "/js/dynamic-nearby.min.js?v=5c8b2264",
   "/js/knowmore-place-dynamic.min.js?v=bec10669",
   "/js/language.min.js?v=d8bf0fe7",
@@ -57,12 +57,13 @@ const SHELL = [
   "/js/pdfgen.min.js?v=f9275e49",
   "/js/promo-banner.min.js?v=56cb74aa",
   "/js/pwa.min.js?v=9f12090c",
+  "/js/road-path.min.js?v=29c5a32b",
   "/js/scripts.min.js?v=0fa1129f",
   "/js/site-search.min.js?v=028799cb",
   "/js/specrule.min.js?v=1f8a513f",
   "/js/testimonial.min.js?v=c59378fa",
   "/js/total-booking-reports.min.js?v=5527f1e2",
-  "/js/trails.min.js?v=5b81fa57",
+  "/js/trails.min.js?v=73a37697",
   "/js/validations.min.js?v=83a714d7",
   "/js/way_food_loc.min.js?v=566f007d",
   "/js/widgets.min.js?v=913ebcd9",
@@ -174,6 +175,7 @@ const DATA = [
   "/data/improvement-log.json",
   "/data/map-places.json",
   "/data/mcp-review.json",
+  "/data/road-near.json",
   "/data/search-index.json",
   "/data/verification.json",
   "/lang/ar.json",

@@ -53,6 +53,8 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         run: |
           node scripts/build-booking-report.mjs
+          # road km from each place page to its listed food, EV and fuel places (OSRM)
+          node scripts/build-road-near.mjs
           node scripts/generate-mcp.mjs
           node scripts/build-map-data.mjs
           node scripts/build-search-index.mjs

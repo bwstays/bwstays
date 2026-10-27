@@ -43,14 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'You are here',
     }).addTo(map).bindPopup('You are here');
 
+    const roadNear = window.bwRoad ? window.bwRoad.near(lat, lng) : Promise.resolve({});
     fetch('https://www.bwstays.com/data/' + kind.file)
       .then((r) => r.json())
-      .then((data) => {
+      .then((data) => roadNear.then((road) => ({ data, road })))
+      .then(({ data, road }) => {
         const all = (data.places || data.stations || [])
           .map((p) => ({ p, d: metersBetween(lat, lng, p.lat, p.lon) }))
           .sort((a, b) => a.d - b.d);
+        // chosen by straight line (scripts/build-road-near.mjs uses the same rule), listed nearest by road
         let chosen = all.filter((x) => x.d <= kind.radius).slice(0, kind.max);
         if (chosen.length < 4) chosen = all.filter((x) => x.d <= kind.fallback).slice(0, 6);
+        chosen.forEach((x) => { x.road = road[x.p.id]; });
+        chosen.sort((a, b) => (a.road ? a.road[0] * 1000 : a.d * 1.4) - (b.road ? b.road[0] * 1000 : b.d * 1.4));
         if (!chosen.length) {
           listEl.innerHTML = '<p class="bw-food-empty">' + kind.empty + '</p>';
           return;
@@ -60,7 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const rows = chosen.map((item, i) => {
           const p = item.p;
           bounds.push([p.lat, p.lon]);
-          const km = (item.d / 1000).toFixed(1);
+          // road km and minutes from data/road-near.json; straight line, marked, when missing
+          const km = item.road ? item.road[0].toFixed(1) : '≈' + (item.d / 1000).toFixed(1);
+          const kmLong = item.road ? item.road[0].toFixed(1) + ' km by road, ' + item.road[1] + ' min' : (item.d / 1000).toFixed(1) + ' km (straight line)';
           const label = p.operator || p.brand || '';
           const extra = [];
           if (p.opening_hours) extra.push('Hours: ' + esc(p.opening_hours));
@@ -68,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (p.phone) extra.push('<a href="tel:' + esc(p.phone.replace(/[^+\d]/g, '')) + '">' + esc(p.phone) + '</a>');
           if (p.verified === false) extra.push('Location approximate');
           const popup = '<strong>' + esc(p.name) + '</strong>' + (label && label !== p.name ? '<br>' + esc(label) : '') +
-            ' &middot; ' + km + ' km' + (extra.length ? '<br><span class="small">' + extra.join('<br>') + '</span>' : '') +
+            ' &middot; ' + esc(kmLong) + (extra.length ? '<br><span class="small">' + extra.join('<br>') + '</span>' : '') +
             '<br><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.google.com/maps/dir/?api=1&origin=' +
             lat + ',' + lng + '&destination=' + p.lat + ',' + p.lon + '">Directions</a>';
           const marker = L.marker([p.lat, p.lon], {
@@ -80,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return '<li><button type="button" class="bw-food-item" data-i="' + i + '" title="Show on the map">' +
             '<span class="bw-food-main"><span class="bw-food-name">' + esc(p.name) + '</span>' +
             '<span class="bw-food-meta">' + esc(label && label !== p.name ? label : fallbackLabel) + '</span></span>' +
-            '<span class="bw-food-side"><span class="bw-food-km">' + km + ' km</span></span></button></li>';
+            '<span class="bw-food-side"><span class="bw-food-km" title="' + esc(kmLong) + '">' + km + ' km</span></span></button></li>';
         });
         listEl.innerHTML = '<ul class="bw-food-ul">' + rows.join('') + '</ul>';
         listEl.addEventListener('click', (e) => {
@@ -90,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (!marker) return;
           map.setView(marker.getLatLng(), Math.max(map.getZoom(), 14));
           marker.openPopup();
+          if (window.bwRoad) window.bwRoad.path(map, [lat, lng], [marker.getLatLng().lat, marker.getLatLng().lng]);
           listEl.querySelectorAll('.bw-food-item.active').forEach((n) => n.classList.remove('active'));
           btn.classList.add('active');
         });

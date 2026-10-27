@@ -125,13 +125,28 @@
           if (!best || cost < best.cost) best = { p: p, at: at, cost: cost };
         }
       });
-      var trial = stops.slice();
-      trial.splice(best.at, 0, best.p);
+      var trial = shortestOrder(stops.concat([best.p]));
       if (dayStats(trial).total > DAY_HOURS) break;
       stops = trial;
       left.splice(left.indexOf(best.p), 1);
     }
     return stops;
+  }
+  // the order of the day's stops with the fewest road km from the villa and back: every order is tried
+  // (a day has at most 5 stops, so at most 120 orders), which also lets more places fit in a day
+  function loopKm(order) {
+    var km = 0, prev = BASE;
+    for (var i = 0; i < order.length; i++) { km += roadKm(prev, order[i]); prev = order[i]; }
+    return order.length ? km + roadKm(prev, BASE) : 0;
+  }
+  function shortestOrder(stops) {
+    if (stops.length < 3) return stops.length === 2 && loopKm([stops[1], stops[0]]) < loopKm(stops) ? [stops[1], stops[0]] : stops.slice();
+    var best = stops.slice(), bestKm = loopKm(best);
+    (function permute(done, rest) {
+      if (!rest.length) { var km = loopKm(done); if (km < bestKm) { bestKm = km; best = done; } return; }
+      for (var i = 0; i < rest.length; i++) permute(done.concat([rest[i]]), rest.slice(0, i).concat(rest.slice(i + 1)));
+    })([], stops);
+    return best;
   }
   function dayScore(stops) { return stops.length ? stops.length * 10 - dayStats(stops).drive * 3 : -Infinity; }
   // one day in one area: try every place as the anchor and keep the day with the most stops and the least
@@ -283,16 +298,22 @@
       prev = stops[j];
       if (t >= LUNCH_AFTER_H) { at = j; break; }
     }
+    // the place to eat that adds the least driving between this stop and the next one (or the villa),
+    // within 10 km of the stop; straight line x 1.4 for the detour, as places to eat are not in the road matrix
+    var next = stops[at + 1] || BASE;
+    var direct = straightKm(stops[at], next);
     var near = null;
     food.forEach(function (f) {
       var km = straightKm(stops[at], f);
+      if (km > 10) return;
+      var detour = (km + straightKm(f, next) - direct) * 1.4;
       var rank = LUNCH_KINDS.indexOf(f.kind) >= 0 ? LUNCH_KINDS.indexOf(f.kind) : LUNCH_KINDS.length;
-      var score = km + rank * 1.5;   // a restaurant 1.5 km farther beats a cafe
-      if (km <= 10 && (!near || score < near.score)) near = { f: f, km: km, score: score };
+      var score = detour + rank * 1.5;   // a restaurant 1.5 km more out of the way beats a cafe
+      if (!near || score < near.score) near = { f: f, km: km, score: score };
     });
     return { at: at, place: near && near.f, km: near && near.km };
   }
-  function lunchRow(day, i, lunch) {
+  function lunchRow(day, i, lunch, leg) {
     var id = 'tr-lunch-' + (i + 1);
     var stop = day.stops[lunch.at];
     var main;
@@ -303,7 +324,7 @@
       if (f.vegetarian === true || f.vegetarian === 'yes' || f.vegetarian === 'only') meta.push('vegetarian options');
       if (f.opening_hours) meta.push('open ' + f.opening_hours);
       main = el('div', { class: 'tr-stop-main' }, [
-        el('span', { class: 'tr-leg', text: 'Lunch: about ' + (Math.round(lunch.km * 10) / 10) + ' km from ' + stop.name + ' (straight line)' }),
+        el('span', leg ? { class: 'tr-leg', id: leg.id, text: leg.text } : { class: 'tr-leg', text: 'Lunch near ' + stop.name }),
         el('a', { class: 'tr-stop-name', href: f.osm_url, target: '_blank', rel: 'noopener', text: f.name || 'Place to eat' }),
         el('span', { class: 'tr-stop-meta', text: meta.join(' · ') }),
       ]);
@@ -323,12 +344,33 @@
     ]);
   }
 
+  // the day's drive: the villa, the stops in order with the lunch place after its stop, the villa again;
+  // each waypoint after the first has a leg (distance from the one before), shown in the list and the map
+  function dayWaypoints(day, i) {
+    var lunch = hidden.indexOf('tr-lunch-' + (i + 1)) < 0 ? lunchFor(day.stops) : null;
+    var w = [{ pt: BASE, name: 'the villa' }];
+    day.stops.forEach(function (p, j) {
+      w.push({ pt: p, name: p.name, stop: j, prefix: (j + 1) + '. ' });
+      if (lunch && lunch.at === j && lunch.place) w.push({ pt: lunch.place, name: lunch.place.name || 'the lunch stop', lunch: true, prefix: 'Lunch: ' });
+    });
+    if (day.stops.length) w.push({ pt: BASE, name: 'the villa', end: true, prefix: 'Back to the villa: ' });
+    return { w: w, lunch: lunch };
+  }
+  function legText(w, k, roadKmByOsrm) {
+    var from = w[k - 1], to = w[k];
+    if (roadKmByOsrm != null) return to.prefix + 'about ' + roadKmByOsrm + ' km by road from ' + from.name;
+    return to.prefix + 'about ' + roadKm(from.pt, to.pt) + ' km from ' + from.name + (knownKm(from.pt, to.pt) ? '' : ' (estimate)');
+  }
+
   function dayPortlet(day, i) {
     var st = dayStats(day.stops);
     var a = areaInfo(day.area);
     var list = el('ol', { class: 'tr-stops' });
     var prev = BASE;
-    var lunch = hidden.indexOf('tr-lunch-' + (i + 1)) < 0 ? lunchFor(day.stops) : null;
+    var way = dayWaypoints(day, i);
+    var lunch = way.lunch;
+    var legAt = {};
+    way.w.forEach(function (x, k) { if (k) legAt[x.lunch ? 'lunch' : x.end ? 'end' : x.stop] = k; });
     day.stops.forEach(function (p, j) {
       var item = siteItem(p.id) || {};
       var meta = [p.must ? 'Must-see' : '', p.label, 'about ' + fmtH(hoursAt(p)) + ' there'].filter(Boolean);
@@ -337,7 +379,7 @@
       list.appendChild(el('li', { class: 'tr-stop' }, [
         el('img', { src: p.img, alt: '', loading: 'lazy', decoding: 'async', width: '72', height: '54' }),
         el('div', { class: 'tr-stop-main' }, [
-          el('span', { class: 'tr-leg', text: (j + 1) + '. about ' + roadKm(prev, p) + ' km from ' + (prev === BASE ? 'the villa' : prev.name) + (knownKm(prev, p) ? '' : ' (straight-line estimate)') }),
+          el('span', { class: 'tr-leg', id: 'tr-leg-' + i + '-' + legAt[j], text: legText(way.w, legAt[j]) }),
           el('a', { class: 'tr-stop-name', href: p.url, text: p.name }),
           el('span', { class: 'tr-stop-meta', text: meta.join(' · ') }),
         ]),
@@ -346,12 +388,15 @@
           onclick: function () { removedStops.push({ day: i, place: p, index: j }); day.stops.splice(j, 1); render(); },
         }),
       ]));
-      if (lunch && lunch.at === j) list.appendChild(lunchRow(day, i, lunch));
+      if (lunch && lunch.at === j) list.appendChild(lunchRow(day, i, lunch, legAt.lunch ? { id: 'tr-leg-' + i + '-' + legAt.lunch, text: legText(way.w, legAt.lunch) } : null));
       prev = p;
     });
     var body = el('div', {}, [
       day.stops.length ? list : el('p', { class: 'tr-empty', text: 'No stops left for this day.' }),
-      el('p', { class: 'tr-day-foot', text: day.stops.length ? 'Back to the villa: about ' + roadKm(prev, BASE) + ' km. Distances are road km from OpenStreetMap; times are estimates.' : '' }),
+      day.stops.length ? el('p', { class: 'tr-day-foot' }, [
+        el('span', { id: 'tr-leg-' + i + '-' + legAt.end, text: legText(way.w, legAt.end) }),
+        '. Road km from OpenStreetMap; the map replaces them with the road route when it loads. Times are estimates.',
+      ]) : null,
     ]);
     var badge = el('span', { class: 'tr-day-badge', style: 'background:' + COLORS[i % COLORS.length], text: String(i + 1) });
     var sub = a.label + ' (' + a.towns + ') · ' + day.stops.length + ' stops · about ' + st.km + ' km, ' + fmtH(st.drive) + ' driving, ' + fmtH(st.total) + ' in all';
@@ -453,24 +498,30 @@
     plan.forEach(function (d, i) {
       if (hidden.indexOf('tr-day-' + (i + 1)) >= 0) return;
       var color = COLORS[i % COLORS.length];
-      var line = [[BASE.lat, BASE.lon]];
+      var way = dayWaypoints(d, i).w;
+      var line = way.map(function (x) { return [x.pt.lat, x.pt.lon]; });
+      way.forEach(function (x) {
+        if (!x.lunch) return;
+        L.marker([x.pt.lat, x.pt.lon], { title: 'Day ' + (i + 1) + ': lunch at ' + x.name,
+          icon: L.divIcon({ className: '', html: '<div class="tr-num tr-num-lunch" style="background:' + color + '">&#127860;</div>', iconSize: [24, 24], iconAnchor: [12, 12] }) })
+          .addTo(map).bindPopup('<strong>Day ' + (i + 1) + ', lunch</strong><br>' + x.name);
+        bounds.push([x.pt.lat, x.pt.lon]);
+      });
       d.stops.forEach(function (p, j) {
         var icon = L.divIcon({ className: '', html: '<div class="tr-num" style="background:' + color + '">' + (j + 1) + '</div>', iconSize: [24, 24], iconAnchor: [12, 12] });
         L.marker([p.lat, p.lon], { icon: icon, title: 'Day ' + (i + 1) + ': ' + p.name }).addTo(map)
           .bindPopup('<strong>Day ' + (i + 1) + ', stop ' + (j + 1) + '</strong><br><a href="' + p.url + '">' + p.name + '</a>');
-        line.push([p.lat, p.lon]);
         bounds.push([p.lat, p.lon]);
       });
-      line.push([BASE.lat, BASE.lon]);
       var dashed = L.polyline(line, { color: color, weight: 3, opacity: 0.85, dashArray: '6 6' }).addTo(map);
-      routeQueue.push({ day: i, pts: line, dashed: dashed, color: color });
+      routeQueue.push({ day: i, pts: line, way: way, dashed: dashed, color: color, visit: dayStats(d.stops).visit, area: areaInfo(d.area), stops: d.stops.length });
     });
     map.fitBounds(bounds, { padding: [25, 25], maxZoom: 12 });
     loadRoutes(routeQueue, mapGen);
   }
 
   // road routes, one day at a time and at most one request a second (the public OSRM server's limit)
-  function routeKey(pts) { return 'bwRoute:' + pts.map(function (p) { return p[0].toFixed(4) + ',' + p[1].toFixed(4); }).join(';'); }
+  function routeKey(pts) { return 'bwRoute2:' + pts.map(function (p) { return p[0].toFixed(4) + ',' + p[1].toFixed(4); }).join(';'); }
   function cachedRoute(pts) {
     var hit = store(routeKey(pts));
     return hit && hit.t > Date.now() - ROUTE_DAYS * 864e5 ? hit : null;
@@ -485,6 +536,7 @@
       var r = j && j.code === 'Ok' && j.routes && j.routes[0];
       if (r) {
         var route = { t: Date.now(), km: Math.round(r.distance / 1000), h: r.duration / 3600,
+          legs: (r.legs || []).map(function (l) { return Math.round(l.distance / 1000); }),
           line: r.geometry.coordinates.map(function (c) { return [Math.round(c[1] * 1e5) / 1e5, Math.round(c[0] * 1e5) / 1e5]; }) };
         store(routeKey(job.pts), route);
         drawRoute(job, route, gen);
@@ -501,6 +553,14 @@
       .bindTooltip('Day ' + (job.day + 1) + ': road route about ' + route.km + ' km, ' + fmtH(route.h) + ' driving (OSRM)', { sticky: true });
     var note = document.getElementById('tr-route-' + (job.day + 1));
     if (note) note.textContent = 'road route about ' + route.km + ' km';
+    // the list and the day's summary take the road route's numbers
+    (route.legs || []).forEach(function (km, k) {
+      var span = document.getElementById('tr-leg-' + job.day + '-' + (k + 1));
+      if (span && job.way[k + 1]) span.textContent = legText(job.way, k + 1, km);
+    });
+    var sub = document.querySelector('#tr-day-' + (job.day + 1) + ' .tr-portlet-sub');
+    if (sub) sub.textContent = job.area.label + ' (' + job.area.towns + ') · ' + job.stops + ' stops · about ' + route.km + ' km by road, ' +
+      fmtH(route.h) + ' driving, ' + fmtH(route.h + job.visit) + ' in all';
   }
 
   // ------------------------------------------------------------ print

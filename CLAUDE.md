@@ -215,6 +215,12 @@ node scripts/generate-mcp.mjs      # then regenerate the MCP files
 
 Font Awesome Free 5.15.1 is self-hosted as a web font: `css/fontawesome.min.css` plus `assets/fonts/fontawesome/*.woff2` (solid, brands, regular), loaded by a `<link>` in each page's head. The old `all.min.js` (SVG-with-JS) is no longer used, so icons are plain `<i class="fas fa-...">` elements and CSS rules that target `i` apply. The css and fonts are a subset holding only the icons the site uses (about 7 KB css + 9 KB fonts instead of 58 KB + 170 KB). After adding an icon (`fa-...`) anywhere, run `python scripts/build-fontawesome.py` (needs `pip install fonttools brotli`) and then `node scripts/version-assets.mjs`. The unmodified Font Awesome 5.15.1 sources are kept in `scripts/fontawesome-src/`.
 
+### Road distances and drive paths (no straight lines)
+
+- `node scripts/build-road-near.mjs` (`--check` is part of `check.mjs`) writes `data/road-near.json`: road km and driving minutes (OSRM on OpenStreetMap data) from each place page's `data-center` to the places its food, EV and fuel widgets list. The selection rule (radius, max, fallback) is copied from `js/dynamic-foodmap.js` and `js/dynamic-evgas.js`: change both together. Re-run after `build-food.mjs`, `build-fuel.mjs`, an edit of `data/ev-stations.json` or a new place page (the monthly data workflow does), then `prerender.mjs`.
+- `js/road-path.js` (loaded before those two widgets) gives them the road km (lists sorted by road distance; a missing value shows straight-line km with a ≈ sign) and draws the road path from the place to a row when it is tapped (public OSRM server, on demand, kept a week in the browser). The food map no longer draws a radius circle.
+- Trails (`js/trails.js`): each day's stops take the order with the fewest road km (every order of up to 5 stops is tried); lunch is the place to eat that adds the least driving between its stop and the next one; the map's road route goes through the lunch stop, and every leg in the list shows the route's road km once it loads. `MUST_SEE` there lists the must-see place ids (owner's choice: Chembra Peak, Pookode Lake, Edakkal Caves, Banasura Sagar Dam).
+
 ### Other generated data and checks
 
 ```

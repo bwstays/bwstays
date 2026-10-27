@@ -192,6 +192,7 @@
   text-align: center;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
+.tr-num-lunch { font-size: 12px; line-height: 20px; }
 .tr-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.6rem; font-size: 0.85rem; }
 .tr-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
 

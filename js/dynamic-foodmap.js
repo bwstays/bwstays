@@ -31,12 +31,6 @@ function bwInitFoodMap() {
       iconAnchor: [16, 32]
     })
   }).addTo(map1).bindPopup('You are here');
-  L.circle([lat, lng], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.2,
-    radius: RADIUS_M
-  }).addTo(map1);
 
   const foodPlacesContainer = document.getElementById('food-list');
   if (!foodPlacesContainer) return;
@@ -57,6 +51,10 @@ function bwInitFoodMap() {
   };
   const kindOf = (p) => (p.cuisine && p.cuisine.length ? p.cuisine.slice(0, 2).join(', ') : KINDS[p.kind] || 'Food');
   const dietOf = (p) => (p.vegetarian === 'only' ? 'Pure veg' : p.vegetarian ? 'Veg options' : '');
+  // road km and minutes from data/road-near.json (js/road-path.js); straight line, marked, when missing
+  const distOf = (road, d) => (road
+    ? { km: road[0].toFixed(1) + ' km', long: road[0].toFixed(1) + ' km by road, ' + road[1] + ' min' }
+    : { km: '≈' + (d / 1000).toFixed(1) + ' km', long: (d / 1000).toFixed(1) + ' km (straight line)' });
   const popupOf = (p, km) => {
     const rows = [];
     if (p.address) rows.push(esc(p.address));
@@ -65,23 +63,28 @@ function bwInitFoodMap() {
     const tags = [dietOf(p), p.halal ? 'Halal' : '', p.takeaway ? 'Takeaway' : '', p.delivery ? 'Delivery' : '']
       .filter(Boolean).join(' &middot; ');
     if (tags) rows.push(tags);
-    return '<strong>' + esc(p.name) + '</strong><br>' + esc(kindOf(p)) + ' &middot; ' + km + ' km' +
+    return '<strong>' + esc(p.name) + '</strong><br>' + esc(kindOf(p)) + ' &middot; ' + esc(km) +
       (rows.length ? '<br><span class="small">' + rows.join('<br>') + '</span>' : '') +
       '<br><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.google.com/maps/dir/?api=1&origin=' +
       lat + ',' + lng + '&destination=' + p.lat + ',' + p.lon + '">Directions</a>';
   };
 
+  const roadNear = window.bwRoad ? window.bwRoad.near(lat, lng) : Promise.resolve({});
   fetch('https://www.bwstays.com/data/food-places.json')
     .then((response) => response.json())
-    .then((data) => {
+    .then((data) => roadNear.then((road) => ({ data, road })))
+    .then(({ data, road }) => {
       const all = data.places
         .map((p) => ({ p, d: metersBetween(lat, lng, p.lat, p.lon) }))
         .sort((a, b) => a.d - b.d);
+      // chosen by straight line (scripts/build-road-near.mjs uses the same rule), listed nearest by road
       let chosen = all.filter((x) => x.d <= RADIUS_M).slice(0, MAX_LISTED);
       if (chosen.length < 4) {
         // remote places (waterfalls, passes): fall back to the nearest few
         chosen = all.filter((x) => x.d <= FALLBACK_MAX_M).slice(0, 6);
       }
+      chosen.forEach((x) => { x.road = road[x.p.id]; });
+      chosen.sort((a, b) => (a.road ? a.road[0] * 1000 : a.d * 1.4) - (b.road ? b.road[0] * 1000 : b.d * 1.4));
       if (!chosen.length) {
         foodPlacesContainer.innerHTML = '<p class="bw-food-empty">No food places are mapped near here yet. You can add them on OpenStreetMap.</p>';
         return;
@@ -89,9 +92,10 @@ function bwInitFoodMap() {
 
       const markers = [];
       const bounds = [[lat, lng]];
-      const rows = chosen.map(({ p, d }, i) => {
+      const rows = chosen.map(({ p, d, road: r }, i) => {
         bounds.push([p.lat, p.lon]);
-        const km = (d / 1000).toFixed(1);
+        const dist = distOf(r, d);
+        const km = dist.long;
         const marker = L.marker([p.lat, p.lon], {
           title: p.name,
           icon: L.icon({
@@ -106,7 +110,7 @@ function bwInitFoodMap() {
         return '<li><button type="button" class="bw-food-item" data-i="' + i + '" title="Show on the map">' +
           '<span class="bw-food-main"><span class="bw-food-name">' + esc(p.name) + '</span>' +
           '<span class="bw-food-meta">' + esc(kindOf(p)) + (diet ? ' &middot; ' + esc(diet) : '') + '</span></span>' +
-          '<span class="bw-food-side">' + open + '<span class="bw-food-km">' + km + ' km</span></span>' +
+          '<span class="bw-food-side">' + open + '<span class="bw-food-km" title="' + esc(dist.long) + '">' + dist.km + '</span></span>' +
           '</button></li>';
       });
       foodPlacesContainer.innerHTML = '<ul class="bw-food-ul">' + rows.join('') + '</ul>';
@@ -118,6 +122,7 @@ function bwInitFoodMap() {
         if (!marker) return;
         map1.setView(marker.getLatLng(), Math.max(map1.getZoom(), 15));
         marker.openPopup();
+        if (window.bwRoad) window.bwRoad.path(map1, [lat, lng], [marker.getLatLng().lat, marker.getLatLng().lng]);
         foodPlacesContainer.querySelectorAll('.bw-food-item.active').forEach((n) => n.classList.remove('active'));
         btn.classList.add('active');
       });
