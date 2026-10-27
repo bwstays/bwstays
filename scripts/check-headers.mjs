@@ -55,12 +55,20 @@ for (const u of URLS) {
   problems.forEach((p) => console.log('   - ' + p));
   missing += problems.length;
 }
-// AI crawlers: Cloudflare lets them in for one 24 hour window a week (docs/cloudflare-security-headers.md)
+// AI crawlers (docs/cloudflare-security-headers.md, section 4): the AI search crawlers are allowed every day,
+// the training crawlers only in one 24 hour window a week. This sends only the crawler's name; Cloudflare
+// recognises the real crawlers by their network, so Security > Events shows what they actually got.
 const weekSecond = Math.floor(Date.now() / 1000) % 604800;
 const inWindow = weekSecond < 86400;
+for (const ua of ['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot']) {
+  const r = await fetch(SITE + '/llms.txt', { headers: { 'user-agent': `Mozilla/5.0 (compatible; ${ua}/1.0)` } }).catch(() => null);
+  const ok = r && r.status === 200;
+  console.log(`AI search crawler ${ua}: ${r ? r.status : 'request failed'} (allowed every day, expect 200)${ok ? '' : '  ISSUE'}`);
+  if (!ok) missing++;
+}
 for (const ua of ['GPTBot', 'ClaudeBot']) {
   const r = await fetch(SITE + '/llms.txt', { headers: { 'user-agent': `Mozilla/5.0 (compatible; ${ua}/1.0)` } }).catch(() => null);
-  console.log(`AI crawler ${ua}: ${r ? r.status : 'request failed'} (weekly window is ${inWindow ? 'OPEN now, expect 200' : 'closed now, 403 is expected'})`);
+  console.log(`AI training crawler ${ua}: ${r ? r.status : 'request failed'} (weekly window is ${inWindow ? 'OPEN now, expect 200' : 'closed now, 403 is expected'})`);
 }
 console.log(missing ? `\n${missing} issue(s). See docs/cloudflare-security-headers.md` : '\nAll expected headers are present.');
 if (STRICT && missing) process.exit(1);

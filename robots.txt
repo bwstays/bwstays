@@ -7,7 +7,7 @@ Sitemap: https://www.bwstays.com/sitemap.xml
 Sitemap: https://www.bwstays.com/sitemap.txt
 Disallow: /cdn-cgi/
 
-# AI crawlers and AI search: allowed. Cloudflare lets them in once a week (see docs/cloudflare-security-headers.md);
+# AI crawlers and AI search: allowed. AI search crawlers every day, training crawlers one day a week in Cloudflare (docs/cloudflare-security-headers.md);
 # the AI-readable files are /llms.txt, /llms-full.txt, /mcp.json and /.well-known/mcp.llmfeed.json.
 User-agent: GPTBot
 User-agent: OAI-SearchBot

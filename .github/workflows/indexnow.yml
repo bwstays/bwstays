@@ -1,0 +1,47 @@
+name: IndexNow
+
+# After a push to main that changes pages, tells Bing, Yandex and the other IndexNow search engines
+# which pages changed (scripts/indexnow.mjs). Waits a few minutes first so the GitHub Pages deploy
+# is live. Free; nothing is committed. Run it by hand with "all" to submit every page in the sitemap.
+on:
+  push:
+    branches: [main]
+    paths: ['*.html', 'sitemap.txt']
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Submit every URL in sitemap.txt'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Wait for the GitHub Pages deploy
+        run: sleep 240
+      - name: Submit changed pages
+        if: github.event_name == 'push'
+        run: node scripts/indexnow.mjs --since "${{ github.event.before }}"
+      - name: Submit pages (manual run)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [ "${{ inputs.all }}" = "true" ]; then
+            node scripts/indexnow.mjs --all
+          else
+            node scripts/indexnow.mjs --since HEAD~1
+          fi

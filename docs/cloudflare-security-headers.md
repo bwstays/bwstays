@@ -62,26 +62,47 @@ The service worker and the manifest must not stay stale, and visitors must see p
 - Referrer policy meta on every page; `rel="noopener"` on links that open a new tab; no plain `http://` resources.
 - `/.well-known/security.txt` tells researchers where to report a problem.
 
-## 4. AI crawlers: allowed once a week
+## 4. AI crawlers: search crawlers every day, training crawlers once a week
 
-GPTBot, ClaudeBot, CCBot, Amazonbot and Bytespider were getting `403` from Cloudflare's "Block AI bots" setting, so `llms.txt` and the MCP files
-could not be read. `robots.txt` now allows the main AI crawlers. A crawler cannot be told "come once a week" in robots.txt (`Crawl-delay` is a delay
-between requests, and most AI crawlers ignore it), so the weekly rhythm is enforced in Cloudflare with a time window.
+There are two kinds of AI crawler:
+
+- **Search crawlers** fetch pages so an AI assistant can find and cite them in a live answer: `OAI-SearchBot` (ChatGPT search),
+  `Claude-SearchBot`, `PerplexityBot`, and the on-demand fetchers `ChatGPT-User`, `Claude-User`, `Perplexity-User`. Blocking them
+  keeps the site out of AI answers, so they are **allowed every day** (changed 2026-10-27, after an AI-visibility audit showed the
+  site was almost never mentioned).
+- **Training crawlers** collect text for future models: `GPTBot`, `ClaudeBot`, `anthropic-ai`, `CCBot`, `Amazonbot`, `Bytespider`.
+  They are heavier and do not help today's answers, so they stay on a **weekly window**.
+
+`robots.txt` allows all of them. A crawler cannot be told "come once a week" in robots.txt (`Crawl-delay` is a delay between
+requests, and most AI crawlers ignore it), so the weekly rhythm is enforced in Cloudflare with a time window.
 
 1. **Security > Bots**: set **Block AI bots** to **Do not block (allow crawlers)**. If your dashboard shows **AI Crawl Control**, set the crawlers to **Allow**.
-2. **Security > WAF > Custom rules > Create rule**, name `AI crawlers: weekly window`, **Edit expression** and paste:
+2. **Security > WAF > Custom rules**: open the rule `AI crawlers: weekly window` (or **Create rule** with that name), **Edit expression** and paste:
 
 ```
-(http.user_agent contains "GPTBot" or http.user_agent contains "OAI-SearchBot" or http.user_agent contains "ClaudeBot" or http.user_agent contains "Claude-SearchBot" or http.user_agent contains "anthropic-ai" or http.user_agent contains "PerplexityBot" or http.user_agent contains "CCBot" or http.user_agent contains "Amazonbot" or http.user_agent contains "Bytespider") and not (http.request.timestamp.sec % 604800 < 86400)
+(http.user_agent contains "GPTBot" or http.user_agent contains "ClaudeBot" or http.user_agent contains "anthropic-ai" or http.user_agent contains "CCBot" or http.user_agent contains "Amazonbot" or http.user_agent contains "Bytespider") and not (http.request.timestamp.sec % 604800 < 86400)
 ```
 
-   Action: **Block**. Deploy.
+   Action: **Block**. Save / Deploy. `OAI-SearchBot`, `Claude-SearchBot` and `PerplexityBot` are no longer in this list.
 
-   What it does: these crawlers get through for 24 hours each week (every **Thursday, 00:00 to 24:00 UTC**, which is Thursday 05:30 to Friday 05:30 IST)
-   and get `403` the rest of the week. Search engines (Googlebot, Bingbot) and visitors are not affected. To move the day, change `< 86400` to
+   What it does: the training crawlers get through for 24 hours each week (every **Thursday, 00:00 to 24:00 UTC**, which is Thursday 05:30 to Friday 05:30 IST)
+   and get `403` the rest of the week. Search engines (Googlebot, Bingbot), the AI search crawlers and visitors are not affected. To move the day, change `< 86400` to
    `>= 86400 and < 172800` (Friday), `>= 172800 and < 259200` (Saturday), and so on (the epoch started on a Thursday).
 3. If Cloudflare rejects the `%` operator on your plan, tell me; the fallback is a rate-limiting rule for the same user agents.
-4. Test: `curl -s -o /dev/null -w "%{http_code}" -A "GPTBot" https://www.bwstays.com/llms.txt` gives `200` inside the window and `403` outside it
-   (`node scripts/check-headers.mjs` prints this probe).
+4. Test: `node scripts/check-headers.mjs` requests `/llms.txt` as each crawler. The search crawlers must get `200` at any time; `GPTBot` and `ClaudeBot`
+   get `200` inside the window and `403` outside it. A test from your own computer only sends the crawler's name; Cloudflare recognises the real
+   crawlers by their network, so **Security > Events** (filter by user agent) or **AI Crawl Control** shows what the real ones got.
 5. Bytespider (TikTok) is often aggressive and ignores robots.txt; it is only in the block list above on purpose, so it is also blocked outside its window.
+
+## 5. IndexNow (Bing, Yandex and others re-crawl changed pages at once)
+
+The key file `db702d3939d94b42a7d3e5314ae2ca3e.txt` at the site root holds the key. `.github/workflows/indexnow.yml` runs after every push
+to main that changes a page: it waits 4 minutes for the GitHub Pages deploy, then `scripts/indexnow.mjs` sends the changed pages
+(only those in `sitemap.txt`). Nothing to set up in Cloudflare. Notes:
+
+- HTML is cached at the Cloudflare edge for 4 hours: purge the cache after a deploy so the crawler fetches the new page.
+- To submit the whole site (first time, or after a big change): Actions tab > IndexNow > Run workflow with **all** ticked,
+  or `node scripts/indexnow.mjs --all` locally.
+- Google does not use IndexNow; it reads `sitemap.xml` (submit it once in Google Search Console). Also add the site and the
+  sitemap in **Bing Webmaster Tools**, which shows the IndexNow submissions it received.
 
