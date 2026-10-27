@@ -38,6 +38,7 @@
     { key: 'w', label: 'West', towns: 'Banasura, Padinjarathara' },
   ];
   var PRESETS = [
+    { title: '2-day highlights: Chembra, Pookode, Banasura & Edakkal', text: 'All four must-see places in two days, with places along the way.', days: 2, areas: [], interests: [], pace: 'balanced', must: true },
     { title: '2-day weekend: waterfalls & viewpoints', text: 'Falls, lakes and view points close to Kalpetta.', days: 2, areas: [], interests: ['waterfalls', 'romantic'], pace: 'balanced' },
     { title: '2-day pilgrim trail', text: 'Temples, churches and mosques across the district.', days: 2, areas: [], interests: ['pilgrimage', 'culthist'], pace: 'balanced' },
     { title: '3-day wildlife & heritage', text: 'Sanctuaries, museums and history.', days: 3, areas: [], interests: ['wildlife', 'museums', 'culthist', 'tribal'], pace: 'balanced' },
@@ -51,7 +52,7 @@
   var LUNCH_AFTER_H = 3.5;    // lunch after the stop reached about 3.5 h into the day (about noon)
   var LUNCH_KINDS = ['restaurant', 'food_court', 'fast_food', 'cafe'];
   var categories = [];
-  var state = { days: 2, areas: [], interests: [], pace: 'balanced' };
+  var state = { days: 2, areas: [], interests: [], pace: 'balanced', must: false };   // must: "Must-see highlights" mode
   var plan = [];              // [{ area, stops: [place] }]
   var removedStops = [];      // [{ day, place, index }]
   var hidden = [];            // portlet ids
@@ -168,6 +169,33 @@
     (bestDay || []).forEach(function (p) { pool.splice(pool.indexOf(p), 1); });
     return bestDay || [];
   }
+  // "Must-see highlights": put the must-see places on as few days as possible with the least driving
+  // (every way of sharing them out over the days is tried; each day must fit in DAY_HOURS), whatever
+  // their area; returns [[place, ...], ...] in the shortest order, or null when they do not fit
+  function shareMusts(musts, maxDays, maxStops) {
+    for (var nd = 1; nd <= maxDays; nd++) {
+      var best = null, bestKm = Infinity, total = Math.pow(nd, musts.length);
+      for (var code = 0; code < total; code++) {
+        var groups = [], c = code;
+        for (var d = 0; d < nd; d++) groups.push([]);
+        musts.forEach(function (m) { groups[c % nd].push(m); c = Math.floor(c / nd); });
+        if (groups.some(function (g) { return !g.length || g.length > maxStops; })) continue;
+        var ordered = groups.map(shortestOrder);
+        if (ordered.some(function (g) { return dayStats(g).total > DAY_HOURS; })) continue;
+        var km = ordered.reduce(function (a, g) { return a + loopKm(g); }, 0);
+        if (km < bestKm) { bestKm = km; best = ordered; }
+      }
+      if (best) return best;
+    }
+    return null;
+  }
+  function mixedLabel(stops) {
+    var seen = [];
+    stops.forEach(function (p) { var l = areaInfo(p.area).label; if (seen.indexOf(l) < 0) seen.push(l); });
+    return { label: 'Highlights', towns: seen.join(' & ') };
+  }
+  function dayArea(d) { return d.label || areaInfo(d.area); }
+
   function buildPlan() {
     var excluded = store('bwTrailsExcluded') || [];
     var cand = places.filter(function (p) {
@@ -175,11 +203,21 @@
         (!state.interests.length || state.interests.indexOf(p.cat) >= 0) &&
         (!state.areas.length || state.areas.indexOf(p.area) >= 0);
     });
-    var byArea = {};
-    cand.forEach(function (p) { (byArea[p.area] = byArea[p.area] || []).push(p); });
     var days = [], used = {};
     var maxStops = PACE[state.pace] || 4;
-    for (var d = 0; d < state.days; d++) {
+    if (state.must) {
+      // the must-see days first, each filled with the places that make the smallest detour from any area
+      var groups = shareMusts(cand.filter(function (p) { return p.must; }), state.days, maxStops) || [];
+      groups.forEach(function (g) {
+        var pool = cand.filter(function (p) { return g.indexOf(p) < 0; });
+        var stops = growDay(g, pool, maxStops);
+        stops.forEach(function (p) { cand.splice(cand.indexOf(p), 1); used[p.area] = (used[p.area] || 0) + 1; });
+        days.push({ area: stops[0].area, label: mixedLabel(stops), stops: stops });
+      });
+    }
+    var byArea = {};
+    cand.forEach(function (p) { (byArea[p.area] = byArea[p.area] || []).push(p); });
+    for (var d = days.length; d < state.days; d++) {
       // a new area every day while there are unvisited ones; among those, the area that gives the best day
       var keys = Object.keys(byArea).filter(function (k) { return byArea[k].length; });
       if (!keys.length) break;
@@ -265,8 +303,11 @@
       el('div', { class: 'tr-tiles ' + (cls || ''), role: 'group', 'aria-label': title }, tiles),
     ]);
   }
+  function mustNames() {
+    return places.filter(function (p) { return p.must; }).map(function (p) { return p.name.replace(/ (Peak|Lake|Caves|Sagar Dam)$/, ''); }).join(', ');
+  }
   function summaryText() {
-    var area = state.areas.length ? state.areas.map(function (k) { return areaInfo(k).label; }).join(', ') : 'All of Wayanad';
+    var area = state.must ? 'Must-see highlights' : state.areas.length ? state.areas.map(function (k) { return areaInfo(k).label; }).join(', ') : 'All of Wayanad';
     var ints = state.interests.length ? state.interests.map(function (k) {
       var c = categories.filter(function (x) { return x.key === k; })[0];
       return c ? c.name : k;
@@ -281,9 +322,10 @@
     var steps = el('div', { class: 'tr-steps' });
     steps.appendChild(step(1, 'fa-calendar-alt', 'How many days do you have?', 'One day for each part of Wayanad.',
       DAYS.map(function (d) { return tile({ big: String(d.key), label: 'days', sub: d.sub }, state.days === d.key, function () { state.days = d.key; update(); }); }), 'tr-tiles-days'));
-    steps.appendChild(step(2, 'fa-map-marked-alt', 'Which part of Wayanad?', 'Leave "All of Wayanad" on, or pick one or more areas.',
-      [tile({ icon: 'fa-globe-asia', label: 'All of Wayanad', sub: 'Every area' }, !state.areas.length, function () { state.areas = []; update(); })].concat(
-        AREAS.map(function (a) { return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.towns }, state.areas.indexOf(a.key) >= 0, function () { toggle(state.areas, a.key); update(); }); }))));
+    steps.appendChild(step(2, 'fa-map-marked-alt', 'Which part of Wayanad?', '"All of Wayanad" gives one area a day; "Must-see highlights" fits the must-see places into the fewest days first; or pick areas.',
+      [tile({ icon: 'fa-globe-asia', label: 'All of Wayanad', sub: 'One area a day' }, !state.areas.length && !state.must, function () { state.areas = []; state.must = false; update(); }),
+        tile({ icon: 'fa-star', label: 'Must-see highlights', sub: mustNames() + ' first' }, state.must, function () { state.areas = []; state.must = true; update(); })].concat(
+        AREAS.map(function (a) { return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.towns }, state.areas.indexOf(a.key) >= 0, function () { state.must = false; toggle(state.areas, a.key); update(); }); }))));
     steps.appendChild(step(3, 'fa-heart', 'What do you enjoy?', 'Leave "Everything" on, or pick as many as you like.',
       [tile({ icon: 'fa-th-large', label: 'Everything', sub: places.length + ' places' }, !state.interests.length, function () { state.interests = []; update(); })].concat(
         categories.map(function (c) { return tile({ icon: ICONS[c.key] || 'fa-map-marker-alt', label: c.name, sub: c.count + (c.count === 1 ? ' place' : ' places') }, state.interests.indexOf(c.key) >= 0, function () { toggle(state.interests, c.key); update(); }); })), 'tr-tiles-small'));
@@ -316,7 +358,7 @@
     PRESETS.forEach(function (p) {
       grid.appendChild(el('button', {
         type: 'button', class: 'tr-preset',
-        onclick: function () { state = { days: p.days, areas: p.areas.slice(), interests: p.interests.slice(), pace: p.pace }; update(); scrollToDays(); },
+        onclick: function () { state = { days: p.days, areas: p.areas.slice(), interests: p.interests.slice(), pace: p.pace, must: !!p.must }; update(); scrollToDays(); },
       }, [el('span', { class: 'tr-preset-days', text: p.days + ' days' }), el('strong', { text: p.title.replace(/^\d-day (.)/, function (m, c) { return c.toUpperCase(); }) }), el('span', { text: p.text })]));
     });
     return portlet('tr-presets', 'Quick start: a ready-made trail', 'Tap one to see it, then change anything you like below', grid);
@@ -414,7 +456,7 @@
 
   function dayPortlet(day, i) {
     var st = dayStats(day.stops);
-    var a = areaInfo(day.area);
+    var a = dayArea(day);
     var list = el('ol', { class: 'tr-stops' });
     var prev = BASE;
     var way = dayWaypoints(day, i);
@@ -571,7 +613,7 @@
             '<a target="_blank" rel="noopener nofollow" href="' + directionsUrl(p) + '">Directions</a>');
         bounds.push([p.lat, p.lon]);
       });
-      routeQueue.push({ day: i, pts: line, way: way, color: color, visit: dayStats(d.stops).visit, area: areaInfo(d.area), stops: d.stops.length });
+      routeQueue.push({ day: i, pts: line, way: way, color: color, visit: dayStats(d.stops).visit, area: dayArea(d), stops: d.stops.length });
       var note = document.getElementById('tr-route-' + (i + 1));
       if (note) note.textContent = 'loading the road route…';
     });
@@ -629,7 +671,7 @@
   // ------------------------------------------------------------ print
   function printHead() {
     var names = function (list, all) { return list.length ? list.join(', ') : all; };
-    var areas = names(state.areas.map(function (k) { return areaInfo(k).label; }), 'all areas');
+    var areas = state.must ? 'must-see highlights' : names(state.areas.map(function (k) { return areaInfo(k).label; }), 'all areas');
     var ints = names(state.interests.map(function (k) {
       var c = categories.filter(function (x) { return x.key === k; })[0];
       return c ? c.label.replace(/ \(\d+\)$/, '') : k;
@@ -675,6 +717,7 @@
     q.set('days', state.days);
     if (state.areas.length) q.set('areas', state.areas.join(','));
     if (state.interests.length) q.set('interests', state.interests.join(','));
+    if (state.must) q.set('focus', 'highlights');
     q.set('pace', state.pace);
     return q.toString();
   }
@@ -685,6 +728,7 @@
     if (q.get('areas')) state.areas = q.get('areas').split(',').filter(function (k) { return areaInfo(k); });
     if (q.get('interests')) state.interests = q.get('interests').split(',').filter(function (k) { return categories.some(function (c) { return c.key === k; }); });
     if (PACE[q.get('pace')]) state.pace = q.get('pace');
+    state.must = q.get('focus') === 'highlights' && !state.areas.length;
   }
   function update() {
     try { history.replaceState(null, '', location.pathname + '?' + toQuery() + location.hash); } catch (e) { /* file:// */ }
