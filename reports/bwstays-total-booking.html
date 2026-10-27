@@ -99,6 +99,7 @@ gtag('config', 'G-VZWJNHM47Z');
 
 <meta name="theme-color" content="#3f7f7b" />
 <link rel="manifest" href="https://www.bwstays.com/manifest.json"/>
+<link rel="alternate" type="text/markdown" title="llms.txt" href="https://www.bwstays.com/llms.txt" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="BWStays" />
@@ -115,7 +116,7 @@ gtag('config', 'G-VZWJNHM47Z');
   <link rel="stylesheet" href="https://www.bwstays.com/css/bootstrap-lite.min.css?v=c3c65f85">
 
 
-<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
 
 <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
 
@@ -429,14 +430,14 @@ gtag('config', 'G-VZWJNHM47Z');
                             <div class="form-group mb-3">
                                 <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
                                 <input  type="text"
-                                    class="form-control bg-light border-0" id="inputName"  autocomplete="name" required placeholder="Your Name">
+                                    class="form-control bg-light border-0" id="inputName" aria-label="Name"  autocomplete="name" required placeholder="Your Name">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mb-3">
                                 <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
                                 <input   type="email"  autocomplete="email"
-                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="your email">
+                                    class="form-control bg-light border-0" id="inputEmail4" aria-label="Email" required placeholder="your email">
                             </div>
                         </div>
                     </div>
@@ -445,7 +446,7 @@ gtag('config', 'G-VZWJNHM47Z');
                     <div class="form-group mb-3">
                         <label for="inputAddress2" class="text-white-50 small text-uppercase" data-i18n="nav.contact" >Contact</label>
                         <input  type="text"
-                            class="form-control bg-light border-0" id="inputAddress2"  autocomplete="street-address"
+                            class="form-control bg-light border-0" id="inputAddress2" aria-label="Contact"  autocomplete="street-address"
                               required placeholder="+-- --- --- ----">
                     </div>
 
@@ -456,18 +457,18 @@ gtag('config', 'G-VZWJNHM47Z');
                     <div class="form-group mb-3">
                         <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
                         <textarea autocomplete="off"    class="form-control bg-light border-0"
-                            id="inputMessage" rows="3" required placeholder="Your message"></textarea>
+                            id="inputMessage" aria-label="Message" rows="3" required placeholder="Your message"></textarea>
                     </div>
 
 
                     <div class="form-group mb-3">
-                        <label class="text-white-50 small text-uppercase">Security Verification</label>
+                        <label for="captcha-answer" class="text-white-50 small text-uppercase">Security Verification</label>
                         <div class="captcha-container d-flex align-items-center">
                             <div class="captcha-question  p-2 rounded mr-3" >
                                 <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
                             </div>
 
-                            <!-- <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Enter answer"  required>
+                            <!-- <input type="text" class="form-control bg-light border-0" id="captcha-answer" aria-label="Security verification answer" placeholder="Enter answer"  required>
                             <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh"> -->
 
                             <input type="text" class="form-control bg-light border-0" id="captcha-answer-1" placeholder="Enter answer" required>

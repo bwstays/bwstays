@@ -100,6 +100,7 @@
     <link rel="shortlink" href="https://www.bwstays.com" />
 
  <link rel="manifest" href="https://www.bwstays.com/manifest.json"/>
+ <link rel="alternate" type="text/markdown" title="llms.txt" href="https://www.bwstays.com/llms.txt" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="BWStays" />
@@ -117,7 +118,7 @@
   <link rel="stylesheet" href="https://www.bwstays.com/css/bootstrap-lite.min.css?v=c3c65f85">
 
 
-    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
 
 
 
@@ -1053,7 +1054,7 @@
                             <div class="form-group mb-3">
                                 <label for="inputName" class="text-white-50 small text-uppercase">Name</label>
                                 <input  type="text"
-                                    class="form-control bg-light border-0" id="inputName"  autocomplete="name" required placeholder="e.g. Asha Nair" maxlength="80" aria-describedby="hint-contact-name">
+                                    class="form-control bg-light border-0" id="inputName" aria-label="Name"  autocomplete="name" required placeholder="e.g. Asha Nair" maxlength="80" aria-describedby="hint-contact-name">
 <small class="bw-hint" id="hint-contact-name">Name length (up to 80 characters)</small>
                             </div>
                         </div>
@@ -1061,7 +1062,7 @@
                             <div class="form-group mb-3">
                                 <label for="inputEmail4" class="text-white-50 small text-uppercase">Email</label>
                                 <input   type="email"  autocomplete="email"
-                                    class="form-control bg-light border-0" id="inputEmail4" required placeholder="e.g. name@example.com" maxlength="254" aria-describedby="hint-contact-email">
+                                    class="form-control bg-light border-0" id="inputEmail4" aria-label="Email" required placeholder="e.g. name@example.com" maxlength="254" aria-describedby="hint-contact-email">
 <small class="bw-hint" id="hint-contact-email">Email (up to 254 characters).</small>
                             </div>
                         </div>
@@ -1071,7 +1072,7 @@
                     <div class="form-group mb-3">
                         <label for="inputAddress2" class="text-white-50 small text-uppercase" data-i18n="nav.contact" >Contact</label>
                         <input  type="text"
-                            class="form-control bg-light border-0" id="inputAddress2"  autocomplete="street-address"
+                            class="form-control bg-light border-0" id="inputAddress2" aria-label="Contact"  autocomplete="street-address"
                               required placeholder="e.g. +91 98765 43210" maxlength="20" inputmode="tel" aria-describedby="hint-contact-phone">
 <small class="bw-hint" id="hint-contact-phone">Phone number (7 to 15 digits)</small>
                     </div>
@@ -1083,16 +1084,16 @@
                     <div class="form-group mb-3">
                         <label for="inputMessage" class="text-white-50 small text-uppercase">Message</label>
                         <textarea autocomplete="off"    class="form-control bg-light border-0"
-                            id="inputMessage" rows="3" required placeholder="Write your question or request here" maxlength="1000" aria-describedby="hint-contact-message"></textarea>
+                            id="inputMessage" aria-label="Message" rows="3" required placeholder="Write your question or request here" maxlength="1000" aria-describedby="hint-contact-message"></textarea>
 <small class="bw-hint" id="hint-contact-message">Up to 1000 characters. <span class="bw-count" data-for="hint-contact-message">0</span>/1000</small>
                     </div>
                                         <div class="form-group mb-3">
-					                        <label class="text-white-50 small text-uppercase">Security Verification</label>
+					                        <label for="captcha-answer" class="text-white-50 small text-uppercase">Security Verification</label>
 					                        <div class="captcha-container d-flex align-items-center">
 					                            <div class="captcha-question p-2  mr-3">
 					                                <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span> = ?
 					                            </div>
-					                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" placeholder="Your answer" required maxlength="2" inputmode="numeric" autocomplete="off" aria-describedby="hint-captcha">
+					                            <input type="text" class="form-control bg-light border-0" id="captcha-answer" aria-label="Security verification answer" placeholder="Your answer" required maxlength="2" inputmode="numeric" autocomplete="off" aria-describedby="hint-captcha">
 					                            <button type="button" class="btn btn-outline-secondary btn-sm ml-2" id="refresh-captcha" title="Refresh">
 					                                <i class="fas fa-sync-alt"></i>
 					                            </button>
@@ -1126,7 +1127,7 @@
 	                                          <i class="fa fa-envelope"></i>
 
 	                                  </div>
-	                                  <p class="mb-0"><a class="email-hidden text-white"  href="#signup"  data-email="YndzdGF5c0Bid3N0YXlzLmNvbQ=="  rel="noopener noreferrer nofollow"> [email-hidden]</a>
+	                                  <p class="mb-0"><a class="email-hidden text-white"  href="#signup"  data-email="YndzdGF5c0Bid3N0YXlzLmNvbQ=="> [email-hidden]</a>
 	                                  </p>
 	                              </div>
 	                              <div class="mb-4">
