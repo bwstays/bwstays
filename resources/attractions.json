@@ -894,7 +894,7 @@
         "name": "Bamboo Forest Valentine's Park",
         "category": "romantic",
         "category_label": "Romantic Spots & Viewpoints",
-        "description": "Bamboo Forest Valentine's Park",
+        "description": "A small privately run park among bamboo groves in the Nadavayal area of Wayanad, about 21 km from Kalpetta, for a quiet walk in the shade. Opening hours and fees are not confirmed: call before you go",
         "distance_from_stay_km": 21,
         "typical_visit_duration": null,
         "rating": null,
@@ -2315,7 +2315,7 @@
     ]
   },
   "metadata": {
-    "generated": "2026-10-21",
+    "generated": "2026-10-27",
     "version": "2.0.0",
     "type": "json",
     "source": "data/sitedata.js",

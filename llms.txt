@@ -54,7 +54,7 @@ All places, with sourced timings and fees, are listed in the machine-readable da
 <!-- BEGIN GENERATED: site-data -->
 ## Machine-readable data (generated from the site data)
 
-Snapshot: 2026-10-21
+Snapshot: 2026-10-27
 
 - [Static MCP manifest](https://www.bwstays.com/mcp.json): 11 resources and 8 tools, pre-built JSON, no server
 - [LLMFeed](https://www.bwstays.com/.well-known/mcp.llmfeed.json): the same capabilities in LLMFeed format
