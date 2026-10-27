@@ -106,3 +106,23 @@ to main that changes a page: it waits 4 minutes for the GitHub Pages deploy, the
 - Google does not use IndexNow; it reads `sitemap.xml` (submit it once in Google Search Console). Also add the site and the
   sitemap in **Bing Webmaster Tools**, which shows the IndexNow submissions it received.
 
+
+## 6. Automatic cache purge after each deploy
+
+HTML is cached at the Cloudflare edge for 4 hours (section 2), so without a purge a change can take hours to show.
+`.github/workflows/purge-cache.yml` runs after every successful GitHub Pages deploy and removes from the cache only the
+files that changed since the previous deploy (`scripts/purge-cloudflare.mjs`; a page is purged at its address, `index.html`
+also as `/`; more than 300 files purge everything). Versioned CSS/JS (`?v=`) are new URLs anyway and keep their long cache.
+
+One-time setup:
+
+1. Cloudflare dashboard > **My Profile > API Tokens > Create Token > Create Custom Token**.
+   Name `bwstays cache purge`; Permissions: **Zone > Cache Purge > Purge**; Zone Resources: **Include > Specific zone > bwstays.com**.
+   Create it and copy the token (it is shown once).
+2. Cloudflare > **bwstays.com > Overview**: copy the **Zone ID** (right-hand column, API section).
+3. GitHub > the repository > **Settings > Secrets and variables > Actions > New repository secret**:
+   `CLOUDFLARE_API_TOKEN` = the token, `CLOUDFLARE_ZONE_ID` = the zone ID.
+4. Test: Actions tab > **Purge Cloudflare cache** > Run workflow (tick **all** for everything). The log lists the purged URLs.
+
+Without the secrets the workflow prints a notice and does nothing, so it never fails a deploy.
+Locally: `node scripts/purge-cloudflare.mjs --since HEAD~1 --dry-run` lists what would be purged.

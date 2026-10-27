@@ -1,0 +1,62 @@
+name: Purge Cloudflare cache
+
+# After every successful GitHub Pages deploy, removes the files that changed since the previous deploy from
+# the Cloudflare cache (scripts/purge-cloudflare.mjs), so visitors see changes at once instead of after the
+# 4 hour HTML cache. Needs the repository secrets CLOUDFLARE_API_TOKEN (Zone > Cache Purge > Purge) and
+# CLOUDFLARE_ZONE_ID; without them it does nothing. Run it by hand with "all" to purge everything.
+on:
+  workflow_run:
+    workflows: [pages-build-deployment]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Purge everything'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: purge-cache
+  cancel-in-progress: false
+
+jobs:
+  purge:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Purge the files changed since the previous deploy
+        if: github.event_name == 'workflow_run'
+        run: |
+          # the commit of the last successful deploy before this one
+          prev=$(gh run list --repo "${{ github.repository }}" --workflow pages-build-deployment --status success --limit 10 \
+            --json databaseId,headSha --jq '[.[] | select(.databaseId != ${{ github.event.workflow_run.id }})][0].headSha')
+          if [ -n "$prev" ] && git cat-file -e "$prev^{commit}" 2>/dev/null; then
+            node scripts/purge-cloudflare.mjs --since "$prev"
+          else
+            echo "previous deploy not found; purging everything"
+            node scripts/purge-cloudflare.mjs --all
+          fi
+      - name: Purge (manual run)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [ "${{ inputs.all }}" = "true" ]; then
+            node scripts/purge-cloudflare.mjs --all
+          else
+            node scripts/purge-cloudflare.mjs --since HEAD~1
+          fi
