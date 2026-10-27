@@ -199,8 +199,11 @@
 .tr-tips { margin: 0; padding-left: 1.1rem; color: rgba(255, 255, 255, 0.75); }
 .tr-tips li { margin-bottom: 0.35rem; }
 
+/* phones: body already reserves the fixed navigation's height (details-page.css), so only a small gap here */
+@media (max-width: 767.98px) {
+  .trails-page { padding-top: 1.5rem; }
+}
 @media (max-width: 575.98px) {
-  .trails-page { padding-top: 100px; }
   .trails-page h1 { font-size: 1.45rem; }
   .tr-days { grid-template-columns: 1fr; }
   .tr-map { height: 320px; }
