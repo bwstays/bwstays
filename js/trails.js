@@ -27,6 +27,9 @@
   var ROUTE_DAYS = 7;         // keep a loaded route this many days in the browser
   var mapGen = 0;             // bumps on every redraw, so a late route answer for an old map is ignored
   var NEAR_KM = 12;           // road km: closer than this is "around Kalpetta" whatever the direction
+  // must-see places (owner's choice, by place id in data/sitedata.js): a trip that matches them always includes
+  // them, from the first day. 18 Chembra Peak, 44 Pookode Lake.
+  var MUST_SEE = [18, 44];
   var AREAS = [
     { key: 'c', label: 'Around Kalpetta', towns: 'within ' + NEAR_KM + ' km' },
     { key: 'n', label: 'North', towns: 'Mananthavady, Thirunelli' },
@@ -108,11 +111,11 @@
     var visit = stops.reduce(function (a, s) { return a + hoursAt(s); }, 0);
     return { km: km, drive: km / KMH, visit: visit, total: km / KMH + visit };
   }
-  // the day around one anchor place: add the places that make the smallest detour, each inserted where it
-  // costs least, until the day is full
-  function growDay(anchor, pool, maxStops) {
-    var stops = [anchor];
-    var left = pool.filter(function (p) { return p !== anchor; });
+  // grow a day from the stops it already has: add the places that make the smallest detour, each inserted
+  // where it costs least, until the day is full
+  function growDay(seed, pool, maxStops) {
+    var stops = seed.slice();
+    var left = pool.filter(function (p) { return stops.indexOf(p) < 0; });
     while (stops.length < maxStops && left.length) {
       var best = null;
       left.forEach(function (p) {
@@ -133,11 +136,17 @@
   function dayScore(stops) { return stops.length ? stops.length * 10 - dayStats(stops).drive * 3 : -Infinity; }
   // one day in one area: try every place as the anchor and keep the day with the most stops and the least
   // driving, preferring farther anchors (the reason to drive out there); the chosen places leave the pool
+  // A day in an area with must-see places is built around them: the first one is the anchor and the others
+  // join when they fit, before any other place.
   function planDay(pool, maxStops) {
     var bestDay = null, bestScore = -Infinity;
-    pool.forEach(function (anchor) {
+    var musts = pool.filter(function (p) { return p.must && dayStats([p]).total <= DAY_HOURS; });
+    if (musts.length) {
+      bestDay = growDay(growDay([musts[0]], musts, maxStops), pool, maxStops);
+    }
+    if (!bestDay) pool.forEach(function (anchor) {
       if (dayStats([anchor]).total > DAY_HOURS) return;
-      var stops = growDay(anchor, pool, maxStops);
+      var stops = growDay([anchor], pool, maxStops);
       var score = dayScore(stops) + roadKm(BASE, anchor) / 15;
       if (score > bestScore) { bestScore = score; bestDay = stops; }
     });
@@ -159,6 +168,9 @@
       // a new area every day while there are unvisited ones; among those, the area that gives the best day
       var keys = Object.keys(byArea).filter(function (k) { return byArea[k].length; });
       if (!keys.length) break;
+      // areas with must-see places still to visit come first, so even a 2-day trip includes them
+      var mustKeys = keys.filter(function (k) { return byArea[k].some(function (p) { return p.must; }); });
+      if (mustKeys.length) keys = mustKeys;
       var least = Math.min.apply(null, keys.map(function (k) { return used[k] || 0; }));
       var pick = null, pickScore = -Infinity;
       keys.filter(function (k) { return (used[k] || 0) === least; }).forEach(function (k) {
@@ -319,7 +331,7 @@
     var lunch = hidden.indexOf('tr-lunch-' + (i + 1)) < 0 ? lunchFor(day.stops) : null;
     day.stops.forEach(function (p, j) {
       var item = siteItem(p.id) || {};
-      var meta = [p.label, 'about ' + fmtH(hoursAt(p)) + ' there'];
+      var meta = [p.must ? 'Must-see' : '', p.label, 'about ' + fmtH(hoursAt(p)) + ' there'].filter(Boolean);
       if (Array.isArray(item.timing) && item.timing.length) meta.push('open ' + item.timing.join(', '));
       if (item.holidays && !/^(na|none|-)$/i.test(item.holidays)) meta.push('closed ' + item.holidays);
       list.appendChild(el('li', { class: 'tr-stop' }, [
@@ -578,6 +590,7 @@
         var item = siteItem(p.id);
         p.hrs = item && item.hrs;
         p.area = areaOf(p);
+        p.must = MUST_SEE.indexOf(p.id) >= 0;
         return p;
       });
       fromQuery();

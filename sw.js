@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = 'fdd5b5b43f';
+const VERSION = '13ed43ac20';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -62,7 +62,7 @@ const SHELL = [
   "/js/specrule.min.js?v=1f8a513f",
   "/js/testimonial.min.js?v=c59378fa",
   "/js/total-booking-reports.min.js?v=5527f1e2",
-  "/js/trails.min.js?v=c94bb6c9",
+  "/js/trails.min.js?v=212bdb47",
   "/js/validations.min.js?v=83a714d7",
   "/js/way_food_loc.min.js?v=566f007d",
   "/js/widgets.min.js?v=913ebcd9",
