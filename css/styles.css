@@ -386,3 +386,44 @@ main:focus {
   pointer-events: none;
 }
 .bw-cat-chip .bw-cat-icon { margin-right: 0; font-size: 0.78rem; flex: none; }
+
+/* home page: the banner that links the Discover section to the trails planner */
+.bw-trails-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 960px;
+  margin: 0 auto 3rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.55)), url("../assets/img/bg-masthead.webp") center / cover no-repeat;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.bw-trails-cta:hover, .bw-trails-cta:focus { color: #fff; text-decoration: none; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25); }
+.bw-trails-cta:focus-visible { outline: 3px solid var(--bw-teal-soft); outline-offset: 3px; }
+.bw-trails-cta-icon {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bw-teal);
+  font-size: 1.5rem;
+}
+.bw-trails-cta-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.25rem; }
+.bw-trails-cta-title { font-size: 1.15rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.bw-trails-cta-sub { font-size: 0.9rem; line-height: 1.45; color: rgba(255, 255, 255, 0.75); }
+.bw-trails-cta-btn { flex: none; white-space: nowrap; pointer-events: none; }
+.bw-trails-cta-btn i { margin-left: 0.4rem; }
+@media (max-width: 575.98px) {
+  .bw-trails-cta { flex-wrap: wrap; align-items: flex-start; gap: 0.8rem 1rem; padding: 1rem; margin-bottom: 2rem; }
+  .bw-trails-cta-icon { width: 46px; height: 46px; font-size: 1.2rem; }
+  .bw-trails-cta-text { flex-basis: calc(100% - 62px); }
+  .bw-trails-cta-btn { width: 100%; }
+}
