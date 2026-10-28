@@ -409,6 +409,13 @@ const resources = {
         works_offline: 'pages, places, food, charging and fuel lists, policies; not live availability, booking submit, chat or weather',
         manifest: `${SITE}/manifest.json`,
       },
+      site_pages: [
+        { name: 'Book the villa', url: `${SITE}/bwstays-booking.html` },
+        { name: 'All places to visit in Wayanad (map)', url: `${SITE}/all-locations-wayanad.html` },
+        { name: 'Places to eat (map)', url: `${SITE}/all-fooding-wayanad.html` },
+        { name: 'Wayanad trails: trip planner for 2, 3, 5 or 7 days from Kalpetta, by area and interest, with road routes and lunch stops', url: `${SITE}/bw-one-day-trails-kalpetta-wayanad.html` },
+        { name: 'Search the site', url: `${SITE}/search.html` },
+      ],
       data_quality_notes: dataQualityNotes,
     },
     source: 'index.html',

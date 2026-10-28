@@ -34,13 +34,35 @@
       "works_offline": "pages, places, food, charging and fuel lists, policies; not live availability, booking submit, chat or weather",
       "manifest": "https://www.bwstays.com/manifest.json"
     },
+    "site_pages": [
+      {
+        "name": "Book the villa",
+        "url": "https://www.bwstays.com/bwstays-booking.html"
+      },
+      {
+        "name": "All places to visit in Wayanad (map)",
+        "url": "https://www.bwstays.com/all-locations-wayanad.html"
+      },
+      {
+        "name": "Places to eat (map)",
+        "url": "https://www.bwstays.com/all-fooding-wayanad.html"
+      },
+      {
+        "name": "Wayanad trails: trip planner for 2, 3, 5 or 7 days from Kalpetta, by area and interest, with road routes and lunch stops",
+        "url": "https://www.bwstays.com/bw-one-day-trails-kalpetta-wayanad.html"
+      },
+      {
+        "name": "Search the site",
+        "url": "https://www.bwstays.com/search.html"
+      }
+    ],
     "data_quality_notes": [
       "No verified phone number is published: the site masks it and the WhatsApp link uses a placeholder-pattern number.",
       "Payment and cancellation terms on the site are written for tours (\"tour commencement date\") and are quoted verbatim, not reinterpreted."
     ]
   },
   "metadata": {
-    "generated": "2026-10-27",
+    "generated": "2026-10-28",
     "version": "2.0.0",
     "type": "json",
     "source": "index.html",

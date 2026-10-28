@@ -117,7 +117,7 @@ function put(file, begin, end, block) {
 let places = 0;
 for (const f of fs.readdirSync(ROOT).filter((x) => x.endsWith('.html'))) {
   const html = read(f);
-  const attraction = jsonLdBlocks(html).find((b) => b['@type'] === 'TouristAttraction');
+  const attraction = jsonLdBlocks(html).find((b) => b['@type'] === 'TouristAttraction' || b['@type'] === 'TouristTrip'); // TouristTrip: the trails planner
   if (!attraction) continue;
   places++;
   put(f, 'breadcrumb-jsonld:begin', 'breadcrumb-jsonld:end', ld({

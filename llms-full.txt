@@ -11267,7 +11267,7 @@ Food and place data © [OpenStreetMap contributors](https://www.openstreetmap.or
 <!-- BEGIN GENERATED: site-data -->
 ## Site data summary (generated; the MCP files hold the full detail)
 
-Snapshot: 2026-10-27
+Snapshot: 2026-10-28
 
 ### Booking, availability and cancellation
 - Booking page: https://www.bwstays.com/bwstays-booking.html. Dates can be chosen from today up to one year ahead; past dates are not selectable.

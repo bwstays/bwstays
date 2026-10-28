@@ -144,7 +144,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TouristAttraction",
+  "@type": "TouristTrip",
   "name": "Wayanad Trails: 2, 3, 5 and 7 Day Trips from Kalpetta",
   "description": "Plan a 2, 3, 5 or 7 day trip around Wayanad from Kalpetta by area and interest: waterfalls, trekking, wildlife, temples and viewpoints, with road distances.",
   "url": "https://www.bwstays.com/bw-one-day-trails-kalpetta-wayanad.html",
@@ -158,7 +158,18 @@
     "@type": "AdministrativeArea",
     "name": "Wayanad District, Kerala"
   },
-  "image": "https://www.bwstays.com/assets/img/bg-masthead.webp"
+  "image": "https://www.bwstays.com/assets/img/bg-masthead.webp",
+  "provider": { "@id": "https://www.bwstays.com/#organization" },
+  "itinerary": {
+    "@type": "ItemList",
+    "name": "Must-see highlights trail",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "TouristAttraction", "name": "Chembra Peak", "url": "https://www.bwstays.com/bw-chembra-peak-trucking-wayanad.html" } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "TouristAttraction", "name": "Pookode Lake", "url": "https://www.bwstays.com/bw-pookode-lake-romantic-wayanad.html" } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "TouristAttraction", "name": "Edakkal Caves", "url": "https://www.bwstays.com/bw-edakkal-caves-trucking-wayanad.html" } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "TouristAttraction", "name": "Banasura Sagar Dam", "url": "https://www.bwstays.com/bw-banasurasagar-dam-romantic-wayanad.html" } }
+    ]
+  }
 }
 </script>
 <!--breadcrumb-jsonld:begin--><script type="application/ld+json">

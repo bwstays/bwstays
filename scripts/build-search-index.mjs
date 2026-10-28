@@ -29,6 +29,7 @@ const pages = [
   ['Rules, terms, cancellations, privacy and FAQ', 'Policies and frequently asked questions', `${SITE}/footer.html`],
   ['All places to visit in Wayanad', 'Map of attractions', `${SITE}/all-locations-wayanad.html`],
   ['Food and dining map', 'Restaurants, cafes and bakeries', `${SITE}/all-fooding-wayanad.html`],
+  ['Wayanad trails - trip planner', 'Plan a 2, 3, 5 or 7 day trip from Kalpetta: itinerary by area and interest, must-see highlights, road routes, lunch stops, directions', `${SITE}/bw-one-day-trails-kalpetta-wayanad.html`],
 ];
 for (const [n, s, u] of pages) items.push({ t: 'page', n, s, u });
 

@@ -9,7 +9,7 @@
       "output": {
         "booked_ranges": [],
         "closed_ranges": [],
-        "snapshot_date": "2026-10-27",
+        "snapshot_date": "2026-10-28",
         "no_dates_listed": true,
         "all_listed_ranges_are_in_the_past": false,
         "data_source": "The host keeps booked and closed dates in a Google Calendar; a scheduled job copies the next 365 days into data/bookingdata.js and data/closeddata.js every 30 minutes.",
@@ -25,7 +25,7 @@
     "message": "Availability is not pre-computed for arbitrary dates. Use the booking page or contact the host."
   },
   "metadata": {
-    "generated": "2026-10-27",
+    "generated": "2026-10-28",
     "version": "2.0.0",
     "type": "json",
     "source": "generated from site data",
