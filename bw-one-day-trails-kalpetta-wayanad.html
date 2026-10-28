@@ -111,9 +111,9 @@
 
     <link rel="icon" type="image/x-icon" href="https://www.bwstays.com/favicon.ico" />
 <link rel="preload" as="image" href="https://www.bwstays.com/assets/img/plantation/bw-destination-wayanad.webp" fetchpriority="high">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.bwstays.com/assets/fonts/fontawesome/fa-solid-900.woff2?v=972897db">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.bwstays.com/assets/fonts/fontawesome/fa-brands-400.woff2?v=43d3b2eb">
-<link href="https://www.bwstays.com/css/fontawesome.min.css?v=07a9cb09" rel="stylesheet" type="text/css" media="all" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.bwstays.com/assets/fonts/fontawesome/fa-solid-900.woff2?v=51fdc824">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.bwstays.com/assets/fonts/fontawesome/fa-brands-400.woff2?v=1745b2dc">
+<link href="https://www.bwstays.com/css/fontawesome.min.css?v=5aa9d647" rel="stylesheet" type="text/css" media="all" />
   <link rel="stylesheet" href="https://www.bwstays.com/css/bootstrap-lite.min.css?v=c3c65f85">
 
 
@@ -135,7 +135,7 @@
  <link href="https://www.bwstays.com/css/details-page.min.css?v=88992e7c" rel="stylesheet" type="text/css" media="all"/>
       <link href="https://www.bwstays.com/css/new-page.min.css?v=834ed0c8" rel="stylesheet" type="text/css" media="all"/>
  <link href="https://www.bwstays.com/vendor/leaflet/leaflet.min.css?v=1.9.4" rel="stylesheet"/>
-<link href="https://www.bwstays.com/css/trails.min.css?v=dde03a99" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://www.bwstays.com/css/trails.min.css?v=36ee8df9" rel="stylesheet" type="text/css" media="all"/>
 
 
 
@@ -259,8 +259,17 @@
 
     <main class="trails-page" id="about" tabindex="-1">
         <div class="container">
-            <h1>Wayanad Trails: 2, 3, 5 and 7 Day Trips from Kalpetta</h1>
-            <p class="trails-intro">Kalpetta is in the middle of Wayanad, so most of the district is a day trip from the villa. Choose how many days you have, the part of Wayanad you want to see and what you enjoy, and the planner puts together one area a day: stops in a sensible order, the road route on the map, road distances from OpenStreetMap and the time to spend at each place. Remove any stop or box you do not want, and copy the link to share the trail.</p>
+            <header class="tr-hero">
+                <p class="tr-eyebrow"><i class="fas fa-route" aria-hidden="true"></i> Trip planner &middot; from Kalpetta</p>
+                <h1>Wayanad Trails: 2, 3, 5 and 7 Day Trips from Kalpetta</h1>
+                <p class="trails-intro">Most of Wayanad is a day trip from Kalpetta. Pick your days, the area and what you enjoy, and the planner builds one area a day, with road distances from OpenStreetMap and the time to spend at each place.</p>
+                <ul class="tr-features">
+                    <li><i class="fas fa-route" aria-hidden="true"></i><span><strong>Road order</strong>Stops in the shortest order by road</span></li>
+                    <li><i class="fas fa-utensils" aria-hidden="true"></i><span><strong>Lunch on the way</strong>A place to eat near midday</span></li>
+                    <li><i class="fas fa-directions" aria-hidden="true"></i><span><strong>Directions</strong>One tap to Google Maps for each stop</span></li>
+                    <li><i class="fas fa-share-alt" aria-hidden="true"></i><span><strong>Share or print</strong>Copy the link or save a PDF</span></li>
+                </ul>
+            </header>
             <div id="trails-app" aria-live="polite"><p class="tr-empty">Loading the trail planner&hellip;</p></div>
         </div>
     </main>
@@ -565,14 +574,13 @@
 
     <script type="text/javascript" src="https://www.bwstays.com/vendor/jquery/jquery.min.js?v=3.5.1"></script>
     <script type="text/javascript" src="https://www.bwstays.com/vendor/jquery/jquery.easing.min.js?v=1.4.1"></script>
-<script src="https://www.bwstays.com/vendor/leaflet/leaflet-src.min.js?v=1.9.4"></script>
-<script src="https://www.bwstays.com/js/map-guard.min.js?v=42197ca9"></script>
+<script type="bw-lazy" src="https://www.bwstays.com/vendor/leaflet/leaflet-src.min.js?v=1.9.4"></script>
+<script type="bw-lazy" src="https://www.bwstays.com/js/map-guard.min.js?v=42197ca9"></script>
 
     <script type="text/javascript" src="https://www.bwstays.com/js/nav.min.js?v=c830a937"></script>
 
 
 
-    <script type="text/javascript" src="https://www.bwstays.com/data/sitedata.min.js?v=2cf17c96"></script>
     <script type="text/javascript" src="https://www.bwstays.com/js/scripts.min.js?v=0fa1129f"></script>
 <!--
      <script  type="text/javascript"
@@ -584,7 +592,7 @@
 
 
 
-    <script type="text/javascript" src="https://www.bwstays.com/js/trails.min.js?v=cc244b9e"></script>
+    <script type="text/javascript" src="https://www.bwstays.com/js/trails.min.js?v=308605d8"></script>
 
 
 <script> const script = document.createElement('script'); script.src = 'https://www.bwstays.com/js/promo-banner.min.js?v=56cb74aa' + Date.now();document.body.appendChild(script);</script> <script  type="bw-lazy"   src="https://www.bwstays.com/js/chat.min.js?v=a27b96c6" ></script>

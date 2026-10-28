@@ -3,7 +3,7 @@
  * Builds 2, 3, 5 or 7 day trips from the villa in Kalpetta, by area and by interest, from the site's own data:
  *   data/map-places.json      places with a trusted coordinate, category, image and road km from Kalpetta
  *   locations (nearbylocationsdata.js)  road km between places (0 = unknown, then straight line x 1.4)
- *   siteData (sitedata.js)    hours to spend (hrs), timing, weekly holiday
+ *   (map-places.json also carries each place's hours to spend, timing and weekly holiday)
  *   data/food-places.json     places to eat (OpenStreetMap): one lunch suggestion a day, near the stop reached around midday
  * The map draws each day's road route from the public OSRM server (OpenStreetMap data), one request per day, at
  * most one a second, kept in the browser for a week; until a route arrives, or if it cannot be loaded, a dashed
@@ -94,11 +94,6 @@
     return deg >= 315 || deg < 45 ? 'n' : deg < 135 ? 'e' : deg < 225 ? 's' : 'w';
   }
   function areaInfo(key) { return AREAS.filter(function (a) { return a.key === key; })[0]; }
-  function siteItem(id) {
-    if (typeof siteData === 'undefined') return null;
-    for (var k in siteData) for (var i = 0; i < siteData[k].length; i++) if (siteData[k][i].id === id) return siteData[k][i];
-    return null;
-  }
   function hoursAt(p) { return Number(p.hrs) || 2; }
   function fmtH(h) { var r = Math.round(h * 2) / 2; return (r % 1 ? r.toFixed(1) : String(r)) + ' h'; }
 
@@ -479,7 +474,7 @@
     var legAt = {};
     way.w.forEach(function (x, k) { if (k) legAt[x.lunch ? 'lunch' : x.end ? 'end' : x.stop] = k; });
     day.stops.forEach(function (p, j) {
-      var item = siteItem(p.id) || {};
+      var item = p;
       var meta = [p.label, 'about ' + fmtH(hoursAt(p)) + ' there'];
       if (Array.isArray(item.timing) && item.timing.length) meta.push('open ' + item.timing.join(', '));
       if (item.holidays && !/^(na|none|-)$/i.test(item.holidays)) meta.push('closed ' + item.holidays);
@@ -620,7 +615,13 @@
     var routeQueue = [];
     if (map) { map.remove(); map = null; }
     var box = document.getElementById('tr-map');
-    if (!box || typeof L === 'undefined' || document.getElementById('tr-map-box').hidden) return;
+    if (!box || document.getElementById('tr-map-box').hidden) return;
+    if (typeof L === 'undefined') {
+      // Leaflet loads lazily (first scroll or tap, or about 3 s after load); draw the map when it is there
+      if ((drawMap.tries = (drawMap.tries || 0) + 1) < 300) setTimeout(drawMap, 200);
+      return;
+    }
+    drawMap.tries = 0;
     map = L.map(box, { scrollWheelZoom: false });
     tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors, routes OSRM', maxZoom: 18 }).addTo(map);
     var bounds = [[BASE.lat, BASE.lon]];
@@ -789,8 +790,6 @@
       // label, icon and photo of each type of place come from data/categories.js (through map-places.json)
       categories = (data.categories || []).map(function (c) { return { key: c.key, name: c.label, short: c.short || c.label, count: c.count, icon: c.icon || 'fa-map-marker-alt', img: c.img, label: c.label + ' (' + c.count + ')' }; });
       places = (data.places || []).filter(function (p) { return p.lat && p.lon && p.url; }).map(function (p) {
-        var item = siteItem(p.id);
-        p.hrs = item && item.hrs;
         p.area = areaOf(p);
         p.must = MUST_SEE.indexOf(p.id) >= 0;
         return p;

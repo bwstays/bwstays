@@ -68,6 +68,10 @@ for (const [cat, rows] of Object.entries(siteData)) {
       km: Number.isFinite(dist) && dist > 0 && !rv?.withhold?.includes('distance') ? dist : null,
       district: rv?.district ?? null,
       note: rv?.note ?? null,
+      // for the trails planner (so its page does not need data/sitedata.js): hours to spend, timing, weekly holiday
+      ...(Number(r.hrs) > 0 ? { hrs: Number(r.hrs) } : {}),
+      ...(Array.isArray(r.timing) && r.timing.length ? { timing: r.timing } : {}),
+      ...(r.holidays && !/^(na|none|-)$/i.test(String(r.holidays).trim()) ? { holidays: String(r.holidays).trim() } : {}),
     });
   }
 }
