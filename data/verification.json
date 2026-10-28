@@ -2131,34 +2131,24 @@
    "notes": "Candidate: Manjappara village bus stop node/12518378198. OSRM Kalpetta->bus stop 23.4 km vs stated 23 matches."
   },
   "49": {
-   "name": "Chundale tea estates (Chundale, near Kalpetta)",
-   "checked": "2026-10-18",
-   "identity": "ambiguous",
+   "name": "Chundale Estate (Harrisons Malayalam Ltd), Chundale, near Kalpetta",
+   "checked": "2026-10-28",
+   "identity": "real",
    "coordinate": {
-    "status": "candidate",
+    "status": "verified_stated",
     "lat": 11.57785,
     "lon": 76.053,
     "osm_ref": "way/485874633",
-    "offset_km": 9.54,
-    "evidence": "Stated 11.60766,76.13508 reverse-geocodes to Pulinkandi Colony (Thrikkaipetta) and is the Uravu/zipline point (ids 59/70), not a tea estate. OSM has 'Chundale Tea Factory' (way/485874633), 'Chundale Estate' (node/8874523317 11.58062,76.04606; way/892560381 farmland) and 'chellode, tea factory' (node/8831440529 11.57025,76.05366). Site photos are named 'chundale-cycling', so the Chundale estate is meant; the 'Ripon Tea Factory' map link in the data is a copy of the previous cycling place.",
-    "confidence": "low"
+    "offset_km": 0,
+    "evidence": "OSM way/485874633 'Chundale Tea Factory' (landuse=industrial); 'Chundale Estate' way/892560381 (farmland) beside it. The old stated point (11.60766,76.13508) was the Uravu/zipline point (ids 59/70) and was replaced on 2026-10-28. OSRM Kalpetta -> factory 7.3 km."
    },
    "anomalies": [
-    "Coordinate shared with Uravu (59) and Ziplines (70)",
-    "Name spelling 'Chundail' vs OSM/Kerala 'Chundale'",
-    "A cycling tour at Chellotte Estate, Chundale was reported by Onmanorama (2017) but no current access/fee info",
-    "OSRM Kalpetta->Chundale tea factory 7.3 km vs stated 6"
+    "A cycling tour at Chellotte Estate, Chundale was reported by Onmanorama (2017) but no current access/fee info"
    ],
-   "recommendation": "update_coordinate",
-   "notes": "Medium-low confidence: estate land is large; choose the gate/factory once the owner says which estate is the cycling start. Km should become about 7.",
+   "recommendation": "keep",
+   "notes": "Owner decision 2026-10-28: moved from Cycling to Plantations as a Harrisons Malayalam estate; renamed Chundale (was 'Chundail'); new page bw-chundale-tea-estate-plantation-wayanad.html (the old cycling page redirects). Harrisons lists Chundale Estate, Chundale Post, S.Wynad 673 123, CTC about two million kg. Working private estate: no visitor hours or fees published.",
    "description_sources": [
-    "https://harrisonsmalayalam.com/?p=5082",
-    "https://en.wikipedia.org/wiki/Tourist_attractions_in_Kalpetta"
-   ],
-   "audit_flags": [
-    "Spelling: Chundale (not Chundail).",
-    "'Chundail Tea Estate' is not a single named visitor attraction; private working estates have no published visiting hours, so timing 09:00-17:00, holiday 'Sun' and fee '0' should be removed.",
-    "Site contact is a placeholder number; no official number found, publish none."
+    "https://harrisonsmalayalam.com/?p=5082"
    ]
   },
   "50": {
@@ -3265,7 +3255,7 @@
    }
   },
   "99": {
-   "name": "Arrapetta Estate (Harrisons Malayalam Ltd), Meppadi Post",
+   "name": "Arrapetta Estate (Harrisons Malayalam Ltd), Meppadi Post; shown as Harrisons Malayalam Tea Estate, Arrapetta",
    "checked": "2026-10-28",
    "identity": "real",
    "coordinate": {

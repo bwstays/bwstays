@@ -8,7 +8,9 @@ window.addEventListener('load', function () {
   Object.keys(siteData).forEach((sectionType) => {
     // `stays` is a placeholder category with no row; rows after the last category (Health & Wellness) are static
     if (sectionType !== 'stays' && siteData[sectionType]) {
-      initializeSection(sectionType, siteData[sectionType], sectionIndex);
+      // a category with no place keeps its row (rows follow the category order) but the row is hidden
+      if (siteData[sectionType].length) initializeSection(sectionType, siteData[sectionType], sectionIndex);
+      else if (sections[sectionIndex - 1]) sections[sectionIndex - 1].hidden = true;
       sectionIndex++;
     }
   });

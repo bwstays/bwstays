@@ -25,14 +25,14 @@
             "distance_km": 9
           },
           {
-            "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 10
-          },
-          {
             "id": 10,
             "name": "Trikaipatta temple",
             "distance_km": 10
+          },
+          {
+            "id": 49,
+            "name": "Chundale Tea Estate",
+            "distance_km": 12
           },
           {
             "id": 7,
@@ -241,7 +241,7 @@
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 15
           },
           {
@@ -496,7 +496,7 @@
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 17
           }
         ]
@@ -641,12 +641,12 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
+            "name": "Chundale Tea Estate",
             "distance_km": 25
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 29
           }
         ]
@@ -711,7 +711,7 @@
         "nearest": [
           {
             "id": 99,
-            "name": "Arrapetta Tea Estate",
+            "name": "Harrisons Malayalam Tea Estate, Arrapetta",
             "distance_km": 13
           },
           {
@@ -723,6 +723,11 @@
             "id": 37,
             "name": "Kanthanpara waterfalls",
             "distance_km": 16
+          },
+          {
+            "id": 49,
+            "name": "Chundale Tea Estate",
+            "distance_km": 17
           },
           {
             "id": 10,
@@ -737,11 +742,6 @@
           {
             "id": 58,
             "name": "900 Kandi",
-            "distance_km": 18
-          },
-          {
-            "id": 49,
-            "name": "Chundail Tea Estate",
             "distance_km": 18
           },
           {
@@ -831,12 +831,12 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 11
+            "name": "Chundale Tea Estate",
+            "distance_km": 10
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 15
           },
           {
@@ -981,12 +981,12 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 10
+            "name": "Chundale Tea Estate",
+            "distance_km": 9
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 14
           },
           {
@@ -1005,19 +1005,19 @@
     {
       "input": {
         "place_id": 26,
-        "place": "Tea Museum wayanad"
+        "place": "Tea Museum, Achoor"
       },
       "output": {
         "nearest": [
           {
-            "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 8
-          },
-          {
             "id": 39,
             "name": "Karlad chira wayanad",
             "distance_km": 9
+          },
+          {
+            "id": 49,
+            "name": "Chundale Tea Estate",
+            "distance_km": 11
           },
           {
             "id": 78,
@@ -1301,7 +1301,7 @@
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 16
           },
           {
@@ -1331,7 +1331,7 @@
           },
           {
             "id": 99,
-            "name": "Arrapetta Tea Estate",
+            "name": "Harrisons Malayalam Tea Estate, Arrapetta",
             "distance_km": 17
           },
           {
@@ -1376,7 +1376,7 @@
         "nearest": [
           {
             "id": 99,
-            "name": "Arrapetta Tea Estate",
+            "name": "Harrisons Malayalam Tea Estate, Arrapetta",
             "distance_km": 4
           },
           {
@@ -1436,7 +1436,7 @@
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 9
           },
           {
@@ -1461,8 +1461,8 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 17
+            "name": "Chundale Tea Estate",
+            "distance_km": 18
           }
         ]
       }
@@ -1506,12 +1506,12 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
+            "name": "Chundale Tea Estate",
             "distance_km": 31
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 35
           }
         ]
@@ -1696,12 +1696,12 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 7
+            "name": "Chundale Tea Estate",
+            "distance_km": 6
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 11
           },
           {
@@ -1751,7 +1751,7 @@
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 14
           },
           {
@@ -1786,8 +1786,8 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 9
+            "name": "Chundale Tea Estate",
+            "distance_km": 10
           },
           {
             "id": 10,
@@ -1811,7 +1811,7 @@
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 13
           }
         ]
@@ -1861,7 +1861,7 @@
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 24
           }
         ]
@@ -1870,49 +1870,49 @@
     {
       "input": {
         "place_id": 49,
-        "place": "Chundail Tea Estate"
+        "place": "Chundale Tea Estate"
       },
       "output": {
         "nearest": [
           {
+            "id": 78,
+            "name": "Honey Museum",
+            "distance_km": 6
+          },
+          {
             "id": 44,
             "name": "Pookode Lake",
-            "distance_km": 7
-          },
-          {
-            "id": 26,
-            "name": "Tea Museum wayanad",
-            "distance_km": 8
-          },
-          {
-            "id": 61,
-            "name": "Tea Plantation wayanad",
-            "distance_km": 8
-          },
-          {
-            "id": 46,
-            "name": "Mailadippara",
-            "distance_km": 9
-          },
-          {
-            "id": 2,
-            "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
-            "distance_km": 10
+            "distance_km": 6
           },
           {
             "id": 25,
             "name": "Chain tree",
-            "distance_km": 10
+            "distance_km": 9
           },
           {
             "id": 57,
             "name": "En ooru",
-            "distance_km": 10
+            "distance_km": 9
           },
           {
             "id": 20,
             "name": "Lakkidi Ghats",
+            "distance_km": 10
+          },
+          {
+            "id": 46,
+            "name": "Mailadippara",
+            "distance_km": 10
+          },
+          {
+            "id": 26,
+            "name": "Tea Museum, Achoor",
             "distance_km": 11
+          },
+          {
+            "id": 2,
+            "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
+            "distance_km": 12
           }
         ]
       }
@@ -2045,6 +2045,11 @@
             "distance_km": 10
           },
           {
+            "id": 49,
+            "name": "Chundale Tea Estate",
+            "distance_km": 12
+          },
+          {
             "id": 7,
             "name": "Meenangadi Church and temple",
             "distance_km": 12
@@ -2058,11 +2063,6 @@
             "id": 51,
             "name": "Kurumbalakotta",
             "distance_km": 14
-          },
-          {
-            "id": 87,
-            "name": "Kolagapara",
-            "distance_km": 15
           }
         ]
       }
@@ -2086,7 +2086,7 @@
           },
           {
             "id": 99,
-            "name": "Arrapetta Tea Estate",
+            "name": "Harrisons Malayalam Tea Estate, Arrapetta",
             "distance_km": 13
           },
           {
@@ -2146,12 +2146,12 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 10
+            "name": "Chundale Tea Estate",
+            "distance_km": 9
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 14
           },
           {
@@ -2201,7 +2201,7 @@
           },
           {
             "id": 49,
-            "name": "Chundail Tea Estate",
+            "name": "Chundale Tea Estate",
             "distance_km": 22
           },
           {
@@ -2276,18 +2276,13 @@
         "nearest": [
           {
             "id": 99,
-            "name": "Arrapetta Tea Estate",
+            "name": "Harrisons Malayalam Tea Estate, Arrapetta",
             "distance_km": 3
           },
           {
             "id": 37,
             "name": "Kanthanpara waterfalls",
             "distance_km": 4
-          },
-          {
-            "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 8
           },
           {
             "id": 83,
@@ -2312,6 +2307,11 @@
           {
             "id": 64,
             "name": "Ambalavayal Farm",
+            "distance_km": 17
+          },
+          {
+            "id": 43,
+            "name": "Karapuzha Dam",
             "distance_km": 17
           }
         ]
@@ -2440,13 +2440,18 @@
             "distance_km": 5
           },
           {
+            "id": 49,
+            "name": "Chundale Tea Estate",
+            "distance_km": 6
+          },
+          {
             "id": 20,
             "name": "Lakkidi Ghats",
             "distance_km": 6
           },
           {
             "id": 26,
-            "name": "Tea Museum wayanad",
+            "name": "Tea Museum, Achoor",
             "distance_km": 11
           },
           {
@@ -2457,11 +2462,6 @@
           {
             "id": 2,
             "name": "Ananthanatha Swamy Jain Temple Puliyarmala",
-            "distance_km": 17
-          },
-          {
-            "id": 52,
-            "name": "Gandhi Museum",
             "distance_km": 17
           }
         ]
@@ -2536,7 +2536,7 @@
           },
           {
             "id": 99,
-            "name": "Arrapetta Tea Estate",
+            "name": "Harrisons Malayalam Tea Estate, Arrapetta",
             "distance_km": 10
           },
           {
@@ -2920,7 +2920,7 @@
     {
       "input": {
         "place_id": 99,
-        "place": "Arrapetta Tea Estate"
+        "place": "Harrisons Malayalam Tea Estate, Arrapetta"
       },
       "output": {
         "nearest": [

@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '3c6c9fafcb';
+const VERSION = '3065dfc3b9';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -40,9 +40,9 @@ const SHELL = [
   "/css/styles.min.css?v=cc3c9913",
   "/css/trails.min.css?v=0c432988",
   "/data/categories.min.js?v=f2a96d47",
-  "/data/nearbylocationsdata.min.js?v=a86c3f89",
+  "/data/nearbylocationsdata.min.js?v=b0f7861a",
   "/data/rates.min.js?v=7b5dbd01",
-  "/data/sitedata.min.js?v=5013904c",
+  "/data/sitedata.min.js?v=2cf17c96",
   "/index.html",
   "/js/booking.min.js?v=d32180d1",
   "/js/chat.min.js?v=a27b96c6",
@@ -50,7 +50,7 @@ const SHELL = [
   "/js/dynamic-evgas.min.js?v=50b2f3a7",
   "/js/dynamic-foodmap.min.js?v=653630ee",
   "/js/dynamic-nearby.min.js?v=e753183e",
-  "/js/knowmore-place-dynamic.min.js?v=28724ddd",
+  "/js/knowmore-place-dynamic.min.js?v=13d2b0d9",
   "/js/language.min.js?v=d8bf0fe7",
   "/js/legal-page.min.js?v=89020b58",
   "/js/map-guard.min.js?v=42197ca9",
@@ -66,7 +66,7 @@ const SHELL = [
   "/js/total-booking-reports.min.js?v=5527f1e2",
   "/js/trails.min.js?v=1448826b",
   "/js/validations.min.js?v=83a714d7",
-  "/js/way_food_loc.min.js?v=5190e199",
+  "/js/way_food_loc.min.js?v=492ed1b4",
   "/js/widgets.min.js?v=913ebcd9",
   "/manifest.json",
   "/offline.html",
@@ -99,6 +99,7 @@ const PAGES = [
   "/bw-chembra-peak-trucking-wayanad.html",
   "/bw-chetalayam-waterfall-wayanad.html",
   "/bw-chundail-tea-estate-cycling-wayanad.html",
+  "/bw-chundale-tea-estate-plantation-wayanad.html",
   "/bw-coffee-plantation-plantation-wayanad.html",
   "/bw-edakkal-caves-trucking-wayanad.html",
   "/bw-en-ooru-tribal-wayanad.html",

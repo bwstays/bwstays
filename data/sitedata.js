@@ -30,19 +30,15 @@ const siteData = {
       content:
         "The Rippon (Ripon) estate area lies around Ripon junction in Muppainad panchayat, about 7 km from Meppadi, with a tea factory and an estate bungalow. It is a working private plantation; no official visitor hours, factory-tour schedule or fee are published.",
       amenities: [
-        "Mountain Views",
-        "Spice Tours",
-        "Nature Walks",
-        "Organic Kitchen",
+        "Tea Estate Views",
+        "Tea Factory",
       ],
       tags: [
         "tea plantation",
-        "wayanad",
-        "mountain",
-        "cottage",
-        "nature",
-        "spice processing",
-        "organic",
+        "tea factory",
+        "meppadi",
+        "muppainad",
+        "estate",
       ],
       type: "Plantations",
       knowmore:
@@ -97,7 +93,7 @@ const siteData = {
     },
     {
       id: 99,
-      name: "Arrapetta Tea Estate (Harrisons Malayalam)",
+      name: "Harrisons Malayalam Tea Estate, Arrapetta",
       description: "Harrisons Malayalam tea estate at Arrapetta, near Meppadi, with its own factory making orthodox tea.",
       image: [
         "https://www.bwstays.com/assets/img/plantation/bw-arrapetta-tea-estate-meppadi-wayanad.webp",
@@ -132,6 +128,49 @@ const siteData = {
         "https://www.bwstays.com/bw-arrapetta-tea-estate-plantation-wayanad.html",
       duration: "",
       www: "https://harrisonsmalayalam.com/",
+    },
+    {
+      id: 49,
+      name: "Chundale Tea Estate (Harrisons Malayalam)",
+      description: "Harrisons Malayalam tea estate at Chundale, about 7 km south of Kalpetta on the Meppadi road, with its own CTC tea factory.",
+      image: [
+        "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp",
+        "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.webp",
+        "https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp",
+        "https://www.bwstays.com/assets/img/cycling/bw-hotel-stays-chundale-wayanad.webp",
+      ],
+      holidays: "NA",
+      timing: [],
+      Contact: "",
+      seasontovisit: ["Summer (March-May)", "Winter (October-February)"],
+      distance: "7",
+      latlong: "11.57785, 76.053",
+      map: "https://www.openstreetmap.org/way/485874633",
+      transport: "Public",
+      rating: "",
+      hrs: "2",
+      fee: "",
+      aliases: ["chundale", "chundail", "chundale estate", "harrisons"],
+      content:
+        "Chundale, a few kilometres south of Kalpetta, is surrounded by tea estates; Harrisons Malayalam lists Chundale Estate (Chundale Post, 673 123) among its Wayanad gardens, making CTC tea, about two million kg a year. OpenStreetMap shows the Chundale Tea Factory and the estate land beside the Kalpetta-Meppadi road. It is a working private plantation, so visitors keep to public roads unless an estate offers a tour; no visitor hours or fees are published.",
+      amenities: [
+        "Tea Estate Views",
+        "Tea Factory",
+        "Estate Roads",
+      ],
+      tags: [
+        "tea plantation",
+        "harrisons malayalam",
+        "ctc tea",
+        "chundale",
+        "estate",
+      ],
+      type: "Plantations",
+      knowmore:
+        "https://www.bwstays.com/bw-chundale-tea-estate-plantation-wayanad.html",
+
+      duration: "1-2 Hours",
+      www: "",
     },
   ],
 
@@ -529,7 +568,7 @@ const siteData = {
     },
     {
       id: 26,
-      name: "Tea Museum",
+      name: "Tea Museum, Achoor (Harrisons Malayalam)",
       description:
         "Tea museum in the Achoor Estate of Harrisons Malayalam at Achoor, near Pozhuthana, on the history of tea growing in Wayanad.",
       image: [
@@ -2507,53 +2546,7 @@ const siteData = {
     },
   ],
 
-  cycling: [
-    {
-      id: 49,
-      name: "Chundail Tea Estate",
-      description: "Tea plantations around Chundale, on the Kalpetta-Meppadi road, crossed by quiet estate roads used for drives and cycling.",
-      image: [
-        "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp",
-        "https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-hotel-wayanad.webp",
-        "https://www.bwstays.com/assets/img/cycling/bw-stays-resort-wayanad-cycle-workation.webp",
-        "https://www.bwstays.com/assets/img/cycling/bw-hotel-stays-chundale-wayanad.webp",
-      ],
-      holidays: "NA",
-      timing: [],
-      Contact: "",
-      seasontovisit: ["Summer (March-May)", "Winter (October-February)"],
-      distance: "6",
-      latlong: "11.6076643, 76.1350769",
-      map: "https://www.google.com/maps/place/Ripon+Tea+Factory/@11.5349821,76.1790317,17z",
-      transport: "Public",
-      rating: "",
-      hrs: "2",
-      fee: "",
-      aliases: [],
-      content:
-        "Chundale, a few kilometres south of Kalpetta, is surrounded by tea estates; Harrisons Malayalam lists a Chundale Estate (Chundale Post, 673 123) among its Wayanad gardens. These are working private plantations, so visitors keep to public roads unless an estate offers a tour. No visitor hours or fees are published.",
-      amenities: [
-        "expansive tea estates",
-        "rustic mud trails",
-        "sensory delight",
-        "Quiet",
-      ],
-      tags: [
-        "Cycling",
-        "Challenging Terrain",
-        "Stay visible",
-        "cyclists",
-        "healthy",
-        "adventure tour",
-      ],
-      type: "Cycling",
-      knowmore:
-        "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html",
-
-      duration: "1-2 Hours",
-      www: "",
-    },
-  ],
+  cycling: [],
 
   shopping: [
 

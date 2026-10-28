@@ -10,7 +10,16 @@
         "label": "Plantations",
         "results": [
           {
-            "name": "Arrapetta Tea Estate (Harrisons Malayalam)",
+            "name": "Chundale Tea Estate (Harrisons Malayalam)",
+            "category": "Plantations",
+            "distance_from_stay_km": 7,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-chundale-tea-estate-plantation-wayanad.html"
+          },
+          {
+            "name": "Harrisons Malayalam Tea Estate, Arrapetta",
             "category": "Plantations",
             "distance_from_stay_km": 15,
             "rating": null,
@@ -138,7 +147,7 @@
             "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
           },
           {
-            "name": "Tea Museum",
+            "name": "Tea Museum, Achoor (Harrisons Malayalam)",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 12,
             "rating": null,
@@ -545,25 +554,6 @@
     },
     {
       "input": {
-        "category": "cycling"
-      },
-      "output": {
-        "label": "Cycling",
-        "results": [
-          {
-            "name": "Chundail Tea Estate",
-            "category": "Cycling",
-            "distance_from_stay_km": 6,
-            "rating": null,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
-          }
-        ]
-      }
-    },
-    {
-      "input": {
         "category": "shopping"
       },
       "output": {
@@ -797,13 +787,13 @@
             "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
           },
           {
-            "name": "Chundail Tea Estate",
-            "category": "Cycling",
-            "distance_from_stay_km": 6,
+            "name": "Chundale Tea Estate (Harrisons Malayalam)",
+            "category": "Plantations",
+            "distance_from_stay_km": 7,
             "rating": null,
             "district": "Wayanad",
             "note": null,
-            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
+            "page_url": "https://www.bwstays.com/bw-chundale-tea-estate-plantation-wayanad.html"
           },
           {
             "name": "Ziplines",
@@ -851,13 +841,13 @@
             "page_url": "https://www.bwstays.com/bw-stays-kalpetta-gandhi-museum.html"
           },
           {
-            "name": "Chundail Tea Estate",
-            "category": "Cycling",
-            "distance_from_stay_km": 6,
+            "name": "Chundale Tea Estate (Harrisons Malayalam)",
+            "category": "Plantations",
+            "distance_from_stay_km": 7,
             "rating": null,
             "district": "Wayanad",
             "note": null,
-            "page_url": "https://www.bwstays.com/bw-chundail-tea-estate-cycling-wayanad.html"
+            "page_url": "https://www.bwstays.com/bw-chundale-tea-estate-plantation-wayanad.html"
           },
           {
             "name": "Ziplines",
@@ -887,7 +877,7 @@
             "page_url": "https://www.bwstays.com/bw-honey-museum-wayanad.html"
           },
           {
-            "name": "Tea Museum",
+            "name": "Tea Museum, Achoor (Harrisons Malayalam)",
             "category": "Museums & Crafts",
             "distance_from_stay_km": 12,
             "rating": null,
@@ -932,15 +922,6 @@
             "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
           },
           {
-            "name": "Arrapetta Tea Estate (Harrisons Malayalam)",
-            "category": "Plantations",
-            "distance_from_stay_km": 15,
-            "rating": null,
-            "district": "Wayanad",
-            "note": null,
-            "page_url": "https://www.bwstays.com/bw-arrapetta-tea-estate-plantation-wayanad.html"
-          },
-          {
             "name": "Chain Tree",
             "category": "Cultural & Historical",
             "distance_from_stay_km": 15,
@@ -948,6 +929,15 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-chain-tree-cultural-heritage-wayanad.html"
+          },
+          {
+            "name": "Harrisons Malayalam Tea Estate, Arrapetta",
+            "category": "Plantations",
+            "distance_from_stay_km": 15,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-arrapetta-tea-estate-plantation-wayanad.html"
           },
           {
             "name": "Kolagapara",
