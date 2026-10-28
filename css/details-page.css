@@ -1114,6 +1114,17 @@ div.image-nav-arrow.image-nav-right {
   z-index: 1000;
 }
 
+/* the same tab on the left edge (home page: the trails planner); the corners at the screen edge are square */
+.vertical-div-left {
+  right: auto;
+  left: 0;
+}
+.vertical-res-left {
+  border-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 
 /* Contact Card Styling */
 #contact-card {
