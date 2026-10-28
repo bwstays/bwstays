@@ -432,3 +432,31 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
   .tr-tiles-compass .tr-tile-sub { display: none; }
   .tr-tiles-compass .tr-tile[aria-pressed="true"]::after { top: 3px; right: 3px; width: 15px; height: 15px; line-height: 15px; font-size: 9px; }
 }
+
+/* area step: the six choices in two rows of three (two columns on phones) */
+.tr-tiles-areas { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 575.98px) {
+  .tr-tiles-areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* typography matched to the home page (index.html): headings weight 500, text weight 400, the same
+   smaller scale as its Discover rows and About section, so the planner reads as calm as the rest of the site */
+.trails-page h1 { font-size: 1.75rem; font-weight: 500; }
+.trails-intro, .tr-planner-intro, .tr-tips li, .tr-summary-text { font-size: 0.9rem; font-weight: 400; line-height: 1.6; }
+.tr-portlet-title { font-size: 1.1rem; font-weight: 500; }
+.tr-portlet-sub { font-size: 0.78rem; }
+.tr-step-title { font-size: 0.95rem; font-weight: 500; }
+.tr-step-help { font-size: 0.78rem; line-height: 1.5; }
+.tr-tile-label { font-size: 0.85rem; font-weight: 500; }
+.tr-tile-sub { font-size: 0.72rem; }
+.tr-tile-big { font-size: 1.2rem; font-weight: 500; }
+.tr-summary-text strong { font-weight: 500; }
+.tr-stop-name { font-size: 0.9rem; font-weight: 500; }
+.tr-stop-meta, .tr-leg { font-size: 0.76rem; }
+.tr-day-foot, .tr-legend, .tr-note { font-size: 0.78rem; }
+@media (max-width: 575.98px) {
+  .trails-page h1 { font-size: 1.35rem; }
+  .tr-portlet-title { font-size: 1rem; }
+  .tr-tile-label { font-size: 0.8rem; }
+  .trails-intro, .tr-planner-intro, .tr-tips li, .tr-summary-text { font-size: 0.85rem; }
+}

@@ -34,6 +34,7 @@
   var THEMES = [
     { cat: 'wildlife', label: 'Wildlife', icon: 'fa-paw', sub: 'Sanctuaries' },
     { cat: 'trucking', label: 'Trekking', icon: 'fa-hiking', sub: 'Peaks and hills' },
+    { cat: 'romantic', label: 'Viewpoints', icon: 'fa-mountain', sub: 'Views, lakes, dams' },
   ];
   var COMPASS = ['n', 'e', 'w', 's'];  // shown in one row, in this order
   var AREAS = [
@@ -334,13 +335,13 @@
     var areaTile = function (a) {
       return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.side }, state.areas.indexOf(a.key) >= 0, function () { state.must = false; toggle(state.areas, a.key); update(); });
     };
-    var areaStep = step(2, 'fa-map-marked-alt', 'Which part of Wayanad?', '"All of Wayanad" gives one area a day; "Must-see highlights" fits the must-see places into the fewest days first; "Wildlife" and "Trekking" plan only those places; or pick areas.',
+    var areaStep = step(2, 'fa-map-marked-alt', 'Which part of Wayanad?', '"All of Wayanad" gives one area a day; "Must-see highlights" fits the must-see places into the fewest days first; "Wildlife", "Trekking" and "Viewpoints" plan only those places; or pick areas.',
       [tile({ icon: 'fa-globe-asia', label: 'All of Wayanad', sub: 'Every area' }, !state.areas.length && !state.must && !theme, function () { state.areas = []; state.must = false; if (themeOf()) state.interests = []; update(); }),
         tile({ icon: 'fa-star', label: 'Must-see highlights', sub: 'Top ' + places.filter(function (p) { return p.must; }).length + ' places first' }, state.must, function () { state.areas = []; state.must = true; update(); }),
         areaTile(areaInfo('c'))].concat(
         THEMES.filter(function (t) { return places.some(function (p) { return p.cat === t.cat; }); }).map(function (t) {
           return tile({ icon: t.icon, label: t.label, sub: t.sub }, theme === t.cat, function () { state.areas = []; state.must = false; state.interests = [t.cat]; update(); });
-        })));
+        })), 'tr-tiles-areas');
     areaStep.appendChild(el('div', { class: 'tr-tiles tr-tiles-compass', role: 'group', 'aria-label': 'North, East, West or South of Kalpetta' },
       COMPASS.map(function (k) { return areaTile(areaInfo(k)); })));
     steps.appendChild(areaStep);
