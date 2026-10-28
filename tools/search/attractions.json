@@ -10,6 +10,15 @@
         "label": "Plantations",
         "results": [
           {
+            "name": "Arrapetta Tea Estate (Harrisons Malayalam)",
+            "category": "Plantations",
+            "distance_from_stay_km": 15,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-arrapetta-tea-estate-plantation-wayanad.html"
+          },
+          {
             "name": "Rippon Tea estate",
             "category": "Plantations",
             "distance_from_stay_km": 17,
@@ -17,6 +26,15 @@
             "district": "Wayanad",
             "note": null,
             "page_url": "https://www.bwstays.com/bw-rippon-tea-estate-plantation-wayanad.html"
+          },
+          {
+            "name": "Priyadarshini Hills (Priyadarshini Tea Environs)",
+            "category": "Plantations",
+            "distance_from_stay_km": 39,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-priyadarshini-tea-environs-plantation-wayanad.html"
           }
         ]
       }
@@ -914,6 +932,15 @@
             "page_url": "https://www.bwstays.com/bw-our-lady-of-lourdes-shrine-pilgrimage-wayanad.html"
           },
           {
+            "name": "Arrapetta Tea Estate (Harrisons Malayalam)",
+            "category": "Plantations",
+            "distance_from_stay_km": 15,
+            "rating": null,
+            "district": "Wayanad",
+            "note": null,
+            "page_url": "https://www.bwstays.com/bw-arrapetta-tea-estate-plantation-wayanad.html"
+          },
+          {
             "name": "Chain Tree",
             "category": "Cultural & Historical",
             "distance_from_stay_km": 15,
@@ -1115,7 +1142,7 @@
       "pilgrimage",
       "health"
     ],
-    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 40). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
+    "data_quality": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 73 places,  for 41). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them."
   },
   "metadata": {
     "generated": "2026-10-28",

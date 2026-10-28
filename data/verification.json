@@ -3212,6 +3212,75 @@
    ],
    "recommendation": "update_coordinate",
    "notes": "Area confirmed; correct stated_km to about 34. Healer identity and hours not checked (out of scope)."
+  },
+  "98": {
+   "name": "Priyadarshini Hills (Priyadarshini Tea Environs), Pancharakolly, near Mananthavady",
+   "checked": "2026-10-28",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.86066,
+    "lon": 75.99107,
+    "osm_ref": "way/1123284968",
+    "offset_km": 0,
+    "evidence": "OSM way/1123284968 'Priyadarsini Tea Factory' (man_made=works); Nominatim reverse: Jessy, Mananthavady. OSRM Mananthavady town -> factory 9.2 km, matching DTPC 'Mananthavady Bus Stand, about 9 km'. OSRM Kalpetta -> factory 39.3 km; the point snaps 512 m to the nearest road."
+   },
+   "timing": {
+    "value": "09:00-17:00",
+    "source_url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
+    "confidence": "high",
+    "note": "DTPC entry time 09:00 AM to 05:00 PM; the same DTPC page's More Info says 08:30 AM - 04:30 PM and Kerala Tourism says 09:00 AM to 04:00 PM"
+   },
+   "fee": {
+    "value": "Adult INR 100, child INR 50",
+    "source_url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
+    "confidence": "high",
+    "note": "Kerala Tourism agrees (also senior citizens INR 50); DTPC More Info also shows 'Per Person: Rs 30' (older)"
+   },
+   "official_phone": {
+    "value": "+91 94957 47900",
+    "source_url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad"
+   },
+   "anomalies": [
+    "DTPC page gives two timings (09:00-17:00 and 08:30-16:30) and two fees (Adult 100 / Child 50 and Per Person 30); the site uses the entry-time and fee fields"
+   ],
+   "recommendation": "keep",
+   "notes": "Cooperative society for the rehabilitation of bonded tribal people (Kerala Tourism). DTPC: walk through the plantation, tea factory visit, tea tasting, tea to buy; tea tours, trekking, mountain biking, hiking and camping; rooms; only offline booking; best Oct-May. Kerala Tourism: trek to Vishwas Point, the highest point; tree houses. Photo: Wikimedia Commons File:Tea_plantation_at_Wayanad.jpg (Sneha G Gupta, CC BY-SA 4.0), a Wayanad tea plantation, not stated to be this estate.",
+   "description_sources": [
+    "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
+    "https://www.keralatourism.org/malabar/priyadarshini-tea-environs/206"
+   ],
+   "dtpc_check": {
+    "checked": "2026-10-28",
+    "url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
+    "mapping": "sure",
+    "timing": {
+     "verdict": "match",
+     "dtpc_says": "Entry Time 09:00 AM to 05:00PM"
+    },
+    "fee": {
+     "verdict": "match",
+     "dtpc_says": "Adult - Rs.100/- | Child - Rs.50/-"
+    }
+   }
+  },
+  "99": {
+   "name": "Arrapetta Estate (Harrisons Malayalam Ltd), Meppadi Post",
+   "checked": "2026-10-28",
+   "identity": "real",
+   "coordinate": {
+    "status": "verified_stated",
+    "lat": 11.53901,
+    "lon": 76.1585,
+    "osm_ref": "way/859673805",
+    "offset_km": 0,
+    "evidence": "OSM way/859673805 'Mele arapetta tea factory' (building=industrial); Nominatim reverse: Mele arapetta, Thinapuram, Vythiri 673567. OSM way/905128859 'HML estate bunglow' 1.6 km north. OSRM Kalpetta -> factory 14.9 km."
+   },
+   "recommendation": "keep",
+   "notes": "Harrisons Malayalam lists 'Arrapetta Estate, Meppadi Post, S.Wynad - 673 577', orthodox tea about two million kg, Wynaad-Nilgiris estates at 2,500-3,500 ft. No visitor hours, tours or fees published: working private estate. Photo: Wikimedia Commons File:Tea_Plantation,_Wayanad_Hills_-_panoramio.jpg (Jaseem Hamza, CC BY 3.0), taken at 11.508,76.146, about 3.5 km from the factory, not stated to be this estate.",
+   "description_sources": [
+    "https://harrisonsmalayalam.com/?p=5082"
+   ]
   }
  },
  "removed": {

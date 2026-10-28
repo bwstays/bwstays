@@ -360,6 +360,11 @@
       "output": {
         "nearest": [
           {
+            "id": 98,
+            "name": "Priyadarshini Hills (Priyadarshini Tea Environs)",
+            "distance_km": 6
+          },
+          {
             "id": 14,
             "name": "Valliyoorkavu temple",
             "distance_km": 8
@@ -393,11 +398,6 @@
             "id": 15,
             "name": "Kuruwa Deep",
             "distance_km": 15
-          },
-          {
-            "id": 63,
-            "name": "Boys Town",
-            "distance_km": 16
           }
         ]
       }
@@ -540,13 +540,13 @@
             "distance_km": 12
           },
           {
-            "id": 85,
-            "name": "Bamboo Forest Valentine Park",
-            "distance_km": 16
+            "id": 98,
+            "name": "Priyadarshini Hills (Priyadarshini Tea Environs)",
+            "distance_km": 12
           },
           {
-            "id": 63,
-            "name": "Boys Town",
+            "id": 85,
+            "name": "Bamboo Forest Valentine Park",
             "distance_km": 16
           }
         ]
@@ -710,6 +710,11 @@
       "output": {
         "nearest": [
           {
+            "id": 99,
+            "name": "Arrapetta Tea Estate",
+            "distance_km": 13
+          },
+          {
             "id": 61,
             "name": "Tea Plantation wayanad",
             "distance_km": 15
@@ -743,11 +748,6 @@
             "id": 83,
             "name": "Neelarchalu",
             "distance_km": 18
-          },
-          {
-            "id": 46,
-            "name": "Mailadippara",
-            "distance_km": 19
           }
         ]
       }
@@ -925,6 +925,11 @@
             "distance_km": 10
           },
           {
+            "id": 98,
+            "name": "Priyadarshini Hills (Priyadarshini Tea Environs)",
+            "distance_km": 10
+          },
+          {
             "id": 32,
             "name": "Begur wild life sanctuary",
             "distance_km": 13
@@ -942,11 +947,6 @@
           {
             "id": 82,
             "name": "Bamboo Rafting",
-            "distance_km": 15
-          },
-          {
-            "id": 15,
-            "name": "Kuruwa Deep",
             "distance_km": 15
           }
         ]
@@ -1330,6 +1330,11 @@
             "distance_km": 8
           },
           {
+            "id": 99,
+            "name": "Arrapetta Tea Estate",
+            "distance_km": 17
+          },
+          {
             "id": 61,
             "name": "Tea Plantation wayanad",
             "distance_km": 19
@@ -1358,11 +1363,6 @@
             "id": 59,
             "name": "Uravu",
             "distance_km": 23
-          },
-          {
-            "id": 49,
-            "name": "Chundail Tea Estate",
-            "distance_km": 24
           }
         ]
       }
@@ -1374,6 +1374,11 @@
       },
       "output": {
         "nearest": [
+          {
+            "id": 99,
+            "name": "Arrapetta Tea Estate",
+            "distance_km": 4
+          },
           {
             "id": 61,
             "name": "Tea Plantation wayanad",
@@ -1408,11 +1413,6 @@
             "id": 58,
             "name": "900 Kandi",
             "distance_km": 17
-          },
-          {
-            "id": 64,
-            "name": "Ambalavayal Farm",
-            "distance_km": 18
           }
         ]
       }
@@ -2085,6 +2085,11 @@
             "distance_km": 13
           },
           {
+            "id": 99,
+            "name": "Arrapetta Tea Estate",
+            "distance_km": 13
+          },
+          {
             "id": 19,
             "name": "Cheengeri Hill",
             "distance_km": 14
@@ -2107,11 +2112,6 @@
           {
             "id": 87,
             "name": "Kolagapara",
-            "distance_km": 18
-          },
-          {
-            "id": 50,
-            "name": "Phantom rock",
             "distance_km": 18
           }
         ]
@@ -2275,6 +2275,11 @@
       "output": {
         "nearest": [
           {
+            "id": 99,
+            "name": "Arrapetta Tea Estate",
+            "distance_km": 3
+          },
+          {
             "id": 37,
             "name": "Kanthanpara waterfalls",
             "distance_km": 4
@@ -2308,11 +2313,6 @@
             "id": 64,
             "name": "Ambalavayal Farm",
             "distance_km": 17
-          },
-          {
-            "id": 43,
-            "name": "Karapuzha Dam",
-            "distance_km": 17
           }
         ]
       }
@@ -2328,6 +2328,11 @@
             "id": 84,
             "name": "Munneswaran Kunnu",
             "distance_km": 8
+          },
+          {
+            "id": 98,
+            "name": "Priyadarshini Hills (Priyadarshini Tea Environs)",
+            "distance_km": 12
           },
           {
             "id": 88,
@@ -2358,11 +2363,6 @@
             "id": 32,
             "name": "Begur wild life sanctuary",
             "distance_km": 24
-          },
-          {
-            "id": 47,
-            "name": "Banasura Sagar Hills",
-            "distance_km": 26
           }
         ]
       }
@@ -2535,6 +2535,11 @@
             "distance_km": 9
           },
           {
+            "id": 99,
+            "name": "Arrapetta Tea Estate",
+            "distance_km": 10
+          },
+          {
             "id": 61,
             "name": "Tea Plantation wayanad",
             "distance_km": 10
@@ -2558,11 +2563,6 @@
             "id": 87,
             "name": "Kolagapara",
             "distance_km": 12
-          },
-          {
-            "id": 50,
-            "name": "Phantom rock",
-            "distance_km": 12
           }
         ]
       }
@@ -2577,6 +2577,11 @@
           {
             "id": 63,
             "name": "Boys Town",
+            "distance_km": 8
+          },
+          {
+            "id": 98,
+            "name": "Priyadarshini Hills (Priyadarshini Tea Environs)",
             "distance_km": 8
           },
           {
@@ -2608,11 +2613,6 @@
             "id": 32,
             "name": "Begur wild life sanctuary",
             "distance_km": 23
-          },
-          {
-            "id": 82,
-            "name": "Bamboo Rafting",
-            "distance_km": 27
           }
         ]
       }
@@ -2735,6 +2735,11 @@
             "distance_km": 20
           },
           {
+            "id": 98,
+            "name": "Priyadarshini Hills (Priyadarshini Tea Environs)",
+            "distance_km": 24
+          },
+          {
             "id": 24,
             "name": "Mananthavady Pazhassi Tomb",
             "distance_km": 26
@@ -2758,11 +2763,6 @@
             "id": 13,
             "name": "Varampatta mosque",
             "distance_km": 32
-          },
-          {
-            "id": 33,
-            "name": "Meen Mutty Waterfalls",
-            "distance_km": 33
           }
         ]
       }
@@ -2863,6 +2863,106 @@
             "id": 5,
             "name": "Papanasini River",
             "distance_km": 14
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "place_id": 98,
+        "place": "Priyadarshini Hills (Priyadarshini Tea Environs)"
+      },
+      "output": {
+        "nearest": [
+          {
+            "id": 11,
+            "name": "Trishileri temple",
+            "distance_km": 6
+          },
+          {
+            "id": 84,
+            "name": "Munneswaran Kunnu",
+            "distance_km": 8
+          },
+          {
+            "id": 24,
+            "name": "Mananthavady Pazhassi Tomb",
+            "distance_km": 10
+          },
+          {
+            "id": 63,
+            "name": "Boys Town",
+            "distance_km": 12
+          },
+          {
+            "id": 14,
+            "name": "Valliyoorkavu temple",
+            "distance_km": 12
+          },
+          {
+            "id": 97,
+            "name": "Keluvaidyar, Kattikulam",
+            "distance_km": 14
+          },
+          {
+            "id": 32,
+            "name": "Begur wild life sanctuary",
+            "distance_km": 17
+          },
+          {
+            "id": 82,
+            "name": "Bamboo Rafting",
+            "distance_km": 20
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "place_id": 99,
+        "place": "Arrapetta Tea Estate"
+      },
+      "output": {
+        "nearest": [
+          {
+            "id": 61,
+            "name": "Tea Plantation wayanad",
+            "distance_km": 3
+          },
+          {
+            "id": 37,
+            "name": "Kanthanpara waterfalls",
+            "distance_km": 4
+          },
+          {
+            "id": 83,
+            "name": "Neelarchalu",
+            "distance_km": 10
+          },
+          {
+            "id": 10,
+            "name": "Trikaipatta temple",
+            "distance_km": 12
+          },
+          {
+            "id": 18,
+            "name": "Chembra Peak",
+            "distance_km": 13
+          },
+          {
+            "id": 55,
+            "name": "Neelimala view point",
+            "distance_km": 13
+          },
+          {
+            "id": 43,
+            "name": "Karapuzha Dam",
+            "distance_km": 15
+          },
+          {
+            "id": 64,
+            "name": "Ambalavayal Farm",
+            "distance_km": 16
           }
         ]
       }

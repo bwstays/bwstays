@@ -75,6 +75,11 @@
         "distance_km": 14
       },
       {
+        "name": "Arrapetta Tea Estate (Harrisons Malayalam)",
+        "category": "Plantations",
+        "distance_km": 15
+      },
+      {
         "name": "Chain Tree",
         "category": "Cultural & Historical",
         "distance_km": 15
@@ -83,14 +88,9 @@
         "name": "Kolagapara",
         "category": "Trekking",
         "distance_km": 15
-      },
-      {
-        "name": "En ooru",
-        "category": "Tribal",
-        "distance_km": 16
       }
     ],
-    "nearby_places_indexed": 74,
+    "nearby_places_indexed": 76,
     "local_shopping": [
       {
         "name": "Coffee Plantation",

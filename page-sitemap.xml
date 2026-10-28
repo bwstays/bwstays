@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
   <loc>https://www.bwstays.com/all-fooding-wayanad.html</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-27</lastmod>
   <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
 </url>
 <url>
   <loc>https://www.bwstays.com/all-locations-wayanad.html</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-27</lastmod>
   <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
 </url>
 <url>
@@ -92,6 +92,11 @@
   <image:image><image:loc>https://www.bwstays.com/assets/img/tribal/bw-homestay-en-ooru-tribal-heritage-village-wayanad.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/farm/bw-stays-rars-wayanad-ambalavayal.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/romantic/black-and-white-nellarachal-wayanad.webp</image:loc></image:image>
+</url>
+<url>
+  <loc>https://www.bwstays.com/bw-arrapetta-tea-estate-plantation-wayanad.html</loc>
+  <lastmod>2026-10-28</lastmod>
+  <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
 </url>
 <url>
   <loc>https://www.bwstays.com/bw-arripara-waterfall-wayanad.html</loc>
@@ -905,7 +910,7 @@
 </url>
 <url>
   <loc>https://www.bwstays.com/bw-one-day-trails-kalpetta-wayanad.html</loc>
-  <lastmod>2025-10-03</lastmod>
+  <lastmod>2026-10-27</lastmod>
   <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
 </url>
 <url>
@@ -1028,6 +1033,11 @@
   <image:image><image:loc>https://www.bwstays.com/assets/img/falls/bw-stays-thusharagiri-falls-service-apartment.webp</image:loc></image:image>
 </url>
 <url>
+  <loc>https://www.bwstays.com/bw-priyadarshini-tea-environs-plantation-wayanad.html</loc>
+  <lastmod>2026-10-28</lastmod>
+  <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
+</url>
+<url>
   <loc>https://www.bwstays.com/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html</loc>
   <lastmod>2026-10-18</lastmod>
   <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
@@ -1064,8 +1074,6 @@
   <image:image><image:loc>https://www.bwstays.com/assets/img/plantation/bw-stays-tea-kalpetta-wayanad.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/plantation/bw-stays-estate-green-stay-kalpetta-wayanad.webp</image:loc></image:image>
-  <image:image><image:loc>https://www.bwstays.com/assets/img/plantation/bw-periya-estate-wyanad.webp</image:loc></image:image>
-  <image:image><image:loc>https://www.bwstays.com/assets/img/plantation/bw-stays-coffee-estate-forest.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/falls/bw-stays-kanthanpara-waterfalls-wayanad.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/cycling/bw-stays-chundale-cycling-group-wayanad.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/romantic/black-and-white-nellarachal-wayanad.webp</image:loc></image:image>
@@ -1387,7 +1395,7 @@
 </url>
 <url>
   <loc>https://www.bwstays.com/bwstays-booking.html</loc>
-  <lastmod>2026-10-17</lastmod>
+  <lastmod>2026-10-26</lastmod>
   <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/plantation/bw-tea-estate-kalpetta-india.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/romantic/bw-stays-ghats-viewpoint-wayanad.webp</image:loc></image:image>
@@ -1405,7 +1413,7 @@
 </url>
 <url>
   <loc>https://www.bwstays.com/</loc>
-  <lastmod>2026-10-19</lastmod>
+  <lastmod>2026-10-26</lastmod>
   <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/villa1/black-and-white-wayanad-mist.webp</image:loc></image:image>
   <image:image><image:loc>https://www.bwstays.com/assets/img/villa1/bw-destination-chembra-wayanad.webp</image:loc></image:image>
@@ -1428,7 +1436,7 @@
 </url>
 <url>
   <loc>https://www.bwstays.com/search.html</loc>
-  <lastmod>2026-10-13</lastmod>
+  <lastmod>2026-10-27</lastmod>
   <image:image><image:loc>https://www.bwstays.com/assets/img/bg-masthead.webp</image:loc></image:image>
 </url>
 </urlset>

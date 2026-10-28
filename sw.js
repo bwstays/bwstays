@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = 'bdcc67ae07';
+const VERSION = '3c6c9fafcb';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -40,9 +40,9 @@ const SHELL = [
   "/css/styles.min.css?v=cc3c9913",
   "/css/trails.min.css?v=0c432988",
   "/data/categories.min.js?v=f2a96d47",
-  "/data/nearbylocationsdata.min.js?v=9149dccf",
+  "/data/nearbylocationsdata.min.js?v=a86c3f89",
   "/data/rates.min.js?v=7b5dbd01",
-  "/data/sitedata.min.js?v=e3ab1b3e",
+  "/data/sitedata.min.js?v=5013904c",
   "/index.html",
   "/js/booking.min.js?v=d32180d1",
   "/js/chat.min.js?v=a27b96c6",
@@ -83,6 +83,7 @@ const PAGES = [
   "/bw-ali-wayanadan-honey-shopping-wayanad.html",
   "/bw-ambalavayal-farm-rars-wayanad.html",
   "/bw-ananthanatha-swamy-jain-temple-pilgrimage-wayanad.html",
+  "/bw-arrapetta-tea-estate-plantation-wayanad.html",
   "/bw-arripara-waterfall-wayanad.html",
   "/bw-attamala-view-point-romantic-wayanad.html",
   "/bw-bamboo-forest-valentine-park-wayanad.html",
@@ -134,6 +135,7 @@ const PAGES = [
   "/bw-periya-tea-estate-plantation-wayanad.html",
   "/bw-phanthom-rock-romantic-wayanad.html",
   "/bw-pookode-lake-romantic-wayanad.html",
+  "/bw-priyadarshini-tea-environs-plantation-wayanad.html",
   "/bw-puliyarmala-trucking-wayanad.html",
   "/bw-pulpally-sitadevi-temple-pilgrimage-wayanad.html",
   "/bw-restaurants-food-wayanad.html",
@@ -274,10 +276,12 @@ const IMAGES = [
   "/assets/img/pilgrimage/bw-workation-korome-mosque-wayanad.webp",
   "/assets/img/pilgrimage/bw-workation-pallikkunnu-church-wayanad.webp",
   "/assets/img/pilgrimage/bw-workation-trishilerry-temple-wayanad.webp",
+  "/assets/img/plantation/bw-arrapetta-tea-estate-meppadi-wayanad.webp",
   "/assets/img/plantation/bw-destination-wayanad.webp",
   "/assets/img/plantation/bw-hotel-tea-plantaion-tour-wayanad.webp",
   "/assets/img/plantation/bw-hotel-tea-plantation-wayanad.webp",
   "/assets/img/plantation/bw-periya-estate-wyanad.webp",
+  "/assets/img/plantation/bw-priyadarshini-tea-environs-mananthavady-wayanad.webp",
   "/assets/img/plantation/bw-stays-coffee-estate-forest.webp",
   "/assets/img/plantation/bw-stays-estate-green-stay-kalpetta-wayanad.webp",
   "/assets/img/plantation/bw-stays-tea-kalpetta-wayanad.webp",

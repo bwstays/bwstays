@@ -175,6 +175,13 @@
    ],
    "mapping": "sure",
    "url": "https://www.dtpcwayanad.com/destination/wayanad-heritage-museum-wayanad"
+  },
+  "priyadarshini-hills-wayanad": {
+   "ids": [
+    98
+   ],
+   "mapping": "sure",
+   "url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad"
   }
  },
  "not_on_site": [
@@ -192,11 +199,6 @@
    "slug": "korome-mosque-wayanad",
    "url": "https://www.dtpcwayanad.com/destination/korome-mosque-wayanad",
    "place": "Korome Mosque"
-  },
-  {
-   "slug": "priyadarshini-hills-wayanad",
-   "url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
-   "place": "Priyadarshini Hills (Priyadharshini Tea Environs)"
   }
  ]
 }

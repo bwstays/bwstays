@@ -3,11 +3,11 @@
   "description": "Places to visit around Kalpetta, Wayanad - distances are kilometres from the stay",
   "content": {
     "destination": "Wayanad, Kerala",
-    "count": 67,
+    "count": 69,
     "categories": {
       "plantation": {
         "label": "Plantations",
-        "count": 1
+        "count": 3
       },
       "waterfalls": {
         "label": "Waterfalls & Lakes",
@@ -63,7 +63,7 @@
       }
     },
     "data_quality": {
-      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 71 places,  for 40). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
+      "note": "Entry fees, opening hours and weekly holidays are not published: the source data holds template defaults (fee 0 for 0 of 73 places,  for 41). Descriptions and coordinates shared between unrelated places, and distances shorter than the straight-line distance, are withheld (null). Confirm details before relying on them.",
       "descriptions_withheld": 0,
       "coordinates_withheld": 5,
       "distances_withheld": 0,
@@ -471,6 +471,33 @@
             "source_url": "https://www.dtpcwayanad.com/destination/pallikunnu-church-wayanad",
             "confidence": "high"
           },
+          "official_fee": null
+        }
+      },
+      {
+        "id": "plantation-99",
+        "name": "Arrapetta Tea Estate (Harrisons Malayalam)",
+        "category": "plantation",
+        "category_label": "Plantations",
+        "description": "Harrisons Malayalam tea estate at Arrapetta, near Meppadi, with its own factory making orthodox tea",
+        "distance_from_stay_km": 15,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [],
+        "transport": null,
+        "coordinates": {
+          "latitude": 11.53901,
+          "longitude": 76.1585
+        },
+        "map_url": "https://www.openstreetmap.org/way/859673805",
+        "page_url": "https://www.bwstays.com/bw-arrapetta-tea-estate-plantation-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-28",
+          "coordinate_source": "OpenStreetMap way/859673805",
+          "official_timing": null,
           "official_fee": null
         }
       },
@@ -1643,6 +1670,44 @@
           "official_fee": {
             "value": "Bus safari: adult INR 350, child/student INR 175, foreigner INR 700. Jeep (Indian): INR 2,100 (4), 2,410 (5), 2,725 (6); jeep (foreigner): INR 4,200/4,500/4,800. Camera INR 45, video INR 255.",
             "source_url": "https://dtpcwayanad.com/destination/muthanga-wildlife-sanctuary-wayanad",
+            "confidence": "high"
+          }
+        }
+      },
+      {
+        "id": "plantation-98",
+        "name": "Priyadarshini Hills (Priyadarshini Tea Environs)",
+        "category": "plantation",
+        "category_label": "Plantations",
+        "description": "Tea estate of a cooperative society for formerly bonded tribal families, about 9 km from Mananthavady, with tea tours, a tea factory and treks",
+        "distance_from_stay_km": 39,
+        "typical_visit_duration": null,
+        "rating": null,
+        "best_seasons": [
+          "Winter (October-February)",
+          "Summer (March-May)"
+        ],
+        "transport": null,
+        "coordinates": {
+          "latitude": 11.86066,
+          "longitude": 75.99107
+        },
+        "map_url": "https://www.openstreetmap.org/way/1123284968",
+        "page_url": "https://www.bwstays.com/bw-priyadarshini-tea-environs-plantation-wayanad.html",
+        "district": null,
+        "locality": null,
+        "review_note": null,
+        "verification": {
+          "last_checked": "2026-10-28",
+          "coordinate_source": "OpenStreetMap way/1123284968",
+          "official_timing": {
+            "value": "09:00-17:00",
+            "source_url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
+            "confidence": "high"
+          },
+          "official_fee": {
+            "value": "Adult INR 100, child INR 50",
+            "source_url": "https://www.dtpcwayanad.com/destination/priyadarshini-hills-wayanad",
             "confidence": "high"
           }
         }
