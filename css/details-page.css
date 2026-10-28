@@ -3383,9 +3383,6 @@ a.text-black:focus {
     font-size: 2rem !important;
   }
   
-  .vertical-div {
-    display: none !important;
-  }
 }
 
 @media (max-width: 767.98px) {
@@ -3823,9 +3820,6 @@ a.text-black:focus {
     padding: 3rem 0 !important;
   }
   
-  .vertical-div {
-    display: none !important;
-  }
   
   #contact-form-div .col-md-6 {
     margin-bottom: 2rem;
@@ -8353,4 +8347,50 @@ body #language-selector option::checkmark {
 #mainNav .navbar-brand img.logo-loc {
   margin: 0;
   flex: 0 0 auto;
+}
+
+/* phones and tablets: the Trails and Reservation tabs become one bar at the bottom of the screen
+   (Trails left, Reservation right; one tab alone fills the bar). The chat and back-to-top buttons,
+   the chat window and the install/update prompt move up above it. */
+@media (max-width: 991.98px) {
+  .vertical-div {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    transform: none;
+    z-index: 1020;
+  }
+  .vertical-div-left { left: 0; right: 50%; }
+  body:not(:has(.vertical-div-left)) .vertical-div,
+  body:not(:has(.vertical-div:not(.vertical-div-left))) .vertical-div-left { left: 0; right: 0; }
+  .vertical-res {
+    writing-mode: horizontal-tb;
+    transform: none;
+    display: block;
+    width: 100%;
+    height: calc(50px + env(safe-area-inset-bottom, 0px));
+    padding: 0 0 env(safe-area-inset-bottom, 0px);
+    line-height: 50px;
+    font-size: 0.85rem;
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+  }
+  .vertical-res::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 0.6em;
+    content: "\f073"; /* calendar */
+  }
+  .vertical-res-left::before { content: "\f4d7"; /* route */ }
+  .vertical-div-left .vertical-res { border-right: 1px solid rgba(255, 255, 255, 0.3); }
+  body:has(.vertical-div):not(.booking-page) { padding-bottom: calc(50px + env(safe-area-inset-bottom, 0px)); }
+  body:has(.vertical-div):not(.booking-page) #btn-back-to-top,
+  body:has(.vertical-div):not(.booking-page) #btn-chat { bottom: calc(60px + env(safe-area-inset-bottom, 0px)) !important; }
+  body:has(.vertical-div):not(.booking-page) .chat-modal { bottom: calc(125px + env(safe-area-inset-bottom, 0px)); }
+  body:has(.vertical-div):not(.booking-page) .bw-pwa-bar { bottom: calc(134px + env(safe-area-inset-bottom, 0px)); }
+  /* the booking page keeps its own booking buttons on phones */
+  .booking-page .vertical-div { display: none; }
+  body.booking-page { padding-bottom: 0; }
 }
