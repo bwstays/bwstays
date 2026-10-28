@@ -14,7 +14,7 @@
  *   other   map tiles and web fonts are cached at runtime within a size limit;
  *           analytics, the booking form, chat and weather requests always go to the network.
  */
-const VERSION = '3065dfc3b9';
+const VERSION = '22afb8cc24';
 const SHELL_CACHE = 'bw-shell-' + VERSION;
 const SITE_CACHE = 'bw-site-v1'; // saved pages and data (kept across versions)
 const MEDIA_CACHE = 'bw-media-v1'; // images
@@ -22,8 +22,8 @@ const RUNTIME_CACHE = 'bw-runtime-v1'; // map tiles, web fonts, third-party stat
 
 const SHELL = [
   "/",
-  "/assets/fonts/fontawesome/fa-brands-400.woff2?v=14f6b041",
-  "/assets/fonts/fontawesome/fa-solid-900.woff2?v=0583ab10",
+  "/assets/fonts/fontawesome/fa-brands-400.woff2?v=43d3b2eb",
+  "/assets/fonts/fontawesome/fa-solid-900.woff2?v=972897db",
   "/assets/img/pwa/apple-touch-icon.png",
   "/assets/img/pwa/apple-touch-icon.png",
   "/assets/img/pwa/icon-192.png",
@@ -33,12 +33,12 @@ const SHELL = [
   "/bwstays-booking.html",
   "/css/bootstrap-lite.min.css?v=c3c65f85",
   "/css/details-page.min.css?v=88992e7c",
-  "/css/fontawesome.min.css?v=c841167d",
+  "/css/fontawesome.min.css?v=07a9cb09",
   "/css/maps.min.css?v=cef28474",
   "/css/new-page.min.css?v=834ed0c8",
   "/css/page-404.min.css?v=f3100777",
   "/css/styles.min.css?v=cc3c9913",
-  "/css/trails.min.css?v=0c432988",
+  "/css/trails.min.css?v=98dc5fbb",
   "/data/categories.min.js?v=f2a96d47",
   "/data/nearbylocationsdata.min.js?v=b0f7861a",
   "/data/rates.min.js?v=7b5dbd01",
@@ -64,7 +64,7 @@ const SHELL = [
   "/js/specrule.min.js?v=1f8a513f",
   "/js/testimonial.min.js?v=c59378fa",
   "/js/total-booking-reports.min.js?v=5527f1e2",
-  "/js/trails.min.js?v=1448826b",
+  "/js/trails.min.js?v=a3531c1d",
   "/js/validations.min.js?v=83a714d7",
   "/js/way_food_loc.min.js?v=492ed1b4",
   "/js/widgets.min.js?v=913ebcd9",

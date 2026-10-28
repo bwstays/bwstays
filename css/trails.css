@@ -1,4 +1,4 @@
-/* Trails planner page (bw-one-day-trails-kalpetta-wayanad.html): controls, ready-made trails and removable portlets */
+/* Trails planner page (bw-one-day-trails-kalpetta-wayanad.html): controls and removable portlets */
 .trails-page {
   padding: 120px 0 3rem;
   background: linear-gradient(180deg, rgba(10, 10, 10, 0.62) 0%, rgba(10, 10, 10, 0.84) 480px, rgba(10, 10, 10, 0.93) 100%),
@@ -82,36 +82,6 @@
 .tr-btn.is-ghost { background: transparent; border: 1px solid #555; color: #ddd; }
 .tr-note { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin: 0.5rem 0 0; }
 
-/* ready-made trails */
-.tr-presets { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 0.7rem; }
-.tr-preset-days {
-  display: inline-block;
-  font-size: 0.75rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #fff !important;
-  background: var(--bw-teal);
-  border-radius: 999px;
-  padding: 1px 8px;
-}
-.tr-preset {
-  /* content from the top, so the "N DAYS" badges line up across the row */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0.3rem;
-  text-align: left;
-  border: 1px solid #333;
-  background: #232323;
-  color: #eee;
-  border-radius: 8px;
-  padding: 0.75rem 0.85rem;
-  cursor: pointer;
-}
-.tr-preset:hover, .tr-preset:focus-visible { border-color: var(--bw-teal); outline: none; }
-.tr-preset strong { display: block; color: #fff; }
-.tr-preset span { font-size: 0.85rem; color: rgba(255, 255, 255, 0.65); }
 
 /* hidden portlets bar */
 .tr-hidden {
@@ -189,7 +159,7 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
   body > *:not(.trails-page) { display: none !important; }
   body, .trails-page { background: #fff !important; color: #000 !important; }
   .trails-page { padding: 0 !important; }
-  .trails-page h1, .trails-intro, .tr-hidden, #tr-plan, #tr-presets, #tr-tips, .tr-print-bar, .tr-note,
+  .trails-page h1, .trails-intro, .tr-hidden, #tr-plan, #tr-tips, .tr-print-bar, .tr-note,
   .tr-portlet-btn, .leaflet-control-zoom { display: none !important; }
   .tr-print-head { display: block; margin-bottom: 10px; color: #000; }
   .tr-print-head h2 { font-size: 20pt; margin: 0 0 4px; color: #000; }
@@ -444,8 +414,21 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
 .tr-step-title { font-size: 1.1rem; letter-spacing: var(--bw-track, 1px); }
 .trails-page .tr-btn, .trails-page .tr-dir, .trails-page .tr-day-nav { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.15rem; }
 .trails-page .tr-stop-tools .tr-dir { font-size: 0.72rem; letter-spacing: 0.1rem; }
-.tr-pill, .tr-preset-days { letter-spacing: 0.1rem; }
+.tr-pill { letter-spacing: 0.1rem; }
 @media (max-width: 575.98px) {
   .trails-page h1 { font-size: 1.5rem; }
   .tr-portlet-title { font-size: 1.1rem; }
+}
+
+/* area step: North, East, West and South in one row under the other area choices */
+.tr-tiles-compass { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0.6rem; }
+@media (max-width: 575.98px) {
+  .tr-tiles-compass { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.4rem; }
+  .tr-tiles-compass .tr-tile { flex-direction: column; justify-content: center; gap: 0.25rem; height: 76px; padding: 0.3rem; text-align: center; }
+  .tr-tiles-compass .tr-tile-visual { width: 30px; height: 30px; }
+  .tr-tiles-compass .tr-tile-visual i { font-size: 0.85rem; }
+  .tr-tiles-compass .tr-tile-text { align-items: center; }
+  .tr-tiles-compass .tr-tile-label { font-size: 0.8rem; }
+  .tr-tiles-compass .tr-tile-sub { display: none; }
+  .tr-tiles-compass .tr-tile[aria-pressed="true"]::after { top: 3px; right: 3px; width: 15px; height: 15px; line-height: 15px; font-size: 9px; }
 }

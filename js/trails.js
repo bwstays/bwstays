@@ -30,21 +30,18 @@
   // must-see places (owner's choice, by place id in data/sitedata.js): a trip that matches them always includes
   // them, from the first day. 18 Chembra Peak, 44 Pookode Lake, 21 Edakkal Caves, 45 Banasura Sagar Dam.
   var MUST_SEE = [18, 44, 21, 45];
+  // area-step shortcuts for one kind of place anywhere in Wayanad: they set the interest (step 3) to that category
+  var THEMES = [
+    { cat: 'wildlife', label: 'Wildlife', icon: 'fa-paw', sub: 'Sanctuaries' },
+    { cat: 'trucking', label: 'Trekking', icon: 'fa-hiking', sub: 'Peaks and hills' },
+  ];
+  var COMPASS = ['n', 'e', 'w', 's'];  // shown in one row, in this order
   var AREAS = [
     { key: 'c', label: 'Around Kalpetta', towns: 'within ' + NEAR_KM + ' km', side: 'within ' + NEAR_KM + ' km' },
     { key: 'n', label: 'North', towns: 'Mananthavady, Thirunelli', side: 'Mananthavady' },
     { key: 'e', label: 'East', towns: 'Sultan Bathery, Ambalavayal', side: 'Sultan Bathery' },
     { key: 's', label: 'South', towns: 'Meppadi, Chembra, Vythiri', side: 'Meppadi, Vythiri' },
     { key: 'w', label: 'West', towns: 'Banasura, Padinjarathara', side: 'Banasura' },
-  ];
-  var PRESETS = [
-    { title: '2-day must-see highlights', text: 'Chembra Peak, Pookode Lake, Banasura Sagar Dam and Edakkal Caves, with places along the way.', days: 2, areas: [], interests: [], pace: 'balanced', must: true },
-    { title: '2-day weekend: waterfalls & viewpoints', text: 'Falls, lakes and view points close to Kalpetta.', days: 2, areas: [], interests: ['waterfalls', 'romantic'], pace: 'balanced' },
-    { title: '2-day pilgrim trail', text: 'Temples, churches and mosques across the district.', days: 2, areas: [], interests: ['pilgrimage', 'culthist'], pace: 'balanced' },
-    { title: '3-day wildlife & heritage', text: 'Sanctuaries, museums and history.', days: 3, areas: [], interests: ['wildlife', 'museums', 'culthist', 'tribal'], pace: 'balanced' },
-    { title: '3-day trekking & adventure', text: 'Peaks, hills, caves and adventure sports.', days: 3, areas: [], interests: ['trucking', 'sporting', 'romantic'], pace: 'packed' },
-    { title: '5-day all of Wayanad', text: 'A bit of everything, one area a day.', days: 5, areas: [], interests: [], pace: 'balanced' },
-    { title: '7-day slow Wayanad', text: 'A week at an easy pace: every area, three stops a day.', days: 7, areas: [], interests: [], pace: 'relaxed' },
   ];
 
   var places = [];
@@ -312,6 +309,11 @@
       el('div', { class: 'tr-tiles ' + (cls || ''), role: 'group', 'aria-label': title }, tiles),
     ]);
   }
+  // the Wildlife or Trekking shortcut is on when it is the only interest and no area is picked
+  function themeOf() {
+    if (state.areas.length || state.must || state.interests.length !== 1) return null;
+    return THEMES.some(function (t) { return t.cat === state.interests[0]; }) ? state.interests[0] : null;
+  }
   function summaryText() {
     var area = state.must ? 'Must-see highlights' : state.areas.length ? state.areas.map(function (k) { return areaInfo(k).label; }).join(', ') : 'All of Wayanad';
     var ints = state.interests.length ? state.interests.map(function (k) {
@@ -328,10 +330,20 @@
     var steps = el('div', { class: 'tr-steps' });
     steps.appendChild(step(1, 'fa-calendar-alt', 'How many days do you have?', 'One day for each part of Wayanad.',
       DAYS.map(function (d) { return tile({ big: String(d.key), label: d.key + ' days', sub: d.sub }, state.days === d.key, function () { state.days = d.key; update(); }); })));
-    steps.appendChild(step(2, 'fa-map-marked-alt', 'Which part of Wayanad?', '"All of Wayanad" gives one area a day; "Must-see highlights" fits the must-see places into the fewest days first; or pick areas.',
-      [tile({ icon: 'fa-globe-asia', label: 'All of Wayanad', sub: 'Every area' }, !state.areas.length && !state.must, function () { state.areas = []; state.must = false; update(); }),
-        tile({ icon: 'fa-star', label: 'Must-see highlights', sub: 'Top ' + places.filter(function (p) { return p.must; }).length + ' places first' }, state.must, function () { state.areas = []; state.must = true; update(); })].concat(
-        AREAS.map(function (a) { return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.side }, state.areas.indexOf(a.key) >= 0, function () { state.must = false; toggle(state.areas, a.key); update(); }); }))));
+    var theme = themeOf();
+    var areaTile = function (a) {
+      return tile({ icon: 'fa-map-marker-alt', label: a.label, sub: a.side }, state.areas.indexOf(a.key) >= 0, function () { state.must = false; toggle(state.areas, a.key); update(); });
+    };
+    var areaStep = step(2, 'fa-map-marked-alt', 'Which part of Wayanad?', '"All of Wayanad" gives one area a day; "Must-see highlights" fits the must-see places into the fewest days first; "Wildlife" and "Trekking" plan only those places; or pick areas.',
+      [tile({ icon: 'fa-globe-asia', label: 'All of Wayanad', sub: 'Every area' }, !state.areas.length && !state.must && !theme, function () { state.areas = []; state.must = false; if (themeOf()) state.interests = []; update(); }),
+        tile({ icon: 'fa-star', label: 'Must-see highlights', sub: 'Top ' + places.filter(function (p) { return p.must; }).length + ' places first' }, state.must, function () { state.areas = []; state.must = true; update(); }),
+        areaTile(areaInfo('c'))].concat(
+        THEMES.filter(function (t) { return places.some(function (p) { return p.cat === t.cat; }); }).map(function (t) {
+          return tile({ icon: t.icon, label: t.label, sub: t.sub }, theme === t.cat, function () { state.areas = []; state.must = false; state.interests = [t.cat]; update(); });
+        })));
+    areaStep.appendChild(el('div', { class: 'tr-tiles tr-tiles-compass', role: 'group', 'aria-label': 'North, East, West or South of Kalpetta' },
+      COMPASS.map(function (k) { return areaTile(areaInfo(k)); })));
+    steps.appendChild(areaStep);
     steps.appendChild(step(3, 'fa-heart', 'What do you enjoy?', 'Leave "Everything" on, or pick as many as you like.',
       [tile({ icon: 'fa-th-large', label: 'Everything', sub: places.length + ' places' }, !state.interests.length, function () { state.interests = []; update(); })].concat(
         categories.map(function (c) { return tile({ icon: c.icon, img: c.img, label: c.short, sub: c.count + (c.count === 1 ? ' place' : ' places') }, state.interests.indexOf(c.key) >= 0, function () { toggle(state.interests, c.key); update(); }); }))));
@@ -359,16 +371,6 @@
     return portlet('tr-plan', 'Build your own trail', '4 quick choices', body);
   }
 
-  function presets() {
-    var grid = el('div', { class: 'tr-presets' });
-    PRESETS.forEach(function (p) {
-      grid.appendChild(el('button', {
-        type: 'button', class: 'tr-preset',
-        onclick: function () { state = { days: p.days, areas: p.areas.slice(), interests: p.interests.slice(), pace: p.pace, must: !!p.must }; update(); scrollToDays(); },
-      }, [el('span', { class: 'tr-preset-days', text: p.days + ' days' }), el('strong', { text: p.title.replace(/^\d-day (.)/, function (m, c) { return c.toUpperCase(); }) }), el('span', { text: p.text })]));
-    });
-    return portlet('tr-presets', 'Quick start: a ready-made trail', 'Tap one to see it, then change anything you like below', grid);
-  }
 
   // the stop after which to have lunch, and the nearest place to eat to it (restaurants first, then
   // food courts, fast food, cafes, bakeries); straight-line km, so "about"
@@ -541,7 +543,7 @@
   }
 
   function hiddenBar() {
-    var labels = { 'tr-plan': 'Plan your trail', 'tr-presets': 'Ready-made trails', 'tr-map-box': 'Trail map', 'tr-tips': 'Good to know' };
+    var labels = { 'tr-plan': 'Plan your trail', 'tr-map-box': 'Trail map', 'tr-tips': 'Good to know' };
     var bar = el('div', { class: 'tr-hidden', id: 'tr-hidden' });
     var items = hidden.slice();
     removedStops.forEach(function (r) { items.push(r); });
@@ -593,7 +595,6 @@
   function render() {
     root.innerHTML = '';
     root.appendChild(hiddenBar());
-    root.appendChild(presets());
     root.appendChild(controls());
     var days = el('div', { class: 'tr-days', id: 'tr-days' });
     if (!plan.length) {
