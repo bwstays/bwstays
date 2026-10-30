@@ -399,7 +399,7 @@
     var f = lunch.place;
     var meta = [];
     if (f) {
-      meta.push(String(f.kind || '').replace('shop:', '').replace('_', ' '));
+      meta.push(String(f.kind || '').replace('shop:', '').replace(/_/g, ' ').replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); }));
       if (f.cuisine && f.cuisine.length) meta.push(f.cuisine.join(', '));
       if (f.vegetarian === true || f.vegetarian === 'yes' || f.vegetarian === 'only') meta.push('vegetarian options');
       if (f.opening_hours) meta.push('open ' + f.opening_hours);
@@ -447,8 +447,9 @@
   }
   function legText(w, k, roadKmByOsrm) {
     var from = w[k - 1], to = w[k];
-    if (roadKmByOsrm != null) return to.prefix + 'about ' + roadKmByOsrm + ' km by road from ' + from.name;
-    return to.prefix + 'about ' + roadKm(from.pt, to.pt) + ' km from ' + from.name + (knownKm(from.pt, to.pt) ? '' : ' (estimate)');
+    var about = to.prefix ? to.prefix + 'about ' : 'About ';
+    if (roadKmByOsrm != null) return about + roadKmByOsrm + ' km by road from ' + from.name;
+    return about + roadKm(from.pt, to.pt) + ' km from ' + from.name + (knownKm(from.pt, to.pt) ? '' : ' (estimate)');
   }
 
   function directionsUrl(pt) {
@@ -475,7 +476,7 @@
     way.w.forEach(function (x, k) { if (k) legAt[x.lunch ? 'lunch' : x.end ? 'end' : x.stop] = k; });
     day.stops.forEach(function (p, j) {
       var item = p;
-      var meta = [p.label, 'about ' + fmtH(hoursAt(p)) + ' there'];
+      var meta = [p.label, 'About ' + fmtH(hoursAt(p)) + ' there'];
       if (Array.isArray(item.timing) && item.timing.length) meta.push('open ' + item.timing.join(', '));
       if (item.holidays && !/^(na|none|-)$/i.test(item.holidays)) meta.push('closed ' + item.holidays);
       list.appendChild(stopRow({
@@ -507,7 +508,7 @@
         [icon('fa-route'), ' Open day ' + (i + 1) + ' in Google Maps']) : null,
     ]);
     var badge = el('span', { class: 'tr-day-badge', style: 'background:' + COLORS[i % COLORS.length], text: String(i + 1) });
-    var sub = a.label + ' (' + a.towns + ') · ' + day.stops.length + ' stops · about ' + st.km + ' km, ' + fmtH(st.drive) + ' driving, ' + fmtH(st.total) + ' in all';
+    var sub = a.label + ' (' + a.towns + ') · ' + day.stops.length + ' stops · About ' + st.km + ' km, ' + fmtH(st.drive) + ' driving, ' + fmtH(st.total) + ' in all';
     var box = portlet('tr-day-' + (i + 1), 'Day ' + (i + 1), sub, body, { badge: badge });
     box.classList.add('tr-day');
     return box;
@@ -697,7 +698,7 @@
       if (span && job.way[k + 1]) span.textContent = legText(job.way, k + 1, km);
     });
     var sub = document.querySelector('#tr-day-' + (job.day + 1) + ' .tr-portlet-sub');
-    if (sub) sub.textContent = job.area.label + ' (' + job.area.towns + ') · ' + job.stops + ' stops · about ' + route.km + ' km by road, ' +
+    if (sub) sub.textContent = job.area.label + ' (' + job.area.towns + ') · ' + job.stops + ' stops · About ' + route.km + ' km by road, ' +
       fmtH(route.h) + ' driving, ' + fmtH(route.h + job.visit) + ' in all';
   }
 
