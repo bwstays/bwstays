@@ -428,7 +428,7 @@
         el('span', { class: 'tr-stop-meta' }, [icon(r.metaIcon), el('span', { text: r.meta })]),
         r.leg ? el('span', { class: 'tr-leg' }, [icon('fa-car-side'), el('span', { id: r.leg.id, text: r.leg.text })]) : null,
       ]),
-      el('div', { class: 'tr-stop-tools' }, [r.dir, r.remove]),
+      el('div', { class: 'tr-stop-tools' }, [r.remove, r.dir]),
     ]);
   }
 

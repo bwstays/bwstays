@@ -7,8 +7,6 @@
 }
 .trails-page h1, .trails-intro { text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7); }
 .trails-page h1 {
-  font-size: 1.9rem;
-  letter-spacing: 0.02em;
   text-transform: none;
   color: #fff;
   margin: 0 0 0.5rem;
@@ -40,14 +38,10 @@
 .tr-portlet-title {
   flex: 1;
   margin: 0;
-  font-size: 1.05rem;
   color: #fff;
-  font-weight: 600;
 }
 .tr-portlet-sub {
   display: block;
-  font-size: 0.82rem;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 2px;
 }
@@ -80,7 +74,7 @@
 }
 .tr-btn:hover { background: var(--bw-teal-dark); }
 .tr-btn.is-ghost { background: transparent; border: 1px solid #555; color: #ddd; }
-.tr-note { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin: 0.5rem 0 0; }
+.tr-note { color: rgba(255, 255, 255, 0.6); margin: 0.5rem 0 0; }
 
 
 /* hidden portlets bar */
@@ -90,7 +84,6 @@
   align-items: center;
   gap: 0.4rem;
   margin-bottom: 1rem;
-  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
 }
 .tr-hidden[hidden] { display: none; }
@@ -118,7 +111,7 @@
   font-weight: 700;
 }
 .tr-stops { list-style: none; margin: 0; padding: 0; }
-.tr-day-foot { margin-top: 0.6rem; font-size: 0.82rem; color: rgba(255, 255, 255, 0.55); }
+.tr-day-foot { margin-top: 0.6rem; color: rgba(255, 255, 255, 0.55); }
 .tr-empty { color: rgba(255, 255, 255, 0.7); margin: 0; }
 
 /* map */
@@ -129,12 +122,12 @@
   border-radius: 50%;
   border: 2px solid #fff;
   color: #fff;
-  font: 700 12px/20px sans-serif;
+  font-weight: 700;
+  line-height: 20px;
   text-align: center;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
-.tr-num-lunch { font-size: 12px; line-height: 20px; }
-.tr-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.6rem; font-size: 0.85rem; }
+.tr-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.6rem; }
 .tr-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
 
 .tr-route-km { color: rgba(255, 255, 255, 0.6); }
@@ -146,7 +139,6 @@
   .trails-page { padding-top: 1.5rem; }
 }
 @media (max-width: 575.98px) {
-  .trails-page h1 { font-size: 1.45rem; }
   .tr-days { grid-template-columns: 1fr; }
   .tr-map { height: 320px; }
 }
@@ -200,9 +192,9 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
   align-items: center;
   justify-content: center;
 }
-.tr-step-title { margin: 0; font-size: 1.05rem; color: #fff; font-weight: 600; }
+.tr-step-title { margin: 0; color: #fff; }
 .tr-step-title i { color: var(--bw-teal-soft); margin-right: 2px; }
-.tr-step-help { margin: 2px 0 0; font-size: 0.84rem; color: rgba(255, 255, 255, 0.6); }
+.tr-step-help { margin: 2px 0 0; color: rgba(255, 255, 255, 0.6); }
 /* one tile size for all four steps: same column width, same height */
 .tr-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.6rem; }
 .tr-tile {
@@ -239,18 +231,15 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
   height: 24px;
   line-height: 24px;
   margin: 30px 0 0 30px;
-  font-size: 0.72rem;
   text-align: center;
   border-radius: 50%;
   background: #1f1f1f;
   border: 1px solid #3a3a3a;
 }
-.tr-tile-big { font-size: 1.35rem; font-weight: 700; line-height: 1; color: #fff; }
+.tr-tile-big { line-height: 1; color: #fff; }
 .tr-tile-text { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .tr-tile-label {
-  font-weight: 600;
   color: #fff;
-  font-size: 0.92rem;
   line-height: 1.2;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -258,7 +247,6 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
   overflow: hidden;
 }
 .tr-tile-sub {
-  font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.2;
   white-space: nowrap;
@@ -283,7 +271,6 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
   border-radius: 50%;
   background: var(--bw-teal);
   color: #fff;
-  font-size: 12px;
   line-height: 20px;
   text-align: center;
 }
@@ -296,7 +283,7 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
 }
 .tr-summary-text { margin: 0 0 0.5rem; color: rgba(255, 255, 255, 0.85); }
 .tr-summary-text i { color: var(--bw-teal-soft); }
-.tr-summary-text strong { color: #fff; font-weight: 600; }
+.tr-summary-text strong { color: #fff; }
 
 /* directions on every place and for the whole day */
 .tr-dir {
@@ -308,21 +295,18 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
   border-radius: 6px;
   background: var(--bw-teal);
   color: #fff !important;
-  font-size: 0.82rem;
   text-decoration: none !important;
 }
 .tr-dir:hover, .tr-dir:focus-visible { background: var(--bw-teal-dark); outline: none; }
 .tr-day-nav { display: inline-flex; align-items: center; gap: 6px; margin-top: 0.6rem; text-decoration: none !important; color: #fff !important; }
-.tr-num-lunch i { font-size: 11px; color: #fff; }
+.tr-num-lunch i { color: #fff; }
 
 @media (max-width: 575.98px) {
   .tr-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
   .tr-tile { height: 72px; gap: 0.45rem; padding: 0 0.35rem 0 0.45rem; }
   .tr-tile-visual { width: 40px; height: 40px; }
-  .tr-tile-visual.has-img i { margin: 22px 0 0 22px; width: 20px; height: 20px; line-height: 20px; font-size: 0.62rem; }
-  .tr-tile-label { font-size: 0.85rem; }
-  .tr-tile-sub { font-size: 0.72rem; }
-  .tr-tile[aria-pressed="true"]::after { top: 4px; left: 4px; width: 16px; height: 16px; line-height: 16px; font-size: 10px; }
+  .tr-tile-visual.has-img i { margin: 22px 0 0 22px; width: 20px; height: 20px; line-height: 20px; }
+  .tr-tile[aria-pressed="true"]::after { top: 4px; left: 4px; width: 16px; height: 16px; line-height: 16px; }
   .tr-tile-visual { width: 38px; height: 38px; }
   .trails-page { background-attachment: scroll; background-size: 100% 100%, auto 700px; background-position: 0 0, center top; }
 }
@@ -371,31 +355,30 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
   border-radius: 50%;
   border: 1.5px solid #fff;
   color: #fff;
-  font: 700 11px/17px sans-serif;
+  font-weight: 700;
+  line-height: 17px;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .tr-stop-main { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .tr-stop-title { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.45rem; }
-.tr-stop-name { color: #fff; font-weight: 600; line-height: 1.25; text-decoration: none; }
+.tr-stop-name { color: #fff; line-height: 1.25; text-decoration: none; }
 a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
 .tr-pill {
-  font-size: 0.66rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
   line-height: 1.5;
   padding: 0 7px;
   border-radius: 999px;
   border: 1px solid var(--bw-teal-soft);
   color: #d7efed;
 }
-.tr-stop-meta, .tr-leg { display: flex; gap: 0.4rem; align-items: baseline; font-size: 0.8rem; line-height: 1.35; }
+.tr-stop-meta, .tr-leg { display: flex; gap: 0.4rem; align-items: baseline; line-height: 1.35; }
 .tr-stop-meta { color: rgba(255, 255, 255, 0.62); }
 .tr-leg { color: #8cc4c0; }
 .tr-stop-meta i, .tr-leg i { flex: none; width: 14px; text-align: center; color: #64a19d; }
 .tr-stop-tools { display: flex; flex-direction: column; align-items: stretch; gap: 0.35rem; }
 .tr-stop-tools .tr-dir { justify-content: center; height: 30px; padding: 0; }
-.tr-stop-tools .tr-stop-x { width: 100%; height: 26px; font-size: 0.95rem; }
+.tr-stop-tools .tr-stop-x { width: 100%; height: 26px; }
 /* lunch: the theme's teal, marked by an edge and its own picture, not another colour */
 .tr-lunch { background: rgba(63, 127, 123, 0.1); box-shadow: inset 3px 0 0 var(--bw-teal); border-radius: 0 6px 6px 0; }
 .tr-lunch-pic { display: flex; align-items: center; justify-content: center; background: rgba(63, 127, 123, 0.3); }
@@ -406,31 +389,15 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
   .tr-stop-pic { width: 60px; height: 46px; }
 }
 
-/* typography: the site's shared scale and letter-spacing (css/details-page.css: --bw-font, --bw-track,
-   --bw-fs-title, .btn), so this page reads like the others */
-.trails-page h1 { font-size: 2rem; font-weight: 600; letter-spacing: var(--bw-track, 1px); }
-.trails-page button, .trails-page .tr-btn, .trails-page .tr-dir { font-family: var(--bw-font); letter-spacing: var(--bw-track, 1px); }
-.tr-portlet-title { font-size: var(--bw-fs-title, 1.25rem); font-weight: 600; letter-spacing: var(--bw-track, 1px); }
-.tr-step-title { font-size: 1.1rem; letter-spacing: var(--bw-track, 1px); }
-.trails-page .tr-btn, .trails-page .tr-dir, .trails-page .tr-day-nav { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.15rem; }
-.trails-page .tr-stop-tools .tr-dir { font-size: 0.72rem; letter-spacing: 0.1rem; }
-.tr-pill { letter-spacing: 0.1rem; }
-@media (max-width: 575.98px) {
-  .trails-page h1 { font-size: 1.5rem; }
-  .tr-portlet-title { font-size: 1.1rem; }
-}
-
 /* area step: North, East, West and South in one row under the other area choices */
 .tr-tiles-compass { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0.6rem; }
 @media (max-width: 575.98px) {
   .tr-tiles-compass { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.4rem; }
   .tr-tiles-compass .tr-tile { flex-direction: column; justify-content: center; gap: 0.25rem; height: 76px; padding: 0.3rem; text-align: center; }
   .tr-tiles-compass .tr-tile-visual { width: 30px; height: 30px; }
-  .tr-tiles-compass .tr-tile-visual i { font-size: 0.85rem; }
   .tr-tiles-compass .tr-tile-text { align-items: center; }
-  .tr-tiles-compass .tr-tile-label { font-size: 0.8rem; }
   .tr-tiles-compass .tr-tile-sub { display: none; }
-  .tr-tiles-compass .tr-tile[aria-pressed="true"]::after { top: 3px; right: 3px; width: 15px; height: 15px; line-height: 15px; font-size: 9px; }
+  .tr-tiles-compass .tr-tile[aria-pressed="true"]::after { top: 3px; right: 3px; width: 15px; height: 15px; line-height: 15px; }
 }
 
 /* area step: the six choices in two rows of three (two columns on phones) */
@@ -439,31 +406,9 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
   .tr-tiles-areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-/* typography matched to the home page (index.html): headings weight 500, text weight 400, the same
-   smaller scale as its Discover rows and About section, so the planner reads as calm as the rest of the site */
-.trails-page h1 { font-size: 1.75rem; font-weight: 500; }
-.trails-intro, .tr-planner-intro, .tr-tips li, .tr-summary-text { font-size: 0.9rem; font-weight: 400; line-height: 1.6; }
-.tr-portlet-title { font-size: 1.1rem; font-weight: 500; }
-.tr-portlet-sub { font-size: 0.78rem; }
-.tr-step-title { font-size: 0.95rem; font-weight: 500; }
-.tr-step-help { font-size: 0.78rem; line-height: 1.5; }
-.tr-tile-label { font-size: 0.85rem; font-weight: 500; }
-.tr-tile-sub { font-size: 0.72rem; }
-.tr-tile-big { font-size: 1.2rem; font-weight: 500; }
-.tr-summary-text strong { font-weight: 500; }
-.tr-stop-name { font-size: 0.9rem; font-weight: 500; }
-.tr-stop-meta, .tr-leg { font-size: 0.76rem; }
-.tr-day-foot, .tr-legend, .tr-note { font-size: 0.78rem; }
-@media (max-width: 575.98px) {
-  .trails-page h1 { font-size: 1.35rem; }
-  .tr-portlet-title { font-size: 1rem; }
-  .tr-tile-label { font-size: 0.8rem; }
-  .trails-intro, .tr-planner-intro, .tr-tips li, .tr-summary-text { font-size: 0.85rem; }
-}
-
 /* intro: a small label, the title, one short lead and four feature cards (two columns on phones) */
 .tr-hero { margin: 0 0 1.5rem; }
-.tr-eyebrow { margin: 0 0 0.4rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em; color: #8cc4c0; }
+.tr-eyebrow { margin: 0 0 0.4rem; text-transform: uppercase; letter-spacing: 0.2em; color: #8cc4c0; }
 .tr-eyebrow i { margin-right: 0.35rem; }
 .tr-hero h1 { margin: 0 0 0.6rem; line-height: 1.2; }
 .tr-hero .trails-intro { max-width: 760px; margin: 0 0 1.1rem; color: rgba(255, 255, 255, 0.8); }
@@ -490,14 +435,72 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
   color: #fff;
   font-size: 0.95rem;
 }
-.tr-features span { min-width: 0; display: flex; flex-direction: column; font-size: 0.74rem; line-height: 1.35; color: rgba(255, 255, 255, 0.65); }
-.tr-features strong { font-size: 0.85rem; font-weight: 500; color: #fff; }
+.tr-features span { min-width: 0; display: flex; flex-direction: column; line-height: 1.35; color: rgba(255, 255, 255, 0.65); }
+.tr-features strong { color: #fff; }
 @media (max-width: 767.98px) {
   .tr-features { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.45rem; }
   .tr-features li { padding: 0.55rem 0.6rem; gap: 0.5rem; }
-  .tr-features i { width: 30px; height: 30px; font-size: 0.8rem; }
-  .tr-features strong { font-size: 0.8rem; }
-  .tr-features span { font-size: 0.7rem; }
+  .tr-features i { width: 30px; height: 30px; }
 }
 @media print { .tr-hero .tr-eyebrow, .tr-features { display: none; } }
 @media (max-width: 575.98px) { .tr-planner-intro { display: none; } }
+
+/* typography: the one place for font sizes on this page, on the home page's scale (index.html at 1366 px:
+   section titles 32 px, card titles 20.8 px, card headings 16.3 px, text 16 px, small text 12.8 px, buttons
+   12.8 px; phones: 24 / 16 / 14.7 / 14.4 / 11.8 / 13.6 px). Site font and letter-spacing from details-page.css. */
+.trails-page {
+  --tr-fs-h1: 2rem;        /* home section titles (About, Discover) */
+  --tr-fs-h2: 1.3rem;      /* home card titles (Plantations) */
+  --tr-fs-h3: 1.02rem;     /* home card headings (place names) */
+  --tr-fs-text: 1rem;      /* home paragraphs */
+  --tr-fs-small: 0.8rem;   /* home small text (timings, View Attractions) */
+  --tr-fs-label: 0.72rem;  /* uppercase labels and pills */
+  --tr-fs-btn: 0.8rem;     /* home .btn */
+  font-family: var(--bw-font);
+  letter-spacing: var(--bw-track, 1px);
+}
+.trails-page h1 { font-size: var(--tr-fs-h1); font-weight: 500; }
+.tr-portlet-title { font-size: var(--tr-fs-h2); font-weight: 500; }
+.tr-step-title, .tr-features strong { font-size: var(--tr-fs-h3); font-weight: 500; }
+.trails-intro, .tr-planner-intro, .tr-tips li, .tr-summary-text, .tr-shortfall, .tr-empty, .tr-hidden,
+.tr-tile-label, .tr-stop-name { font-size: var(--tr-fs-text); font-weight: 400; }
+.trails-intro, .tr-planner-intro, .tr-tips li, .tr-summary-text { line-height: 1.6; }
+.tr-tile-label, .tr-stop-name, .tr-summary-text strong { font-weight: 500; }
+.tr-tile-big { font-size: var(--tr-fs-h2); font-weight: 500; }
+.tr-portlet-sub, .tr-step-help, .tr-tile-sub, .tr-stop-meta, .tr-leg, .tr-day-foot, .tr-legend, .tr-note,
+.tr-features span { font-size: var(--tr-fs-small); font-weight: 400; }
+.tr-step-help { line-height: 1.5; }
+.tr-eyebrow, .tr-pill { font-size: var(--tr-fs-label); }
+.tr-eyebrow { letter-spacing: 0.2em; }
+.tr-pill { letter-spacing: 0.1rem; }
+.trails-page button, .trails-page .tr-btn, .trails-page .tr-dir { font-family: var(--bw-font); }
+.trails-page .tr-btn, .trails-page .tr-dir, .trails-page .tr-day-nav { text-transform: uppercase; font-size: var(--tr-fs-btn); letter-spacing: 0.15rem; }
+.trails-page .tr-stop-tools .tr-dir { font-size: var(--tr-fs-label); letter-spacing: 0.1rem; }
+/* numbers and icons in small circles: sized to the circle, in the site font */
+.tr-num { font-family: var(--bw-font); font-size: 0.75rem; letter-spacing: 0; }
+.tr-stop-num { font-family: var(--bw-font); font-size: 0.7rem; letter-spacing: 0; }
+.tr-num-lunch i { font-size: 0.7rem; }
+.tr-tile[aria-pressed="true"]::after { font-size: 0.75rem; letter-spacing: 0; }
+.tr-tile-visual.has-img i { font-size: 0.72rem; }
+.tr-stop-tools .tr-stop-x { font-size: 0.95rem; }
+@media (max-width: 767.98px) {
+  .tr-features strong { font-size: 0.9rem; }
+  .tr-features span { font-size: 0.74rem; }
+  .tr-features i { font-size: 0.8rem; }
+}
+@media (max-width: 575.98px) {
+  .trails-page {
+    --tr-fs-h1: 1.5rem;
+    --tr-fs-h2: 1rem;
+    --tr-fs-h3: 0.92rem;
+    --tr-fs-text: 0.9rem;
+    --tr-fs-small: 0.74rem;
+    --tr-fs-btn: 0.85rem;
+  }
+  .tr-tile-label { font-size: 0.85rem; }
+  .tr-tile-visual.has-img i { font-size: 0.62rem; }
+  .tr-tile[aria-pressed="true"]::after { font-size: 0.62rem; }
+  .tr-tiles-compass .tr-tile-label { font-size: var(--tr-fs-small); }
+  .tr-tiles-compass .tr-tile-visual i { font-size: 0.85rem; }
+  .tr-tiles-compass .tr-tile[aria-pressed="true"]::after { font-size: 0.56rem; }
+}
