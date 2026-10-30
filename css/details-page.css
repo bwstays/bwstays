@@ -1025,14 +1025,14 @@ div.image-nav-arrow.image-nav-right {
 
 .villa-hero h1 {
   font-size: 3.9em;
-  font-weight: 710;
+  font-weight: 500;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .villa-hero h2 {
   font-size: 2.0em;
-  font-weight: 410;
+  font-weight: 400;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -8088,13 +8088,27 @@ button, input, select, textarea, optgroup,
 
 /* ---------------------------------------------------------------------------------------------------------------
    Typography scale (the same on every page): form fields and labels, section titles, page titles, villa card text.
-   Change a number here, not in a page. */
+   Change a number here, not in a page. The page, card, heading, body and small sizes are the home page's
+   (index.html at 1366 px / 390 px): 32/24, 20.8/16, 16.3/14.7, 16/14.4 and 12.8/11.8 px. */
 :root {
   --bw-fs-field: 0.9rem;   /* inputs, selects, textareas, pager buttons */
   --bw-fs-label: 0.9rem;   /* form labels and checkbox labels */
-  --bw-fs-title: 1.25rem;  /* section titles */
+  --bw-fs-title: 1.3rem;   /* section titles (home card titles, e.g. Plantations) */
   --bw-fs-text: 0.9rem;    /* supporting text in cards */
+  --bw-fs-page: 2rem;      /* page titles (home section titles, e.g. About) */
+  --bw-fs-heading: 1.02rem;/* card and question headings (home place names) */
+  --bw-fs-body: 1rem;      /* running text (home paragraphs) */
+  --bw-fs-small: 0.8rem;   /* meta lines: timings, distances (home card timings) */
   --bw-track: 1px;         /* letter-spacing shared by text and controls */
+}
+@media (max-width: 575.98px) {
+  :root {
+    --bw-fs-title: 1rem;
+    --bw-fs-page: 1.5rem;
+    --bw-fs-heading: 0.92rem;
+    --bw-fs-body: 0.9rem;
+    --bw-fs-small: 0.74rem;
+  }
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="hidden"]),
 select,
@@ -8119,13 +8133,58 @@ label,
 .booking-page h5[aria-level="2"],
 .booking-page .date-range-container h5,
 .booking-page .date-range-container h2,
+.booking-page .villa-card h5,
 .bk-title {
   font-size: var(--bw-fs-title) !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
+/* page titles (booking, search, partner links, rules, 404) */
 .legal-hero h1,
 h1.h2 {
-  font-weight: 600;
+  font-size: var(--bw-fs-page);
+  font-weight: 500;
+}
+/* section titles on the rules page, the place pages and partner links */
+.legal-page .legal-card-title,
+.knowmore-page #about h3.h4,
+.knowmore-page #header-container h4.h5,
+#partners h2.h4 {
+  font-size: var(--bw-fs-title) !important;
+  font-weight: 500;
+}
+/* headings of cards, facts and questions */
+.knowmore-page .card-title,
+.knowmore-page .nearby-card .card-title,
+.bk-facts dt,
+.legal-card details.faq-qa > summary,
+#partners .card-title,
+.bw-result-title {
+  font-size: var(--bw-fs-heading) !important;
+  font-weight: 500 !important;
+}
+/* running text: 16 px like the home page (14.4 px on phones) */
+.bk-text,
+.bk-lead,
+.bk-facts dd,
+.legal-body p,
+.legal-body li,
+.knowmore-page #left-content-column .text-white-50.ml-2,
+.knowmore-page #left-content-column .content {
+  font-size: var(--bw-fs-body) !important;
+}
+/* meta lines under titles: distance, timing, phone */
+.knowmore-page .card .rating .text-white-50,
+.knowmore-page .card small.text-white-50,
+.knowmore-page .nearby-card .text-white.mb-1,
+.knowmore-page .nearby-card .distance-text,
+.knowmore-page .nearby-card .distance-text .text-warning,
+.bw-search-tabs .bw-map-pill,
+.bw-result-meta {
+  font-size: var(--bw-fs-small) !important;
+}
+/* place page: the place name keeps the home page's phone size */
+@media (max-width: 575.98px) {
+  .knowmore-page #left-content-column > div > h3 { font-size: 1.1rem !important; }
 }
 .villa-features {
   flex-wrap: wrap;
@@ -8136,12 +8195,8 @@ h1.h2 {
 }
 .villa-feature,
 #rate-note,
-.bk-text,
 .bk-amenities li {
   font-size: var(--bw-fs-text);
-}
-.bk-lead {
-  font-size: 1rem;
 }
 /* the WhatsApp chat box is a third-party widget that loads its own font; use the site font */
 .wa-chat-box,

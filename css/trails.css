@@ -363,6 +363,7 @@ body.tr-printing .tr-map { width: 680px; height: 460px; }
 .tr-stop-main { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .tr-stop-title { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.45rem; }
 .tr-stop-name { color: #fff; line-height: 1.25; text-decoration: none; }
+a.tr-stop-name { display: inline-block; padding: 4px 0; }   /* a 24 px tap target on phones */
 a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
 .tr-pill {
   text-transform: uppercase;

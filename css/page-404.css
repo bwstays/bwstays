@@ -30,8 +30,8 @@
 }
 .nf-title {
   margin: 0.25rem 0 0.75rem;
-  font-size: clamp(1.5rem, 4.5vw, 2.1rem);
-  font-weight: 600;
+  font-size: var(--bw-fs-page, 2rem);   /* the page title size of every page (details-page.css) */
+  font-weight: 500;
   color: #fff;
 }
 .nf-lead {
