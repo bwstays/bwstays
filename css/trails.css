@@ -451,6 +451,7 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
 .trails-page {
   --tr-fs-h1: 2rem;        /* home section titles (About, Discover) */
   --tr-fs-h2: 1.3rem;      /* home card titles (Plantations) */
+  --tr-fs-card: 1.1rem;    /* card bars: Build your own trail, Trail map, Day 1... (home 17.6 px) */
   --tr-fs-h3: 1.02rem;     /* home card headings (place names) */
   --tr-fs-text: 1rem;      /* home paragraphs */
   --tr-fs-small: 0.8rem;   /* home small text (timings, View Attractions) */
@@ -460,7 +461,7 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
   letter-spacing: var(--bw-track, 1px);
 }
 .trails-page h1 { font-size: var(--tr-fs-h1); font-weight: 500; }
-.tr-portlet-title { font-size: var(--tr-fs-h2); font-weight: 500; }
+.tr-portlet-title { font-size: var(--tr-fs-card); font-weight: 500; }
 .tr-step-title, .tr-features strong { font-size: var(--tr-fs-h3); font-weight: 500; }
 .trails-intro, .tr-planner-intro, .tr-tips li, .tr-summary-text, .tr-shortfall, .tr-empty, .tr-hidden,
 .tr-tile-label, .tr-stop-name { font-size: var(--tr-fs-text); font-weight: 400; }
@@ -492,6 +493,7 @@ a.tr-stop-name:hover { color: var(--bw-teal-soft); text-decoration: underline; }
   .trails-page {
     --tr-fs-h1: 1.5rem;
     --tr-fs-h2: 1rem;
+    --tr-fs-card: 0.95rem;
     --tr-fs-h3: 0.92rem;
     --tr-fs-text: 0.9rem;
     --tr-fs-small: 0.74rem;
