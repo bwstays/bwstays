@@ -161,6 +161,7 @@ const PAGES = [
   "/bw-vellanvaidyar-thirunelli-health-wayanad.html",
   "/bw-ziplines-sporting-wayanad.html",
   "/bwstays-booking.html",
+  "/developers.html",
   "/footer.html",
   "/index.html",
   "/offline.html",
